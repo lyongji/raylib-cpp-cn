@@ -1,8 +1,8 @@
 ![raylib-cpp Logo](projects/Doxygen/raylib-cpp_256x256.png)
 
-# raylib-cpp ![Targeting raylib 5.0](https://img.shields.io/badge/for_raylib-5.0-blue) [![Tests](https://github.com/RobLoach/raylib-cpp/workflows/Tests/badge.svg)](https://github.com/RobLoach/raylib-cpp/actions?query=workflow%3ATests+branch%3Amaster) [![License](https://img.shields.io/badge/license-zlib%2Flibpng-blue.svg)](LICENSE)
+# raylib-cpp-zh ![Targeting raylib 5.0](https://img.shields.io/badge/for_raylib-5.0-blue)  [![License](https://img.shields.io/badge/license-zlib%2Flibpng-blue.svg)](LICENSE)
 
-[raylib-cpp](https://github.com/robloach/raylib-cpp) is a C++ wrapper library for [raylib](https://www.raylib.com), a simple and easy-to-use library to enjoy videogames programming. This C++ header provides object-oriented wrappers around *raylib*'s struct interfaces. *raylib-cpp* is not required to use *raylib* in C++, but the classes do bring using the raylib API more inline with C++'s language paradigm.
+[raylib-cpp](https://github.com/robloach/raylib-cpp)  的中文翻译版本
 
 ## Example
 
@@ -253,28 +253,6 @@ raylib::Vector2 direction(50, 50);
 raylib::Vector2 newDirection = direction.Rotate(30);
 ```
 
-## Getting Started
-
-*raylib-cpp* is a header-only library. This means in order to use it, you must link your project to [raylib](https://www.raylib.com/), and then include [`raylib-cpp.hpp`](raylib-cpp/include/raylib-cpp.hpp).
-
-1. Set up a *raylib* project using the [build and install instructions](https://github.com/raysan5/raylib#build-and-installation)
-2. Ensure `.cpp` files are compiled with C++
-3. Download *raylib-cpp*
-4. Include [`include/raylib-cpp.hpp`](include/raylib-cpp.hpp)
-    ``` cpp
-    #include "path/to/raylib-cpp.hpp"
-    ```
-
-### Starter Projects
-
-The [projects directory](projects) includes some starter templates...
-
-- [CMake template](projects/CMake)
-- [Make template](projects/Make)
-- [VSCode template](projects/VSCode)
-
-If there's a project template you would like to see added, feel free to [make an issue](https://github.com/RobLoach/raylib-cpp/issues) and we can add it in.
-
 ### Applications
 
 - [Ian Pan's Raylib Games](https://github.com/ianpan870102/raylib-practices)
@@ -287,56 +265,6 @@ The following are some tools in order to build and contribute to *raylib-cpp*...
 
 Since *raylib-cpp* is a header only library, the build process is the same as raylib's, except you will use C++ to compile instead of C. The following are some specific instructions on local development.
 
-#### Desktop
-
-*raylib-cpp* uses [CMake](https://cmake.org) as a primary target for development. To build it, and run the tests or examples, use...
-
-``` bash
-git clone https://github.com/RobLoach/raylib-cpp.git
-cd raylib-cpp
-mkdir build
-cd build
-cmake ..
-make
-make test
-./examples/core_basic_window
-```
-
-#### Web
-
-Use [emscripten](https://emscripten.org/) to build and test [core_basic_window_web.cpp](examples/core/core_basic_window_web.cpp).
-
-```
-mkdir build
-cd build
-emcmake cmake .. -DPLATFORM=Web -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-s USE_GLFW=3"
-emmake make
-```
-
-See [`core_basic_window_web.html`](examples/core/resources/core_basic_window_web.html) for an example HTML canvas you can you.
-
-### Documentation
-
-To build the document with [Doxygen](http://www.doxygen.nl/), use...
-
-```
-git submodule update --init
-doxygen projects/Doxygen/Doxyfile
-```
-
-To publish the documentation to GitHub Pages, use...
-
-```
-npm run deploy
-```
-
-### Coding Standards
-
-This uses cpplint to adopt coding standards.
-
-```
-cpplint --recursive include
-```
 
 ### Defines
 
