@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::Wave类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_wave.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classraylib_1_1_wave-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::Wave类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> type, defines audio wave data  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_wave_8hpp_source.html">Wave.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 raylib::Wave 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classraylib_1_1_wave.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4643a642d42434c4eb39c6888688d495" id="r_a4643a642d42434c4eb39c6888688d495"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4643a642d42434c4eb39c6888688d495">Wave</a> (const ::Wave &amp;wave)</td></tr>
+<tr class="separator:a4643a642d42434c4eb39c6888688d495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76ff3e113cace4453b683725159aae6" id="r_aa76ff3e113cace4453b683725159aae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa76ff3e113cace4453b683725159aae6">Wave</a> (unsigned int frameCount=0, unsigned int sampleRate=0, unsigned int sampleSize=0, unsigned int channels=0, void *data=nullptr)</td></tr>
+<tr class="separator:aa76ff3e113cace4453b683725159aae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5144b906b92b84d95f8ce192ce9f86b" id="r_ad5144b906b92b84d95f8ce192ce9f86b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5144b906b92b84d95f8ce192ce9f86b">Wave</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:ad5144b906b92b84d95f8ce192ce9f86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load wave data from file  <br /></td></tr>
+<tr class="separator:ad5144b906b92b84d95f8ce192ce9f86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b96adb8009137b02529f3b8b95918d" id="r_a31b96adb8009137b02529f3b8b95918d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31b96adb8009137b02529f3b8b95918d">Wave</a> (const std::string &amp;fileType, const unsigned char *fileData, int dataSize)</td></tr>
+<tr class="memdesc:a31b96adb8009137b02529f3b8b95918d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load wave from memory buffer, fileType refers to extension: i.e.  <br /></td></tr>
+<tr class="separator:a31b96adb8009137b02529f3b8b95918d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c59426e8ff3fff68abb532a1e785b1e" id="r_a3c59426e8ff3fff68abb532a1e785b1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c59426e8ff3fff68abb532a1e785b1e">Wave</a> (const <a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;other)</td></tr>
+<tr class="separator:a3c59426e8ff3fff68abb532a1e785b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae03cb2d443e6d868f38c7c8db14913" id="r_adae03cb2d443e6d868f38c7c8db14913"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adae03cb2d443e6d868f38c7c8db14913">Wave</a> (<a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&amp;other)</td></tr>
+<tr class="separator:adae03cb2d443e6d868f38c7c8db14913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545a0afb559e87f42cdedcda263452ba" id="r_a545a0afb559e87f42cdedcda263452ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a545a0afb559e87f42cdedcda263452ba">~Wave</a> ()</td></tr>
+<tr class="memdesc:a545a0afb559e87f42cdedcda263452ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload wave data  <br /></td></tr>
+<tr class="separator:a545a0afb559e87f42cdedcda263452ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47fdbb51113033249f466f2f18be8f6a" id="r_a47fdbb51113033249f466f2f18be8f6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47fdbb51113033249f466f2f18be8f6a">operator=</a> (const <a class="el" href="#a4643a642d42434c4eb39c6888688d495">::Wave</a> &amp;wave)</td></tr>
+<tr class="separator:a47fdbb51113033249f466f2f18be8f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5958607c9f7d49dcc4a9c291fd8955" id="r_aae5958607c9f7d49dcc4a9c291fd8955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae5958607c9f7d49dcc4a9c291fd8955">operator=</a> (const <a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;other)</td></tr>
+<tr class="separator:aae5958607c9f7d49dcc4a9c291fd8955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c5c65eaa235c5d5d8d867c55d7c0464" id="r_a5c5c65eaa235c5d5d8d867c55d7c0464"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c5c65eaa235c5d5d8d867c55d7c0464">operator=</a> (<a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a5c5c65eaa235c5d5d8d867c55d7c0464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3375e23af93d5549420bdb6ca3c58f74" id="r_a3375e23af93d5549420bdb6ca3c58f74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a4643a642d42434c4eb39c6888688d495">::Wave</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3375e23af93d5549420bdb6ca3c58f74">Copy</a> () const</td></tr>
+<tr class="memdesc:a3375e23af93d5549420bdb6ca3c58f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a wave to a new wave  <br /></td></tr>
+<tr class="separator:a3375e23af93d5549420bdb6ca3c58f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a560f8d9b0669a7660406a849d4e26e66" id="r_a560f8d9b0669a7660406a849d4e26e66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a560f8d9b0669a7660406a849d4e26e66">Crop</a> (int initSample, int finalSample)</td></tr>
+<tr class="memdesc:a560f8d9b0669a7660406a849d4e26e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crop a wave to defined samples range  <br /></td></tr>
+<tr class="separator:a560f8d9b0669a7660406a849d4e26e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704d264e7f5e60a782510d49b78ddd5d" id="r_a704d264e7f5e60a782510d49b78ddd5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a704d264e7f5e60a782510d49b78ddd5d">Format</a> (int SampleRate, int SampleSize, int Channels=2)</td></tr>
+<tr class="memdesc:a704d264e7f5e60a782510d49b78ddd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert wave data to desired format  <br /></td></tr>
+<tr class="separator:a704d264e7f5e60a782510d49b78ddd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac42b450d90dee2ea471a0625b83bac" id="r_a0ac42b450d90dee2ea471a0625b83bac"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ac42b450d90dee2ea471a0625b83bac">LoadSamples</a> ()</td></tr>
+<tr class="memdesc:a0ac42b450d90dee2ea471a0625b83bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load samples data from wave as a floats array  <br /></td></tr>
+<tr class="separator:a0ac42b450d90dee2ea471a0625b83bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae34ed202b067c1698fcde0615b5e2eb" id="r_aae34ed202b067c1698fcde0615b5e2eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae34ed202b067c1698fcde0615b5e2eb">Export</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aae34ed202b067c1698fcde0615b5e2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export wave data to file, returns true on success  <br /></td></tr>
+<tr class="separator:aae34ed202b067c1698fcde0615b5e2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff84c35bd83bdd00a7a561ee803ec9e" id="r_a3ff84c35bd83bdd00a7a561ee803ec9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ff84c35bd83bdd00a7a561ee803ec9e">ExportAsCode</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a3ff84c35bd83bdd00a7a561ee803ec9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export wave sample data to code (.h), returns true on success  <br /></td></tr>
+<tr class="separator:a3ff84c35bd83bdd00a7a561ee803ec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a143fc632271958e5ee2899338ec5bc" id="r_a6a143fc632271958e5ee2899338ec5bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a143fc632271958e5ee2899338ec5bc">Unload</a> ()</td></tr>
+<tr class="memdesc:a6a143fc632271958e5ee2899338ec5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload wave data  <br /></td></tr>
+<tr class="separator:a6a143fc632271958e5ee2899338ec5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da6fdfd8f66c82a418c3d370587c719" id="r_a4da6fdfd8f66c82a418c3d370587c719"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7f54205425932d5ae6b7bab2ab3e5f87">::Sound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4da6fdfd8f66c82a418c3d370587c719">LoadSound</a> ()</td></tr>
+<tr class="memdesc:a4da6fdfd8f66c82a418c3d370587c719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load sound from wave data  <br /></td></tr>
+<tr class="separator:a4da6fdfd8f66c82a418c3d370587c719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f54205425932d5ae6b7bab2ab3e5f87" id="r_a7f54205425932d5ae6b7bab2ab3e5f87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f54205425932d5ae6b7bab2ab3e5f87">operator::Sound</a> ()</td></tr>
+<tr class="memdesc:a7f54205425932d5ae6b7bab2ab3e5f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load sound from wave data  <br /></td></tr>
+<tr class="separator:a7f54205425932d5ae6b7bab2ab3e5f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84bb98eb9f24cf352dce7c1bd5661da" id="r_ae84bb98eb9f24cf352dce7c1bd5661da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84bb98eb9f24cf352dce7c1bd5661da">Load</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:ae84bb98eb9f24cf352dce7c1bd5661da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load wave data from file.  <br /></td></tr>
+<tr class="separator:ae84bb98eb9f24cf352dce7c1bd5661da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fccdb0e506c2dbacb84c32ff5ff3231" id="r_a2fccdb0e506c2dbacb84c32ff5ff3231"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fccdb0e506c2dbacb84c32ff5ff3231">Load</a> (const std::string &amp;fileType, const unsigned char *fileData, int dataSize)</td></tr>
+<tr class="memdesc:a2fccdb0e506c2dbacb84c32ff5ff3231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load wave from memory buffer, fileType refers to extension: i.e.  <br /></td></tr>
+<tr class="separator:a2fccdb0e506c2dbacb84c32ff5ff3231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dc540820b0e900bca8452dbc8a4d35" id="r_aa8dc540820b0e900bca8452dbc8a4d35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8dc540820b0e900bca8452dbc8a4d35">IsValid</a> () const</td></tr>
+<tr class="memdesc:aa8dc540820b0e900bca8452dbc8a4d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve whether or not the <a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> data has been loaded.  <br /></td></tr>
+<tr class="separator:aa8dc540820b0e900bca8452dbc8a4d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad4deb1b67bef7706f29804e00e83d4f0" id="r_ad4deb1b67bef7706f29804e00e83d4f0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4deb1b67bef7706f29804e00e83d4f0">UnloadSamples</a> (float *samples)</td></tr>
+<tr class="memdesc:ad4deb1b67bef7706f29804e00e83d4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload samples data loaded with LoadWaveSamples()  <br /></td></tr>
+<tr class="separator:ad4deb1b67bef7706f29804e00e83d4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:afffc2c5c4aaefa6f4261d59094206d7f" id="r_afffc2c5c4aaefa6f4261d59094206d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afffc2c5c4aaefa6f4261d59094206d7f">set</a> (const <a class="el" href="#a4643a642d42434c4eb39c6888688d495">::Wave</a> &amp;wave)</td></tr>
+<tr class="separator:afffc2c5c4aaefa6f4261d59094206d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> type, defines audio wave data </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4643a642d42434c4eb39c6888688d495" name="a4643a642d42434c4eb39c6888688d495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4643a642d42434c4eb39c6888688d495">&#9670;&#160;</a></span>Wave() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::Wave </td>
+          <td>(</td>
+          <td class="paramtype">const ::Wave &amp;</td>          <td class="paramname"><span class="paramname"><em>wave</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa76ff3e113cace4453b683725159aae6" name="aa76ff3e113cace4453b683725159aae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76ff3e113cace4453b683725159aae6">&#9670;&#160;</a></span>Wave() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::Wave </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>frameCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>sampleRate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>sampleSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>channels</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5144b906b92b84d95f8ce192ce9f86b" name="ad5144b906b92b84d95f8ce192ce9f86b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5144b906b92b84d95f8ce192ce9f86b">&#9670;&#160;</a></span>Wave() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::Wave </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load wave data from file </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a31b96adb8009137b02529f3b8b95918d" name="a31b96adb8009137b02529f3b8b95918d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b96adb8009137b02529f3b8b95918d">&#9670;&#160;</a></span>Wave() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::Wave </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>fileData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dataSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load wave from memory buffer, fileType refers to extension: i.e. </p>
+<p>"wav"</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c59426e8ff3fff68abb532a1e785b1e" name="a3c59426e8ff3fff68abb532a1e785b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c59426e8ff3fff68abb532a1e785b1e">&#9670;&#160;</a></span>Wave() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::Wave </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adae03cb2d443e6d868f38c7c8db14913" name="adae03cb2d443e6d868f38c7c8db14913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae03cb2d443e6d868f38c7c8db14913">&#9670;&#160;</a></span>Wave() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::Wave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a545a0afb559e87f42cdedcda263452ba" name="a545a0afb559e87f42cdedcda263452ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a545a0afb559e87f42cdedcda263452ba">&#9670;&#160;</a></span>~Wave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::~Wave </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unload wave data </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3375e23af93d5549420bdb6ca3c58f74" name="a3375e23af93d5549420bdb6ca3c58f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3375e23af93d5549420bdb6ca3c58f74">&#9670;&#160;</a></span>Copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4643a642d42434c4eb39c6888688d495">::Wave</a> raylib::Wave::Copy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy a wave to a new wave </p>
+
+</div>
+</div>
+<a id="a560f8d9b0669a7660406a849d4e26e66" name="a560f8d9b0669a7660406a849d4e26e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560f8d9b0669a7660406a849d4e26e66">&#9670;&#160;</a></span>Crop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp; raylib::Wave::Crop </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>initSample</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>finalSample</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Crop a wave to defined samples range </p>
+
+</div>
+</div>
+<a id="aae34ed202b067c1698fcde0615b5e2eb" name="aae34ed202b067c1698fcde0615b5e2eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae34ed202b067c1698fcde0615b5e2eb">&#9670;&#160;</a></span>Export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Wave::Export </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Export wave data to file, returns true on success </p>
+
+</div>
+</div>
+<a id="a3ff84c35bd83bdd00a7a561ee803ec9e" name="a3ff84c35bd83bdd00a7a561ee803ec9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff84c35bd83bdd00a7a561ee803ec9e">&#9670;&#160;</a></span>ExportAsCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Wave::ExportAsCode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Export wave sample data to code (.h), returns true on success </p>
+
+</div>
+</div>
+<a id="a704d264e7f5e60a782510d49b78ddd5d" name="a704d264e7f5e60a782510d49b78ddd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704d264e7f5e60a782510d49b78ddd5d">&#9670;&#160;</a></span>Format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp; raylib::Wave::Format </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>SampleRate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>SampleSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>Channels</em></span><span class="paramdefsep"> = </span><span class="paramdefval">2</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert wave data to desired format </p>
+
+</div>
+</div>
+<a id="aa8dc540820b0e900bca8452dbc8a4d35" name="aa8dc540820b0e900bca8452dbc8a4d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8dc540820b0e900bca8452dbc8a4d35">&#9670;&#160;</a></span>IsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Wave::IsValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve whether or not the <a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> data has been loaded. </p>
+<dl class="section return"><dt>返回</dt><dd>True or false depending on whether the wave data has been loaded. </dd></dl>
+
+</div>
+</div>
+<a id="ae84bb98eb9f24cf352dce7c1bd5661da" name="ae84bb98eb9f24cf352dce7c1bd5661da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84bb98eb9f24cf352dce7c1bd5661da">&#9670;&#160;</a></span>Load() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Wave::Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load wave data from file. </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fccdb0e506c2dbacb84c32ff5ff3231" name="a2fccdb0e506c2dbacb84c32ff5ff3231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fccdb0e506c2dbacb84c32ff5ff3231">&#9670;&#160;</a></span>Load() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Wave::Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>fileData</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dataSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load wave from memory buffer, fileType refers to extension: i.e. </p>
+<p>"wav"</p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_wave.html" title="Wave type, defines audio wave data">Wave</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ac42b450d90dee2ea471a0625b83bac" name="a0ac42b450d90dee2ea471a0625b83bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac42b450d90dee2ea471a0625b83bac">&#9670;&#160;</a></span>LoadSamples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * raylib::Wave::LoadSamples </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load samples data from wave as a floats array </p>
+
+</div>
+</div>
+<a id="a4da6fdfd8f66c82a418c3d370587c719" name="a4da6fdfd8f66c82a418c3d370587c719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da6fdfd8f66c82a418c3d370587c719">&#9670;&#160;</a></span>LoadSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7f54205425932d5ae6b7bab2ab3e5f87">::Sound</a> raylib::Wave::LoadSound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load sound from wave data </p>
+
+</div>
+</div>
+<a id="a7f54205425932d5ae6b7bab2ab3e5f87" name="a7f54205425932d5ae6b7bab2ab3e5f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f54205425932d5ae6b7bab2ab3e5f87">&#9670;&#160;</a></span>operator::Sound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Wave::operator::Sound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load sound from wave data </p>
+
+</div>
+</div>
+<a id="a47fdbb51113033249f466f2f18be8f6a" name="a47fdbb51113033249f466f2f18be8f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47fdbb51113033249f466f2f18be8f6a">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp; raylib::Wave::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a4643a642d42434c4eb39c6888688d495">::Wave</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>wave</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae5958607c9f7d49dcc4a9c291fd8955" name="aae5958607c9f7d49dcc4a9c291fd8955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5958607c9f7d49dcc4a9c291fd8955">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp; raylib::Wave::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c5c65eaa235c5d5d8d867c55d7c0464" name="a5c5c65eaa235c5d5d8d867c55d7c0464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c5c65eaa235c5d5d8d867c55d7c0464">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp; raylib::Wave::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_wave.html">Wave</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afffc2c5c4aaefa6f4261d59094206d7f" name="afffc2c5c4aaefa6f4261d59094206d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffc2c5c4aaefa6f4261d59094206d7f">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Wave::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a4643a642d42434c4eb39c6888688d495">::Wave</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>wave</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a143fc632271958e5ee2899338ec5bc" name="a6a143fc632271958e5ee2899338ec5bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a143fc632271958e5ee2899338ec5bc">&#9670;&#160;</a></span>Unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Wave::Unload </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unload wave data </p>
+
+</div>
+</div>
+<a id="ad4deb1b67bef7706f29804e00e83d4f0" name="ad4deb1b67bef7706f29804e00e83d4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4deb1b67bef7706f29804e00e83d4f0">&#9670;&#160;</a></span>UnloadSamples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void raylib::Wave::UnloadSamples </td>
+          <td>(</td>
+          <td class="paramtype">float *</td>          <td class="paramname"><span class="paramname"><em>samples</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unload samples data loaded with LoadWaveSamples() </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_wave_8hpp_source.html">Wave.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_wave.html">Wave</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

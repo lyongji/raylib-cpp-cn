@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::BoundingBox类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_bounding_box.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classraylib_1_1_bounding_box-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::BoundingBox类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Bounding box type  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bounding_box_8hpp_source.html">BoundingBox.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 raylib::BoundingBox 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classraylib_1_1_bounding_box.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2d5d6d98333d7a2e15b3703b1c383fe9" id="r_a2d5d6d98333d7a2e15b3703b1c383fe9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">BoundingBox</a> (const ::BoundingBox &amp;box)</td></tr>
+<tr class="separator:a2d5d6d98333d7a2e15b3703b1c383fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8417253000c9381b4afc1869d5e3a611" id="r_a8417253000c9381b4afc1869d5e3a611"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8417253000c9381b4afc1869d5e3a611">BoundingBox</a> (const ::Mesh &amp;mesh)</td></tr>
+<tr class="memdesc:a8417253000c9381b4afc1869d5e3a611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute mesh bounding box limits  <br /></td></tr>
+<tr class="separator:a8417253000c9381b4afc1869d5e3a611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda5f01ed7b3c01110b5396d45379b2b" id="r_adda5f01ed7b3c01110b5396d45379b2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adda5f01ed7b3c01110b5396d45379b2b">BoundingBox</a> (::Vector3 minMax=::Vector3{0.0f, 0.0f, 0.0f})</td></tr>
+<tr class="separator:adda5f01ed7b3c01110b5396d45379b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e2ee18a319a9ea834e46add4b0dbc8" id="r_ad7e2ee18a319a9ea834e46add4b0dbc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e2ee18a319a9ea834e46add4b0dbc8">BoundingBox</a> (::Vector3 min, ::Vector3 max)</td></tr>
+<tr class="separator:ad7e2ee18a319a9ea834e46add4b0dbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859067d25368a27b8743e23ebc24d46c" id="r_a859067d25368a27b8743e23ebc24d46c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_bounding_box.html">BoundingBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a859067d25368a27b8743e23ebc24d46c">operator=</a> (const <a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">::BoundingBox</a> &amp;box)</td></tr>
+<tr class="separator:a859067d25368a27b8743e23ebc24d46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1910745ab4f5c4f1536e15ed79764e" id="r_abb1910745ab4f5c4f1536e15ed79764e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb1910745ab4f5c4f1536e15ed79764e">Draw</a> (::Color color={255, 255, 255, 255}) const</td></tr>
+<tr class="memdesc:abb1910745ab4f5c4f1536e15ed79764e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a bounding box with wires  <br /></td></tr>
+<tr class="separator:abb1910745ab4f5c4f1536e15ed79764e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21846f1721a949de28e6bff5a0217d2" id="r_ae21846f1721a949de28e6bff5a0217d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae21846f1721a949de28e6bff5a0217d2">CheckCollision</a> (const <a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">::BoundingBox</a> &amp;box2) const</td></tr>
+<tr class="memdesc:ae21846f1721a949de28e6bff5a0217d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect collision between two boxes  <br /></td></tr>
+<tr class="separator:ae21846f1721a949de28e6bff5a0217d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebef66c3050ab310652c7eac6ce404b" id="r_a4ebef66c3050ab310652c7eac6ce404b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ebef66c3050ab310652c7eac6ce404b">CheckCollision</a> (::Vector3 center, float radius) const</td></tr>
+<tr class="memdesc:a4ebef66c3050ab310652c7eac6ce404b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect collision between box and sphere  <br /></td></tr>
+<tr class="separator:a4ebef66c3050ab310652c7eac6ce404b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee231bf2caca8ab6e4cb6be1f93874c3" id="r_aee231bf2caca8ab6e4cb6be1f93874c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee231bf2caca8ab6e4cb6be1f93874c3">CheckCollision</a> (const ::Ray &amp;ray) const</td></tr>
+<tr class="memdesc:aee231bf2caca8ab6e4cb6be1f93874c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect collision between ray and bounding box  <br /></td></tr>
+<tr class="separator:aee231bf2caca8ab6e4cb6be1f93874c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c1287b1fd3b4fb7a67b099fc8d629e" id="r_a75c1287b1fd3b4fb7a67b099fc8d629e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_ray_collision.html">RayCollision</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75c1287b1fd3b4fb7a67b099fc8d629e">GetCollision</a> (const ::Ray &amp;ray) const</td></tr>
+<tr class="memdesc:a75c1287b1fd3b4fb7a67b099fc8d629e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get collision information between ray and bounding box  <br /></td></tr>
+<tr class="separator:a75c1287b1fd3b4fb7a67b099fc8d629e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a689f19a02b0d9a0d8c253ea0859be649" id="r_a689f19a02b0d9a0d8c253ea0859be649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a689f19a02b0d9a0d8c253ea0859be649">set</a> (const <a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">::BoundingBox</a> &amp;box)</td></tr>
+<tr class="separator:a689f19a02b0d9a0d8c253ea0859be649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbce410159914b10634c2d86d3dca645" id="r_acbce410159914b10634c2d86d3dca645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbce410159914b10634c2d86d3dca645">set</a> (const ::Vector3 &amp;_min, const ::Vector3 &amp;_max)</td></tr>
+<tr class="separator:acbce410159914b10634c2d86d3dca645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Bounding box type </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a2d5d6d98333d7a2e15b3703b1c383fe9" name="a2d5d6d98333d7a2e15b3703b1c383fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5d6d98333d7a2e15b3703b1c383fe9">&#9670;&#160;</a></span>BoundingBox() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::BoundingBox::BoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">const ::BoundingBox &amp;</td>          <td class="paramname"><span class="paramname"><em>box</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8417253000c9381b4afc1869d5e3a611" name="a8417253000c9381b4afc1869d5e3a611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8417253000c9381b4afc1869d5e3a611">&#9670;&#160;</a></span>BoundingBox() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::BoundingBox::BoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">const ::Mesh &amp;</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute mesh bounding box limits </p>
+
+</div>
+</div>
+<a id="adda5f01ed7b3c01110b5396d45379b2b" name="adda5f01ed7b3c01110b5396d45379b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda5f01ed7b3c01110b5396d45379b2b">&#9670;&#160;</a></span>BoundingBox() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::BoundingBox::BoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>minMax</em></span><span class="paramdefsep"> = </span><span class="paramdefval">::Vector3{0.0f,&#160;0.0f,&#160;0.0f}</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7e2ee18a319a9ea834e46add4b0dbc8" name="ad7e2ee18a319a9ea834e46add4b0dbc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e2ee18a319a9ea834e46add4b0dbc8">&#9670;&#160;</a></span>BoundingBox() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::BoundingBox::BoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4ebef66c3050ab310652c7eac6ce404b" name="a4ebef66c3050ab310652c7eac6ce404b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ebef66c3050ab310652c7eac6ce404b">&#9670;&#160;</a></span>CheckCollision() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::BoundingBox::CheckCollision </td>
+          <td>(</td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detect collision between box and sphere </p>
+
+</div>
+</div>
+<a id="ae21846f1721a949de28e6bff5a0217d2" name="ae21846f1721a949de28e6bff5a0217d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21846f1721a949de28e6bff5a0217d2">&#9670;&#160;</a></span>CheckCollision() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::BoundingBox::CheckCollision </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">::BoundingBox</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>box2</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detect collision between two boxes </p>
+
+</div>
+</div>
+<a id="aee231bf2caca8ab6e4cb6be1f93874c3" name="aee231bf2caca8ab6e4cb6be1f93874c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee231bf2caca8ab6e4cb6be1f93874c3">&#9670;&#160;</a></span>CheckCollision() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::BoundingBox::CheckCollision </td>
+          <td>(</td>
+          <td class="paramtype">const ::Ray &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detect collision between ray and bounding box </p>
+
+</div>
+</div>
+<a id="abb1910745ab4f5c4f1536e15ed79764e" name="abb1910745ab4f5c4f1536e15ed79764e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1910745ab4f5c4f1536e15ed79764e">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::BoundingBox::Draw </td>
+          <td>(</td>
+          <td class="paramtype">::Color</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{255,&#160;255,&#160;255,&#160;255}</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a bounding box with wires </p>
+
+</div>
+</div>
+<a id="a75c1287b1fd3b4fb7a67b099fc8d629e" name="a75c1287b1fd3b4fb7a67b099fc8d629e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75c1287b1fd3b4fb7a67b099fc8d629e">&#9670;&#160;</a></span>GetCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_ray_collision.html">RayCollision</a> raylib::BoundingBox::GetCollision </td>
+          <td>(</td>
+          <td class="paramtype">const ::Ray &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get collision information between ray and bounding box </p>
+
+</div>
+</div>
+<a id="a859067d25368a27b8743e23ebc24d46c" name="a859067d25368a27b8743e23ebc24d46c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a859067d25368a27b8743e23ebc24d46c">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_bounding_box.html">BoundingBox</a> &amp; raylib::BoundingBox::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">::BoundingBox</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>box</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a689f19a02b0d9a0d8c253ea0859be649" name="a689f19a02b0d9a0d8c253ea0859be649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a689f19a02b0d9a0d8c253ea0859be649">&#9670;&#160;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::BoundingBox::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a2d5d6d98333d7a2e15b3703b1c383fe9">::BoundingBox</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>box</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbce410159914b10634c2d86d3dca645" name="acbce410159914b10634c2d86d3dca645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbce410159914b10634c2d86d3dca645">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::BoundingBox::set </td>
+          <td>(</td>
+          <td class="paramtype">const ::Vector3 &amp;</td>          <td class="paramname"><span class="paramname"><em>_min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::Vector3 &amp;</td>          <td class="paramname"><span class="paramname"><em>_max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_bounding_box_8hpp_source.html">BoundingBox.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_bounding_box.html">BoundingBox</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

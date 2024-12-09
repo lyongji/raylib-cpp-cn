@@ -1,0 +1,1886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::Window类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_window.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classraylib_1_1_window-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::Window类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classraylib_1_1_window.html" title="Window and Graphics Device Functions.">Window</a> and Graphics Device Functions.  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_window_8hpp_source.html">Window.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac5e6aa9fe0f156cb5de9914552228a6e" id="r_ac5e6aa9fe0f156cb5de9914552228a6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e6aa9fe0f156cb5de9914552228a6e">Window</a> ()</td></tr>
+<tr class="memdesc:ac5e6aa9fe0f156cb5de9914552228a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a <a class="el" href="classraylib_1_1_window.html" title="Window and Graphics Device Functions.">Window</a> object, but defer the initialization.  <br /></td></tr>
+<tr class="separator:ac5e6aa9fe0f156cb5de9914552228a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a61cbac2a61611c0f0979f3ec43d98f" id="r_a9a61cbac2a61611c0f0979f3ec43d98f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a61cbac2a61611c0f0979f3ec43d98f">Window</a> (int width, int height, const std::string &amp;title=&quot;raylib&quot;, unsigned int flags=0)</td></tr>
+<tr class="memdesc:a9a61cbac2a61611c0f0979f3ec43d98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize window and OpenGL context.  <br /></td></tr>
+<tr class="separator:a9a61cbac2a61611c0f0979f3ec43d98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6071f03b18e0f2d3817b0da3699f24af" id="r_a6071f03b18e0f2d3817b0da3699f24af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6071f03b18e0f2d3817b0da3699f24af">~Window</a> ()</td></tr>
+<tr class="memdesc:a6071f03b18e0f2d3817b0da3699f24af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close window and unload OpenGL context  <br /></td></tr>
+<tr class="separator:a6071f03b18e0f2d3817b0da3699f24af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac9474536517ac0e748280644722f91" id="r_acac9474536517ac0e748280644722f91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acac9474536517ac0e748280644722f91">Init</a> (int width=800, int height=450, const std::string &amp;title=&quot;raylib&quot;, unsigned int flags=0)</td></tr>
+<tr class="memdesc:acac9474536517ac0e748280644722f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the window.  <br /></td></tr>
+<tr class="separator:acac9474536517ac0e748280644722f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2a255aad32ac32aee87fb2e6b20a01" id="r_a5f2a255aad32ac32aee87fb2e6b20a01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f2a255aad32ac32aee87fb2e6b20a01">ShouldClose</a> () const</td></tr>
+<tr class="memdesc:a5f2a255aad32ac32aee87fb2e6b20a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if KEY_ESCAPE pressed or Close icon pressed  <br /></td></tr>
+<tr class="separator:a5f2a255aad32ac32aee87fb2e6b20a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8557d4cf6d7273418eb63683930226e3" id="r_a8557d4cf6d7273418eb63683930226e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8557d4cf6d7273418eb63683930226e3">SetExitKey</a> (int key)</td></tr>
+<tr class="memdesc:a8557d4cf6d7273418eb63683930226e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom key to exit program (default is ESC)  <br /></td></tr>
+<tr class="separator:a8557d4cf6d7273418eb63683930226e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59cf11e97d3e33d914bc7b1711c2ccaf" id="r_a59cf11e97d3e33d914bc7b1711c2ccaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59cf11e97d3e33d914bc7b1711c2ccaf">Close</a> ()</td></tr>
+<tr class="memdesc:a59cf11e97d3e33d914bc7b1711c2ccaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close window and unload OpenGL context  <br /></td></tr>
+<tr class="separator:a59cf11e97d3e33d914bc7b1711c2ccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34b3af6f8d64d11d2c4754d268ce9df" id="r_aa34b3af6f8d64d11d2c4754d268ce9df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa34b3af6f8d64d11d2c4754d268ce9df">IsCursorOnScreen</a> () const</td></tr>
+<tr class="memdesc:aa34b3af6f8d64d11d2c4754d268ce9df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if cursor is on the current screen  <br /></td></tr>
+<tr class="separator:aa34b3af6f8d64d11d2c4754d268ce9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5497f129bcfd214f198a1494a8d6aeb0" id="r_a5497f129bcfd214f198a1494a8d6aeb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5497f129bcfd214f198a1494a8d6aeb0">IsFullscreen</a> () const</td></tr>
+<tr class="memdesc:a5497f129bcfd214f198a1494a8d6aeb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window is currently fullscreen  <br /></td></tr>
+<tr class="separator:a5497f129bcfd214f198a1494a8d6aeb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84905241727491fcfa04d1b2b4bf9a4" id="r_aa84905241727491fcfa04d1b2b4bf9a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84905241727491fcfa04d1b2b4bf9a4">IsHidden</a> () const</td></tr>
+<tr class="memdesc:aa84905241727491fcfa04d1b2b4bf9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window is currently hidden  <br /></td></tr>
+<tr class="separator:aa84905241727491fcfa04d1b2b4bf9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37b1503d3d94dadd16a2e443853fca7" id="r_af37b1503d3d94dadd16a2e443853fca7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af37b1503d3d94dadd16a2e443853fca7">IsMinimized</a> () const</td></tr>
+<tr class="memdesc:af37b1503d3d94dadd16a2e443853fca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window is currently minimized  <br /></td></tr>
+<tr class="separator:af37b1503d3d94dadd16a2e443853fca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83a47dddc7be356bfd7d8328f7bfcc2" id="r_ae83a47dddc7be356bfd7d8328f7bfcc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae83a47dddc7be356bfd7d8328f7bfcc2">IsMaximized</a> () const</td></tr>
+<tr class="memdesc:ae83a47dddc7be356bfd7d8328f7bfcc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window is currently minimized  <br /></td></tr>
+<tr class="separator:ae83a47dddc7be356bfd7d8328f7bfcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7484e498d54cdb28f342097d313284" id="r_adc7484e498d54cdb28f342097d313284"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc7484e498d54cdb28f342097d313284">IsFocused</a> () const</td></tr>
+<tr class="memdesc:adc7484e498d54cdb28f342097d313284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window is currently focused  <br /></td></tr>
+<tr class="separator:adc7484e498d54cdb28f342097d313284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3ef5315e01e7fbaa1023a3a1be5124" id="r_abc3ef5315e01e7fbaa1023a3a1be5124"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc3ef5315e01e7fbaa1023a3a1be5124">IsResized</a> () const</td></tr>
+<tr class="memdesc:abc3ef5315e01e7fbaa1023a3a1be5124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window has been resized last frame  <br /></td></tr>
+<tr class="separator:abc3ef5315e01e7fbaa1023a3a1be5124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9dd646247a51705a040d8c1860bb86" id="r_a5b9dd646247a51705a040d8c1860bb86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b9dd646247a51705a040d8c1860bb86">IsState</a> (unsigned int flag) const</td></tr>
+<tr class="memdesc:a5b9dd646247a51705a040d8c1860bb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if one specific window flag is enabled  <br /></td></tr>
+<tr class="separator:a5b9dd646247a51705a040d8c1860bb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403f3d3d41bc642f9536cab91630ca75" id="r_a403f3d3d41bc642f9536cab91630ca75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a403f3d3d41bc642f9536cab91630ca75">SetState</a> (unsigned int flag)</td></tr>
+<tr class="memdesc:a403f3d3d41bc642f9536cab91630ca75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window configuration state using flags  <br /></td></tr>
+<tr class="separator:a403f3d3d41bc642f9536cab91630ca75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd6268d95ce7e3eb8edf3205305e6f3" id="r_a2cd6268d95ce7e3eb8edf3205305e6f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cd6268d95ce7e3eb8edf3205305e6f3">ClearState</a> (unsigned int flag)</td></tr>
+<tr class="memdesc:a2cd6268d95ce7e3eb8edf3205305e6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear window configuration state flags  <br /></td></tr>
+<tr class="separator:a2cd6268d95ce7e3eb8edf3205305e6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734279b5494096d11fe0aad66d6fb3e6" id="r_a734279b5494096d11fe0aad66d6fb3e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734279b5494096d11fe0aad66d6fb3e6">ClearBackground</a> (const ::Color &amp;color=BLACK)</td></tr>
+<tr class="memdesc:a734279b5494096d11fe0aad66d6fb3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear window with given color.  <br /></td></tr>
+<tr class="separator:a734279b5494096d11fe0aad66d6fb3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c1dd65d7f389a584e0440bef18838f" id="r_a06c1dd65d7f389a584e0440bef18838f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06c1dd65d7f389a584e0440bef18838f">ToggleFullscreen</a> ()</td></tr>
+<tr class="memdesc:a06c1dd65d7f389a584e0440bef18838f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle window state: fullscreen/windowed  <br /></td></tr>
+<tr class="separator:a06c1dd65d7f389a584e0440bef18838f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97cd33ccd2b772aea0e7b7d66aa52205" id="r_a97cd33ccd2b772aea0e7b7d66aa52205"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97cd33ccd2b772aea0e7b7d66aa52205">SetFullscreen</a> (bool fullscreen)</td></tr>
+<tr class="memdesc:a97cd33ccd2b772aea0e7b7d66aa52205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the application should be fullscreen.  <br /></td></tr>
+<tr class="separator:a97cd33ccd2b772aea0e7b7d66aa52205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7e32faf05f9beddcd73cab73a6c979" id="r_a9d7e32faf05f9beddcd73cab73a6c979"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d7e32faf05f9beddcd73cab73a6c979">ToggleBorderless</a> ()</td></tr>
+<tr class="memdesc:a9d7e32faf05f9beddcd73cab73a6c979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle window state: borderless/windowed  <br /></td></tr>
+<tr class="separator:a9d7e32faf05f9beddcd73cab73a6c979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5790d951ff3adbc50e59b4051f104c90" id="r_a5790d951ff3adbc50e59b4051f104c90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5790d951ff3adbc50e59b4051f104c90">Maximize</a> ()</td></tr>
+<tr class="memdesc:a5790d951ff3adbc50e59b4051f104c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window state: maximized, if resizable (only PLATFORM_DESKTOP)  <br /></td></tr>
+<tr class="separator:a5790d951ff3adbc50e59b4051f104c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd8e0a801211692125a12faba18a141" id="r_adbd8e0a801211692125a12faba18a141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd8e0a801211692125a12faba18a141">Minimize</a> ()</td></tr>
+<tr class="memdesc:adbd8e0a801211692125a12faba18a141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window state: minimized, if resizable (only PLATFORM_DESKTOP)  <br /></td></tr>
+<tr class="separator:adbd8e0a801211692125a12faba18a141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363b508c37787a50067fdef7b6a8a7f4" id="r_a363b508c37787a50067fdef7b6a8a7f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a363b508c37787a50067fdef7b6a8a7f4">Restore</a> ()</td></tr>
+<tr class="memdesc:a363b508c37787a50067fdef7b6a8a7f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window state: not minimized/maximized (only PLATFORM_DESKTOP)  <br /></td></tr>
+<tr class="separator:a363b508c37787a50067fdef7b6a8a7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb4f1c464cb2274d8d22123965ac2239" id="r_adb4f1c464cb2274d8d22123965ac2239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb4f1c464cb2274d8d22123965ac2239">SetIcon</a> (const ::Image &amp;image)</td></tr>
+<tr class="memdesc:adb4f1c464cb2274d8d22123965ac2239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set icon for window  <br /></td></tr>
+<tr class="separator:adb4f1c464cb2274d8d22123965ac2239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85dd16910a4e9c5dc79b1aee9410088" id="r_ab85dd16910a4e9c5dc79b1aee9410088"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab85dd16910a4e9c5dc79b1aee9410088">SetIcons</a> (<a class="el" href="classraylib_1_1_image.html">Image</a> *images, int count)</td></tr>
+<tr class="memdesc:ab85dd16910a4e9c5dc79b1aee9410088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set icon for window (multiple images, RGBA 32bit, only PLATFORM_DESKTOP)  <br /></td></tr>
+<tr class="separator:ab85dd16910a4e9c5dc79b1aee9410088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d26141e2460add21aec360a20ddbed" id="r_a43d26141e2460add21aec360a20ddbed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d26141e2460add21aec360a20ddbed">SetTitle</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:a43d26141e2460add21aec360a20ddbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set title for window  <br /></td></tr>
+<tr class="separator:a43d26141e2460add21aec360a20ddbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22162747a663a0e6ba5d644b28069020" id="r_a22162747a663a0e6ba5d644b28069020"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22162747a663a0e6ba5d644b28069020">SetPosition</a> (int x, int y)</td></tr>
+<tr class="memdesc:a22162747a663a0e6ba5d644b28069020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window position on screen  <br /></td></tr>
+<tr class="separator:a22162747a663a0e6ba5d644b28069020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cd2f516efcab92927bf582b6fe754d" id="r_a96cd2f516efcab92927bf582b6fe754d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96cd2f516efcab92927bf582b6fe754d">SetPosition</a> (const ::Vector2 &amp;position)</td></tr>
+<tr class="memdesc:a96cd2f516efcab92927bf582b6fe754d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window position on screen  <br /></td></tr>
+<tr class="separator:a96cd2f516efcab92927bf582b6fe754d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4433c8726840fd2909da8437b7b3e007" id="r_a4433c8726840fd2909da8437b7b3e007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4433c8726840fd2909da8437b7b3e007">SetMonitor</a> (int monitor)</td></tr>
+<tr class="memdesc:a4433c8726840fd2909da8437b7b3e007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set monitor for the current window  <br /></td></tr>
+<tr class="separator:a4433c8726840fd2909da8437b7b3e007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bbbbbe9a241c7fda7d3ee4a72cbf2d" id="r_af4bbbbbe9a241c7fda7d3ee4a72cbf2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4bbbbbe9a241c7fda7d3ee4a72cbf2d">SetMinSize</a> (int width, int height)</td></tr>
+<tr class="memdesc:af4bbbbbe9a241c7fda7d3ee4a72cbf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window minimum dimensions  <br /></td></tr>
+<tr class="separator:af4bbbbbe9a241c7fda7d3ee4a72cbf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ffe8d15136a9cca7ffc8cb66886e2a6" id="r_a4ffe8d15136a9cca7ffc8cb66886e2a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ffe8d15136a9cca7ffc8cb66886e2a6">SetMinSize</a> (const ::Vector2 &amp;size)</td></tr>
+<tr class="memdesc:a4ffe8d15136a9cca7ffc8cb66886e2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window minimum dimensions  <br /></td></tr>
+<tr class="separator:a4ffe8d15136a9cca7ffc8cb66886e2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f8680331de7345546070d54643b781" id="r_a81f8680331de7345546070d54643b781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81f8680331de7345546070d54643b781">SetSize</a> (int width, int height)</td></tr>
+<tr class="memdesc:a81f8680331de7345546070d54643b781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window dimensions  <br /></td></tr>
+<tr class="separator:a81f8680331de7345546070d54643b781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70e19649546036ca3581e12706e5820" id="r_ac70e19649546036ca3581e12706e5820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac70e19649546036ca3581e12706e5820">SetOpacity</a> (float opacity)</td></tr>
+<tr class="memdesc:ac70e19649546036ca3581e12706e5820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window opacity [0.0f..1.0f] (only PLATFORM_DESKTOP)  <br /></td></tr>
+<tr class="separator:ac70e19649546036ca3581e12706e5820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a669766c45011d854cd47ff3aa73eb2" id="r_a2a669766c45011d854cd47ff3aa73eb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a669766c45011d854cd47ff3aa73eb2">SetFocused</a> ()</td></tr>
+<tr class="memdesc:a2a669766c45011d854cd47ff3aa73eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window focused (only PLATFORM_DESKTOP)  <br /></td></tr>
+<tr class="separator:a2a669766c45011d854cd47ff3aa73eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c6f9d69df4ffb7a0a5dbf7f3da7023" id="r_a38c6f9d69df4ffb7a0a5dbf7f3da7023"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38c6f9d69df4ffb7a0a5dbf7f3da7023">SetSize</a> (const ::Vector2 &amp;size)</td></tr>
+<tr class="memdesc:a38c6f9d69df4ffb7a0a5dbf7f3da7023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window dimensions  <br /></td></tr>
+<tr class="separator:a38c6f9d69df4ffb7a0a5dbf7f3da7023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d1f6919d7f001e77fc1f5631581af0" id="r_aa5d1f6919d7f001e77fc1f5631581af0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5d1f6919d7f001e77fc1f5631581af0">GetSize</a> () const</td></tr>
+<tr class="memdesc:aa5d1f6919d7f001e77fc1f5631581af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the screen's width and height.  <br /></td></tr>
+<tr class="separator:aa5d1f6919d7f001e77fc1f5631581af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff32da7f61b1e8ec87e54409dbbe66c7" id="r_aff32da7f61b1e8ec87e54409dbbe66c7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff32da7f61b1e8ec87e54409dbbe66c7">GetHandle</a> () const</td></tr>
+<tr class="memdesc:aff32da7f61b1e8ec87e54409dbbe66c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get native window handle  <br /></td></tr>
+<tr class="separator:aff32da7f61b1e8ec87e54409dbbe66c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487e7b9ee38593be6f6bc5c5c2e2e80c" id="r_a487e7b9ee38593be6f6bc5c5c2e2e80c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a487e7b9ee38593be6f6bc5c5c2e2e80c">BeginDrawing</a> ()</td></tr>
+<tr class="memdesc:a487e7b9ee38593be6f6bc5c5c2e2e80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup canvas (framebuffer) to start drawing  <br /></td></tr>
+<tr class="separator:a487e7b9ee38593be6f6bc5c5c2e2e80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc2674cb9309548d27da7b114ff709c7" id="r_abc2674cb9309548d27da7b114ff709c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc2674cb9309548d27da7b114ff709c7">EndDrawing</a> ()</td></tr>
+<tr class="memdesc:abc2674cb9309548d27da7b114ff709c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">End canvas drawing and swap buffers (double buffering)  <br /></td></tr>
+<tr class="separator:abc2674cb9309548d27da7b114ff709c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b6a5df22c776cf362c400798232a20" id="r_a28b6a5df22c776cf362c400798232a20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28b6a5df22c776cf362c400798232a20">GetWidth</a> () const</td></tr>
+<tr class="memdesc:a28b6a5df22c776cf362c400798232a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current screen width  <br /></td></tr>
+<tr class="separator:a28b6a5df22c776cf362c400798232a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0373241f0e8997b06aa4a15a58d3d5d9" id="r_a0373241f0e8997b06aa4a15a58d3d5d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0373241f0e8997b06aa4a15a58d3d5d9">GetHeight</a> () const</td></tr>
+<tr class="memdesc:a0373241f0e8997b06aa4a15a58d3d5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current screen height  <br /></td></tr>
+<tr class="separator:a0373241f0e8997b06aa4a15a58d3d5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a01230bfa32291f585f1aa63e04e88" id="r_a06a01230bfa32291f585f1aa63e04e88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06a01230bfa32291f585f1aa63e04e88">GetRenderWidth</a> () const</td></tr>
+<tr class="memdesc:a06a01230bfa32291f585f1aa63e04e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current render width (it considers HiDPI)  <br /></td></tr>
+<tr class="separator:a06a01230bfa32291f585f1aa63e04e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135515c9f786676a4e8e1f72ab279e59" id="r_a135515c9f786676a4e8e1f72ab279e59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a135515c9f786676a4e8e1f72ab279e59">GetRenderHeight</a> () const</td></tr>
+<tr class="memdesc:a135515c9f786676a4e8e1f72ab279e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current render height (it considers HiDPI)  <br /></td></tr>
+<tr class="separator:a135515c9f786676a4e8e1f72ab279e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be14707970a3af16d8dd212c27635a0" id="r_a3be14707970a3af16d8dd212c27635a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be14707970a3af16d8dd212c27635a0">GetPosition</a> () const</td></tr>
+<tr class="memdesc:a3be14707970a3af16d8dd212c27635a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get window position XY on monitor  <br /></td></tr>
+<tr class="separator:a3be14707970a3af16d8dd212c27635a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361fe3405b75feef86fe621a0480e10d" id="r_a361fe3405b75feef86fe621a0480e10d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a361fe3405b75feef86fe621a0480e10d">GetScaleDPI</a> () const</td></tr>
+<tr class="memdesc:a361fe3405b75feef86fe621a0480e10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get window scale DPI factor  <br /></td></tr>
+<tr class="separator:a361fe3405b75feef86fe621a0480e10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcca44b978f167ad371285fd8f227034" id="r_afcca44b978f167ad371285fd8f227034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcca44b978f167ad371285fd8f227034">SetClipboardText</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:afcca44b978f167ad371285fd8f227034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clipboard text content  <br /></td></tr>
+<tr class="separator:afcca44b978f167ad371285fd8f227034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95694b643f5ded1b873cc8130d238885" id="r_a95694b643f5ded1b873cc8130d238885"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95694b643f5ded1b873cc8130d238885">GetClipboardText</a> ()</td></tr>
+<tr class="memdesc:a95694b643f5ded1b873cc8130d238885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clipboard text content  <br /></td></tr>
+<tr class="separator:a95694b643f5ded1b873cc8130d238885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca2dff3eeae227e0cc9d6b090fd7a3d" id="r_a7ca2dff3eeae227e0cc9d6b090fd7a3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ca2dff3eeae227e0cc9d6b090fd7a3d">SetTargetFPS</a> (int fps)</td></tr>
+<tr class="memdesc:a7ca2dff3eeae227e0cc9d6b090fd7a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set target FPS (maximum)  <br /></td></tr>
+<tr class="separator:a7ca2dff3eeae227e0cc9d6b090fd7a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84747246a5f4e9101ac06c5da684af43" id="r_a84747246a5f4e9101ac06c5da684af43"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84747246a5f4e9101ac06c5da684af43">GetFPS</a> () const</td></tr>
+<tr class="memdesc:a84747246a5f4e9101ac06c5da684af43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns current FPS  <br /></td></tr>
+<tr class="separator:a84747246a5f4e9101ac06c5da684af43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bbcfadc697547f373dd9cc02edeaf1" id="r_a91bbcfadc697547f373dd9cc02edeaf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91bbcfadc697547f373dd9cc02edeaf1">DrawFPS</a> (int posX=10, int posY=10) const</td></tr>
+<tr class="memdesc:a91bbcfadc697547f373dd9cc02edeaf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw current FPS  <br /></td></tr>
+<tr class="separator:a91bbcfadc697547f373dd9cc02edeaf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9980432a4deacf2df9471f311d43ad" id="r_a9b9980432a4deacf2df9471f311d43ad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b9980432a4deacf2df9471f311d43ad">GetFrameTime</a> () const</td></tr>
+<tr class="memdesc:a9b9980432a4deacf2df9471f311d43ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns time in seconds for last frame drawn  <br /></td></tr>
+<tr class="separator:a9b9980432a4deacf2df9471f311d43ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60da5ca13065b01316ab17d4cd92b0c4" id="r_a60da5ca13065b01316ab17d4cd92b0c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60da5ca13065b01316ab17d4cd92b0c4">GetTime</a> () const</td></tr>
+<tr class="memdesc:a60da5ca13065b01316ab17d4cd92b0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns elapsed time in seconds since <a class="el" href="namespaceraylib.html#a2566e995220052936edc573116a1677a" title="Initialize window and OpenGL context">InitWindow()</a>  <br /></td></tr>
+<tr class="separator:a60da5ca13065b01316ab17d4cd92b0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551444a64ece7c1d2bb1832ef1b0b1bc" id="r_a551444a64ece7c1d2bb1832ef1b0b1bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a551444a64ece7c1d2bb1832ef1b0b1bc">SetConfigFlags</a> (unsigned int flags)</td></tr>
+<tr class="memdesc:a551444a64ece7c1d2bb1832ef1b0b1bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the configuration flags for raylib.  <br /></td></tr>
+<tr class="separator:a551444a64ece7c1d2bb1832ef1b0b1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a9814a0d29da572bba75910b41cfe0f77" id="r_a9814a0d29da572bba75910b41cfe0f77"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9814a0d29da572bba75910b41cfe0f77">IsReady</a> ()</td></tr>
+<tr class="memdesc:a9814a0d29da572bba75910b41cfe0f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window has been initialized successfully  <br /></td></tr>
+<tr class="separator:a9814a0d29da572bba75910b41cfe0f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classraylib_1_1_window.html" title="Window and Graphics Device Functions.">Window</a> and Graphics Device Functions. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac5e6aa9fe0f156cb5de9914552228a6e" name="ac5e6aa9fe0f156cb5de9914552228a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e6aa9fe0f156cb5de9914552228a6e">&#9670;&#160;</a></span>Window() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Window::Window </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build a <a class="el" href="classraylib_1_1_window.html" title="Window and Graphics Device Functions.">Window</a> object, but defer the initialization. </p>
+<p>Ensure you call <a class="el" href="#acac9474536517ac0e748280644722f91" title="Initializes the window.">Init()</a> manually.</p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="#acac9474536517ac0e748280644722f91" title="Initializes the window.">Init()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a9a61cbac2a61611c0f0979f3ec43d98f" name="a9a61cbac2a61611c0f0979f3ec43d98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a61cbac2a61611c0f0979f3ec43d98f">&#9670;&#160;</a></span>Window() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;raylib&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize window and OpenGL context. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The width of the window. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the window. </td></tr>
+    <tr><td class="paramname">title</td><td>The desired title of the window. </td></tr>
+    <tr><td class="paramname">flags</td><td>The ConfigFlags to set prior to initializing the window. See SetConfigFlags for more details.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="#a551444a64ece7c1d2bb1832ef1b0b1bc" title="Sets the configuration flags for raylib.">SetConfigFlags()</a> </dd>
+<dd>
+ConfigFlags</dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Thrown if the window failed to initiate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6071f03b18e0f2d3817b0da3699f24af" name="a6071f03b18e0f2d3817b0da3699f24af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6071f03b18e0f2d3817b0da3699f24af">&#9670;&#160;</a></span>~Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Window::~Window </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close window and unload OpenGL context </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a487e7b9ee38593be6f6bc5c5c2e2e80c" name="a487e7b9ee38593be6f6bc5c5c2e2e80c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a487e7b9ee38593be6f6bc5c5c2e2e80c">&#9670;&#160;</a></span>BeginDrawing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::BeginDrawing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup canvas (framebuffer) to start drawing </p>
+
+</div>
+</div>
+<a id="a734279b5494096d11fe0aad66d6fb3e6" name="a734279b5494096d11fe0aad66d6fb3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a734279b5494096d11fe0aad66d6fb3e6">&#9670;&#160;</a></span>ClearBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::ClearBackground </td>
+          <td>(</td>
+          <td class="paramtype">const ::Color &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">BLACK</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear window with given color. </p>
+
+</div>
+</div>
+<a id="a2cd6268d95ce7e3eb8edf3205305e6f3" name="a2cd6268d95ce7e3eb8edf3205305e6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd6268d95ce7e3eb8edf3205305e6f3">&#9670;&#160;</a></span>ClearState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::ClearState </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear window configuration state flags </p>
+
+</div>
+</div>
+<a id="a59cf11e97d3e33d914bc7b1711c2ccaf" name="a59cf11e97d3e33d914bc7b1711c2ccaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59cf11e97d3e33d914bc7b1711c2ccaf">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Window::Close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close window and unload OpenGL context </p>
+
+</div>
+</div>
+<a id="a91bbcfadc697547f373dd9cc02edeaf1" name="a91bbcfadc697547f373dd9cc02edeaf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bbcfadc697547f373dd9cc02edeaf1">&#9670;&#160;</a></span>DrawFPS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Window::DrawFPS </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posX</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posY</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw current FPS </p>
+
+</div>
+</div>
+<a id="abc2674cb9309548d27da7b114ff709c7" name="abc2674cb9309548d27da7b114ff709c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc2674cb9309548d27da7b114ff709c7">&#9670;&#160;</a></span>EndDrawing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::EndDrawing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>End canvas drawing and swap buffers (double buffering) </p>
+
+</div>
+</div>
+<a id="a95694b643f5ded1b873cc8130d238885" name="a95694b643f5ded1b873cc8130d238885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95694b643f5ded1b873cc8130d238885">&#9670;&#160;</a></span>GetClipboardText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string raylib::Window::GetClipboardText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get clipboard text content </p>
+
+</div>
+</div>
+<a id="a84747246a5f4e9101ac06c5da684af43" name="a84747246a5f4e9101ac06c5da684af43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84747246a5f4e9101ac06c5da684af43">&#9670;&#160;</a></span>GetFPS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int raylib::Window::GetFPS </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns current FPS </p>
+
+</div>
+</div>
+<a id="a9b9980432a4deacf2df9471f311d43ad" name="a9b9980432a4deacf2df9471f311d43ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9980432a4deacf2df9471f311d43ad">&#9670;&#160;</a></span>GetFrameTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float raylib::Window::GetFrameTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns time in seconds for last frame drawn </p>
+
+</div>
+</div>
+<a id="aff32da7f61b1e8ec87e54409dbbe66c7" name="aff32da7f61b1e8ec87e54409dbbe66c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff32da7f61b1e8ec87e54409dbbe66c7">&#9670;&#160;</a></span>GetHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * raylib::Window::GetHandle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get native window handle </p>
+
+</div>
+</div>
+<a id="a0373241f0e8997b06aa4a15a58d3d5d9" name="a0373241f0e8997b06aa4a15a58d3d5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0373241f0e8997b06aa4a15a58d3d5d9">&#9670;&#160;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int raylib::Window::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current screen height </p>
+
+</div>
+</div>
+<a id="a3be14707970a3af16d8dd212c27635a0" name="a3be14707970a3af16d8dd212c27635a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be14707970a3af16d8dd212c27635a0">&#9670;&#160;</a></span>GetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a> raylib::Window::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get window position XY on monitor </p>
+
+</div>
+</div>
+<a id="a135515c9f786676a4e8e1f72ab279e59" name="a135515c9f786676a4e8e1f72ab279e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135515c9f786676a4e8e1f72ab279e59">&#9670;&#160;</a></span>GetRenderHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int raylib::Window::GetRenderHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current render height (it considers HiDPI) </p>
+
+</div>
+</div>
+<a id="a06a01230bfa32291f585f1aa63e04e88" name="a06a01230bfa32291f585f1aa63e04e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a01230bfa32291f585f1aa63e04e88">&#9670;&#160;</a></span>GetRenderWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int raylib::Window::GetRenderWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current render width (it considers HiDPI) </p>
+
+</div>
+</div>
+<a id="a361fe3405b75feef86fe621a0480e10d" name="a361fe3405b75feef86fe621a0480e10d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a361fe3405b75feef86fe621a0480e10d">&#9670;&#160;</a></span>GetScaleDPI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a> raylib::Window::GetScaleDPI </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get window scale DPI factor </p>
+
+</div>
+</div>
+<a id="aa5d1f6919d7f001e77fc1f5631581af0" name="aa5d1f6919d7f001e77fc1f5631581af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d1f6919d7f001e77fc1f5631581af0">&#9670;&#160;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a> raylib::Window::GetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the screen's width and height. </p>
+
+</div>
+</div>
+<a id="a60da5ca13065b01316ab17d4cd92b0c4" name="a60da5ca13065b01316ab17d4cd92b0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60da5ca13065b01316ab17d4cd92b0c4">&#9670;&#160;</a></span>GetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double raylib::Window::GetTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns elapsed time in seconds since <a class="el" href="namespaceraylib.html#a2566e995220052936edc573116a1677a" title="Initialize window and OpenGL context">InitWindow()</a> </p>
+
+</div>
+</div>
+<a id="a28b6a5df22c776cf362c400798232a20" name="a28b6a5df22c776cf362c400798232a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b6a5df22c776cf362c400798232a20">&#9670;&#160;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int raylib::Window::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current screen width </p>
+
+</div>
+</div>
+<a id="acac9474536517ac0e748280644722f91" name="acac9474536517ac0e748280644722f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac9474536517ac0e748280644722f91">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Window::Init </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span><span class="paramdefsep"> = </span><span class="paramdefval">800</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span><span class="paramdefsep"> = </span><span class="paramdefval">450</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;raylib&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the window. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>The width of the window. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the window. </td></tr>
+    <tr><td class="paramname">title</td><td>The desired title of the window. </td></tr>
+    <tr><td class="paramname">flags</td><td>The ConfigFlags to set prior to initializing the window. See SetConfigFlags for more details.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="#a551444a64ece7c1d2bb1832ef1b0b1bc" title="Sets the configuration flags for raylib.">SetConfigFlags()</a> </dd>
+<dd>
+ConfigFlags</dd></dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Thrown if the window failed to initiate. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa34b3af6f8d64d11d2c4754d268ce9df" name="aa34b3af6f8d64d11d2c4754d268ce9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa34b3af6f8d64d11d2c4754d268ce9df">&#9670;&#160;</a></span>IsCursorOnScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsCursorOnScreen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if cursor is on the current screen </p>
+
+</div>
+</div>
+<a id="adc7484e498d54cdb28f342097d313284" name="adc7484e498d54cdb28f342097d313284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7484e498d54cdb28f342097d313284">&#9670;&#160;</a></span>IsFocused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsFocused </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window is currently focused </p>
+
+</div>
+</div>
+<a id="a5497f129bcfd214f198a1494a8d6aeb0" name="a5497f129bcfd214f198a1494a8d6aeb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5497f129bcfd214f198a1494a8d6aeb0">&#9670;&#160;</a></span>IsFullscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsFullscreen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window is currently fullscreen </p>
+
+</div>
+</div>
+<a id="aa84905241727491fcfa04d1b2b4bf9a4" name="aa84905241727491fcfa04d1b2b4bf9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84905241727491fcfa04d1b2b4bf9a4">&#9670;&#160;</a></span>IsHidden()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsHidden </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window is currently hidden </p>
+
+</div>
+</div>
+<a id="ae83a47dddc7be356bfd7d8328f7bfcc2" name="ae83a47dddc7be356bfd7d8328f7bfcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83a47dddc7be356bfd7d8328f7bfcc2">&#9670;&#160;</a></span>IsMaximized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsMaximized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window is currently minimized </p>
+
+</div>
+</div>
+<a id="af37b1503d3d94dadd16a2e443853fca7" name="af37b1503d3d94dadd16a2e443853fca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37b1503d3d94dadd16a2e443853fca7">&#9670;&#160;</a></span>IsMinimized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsMinimized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window is currently minimized </p>
+
+</div>
+</div>
+<a id="a9814a0d29da572bba75910b41cfe0f77" name="a9814a0d29da572bba75910b41cfe0f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9814a0d29da572bba75910b41cfe0f77">&#9670;&#160;</a></span>IsReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool raylib::Window::IsReady </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window has been initialized successfully </p>
+
+</div>
+</div>
+<a id="abc3ef5315e01e7fbaa1023a3a1be5124" name="abc3ef5315e01e7fbaa1023a3a1be5124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3ef5315e01e7fbaa1023a3a1be5124">&#9670;&#160;</a></span>IsResized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsResized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if window has been resized last frame </p>
+
+</div>
+</div>
+<a id="a5b9dd646247a51705a040d8c1860bb86" name="a5b9dd646247a51705a040d8c1860bb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9dd646247a51705a040d8c1860bb86">&#9670;&#160;</a></span>IsState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::IsState </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flag</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if one specific window flag is enabled </p>
+
+</div>
+</div>
+<a id="a5790d951ff3adbc50e59b4051f104c90" name="a5790d951ff3adbc50e59b4051f104c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5790d951ff3adbc50e59b4051f104c90">&#9670;&#160;</a></span>Maximize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::Maximize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window state: maximized, if resizable (only PLATFORM_DESKTOP) </p>
+
+</div>
+</div>
+<a id="adbd8e0a801211692125a12faba18a141" name="adbd8e0a801211692125a12faba18a141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd8e0a801211692125a12faba18a141">&#9670;&#160;</a></span>Minimize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::Minimize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window state: minimized, if resizable (only PLATFORM_DESKTOP) </p>
+
+</div>
+</div>
+<a id="a363b508c37787a50067fdef7b6a8a7f4" name="a363b508c37787a50067fdef7b6a8a7f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363b508c37787a50067fdef7b6a8a7f4">&#9670;&#160;</a></span>Restore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::Restore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window state: not minimized/maximized (only PLATFORM_DESKTOP) </p>
+
+</div>
+</div>
+<a id="afcca44b978f167ad371285fd8f227034" name="afcca44b978f167ad371285fd8f227034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcca44b978f167ad371285fd8f227034">&#9670;&#160;</a></span>SetClipboardText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Window::SetClipboardText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set clipboard text content </p>
+
+</div>
+</div>
+<a id="a551444a64ece7c1d2bb1832ef1b0b1bc" name="a551444a64ece7c1d2bb1832ef1b0b1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a551444a64ece7c1d2bb1832ef1b0b1bc">&#9670;&#160;</a></span>SetConfigFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Window::SetConfigFlags </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the configuration flags for raylib. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>The ConfigFlags to apply to the configuration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="#a551444a64ece7c1d2bb1832ef1b0b1bc" title="Sets the configuration flags for raylib.">SetConfigFlags</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8557d4cf6d7273418eb63683930226e3" name="a8557d4cf6d7273418eb63683930226e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8557d4cf6d7273418eb63683930226e3">&#9670;&#160;</a></span>SetExitKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Window::SetExitKey </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a custom key to exit program (default is ESC) </p>
+
+</div>
+</div>
+<a id="a2a669766c45011d854cd47ff3aa73eb2" name="a2a669766c45011d854cd47ff3aa73eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a669766c45011d854cd47ff3aa73eb2">&#9670;&#160;</a></span>SetFocused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetFocused </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window focused (only PLATFORM_DESKTOP) </p>
+
+</div>
+</div>
+<a id="a97cd33ccd2b772aea0e7b7d66aa52205" name="a97cd33ccd2b772aea0e7b7d66aa52205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cd33ccd2b772aea0e7b7d66aa52205">&#9670;&#160;</a></span>SetFullscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetFullscreen </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fullscreen</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set whether or not the application should be fullscreen. </p>
+
+</div>
+</div>
+<a id="adb4f1c464cb2274d8d22123965ac2239" name="adb4f1c464cb2274d8d22123965ac2239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb4f1c464cb2274d8d22123965ac2239">&#9670;&#160;</a></span>SetIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetIcon </td>
+          <td>(</td>
+          <td class="paramtype">const ::Image &amp;</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set icon for window </p>
+
+</div>
+</div>
+<a id="ab85dd16910a4e9c5dc79b1aee9410088" name="ab85dd16910a4e9c5dc79b1aee9410088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85dd16910a4e9c5dc79b1aee9410088">&#9670;&#160;</a></span>SetIcons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetIcons </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_image.html">Image</a> *</td>          <td class="paramname"><span class="paramname"><em>images</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set icon for window (multiple images, RGBA 32bit, only PLATFORM_DESKTOP) </p>
+
+</div>
+</div>
+<a id="a4ffe8d15136a9cca7ffc8cb66886e2a6" name="a4ffe8d15136a9cca7ffc8cb66886e2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ffe8d15136a9cca7ffc8cb66886e2a6">&#9670;&#160;</a></span>SetMinSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetMinSize </td>
+          <td>(</td>
+          <td class="paramtype">const ::Vector2 &amp;</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window minimum dimensions </p>
+
+</div>
+</div>
+<a id="af4bbbbbe9a241c7fda7d3ee4a72cbf2d" name="af4bbbbbe9a241c7fda7d3ee4a72cbf2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bbbbbe9a241c7fda7d3ee4a72cbf2d">&#9670;&#160;</a></span>SetMinSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetMinSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window minimum dimensions </p>
+
+</div>
+</div>
+<a id="a4433c8726840fd2909da8437b7b3e007" name="a4433c8726840fd2909da8437b7b3e007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4433c8726840fd2909da8437b7b3e007">&#9670;&#160;</a></span>SetMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetMonitor </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>monitor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set monitor for the current window </p>
+
+</div>
+</div>
+<a id="ac70e19649546036ca3581e12706e5820" name="ac70e19649546036ca3581e12706e5820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70e19649546036ca3581e12706e5820">&#9670;&#160;</a></span>SetOpacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetOpacity </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>opacity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window opacity [0.0f..1.0f] (only PLATFORM_DESKTOP) </p>
+
+</div>
+</div>
+<a id="a96cd2f516efcab92927bf582b6fe754d" name="a96cd2f516efcab92927bf582b6fe754d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96cd2f516efcab92927bf582b6fe754d">&#9670;&#160;</a></span>SetPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">const ::Vector2 &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window position on screen </p>
+
+</div>
+</div>
+<a id="a22162747a663a0e6ba5d644b28069020" name="a22162747a663a0e6ba5d644b28069020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22162747a663a0e6ba5d644b28069020">&#9670;&#160;</a></span>SetPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window position on screen </p>
+
+</div>
+</div>
+<a id="a38c6f9d69df4ffb7a0a5dbf7f3da7023" name="a38c6f9d69df4ffb7a0a5dbf7f3da7023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c6f9d69df4ffb7a0a5dbf7f3da7023">&#9670;&#160;</a></span>SetSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">const ::Vector2 &amp;</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window dimensions </p>
+
+</div>
+</div>
+<a id="a81f8680331de7345546070d54643b781" name="a81f8680331de7345546070d54643b781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f8680331de7345546070d54643b781">&#9670;&#160;</a></span>SetSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window dimensions </p>
+
+</div>
+</div>
+<a id="a403f3d3d41bc642f9536cab91630ca75" name="a403f3d3d41bc642f9536cab91630ca75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403f3d3d41bc642f9536cab91630ca75">&#9670;&#160;</a></span>SetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetState </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set window configuration state using flags </p>
+
+</div>
+</div>
+<a id="a7ca2dff3eeae227e0cc9d6b090fd7a3d" name="a7ca2dff3eeae227e0cc9d6b090fd7a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca2dff3eeae227e0cc9d6b090fd7a3d">&#9670;&#160;</a></span>SetTargetFPS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetTargetFPS </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fps</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set target FPS (maximum) </p>
+
+</div>
+</div>
+<a id="a43d26141e2460add21aec360a20ddbed" name="a43d26141e2460add21aec360a20ddbed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d26141e2460add21aec360a20ddbed">&#9670;&#160;</a></span>SetTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set title for window </p>
+
+</div>
+</div>
+<a id="a5f2a255aad32ac32aee87fb2e6b20a01" name="a5f2a255aad32ac32aee87fb2e6b20a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2a255aad32ac32aee87fb2e6b20a01">&#9670;&#160;</a></span>ShouldClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Window::ShouldClose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if KEY_ESCAPE pressed or Close icon pressed </p>
+
+</div>
+</div>
+<a id="a9d7e32faf05f9beddcd73cab73a6c979" name="a9d7e32faf05f9beddcd73cab73a6c979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7e32faf05f9beddcd73cab73a6c979">&#9670;&#160;</a></span>ToggleBorderless()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::ToggleBorderless </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Toggle window state: borderless/windowed </p>
+
+</div>
+</div>
+<a id="a06c1dd65d7f389a584e0440bef18838f" name="a06c1dd65d7f389a584e0440bef18838f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c1dd65d7f389a584e0440bef18838f">&#9670;&#160;</a></span>ToggleFullscreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_window.html">Window</a> &amp; raylib::Window::ToggleFullscreen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Toggle window state: fullscreen/windowed </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_window_8hpp_source.html">Window.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_window.html">Window</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

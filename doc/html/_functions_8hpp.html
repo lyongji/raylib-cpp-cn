@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: include/Functions.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_functions_8hpp.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Functions.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="raylib_8hpp_source.html">./raylib.hpp</a>&quot;</code><br />
+</div>
+<p><a href="_functions_8hpp_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html">raylib</a></td></tr>
+<tr class="memdesc:namespaceraylib"><td class="mdescLeft">&#160;</td><td class="mdescRight">所有的raylib-cpp类和函数都出现在raylib命名空间中。 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a905c250671e2d934cf2ac43e0ca915ad" id="r_a905c250671e2d934cf2ac43e0ca915ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:a905c250671e2d934cf2ac43e0ca915ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ wrapper functions for raylib.  <br /></td></tr>
+<tr class="separator:a905c250671e2d934cf2ac43e0ca915ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2566e995220052936edc573116a1677a" id="r_a2566e995220052936edc573116a1677a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a2566e995220052936edc573116a1677a">raylib::InitWindow</a> (int width, int height, const std::string &amp;title=&quot;raylib&quot;)</td></tr>
+<tr class="memdesc:a2566e995220052936edc573116a1677a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize window and OpenGL context  <br /></td></tr>
+<tr class="separator:a2566e995220052936edc573116a1677a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0acda0ee4c211d2bd871b6bf6543c6" id="r_a6c0acda0ee4c211d2bd871b6bf6543c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a6c0acda0ee4c211d2bd871b6bf6543c6">raylib::SetWindowTitle</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:a6c0acda0ee4c211d2bd871b6bf6543c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set title for window  <br /></td></tr>
+<tr class="separator:a6c0acda0ee4c211d2bd871b6bf6543c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40210f2205585e062141a740b5ba2ced" id="r_a40210f2205585e062141a740b5ba2ced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a40210f2205585e062141a740b5ba2ced">raylib::GetMonitorName</a> (int monitor=0)</td></tr>
+<tr class="memdesc:a40210f2205585e062141a740b5ba2ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the human-readable, UTF-8 encoded name of the primary monitor  <br /></td></tr>
+<tr class="separator:a40210f2205585e062141a740b5ba2ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33ca7b9fdf31bd8d6fb2330ae05042b" id="r_ac33ca7b9fdf31bd8d6fb2330ae05042b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#ac33ca7b9fdf31bd8d6fb2330ae05042b">raylib::SetClipboardText</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:ac33ca7b9fdf31bd8d6fb2330ae05042b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clipboard text content  <br /></td></tr>
+<tr class="separator:ac33ca7b9fdf31bd8d6fb2330ae05042b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e8d542b8189289476522b24da1dc0f" id="r_a06e8d542b8189289476522b24da1dc0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a06e8d542b8189289476522b24da1dc0f">raylib::GetClipboardText</a> ()</td></tr>
+<tr class="memdesc:a06e8d542b8189289476522b24da1dc0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clipboard text content  <br /></td></tr>
+<tr class="separator:a06e8d542b8189289476522b24da1dc0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46020e49de4b05fdba53680c18e69cfe" id="r_a46020e49de4b05fdba53680c18e69cfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a46020e49de4b05fdba53680c18e69cfe">raylib::TakeScreenshot</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a46020e49de4b05fdba53680c18e69cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes a screenshot of current screen (saved a .png)  <br /></td></tr>
+<tr class="separator:a46020e49de4b05fdba53680c18e69cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0f1abc8d26e2c04c6a2fb7bd00ea45" id="r_abe0f1abc8d26e2c04c6a2fb7bd00ea45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#abe0f1abc8d26e2c04c6a2fb7bd00ea45">raylib::GetGamepadName</a> (int gamepad)</td></tr>
+<tr class="memdesc:abe0f1abc8d26e2c04c6a2fb7bd00ea45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get gamepad internal name id  <br /></td></tr>
+<tr class="separator:abe0f1abc8d26e2c04c6a2fb7bd00ea45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1350224ceb7d7ce37288c39263d3a8d4" id="r_a1350224ceb7d7ce37288c39263d3a8d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a1350224ceb7d7ce37288c39263d3a8d4">raylib::LoadFileText</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a1350224ceb7d7ce37288c39263d3a8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load text data from file (read)  <br /></td></tr>
+<tr class="separator:a1350224ceb7d7ce37288c39263d3a8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7521315c3dab6264ab310c72256b7e86" id="r_a7521315c3dab6264ab310c72256b7e86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a7521315c3dab6264ab310c72256b7e86">raylib::SaveFileText</a> (const std::string &amp;fileName, const std::string &amp;text)</td></tr>
+<tr class="memdesc:a7521315c3dab6264ab310c72256b7e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save text data to file (write)  <br /></td></tr>
+<tr class="separator:a7521315c3dab6264ab310c72256b7e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e37c1f53ae2c4b17c128bc186346c0" id="r_ac0e37c1f53ae2c4b17c128bc186346c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#ac0e37c1f53ae2c4b17c128bc186346c0">raylib::FileExists</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:ac0e37c1f53ae2c4b17c128bc186346c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file exists  <br /></td></tr>
+<tr class="separator:ac0e37c1f53ae2c4b17c128bc186346c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454868acb7eaae84673c68017d2a71e8" id="r_a454868acb7eaae84673c68017d2a71e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a454868acb7eaae84673c68017d2a71e8">raylib::DirectoryExists</a> (const std::string &amp;dirPath)</td></tr>
+<tr class="memdesc:a454868acb7eaae84673c68017d2a71e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if directory path exists  <br /></td></tr>
+<tr class="separator:a454868acb7eaae84673c68017d2a71e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa2618ebd0e3495b500c0d0a3a81d34" id="r_a0fa2618ebd0e3495b500c0d0a3a81d34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a0fa2618ebd0e3495b500c0d0a3a81d34">raylib::IsFileExtension</a> (const std::string &amp;fileName, const std::string &amp;ext)</td></tr>
+<tr class="memdesc:a0fa2618ebd0e3495b500c0d0a3a81d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check file extension (including point: .png, .wav)  <br /></td></tr>
+<tr class="separator:a0fa2618ebd0e3495b500c0d0a3a81d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b32999ca0480afc1994a591f5a347a" id="r_aa4b32999ca0480afc1994a591f5a347a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#aa4b32999ca0480afc1994a591f5a347a">raylib::GetFileExtension</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aa4b32999ca0480afc1994a591f5a347a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to extension for a filename string (including point: ".png")  <br /></td></tr>
+<tr class="separator:aa4b32999ca0480afc1994a591f5a347a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa415096c22927864b6f3608010531323" id="r_aa415096c22927864b6f3608010531323"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#aa415096c22927864b6f3608010531323">raylib::GetFileName</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:aa415096c22927864b6f3608010531323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to filename for a path string  <br /></td></tr>
+<tr class="separator:aa415096c22927864b6f3608010531323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d329d3c194899aca1f57a096512ee3" id="r_a12d329d3c194899aca1f57a096512ee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a12d329d3c194899aca1f57a096512ee3">raylib::GetFileNameWithoutExt</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a12d329d3c194899aca1f57a096512ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get filename string without extension  <br /></td></tr>
+<tr class="separator:a12d329d3c194899aca1f57a096512ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f48f2a25b3b4e8663062e94c70e6e33" id="r_a3f48f2a25b3b4e8663062e94c70e6e33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a3f48f2a25b3b4e8663062e94c70e6e33">raylib::GetDirectoryPath</a> (const std::string &amp;filePath)</td></tr>
+<tr class="memdesc:a3f48f2a25b3b4e8663062e94c70e6e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full path for a given fileName with path  <br /></td></tr>
+<tr class="separator:a3f48f2a25b3b4e8663062e94c70e6e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9148dce51098585aa1b8e92611191a41" id="r_a9148dce51098585aa1b8e92611191a41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a9148dce51098585aa1b8e92611191a41">raylib::GetPrevDirectoryPath</a> (const std::string &amp;dirPath)</td></tr>
+<tr class="memdesc:a9148dce51098585aa1b8e92611191a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get previous directory path for a given path  <br /></td></tr>
+<tr class="separator:a9148dce51098585aa1b8e92611191a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a355762d23fa27e9c95e8014662e5e1" id="r_a1a355762d23fa27e9c95e8014662e5e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a1a355762d23fa27e9c95e8014662e5e1">raylib::GetWorkingDirectory</a> ()</td></tr>
+<tr class="memdesc:a1a355762d23fa27e9c95e8014662e5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current working directory  <br /></td></tr>
+<tr class="separator:a1a355762d23fa27e9c95e8014662e5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45de5ee54e09ba4f9aad7c95062d30c1" id="r_a45de5ee54e09ba4f9aad7c95062d30c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a45de5ee54e09ba4f9aad7c95062d30c1">raylib::LoadDirectoryFiles</a> (const std::string &amp;dirPath)</td></tr>
+<tr class="memdesc:a45de5ee54e09ba4f9aad7c95062d30c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get filenames in a directory path  <br /></td></tr>
+<tr class="separator:a45de5ee54e09ba4f9aad7c95062d30c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26edfd0ee3bac2e1f8208e16eae17f2a" id="r_a26edfd0ee3bac2e1f8208e16eae17f2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a">raylib::ChangeDirectory</a> (const std::string &amp;dir)</td></tr>
+<tr class="memdesc:a26edfd0ee3bac2e1f8208e16eae17f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change working directory, return true on success  <br /></td></tr>
+<tr class="separator:a26edfd0ee3bac2e1f8208e16eae17f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab00cd17e198ca8445c07005a07dc1c" id="r_acab00cd17e198ca8445c07005a07dc1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#acab00cd17e198ca8445c07005a07dc1c">raylib::LoadDroppedFiles</a> ()</td></tr>
+<tr class="memdesc:acab00cd17e198ca8445c07005a07dc1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dropped files names  <br /></td></tr>
+<tr class="separator:acab00cd17e198ca8445c07005a07dc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e612cc4bf7b03c7f4136a254c19fad3" id="r_a3e612cc4bf7b03c7f4136a254c19fad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a3e612cc4bf7b03c7f4136a254c19fad3">raylib::GetFileModTime</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a3e612cc4bf7b03c7f4136a254c19fad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file modification time (last write time)  <br /></td></tr>
+<tr class="separator:a3e612cc4bf7b03c7f4136a254c19fad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea78692e868b5cb0ca49dff4d39e842" id="r_a1ea78692e868b5cb0ca49dff4d39e842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a1ea78692e868b5cb0ca49dff4d39e842">raylib::OpenURL</a> (const std::string &amp;url)</td></tr>
+<tr class="memdesc:a1ea78692e868b5cb0ca49dff4d39e842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open URL with default system browser (if available)  <br /></td></tr>
+<tr class="separator:a1ea78692e868b5cb0ca49dff4d39e842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bc5f431c674d33729ee0b51db9a1a7" id="r_aa8bc5f431c674d33729ee0b51db9a1a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> ::Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#aa8bc5f431c674d33729ee0b51db9a1a7">raylib::LoadImage</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aa8bc5f431c674d33729ee0b51db9a1a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image.  <br /></td></tr>
+<tr class="separator:aa8bc5f431c674d33729ee0b51db9a1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c1c2c80dff1b55a3bab1efac7894f4" id="r_a94c1c2c80dff1b55a3bab1efac7894f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> ::Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a94c1c2c80dff1b55a3bab1efac7894f4">raylib::LoadImageRaw</a> (const std::string &amp;fileName, int width, int height, int format, int headerSize)</td></tr>
+<tr class="memdesc:a94c1c2c80dff1b55a3bab1efac7894f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image from RAW file data  <br /></td></tr>
+<tr class="separator:a94c1c2c80dff1b55a3bab1efac7894f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d9c156406023894366995ab514bdfc" id="r_a56d9c156406023894366995ab514bdfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> ::Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a56d9c156406023894366995ab514bdfc">raylib::LoadImageAnim</a> (const std::string &amp;fileName, int *frames)</td></tr>
+<tr class="memdesc:a56d9c156406023894366995ab514bdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load animated image data  <br /></td></tr>
+<tr class="separator:a56d9c156406023894366995ab514bdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2a8e558a54567cea718ce9ce2075ee" id="r_a8b2a8e558a54567cea718ce9ce2075ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> ::Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a8b2a8e558a54567cea718ce9ce2075ee">raylib::LoadImageFromMemory</a> (const std::string &amp;fileType, const unsigned char *fileData, int dataSize)</td></tr>
+<tr class="memdesc:a8b2a8e558a54567cea718ce9ce2075ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load image from memory buffer, fileType refers to extension like "png"  <br /></td></tr>
+<tr class="separator:a8b2a8e558a54567cea718ce9ce2075ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f988f293153566d6ff4c4b549b8fb7c" id="r_a0f988f293153566d6ff4c4b549b8fb7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a0f988f293153566d6ff4c4b549b8fb7c">raylib::ExportImage</a> (const <a class="el" href="classraylib_1_1_image.html">Image</a> &amp;image, const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a0f988f293153566d6ff4c4b549b8fb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export image data to file  <br /></td></tr>
+<tr class="separator:a0f988f293153566d6ff4c4b549b8fb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535543fa3c2748d8de6fee36715242c5" id="r_a535543fa3c2748d8de6fee36715242c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a535543fa3c2748d8de6fee36715242c5">raylib::ExportImageAsCode</a> (const <a class="el" href="classraylib_1_1_image.html">Image</a> &amp;image, const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a535543fa3c2748d8de6fee36715242c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export image as code file (.h) defining an array of bytes  <br /></td></tr>
+<tr class="separator:a535543fa3c2748d8de6fee36715242c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab720cb252327249ed39051e0550d3bf6" id="r_ab720cb252327249ed39051e0550d3bf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">raylib::DrawText</a> (const char *text, int posX, int posY, int fontSize, ::Color color)</td></tr>
+<tr class="memdesc:ab720cb252327249ed39051e0550d3bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text (using default font)  <br /></td></tr>
+<tr class="separator:ab720cb252327249ed39051e0550d3bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff964c67b77167509a22f0a75b37aba" id="r_a5ff964c67b77167509a22f0a75b37aba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a5ff964c67b77167509a22f0a75b37aba">raylib::DrawText</a> (const std::string &amp;text, int posX, int posY, int fontSize, ::Color color)</td></tr>
+<tr class="memdesc:a5ff964c67b77167509a22f0a75b37aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text (using default font)  <br /></td></tr>
+<tr class="separator:a5ff964c67b77167509a22f0a75b37aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbd414fa733c7f651b1d7aea97cfe8b" id="r_affbd414fa733c7f651b1d7aea97cfe8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">raylib::DrawTextEx</a> (const <a class="el" href="classraylib_1_1_font.html">Font</a> &amp;font, char *text, <a class="el" href="classraylib_1_1_vector2.html">Vector2</a> position, float fontSize, float spacing, ::Color tint)</td></tr>
+<tr class="memdesc:affbd414fa733c7f651b1d7aea97cfe8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text using font and additional parameters  <br /></td></tr>
+<tr class="separator:affbd414fa733c7f651b1d7aea97cfe8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3a2fbe965d1a39c3aa12402e7edc6c" id="r_a4c3a2fbe965d1a39c3aa12402e7edc6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a4c3a2fbe965d1a39c3aa12402e7edc6c">raylib::DrawTextEx</a> (const <a class="el" href="classraylib_1_1_font.html">Font</a> &amp;font, const std::string &amp;text, <a class="el" href="classraylib_1_1_vector2.html">Vector2</a> position, float fontSize, float spacing, ::Color tint)</td></tr>
+<tr class="memdesc:a4c3a2fbe965d1a39c3aa12402e7edc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text using font and additional parameters  <br /></td></tr>
+<tr class="separator:a4c3a2fbe965d1a39c3aa12402e7edc6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d2d0e9a551ad3ee80b46b64f81de38" id="r_a48d2d0e9a551ad3ee80b46b64f81de38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">raylib::DrawTextPro</a> (const <a class="el" href="classraylib_1_1_font.html">Font</a> &amp;font, const char *text, <a class="el" href="classraylib_1_1_vector2.html">Vector2</a> position, <a class="el" href="classraylib_1_1_vector2.html">Vector2</a> origin, float rotation, float fontSize, float spacing, ::Color tint)</td></tr>
+<tr class="memdesc:a48d2d0e9a551ad3ee80b46b64f81de38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text using <a class="el" href="classraylib_1_1_font.html" title="Font type, includes texture and charSet array data">Font</a> and pro parameters (rotation)  <br /></td></tr>
+<tr class="separator:a48d2d0e9a551ad3ee80b46b64f81de38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2f2db11e5d701c21eacaa9b71e9295" id="r_a3f2f2db11e5d701c21eacaa9b71e9295"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a3f2f2db11e5d701c21eacaa9b71e9295">raylib::DrawTextPro</a> (const <a class="el" href="classraylib_1_1_font.html">Font</a> &amp;font, const std::string &amp;text, <a class="el" href="classraylib_1_1_vector2.html">Vector2</a> position, <a class="el" href="classraylib_1_1_vector2.html">Vector2</a> origin, float rotation, float fontSize, float spacing, ::Color tint)</td></tr>
+<tr class="memdesc:a3f2f2db11e5d701c21eacaa9b71e9295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw text using <a class="el" href="classraylib_1_1_font.html" title="Font type, includes texture and charSet array data">Font</a> and pro parameters (rotation)  <br /></td></tr>
+<tr class="separator:a3f2f2db11e5d701c21eacaa9b71e9295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49b02b645ed0e608b5b0e14994beab1" id="r_aa49b02b645ed0e608b5b0e14994beab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> ::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#aa49b02b645ed0e608b5b0e14994beab1">raylib::LoadFont</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:aa49b02b645ed0e608b5b0e14994beab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load font from file (filename must include file extension)  <br /></td></tr>
+<tr class="separator:aa49b02b645ed0e608b5b0e14994beab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3b541d227b04d8d6846b84bd9b049a" id="r_aac3b541d227b04d8d6846b84bd9b049a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> ::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#aac3b541d227b04d8d6846b84bd9b049a">raylib::LoadFontEx</a> (const std::string &amp;fileName, int fontSize, int *fontChars, int charsCount)</td></tr>
+<tr class="memdesc:aac3b541d227b04d8d6846b84bd9b049a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load font from file (filename must include file extension)  <br /></td></tr>
+<tr class="separator:aac3b541d227b04d8d6846b84bd9b049a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3117ec1abc28744bc2e939cc3d556cbb" id="r_a3117ec1abc28744bc2e939cc3d556cbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a3117ec1abc28744bc2e939cc3d556cbb">raylib::MeasureText</a> (const char *text, int fontSize)</td></tr>
+<tr class="memdesc:a3117ec1abc28744bc2e939cc3d556cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure string width for default font  <br /></td></tr>
+<tr class="separator:a3117ec1abc28744bc2e939cc3d556cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad721c2fd6529b64c71b668c634b7586d" id="r_ad721c2fd6529b64c71b668c634b7586d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#ad721c2fd6529b64c71b668c634b7586d">raylib::MeasureText</a> (const std::string &amp;text, int fontSize)</td></tr>
+<tr class="memdesc:ad721c2fd6529b64c71b668c634b7586d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure string width for default font  <br /></td></tr>
+<tr class="separator:ad721c2fd6529b64c71b668c634b7586d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b42f7b8892ca6a8f186704cdb31cead" id="r_a7b42f7b8892ca6a8f186704cdb31cead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a7b42f7b8892ca6a8f186704cdb31cead">raylib::TextIsEqual</a> (const char *text1, const char *text2)</td></tr>
+<tr class="memdesc:a7b42f7b8892ca6a8f186704cdb31cead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two text string are equal  <br /></td></tr>
+<tr class="separator:a7b42f7b8892ca6a8f186704cdb31cead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c29feb4e90b3e7e35f816bdb6b59c7f" id="r_a9c29feb4e90b3e7e35f816bdb6b59c7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a9c29feb4e90b3e7e35f816bdb6b59c7f">raylib::TextIsEqual</a> (const std::string &amp;text1, const std::string &amp;text2)</td></tr>
+<tr class="memdesc:a9c29feb4e90b3e7e35f816bdb6b59c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two text string are equal  <br /></td></tr>
+<tr class="separator:a9c29feb4e90b3e7e35f816bdb6b59c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f2da505b34180c6dc8ad7a305e44b5" id="r_a51f2da505b34180c6dc8ad7a305e44b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a51f2da505b34180c6dc8ad7a305e44b5">raylib::TextLength</a> (const char *text)</td></tr>
+<tr class="memdesc:a51f2da505b34180c6dc8ad7a305e44b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two text string are equal  <br /></td></tr>
+<tr class="separator:a51f2da505b34180c6dc8ad7a305e44b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7335ef4170b469194a91c5de99d3a0d0" id="r_a7335ef4170b469194a91c5de99d3a0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a7335ef4170b469194a91c5de99d3a0d0">raylib::TextLength</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a7335ef4170b469194a91c5de99d3a0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two text string are equal  <br /></td></tr>
+<tr class="separator:a7335ef4170b469194a91c5de99d3a0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9363c925d53ab82334164f184fe2a94f" id="r_a9363c925d53ab82334164f184fe2a94f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a9363c925d53ab82334164f184fe2a94f">raylib::TextSubtext</a> (const std::string &amp;text, int position, int length)</td></tr>
+<tr class="memdesc:a9363c925d53ab82334164f184fe2a94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get text length, checks for '\0' ending  <br /></td></tr>
+<tr class="separator:a9363c925d53ab82334164f184fe2a94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf1172921b6b203cb57e2a4608d19d6" id="r_adaf1172921b6b203cb57e2a4608d19d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#adaf1172921b6b203cb57e2a4608d19d6">raylib::TextReplace</a> (const std::string &amp;text, const std::string &amp;replace, const std::string &amp;by)</td></tr>
+<tr class="memdesc:adaf1172921b6b203cb57e2a4608d19d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace text string  <br /></td></tr>
+<tr class="separator:adaf1172921b6b203cb57e2a4608d19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167a4275d7d8ef27b6ce48eb3dfc2f76" id="r_a167a4275d7d8ef27b6ce48eb3dfc2f76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a167a4275d7d8ef27b6ce48eb3dfc2f76">raylib::TextInsert</a> (const std::string &amp;text, const std::string &amp;insert, int position)</td></tr>
+<tr class="memdesc:a167a4275d7d8ef27b6ce48eb3dfc2f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert text in a position  <br /></td></tr>
+<tr class="separator:a167a4275d7d8ef27b6ce48eb3dfc2f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c8e7b489e3311b9e8b66bee87289b4" id="r_a95c8e7b489e3311b9e8b66bee87289b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a95c8e7b489e3311b9e8b66bee87289b4">raylib::TextSplit</a> (const std::string &amp;text, char delimiter)</td></tr>
+<tr class="memdesc:a95c8e7b489e3311b9e8b66bee87289b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split text into multiple strings  <br /></td></tr>
+<tr class="separator:a95c8e7b489e3311b9e8b66bee87289b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed19d4647a227767394051149cb6dd35" id="r_aed19d4647a227767394051149cb6dd35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#aed19d4647a227767394051149cb6dd35">raylib::TextFindIndex</a> (const std::string &amp;text, const std::string &amp;find)</td></tr>
+<tr class="memdesc:aed19d4647a227767394051149cb6dd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find first text occurrence within a string  <br /></td></tr>
+<tr class="separator:aed19d4647a227767394051149cb6dd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800f9a412413e1757674d5ac46de17f7" id="r_a800f9a412413e1757674d5ac46de17f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a800f9a412413e1757674d5ac46de17f7">raylib::TextToUpper</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a800f9a412413e1757674d5ac46de17f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get upper case version of provided string  <br /></td></tr>
+<tr class="separator:a800f9a412413e1757674d5ac46de17f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca154b702fe8cc3c459d688665f0a13" id="r_a0ca154b702fe8cc3c459d688665f0a13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a0ca154b702fe8cc3c459d688665f0a13">raylib::TextToLower</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a0ca154b702fe8cc3c459d688665f0a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get lower case version of provided string  <br /></td></tr>
+<tr class="separator:a0ca154b702fe8cc3c459d688665f0a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e19027c516acaf90317e053584c30f4" id="r_a8e19027c516acaf90317e053584c30f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a8e19027c516acaf90317e053584c30f4">raylib::TextToPascal</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a8e19027c516acaf90317e053584c30f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Pascal case notation version of provided string  <br /></td></tr>
+<tr class="separator:a8e19027c516acaf90317e053584c30f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48031a2467ea4b249c8b1006f856f6d2" id="r_a48031a2467ea4b249c8b1006f856f6d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceraylib.html#a48031a2467ea4b249c8b1006f856f6d2">raylib::TextToInteger</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:a48031a2467ea4b249c8b1006f856f6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get integer value from text (negative values not supported)  <br /></td></tr>
+<tr class="separator:a48031a2467ea4b249c8b1006f856f6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a905c250671e2d934cf2ac43e0ca915ad" name="a905c250671e2d934cf2ac43e0ca915ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905c250671e2d934cf2ac43e0ca915ad">&#9670;&#160;</a></span>RLCPPAPI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RLCPPAPI&#160;&#160;&#160;static</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C++ wrapper functions for raylib. </p>
+<p>Allow changing the declare type for all raylib-cpp global functions. Defaults to static. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_functions_8hpp.html">Functions.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

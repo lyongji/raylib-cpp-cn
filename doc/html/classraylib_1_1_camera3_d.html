@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::Camera3D类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_camera3_d.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classraylib_1_1_camera3_d-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::Camera3D类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Camera type, defines a camera position/orientation in 3d space  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_camera3_d_8hpp_source.html">Camera3D.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 raylib::Camera3D 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classraylib_1_1_camera3_d.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8ec807581f3610db4830f6ff5c96d1dd" id="r_a8ec807581f3610db4830f6ff5c96d1dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ec807581f3610db4830f6ff5c96d1dd">Camera3D</a> (const ::Camera3D &amp;camera)</td></tr>
+<tr class="separator:a8ec807581f3610db4830f6ff5c96d1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b870b0848cd6fb821b2387e714f771" id="r_ab5b870b0848cd6fb821b2387e714f771"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b870b0848cd6fb821b2387e714f771">Camera3D</a> (::Vector3 position, ::Vector3 target=::Vector3{0.0f, 0.0f, 0.0f}, ::Vector3 up=::Vector3{0.0f, 1.0f, 0.0f}, float fovy=0, int projection=CAMERA_PERSPECTIVE)</td></tr>
+<tr class="memdesc:ab5b870b0848cd6fb821b2387e714f771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classraylib_1_1_camera3_d.html" title="Camera type, defines a camera position/orientation in 3d space">Camera3D</a>.  <br /></td></tr>
+<tr class="separator:ab5b870b0848cd6fb821b2387e714f771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f19d069575d1c0f825ecb188e961fc" id="r_a79f19d069575d1c0f825ecb188e961fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79f19d069575d1c0f825ecb188e961fc">Camera3D</a> ()</td></tr>
+<tr class="separator:a79f19d069575d1c0f825ecb188e961fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9af3cd1ec71d4c52dd09f47b7a55864" id="r_ab9af3cd1ec71d4c52dd09f47b7a55864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9af3cd1ec71d4c52dd09f47b7a55864">operator=</a> (const <a class="el" href="#a8ec807581f3610db4830f6ff5c96d1dd">::Camera3D</a> &amp;camera)</td></tr>
+<tr class="separator:ab9af3cd1ec71d4c52dd09f47b7a55864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23437f027bbd7608ca9e5f2370344271" id="r_a23437f027bbd7608ca9e5f2370344271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23437f027bbd7608ca9e5f2370344271">BeginMode</a> ()</td></tr>
+<tr class="memdesc:a23437f027bbd7608ca9e5f2370344271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes 3D mode with custom camera (3D)  <br /></td></tr>
+<tr class="separator:a23437f027bbd7608ca9e5f2370344271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37fbcad2f93a9a578b75b49fc44523fe" id="r_a37fbcad2f93a9a578b75b49fc44523fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37fbcad2f93a9a578b75b49fc44523fe">EndMode</a> ()</td></tr>
+<tr class="memdesc:a37fbcad2f93a9a578b75b49fc44523fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends 3D mode and returns to default 2D orthographic mode  <br /></td></tr>
+<tr class="separator:a37fbcad2f93a9a578b75b49fc44523fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1836faf8c5617c5efea6053c6bb77b4f" id="r_a1836faf8c5617c5efea6053c6bb77b4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1836faf8c5617c5efea6053c6bb77b4f">GetMatrix</a> () const</td></tr>
+<tr class="memdesc:a1836faf8c5617c5efea6053c6bb77b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get camera transform matrix (view matrix)  <br /></td></tr>
+<tr class="separator:a1836faf8c5617c5efea6053c6bb77b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871efb633e9330b618f4e028080052b0" id="r_a871efb633e9330b618f4e028080052b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a871efb633e9330b618f4e028080052b0">Update</a> (int mode)</td></tr>
+<tr class="memdesc:a871efb633e9330b618f4e028080052b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update camera position for selected mode  <br /></td></tr>
+<tr class="separator:a871efb633e9330b618f4e028080052b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e690392b2594b70b64c0105213d6282" id="r_a9e690392b2594b70b64c0105213d6282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e690392b2594b70b64c0105213d6282">Update</a> (::Vector3 movement, ::Vector3 rotation, float zoom=1.0f)</td></tr>
+<tr class="memdesc:a9e690392b2594b70b64c0105213d6282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update camera movement/rotation  <br /></td></tr>
+<tr class="separator:a9e690392b2594b70b64c0105213d6282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59decb87b851c16adee7c2c742f8961" id="r_ac59decb87b851c16adee7c2c742f8961"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_ray.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac59decb87b851c16adee7c2c742f8961">GetMouseRay</a> (::Vector2 mousePosition) const</td></tr>
+<tr class="memdesc:ac59decb87b851c16adee7c2c742f8961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ray trace from mouse position  <br /></td></tr>
+<tr class="separator:ac59decb87b851c16adee7c2c742f8961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6259d44a0a9b08d842fb30530dea19cc" id="r_a6259d44a0a9b08d842fb30530dea19cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6259d44a0a9b08d842fb30530dea19cc">GetWorldToScreen</a> (::Vector3 position) const</td></tr>
+<tr class="memdesc:a6259d44a0a9b08d842fb30530dea19cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the screen space position for a 3d world space position  <br /></td></tr>
+<tr class="separator:a6259d44a0a9b08d842fb30530dea19cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800da64f3f3ec1a184d04b09b966edf6" id="r_a800da64f3f3ec1a184d04b09b966edf6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_ray.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a800da64f3f3ec1a184d04b09b966edf6">GetScreenToWorldRay</a> (::Vector2 position, int width, int height)</td></tr>
+<tr class="memdesc:a800da64f3f3ec1a184d04b09b966edf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a ray trace from screen position (i.e mouse) in a viewport  <br /></td></tr>
+<tr class="separator:a800da64f3f3ec1a184d04b09b966edf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7858f66ab315f8fa6db756e072a2943a" id="r_a7858f66ab315f8fa6db756e072a2943a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7858f66ab315f8fa6db756e072a2943a">DrawBillboard</a> (const <a class="el" href="namespaceraylib.html#acf1989fe7ce3a2fd2a24641f0a7256c2">::Texture2D</a> &amp;texture, ::Vector3 center, float size, ::Color tint={255, 255, 255, 255}) const</td></tr>
+<tr class="memdesc:a7858f66ab315f8fa6db756e072a2943a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a billboard texture.  <br /></td></tr>
+<tr class="separator:a7858f66ab315f8fa6db756e072a2943a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49055f2db670d584a2d404c9a17c777" id="r_ae49055f2db670d584a2d404c9a17c777"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae49055f2db670d584a2d404c9a17c777">DrawBillboard</a> (const <a class="el" href="namespaceraylib.html#acf1989fe7ce3a2fd2a24641f0a7256c2">::Texture2D</a> &amp;texture, ::Rectangle sourceRec, ::Vector3 center, ::Vector2 size, ::Color tint={255, 255, 255, 255}) const</td></tr>
+<tr class="memdesc:ae49055f2db670d584a2d404c9a17c777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a billboard texture defined by source.  <br /></td></tr>
+<tr class="separator:ae49055f2db670d584a2d404c9a17c777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a4b213fb255c19ddcb6682fb6ed2d83e5" id="r_a4b213fb255c19ddcb6682fb6ed2d83e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b213fb255c19ddcb6682fb6ed2d83e5">set</a> (const <a class="el" href="#a8ec807581f3610db4830f6ff5c96d1dd">::Camera3D</a> &amp;camera)</td></tr>
+<tr class="separator:a4b213fb255c19ddcb6682fb6ed2d83e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Camera type, defines a camera position/orientation in 3d space </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a8ec807581f3610db4830f6ff5c96d1dd" name="a8ec807581f3610db4830f6ff5c96d1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec807581f3610db4830f6ff5c96d1dd">&#9670;&#160;</a></span>Camera3D() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Camera3D::Camera3D </td>
+          <td>(</td>
+          <td class="paramtype">const ::Camera3D &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5b870b0848cd6fb821b2387e714f771" name="ab5b870b0848cd6fb821b2387e714f771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b870b0848cd6fb821b2387e714f771">&#9670;&#160;</a></span>Camera3D() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Camera3D::Camera3D </td>
+          <td>(</td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>target</em></span><span class="paramdefsep"> = </span><span class="paramdefval">::Vector3{0.0f,&#160;0.0f,&#160;0.0f}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>up</em></span><span class="paramdefsep"> = </span><span class="paramdefval">::Vector3{0.0f,&#160;1.0f,&#160;0.0f}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fovy</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>projection</em></span><span class="paramdefsep"> = </span><span class="paramdefval">CAMERA_PERSPECTIVE</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a new <a class="el" href="classraylib_1_1_camera3_d.html" title="Camera type, defines a camera position/orientation in 3d space">Camera3D</a>. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Camera position </td></tr>
+    <tr><td class="paramname">target</td><td>Camera target it looks-at </td></tr>
+    <tr><td class="paramname">up</td><td>Camera up vector (rotation over its axis) </td></tr>
+    <tr><td class="paramname">fovy</td><td>Camera field-of-view apperture in Y (degrees) in perspective, used as near plane width in orthographic </td></tr>
+    <tr><td class="paramname">projection</td><td>Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a79f19d069575d1c0f825ecb188e961fc" name="a79f19d069575d1c0f825ecb188e961fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f19d069575d1c0f825ecb188e961fc">&#9670;&#160;</a></span>Camera3D() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Camera3D::Camera3D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a23437f027bbd7608ca9e5f2370344271" name="a23437f027bbd7608ca9e5f2370344271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23437f027bbd7608ca9e5f2370344271">&#9670;&#160;</a></span>BeginMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp; raylib::Camera3D::BeginMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes 3D mode with custom camera (3D) </p>
+
+</div>
+</div>
+<a id="ae49055f2db670d584a2d404c9a17c777" name="ae49055f2db670d584a2d404c9a17c777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49055f2db670d584a2d404c9a17c777">&#9670;&#160;</a></span>DrawBillboard() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Camera3D::DrawBillboard </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceraylib.html#acf1989fe7ce3a2fd2a24641f0a7256c2">::Texture2D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Rectangle</td>          <td class="paramname"><span class="paramname"><em>sourceRec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector2</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Color</td>          <td class="paramname"><span class="paramname"><em>tint</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{255,&#160;255,&#160;255,&#160;255}</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a billboard texture defined by source. </p>
+
+</div>
+</div>
+<a id="a7858f66ab315f8fa6db756e072a2943a" name="a7858f66ab315f8fa6db756e072a2943a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7858f66ab315f8fa6db756e072a2943a">&#9670;&#160;</a></span>DrawBillboard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Camera3D::DrawBillboard </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceraylib.html#acf1989fe7ce3a2fd2a24641f0a7256c2">::Texture2D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Color</td>          <td class="paramname"><span class="paramname"><em>tint</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{255,&#160;255,&#160;255,&#160;255}</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a billboard texture. </p>
+
+</div>
+</div>
+<a id="a37fbcad2f93a9a578b75b49fc44523fe" name="a37fbcad2f93a9a578b75b49fc44523fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37fbcad2f93a9a578b75b49fc44523fe">&#9670;&#160;</a></span>EndMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp; raylib::Camera3D::EndMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ends 3D mode and returns to default 2D orthographic mode </p>
+
+</div>
+</div>
+<a id="a1836faf8c5617c5efea6053c6bb77b4f" name="a1836faf8c5617c5efea6053c6bb77b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1836faf8c5617c5efea6053c6bb77b4f">&#9670;&#160;</a></span>GetMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Camera3D::GetMatrix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get camera transform matrix (view matrix) </p>
+
+</div>
+</div>
+<a id="ac59decb87b851c16adee7c2c742f8961" name="ac59decb87b851c16adee7c2c742f8961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59decb87b851c16adee7c2c742f8961">&#9670;&#160;</a></span>GetMouseRay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_ray.html">Ray</a> raylib::Camera3D::GetMouseRay </td>
+          <td>(</td>
+          <td class="paramtype">::Vector2</td>          <td class="paramname"><span class="paramname"><em>mousePosition</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a ray trace from mouse position </p>
+
+</div>
+</div>
+<a id="a800da64f3f3ec1a184d04b09b966edf6" name="a800da64f3f3ec1a184d04b09b966edf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800da64f3f3ec1a184d04b09b966edf6">&#9670;&#160;</a></span>GetScreenToWorldRay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_ray.html">Ray</a> raylib::Camera3D::GetScreenToWorldRay </td>
+          <td>(</td>
+          <td class="paramtype">::Vector2</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a ray trace from screen position (i.e mouse) in a viewport </p>
+
+</div>
+</div>
+<a id="a6259d44a0a9b08d842fb30530dea19cc" name="a6259d44a0a9b08d842fb30530dea19cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6259d44a0a9b08d842fb30530dea19cc">&#9670;&#160;</a></span>GetWorldToScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_vector2.html">Vector2</a> raylib::Camera3D::GetWorldToScreen </td>
+          <td>(</td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the screen space position for a 3d world space position </p>
+
+</div>
+</div>
+<a id="ab9af3cd1ec71d4c52dd09f47b7a55864" name="ab9af3cd1ec71d4c52dd09f47b7a55864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9af3cd1ec71d4c52dd09f47b7a55864">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp; raylib::Camera3D::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a8ec807581f3610db4830f6ff5c96d1dd">::Camera3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b213fb255c19ddcb6682fb6ed2d83e5" name="a4b213fb255c19ddcb6682fb6ed2d83e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b213fb255c19ddcb6682fb6ed2d83e5">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Camera3D::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a8ec807581f3610db4830f6ff5c96d1dd">::Camera3D</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e690392b2594b70b64c0105213d6282" name="a9e690392b2594b70b64c0105213d6282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e690392b2594b70b64c0105213d6282">&#9670;&#160;</a></span>Update() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp; raylib::Camera3D::Update </td>
+          <td>(</td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>movement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::Vector3</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>zoom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update camera movement/rotation </p>
+
+</div>
+</div>
+<a id="a871efb633e9330b618f4e028080052b0" name="a871efb633e9330b618f4e028080052b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871efb633e9330b618f4e028080052b0">&#9670;&#160;</a></span>Update() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a> &amp; raylib::Camera3D::Update </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update camera position for selected mode </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_camera3_d_8hpp_source.html">Camera3D.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_camera3_d.html">Camera3D</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

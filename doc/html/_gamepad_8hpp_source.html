@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: include/Gamepad.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_gamepad_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Gamepad.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_gamepad_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_GAMEPAD_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_GAMEPAD_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="raylib-cpp-utils_8hpp.html">./raylib-cpp-utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_gamepad.html">Gamepad</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a21fe706b843ce2196f52c1c08ea0d92a">   15</a></span>    <a class="code hl_function" href="classraylib_1_1_gamepad.html#a21fe706b843ce2196f52c1c08ea0d92a">Gamepad</a>(<span class="keywordtype">int</span> gamepadNumber = 0) { <a class="code hl_function" href="classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12">set</a>(gamepadNumber); }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">int</span>, Number, <a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#af0d08d3ed4fdb915aea6c2dda49828ef">   20</a></span>    <a class="code hl_class" href="classraylib_1_1_gamepad.html">Gamepad</a>&amp; operator=(const <a class="code hl_class" href="classraylib_1_1_gamepad.html">Gamepad</a>&amp; gamepad) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_function" href="classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12">set</a>(gamepad);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a2d72d578a8a7815e74cfdf811fe9e6cb">   25</a></span>    <a class="code hl_class" href="classraylib_1_1_gamepad.html">Gamepad</a>&amp; <a class="code hl_function" href="classraylib_1_1_gamepad.html#a2d72d578a8a7815e74cfdf811fe9e6cb">operator=</a>(<span class="keywordtype">int</span> gamepadNumber) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_function" href="classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12">set</a>(gamepadNumber);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#ab735b8107395f0694baf4ef8bb92092d">   30</a></span>    <span class="keyword">operator</span> int()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a552fc427aa95b93e5c3a0e22625b7912">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a552fc427aa95b93e5c3a0e22625b7912">IsAvailable</a>()<span class="keyword"> const </span>{ return ::IsGamepadAvailable(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>); }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a51ffa43549a2767723bdc8e780483c85">   40</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a51ffa43549a2767723bdc8e780483c85">IsAvailable</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>) { return ::IsGamepadAvailable(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>); }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#aa13c682766bf03ba1f5f6fa821b15984">   45</a></span>    std::string <a class="code hl_function" href="classraylib_1_1_gamepad.html#aa13c682766bf03ba1f5f6fa821b15984">GetName</a>()<span class="keyword"> const </span>{ return ::GetGamepadName(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#afd58495a8ac8066eab2aebd2d09fa49c">   50</a></span>    <span class="keyword">operator</span> std::string()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#aa13c682766bf03ba1f5f6fa821b15984">GetName</a>(); }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#ac4f2cf491bba6cf51cd9dcab5ac36f5c">   55</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#ac4f2cf491bba6cf51cd9dcab5ac36f5c">IsButtonPressed</a>(<span class="keywordtype">int</span> button)<span class="keyword"> const </span>{ return ::IsGamepadButtonPressed(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>, button); }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a8d36ae1e99c022a1b4cccddfcb4eaca5">   60</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a8d36ae1e99c022a1b4cccddfcb4eaca5">IsButtonDown</a>(<span class="keywordtype">int</span> button)<span class="keyword"> const </span>{ return ::IsGamepadButtonDown(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>, button); }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a203c7dafc8025a334590dc9fa6dd8201">   65</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a203c7dafc8025a334590dc9fa6dd8201">IsButtonReleased</a>(<span class="keywordtype">int</span> button)<span class="keyword"> const </span>{ return ::IsGamepadButtonReleased(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>, button); }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#ab770e18a2a3d1618c19b87bc3350163b">   70</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#ab770e18a2a3d1618c19b87bc3350163b">IsButtonUp</a>(<span class="keywordtype">int</span> button)<span class="keyword"> const </span>{ return ::IsGamepadButtonUp(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>, button); }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a851be2dfb762d18268aad40ff7ee3f11">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a851be2dfb762d18268aad40ff7ee3f11">GetButtonPressed</a>()<span class="keyword"> const </span>{ return ::GetGamepadButtonPressed(); }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a3a1e2311ee288c437371ee1472449ef9">   80</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a3a1e2311ee288c437371ee1472449ef9">GetAxisCount</a>()<span class="keyword"> const </span>{ return ::GetGamepadAxisCount(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>); }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#ad7c180ac50603ba226fe1aa1bee54a95">   85</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#ad7c180ac50603ba226fe1aa1bee54a95">GetAxisMovement</a>(<span class="keywordtype">int</span> axis)<span class="keyword"> const </span>{ return ::GetGamepadAxisMovement(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>, axis); }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a38e06935af7feddb653eadc070cc16db">   87</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a38e06935af7feddb653eadc070cc16db">SetMappings</a>(<span class="keyword">const</span> std::string&amp; mappings) { <span class="keywordflow">return</span> SetGamepadMappings(mappings.c_str()); }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#a0a29bad7c3e9e5689c3a3df9a87af66f">   92</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#a0a29bad7c3e9e5689c3a3df9a87af66f">SetVibration</a>(<span class="keywordtype">float</span> leftMotor, <span class="keywordtype">float</span> rightMotor, <span class="keywordtype">float</span> duration) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        ::SetGamepadVibration(<a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a>, leftMotor, rightMotor, duration);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12">set</a>(<span class="keywordtype">int</span> gamepadNumber) { <a class="code hl_variable" href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">number</a> = gamepadNumber; }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>};</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="_gamepad_8hpp.html#a98ced898215a336b2f10ccc93e076b1a">  100</a></span><span class="keyword">using </span><a class="code hl_class" href="classraylib_1_1_gamepad.html">RGamepad</a> = <a class="code hl_class" href="classraylib_1_1_gamepad.html">raylib::Gamepad</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_GAMEPAD_HPP_</span></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html"><div class="ttname"><a href="classraylib_1_1_gamepad.html">raylib::Gamepad</a></div><div class="ttdoc">Input-related functions: gamepads</div><div class="ttdef"><b>定义</b> Gamepad.hpp:13</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a0a29bad7c3e9e5689c3a3df9a87af66f"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a0a29bad7c3e9e5689c3a3df9a87af66f">raylib::Gamepad::SetVibration</a></div><div class="ttdeci">void SetVibration(float leftMotor, float rightMotor, float duration)</div><div class="ttdoc">Set gamepad vibration for both motors (duration in seconds)</div><div class="ttdef"><b>定义</b> Gamepad.hpp:92</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a203c7dafc8025a334590dc9fa6dd8201"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a203c7dafc8025a334590dc9fa6dd8201">raylib::Gamepad::IsButtonReleased</a></div><div class="ttdeci">bool IsButtonReleased(int button) const</div><div class="ttdoc">Detect if a gamepad button has been released once</div><div class="ttdef"><b>定义</b> Gamepad.hpp:65</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a21fe706b843ce2196f52c1c08ea0d92a"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a21fe706b843ce2196f52c1c08ea0d92a">raylib::Gamepad::Gamepad</a></div><div class="ttdeci">Gamepad(int gamepadNumber=0)</div><div class="ttdef"><b>定义</b> Gamepad.hpp:15</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a2d72d578a8a7815e74cfdf811fe9e6cb"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a2d72d578a8a7815e74cfdf811fe9e6cb">raylib::Gamepad::operator=</a></div><div class="ttdeci">Gamepad &amp; operator=(int gamepadNumber)</div><div class="ttdef"><b>定义</b> Gamepad.hpp:25</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a38e06935af7feddb653eadc070cc16db"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a38e06935af7feddb653eadc070cc16db">raylib::Gamepad::SetMappings</a></div><div class="ttdeci">int SetMappings(const std::string &amp;mappings)</div><div class="ttdef"><b>定义</b> Gamepad.hpp:87</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a3a1e2311ee288c437371ee1472449ef9"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a3a1e2311ee288c437371ee1472449ef9">raylib::Gamepad::GetAxisCount</a></div><div class="ttdeci">int GetAxisCount() const</div><div class="ttdoc">Return gamepad axis count for a gamepad</div><div class="ttdef"><b>定义</b> Gamepad.hpp:80</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a51ffa43549a2767723bdc8e780483c85"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a51ffa43549a2767723bdc8e780483c85">raylib::Gamepad::IsAvailable</a></div><div class="ttdeci">static bool IsAvailable(int number)</div><div class="ttdoc">Detect if a gamepad is available</div><div class="ttdef"><b>定义</b> Gamepad.hpp:40</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a552fc427aa95b93e5c3a0e22625b7912"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a552fc427aa95b93e5c3a0e22625b7912">raylib::Gamepad::IsAvailable</a></div><div class="ttdeci">bool IsAvailable() const</div><div class="ttdoc">Detect if a gamepad is available</div><div class="ttdef"><b>定义</b> Gamepad.hpp:35</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a66632b63f6edf508a980e9198f60a8f3"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3">raylib::Gamepad::number</a></div><div class="ttdeci">int number</div><div class="ttdef"><b>定义</b> Gamepad.hpp:16</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a851be2dfb762d18268aad40ff7ee3f11"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a851be2dfb762d18268aad40ff7ee3f11">raylib::Gamepad::GetButtonPressed</a></div><div class="ttdeci">int GetButtonPressed() const</div><div class="ttdoc">Get the last gamepad button pressed</div><div class="ttdef"><b>定义</b> Gamepad.hpp:75</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_a8d36ae1e99c022a1b4cccddfcb4eaca5"><div class="ttname"><a href="classraylib_1_1_gamepad.html#a8d36ae1e99c022a1b4cccddfcb4eaca5">raylib::Gamepad::IsButtonDown</a></div><div class="ttdeci">bool IsButtonDown(int button) const</div><div class="ttdoc">Detect if a gamepad button is being pressed</div><div class="ttdef"><b>定义</b> Gamepad.hpp:60</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_aa13c682766bf03ba1f5f6fa821b15984"><div class="ttname"><a href="classraylib_1_1_gamepad.html#aa13c682766bf03ba1f5f6fa821b15984">raylib::Gamepad::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Return gamepad internal name id</div><div class="ttdef"><b>定义</b> Gamepad.hpp:45</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_aa5e7c33d78267b99939453c4dbf6cc12"><div class="ttname"><a href="classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12">raylib::Gamepad::set</a></div><div class="ttdeci">void set(int gamepadNumber)</div><div class="ttdef"><b>定义</b> Gamepad.hpp:96</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_ab770e18a2a3d1618c19b87bc3350163b"><div class="ttname"><a href="classraylib_1_1_gamepad.html#ab770e18a2a3d1618c19b87bc3350163b">raylib::Gamepad::IsButtonUp</a></div><div class="ttdeci">bool IsButtonUp(int button) const</div><div class="ttdoc">Detect if a gamepad button is NOT being pressed</div><div class="ttdef"><b>定义</b> Gamepad.hpp:70</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_ac4f2cf491bba6cf51cd9dcab5ac36f5c"><div class="ttname"><a href="classraylib_1_1_gamepad.html#ac4f2cf491bba6cf51cd9dcab5ac36f5c">raylib::Gamepad::IsButtonPressed</a></div><div class="ttdeci">bool IsButtonPressed(int button) const</div><div class="ttdoc">Detect if a gamepad button has been pressed once</div><div class="ttdef"><b>定义</b> Gamepad.hpp:55</div></div>
+<div class="ttc" id="aclassraylib_1_1_gamepad_html_ad7c180ac50603ba226fe1aa1bee54a95"><div class="ttname"><a href="classraylib_1_1_gamepad.html#ad7c180ac50603ba226fe1aa1bee54a95">raylib::Gamepad::GetAxisMovement</a></div><div class="ttdeci">float GetAxisMovement(int axis) const</div><div class="ttdoc">Return axis movement value for a gamepad axis</div><div class="ttdef"><b>定义</b> Gamepad.hpp:85</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html">raylib-cpp-utils.hpp</a></div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html_a2516c5e2fd5f821bcf853ee617f5561c"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a></div><div class="ttdeci">#define GETTERSETTER(type, method, name)</div><div class="ttdoc">A utility to build get and set methods on top of a property.</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:30</div></div>
+<div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_gamepad_8hpp.html">Gamepad.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::AudioStream类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_audio_stream.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classraylib_1_1_audio_stream-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::AudioStream类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> management functions  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_audio_stream_8hpp_source.html">AudioStream.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 raylib::AudioStream 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classraylib_1_1_audio_stream.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a894b806cbf3e016b9cc7d9f413758012" id="r_a894b806cbf3e016b9cc7d9f413758012"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a894b806cbf3e016b9cc7d9f413758012">AudioStream</a> (const ::AudioStream &amp;music)</td></tr>
+<tr class="separator:a894b806cbf3e016b9cc7d9f413758012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d098d9622b78aef199f3e32345ea14" id="r_a66d098d9622b78aef199f3e32345ea14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66d098d9622b78aef199f3e32345ea14">AudioStream</a> (rAudioBuffer *buffer=nullptr, rAudioProcessor *processor=nullptr, unsigned int sampleRate=0, unsigned int sampleSize=0, unsigned int channels=0)</td></tr>
+<tr class="separator:a66d098d9622b78aef199f3e32345ea14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2" id="r_a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2">AudioStream</a> (unsigned int sampleRate, unsigned int sampleSize, unsigned int channels=2)</td></tr>
+<tr class="memdesc:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init audio stream (to stream raw audio pcm data)  <br /></td></tr>
+<tr class="separator:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a74cd0657258f1fe495d2dc7fd6881" id="r_ad8a74cd0657258f1fe495d2dc7fd6881"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8a74cd0657258f1fe495d2dc7fd6881">AudioStream</a> (const <a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;)=delete</td></tr>
+<tr class="separator:ad8a74cd0657258f1fe495d2dc7fd6881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d47b4e6c51959d9a6408ff6660cd629" id="r_a1d47b4e6c51959d9a6408ff6660cd629"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d47b4e6c51959d9a6408ff6660cd629">AudioStream</a> (<a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a1d47b4e6c51959d9a6408ff6660cd629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264e3bcd80f5c47651d82ce64b84bdc0" id="r_a264e3bcd80f5c47651d82ce64b84bdc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a264e3bcd80f5c47651d82ce64b84bdc0">~AudioStream</a> ()</td></tr>
+<tr class="separator:a264e3bcd80f5c47651d82ce64b84bdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe56bfe817da16012d7c2efb4bd7a9c" id="r_aafe56bfe817da16012d7c2efb4bd7a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafe56bfe817da16012d7c2efb4bd7a9c">operator=</a> (const <a class="el" href="#a894b806cbf3e016b9cc7d9f413758012">::AudioStream</a> &amp;stream)</td></tr>
+<tr class="separator:aafe56bfe817da16012d7c2efb4bd7a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac284487daf53d5f3cabc535918ab5222" id="r_ac284487daf53d5f3cabc535918ab5222"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac284487daf53d5f3cabc535918ab5222">operator=</a> (const <a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;)=delete</td></tr>
+<tr class="separator:ac284487daf53d5f3cabc535918ab5222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaef9e064218e8728e7131de8f001bc1" id="r_abaef9e064218e8728e7131de8f001bc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaef9e064218e8728e7131de8f001bc1">operator=</a> (<a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:abaef9e064218e8728e7131de8f001bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0aa29e7eb3fb305eaa224bd62402622" id="r_af0aa29e7eb3fb305eaa224bd62402622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0aa29e7eb3fb305eaa224bd62402622">Update</a> (const void *data, int samplesCount)</td></tr>
+<tr class="memdesc:af0aa29e7eb3fb305eaa224bd62402622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update audio stream buffers with data  <br /></td></tr>
+<tr class="separator:af0aa29e7eb3fb305eaa224bd62402622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb60e7995e5d89c403fdb9bd50d0095" id="r_a7eb60e7995e5d89c403fdb9bd50d0095"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eb60e7995e5d89c403fdb9bd50d0095">Unload</a> ()</td></tr>
+<tr class="memdesc:a7eb60e7995e5d89c403fdb9bd50d0095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload audio stream and free memory  <br /></td></tr>
+<tr class="separator:a7eb60e7995e5d89c403fdb9bd50d0095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c208447f698ea82fb3c51f5c9978251" id="r_a1c208447f698ea82fb3c51f5c9978251"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c208447f698ea82fb3c51f5c9978251">IsProcessed</a> () const</td></tr>
+<tr class="memdesc:a1c208447f698ea82fb3c51f5c9978251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any audio stream buffers requires refill  <br /></td></tr>
+<tr class="separator:a1c208447f698ea82fb3c51f5c9978251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aed292652e082b37396a66e48bf9858" id="r_a3aed292652e082b37396a66e48bf9858"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aed292652e082b37396a66e48bf9858">Play</a> ()</td></tr>
+<tr class="memdesc:a3aed292652e082b37396a66e48bf9858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play audio stream  <br /></td></tr>
+<tr class="separator:a3aed292652e082b37396a66e48bf9858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2ae2e3c331c91af0d3ca86733e1f52" id="r_acb2ae2e3c331c91af0d3ca86733e1f52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb2ae2e3c331c91af0d3ca86733e1f52">Pause</a> ()</td></tr>
+<tr class="memdesc:acb2ae2e3c331c91af0d3ca86733e1f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause audio stream  <br /></td></tr>
+<tr class="separator:acb2ae2e3c331c91af0d3ca86733e1f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae949d3dea0a03fa4554153ab1c591fb9" id="r_ae949d3dea0a03fa4554153ab1c591fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae949d3dea0a03fa4554153ab1c591fb9">Resume</a> ()</td></tr>
+<tr class="memdesc:ae949d3dea0a03fa4554153ab1c591fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume audio stream  <br /></td></tr>
+<tr class="separator:ae949d3dea0a03fa4554153ab1c591fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ddeb56330bff2e4ae2f6aff6b8c63e9" id="r_a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ddeb56330bff2e4ae2f6aff6b8c63e9">IsPlaying</a> () const</td></tr>
+<tr class="memdesc:a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if audio stream is playing  <br /></td></tr>
+<tr class="separator:a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ebdf88ff0b76d024c7d49036cb0701f" id="r_a0ebdf88ff0b76d024c7d49036cb0701f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ebdf88ff0b76d024c7d49036cb0701f">Stop</a> ()</td></tr>
+<tr class="memdesc:a0ebdf88ff0b76d024c7d49036cb0701f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop audio stream  <br /></td></tr>
+<tr class="separator:a0ebdf88ff0b76d024c7d49036cb0701f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f16038ea49ac4668eb0cd0fccb3fda" id="r_a15f16038ea49ac4668eb0cd0fccb3fda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f16038ea49ac4668eb0cd0fccb3fda">SetVolume</a> (float volume=1.0f)</td></tr>
+<tr class="memdesc:a15f16038ea49ac4668eb0cd0fccb3fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set volume for audio stream (1.0 is max level)  <br /></td></tr>
+<tr class="separator:a15f16038ea49ac4668eb0cd0fccb3fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ebfc6323dd52a529c652b50d981160" id="r_a13ebfc6323dd52a529c652b50d981160"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13ebfc6323dd52a529c652b50d981160">SetPitch</a> (float pitch)</td></tr>
+<tr class="memdesc:a13ebfc6323dd52a529c652b50d981160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pitch for audio stream (1.0 is base level)  <br /></td></tr>
+<tr class="separator:a13ebfc6323dd52a529c652b50d981160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49c33dffca35542ee9ad4cfc206ee82" id="r_af49c33dffca35542ee9ad4cfc206ee82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af49c33dffca35542ee9ad4cfc206ee82">SetPan</a> (float pan=0.5f)</td></tr>
+<tr class="memdesc:af49c33dffca35542ee9ad4cfc206ee82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pan for audio stream (0.5 is centered)  <br /></td></tr>
+<tr class="separator:af49c33dffca35542ee9ad4cfc206ee82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d982a89d11be88d5621aead4394560" id="r_a01d982a89d11be88d5621aead4394560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d982a89d11be88d5621aead4394560">SetCallback</a> (::AudioCallback callback)</td></tr>
+<tr class="memdesc:a01d982a89d11be88d5621aead4394560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio thread callback to request new data  <br /></td></tr>
+<tr class="separator:a01d982a89d11be88d5621aead4394560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4442ef0d6ba9c3ac03354c10ab62dd4a" id="r_a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4442ef0d6ba9c3ac03354c10ab62dd4a">AttachProcessor</a> (::AudioCallback processor)</td></tr>
+<tr class="memdesc:a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach audio stream processor to stream  <br /></td></tr>
+<tr class="separator:a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41cbe345a20fd7155b96a218c807608" id="r_ae41cbe345a20fd7155b96a218c807608"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae41cbe345a20fd7155b96a218c807608">DetachProcessor</a> (::AudioCallback processor)</td></tr>
+<tr class="memdesc:ae41cbe345a20fd7155b96a218c807608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach audio stream processor from stream  <br /></td></tr>
+<tr class="separator:ae41cbe345a20fd7155b96a218c807608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10647c48d0d8a752feef763997b111dd" id="r_a10647c48d0d8a752feef763997b111dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10647c48d0d8a752feef763997b111dd">IsValid</a> () const</td></tr>
+<tr class="memdesc:a10647c48d0d8a752feef763997b111dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve whether or not the audio stream is ready.  <br /></td></tr>
+<tr class="separator:a10647c48d0d8a752feef763997b111dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5c4cad697bfd65ae5e87843699e7e7" id="r_a5a5c4cad697bfd65ae5e87843699e7e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a5c4cad697bfd65ae5e87843699e7e7">Load</a> (unsigned int SampleRate, unsigned int SampleSize, unsigned int Channels=2)</td></tr>
+<tr class="memdesc:a5a5c4cad697bfd65ae5e87843699e7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load audio stream (to stream raw audio pcm data)  <br /></td></tr>
+<tr class="separator:a5a5c4cad697bfd65ae5e87843699e7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a8a58e7e88a4fec0ce04cdc62614c5f5c" id="r_a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a58e7e88a4fec0ce04cdc62614c5f5c">SetBufferSizeDefault</a> (int size)</td></tr>
+<tr class="memdesc:a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default size for new audio streams  <br /></td></tr>
+<tr class="separator:a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ad151719449a1dfb3999817c09f9a5814" id="r_ad151719449a1dfb3999817c09f9a5814"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad151719449a1dfb3999817c09f9a5814">set</a> (const <a class="el" href="#a894b806cbf3e016b9cc7d9f413758012">::AudioStream</a> &amp;stream)</td></tr>
+<tr class="separator:ad151719449a1dfb3999817c09f9a5814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> management functions </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a894b806cbf3e016b9cc7d9f413758012" name="a894b806cbf3e016b9cc7d9f413758012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894b806cbf3e016b9cc7d9f413758012">&#9670;&#160;</a></span>AudioStream() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AudioStream::AudioStream </td>
+          <td>(</td>
+          <td class="paramtype">const ::AudioStream &amp;</td>          <td class="paramname"><span class="paramname"><em>music</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66d098d9622b78aef199f3e32345ea14" name="a66d098d9622b78aef199f3e32345ea14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d098d9622b78aef199f3e32345ea14">&#9670;&#160;</a></span>AudioStream() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AudioStream::AudioStream </td>
+          <td>(</td>
+          <td class="paramtype">rAudioBuffer *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rAudioProcessor *</td>          <td class="paramname"><span class="paramname"><em>processor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>sampleRate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>sampleSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>channels</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dd9cb9c1d176a3ff8518cd1e5fbe3b2" name="a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2">&#9670;&#160;</a></span>AudioStream() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AudioStream::AudioStream </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>sampleRate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>sampleSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>channels</em></span><span class="paramdefsep"> = </span><span class="paramdefval">2</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Init audio stream (to stream raw audio pcm data) </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8a74cd0657258f1fe495d2dc7fd6881" name="ad8a74cd0657258f1fe495d2dc7fd6881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a74cd0657258f1fe495d2dc7fd6881">&#9670;&#160;</a></span>AudioStream() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AudioStream::AudioStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d47b4e6c51959d9a6408ff6660cd629" name="a1d47b4e6c51959d9a6408ff6660cd629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d47b4e6c51959d9a6408ff6660cd629">&#9670;&#160;</a></span>AudioStream() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AudioStream::AudioStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a264e3bcd80f5c47651d82ce64b84bdc0" name="a264e3bcd80f5c47651d82ce64b84bdc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264e3bcd80f5c47651d82ce64b84bdc0">&#9670;&#160;</a></span>~AudioStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AudioStream::~AudioStream </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4442ef0d6ba9c3ac03354c10ab62dd4a" name="a4442ef0d6ba9c3ac03354c10ab62dd4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4442ef0d6ba9c3ac03354c10ab62dd4a">&#9670;&#160;</a></span>AttachProcessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AudioStream::AttachProcessor </td>
+          <td>(</td>
+          <td class="paramtype">::AudioCallback</td>          <td class="paramname"><span class="paramname"><em>processor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attach audio stream processor to stream </p>
+
+</div>
+</div>
+<a id="ae41cbe345a20fd7155b96a218c807608" name="ae41cbe345a20fd7155b96a218c807608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41cbe345a20fd7155b96a218c807608">&#9670;&#160;</a></span>DetachProcessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AudioStream::DetachProcessor </td>
+          <td>(</td>
+          <td class="paramtype">::AudioCallback</td>          <td class="paramname"><span class="paramname"><em>processor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detach audio stream processor from stream </p>
+
+</div>
+</div>
+<a id="a3ddeb56330bff2e4ae2f6aff6b8c63e9" name="a3ddeb56330bff2e4ae2f6aff6b8c63e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddeb56330bff2e4ae2f6aff6b8c63e9">&#9670;&#160;</a></span>IsPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::AudioStream::IsPlaying </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if audio stream is playing </p>
+
+</div>
+</div>
+<a id="a1c208447f698ea82fb3c51f5c9978251" name="a1c208447f698ea82fb3c51f5c9978251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c208447f698ea82fb3c51f5c9978251">&#9670;&#160;</a></span>IsProcessed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::AudioStream::IsProcessed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if any audio stream buffers requires refill </p>
+
+</div>
+</div>
+<a id="a10647c48d0d8a752feef763997b111dd" name="a10647c48d0d8a752feef763997b111dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10647c48d0d8a752feef763997b111dd">&#9670;&#160;</a></span>IsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::AudioStream::IsValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve whether or not the audio stream is ready. </p>
+
+</div>
+</div>
+<a id="a5a5c4cad697bfd65ae5e87843699e7e7" name="a5a5c4cad697bfd65ae5e87843699e7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5c4cad697bfd65ae5e87843699e7e7">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AudioStream::Load </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>SampleRate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>SampleSize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>Channels</em></span><span class="paramdefsep"> = </span><span class="paramdefval">2</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load audio stream (to stream raw audio pcm data) </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abaef9e064218e8728e7131de8f001bc1" name="abaef9e064218e8728e7131de8f001bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaef9e064218e8728e7131de8f001bc1">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafe56bfe817da16012d7c2efb4bd7a9c" name="aafe56bfe817da16012d7c2efb4bd7a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe56bfe817da16012d7c2efb4bd7a9c">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a894b806cbf3e016b9cc7d9f413758012">::AudioStream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac284487daf53d5f3cabc535918ab5222" name="ac284487daf53d5f3cabc535918ab5222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac284487daf53d5f3cabc535918ab5222">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb2ae2e3c331c91af0d3ca86733e1f52" name="acb2ae2e3c331c91af0d3ca86733e1f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2ae2e3c331c91af0d3ca86733e1f52">&#9670;&#160;</a></span>Pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::Pause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pause audio stream </p>
+
+</div>
+</div>
+<a id="a3aed292652e082b37396a66e48bf9858" name="a3aed292652e082b37396a66e48bf9858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aed292652e082b37396a66e48bf9858">&#9670;&#160;</a></span>Play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::Play </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Play audio stream </p>
+
+</div>
+</div>
+<a id="ae949d3dea0a03fa4554153ab1c591fb9" name="ae949d3dea0a03fa4554153ab1c591fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae949d3dea0a03fa4554153ab1c591fb9">&#9670;&#160;</a></span>Resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::Resume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume audio stream </p>
+
+</div>
+</div>
+<a id="ad151719449a1dfb3999817c09f9a5814" name="ad151719449a1dfb3999817c09f9a5814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad151719449a1dfb3999817c09f9a5814">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AudioStream::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a894b806cbf3e016b9cc7d9f413758012">::AudioStream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a58e7e88a4fec0ce04cdc62614c5f5c" name="a8a58e7e88a4fec0ce04cdc62614c5f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a58e7e88a4fec0ce04cdc62614c5f5c">&#9670;&#160;</a></span>SetBufferSizeDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void raylib::AudioStream::SetBufferSizeDefault </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default size for new audio streams </p>
+
+</div>
+</div>
+<a id="a01d982a89d11be88d5621aead4394560" name="a01d982a89d11be88d5621aead4394560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d982a89d11be88d5621aead4394560">&#9670;&#160;</a></span>SetCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AudioStream::SetCallback </td>
+          <td>(</td>
+          <td class="paramtype">::AudioCallback</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Audio thread callback to request new data </p>
+
+</div>
+</div>
+<a id="af49c33dffca35542ee9ad4cfc206ee82" name="af49c33dffca35542ee9ad4cfc206ee82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49c33dffca35542ee9ad4cfc206ee82">&#9670;&#160;</a></span>SetPan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::SetPan </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pan</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.5f</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set pan for audio stream (0.5 is centered) </p>
+
+</div>
+</div>
+<a id="a13ebfc6323dd52a529c652b50d981160" name="a13ebfc6323dd52a529c652b50d981160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ebfc6323dd52a529c652b50d981160">&#9670;&#160;</a></span>SetPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::SetPitch </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set pitch for audio stream (1.0 is base level) </p>
+
+</div>
+</div>
+<a id="a15f16038ea49ac4668eb0cd0fccb3fda" name="a15f16038ea49ac4668eb0cd0fccb3fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f16038ea49ac4668eb0cd0fccb3fda">&#9670;&#160;</a></span>SetVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>volume</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set volume for audio stream (1.0 is max level) </p>
+
+</div>
+</div>
+<a id="a0ebdf88ff0b76d024c7d49036cb0701f" name="a0ebdf88ff0b76d024c7d49036cb0701f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ebdf88ff0b76d024c7d49036cb0701f">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::Stop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop audio stream </p>
+
+</div>
+</div>
+<a id="a7eb60e7995e5d89c403fdb9bd50d0095" name="a7eb60e7995e5d89c403fdb9bd50d0095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb60e7995e5d89c403fdb9bd50d0095">&#9670;&#160;</a></span>Unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AudioStream::Unload </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unload audio stream and free memory </p>
+
+</div>
+</div>
+<a id="af0aa29e7eb3fb305eaa224bd62402622" name="af0aa29e7eb3fb305eaa224bd62402622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0aa29e7eb3fb305eaa224bd62402622">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp; raylib::AudioStream::Update </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>samplesCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update audio stream buffers with data </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_audio_stream_8hpp_source.html">AudioStream.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

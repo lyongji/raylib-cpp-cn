@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: include/Mesh.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_mesh_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Mesh.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_MESH_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_MESH_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_bounding_box_8hpp.html">./BoundingBox.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_unmanaged_8hpp.html">./MeshUnmanaged.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_model_8hpp.html">./Model.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="raylib-cpp-utils_8hpp.html">./raylib-cpp-utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classraylib_1_1_mesh.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a> : <span class="keyword">public</span> <a class="code hl_class" href="classraylib_1_1_mesh_unmanaged.html">MeshUnmanaged</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using </span><a class="code hl_function" href="classraylib_1_1_mesh_unmanaged.html#a95fb756d6aea3e1e6a9d71b78ebd2f52">MeshUnmanaged::MeshUnmanaged</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classraylib_1_1_mesh.html#a06926991922586318cbdc402b8c1ba42">   28</a></span>    <a class="code hl_function" href="classraylib_1_1_mesh.html#a06926991922586318cbdc402b8c1ba42">Mesh</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classraylib_1_1_mesh.html#a4fe0ff85b2ef8ea6dc9e7bc98dc8c8ca">   33</a></span>    <a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a>&amp; <a class="code hl_function" href="classraylib_1_1_mesh.html#a4fe0ff85b2ef8ea6dc9e7bc98dc8c8ca">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classraylib_1_1_mesh.html#a79ce0a2fa4f61795b3632330d29edac6">   38</a></span>    <a class="code hl_function" href="classraylib_1_1_mesh.html#a79ce0a2fa4f61795b3632330d29edac6">Mesh</a>(<a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a>&amp;&amp; other) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="classraylib_1_1_mesh_unmanaged.html#af5211ac41215aa83405aedcf6027dedd">set</a>(other);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        other.vertexCount = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        other.triangleCount = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        other.vertices = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        other.texcoords = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        other.texcoords2 = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        other.normals = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        other.tangents = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        other.colors = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        other.indices = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        other.animVertices = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        other.animNormals = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        other.boneIds = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        other.boneWeights = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        other.vaoId = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        other.vboId = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classraylib_1_1_mesh.html#ad74efe8cd30bd4630a5cf055d61e8263">   58</a></span>    <a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a>&amp; <a class="code hl_function" href="classraylib_1_1_mesh.html#ad74efe8cd30bd4630a5cf055d61e8263">operator=</a>(<a class="code hl_class" href="classraylib_1_1_mesh.html">Mesh</a>&amp;&amp; other) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="classraylib_1_1_mesh_unmanaged.html#aa30017b88394dc52f71f4a1dec875460">Unload</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_function" href="classraylib_1_1_mesh_unmanaged.html#af5211ac41215aa83405aedcf6027dedd">set</a>(other);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        other.vertexCount = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        other.triangleCount = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        other.vertices = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        other.texcoords = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        other.texcoords2 = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        other.normals = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        other.tangents = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        other.colors = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        other.indices = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        other.animVertices = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        other.animNormals = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        other.boneIds = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        other.boneWeights = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        other.vaoId = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        other.vboId = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classraylib_1_1_mesh.html#af09e2772739c525a2f957ebb7b4a1486">   85</a></span>    <a class="code hl_function" href="classraylib_1_1_mesh.html#af09e2772739c525a2f957ebb7b4a1486">~Mesh</a>() { <a class="code hl_function" href="classraylib_1_1_mesh_unmanaged.html#aa30017b88394dc52f71f4a1dec875460">Unload</a>(); }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_mesh_8hpp.html#a4a21c8033f95de4af161a9596dff4497">   89</a></span><span class="keyword">using </span><a class="code hl_class" href="classraylib_1_1_mesh.html">RMesh</a> = <a class="code hl_class" href="classraylib_1_1_mesh.html">raylib::Mesh</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_MESH_HPP_</span></div>
+<div class="ttc" id="a_bounding_box_8hpp_html"><div class="ttname"><a href="_bounding_box_8hpp.html">BoundingBox.hpp</a></div></div>
+<div class="ttc" id="a_mesh_unmanaged_8hpp_html"><div class="ttname"><a href="_mesh_unmanaged_8hpp.html">MeshUnmanaged.hpp</a></div></div>
+<div class="ttc" id="a_model_8hpp_html"><div class="ttname"><a href="_model_8hpp.html">Model.hpp</a></div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_html"><div class="ttname"><a href="classraylib_1_1_mesh.html">raylib::Mesh</a></div><div class="ttdoc">Vertex data defining a mesh</div><div class="ttdef"><b>定义</b> Mesh.hpp:21</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_html_a06926991922586318cbdc402b8c1ba42"><div class="ttname"><a href="classraylib_1_1_mesh.html#a06926991922586318cbdc402b8c1ba42">raylib::Mesh::Mesh</a></div><div class="ttdeci">Mesh(const Mesh &amp;)=delete</div><div class="ttdoc">Explicitly forbid the copy constructor.</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_html_a4fe0ff85b2ef8ea6dc9e7bc98dc8c8ca"><div class="ttname"><a href="classraylib_1_1_mesh.html#a4fe0ff85b2ef8ea6dc9e7bc98dc8c8ca">raylib::Mesh::operator=</a></div><div class="ttdeci">Mesh &amp; operator=(const Mesh &amp;)=delete</div><div class="ttdoc">Explicitly forbid copy assignment.</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_html_a79ce0a2fa4f61795b3632330d29edac6"><div class="ttname"><a href="classraylib_1_1_mesh.html#a79ce0a2fa4f61795b3632330d29edac6">raylib::Mesh::Mesh</a></div><div class="ttdeci">Mesh(Mesh &amp;&amp;other)</div><div class="ttdoc">Move constructor.</div><div class="ttdef"><b>定义</b> Mesh.hpp:38</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_html_ad74efe8cd30bd4630a5cf055d61e8263"><div class="ttname"><a href="classraylib_1_1_mesh.html#ad74efe8cd30bd4630a5cf055d61e8263">raylib::Mesh::operator=</a></div><div class="ttdeci">Mesh &amp; operator=(Mesh &amp;&amp;other) noexcept</div><div class="ttdef"><b>定义</b> Mesh.hpp:58</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_html_af09e2772739c525a2f957ebb7b4a1486"><div class="ttname"><a href="classraylib_1_1_mesh.html#af09e2772739c525a2f957ebb7b4a1486">raylib::Mesh::~Mesh</a></div><div class="ttdeci">~Mesh()</div><div class="ttdef"><b>定义</b> Mesh.hpp:85</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_unmanaged_html"><div class="ttname"><a href="classraylib_1_1_mesh_unmanaged.html">raylib::MeshUnmanaged</a></div><div class="ttdoc">Vertex data defining a mesh, not managed by C++ RAII.</div><div class="ttdef"><b>定义</b> MeshUnmanaged.hpp:21</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_unmanaged_html_a95fb756d6aea3e1e6a9d71b78ebd2f52"><div class="ttname"><a href="classraylib_1_1_mesh_unmanaged.html#a95fb756d6aea3e1e6a9d71b78ebd2f52">raylib::MeshUnmanaged::MeshUnmanaged</a></div><div class="ttdeci">MeshUnmanaged()</div><div class="ttdoc">Default texture constructor.</div><div class="ttdef"><b>定义</b> MeshUnmanaged.hpp:26</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_unmanaged_html_aa30017b88394dc52f71f4a1dec875460"><div class="ttname"><a href="classraylib_1_1_mesh_unmanaged.html#aa30017b88394dc52f71f4a1dec875460">raylib::MeshUnmanaged::Unload</a></div><div class="ttdeci">void Unload()</div><div class="ttdoc">Unload mesh from memory (RAM and/or VRAM)</div><div class="ttdef"><b>定义</b> MeshUnmanaged.hpp:144</div></div>
+<div class="ttc" id="aclassraylib_1_1_mesh_unmanaged_html_af5211ac41215aa83405aedcf6027dedd"><div class="ttname"><a href="classraylib_1_1_mesh_unmanaged.html#af5211ac41215aa83405aedcf6027dedd">raylib::MeshUnmanaged::set</a></div><div class="ttdeci">void set(const ::Mesh &amp;mesh)</div><div class="ttdef"><b>定义</b> MeshUnmanaged.hpp:231</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html">raylib-cpp-utils.hpp</a></div></div>
+<div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_mesh_8hpp.html">Mesh.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

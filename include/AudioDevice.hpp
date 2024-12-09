@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_
-#define RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_
+// #define RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_
+#pragma once
 
 #include "./RaylibException.hpp"
 #include "./raylib-cpp-utils.hpp"
@@ -65,4 +66,4 @@ public:
 
 using RAudioDevice = raylib::AudioDevice;
 
-#endif // RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_

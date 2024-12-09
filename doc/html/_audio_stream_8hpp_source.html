@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: include/AudioStream.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_audio_stream_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AudioStream.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_audio_stream_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_raylib_exception_8hpp.html">./RaylibException.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="raylib-cpp-utils_8hpp.html">./raylib-cpp-utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a> : <span class="keyword">public</span> ::AudioStream {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a894b806cbf3e016b9cc7d9f413758012">   14</a></span>    <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a894b806cbf3e016b9cc7d9f413758012">AudioStream</a>(const ::AudioStream&amp; music) { <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">set</a>(music); }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a66d098d9622b78aef199f3e32345ea14">   16</a></span>    <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a66d098d9622b78aef199f3e32345ea14">AudioStream</a>(</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        rAudioBuffer* buffer = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        rAudioProcessor* processor = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sampleRate = 0,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sampleSize = 0,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channels = 0)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        : ::<a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>{buffer, processor, sampleRate, sampleSize, channels} {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="comment">// Nothing.</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2">   31</a></span>    <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2">AudioStream</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sampleRate, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sampleSize, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channels = 2) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a5a5c4cad697bfd65ae5e87843699e7e7">Load</a>(sampleRate, sampleSize, channels);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#ad8a74cd0657258f1fe495d2dc7fd6881">   35</a></span>    <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad8a74cd0657258f1fe495d2dc7fd6881">AudioStream</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a1d47b4e6c51959d9a6408ff6660cd629">   37</a></span>    <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a1d47b4e6c51959d9a6408ff6660cd629">AudioStream</a>(<a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp;&amp; other) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">set</a>(other);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        other.buffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        other.processor = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        other.sampleRate = 0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        other.sampleSize = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        other.channels = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a264e3bcd80f5c47651d82ce64b84bdc0">   47</a></span>    <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a264e3bcd80f5c47651d82ce64b84bdc0">~AudioStream</a>() { <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a7eb60e7995e5d89c403fdb9bd50d0095">Unload</a>(); }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#adc695a4ac85f037aa73222f242c64091">GETTER</a>(rAudioBuffer*, Buffer, buffer)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#adc695a4ac85f037aa73222f242c64091">GETTER</a>(rAudioProcessor*, Processor, processor)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#adc695a4ac85f037aa73222f242c64091">GETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, SampleRate, sampleRate)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#adc695a4ac85f037aa73222f242c64091">GETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, SampleSize, sampleSize)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#adc695a4ac85f037aa73222f242c64091">GETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, Channels, channels)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#aafe56bfe817da16012d7c2efb4bd7a9c">   55</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; operator=(const ::<a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; stream) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">set</a>(stream);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#ac284487daf53d5f3cabc535918ab5222">   60</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ac284487daf53d5f3cabc535918ab5222">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#abaef9e064218e8728e7131de8f001bc1">   62</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#abaef9e064218e8728e7131de8f001bc1">operator=</a>(<a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp;&amp; other) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a7eb60e7995e5d89c403fdb9bd50d0095">Unload</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">set</a>(other);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        other.buffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        other.processor = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        other.sampleRate = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        other.sampleSize = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        other.channels = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#af0aa29e7eb3fb305eaa224bd62402622">   82</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#af0aa29e7eb3fb305eaa224bd62402622">Update</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> samplesCount) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        ::UpdateAudioStream(*<span class="keyword">this</span>, data, samplesCount);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a7eb60e7995e5d89c403fdb9bd50d0095">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a7eb60e7995e5d89c403fdb9bd50d0095">Unload</a>() {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classraylib_1_1_audio_stream.html#a10647c48d0d8a752feef763997b111dd">IsValid</a>()) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            ::UnloadAudioStream(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a1c208447f698ea82fb3c51f5c9978251">   99</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a1c208447f698ea82fb3c51f5c9978251">IsProcessed</a>()<span class="keyword"> const </span>{ return ::IsAudioStreamProcessed(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a3aed292652e082b37396a66e48bf9858">  104</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a3aed292652e082b37396a66e48bf9858">Play</a>() {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        ::PlayAudioStream(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#acb2ae2e3c331c91af0d3ca86733e1f52">  112</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#acb2ae2e3c331c91af0d3ca86733e1f52">Pause</a>() {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        ::PauseAudioStream(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#ae949d3dea0a03fa4554153ab1c591fb9">  120</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ae949d3dea0a03fa4554153ab1c591fb9">Resume</a>() {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        ::ResumeAudioStream(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a3ddeb56330bff2e4ae2f6aff6b8c63e9">  128</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a3ddeb56330bff2e4ae2f6aff6b8c63e9">IsPlaying</a>()<span class="keyword"> const </span>{ return ::IsAudioStreamPlaying(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a0ebdf88ff0b76d024c7d49036cb0701f">  133</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a0ebdf88ff0b76d024c7d49036cb0701f">Stop</a>() {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        ::StopAudioStream(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a15f16038ea49ac4668eb0cd0fccb3fda">  141</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a15f16038ea49ac4668eb0cd0fccb3fda">SetVolume</a>(<span class="keywordtype">float</span> volume = 1.0f) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        ::SetAudioStreamVolume(*<span class="keyword">this</span>, volume);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a13ebfc6323dd52a529c652b50d981160">  149</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a13ebfc6323dd52a529c652b50d981160">SetPitch</a>(<span class="keywordtype">float</span> pitch) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        ::SetAudioStreamPitch(*<span class="keyword">this</span>, pitch);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#af49c33dffca35542ee9ad4cfc206ee82">  157</a></span>    <a class="code hl_class" href="classraylib_1_1_audio_stream.html">AudioStream</a>&amp; <a class="code hl_function" href="classraylib_1_1_audio_stream.html#af49c33dffca35542ee9ad4cfc206ee82">SetPan</a>(<span class="keywordtype">float</span> pan = 0.5f) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        ::SetAudioStreamPan(*<span class="keyword">this</span>, pan);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a8a58e7e88a4fec0ce04cdc62614c5f5c">  165</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a8a58e7e88a4fec0ce04cdc62614c5f5c">SetBufferSizeDefault</a>(<span class="keywordtype">int</span> size) { ::SetAudioStreamBufferSizeDefault(size); }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a01d982a89d11be88d5621aead4394560">  170</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a01d982a89d11be88d5621aead4394560">SetCallback</a>(::AudioCallback callback) { ::SetAudioStreamCallback(*<span class="keyword">this</span>, callback); }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a4442ef0d6ba9c3ac03354c10ab62dd4a">  175</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a4442ef0d6ba9c3ac03354c10ab62dd4a">AttachProcessor</a>(::AudioCallback processor) { ::AttachAudioStreamProcessor(*<span class="keyword">this</span>, processor); }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#ae41cbe345a20fd7155b96a218c807608">  180</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ae41cbe345a20fd7155b96a218c807608">DetachProcessor</a>(::AudioCallback processor) { ::DetachAudioStreamProcessor(*<span class="keyword">this</span>, processor); }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a10647c48d0d8a752feef763997b111dd">  185</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a10647c48d0d8a752feef763997b111dd">IsValid</a>()<span class="keyword"> const </span>{ return ::IsAudioStreamValid(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#a5a5c4cad697bfd65ae5e87843699e7e7">  192</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a5a5c4cad697bfd65ae5e87843699e7e7">Load</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> SampleRate, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> SampleSize, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Channels = 2) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#a7eb60e7995e5d89c403fdb9bd50d0095">Unload</a>();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">set</a>(::LoadAudioStream(SampleRate, SampleSize, Channels));</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classraylib_1_1_audio_stream.html#a10647c48d0d8a752feef763997b111dd">IsValid</a>()) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classraylib_1_1_raylib_exception.html">RaylibException</a>(<span class="stringliteral">&quot;Failed to load audio stream&quot;</span>);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00200" data-start="{" data-end="}">
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">  200</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">set</a>(const ::AudioStream&amp; stream) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        buffer = stream.buffer;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        processor = stream.processor;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        sampleRate = stream.sampleRate;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        sampleSize = stream.sampleSize;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        channels = stream.channels;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
+</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="_audio_stream_8hpp.html#af0d0bf0bf3807e4666d5ba8d08a8b3e4">  210</a></span><span class="keyword">using </span><a class="code hl_class" href="classraylib_1_1_audio_stream.html">RAudioStream</a> = <a class="code hl_class" href="classraylib_1_1_audio_stream.html">raylib::AudioStream</a>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_</span></div>
+<div class="ttc" id="a_raylib_exception_8hpp_html"><div class="ttname"><a href="_raylib_exception_8hpp.html">RaylibException.hpp</a></div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html"><div class="ttname"><a href="classraylib_1_1_audio_stream.html">raylib::AudioStream</a></div><div class="ttdoc">AudioStream management functions</div><div class="ttdef"><b>定义</b> AudioStream.hpp:12</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a01d982a89d11be88d5621aead4394560"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a01d982a89d11be88d5621aead4394560">raylib::AudioStream::SetCallback</a></div><div class="ttdeci">void SetCallback(::AudioCallback callback)</div><div class="ttdoc">Audio thread callback to request new data</div><div class="ttdef"><b>定义</b> AudioStream.hpp:170</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a0ebdf88ff0b76d024c7d49036cb0701f"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a0ebdf88ff0b76d024c7d49036cb0701f">raylib::AudioStream::Stop</a></div><div class="ttdeci">AudioStream &amp; Stop()</div><div class="ttdoc">Stop audio stream</div><div class="ttdef"><b>定义</b> AudioStream.hpp:133</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a10647c48d0d8a752feef763997b111dd"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a10647c48d0d8a752feef763997b111dd">raylib::AudioStream::IsValid</a></div><div class="ttdeci">bool IsValid() const</div><div class="ttdoc">Retrieve whether or not the audio stream is ready.</div><div class="ttdef"><b>定义</b> AudioStream.hpp:185</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a13ebfc6323dd52a529c652b50d981160"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a13ebfc6323dd52a529c652b50d981160">raylib::AudioStream::SetPitch</a></div><div class="ttdeci">AudioStream &amp; SetPitch(float pitch)</div><div class="ttdoc">Set pitch for audio stream (1.0 is base level)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:149</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a15f16038ea49ac4668eb0cd0fccb3fda"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a15f16038ea49ac4668eb0cd0fccb3fda">raylib::AudioStream::SetVolume</a></div><div class="ttdeci">AudioStream &amp; SetVolume(float volume=1.0f)</div><div class="ttdoc">Set volume for audio stream (1.0 is max level)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:141</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a1c208447f698ea82fb3c51f5c9978251"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a1c208447f698ea82fb3c51f5c9978251">raylib::AudioStream::IsProcessed</a></div><div class="ttdeci">bool IsProcessed() const</div><div class="ttdoc">Check if any audio stream buffers requires refill</div><div class="ttdef"><b>定义</b> AudioStream.hpp:99</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a1d47b4e6c51959d9a6408ff6660cd629"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a1d47b4e6c51959d9a6408ff6660cd629">raylib::AudioStream::AudioStream</a></div><div class="ttdeci">AudioStream(AudioStream &amp;&amp;other)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:37</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a264e3bcd80f5c47651d82ce64b84bdc0"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a264e3bcd80f5c47651d82ce64b84bdc0">raylib::AudioStream::~AudioStream</a></div><div class="ttdeci">~AudioStream()</div><div class="ttdef"><b>定义</b> AudioStream.hpp:47</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a3aed292652e082b37396a66e48bf9858"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a3aed292652e082b37396a66e48bf9858">raylib::AudioStream::Play</a></div><div class="ttdeci">AudioStream &amp; Play()</div><div class="ttdoc">Play audio stream</div><div class="ttdef"><b>定义</b> AudioStream.hpp:104</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a3ddeb56330bff2e4ae2f6aff6b8c63e9"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a3ddeb56330bff2e4ae2f6aff6b8c63e9">raylib::AudioStream::IsPlaying</a></div><div class="ttdeci">bool IsPlaying() const</div><div class="ttdoc">Check if audio stream is playing</div><div class="ttdef"><b>定义</b> AudioStream.hpp:128</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a4442ef0d6ba9c3ac03354c10ab62dd4a"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a4442ef0d6ba9c3ac03354c10ab62dd4a">raylib::AudioStream::AttachProcessor</a></div><div class="ttdeci">void AttachProcessor(::AudioCallback processor)</div><div class="ttdoc">Attach audio stream processor to stream</div><div class="ttdef"><b>定义</b> AudioStream.hpp:175</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a5a5c4cad697bfd65ae5e87843699e7e7"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a5a5c4cad697bfd65ae5e87843699e7e7">raylib::AudioStream::Load</a></div><div class="ttdeci">void Load(unsigned int SampleRate, unsigned int SampleSize, unsigned int Channels=2)</div><div class="ttdoc">Load audio stream (to stream raw audio pcm data)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:192</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a66d098d9622b78aef199f3e32345ea14"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a66d098d9622b78aef199f3e32345ea14">raylib::AudioStream::AudioStream</a></div><div class="ttdeci">AudioStream(rAudioBuffer *buffer=nullptr, rAudioProcessor *processor=nullptr, unsigned int sampleRate=0, unsigned int sampleSize=0, unsigned int channels=0)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:16</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a7eb60e7995e5d89c403fdb9bd50d0095"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a7eb60e7995e5d89c403fdb9bd50d0095">raylib::AudioStream::Unload</a></div><div class="ttdeci">void Unload()</div><div class="ttdoc">Unload audio stream and free memory</div><div class="ttdef"><b>定义</b> AudioStream.hpp:90</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a894b806cbf3e016b9cc7d9f413758012"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a894b806cbf3e016b9cc7d9f413758012">raylib::AudioStream::AudioStream</a></div><div class="ttdeci">AudioStream(const ::AudioStream &amp;music)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:14</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a8a58e7e88a4fec0ce04cdc62614c5f5c"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a8a58e7e88a4fec0ce04cdc62614c5f5c">raylib::AudioStream::SetBufferSizeDefault</a></div><div class="ttdeci">static void SetBufferSizeDefault(int size)</div><div class="ttdoc">Default size for new audio streams</div><div class="ttdef"><b>定义</b> AudioStream.hpp:165</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2">raylib::AudioStream::AudioStream</a></div><div class="ttdeci">AudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels=2)</div><div class="ttdoc">Init audio stream (to stream raw audio pcm data)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:31</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_abaef9e064218e8728e7131de8f001bc1"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#abaef9e064218e8728e7131de8f001bc1">raylib::AudioStream::operator=</a></div><div class="ttdeci">AudioStream &amp; operator=(AudioStream &amp;&amp;other) noexcept</div><div class="ttdef"><b>定义</b> AudioStream.hpp:62</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_ac284487daf53d5f3cabc535918ab5222"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#ac284487daf53d5f3cabc535918ab5222">raylib::AudioStream::operator=</a></div><div class="ttdeci">AudioStream &amp; operator=(const AudioStream &amp;)=delete</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_acb2ae2e3c331c91af0d3ca86733e1f52"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#acb2ae2e3c331c91af0d3ca86733e1f52">raylib::AudioStream::Pause</a></div><div class="ttdeci">AudioStream &amp; Pause()</div><div class="ttdoc">Pause audio stream</div><div class="ttdef"><b>定义</b> AudioStream.hpp:112</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_ad151719449a1dfb3999817c09f9a5814"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#ad151719449a1dfb3999817c09f9a5814">raylib::AudioStream::set</a></div><div class="ttdeci">void set(const ::AudioStream &amp;stream)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:200</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_ad8a74cd0657258f1fe495d2dc7fd6881"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#ad8a74cd0657258f1fe495d2dc7fd6881">raylib::AudioStream::AudioStream</a></div><div class="ttdeci">AudioStream(const AudioStream &amp;)=delete</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_ae41cbe345a20fd7155b96a218c807608"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#ae41cbe345a20fd7155b96a218c807608">raylib::AudioStream::DetachProcessor</a></div><div class="ttdeci">void DetachProcessor(::AudioCallback processor)</div><div class="ttdoc">Detach audio stream processor from stream</div><div class="ttdef"><b>定义</b> AudioStream.hpp:180</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_ae949d3dea0a03fa4554153ab1c591fb9"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#ae949d3dea0a03fa4554153ab1c591fb9">raylib::AudioStream::Resume</a></div><div class="ttdeci">AudioStream &amp; Resume()</div><div class="ttdoc">Resume audio stream</div><div class="ttdef"><b>定义</b> AudioStream.hpp:120</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_af0aa29e7eb3fb305eaa224bd62402622"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#af0aa29e7eb3fb305eaa224bd62402622">raylib::AudioStream::Update</a></div><div class="ttdeci">AudioStream &amp; Update(const void *data, int samplesCount)</div><div class="ttdoc">Update audio stream buffers with data</div><div class="ttdef"><b>定义</b> AudioStream.hpp:82</div></div>
+<div class="ttc" id="aclassraylib_1_1_audio_stream_html_af49c33dffca35542ee9ad4cfc206ee82"><div class="ttname"><a href="classraylib_1_1_audio_stream.html#af49c33dffca35542ee9ad4cfc206ee82">raylib::AudioStream::SetPan</a></div><div class="ttdeci">AudioStream &amp; SetPan(float pan=0.5f)</div><div class="ttdoc">Set pan for audio stream (0.5 is centered)</div><div class="ttdef"><b>定义</b> AudioStream.hpp:157</div></div>
+<div class="ttc" id="aclassraylib_1_1_raylib_exception_html"><div class="ttname"><a href="classraylib_1_1_raylib_exception.html">raylib::RaylibException</a></div><div class="ttdoc">Exception used for most raylib-related exceptions.</div><div class="ttdef"><b>定义</b> RaylibException.hpp:13</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html">raylib-cpp-utils.hpp</a></div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html_adc695a4ac85f037aa73222f242c64091"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html#adc695a4ac85f037aa73222f242c64091">GETTER</a></div><div class="ttdeci">#define GETTER(type, method, name)</div><div class="ttdoc">Utility for raylib-cpp.</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:15</div></div>
+<div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_audio_stream_8hpp.html">AudioStream.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

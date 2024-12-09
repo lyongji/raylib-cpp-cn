@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: include/Color.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_color_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Color.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_color_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_COLOR_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_COLOR_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_vector4_8hpp.html">./Vector4.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="raylib-cpp-utils_8hpp.html">./raylib-cpp-utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_color.html">Color</a> : <span class="keyword">public</span> ::Color {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab0221dcd700b9a6add471cbceb718ac6">   16</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#ab0221dcd700b9a6add471cbceb718ac6">Color</a>(const ::Color&amp; color) : ::<a class="code hl_class" href="classraylib_1_1_color.html">Color</a>{color.r, color.g, color.b, color.a} {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab6c57e01798eb39092b260e7c6c008ac">   18</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#ab6c57e01798eb39092b260e7c6c008ac">Color</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> red, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> green, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> blue, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> alpha = 255)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        : ::<a class="code hl_class" href="classraylib_1_1_color.html">Color</a>{red, green, blue, alpha} {};</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">   24</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">Color</a>() : ::<a class="code hl_class" href="classraylib_1_1_color.html">Color</a>{0, 0, 0, 255} {};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a3c177f10d10851fdf20d09fae83c8e19">   29</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#a3c177f10d10851fdf20d09fae83c8e19">Color</a>(::Vector3 hsv) { <a class="code hl_function" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">set</a>(::ColorFromHSV(hsv.x, hsv.y, hsv.z)); }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a6c3fd166762f68aede6c448cb26677ef">   34</a></span>    static ::Color <a class="code hl_function" href="classraylib_1_1_color.html#a6c3fd166762f68aede6c448cb26677ef">FromHSV</a>(<span class="keywordtype">float</span> hue, <span class="keywordtype">float</span> saturation, <span class="keywordtype">float</span> value) { return ::ColorFromHSV(hue, saturation, value); }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ae94a7282beb9cd71dd8d1b0dac24652a">   39</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#ae94a7282beb9cd71dd8d1b0dac24652a">Color</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hexValue) { <a class="code hl_function" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">set</a>(::GetColor(hexValue)); }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a83fda335e3dc337d92da5a6be23eff55">   41</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#a83fda335e3dc337d92da5a6be23eff55">Color</a>(<span class="keywordtype">void</span>* srcPtr, <span class="keywordtype">int</span> format) { <a class="code hl_function" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">set</a>(::GetPixelColor(srcPtr, format)); }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a927ba04098ee1ba3a8e91374ed5d5606">   46</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classraylib_1_1_color.html#a927ba04098ee1ba3a8e91374ed5d5606">ToInt</a>()<span class="keyword"> const </span>{ return ::ColorToInt(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a569352de1fc298f320d0a5c503ad47bf">   51</a></span>    <span class="keyword">operator</span> int()<span class="keyword"> const </span>{ return ::ColorToInt(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#aa6792723d2a5f6dc857e8672ab7ed553">   53</a></span>    std::string <a class="code hl_function" href="classraylib_1_1_color.html#aa6792723d2a5f6dc857e8672ab7ed553">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> TextFormat(<span class="stringliteral">&quot;Color(%d, %d, %d, %d)&quot;</span>, r, g, b, a); }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a97b9eb6de0b2b95bd8e9e3fe8935c644">   55</a></span>    <span class="keyword">operator</span> std::string()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="classraylib_1_1_color.html#aa6792723d2a5f6dc857e8672ab7ed553">ToString</a>(); }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a799b151b5ce92ccf5ca46f0c18ced395">   60</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a799b151b5ce92ccf5ca46f0c18ced395">Fade</a>(<span class="keywordtype">float</span> alpha)<span class="keyword"> const </span>{ return ::Fade(*<span class="keyword">this</span>, alpha); }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a70c0b9f2b6bc92724df1c87553cbca32">   65</a></span>    <a class="code hl_class" href="classraylib_1_1_vector4.html">Vector4</a> <a class="code hl_function" href="classraylib_1_1_color.html#a70c0b9f2b6bc92724df1c87553cbca32">Normalize</a>()<span class="keyword"> const </span>{ return ::ColorNormalize(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#aa5b23dd8167f9babe41abd378339d3a4">   70</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#aa5b23dd8167f9babe41abd378339d3a4">Color</a>(::Vector4 normalized) { <a class="code hl_function" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">set</a>(::ColorFromNormalized(normalized)); }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab909853a3380e3cf4306a011caca7ec5">   75</a></span>    <a class="code hl_class" href="classraylib_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="classraylib_1_1_color.html#ab909853a3380e3cf4306a011caca7ec5">ToHSV</a>()<span class="keyword"> const </span>{ return ::ColorToHSV(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, R, r)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, G, g)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, B, b)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, A, a)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a2af61a938ad2780917be855e06621d2d">   82</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a>&amp; operator=(const ::<a class="code hl_class" href="classraylib_1_1_color.html">Color</a>&amp; color) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">set</a>(color);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ae84cc25e0c83510324e0d30104255cdf">   90</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a>&amp; <a class="code hl_function" href="classraylib_1_1_color.html#ae84cc25e0c83510324e0d30104255cdf">ClearBackground</a>() {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="classraylib_1_1_color.html#ae84cc25e0c83510324e0d30104255cdf">::ClearBackground</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a08a6f367fda88c66e33c8b6332c3a317">   95</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a08a6f367fda88c66e33c8b6332c3a317">DrawPixel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)<span class="keyword"> const </span>{ <a class="code hl_function" href="classraylib_1_1_color.html#a08a6f367fda88c66e33c8b6332c3a317">::DrawPixel</a>(x, y, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a63a177093cd11a5ab16d1d2ea9e717b1">  100</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a63a177093cd11a5ab16d1d2ea9e717b1">DrawPixel</a>(::Vector2 pos)<span class="keyword"> const </span>{ ::DrawPixelV(pos, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab3fab187c29a3705aac1a0e826e4a456">  105</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#ab3fab187c29a3705aac1a0e826e4a456">DrawLine</a>(<span class="keywordtype">int</span> startPosX, <span class="keywordtype">int</span> startPosY, <span class="keywordtype">int</span> endPosX, <span class="keywordtype">int</span> endPosY)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_function" href="classraylib_1_1_color.html#ab3fab187c29a3705aac1a0e826e4a456">::DrawLine</a>(startPosX, startPosY, endPosX, endPosY, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a6333cda3646d05c183d7d90a7ea322e5">  112</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a6333cda3646d05c183d7d90a7ea322e5">DrawLine</a>(::Vector2 startPos, ::Vector2 endPos)<span class="keyword"> const </span>{ ::DrawLineV(startPos, endPos, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#accade15fb033d45d707d81d4f114bce9">  117</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#accade15fb033d45d707d81d4f114bce9">DrawLine</a>(::Vector2 startPos, ::Vector2 endPos, <span class="keywordtype">float</span> thick)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        ::DrawLineEx(startPos, endPos, thick, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab7a62f846680452dc07481ca2d7890c8">  121</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#ab7a62f846680452dc07481ca2d7890c8">DrawLineBezier</a>(::Vector2 startPos, ::Vector2 endPos, <span class="keywordtype">float</span> thick = 1.0f)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_function" href="classraylib_1_1_color.html#ab7a62f846680452dc07481ca2d7890c8">::DrawLineBezier</a>(startPos, endPos, thick, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#afc5bf1c8104c90fbb391a5d107a37ddf">  125</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#afc5bf1c8104c90fbb391a5d107a37ddf">DrawLineStrip</a>(::Vector2* points, <span class="keywordtype">int</span> numPoints)<span class="keyword"> const </span>{ <a class="code hl_function" href="classraylib_1_1_color.html#afc5bf1c8104c90fbb391a5d107a37ddf">::DrawLineStrip</a>(points, numPoints, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a950233d00ade4916a6a61275846ed806">  127</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a950233d00ade4916a6a61275846ed806">DrawText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keywordtype">int</span> posX = 0, <span class="keywordtype">int</span> posY = 0, <span class="keywordtype">int</span> fontSize = 10.0f)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <a class="code hl_function" href="classraylib_1_1_color.html#a950233d00ade4916a6a61275846ed806">::DrawText</a>(text, posX, posY, fontSize, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ae34c4d2c9c842fa390f242eed4f9ebc3">  131</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#ae34c4d2c9c842fa390f242eed4f9ebc3">DrawText</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">int</span> posX = 0, <span class="keywordtype">int</span> posY = 0, <span class="keywordtype">int</span> fontSize = 10.0f)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_function" href="classraylib_1_1_color.html#a950233d00ade4916a6a61275846ed806">::DrawText</a>(text.c_str(), posX, posY, fontSize, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#acf56a4bac4727ea69beafa3a9439c724">  135</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#acf56a4bac4727ea69beafa3a9439c724">DrawText</a>(const ::Font&amp; font, <span class="keyword">const</span> <span class="keywordtype">char</span>* text, ::Vector2 position, <span class="keywordtype">float</span> fontSize, <span class="keywordtype">float</span> spacing)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_function" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">::DrawTextEx</a>(font, text, position, fontSize, spacing, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ac978395e6f1022d1978e417fad5c4ea1">  140</a></span>    <a class="code hl_function" href="classraylib_1_1_color.html#ac978395e6f1022d1978e417fad5c4ea1">DrawText</a>(const ::Font&amp; font, <span class="keyword">const</span> std::string&amp; text, ::Vector2 position, <span class="keywordtype">float</span> fontSize, <span class="keywordtype">float</span> spacing)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_function" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">::DrawTextEx</a>(font, text.c_str(), position, fontSize, spacing, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a2428ce783b11d1019201ec6b52632d37">  144</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a2428ce783b11d1019201ec6b52632d37">DrawText</a>(</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        const ::Font&amp; font,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* text,</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        ::Vector2 position,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        ::Vector2 origin,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordtype">float</span> rotation,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordtype">float</span> fontSize,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordtype">float</span> spacing)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_function" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">::DrawTextPro</a>(font, text, position, origin, rotation, fontSize, spacing, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a94be9787fea6a99b380ec10145c9d423">  155</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a94be9787fea6a99b380ec10145c9d423">DrawText</a>(</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        const ::Font&amp; font,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">const</span> std::string&amp; text,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        ::Vector2 position,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        ::Vector2 origin,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordtype">float</span> rotation,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordtype">float</span> fontSize,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordtype">float</span> spacing)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_function" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">::DrawTextPro</a>(font, text.c_str(), position, origin, rotation, fontSize, spacing, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="foldopen" id="foldopen00166" data-start="{" data-end="}">
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#abbeae2a7fbeb031e21a1e50736d60a10">  166</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#abbeae2a7fbeb031e21a1e50736d60a10">DrawRectangle</a>(<span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <a class="code hl_function" href="classraylib_1_1_color.html#abbeae2a7fbeb031e21a1e50736d60a10">::DrawRectangle</a>(posX, posY, width, height, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a20915a994714bea31e38a3dadcf87d94">  170</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a20915a994714bea31e38a3dadcf87d94">DrawRectangle</a>(::Vector2 position, ::Vector2 size)<span class="keyword"> const </span>{ ::DrawRectangleV(position, size, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#aef2542a6c22167173172e6dd4c38f716">  172</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#aef2542a6c22167173172e6dd4c38f716">DrawRectangle</a>(::Rectangle rec)<span class="keyword"> const </span>{ ::DrawRectangleRec(rec, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="foldopen" id="foldopen00174" data-start="{" data-end="}">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a99f9c18a0188f60d2df727ea26a8a0e9">  174</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a99f9c18a0188f60d2df727ea26a8a0e9">DrawRectangle</a>(::Rectangle rec, ::Vector2 origin, <span class="keywordtype">float</span> rotation)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        ::DrawRectanglePro(rec, origin, rotation, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a287bedfb9add34912dc4923a083d40d5">  178</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a287bedfb9add34912dc4923a083d40d5">DrawRectangleLines</a>(<span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <a class="code hl_function" href="classraylib_1_1_color.html#a287bedfb9add34912dc4923a083d40d5">::DrawRectangleLines</a>(posX, posY, width, height, *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a966e4c8851bbc286f9cc4c0693fe1bb7">  182</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#a966e4c8851bbc286f9cc4c0693fe1bb7">DrawRectangleLines</a>(::Rectangle rec, <span class="keywordtype">float</span> lineThick)<span class="keyword"> const </span>{ ::DrawRectangleLinesEx(rec, lineThick, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a2aab57ee1237167e828ab753acaaa711">  184</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_color.html#a2aab57ee1237167e828ab753acaaa711">IsEqual</a>(<a class="code hl_function" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">::Color</a> color) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        return ::ColorIsEqual(*<span class="keyword">this</span>, color);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a57364e51ff2767027d2845b3ad68c35b">  188</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_color.html#a57364e51ff2767027d2845b3ad68c35b">operator==</a>(const ::Color&amp; other)<span class="keyword"> const </span>{ return ::ColorIsEqual(*<span class="keyword">this</span>, other); }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#af54897d1d93f32d93924c9f968423434">  189</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_color.html#af54897d1d93f32d93924c9f968423434">operator!=</a>(const ::Color&amp; other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !::ColorIsEqual(*<span class="keyword">this</span>, other); }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a52ddb5dd1aa56064e3e735022d4e199b">  194</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a52ddb5dd1aa56064e3e735022d4e199b">Tint</a>(<a class="code hl_function" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">::Color</a> tint) { return ::ColorTint(*<span class="keyword">this</span>, tint); }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#af7ea6fdee4f3a992aa226dae44e7b439">  199</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#af7ea6fdee4f3a992aa226dae44e7b439">Brightness</a>(<span class="keywordtype">float</span> factor) { return ::ColorBrightness(*<span class="keyword">this</span>, factor); }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a4ec34f3d0483d0c59b1cdce2edb58a82">  204</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a4ec34f3d0483d0c59b1cdce2edb58a82">Contrast</a>(<span class="keywordtype">float</span> contrast) { return ::ColorContrast(*<span class="keyword">this</span>, contrast); }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ad00d99cc5d6212d16e4a264bb7d984d8">  209</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#ad00d99cc5d6212d16e4a264bb7d984d8">Alpha</a>(<span class="keywordtype">float</span> alpha)<span class="keyword"> const </span>{ return ::ColorAlpha(*<span class="keyword">this</span>, alpha); }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#adc19fe56095063d9dbd270228cc448ce">  211</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#adc19fe56095063d9dbd270228cc448ce">Lerp</a>(<a class="code hl_function" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">::Color</a> color2, <span class="keywordtype">float</span> factor) {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        return ::ColorLerp(*<span class="keyword">this</span>, color2, factor);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a127c0c75e8f28b01b6861897c0c89c88">  218</a></span>    <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a127c0c75e8f28b01b6861897c0c89c88">AlphaBlend</a>(<a class="code hl_function" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">::Color</a> dst, <a class="code hl_function" href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">::Color</a> tint)<span class="keyword"> const </span>{ return ::ColorAlphaBlend(dst, *<span class="keyword">this</span>, tint); }</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#adbb50ad15745dddeaa73d04f8b40ad35">  220</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#adbb50ad15745dddeaa73d04f8b40ad35">LightGray</a>() { <span class="keywordflow">return</span> LIGHTGRAY; }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#aa24ed6bbb02c861b38b6a423dbe902e1">  221</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#aa24ed6bbb02c861b38b6a423dbe902e1">Gray</a>() { <span class="keywordflow">return</span> GRAY; }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a862ca7295e95d4783d17538203f8ea3b">  222</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a862ca7295e95d4783d17538203f8ea3b">DarkGray</a>() { <span class="keywordflow">return</span> DARKGRAY; }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a3e7a0f02d796ca9b8845023c7fd0dbf5">  223</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a3e7a0f02d796ca9b8845023c7fd0dbf5">Yellow</a>() { <span class="keywordflow">return</span> YELLOW; }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ae6bbd8683085506173a48e5fdeccb57a">  224</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#ae6bbd8683085506173a48e5fdeccb57a">Gold</a>() { <span class="keywordflow">return</span> GOLD; }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#afb83cd892356b66cc0603cbe1e147285">  225</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#afb83cd892356b66cc0603cbe1e147285">Orange</a>() { <span class="keywordflow">return</span> ORANGE; }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ad93a284f0ef61bf88be66b8bebd14427">  226</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#ad93a284f0ef61bf88be66b8bebd14427">Pink</a>() { <span class="keywordflow">return</span> PINK; }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a649937964940232edccf5cb3c427378b">  227</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a649937964940232edccf5cb3c427378b">Red</a>() { <span class="keywordflow">return</span> RED; }</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a9400242f7e944453fadc1613507109ce">  228</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a9400242f7e944453fadc1613507109ce">Maroon</a>() { <span class="keywordflow">return</span> MAROON; }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a35c7c0acf332be287b697e6a6a23ccb4">  229</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a35c7c0acf332be287b697e6a6a23ccb4">Green</a>() { <span class="keywordflow">return</span> GREEN; }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#adae7384969481494b66202b43ae2d43e">  230</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#adae7384969481494b66202b43ae2d43e">Lime</a>() { <span class="keywordflow">return</span> LIME; }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a35a96f8b49a63537fc3b8ab98bb3bc53">  231</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a35a96f8b49a63537fc3b8ab98bb3bc53">DarkGreen</a>() { <span class="keywordflow">return</span> DARKGREEN; }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab630e67b888947c289a25a4a1000671f">  232</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#ab630e67b888947c289a25a4a1000671f">SkyBlue</a>() { <span class="keywordflow">return</span> SKYBLUE; }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a8bd1ba9bc65bae856d0b716aa85c407d">  233</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a8bd1ba9bc65bae856d0b716aa85c407d">Blue</a>() { <span class="keywordflow">return</span> BLUE; }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#aaa36d9ed5825ea9ae6795e18038f602c">  234</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#aaa36d9ed5825ea9ae6795e18038f602c">DarkBlue</a>() { <span class="keywordflow">return</span> DARKBLUE; }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a98e5330224e52e9599c060d82a50609d">  235</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a98e5330224e52e9599c060d82a50609d">Purple</a>() { <span class="keywordflow">return</span> PURPLE; }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a33a800381c93a8a57900fa7d092a00cf">  236</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a33a800381c93a8a57900fa7d092a00cf">Violet</a>() { <span class="keywordflow">return</span> VIOLET; }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ab8c0bf2dac476d593a1b13a22f436486">  237</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#ab8c0bf2dac476d593a1b13a22f436486">DarkPurple</a>() { <span class="keywordflow">return</span> DARKPURPLE; }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a13dc46e6133581a791e918af361fdfcc">  238</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a13dc46e6133581a791e918af361fdfcc">Beige</a>() { <span class="keywordflow">return</span> BEIGE; }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#aee8f4a4e55fe68cf5d3854208e16c5b7">  239</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#aee8f4a4e55fe68cf5d3854208e16c5b7">Brown</a>() { <span class="keywordflow">return</span> BROWN; }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a039f0f5467102ffb543109e534c032bd">  240</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a039f0f5467102ffb543109e534c032bd">DarkBrown</a>() { <span class="keywordflow">return</span> DARKBROWN; }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ac92b0a8cb0bfc268863553ff5a2af7fb">  241</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#ac92b0a8cb0bfc268863553ff5a2af7fb">White</a>() { <span class="keywordflow">return</span> WHITE; }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a6d4168bda8afca4a98d4e4a6a74c2d63">  242</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a6d4168bda8afca4a98d4e4a6a74c2d63">Black</a>() { <span class="keywordflow">return</span> BLACK; }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a7833da21008e487f44324007b9d8e6c1">  243</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a7833da21008e487f44324007b9d8e6c1">Blank</a>() { <span class="keywordflow">return</span> BLANK; }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a5dca3460a1ebad5d2db36e4f2da019bb">  244</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a5dca3460a1ebad5d2db36e4f2da019bb">Magenta</a>() { <span class="keywordflow">return</span> MAGENTA; }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#a5a43482f133efe9ed65ee6e2899c19db">  245</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classraylib_1_1_color.html">Color</a> <a class="code hl_function" href="classraylib_1_1_color.html#a5a43482f133efe9ed65ee6e2899c19db">RayWhite</a>() { <span class="keywordflow">return</span> RAYWHITE; }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">  247</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">set</a>(const ::Color&amp; color) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        r = color.r;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        g = color.g;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        b = color.b;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        a = color.a;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
+</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>};</div>
+</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="_color_8hpp.html#a51f93f5c4f3a045a70dbf2ae6751039e">  257</a></span><span class="keyword">using </span><a class="code hl_class" href="classraylib_1_1_color.html">RColor</a> = <a class="code hl_class" href="classraylib_1_1_color.html">raylib::Color</a>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_COLOR_HPP_</span></div>
+<div class="ttc" id="a_vector4_8hpp_html"><div class="ttname"><a href="_vector4_8hpp.html">Vector4.hpp</a></div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html"><div class="ttname"><a href="classraylib_1_1_color.html">raylib::Color</a></div><div class="ttdoc">Color type, RGBA (32bit)</div><div class="ttdef"><b>定义</b> Color.hpp:14</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a039f0f5467102ffb543109e534c032bd"><div class="ttname"><a href="classraylib_1_1_color.html#a039f0f5467102ffb543109e534c032bd">raylib::Color::DarkBrown</a></div><div class="ttdeci">static Color DarkBrown()</div><div class="ttdef"><b>定义</b> Color.hpp:240</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a08a6f367fda88c66e33c8b6332c3a317"><div class="ttname"><a href="classraylib_1_1_color.html#a08a6f367fda88c66e33c8b6332c3a317">raylib::Color::DrawPixel</a></div><div class="ttdeci">void DrawPixel(int x, int y) const</div><div class="ttdef"><b>定义</b> Color.hpp:95</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a127c0c75e8f28b01b6861897c0c89c88"><div class="ttname"><a href="classraylib_1_1_color.html#a127c0c75e8f28b01b6861897c0c89c88">raylib::Color::AlphaBlend</a></div><div class="ttdeci">Color AlphaBlend(::Color dst, ::Color tint) const</div><div class="ttdoc">Returns src alpha-blended into dst color with tint</div><div class="ttdef"><b>定义</b> Color.hpp:218</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a13dc46e6133581a791e918af361fdfcc"><div class="ttname"><a href="classraylib_1_1_color.html#a13dc46e6133581a791e918af361fdfcc">raylib::Color::Beige</a></div><div class="ttdeci">static Color Beige()</div><div class="ttdef"><b>定义</b> Color.hpp:238</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a20915a994714bea31e38a3dadcf87d94"><div class="ttname"><a href="classraylib_1_1_color.html#a20915a994714bea31e38a3dadcf87d94">raylib::Color::DrawRectangle</a></div><div class="ttdeci">void DrawRectangle(::Vector2 position, ::Vector2 size) const</div><div class="ttdef"><b>定义</b> Color.hpp:170</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a2428ce783b11d1019201ec6b52632d37"><div class="ttname"><a href="classraylib_1_1_color.html#a2428ce783b11d1019201ec6b52632d37">raylib::Color::DrawText</a></div><div class="ttdeci">void DrawText(const ::Font &amp;font, const char *text, ::Vector2 position, ::Vector2 origin, float rotation, float fontSize, float spacing) const</div><div class="ttdef"><b>定义</b> Color.hpp:144</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a287bedfb9add34912dc4923a083d40d5"><div class="ttname"><a href="classraylib_1_1_color.html#a287bedfb9add34912dc4923a083d40d5">raylib::Color::DrawRectangleLines</a></div><div class="ttdeci">void DrawRectangleLines(int posX, int posY, int width, int height) const</div><div class="ttdef"><b>定义</b> Color.hpp:178</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a2aab57ee1237167e828ab753acaaa711"><div class="ttname"><a href="classraylib_1_1_color.html#a2aab57ee1237167e828ab753acaaa711">raylib::Color::IsEqual</a></div><div class="ttdeci">bool IsEqual(::Color color)</div><div class="ttdef"><b>定义</b> Color.hpp:184</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a33a800381c93a8a57900fa7d092a00cf"><div class="ttname"><a href="classraylib_1_1_color.html#a33a800381c93a8a57900fa7d092a00cf">raylib::Color::Violet</a></div><div class="ttdeci">static Color Violet()</div><div class="ttdef"><b>定义</b> Color.hpp:236</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a35a96f8b49a63537fc3b8ab98bb3bc53"><div class="ttname"><a href="classraylib_1_1_color.html#a35a96f8b49a63537fc3b8ab98bb3bc53">raylib::Color::DarkGreen</a></div><div class="ttdeci">static Color DarkGreen()</div><div class="ttdef"><b>定义</b> Color.hpp:231</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a35c7c0acf332be287b697e6a6a23ccb4"><div class="ttname"><a href="classraylib_1_1_color.html#a35c7c0acf332be287b697e6a6a23ccb4">raylib::Color::Green</a></div><div class="ttdeci">static Color Green()</div><div class="ttdef"><b>定义</b> Color.hpp:229</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a3c177f10d10851fdf20d09fae83c8e19"><div class="ttname"><a href="classraylib_1_1_color.html#a3c177f10d10851fdf20d09fae83c8e19">raylib::Color::Color</a></div><div class="ttdeci">Color(::Vector3 hsv)</div><div class="ttdoc">Returns a Color from HSV values</div><div class="ttdef"><b>定义</b> Color.hpp:29</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a3e7a0f02d796ca9b8845023c7fd0dbf5"><div class="ttname"><a href="classraylib_1_1_color.html#a3e7a0f02d796ca9b8845023c7fd0dbf5">raylib::Color::Yellow</a></div><div class="ttdeci">static Color Yellow()</div><div class="ttdef"><b>定义</b> Color.hpp:223</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a4ec34f3d0483d0c59b1cdce2edb58a82"><div class="ttname"><a href="classraylib_1_1_color.html#a4ec34f3d0483d0c59b1cdce2edb58a82">raylib::Color::Contrast</a></div><div class="ttdeci">Color Contrast(float contrast)</div><div class="ttdoc">Get color with contrast correction, contrast values between -1.0f and 1.0f</div><div class="ttdef"><b>定义</b> Color.hpp:204</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a52ddb5dd1aa56064e3e735022d4e199b"><div class="ttname"><a href="classraylib_1_1_color.html#a52ddb5dd1aa56064e3e735022d4e199b">raylib::Color::Tint</a></div><div class="ttdeci">Color Tint(::Color tint)</div><div class="ttdoc">Get color multiplied with another color</div><div class="ttdef"><b>定义</b> Color.hpp:194</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a57364e51ff2767027d2845b3ad68c35b"><div class="ttname"><a href="classraylib_1_1_color.html#a57364e51ff2767027d2845b3ad68c35b">raylib::Color::operator==</a></div><div class="ttdeci">bool operator==(const ::Color &amp;other) const</div><div class="ttdef"><b>定义</b> Color.hpp:188</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a5a43482f133efe9ed65ee6e2899c19db"><div class="ttname"><a href="classraylib_1_1_color.html#a5a43482f133efe9ed65ee6e2899c19db">raylib::Color::RayWhite</a></div><div class="ttdeci">static Color RayWhite()</div><div class="ttdef"><b>定义</b> Color.hpp:245</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a5dca3460a1ebad5d2db36e4f2da019bb"><div class="ttname"><a href="classraylib_1_1_color.html#a5dca3460a1ebad5d2db36e4f2da019bb">raylib::Color::Magenta</a></div><div class="ttdeci">static Color Magenta()</div><div class="ttdef"><b>定义</b> Color.hpp:244</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a6333cda3646d05c183d7d90a7ea322e5"><div class="ttname"><a href="classraylib_1_1_color.html#a6333cda3646d05c183d7d90a7ea322e5">raylib::Color::DrawLine</a></div><div class="ttdeci">void DrawLine(::Vector2 startPos, ::Vector2 endPos) const</div><div class="ttdoc">Draw a line using Vector points</div><div class="ttdef"><b>定义</b> Color.hpp:112</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a63a177093cd11a5ab16d1d2ea9e717b1"><div class="ttname"><a href="classraylib_1_1_color.html#a63a177093cd11a5ab16d1d2ea9e717b1">raylib::Color::DrawPixel</a></div><div class="ttdeci">void DrawPixel(::Vector2 pos) const</div><div class="ttdoc">Draw a pixel</div><div class="ttdef"><b>定义</b> Color.hpp:100</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a649937964940232edccf5cb3c427378b"><div class="ttname"><a href="classraylib_1_1_color.html#a649937964940232edccf5cb3c427378b">raylib::Color::Red</a></div><div class="ttdeci">static Color Red()</div><div class="ttdef"><b>定义</b> Color.hpp:227</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a6c3fd166762f68aede6c448cb26677ef"><div class="ttname"><a href="classraylib_1_1_color.html#a6c3fd166762f68aede6c448cb26677ef">raylib::Color::FromHSV</a></div><div class="ttdeci">::Color FromHSV(float hue, float saturation, float value)</div><div class="ttdoc">Returns a Color from HSV values</div><div class="ttdef"><b>定义</b> Color.hpp:34</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a6d4168bda8afca4a98d4e4a6a74c2d63"><div class="ttname"><a href="classraylib_1_1_color.html#a6d4168bda8afca4a98d4e4a6a74c2d63">raylib::Color::Black</a></div><div class="ttdeci">static Color Black()</div><div class="ttdef"><b>定义</b> Color.hpp:242</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a70c0b9f2b6bc92724df1c87553cbca32"><div class="ttname"><a href="classraylib_1_1_color.html#a70c0b9f2b6bc92724df1c87553cbca32">raylib::Color::Normalize</a></div><div class="ttdeci">Vector4 Normalize() const</div><div class="ttdoc">Returns Color normalized as float [0..1]</div><div class="ttdef"><b>定义</b> Color.hpp:65</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a7833da21008e487f44324007b9d8e6c1"><div class="ttname"><a href="classraylib_1_1_color.html#a7833da21008e487f44324007b9d8e6c1">raylib::Color::Blank</a></div><div class="ttdeci">static Color Blank()</div><div class="ttdef"><b>定义</b> Color.hpp:243</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a799b151b5ce92ccf5ca46f0c18ced395"><div class="ttname"><a href="classraylib_1_1_color.html#a799b151b5ce92ccf5ca46f0c18ced395">raylib::Color::Fade</a></div><div class="ttdeci">Color Fade(float alpha) const</div><div class="ttdoc">Returns color with alpha applied, alpha goes from 0.0f to 1.0f</div><div class="ttdef"><b>定义</b> Color.hpp:60</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a83fda335e3dc337d92da5a6be23eff55"><div class="ttname"><a href="classraylib_1_1_color.html#a83fda335e3dc337d92da5a6be23eff55">raylib::Color::Color</a></div><div class="ttdeci">Color(void *srcPtr, int format)</div><div class="ttdef"><b>定义</b> Color.hpp:41</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a862ca7295e95d4783d17538203f8ea3b"><div class="ttname"><a href="classraylib_1_1_color.html#a862ca7295e95d4783d17538203f8ea3b">raylib::Color::DarkGray</a></div><div class="ttdeci">static Color DarkGray()</div><div class="ttdef"><b>定义</b> Color.hpp:222</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a8bd1ba9bc65bae856d0b716aa85c407d"><div class="ttname"><a href="classraylib_1_1_color.html#a8bd1ba9bc65bae856d0b716aa85c407d">raylib::Color::Blue</a></div><div class="ttdeci">static Color Blue()</div><div class="ttdef"><b>定义</b> Color.hpp:233</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a927ba04098ee1ba3a8e91374ed5d5606"><div class="ttname"><a href="classraylib_1_1_color.html#a927ba04098ee1ba3a8e91374ed5d5606">raylib::Color::ToInt</a></div><div class="ttdeci">int ToInt() const</div><div class="ttdoc">Returns hexadecimal value for a Color</div><div class="ttdef"><b>定义</b> Color.hpp:46</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a9400242f7e944453fadc1613507109ce"><div class="ttname"><a href="classraylib_1_1_color.html#a9400242f7e944453fadc1613507109ce">raylib::Color::Maroon</a></div><div class="ttdeci">static Color Maroon()</div><div class="ttdef"><b>定义</b> Color.hpp:228</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a94be9787fea6a99b380ec10145c9d423"><div class="ttname"><a href="classraylib_1_1_color.html#a94be9787fea6a99b380ec10145c9d423">raylib::Color::DrawText</a></div><div class="ttdeci">void DrawText(const ::Font &amp;font, const std::string &amp;text, ::Vector2 position, ::Vector2 origin, float rotation, float fontSize, float spacing) const</div><div class="ttdef"><b>定义</b> Color.hpp:155</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a950233d00ade4916a6a61275846ed806"><div class="ttname"><a href="classraylib_1_1_color.html#a950233d00ade4916a6a61275846ed806">raylib::Color::DrawText</a></div><div class="ttdeci">void DrawText(const char *text, int posX=0, int posY=0, int fontSize=10.0f) const</div><div class="ttdef"><b>定义</b> Color.hpp:127</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a966e4c8851bbc286f9cc4c0693fe1bb7"><div class="ttname"><a href="classraylib_1_1_color.html#a966e4c8851bbc286f9cc4c0693fe1bb7">raylib::Color::DrawRectangleLines</a></div><div class="ttdeci">void DrawRectangleLines(::Rectangle rec, float lineThick) const</div><div class="ttdef"><b>定义</b> Color.hpp:182</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a98e5330224e52e9599c060d82a50609d"><div class="ttname"><a href="classraylib_1_1_color.html#a98e5330224e52e9599c060d82a50609d">raylib::Color::Purple</a></div><div class="ttdeci">static Color Purple()</div><div class="ttdef"><b>定义</b> Color.hpp:235</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_a99f9c18a0188f60d2df727ea26a8a0e9"><div class="ttname"><a href="classraylib_1_1_color.html#a99f9c18a0188f60d2df727ea26a8a0e9">raylib::Color::DrawRectangle</a></div><div class="ttdeci">void DrawRectangle(::Rectangle rec, ::Vector2 origin, float rotation) const</div><div class="ttdef"><b>定义</b> Color.hpp:174</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_aa24ed6bbb02c861b38b6a423dbe902e1"><div class="ttname"><a href="classraylib_1_1_color.html#aa24ed6bbb02c861b38b6a423dbe902e1">raylib::Color::Gray</a></div><div class="ttdeci">static Color Gray()</div><div class="ttdef"><b>定义</b> Color.hpp:221</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_aa5b23dd8167f9babe41abd378339d3a4"><div class="ttname"><a href="classraylib_1_1_color.html#aa5b23dd8167f9babe41abd378339d3a4">raylib::Color::Color</a></div><div class="ttdeci">Color(::Vector4 normalized)</div><div class="ttdoc">Returns Color from normalized values [0..1]</div><div class="ttdef"><b>定义</b> Color.hpp:70</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_aa6792723d2a5f6dc857e8672ab7ed553"><div class="ttname"><a href="classraylib_1_1_color.html#aa6792723d2a5f6dc857e8672ab7ed553">raylib::Color::ToString</a></div><div class="ttdeci">std::string ToString() const</div><div class="ttdef"><b>定义</b> Color.hpp:53</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_aaa36d9ed5825ea9ae6795e18038f602c"><div class="ttname"><a href="classraylib_1_1_color.html#aaa36d9ed5825ea9ae6795e18038f602c">raylib::Color::DarkBlue</a></div><div class="ttdeci">static Color DarkBlue()</div><div class="ttdef"><b>定义</b> Color.hpp:234</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab0221dcd700b9a6add471cbceb718ac6"><div class="ttname"><a href="classraylib_1_1_color.html#ab0221dcd700b9a6add471cbceb718ac6">raylib::Color::Color</a></div><div class="ttdeci">Color(const ::Color &amp;color)</div><div class="ttdef"><b>定义</b> Color.hpp:16</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab3fab187c29a3705aac1a0e826e4a456"><div class="ttname"><a href="classraylib_1_1_color.html#ab3fab187c29a3705aac1a0e826e4a456">raylib::Color::DrawLine</a></div><div class="ttdeci">void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY) const</div><div class="ttdoc">Draw a line</div><div class="ttdef"><b>定义</b> Color.hpp:105</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab630e67b888947c289a25a4a1000671f"><div class="ttname"><a href="classraylib_1_1_color.html#ab630e67b888947c289a25a4a1000671f">raylib::Color::SkyBlue</a></div><div class="ttdeci">static Color SkyBlue()</div><div class="ttdef"><b>定义</b> Color.hpp:232</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab6c57e01798eb39092b260e7c6c008ac"><div class="ttname"><a href="classraylib_1_1_color.html#ab6c57e01798eb39092b260e7c6c008ac">raylib::Color::Color</a></div><div class="ttdeci">Color(unsigned char red, unsigned char green, unsigned char blue, unsigned char alpha=255)</div><div class="ttdef"><b>定义</b> Color.hpp:18</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab7a62f846680452dc07481ca2d7890c8"><div class="ttname"><a href="classraylib_1_1_color.html#ab7a62f846680452dc07481ca2d7890c8">raylib::Color::DrawLineBezier</a></div><div class="ttdeci">void DrawLineBezier(::Vector2 startPos, ::Vector2 endPos, float thick=1.0f) const</div><div class="ttdef"><b>定义</b> Color.hpp:121</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab8c0bf2dac476d593a1b13a22f436486"><div class="ttname"><a href="classraylib_1_1_color.html#ab8c0bf2dac476d593a1b13a22f436486">raylib::Color::DarkPurple</a></div><div class="ttdeci">static Color DarkPurple()</div><div class="ttdef"><b>定义</b> Color.hpp:237</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ab909853a3380e3cf4306a011caca7ec5"><div class="ttname"><a href="classraylib_1_1_color.html#ab909853a3380e3cf4306a011caca7ec5">raylib::Color::ToHSV</a></div><div class="ttdeci">Vector3 ToHSV() const</div><div class="ttdoc">Returns HSV values for a Color</div><div class="ttdef"><b>定义</b> Color.hpp:75</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_abbeae2a7fbeb031e21a1e50736d60a10"><div class="ttname"><a href="classraylib_1_1_color.html#abbeae2a7fbeb031e21a1e50736d60a10">raylib::Color::DrawRectangle</a></div><div class="ttdeci">void DrawRectangle(int posX, int posY, int width, int height) const</div><div class="ttdef"><b>定义</b> Color.hpp:166</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ac0af7e53c6e05e6ec4de88169bae3952"><div class="ttname"><a href="classraylib_1_1_color.html#ac0af7e53c6e05e6ec4de88169bae3952">raylib::Color::Color</a></div><div class="ttdeci">Color()</div><div class="ttdoc">Black.</div><div class="ttdef"><b>定义</b> Color.hpp:24</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ac1332d649df4778eecbf24d80c5e0aeb"><div class="ttname"><a href="classraylib_1_1_color.html#ac1332d649df4778eecbf24d80c5e0aeb">raylib::Color::set</a></div><div class="ttdeci">void set(const ::Color &amp;color)</div><div class="ttdef"><b>定义</b> Color.hpp:247</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ac92b0a8cb0bfc268863553ff5a2af7fb"><div class="ttname"><a href="classraylib_1_1_color.html#ac92b0a8cb0bfc268863553ff5a2af7fb">raylib::Color::White</a></div><div class="ttdeci">static Color White()</div><div class="ttdef"><b>定义</b> Color.hpp:241</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ac978395e6f1022d1978e417fad5c4ea1"><div class="ttname"><a href="classraylib_1_1_color.html#ac978395e6f1022d1978e417fad5c4ea1">raylib::Color::DrawText</a></div><div class="ttdeci">void DrawText(const ::Font &amp;font, const std::string &amp;text, ::Vector2 position, float fontSize, float spacing) const</div><div class="ttdef"><b>定义</b> Color.hpp:140</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_accade15fb033d45d707d81d4f114bce9"><div class="ttname"><a href="classraylib_1_1_color.html#accade15fb033d45d707d81d4f114bce9">raylib::Color::DrawLine</a></div><div class="ttdeci">void DrawLine(::Vector2 startPos, ::Vector2 endPos, float thick) const</div><div class="ttdoc">Draw a line using Vector points, with a given thickness</div><div class="ttdef"><b>定义</b> Color.hpp:117</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_acf56a4bac4727ea69beafa3a9439c724"><div class="ttname"><a href="classraylib_1_1_color.html#acf56a4bac4727ea69beafa3a9439c724">raylib::Color::DrawText</a></div><div class="ttdeci">void DrawText(const ::Font &amp;font, const char *text, ::Vector2 position, float fontSize, float spacing) const</div><div class="ttdef"><b>定义</b> Color.hpp:135</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ad00d99cc5d6212d16e4a264bb7d984d8"><div class="ttname"><a href="classraylib_1_1_color.html#ad00d99cc5d6212d16e4a264bb7d984d8">raylib::Color::Alpha</a></div><div class="ttdeci">Color Alpha(float alpha) const</div><div class="ttdoc">Returns color with alpha applied, alpha goes from 0.0f to 1.0f</div><div class="ttdef"><b>定义</b> Color.hpp:209</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ad93a284f0ef61bf88be66b8bebd14427"><div class="ttname"><a href="classraylib_1_1_color.html#ad93a284f0ef61bf88be66b8bebd14427">raylib::Color::Pink</a></div><div class="ttdeci">static Color Pink()</div><div class="ttdef"><b>定义</b> Color.hpp:226</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_adae7384969481494b66202b43ae2d43e"><div class="ttname"><a href="classraylib_1_1_color.html#adae7384969481494b66202b43ae2d43e">raylib::Color::Lime</a></div><div class="ttdeci">static Color Lime()</div><div class="ttdef"><b>定义</b> Color.hpp:230</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_adbb50ad15745dddeaa73d04f8b40ad35"><div class="ttname"><a href="classraylib_1_1_color.html#adbb50ad15745dddeaa73d04f8b40ad35">raylib::Color::LightGray</a></div><div class="ttdeci">static Color LightGray()</div><div class="ttdef"><b>定义</b> Color.hpp:220</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_adc19fe56095063d9dbd270228cc448ce"><div class="ttname"><a href="classraylib_1_1_color.html#adc19fe56095063d9dbd270228cc448ce">raylib::Color::Lerp</a></div><div class="ttdeci">Color Lerp(::Color color2, float factor)</div><div class="ttdef"><b>定义</b> Color.hpp:211</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ae34c4d2c9c842fa390f242eed4f9ebc3"><div class="ttname"><a href="classraylib_1_1_color.html#ae34c4d2c9c842fa390f242eed4f9ebc3">raylib::Color::DrawText</a></div><div class="ttdeci">void DrawText(const std::string &amp;text, int posX=0, int posY=0, int fontSize=10.0f) const</div><div class="ttdef"><b>定义</b> Color.hpp:131</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ae6bbd8683085506173a48e5fdeccb57a"><div class="ttname"><a href="classraylib_1_1_color.html#ae6bbd8683085506173a48e5fdeccb57a">raylib::Color::Gold</a></div><div class="ttdeci">static Color Gold()</div><div class="ttdef"><b>定义</b> Color.hpp:224</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ae84cc25e0c83510324e0d30104255cdf"><div class="ttname"><a href="classraylib_1_1_color.html#ae84cc25e0c83510324e0d30104255cdf">raylib::Color::ClearBackground</a></div><div class="ttdeci">Color &amp; ClearBackground()</div><div class="ttdoc">Set background color (framebuffer clear color)</div><div class="ttdef"><b>定义</b> Color.hpp:90</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_ae94a7282beb9cd71dd8d1b0dac24652a"><div class="ttname"><a href="classraylib_1_1_color.html#ae94a7282beb9cd71dd8d1b0dac24652a">raylib::Color::Color</a></div><div class="ttdeci">Color(unsigned int hexValue)</div><div class="ttdoc">Get Color structure from hexadecimal value</div><div class="ttdef"><b>定义</b> Color.hpp:39</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_aee8f4a4e55fe68cf5d3854208e16c5b7"><div class="ttname"><a href="classraylib_1_1_color.html#aee8f4a4e55fe68cf5d3854208e16c5b7">raylib::Color::Brown</a></div><div class="ttdeci">static Color Brown()</div><div class="ttdef"><b>定义</b> Color.hpp:239</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_aef2542a6c22167173172e6dd4c38f716"><div class="ttname"><a href="classraylib_1_1_color.html#aef2542a6c22167173172e6dd4c38f716">raylib::Color::DrawRectangle</a></div><div class="ttdeci">void DrawRectangle(::Rectangle rec) const</div><div class="ttdef"><b>定义</b> Color.hpp:172</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_af54897d1d93f32d93924c9f968423434"><div class="ttname"><a href="classraylib_1_1_color.html#af54897d1d93f32d93924c9f968423434">raylib::Color::operator!=</a></div><div class="ttdeci">bool operator!=(const ::Color &amp;other) const</div><div class="ttdef"><b>定义</b> Color.hpp:189</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_af7ea6fdee4f3a992aa226dae44e7b439"><div class="ttname"><a href="classraylib_1_1_color.html#af7ea6fdee4f3a992aa226dae44e7b439">raylib::Color::Brightness</a></div><div class="ttdeci">Color Brightness(float factor)</div><div class="ttdoc">Get color with brightness correction, brightness factor goes from -1.0f to 1.0f</div><div class="ttdef"><b>定义</b> Color.hpp:199</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_afb83cd892356b66cc0603cbe1e147285"><div class="ttname"><a href="classraylib_1_1_color.html#afb83cd892356b66cc0603cbe1e147285">raylib::Color::Orange</a></div><div class="ttdeci">static Color Orange()</div><div class="ttdef"><b>定义</b> Color.hpp:225</div></div>
+<div class="ttc" id="aclassraylib_1_1_color_html_afc5bf1c8104c90fbb391a5d107a37ddf"><div class="ttname"><a href="classraylib_1_1_color.html#afc5bf1c8104c90fbb391a5d107a37ddf">raylib::Color::DrawLineStrip</a></div><div class="ttdeci">void DrawLineStrip(::Vector2 *points, int numPoints) const</div><div class="ttdef"><b>定义</b> Color.hpp:125</div></div>
+<div class="ttc" id="aclassraylib_1_1_vector3_html"><div class="ttname"><a href="classraylib_1_1_vector3.html">raylib::Vector3</a></div><div class="ttdoc">Vector3 type</div><div class="ttdef"><b>定义</b> Vector3.hpp:18</div></div>
+<div class="ttc" id="aclassraylib_1_1_vector4_html"><div class="ttname"><a href="classraylib_1_1_vector4.html">raylib::Vector4</a></div><div class="ttdoc">Vector4 type</div><div class="ttdef"><b>定义</b> Vector4.hpp:19</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="ttc" id="anamespaceraylib_html_a48d2d0e9a551ad3ee80b46b64f81de38"><div class="ttname"><a href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">raylib::DrawTextPro</a></div><div class="ttdeci">RLCPPAPI void DrawTextPro(const Font &amp;font, const char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, ::Color tint)</div><div class="ttdoc">Draw text using Font and pro parameters (rotation)</div><div class="ttdef"><b>定义</b> Functions.hpp:272</div></div>
+<div class="ttc" id="anamespaceraylib_html_affbd414fa733c7f651b1d7aea97cfe8b"><div class="ttname"><a href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">raylib::DrawTextEx</a></div><div class="ttdeci">RLCPPAPI void DrawTextEx(const Font &amp;font, char *text, Vector2 position, float fontSize, float spacing, ::Color tint)</div><div class="ttdoc">Draw text using font and additional parameters</div><div class="ttdef"><b>定义</b> Functions.hpp:257</div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html">raylib-cpp-utils.hpp</a></div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html_a2516c5e2fd5f821bcf853ee617f5561c"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a></div><div class="ttdeci">#define GETTERSETTER(type, method, name)</div><div class="ttdoc">A utility to build get and set methods on top of a property.</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:30</div></div>
+<div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_color_8hpp.html">Color.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::AutomationEventList类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_automation_event_list.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classraylib_1_1_automation_event_list-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::AutomationEventList类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classraylib_1_1_automation_event_list.html" title="AutomationEventList management functions">AutomationEventList</a> management functions  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_automation_event_list_8hpp_source.html">AutomationEventList.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 raylib::AutomationEventList 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classraylib_1_1_automation_event_list.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acf4e0dd1dbde01045b2c6b5136595f3b" id="r_acf4e0dd1dbde01045b2c6b5136595f3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf4e0dd1dbde01045b2c6b5136595f3b">AutomationEventList</a> (const ::AutomationEventList &amp;automationEventList)</td></tr>
+<tr class="separator:acf4e0dd1dbde01045b2c6b5136595f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82ef4be3c5c739aaf712fcb575de07b2" id="r_a82ef4be3c5c739aaf712fcb575de07b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82ef4be3c5c739aaf712fcb575de07b2">AutomationEventList</a> ()</td></tr>
+<tr class="memdesc:a82ef4be3c5c739aaf712fcb575de07b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an empty automation events list.  <br /></td></tr>
+<tr class="separator:a82ef4be3c5c739aaf712fcb575de07b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af824e1444df273859987a6a9d63166" id="r_a2af824e1444df273859987a6a9d63166"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2af824e1444df273859987a6a9d63166">AutomationEventList</a> (const char *fileName)</td></tr>
+<tr class="memdesc:a2af824e1444df273859987a6a9d63166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load automation events list from file.  <br /></td></tr>
+<tr class="separator:a2af824e1444df273859987a6a9d63166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e32b1c0eb0996ffe6f8d1237a80d78" id="r_af5e32b1c0eb0996ffe6f8d1237a80d78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5e32b1c0eb0996ffe6f8d1237a80d78">AutomationEventList</a> (const <a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;)=delete</td></tr>
+<tr class="separator:af5e32b1c0eb0996ffe6f8d1237a80d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f42b7f9779d0d300ed6afdcc9206e4a" id="r_a7f42b7f9779d0d300ed6afdcc9206e4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f42b7f9779d0d300ed6afdcc9206e4a">AutomationEventList</a> (<a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&amp;other)</td></tr>
+<tr class="separator:a7f42b7f9779d0d300ed6afdcc9206e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92d6ac31d730917cfd63a92cf45d41c" id="r_ac92d6ac31d730917cfd63a92cf45d41c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92d6ac31d730917cfd63a92cf45d41c">~AutomationEventList</a> ()</td></tr>
+<tr class="separator:ac92d6ac31d730917cfd63a92cf45d41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593140b0a047e15edd0bf04c2538a06f" id="r_a593140b0a047e15edd0bf04c2538a06f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a593140b0a047e15edd0bf04c2538a06f">operator=</a> (const <a class="el" href="#acf4e0dd1dbde01045b2c6b5136595f3b">::AutomationEventList</a> &amp;other)</td></tr>
+<tr class="separator:a593140b0a047e15edd0bf04c2538a06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5d47fdcd534d7fb0a880dca8c43b49" id="r_a2c5d47fdcd534d7fb0a880dca8c43b49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c5d47fdcd534d7fb0a880dca8c43b49">operator=</a> (const <a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;)=delete</td></tr>
+<tr class="separator:a2c5d47fdcd534d7fb0a880dca8c43b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b6368f018d888b94c5177d09f2fb70" id="r_a29b6368f018d888b94c5177d09f2fb70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29b6368f018d888b94c5177d09f2fb70">operator=</a> (<a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a29b6368f018d888b94c5177d09f2fb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e4c33e440c08f6caeb26c78f9fe0f6" id="r_a03e4c33e440c08f6caeb26c78f9fe0f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e4c33e440c08f6caeb26c78f9fe0f6">Load</a> (const char *fileName)</td></tr>
+<tr class="memdesc:a03e4c33e440c08f6caeb26c78f9fe0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load audio stream (to stream raw audio pcm data)  <br /></td></tr>
+<tr class="separator:a03e4c33e440c08f6caeb26c78f9fe0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61b42cc97f1b648ba45b8531b6b6c7b" id="r_ab61b42cc97f1b648ba45b8531b6b6c7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab61b42cc97f1b648ba45b8531b6b6c7b">Unload</a> ()</td></tr>
+<tr class="memdesc:ab61b42cc97f1b648ba45b8531b6b6c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update audio stream buffers with data  <br /></td></tr>
+<tr class="separator:ab61b42cc97f1b648ba45b8531b6b6c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe59da03f50e9266c31536872244fc59" id="r_abe59da03f50e9266c31536872244fc59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe59da03f50e9266c31536872244fc59">IsValid</a> ()</td></tr>
+<tr class="separator:abe59da03f50e9266c31536872244fc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524f5e22ad00d5f3d01e0ef5d5725cf0" id="r_a524f5e22ad00d5f3d01e0ef5d5725cf0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a524f5e22ad00d5f3d01e0ef5d5725cf0">Export</a> (const char *fileName)</td></tr>
+<tr class="separator:a524f5e22ad00d5f3d01e0ef5d5725cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab822a05ba699c9876958559ac3cfd322" id="r_ab822a05ba699c9876958559ac3cfd322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab822a05ba699c9876958559ac3cfd322">Set</a> ()</td></tr>
+<tr class="separator:ab822a05ba699c9876958559ac3cfd322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af490804ebb290aee7779a79ff9b00341" id="r_af490804ebb290aee7779a79ff9b00341"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af490804ebb290aee7779a79ff9b00341">SetBaseFrame</a> (int frame)</td></tr>
+<tr class="separator:af490804ebb290aee7779a79ff9b00341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341a2689acf152d265ba23eef6dafe1c" id="r_a341a2689acf152d265ba23eef6dafe1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a341a2689acf152d265ba23eef6dafe1c">StartRecording</a> ()</td></tr>
+<tr class="separator:a341a2689acf152d265ba23eef6dafe1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a451ecb97a8dd7443cb7849c26d2ef582" id="r_a451ecb97a8dd7443cb7849c26d2ef582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a451ecb97a8dd7443cb7849c26d2ef582">StopRecording</a> ()</td></tr>
+<tr class="separator:a451ecb97a8dd7443cb7849c26d2ef582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79fac14d08f4b07aec53dd3ab3087559" id="r_a79fac14d08f4b07aec53dd3ab3087559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79fac14d08f4b07aec53dd3ab3087559">Play</a> (int index)</td></tr>
+<tr class="separator:a79fac14d08f4b07aec53dd3ab3087559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ad88b01addfa643aa8d36cb0dfd5efcb9" id="r_ad88b01addfa643aa8d36cb0dfd5efcb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad88b01addfa643aa8d36cb0dfd5efcb9">set</a> (const <a class="el" href="#acf4e0dd1dbde01045b2c6b5136595f3b">::AutomationEventList</a> &amp;other)</td></tr>
+<tr class="separator:ad88b01addfa643aa8d36cb0dfd5efcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classraylib_1_1_automation_event_list.html" title="AutomationEventList management functions">AutomationEventList</a> management functions </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="acf4e0dd1dbde01045b2c6b5136595f3b" name="acf4e0dd1dbde01045b2c6b5136595f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4e0dd1dbde01045b2c6b5136595f3b">&#9670;&#160;</a></span>AutomationEventList() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AutomationEventList::AutomationEventList </td>
+          <td>(</td>
+          <td class="paramtype">const ::AutomationEventList &amp;</td>          <td class="paramname"><span class="paramname"><em>automationEventList</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82ef4be3c5c739aaf712fcb575de07b2" name="a82ef4be3c5c739aaf712fcb575de07b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82ef4be3c5c739aaf712fcb575de07b2">&#9670;&#160;</a></span>AutomationEventList() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AutomationEventList::AutomationEventList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load an empty automation events list. </p>
+
+</div>
+</div>
+<a id="a2af824e1444df273859987a6a9d63166" name="a2af824e1444df273859987a6a9d63166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2af824e1444df273859987a6a9d63166">&#9670;&#160;</a></span>AutomationEventList() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AutomationEventList::AutomationEventList </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load automation events list from file. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>The file path to load the automation events list from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5e32b1c0eb0996ffe6f8d1237a80d78" name="af5e32b1c0eb0996ffe6f8d1237a80d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e32b1c0eb0996ffe6f8d1237a80d78">&#9670;&#160;</a></span>AutomationEventList() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AutomationEventList::AutomationEventList </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f42b7f9779d0d300ed6afdcc9206e4a" name="a7f42b7f9779d0d300ed6afdcc9206e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f42b7f9779d0d300ed6afdcc9206e4a">&#9670;&#160;</a></span>AutomationEventList() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AutomationEventList::AutomationEventList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac92d6ac31d730917cfd63a92cf45d41c" name="ac92d6ac31d730917cfd63a92cf45d41c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92d6ac31d730917cfd63a92cf45d41c">&#9670;&#160;</a></span>~AutomationEventList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::AutomationEventList::~AutomationEventList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a524f5e22ad00d5f3d01e0ef5d5725cf0" name="a524f5e22ad00d5f3d01e0ef5d5725cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524f5e22ad00d5f3d01e0ef5d5725cf0">&#9670;&#160;</a></span>Export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::AutomationEventList::Export </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe59da03f50e9266c31536872244fc59" name="abe59da03f50e9266c31536872244fc59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe59da03f50e9266c31536872244fc59">&#9670;&#160;</a></span>IsValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::AutomationEventList::IsValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03e4c33e440c08f6caeb26c78f9fe0f6" name="a03e4c33e440c08f6caeb26c78f9fe0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e4c33e440c08f6caeb26c78f9fe0f6">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::Load </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load audio stream (to stream raw audio pcm data) </p>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_automation_event_list.html" title="AutomationEventList management functions">AutomationEventList</a> failed to load. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a29b6368f018d888b94c5177d09f2fb70" name="a29b6368f018d888b94c5177d09f2fb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b6368f018d888b94c5177d09f2fb70">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp; raylib::AutomationEventList::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a593140b0a047e15edd0bf04c2538a06f" name="a593140b0a047e15edd0bf04c2538a06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593140b0a047e15edd0bf04c2538a06f">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp; raylib::AutomationEventList::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#acf4e0dd1dbde01045b2c6b5136595f3b">::AutomationEventList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c5d47fdcd534d7fb0a880dca8c43b49" name="a2c5d47fdcd534d7fb0a880dca8c43b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c5d47fdcd534d7fb0a880dca8c43b49">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp; raylib::AutomationEventList::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79fac14d08f4b07aec53dd3ab3087559" name="a79fac14d08f4b07aec53dd3ab3087559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79fac14d08f4b07aec53dd3ab3087559">&#9670;&#160;</a></span>Play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::Play </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab822a05ba699c9876958559ac3cfd322" name="ab822a05ba699c9876958559ac3cfd322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab822a05ba699c9876958559ac3cfd322">&#9670;&#160;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::Set </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad88b01addfa643aa8d36cb0dfd5efcb9" name="ad88b01addfa643aa8d36cb0dfd5efcb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88b01addfa643aa8d36cb0dfd5efcb9">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#acf4e0dd1dbde01045b2c6b5136595f3b">::AutomationEventList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af490804ebb290aee7779a79ff9b00341" name="af490804ebb290aee7779a79ff9b00341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af490804ebb290aee7779a79ff9b00341">&#9670;&#160;</a></span>SetBaseFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::SetBaseFrame </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>frame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a341a2689acf152d265ba23eef6dafe1c" name="a341a2689acf152d265ba23eef6dafe1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341a2689acf152d265ba23eef6dafe1c">&#9670;&#160;</a></span>StartRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::StartRecording </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a451ecb97a8dd7443cb7849c26d2ef582" name="a451ecb97a8dd7443cb7849c26d2ef582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a451ecb97a8dd7443cb7849c26d2ef582">&#9670;&#160;</a></span>StopRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::StopRecording </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab61b42cc97f1b648ba45b8531b6b6c7b" name="ab61b42cc97f1b648ba45b8531b6b6c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61b42cc97f1b648ba45b8531b6b6c7b">&#9670;&#160;</a></span>Unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::AutomationEventList::Unload </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update audio stream buffers with data </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_automation_event_list_8hpp_source.html">AutomationEventList.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_automation_event_list.html">AutomationEventList</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

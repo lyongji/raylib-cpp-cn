@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: include/Functions.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_functions_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Functions.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_functions_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef RLCPPAPI</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">   16</a></span><span class="preprocessor">#define RLCPPAPI static</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a2566e995220052936edc573116a1677a">   24</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#a2566e995220052936edc573116a1677a">InitWindow</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keyword">const</span> std::string&amp; title = <span class="stringliteral">&quot;raylib&quot;</span>) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="namespaceraylib.html#a2566e995220052936edc573116a1677a">::InitWindow</a>(width, height, title.c_str());</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a6c0acda0ee4c211d2bd871b6bf6543c6">   31</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#a6c0acda0ee4c211d2bd871b6bf6543c6">SetWindowTitle</a>(<span class="keyword">const</span> std::string&amp; title) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="namespaceraylib.html#a6c0acda0ee4c211d2bd871b6bf6543c6">::SetWindowTitle</a>(title.c_str());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a40210f2205585e062141a740b5ba2ced">   38</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a40210f2205585e062141a740b5ba2ced">GetMonitorName</a>(<span class="keywordtype">int</span> monitor = 0) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    return ::GetMonitorName(monitor);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespaceraylib.html#ac33ca7b9fdf31bd8d6fb2330ae05042b">   45</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#ac33ca7b9fdf31bd8d6fb2330ae05042b">SetClipboardText</a>(<span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="namespaceraylib.html#ac33ca7b9fdf31bd8d6fb2330ae05042b">::SetClipboardText</a>(text.c_str());</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a06e8d542b8189289476522b24da1dc0f">   52</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a06e8d542b8189289476522b24da1dc0f">GetClipboardText</a>() {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    return ::GetClipboardText();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a46020e49de4b05fdba53680c18e69cfe">   59</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#a46020e49de4b05fdba53680c18e69cfe">TakeScreenshot</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_function" href="namespaceraylib.html#a46020e49de4b05fdba53680c18e69cfe">::TakeScreenshot</a>(fileName.c_str());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="namespaceraylib.html#abe0f1abc8d26e2c04c6a2fb7bd00ea45">   66</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#abe0f1abc8d26e2c04c6a2fb7bd00ea45">GetGamepadName</a>(<span class="keywordtype">int</span> gamepad) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    return ::GetGamepadName(gamepad);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a1350224ceb7d7ce37288c39263d3a8d4">   73</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string <a class="code hl_function" href="namespaceraylib.html#a1350224ceb7d7ce37288c39263d3a8d4">LoadFileText</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">char</span>* text = <a class="code hl_function" href="namespaceraylib.html#a1350224ceb7d7ce37288c39263d3a8d4">::LoadFileText</a>(fileName.c_str());</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    std::string output(text);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    ::UnloadFileText(text);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> output;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a7521315c3dab6264ab310c72256b7e86">   83</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a7521315c3dab6264ab310c72256b7e86">SaveFileText</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    return ::SaveFileText(fileName.c_str(), <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(text.c_str()));</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="namespaceraylib.html#ac0e37c1f53ae2c4b17c128bc186346c0">   90</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#ac0e37c1f53ae2c4b17c128bc186346c0">FileExists</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    return ::FileExists(fileName.c_str());</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a454868acb7eaae84673c68017d2a71e8">   97</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a454868acb7eaae84673c68017d2a71e8">DirectoryExists</a>(<span class="keyword">const</span> std::string&amp; dirPath) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    return ::DirectoryExists(dirPath.c_str());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a0fa2618ebd0e3495b500c0d0a3a81d34">  104</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a0fa2618ebd0e3495b500c0d0a3a81d34">IsFileExtension</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keyword">const</span> std::string&amp; ext) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    return ::IsFileExtension(fileName.c_str(), ext.c_str());</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="namespaceraylib.html#aa4b32999ca0480afc1994a591f5a347a">  111</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#aa4b32999ca0480afc1994a591f5a347a">GetFileExtension</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    return ::GetFileExtension(fileName.c_str());</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="namespaceraylib.html#aa415096c22927864b6f3608010531323">  118</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#aa415096c22927864b6f3608010531323">GetFileName</a>(<span class="keyword">const</span> std::string&amp; filePath) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    return ::GetFileName(filePath.c_str());</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a12d329d3c194899aca1f57a096512ee3">  125</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a12d329d3c194899aca1f57a096512ee3">GetFileNameWithoutExt</a>(<span class="keyword">const</span> std::string&amp; filePath) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    return ::GetFileNameWithoutExt(filePath.c_str());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a3f48f2a25b3b4e8663062e94c70e6e33">  132</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a3f48f2a25b3b4e8663062e94c70e6e33">GetDirectoryPath</a>(<span class="keyword">const</span> std::string&amp; filePath) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    return ::GetDirectoryPath(filePath.c_str());</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a9148dce51098585aa1b8e92611191a41">  139</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a9148dce51098585aa1b8e92611191a41">GetPrevDirectoryPath</a>(<span class="keyword">const</span> std::string&amp; dirPath) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    return ::GetPrevDirectoryPath(dirPath.c_str());</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a1a355762d23fa27e9c95e8014662e5e1">  146</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a1a355762d23fa27e9c95e8014662e5e1">GetWorkingDirectory</a>() {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    return ::GetWorkingDirectory();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a45de5ee54e09ba4f9aad7c95062d30c1">  153</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::vector&lt;std::string&gt; <a class="code hl_function" href="namespaceraylib.html#a45de5ee54e09ba4f9aad7c95062d30c1">LoadDirectoryFiles</a>(<span class="keyword">const</span> std::string&amp; dirPath) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    FilePathList files = <a class="code hl_function" href="namespaceraylib.html#a45de5ee54e09ba4f9aad7c95062d30c1">::LoadDirectoryFiles</a>(dirPath.c_str());</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    std::vector&lt;std::string&gt; output(files.paths, files.paths + files.count);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    ::UnloadDirectoryFiles(files);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">return</span> output;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a">  163</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a">ChangeDirectory</a>(<span class="keyword">const</span> std::string&amp; dir) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    return ::ChangeDirectory(dir.c_str());</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>}</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="namespaceraylib.html#acab00cd17e198ca8445c07005a07dc1c">  170</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::vector&lt;std::string&gt; <a class="code hl_function" href="namespaceraylib.html#acab00cd17e198ca8445c07005a07dc1c">LoadDroppedFiles</a>() {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">if</span> (!::IsFileDropped()) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">return</span> std::vector&lt;std::string&gt;();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    FilePathList files = <a class="code hl_function" href="namespaceraylib.html#acab00cd17e198ca8445c07005a07dc1c">::LoadDroppedFiles</a>();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    std::vector&lt;std::string&gt; output(files.paths, files.paths + files.count);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    ::UnloadDroppedFiles(files);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">return</span> output;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="}">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a3e612cc4bf7b03c7f4136a254c19fad3">  183</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">long</span> <a class="code hl_function" href="namespaceraylib.html#a3e612cc4bf7b03c7f4136a254c19fad3">GetFileModTime</a>(<span class="keyword">const</span> std::string&amp; fileName) { <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    return ::GetFileModTime(fileName.c_str());</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
+</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a1ea78692e868b5cb0ca49dff4d39e842">  190</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#a1ea78692e868b5cb0ca49dff4d39e842">OpenURL</a>(<span class="keyword">const</span> std::string&amp; url) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    return ::OpenURL(url.c_str());</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="namespaceraylib.html#aa8bc5f431c674d33729ee0b51db9a1a7">  197</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> inline ::Image <a class="code hl_function" href="namespaceraylib.html#aa8bc5f431c674d33729ee0b51db9a1a7">LoadImage</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    return ::LoadImage(fileName.c_str());</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
+</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> inline ::Image</div>
+<div class="foldopen" id="foldopen00205" data-start="{" data-end="}">
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a94c1c2c80dff1b55a3bab1efac7894f4">  205</a></span><a class="code hl_function" href="namespaceraylib.html#a94c1c2c80dff1b55a3bab1efac7894f4">LoadImageRaw</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> format, <span class="keywordtype">int</span> headerSize) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    return ::LoadImageRaw(fileName.c_str(), width, height, format, headerSize);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
+</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="foldopen" id="foldopen00212" data-start="{" data-end="}">
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a56d9c156406023894366995ab514bdfc">  212</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> inline ::Image <a class="code hl_function" href="namespaceraylib.html#a56d9c156406023894366995ab514bdfc">LoadImageAnim</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keywordtype">int</span>* frames) {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    return ::LoadImageAnim(fileName.c_str(), frames);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
+</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> inline ::Image</div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a8b2a8e558a54567cea718ce9ce2075ee">  220</a></span><a class="code hl_function" href="namespaceraylib.html#a8b2a8e558a54567cea718ce9ce2075ee">LoadImageFromMemory</a>(<span class="keyword">const</span> std::string&amp; fileType, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* fileData, <span class="keywordtype">int</span> dataSize) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    return ::LoadImageFromMemory(fileType.c_str(), fileData, dataSize);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
+</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a0f988f293153566d6ff4c4b549b8fb7c">  227</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a0f988f293153566d6ff4c4b549b8fb7c">ExportImage</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_image.html">Image</a>&amp; image, <span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    return ::ExportImage(image, fileName.c_str());</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>}</div>
+</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a535543fa3c2748d8de6fee36715242c5">  234</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a535543fa3c2748d8de6fee36715242c5">ExportImageAsCode</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_image.html">Image</a>&amp; image, <span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    return ::ExportImageAsCode(image, fileName.c_str());</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
+</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="foldopen" id="foldopen00241" data-start="{" data-end="}">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">  241</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">DrawText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY, <span class="keywordtype">int</span> fontSize, ::Color color) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <a class="code hl_function" href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">::DrawText</a>(text, posX, posY, fontSize, color);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
+</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00249" data-start="{" data-end="}">
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a5ff964c67b77167509a22f0a75b37aba">  249</a></span><a class="code hl_function" href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">DrawText</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">int</span> posX, <span class="keywordtype">int</span> posY, <span class="keywordtype">int</span> fontSize, ::Color color) {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <a class="code hl_function" href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">::DrawText</a>(text.c_str(), posX, posY, fontSize, color);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00257" data-start="{" data-end="}">
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">  257</a></span><a class="code hl_function" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">DrawTextEx</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_font.html">Font</a>&amp; font, <span class="keywordtype">char</span>* text, <a class="code hl_class" href="classraylib_1_1_vector2.html">Vector2</a> position, <span class="keywordtype">float</span> fontSize, <span class="keywordtype">float</span> spacing, ::Color tint) {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <a class="code hl_function" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">::DrawTextEx</a>(font, text, position, fontSize, spacing, tint);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
+</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a4c3a2fbe965d1a39c3aa12402e7edc6c">  265</a></span><a class="code hl_function" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">DrawTextEx</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_font.html">Font</a>&amp; font, <span class="keyword">const</span> std::string&amp; text, <a class="code hl_class" href="classraylib_1_1_vector2.html">Vector2</a> position, <span class="keywordtype">float</span> fontSize, <span class="keywordtype">float</span> spacing, ::Color tint) {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <a class="code hl_function" href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">::DrawTextEx</a>(font, text.c_str(), position, fontSize, spacing, tint);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
+</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="foldopen" id="foldopen00272" data-start="{" data-end="}">
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">  272</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">DrawTextPro</a>(</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_font.html">Font</a>&amp; font,</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* text,</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <a class="code hl_class" href="classraylib_1_1_vector2.html">Vector2</a> position,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <a class="code hl_class" href="classraylib_1_1_vector2.html">Vector2</a> origin,</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordtype">float</span> rotation,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordtype">float</span> fontSize,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordtype">float</span> spacing,</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    ::Color tint) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <a class="code hl_function" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">::DrawTextPro</a>(font, text, position, origin, rotation, fontSize, spacing, tint);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>}</div>
+</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="foldopen" id="foldopen00287" data-start="{" data-end="}">
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a3f2f2db11e5d701c21eacaa9b71e9295">  287</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">DrawTextPro</a>(</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_font.html">Font</a>&amp; font,</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keyword">const</span> std::string&amp; text,</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <a class="code hl_class" href="classraylib_1_1_vector2.html">Vector2</a> position,</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <a class="code hl_class" href="classraylib_1_1_vector2.html">Vector2</a> origin,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordtype">float</span> rotation,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordtype">float</span> fontSize,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordtype">float</span> spacing,</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    ::Color tint) {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_function" href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">::DrawTextPro</a>(font, text.c_str(), position, origin, rotation, fontSize, spacing, tint);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>}</div>
+</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="foldopen" id="foldopen00302" data-start="{" data-end="}">
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="namespaceraylib.html#aa49b02b645ed0e608b5b0e14994beab1">  302</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> inline ::Font <a class="code hl_function" href="namespaceraylib.html#aa49b02b645ed0e608b5b0e14994beab1">LoadFont</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    return ::LoadFont(fileName.c_str());</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>}</div>
+</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> inline ::Font</div>
+<div class="foldopen" id="foldopen00310" data-start="{" data-end="}">
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="namespaceraylib.html#aac3b541d227b04d8d6846b84bd9b049a">  310</a></span><a class="code hl_function" href="namespaceraylib.html#aac3b541d227b04d8d6846b84bd9b049a">LoadFontEx</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keywordtype">int</span> fontSize, <span class="keywordtype">int</span>* fontChars, <span class="keywordtype">int</span> charsCount) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    return ::LoadFontEx(fileName.c_str(), fontSize, fontChars, charsCount);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>}</div>
+</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="foldopen" id="foldopen00317" data-start="{" data-end="}">
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a3117ec1abc28744bc2e939cc3d556cbb">  317</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib.html#a3117ec1abc28744bc2e939cc3d556cbb">MeasureText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keywordtype">int</span> fontSize) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    return ::MeasureText(text, fontSize);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>}</div>
+</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="foldopen" id="foldopen00324" data-start="{" data-end="}">
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="namespaceraylib.html#ad721c2fd6529b64c71b668c634b7586d">  324</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib.html#a3117ec1abc28744bc2e939cc3d556cbb">MeasureText</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">int</span> fontSize) {</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    return ::MeasureText(text.c_str(), fontSize);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
+</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="foldopen" id="foldopen00331" data-start="{" data-end="}">
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a7b42f7b8892ca6a8f186704cdb31cead">  331</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a7b42f7b8892ca6a8f186704cdb31cead">TextIsEqual</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text1, <span class="keyword">const</span> <span class="keywordtype">char</span>* text2) {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    return ::TextIsEqual(text1, text2);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>}</div>
+</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="foldopen" id="foldopen00338" data-start="{" data-end="}">
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a9c29feb4e90b3e7e35f816bdb6b59c7f">  338</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib.html#a7b42f7b8892ca6a8f186704cdb31cead">TextIsEqual</a>(<span class="keyword">const</span> std::string&amp; text1, <span class="keyword">const</span> std::string&amp; text2) {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    return ::TextIsEqual(text1.c_str(), text2.c_str());</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>}</div>
+</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="foldopen" id="foldopen00345" data-start="{" data-end="}">
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a51f2da505b34180c6dc8ad7a305e44b5">  345</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib.html#a51f2da505b34180c6dc8ad7a305e44b5">TextLength</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* text) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    return ::TextLength(text);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>}</div>
+</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="foldopen" id="foldopen00352" data-start="{" data-end="}">
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a7335ef4170b469194a91c5de99d3a0d0">  352</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib.html#a51f2da505b34180c6dc8ad7a305e44b5">TextLength</a>(<span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    return ::TextLength(text.c_str());</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>}</div>
+</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="foldopen" id="foldopen00359" data-start="{" data-end="}">
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a9363c925d53ab82334164f184fe2a94f">  359</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a9363c925d53ab82334164f184fe2a94f">TextSubtext</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">int</span> position, <span class="keywordtype">int</span> length) {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    return ::TextSubtext(text.c_str(), position, length);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
+</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string</div>
+<div class="foldopen" id="foldopen00367" data-start="{" data-end="}">
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="namespaceraylib.html#adaf1172921b6b203cb57e2a4608d19d6">  367</a></span><a class="code hl_function" href="namespaceraylib.html#adaf1172921b6b203cb57e2a4608d19d6">TextReplace</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keyword">const</span> std::string&amp; replace, <span class="keyword">const</span> std::string&amp; by) {</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* input = text.c_str();</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordtype">char</span>* output = <a class="code hl_function" href="namespaceraylib.html#adaf1172921b6b203cb57e2a4608d19d6">::TextReplace</a>(<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(input), replace.c_str(), by.c_str());</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordflow">if</span> (output != NULL) {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        std::string stringOutput(output);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        free(output);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">return</span> stringOutput;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    }</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>}</div>
+</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="foldopen" id="foldopen00381" data-start="{" data-end="}">
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a167a4275d7d8ef27b6ce48eb3dfc2f76">  381</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::string <a class="code hl_function" href="namespaceraylib.html#a167a4275d7d8ef27b6ce48eb3dfc2f76">TextInsert</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keyword">const</span> std::string&amp; insert, <span class="keywordtype">int</span> position) {</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <span class="keywordtype">char</span>* output = <a class="code hl_function" href="namespaceraylib.html#a167a4275d7d8ef27b6ce48eb3dfc2f76">::TextInsert</a>(text.c_str(), insert.c_str(), position);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keywordflow">if</span> (output != NULL) {</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        std::string stringOutput(output);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        free(output);</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keywordflow">return</span> stringOutput;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    }</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>}</div>
+</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
+<div class="foldopen" id="foldopen00394" data-start="{" data-end="}">
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a95c8e7b489e3311b9e8b66bee87289b4">  394</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> std::vector&lt;std::string&gt; <a class="code hl_function" href="namespaceraylib.html#a95c8e7b489e3311b9e8b66bee87289b4">TextSplit</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keywordtype">char</span> delimiter) {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="keywordtype">int</span> count;</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>** split = <a class="code hl_function" href="namespaceraylib.html#a95c8e7b489e3311b9e8b66bee87289b4">::TextSplit</a>(text.c_str(), delimiter, &amp;count);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="keywordflow">return</span> std::vector&lt;std::string&gt;(split, split + count);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>}</div>
+</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="foldopen" id="foldopen00403" data-start="{" data-end="}">
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="namespaceraylib.html#aed19d4647a227767394051149cb6dd35">  403</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib.html#aed19d4647a227767394051149cb6dd35">TextFindIndex</a>(<span class="keyword">const</span> std::string&amp; text, <span class="keyword">const</span> std::string&amp; find) {</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    return ::TextFindIndex(text.c_str(), find.c_str());</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>}</div>
+</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="foldopen" id="foldopen00410" data-start="{" data-end="}">
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a800f9a412413e1757674d5ac46de17f7">  410</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a800f9a412413e1757674d5ac46de17f7">TextToUpper</a>(<span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    return ::TextToUpper(text.c_str());</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>}</div>
+</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="foldopen" id="foldopen00417" data-start="{" data-end="}">
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a0ca154b702fe8cc3c459d688665f0a13">  417</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a0ca154b702fe8cc3c459d688665f0a13">TextToLower</a>(<span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    return ::TextToLower(text.c_str());</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>}</div>
+</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span> </div>
+<div class="foldopen" id="foldopen00424" data-start="{" data-end="}">
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a8e19027c516acaf90317e053584c30f4">  424</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> std::string <a class="code hl_function" href="namespaceraylib.html#a8e19027c516acaf90317e053584c30f4">TextToPascal</a>(<span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    return ::TextToPascal(text.c_str());</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>}</div>
+</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
+<div class="foldopen" id="foldopen00431" data-start="{" data-end="}">
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno"><a class="line" href="namespaceraylib.html#a48031a2467ea4b249c8b1006f856f6d2">  431</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib.html#a48031a2467ea4b249c8b1006f856f6d2">TextToInteger</a>(<span class="keyword">const</span> std::string&amp; text) {</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    return ::TextToInteger(text.c_str());</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>}</div>
+</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_</span></div>
+<div class="ttc" id="a_functions_8hpp_html_a905c250671e2d934cf2ac43e0ca915ad"><div class="ttname"><a href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a></div><div class="ttdeci">#define RLCPPAPI</div><div class="ttdoc">C++ wrapper functions for raylib.</div><div class="ttdef"><b>定义</b> Functions.hpp:16</div></div>
+<div class="ttc" id="aclassraylib_1_1_font_html"><div class="ttname"><a href="classraylib_1_1_font.html">raylib::Font</a></div><div class="ttdoc">Font type, includes texture and charSet array data</div><div class="ttdef"><b>定义</b> Font.hpp:15</div></div>
+<div class="ttc" id="aclassraylib_1_1_image_html"><div class="ttname"><a href="classraylib_1_1_image.html">raylib::Image</a></div><div class="ttdoc">Image type, bpp always RGBA (32bit)</div><div class="ttdef"><b>定义</b> Image.hpp:17</div></div>
+<div class="ttc" id="aclassraylib_1_1_vector2_html"><div class="ttname"><a href="classraylib_1_1_vector2.html">raylib::Vector2</a></div><div class="ttdoc">Vector2 type</div><div class="ttdef"><b>定义</b> Vector2.hpp:18</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="ttc" id="anamespaceraylib_html_a06e8d542b8189289476522b24da1dc0f"><div class="ttname"><a href="namespaceraylib.html#a06e8d542b8189289476522b24da1dc0f">raylib::GetClipboardText</a></div><div class="ttdeci">RLCPPAPI std::string GetClipboardText()</div><div class="ttdoc">Get clipboard text content</div><div class="ttdef"><b>定义</b> Functions.hpp:52</div></div>
+<div class="ttc" id="anamespaceraylib_html_a0ca154b702fe8cc3c459d688665f0a13"><div class="ttname"><a href="namespaceraylib.html#a0ca154b702fe8cc3c459d688665f0a13">raylib::TextToLower</a></div><div class="ttdeci">RLCPPAPI std::string TextToLower(const std::string &amp;text)</div><div class="ttdoc">Get lower case version of provided string</div><div class="ttdef"><b>定义</b> Functions.hpp:417</div></div>
+<div class="ttc" id="anamespaceraylib_html_a0f988f293153566d6ff4c4b549b8fb7c"><div class="ttname"><a href="namespaceraylib.html#a0f988f293153566d6ff4c4b549b8fb7c">raylib::ExportImage</a></div><div class="ttdeci">RLCPPAPI bool ExportImage(const Image &amp;image, const std::string &amp;fileName)</div><div class="ttdoc">Export image data to file</div><div class="ttdef"><b>定义</b> Functions.hpp:227</div></div>
+<div class="ttc" id="anamespaceraylib_html_a0fa2618ebd0e3495b500c0d0a3a81d34"><div class="ttname"><a href="namespaceraylib.html#a0fa2618ebd0e3495b500c0d0a3a81d34">raylib::IsFileExtension</a></div><div class="ttdeci">RLCPPAPI bool IsFileExtension(const std::string &amp;fileName, const std::string &amp;ext)</div><div class="ttdoc">Check file extension (including point: .png, .wav)</div><div class="ttdef"><b>定义</b> Functions.hpp:104</div></div>
+<div class="ttc" id="anamespaceraylib_html_a12d329d3c194899aca1f57a096512ee3"><div class="ttname"><a href="namespaceraylib.html#a12d329d3c194899aca1f57a096512ee3">raylib::GetFileNameWithoutExt</a></div><div class="ttdeci">RLCPPAPI std::string GetFileNameWithoutExt(const std::string &amp;filePath)</div><div class="ttdoc">Get filename string without extension</div><div class="ttdef"><b>定义</b> Functions.hpp:125</div></div>
+<div class="ttc" id="anamespaceraylib_html_a1350224ceb7d7ce37288c39263d3a8d4"><div class="ttname"><a href="namespaceraylib.html#a1350224ceb7d7ce37288c39263d3a8d4">raylib::LoadFileText</a></div><div class="ttdeci">RLCPPAPI std::string LoadFileText(const std::string &amp;fileName)</div><div class="ttdoc">Load text data from file (read)</div><div class="ttdef"><b>定义</b> Functions.hpp:73</div></div>
+<div class="ttc" id="anamespaceraylib_html_a167a4275d7d8ef27b6ce48eb3dfc2f76"><div class="ttname"><a href="namespaceraylib.html#a167a4275d7d8ef27b6ce48eb3dfc2f76">raylib::TextInsert</a></div><div class="ttdeci">RLCPPAPI std::string TextInsert(const std::string &amp;text, const std::string &amp;insert, int position)</div><div class="ttdoc">Insert text in a position</div><div class="ttdef"><b>定义</b> Functions.hpp:381</div></div>
+<div class="ttc" id="anamespaceraylib_html_a1a355762d23fa27e9c95e8014662e5e1"><div class="ttname"><a href="namespaceraylib.html#a1a355762d23fa27e9c95e8014662e5e1">raylib::GetWorkingDirectory</a></div><div class="ttdeci">RLCPPAPI std::string GetWorkingDirectory()</div><div class="ttdoc">Get current working directory</div><div class="ttdef"><b>定义</b> Functions.hpp:146</div></div>
+<div class="ttc" id="anamespaceraylib_html_a1ea78692e868b5cb0ca49dff4d39e842"><div class="ttname"><a href="namespaceraylib.html#a1ea78692e868b5cb0ca49dff4d39e842">raylib::OpenURL</a></div><div class="ttdeci">RLCPPAPI void OpenURL(const std::string &amp;url)</div><div class="ttdoc">Open URL with default system browser (if available)</div><div class="ttdef"><b>定义</b> Functions.hpp:190</div></div>
+<div class="ttc" id="anamespaceraylib_html_a2566e995220052936edc573116a1677a"><div class="ttname"><a href="namespaceraylib.html#a2566e995220052936edc573116a1677a">raylib::InitWindow</a></div><div class="ttdeci">RLCPPAPI void InitWindow(int width, int height, const std::string &amp;title=&quot;raylib&quot;)</div><div class="ttdoc">Initialize window and OpenGL context</div><div class="ttdef"><b>定义</b> Functions.hpp:24</div></div>
+<div class="ttc" id="anamespaceraylib_html_a26edfd0ee3bac2e1f8208e16eae17f2a"><div class="ttname"><a href="namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a">raylib::ChangeDirectory</a></div><div class="ttdeci">RLCPPAPI bool ChangeDirectory(const std::string &amp;dir)</div><div class="ttdoc">Change working directory, return true on success</div><div class="ttdef"><b>定义</b> Functions.hpp:163</div></div>
+<div class="ttc" id="anamespaceraylib_html_a3117ec1abc28744bc2e939cc3d556cbb"><div class="ttname"><a href="namespaceraylib.html#a3117ec1abc28744bc2e939cc3d556cbb">raylib::MeasureText</a></div><div class="ttdeci">RLCPPAPI int MeasureText(const char *text, int fontSize)</div><div class="ttdoc">Measure string width for default font</div><div class="ttdef"><b>定义</b> Functions.hpp:317</div></div>
+<div class="ttc" id="anamespaceraylib_html_a3e612cc4bf7b03c7f4136a254c19fad3"><div class="ttname"><a href="namespaceraylib.html#a3e612cc4bf7b03c7f4136a254c19fad3">raylib::GetFileModTime</a></div><div class="ttdeci">RLCPPAPI long GetFileModTime(const std::string &amp;fileName)</div><div class="ttdoc">Get file modification time (last write time)</div><div class="ttdef"><b>定义</b> Functions.hpp:183</div></div>
+<div class="ttc" id="anamespaceraylib_html_a3f48f2a25b3b4e8663062e94c70e6e33"><div class="ttname"><a href="namespaceraylib.html#a3f48f2a25b3b4e8663062e94c70e6e33">raylib::GetDirectoryPath</a></div><div class="ttdeci">RLCPPAPI std::string GetDirectoryPath(const std::string &amp;filePath)</div><div class="ttdoc">Get full path for a given fileName with path</div><div class="ttdef"><b>定义</b> Functions.hpp:132</div></div>
+<div class="ttc" id="anamespaceraylib_html_a40210f2205585e062141a740b5ba2ced"><div class="ttname"><a href="namespaceraylib.html#a40210f2205585e062141a740b5ba2ced">raylib::GetMonitorName</a></div><div class="ttdeci">RLCPPAPI std::string GetMonitorName(int monitor=0)</div><div class="ttdoc">Get the human-readable, UTF-8 encoded name of the primary monitor</div><div class="ttdef"><b>定义</b> Functions.hpp:38</div></div>
+<div class="ttc" id="anamespaceraylib_html_a454868acb7eaae84673c68017d2a71e8"><div class="ttname"><a href="namespaceraylib.html#a454868acb7eaae84673c68017d2a71e8">raylib::DirectoryExists</a></div><div class="ttdeci">RLCPPAPI bool DirectoryExists(const std::string &amp;dirPath)</div><div class="ttdoc">Check if directory path exists</div><div class="ttdef"><b>定义</b> Functions.hpp:97</div></div>
+<div class="ttc" id="anamespaceraylib_html_a45de5ee54e09ba4f9aad7c95062d30c1"><div class="ttname"><a href="namespaceraylib.html#a45de5ee54e09ba4f9aad7c95062d30c1">raylib::LoadDirectoryFiles</a></div><div class="ttdeci">RLCPPAPI std::vector&lt; std::string &gt; LoadDirectoryFiles(const std::string &amp;dirPath)</div><div class="ttdoc">Get filenames in a directory path</div><div class="ttdef"><b>定义</b> Functions.hpp:153</div></div>
+<div class="ttc" id="anamespaceraylib_html_a46020e49de4b05fdba53680c18e69cfe"><div class="ttname"><a href="namespaceraylib.html#a46020e49de4b05fdba53680c18e69cfe">raylib::TakeScreenshot</a></div><div class="ttdeci">RLCPPAPI void TakeScreenshot(const std::string &amp;fileName)</div><div class="ttdoc">Takes a screenshot of current screen (saved a .png)</div><div class="ttdef"><b>定义</b> Functions.hpp:59</div></div>
+<div class="ttc" id="anamespaceraylib_html_a48031a2467ea4b249c8b1006f856f6d2"><div class="ttname"><a href="namespaceraylib.html#a48031a2467ea4b249c8b1006f856f6d2">raylib::TextToInteger</a></div><div class="ttdeci">RLCPPAPI int TextToInteger(const std::string &amp;text)</div><div class="ttdoc">Get integer value from text (negative values not supported)</div><div class="ttdef"><b>定义</b> Functions.hpp:431</div></div>
+<div class="ttc" id="anamespaceraylib_html_a48d2d0e9a551ad3ee80b46b64f81de38"><div class="ttname"><a href="namespaceraylib.html#a48d2d0e9a551ad3ee80b46b64f81de38">raylib::DrawTextPro</a></div><div class="ttdeci">RLCPPAPI void DrawTextPro(const Font &amp;font, const char *text, Vector2 position, Vector2 origin, float rotation, float fontSize, float spacing, ::Color tint)</div><div class="ttdoc">Draw text using Font and pro parameters (rotation)</div><div class="ttdef"><b>定义</b> Functions.hpp:272</div></div>
+<div class="ttc" id="anamespaceraylib_html_a51f2da505b34180c6dc8ad7a305e44b5"><div class="ttname"><a href="namespaceraylib.html#a51f2da505b34180c6dc8ad7a305e44b5">raylib::TextLength</a></div><div class="ttdeci">RLCPPAPI unsigned int TextLength(const char *text)</div><div class="ttdoc">Check if two text string are equal</div><div class="ttdef"><b>定义</b> Functions.hpp:345</div></div>
+<div class="ttc" id="anamespaceraylib_html_a535543fa3c2748d8de6fee36715242c5"><div class="ttname"><a href="namespaceraylib.html#a535543fa3c2748d8de6fee36715242c5">raylib::ExportImageAsCode</a></div><div class="ttdeci">RLCPPAPI bool ExportImageAsCode(const Image &amp;image, const std::string &amp;fileName)</div><div class="ttdoc">Export image as code file (.h) defining an array of bytes</div><div class="ttdef"><b>定义</b> Functions.hpp:234</div></div>
+<div class="ttc" id="anamespaceraylib_html_a56d9c156406023894366995ab514bdfc"><div class="ttname"><a href="namespaceraylib.html#a56d9c156406023894366995ab514bdfc">raylib::LoadImageAnim</a></div><div class="ttdeci">RLCPPAPI ::Image LoadImageAnim(const std::string &amp;fileName, int *frames)</div><div class="ttdoc">Load animated image data</div><div class="ttdef"><b>定义</b> Functions.hpp:212</div></div>
+<div class="ttc" id="anamespaceraylib_html_a6c0acda0ee4c211d2bd871b6bf6543c6"><div class="ttname"><a href="namespaceraylib.html#a6c0acda0ee4c211d2bd871b6bf6543c6">raylib::SetWindowTitle</a></div><div class="ttdeci">RLCPPAPI void SetWindowTitle(const std::string &amp;title)</div><div class="ttdoc">Set title for window</div><div class="ttdef"><b>定义</b> Functions.hpp:31</div></div>
+<div class="ttc" id="anamespaceraylib_html_a7521315c3dab6264ab310c72256b7e86"><div class="ttname"><a href="namespaceraylib.html#a7521315c3dab6264ab310c72256b7e86">raylib::SaveFileText</a></div><div class="ttdeci">RLCPPAPI bool SaveFileText(const std::string &amp;fileName, const std::string &amp;text)</div><div class="ttdoc">Save text data to file (write)</div><div class="ttdef"><b>定义</b> Functions.hpp:83</div></div>
+<div class="ttc" id="anamespaceraylib_html_a7b42f7b8892ca6a8f186704cdb31cead"><div class="ttname"><a href="namespaceraylib.html#a7b42f7b8892ca6a8f186704cdb31cead">raylib::TextIsEqual</a></div><div class="ttdeci">RLCPPAPI bool TextIsEqual(const char *text1, const char *text2)</div><div class="ttdoc">Check if two text string are equal</div><div class="ttdef"><b>定义</b> Functions.hpp:331</div></div>
+<div class="ttc" id="anamespaceraylib_html_a800f9a412413e1757674d5ac46de17f7"><div class="ttname"><a href="namespaceraylib.html#a800f9a412413e1757674d5ac46de17f7">raylib::TextToUpper</a></div><div class="ttdeci">RLCPPAPI std::string TextToUpper(const std::string &amp;text)</div><div class="ttdoc">Get upper case version of provided string</div><div class="ttdef"><b>定义</b> Functions.hpp:410</div></div>
+<div class="ttc" id="anamespaceraylib_html_a8b2a8e558a54567cea718ce9ce2075ee"><div class="ttname"><a href="namespaceraylib.html#a8b2a8e558a54567cea718ce9ce2075ee">raylib::LoadImageFromMemory</a></div><div class="ttdeci">RLCPPAPI ::Image LoadImageFromMemory(const std::string &amp;fileType, const unsigned char *fileData, int dataSize)</div><div class="ttdoc">Load image from memory buffer, fileType refers to extension like &quot;png&quot;</div><div class="ttdef"><b>定义</b> Functions.hpp:220</div></div>
+<div class="ttc" id="anamespaceraylib_html_a8e19027c516acaf90317e053584c30f4"><div class="ttname"><a href="namespaceraylib.html#a8e19027c516acaf90317e053584c30f4">raylib::TextToPascal</a></div><div class="ttdeci">RLCPPAPI std::string TextToPascal(const std::string &amp;text)</div><div class="ttdoc">Get Pascal case notation version of provided string</div><div class="ttdef"><b>定义</b> Functions.hpp:424</div></div>
+<div class="ttc" id="anamespaceraylib_html_a9148dce51098585aa1b8e92611191a41"><div class="ttname"><a href="namespaceraylib.html#a9148dce51098585aa1b8e92611191a41">raylib::GetPrevDirectoryPath</a></div><div class="ttdeci">RLCPPAPI std::string GetPrevDirectoryPath(const std::string &amp;dirPath)</div><div class="ttdoc">Get previous directory path for a given path</div><div class="ttdef"><b>定义</b> Functions.hpp:139</div></div>
+<div class="ttc" id="anamespaceraylib_html_a9363c925d53ab82334164f184fe2a94f"><div class="ttname"><a href="namespaceraylib.html#a9363c925d53ab82334164f184fe2a94f">raylib::TextSubtext</a></div><div class="ttdeci">RLCPPAPI std::string TextSubtext(const std::string &amp;text, int position, int length)</div><div class="ttdoc">Get text length, checks for '\0' ending</div><div class="ttdef"><b>定义</b> Functions.hpp:359</div></div>
+<div class="ttc" id="anamespaceraylib_html_a94c1c2c80dff1b55a3bab1efac7894f4"><div class="ttname"><a href="namespaceraylib.html#a94c1c2c80dff1b55a3bab1efac7894f4">raylib::LoadImageRaw</a></div><div class="ttdeci">RLCPPAPI ::Image LoadImageRaw(const std::string &amp;fileName, int width, int height, int format, int headerSize)</div><div class="ttdoc">Load an image from RAW file data</div><div class="ttdef"><b>定义</b> Functions.hpp:205</div></div>
+<div class="ttc" id="anamespaceraylib_html_a95c8e7b489e3311b9e8b66bee87289b4"><div class="ttname"><a href="namespaceraylib.html#a95c8e7b489e3311b9e8b66bee87289b4">raylib::TextSplit</a></div><div class="ttdeci">RLCPPAPI std::vector&lt; std::string &gt; TextSplit(const std::string &amp;text, char delimiter)</div><div class="ttdoc">Split text into multiple strings</div><div class="ttdef"><b>定义</b> Functions.hpp:394</div></div>
+<div class="ttc" id="anamespaceraylib_html_aa415096c22927864b6f3608010531323"><div class="ttname"><a href="namespaceraylib.html#aa415096c22927864b6f3608010531323">raylib::GetFileName</a></div><div class="ttdeci">RLCPPAPI std::string GetFileName(const std::string &amp;filePath)</div><div class="ttdoc">Get pointer to filename for a path string</div><div class="ttdef"><b>定义</b> Functions.hpp:118</div></div>
+<div class="ttc" id="anamespaceraylib_html_aa49b02b645ed0e608b5b0e14994beab1"><div class="ttname"><a href="namespaceraylib.html#aa49b02b645ed0e608b5b0e14994beab1">raylib::LoadFont</a></div><div class="ttdeci">RLCPPAPI ::Font LoadFont(const std::string &amp;fileName)</div><div class="ttdoc">Load font from file (filename must include file extension)</div><div class="ttdef"><b>定义</b> Functions.hpp:302</div></div>
+<div class="ttc" id="anamespaceraylib_html_aa4b32999ca0480afc1994a591f5a347a"><div class="ttname"><a href="namespaceraylib.html#aa4b32999ca0480afc1994a591f5a347a">raylib::GetFileExtension</a></div><div class="ttdeci">RLCPPAPI std::string GetFileExtension(const std::string &amp;fileName)</div><div class="ttdoc">Get pointer to extension for a filename string (including point: &quot;.png&quot;)</div><div class="ttdef"><b>定义</b> Functions.hpp:111</div></div>
+<div class="ttc" id="anamespaceraylib_html_aa8bc5f431c674d33729ee0b51db9a1a7"><div class="ttname"><a href="namespaceraylib.html#aa8bc5f431c674d33729ee0b51db9a1a7">raylib::LoadImage</a></div><div class="ttdeci">RLCPPAPI ::Image LoadImage(const std::string &amp;fileName)</div><div class="ttdoc">Load an image.</div><div class="ttdef"><b>定义</b> Functions.hpp:197</div></div>
+<div class="ttc" id="anamespaceraylib_html_aac3b541d227b04d8d6846b84bd9b049a"><div class="ttname"><a href="namespaceraylib.html#aac3b541d227b04d8d6846b84bd9b049a">raylib::LoadFontEx</a></div><div class="ttdeci">RLCPPAPI ::Font LoadFontEx(const std::string &amp;fileName, int fontSize, int *fontChars, int charsCount)</div><div class="ttdoc">Load font from file (filename must include file extension)</div><div class="ttdef"><b>定义</b> Functions.hpp:310</div></div>
+<div class="ttc" id="anamespaceraylib_html_ab720cb252327249ed39051e0550d3bf6"><div class="ttname"><a href="namespaceraylib.html#ab720cb252327249ed39051e0550d3bf6">raylib::DrawText</a></div><div class="ttdeci">RLCPPAPI void DrawText(const char *text, int posX, int posY, int fontSize, ::Color color)</div><div class="ttdoc">Draw text (using default font)</div><div class="ttdef"><b>定义</b> Functions.hpp:241</div></div>
+<div class="ttc" id="anamespaceraylib_html_abe0f1abc8d26e2c04c6a2fb7bd00ea45"><div class="ttname"><a href="namespaceraylib.html#abe0f1abc8d26e2c04c6a2fb7bd00ea45">raylib::GetGamepadName</a></div><div class="ttdeci">RLCPPAPI std::string GetGamepadName(int gamepad)</div><div class="ttdoc">Get gamepad internal name id</div><div class="ttdef"><b>定义</b> Functions.hpp:66</div></div>
+<div class="ttc" id="anamespaceraylib_html_ac0e37c1f53ae2c4b17c128bc186346c0"><div class="ttname"><a href="namespaceraylib.html#ac0e37c1f53ae2c4b17c128bc186346c0">raylib::FileExists</a></div><div class="ttdeci">RLCPPAPI bool FileExists(const std::string &amp;fileName)</div><div class="ttdoc">Check if file exists</div><div class="ttdef"><b>定义</b> Functions.hpp:90</div></div>
+<div class="ttc" id="anamespaceraylib_html_ac33ca7b9fdf31bd8d6fb2330ae05042b"><div class="ttname"><a href="namespaceraylib.html#ac33ca7b9fdf31bd8d6fb2330ae05042b">raylib::SetClipboardText</a></div><div class="ttdeci">RLCPPAPI void SetClipboardText(const std::string &amp;text)</div><div class="ttdoc">Set clipboard text content</div><div class="ttdef"><b>定义</b> Functions.hpp:45</div></div>
+<div class="ttc" id="anamespaceraylib_html_acab00cd17e198ca8445c07005a07dc1c"><div class="ttname"><a href="namespaceraylib.html#acab00cd17e198ca8445c07005a07dc1c">raylib::LoadDroppedFiles</a></div><div class="ttdeci">RLCPPAPI std::vector&lt; std::string &gt; LoadDroppedFiles()</div><div class="ttdoc">Get dropped files names</div><div class="ttdef"><b>定义</b> Functions.hpp:170</div></div>
+<div class="ttc" id="anamespaceraylib_html_adaf1172921b6b203cb57e2a4608d19d6"><div class="ttname"><a href="namespaceraylib.html#adaf1172921b6b203cb57e2a4608d19d6">raylib::TextReplace</a></div><div class="ttdeci">RLCPPAPI std::string TextReplace(const std::string &amp;text, const std::string &amp;replace, const std::string &amp;by)</div><div class="ttdoc">Replace text string</div><div class="ttdef"><b>定义</b> Functions.hpp:367</div></div>
+<div class="ttc" id="anamespaceraylib_html_aed19d4647a227767394051149cb6dd35"><div class="ttname"><a href="namespaceraylib.html#aed19d4647a227767394051149cb6dd35">raylib::TextFindIndex</a></div><div class="ttdeci">RLCPPAPI int TextFindIndex(const std::string &amp;text, const std::string &amp;find)</div><div class="ttdoc">Find first text occurrence within a string</div><div class="ttdef"><b>定义</b> Functions.hpp:403</div></div>
+<div class="ttc" id="anamespaceraylib_html_affbd414fa733c7f651b1d7aea97cfe8b"><div class="ttname"><a href="namespaceraylib.html#affbd414fa733c7f651b1d7aea97cfe8b">raylib::DrawTextEx</a></div><div class="ttdeci">RLCPPAPI void DrawTextEx(const Font &amp;font, char *text, Vector2 position, float fontSize, float spacing, ::Color tint)</div><div class="ttdoc">Draw text using font and additional parameters</div><div class="ttdef"><b>定义</b> Functions.hpp:257</div></div>
+<div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_functions_8hpp.html">Functions.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

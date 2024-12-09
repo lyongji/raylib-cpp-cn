@@ -1,16 +1,16 @@
 /**
- * [raylib-cpp](https://github.com/RobLoach/raylib-cpp) is a C++ wrapper library for raylib, a simple and easy-to-use library to enjoy videogames programming. This C++ header provides object-oriented wrappers around raylib's struct interfaces.
+ * [raylib-cpp-cn](https://github.com/lyongji/raylib-cpp-cn.git) 是一个用于raylib的c++中文包装库，raylib是一个简单易用的库，可以享受视频游戏编程。这个c++头为raylib的结构接口提供了面向对象的包装器。
  *
- * @see raylib namespace for a list of all available classes.
- * @mainpage raylib-cpp
+ * @see 用于所有可用类列表的Raylib命名空间。
+ * @mainpage raylib-cpp-cn
  * @include core_basic_window.cpp
- * @author Rob Loach (RobLoach)
+ * @author 翻译:lyongji 源:Rob Loach (RobLoach)
  * @copyright zlib/libpng
  *
- *   raylib-cpp is licensed under an unmodified zlib/libpng license, which is an OSI-certified,
+ *   raylib-cpp-cn is licensed under an unmodified zlib/libpng license, which is an OSI-certified,
  *   BSD-like license that allows static linking with closed source software:
  *
- *   Copyright 2020 Rob Loach (RobLoach)
+ *   Copyright 2024 lyongji
  *
  *   This software is provided "as-is", without any express or implied warranty. In no event
  *   will the authors be held liable for any damages arising from the use of this software.
@@ -71,7 +71,7 @@
 #include "./Window.hpp"
 
 /**
- * All raylib-cpp classes and functions appear in the raylib namespace.
+ * 所有的raylib-cpp类和函数都出现在raylib命名空间中。
  */
 namespace raylib {
 // Nothing.

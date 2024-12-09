@@ -1,0 +1,1224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>raylib-cpp-cn: raylib::Matrix类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
+   </div>
+   <div id="projectbrief">raylib-c++中文包装</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classraylib_1_1_matrix.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classraylib_1_1_matrix-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">raylib::Matrix类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classraylib_1_1_matrix.html" title="Matrix type (OpenGL style 4x4 - right handed, column major)">Matrix</a> type (OpenGL style 4x4 - right handed, column major)  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_matrix_8hpp_source.html">Matrix.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 raylib::Matrix 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classraylib_1_1_matrix.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0d2462e10b715cad96be3871390186f9" id="r_a0d2462e10b715cad96be3871390186f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d2462e10b715cad96be3871390186f9">Matrix</a> (const ::Matrix &amp;mat)</td></tr>
+<tr class="separator:a0d2462e10b715cad96be3871390186f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7f1d491b259e545d7a781da08b5c2e" id="r_aea7f1d491b259e545d7a781da08b5c2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea7f1d491b259e545d7a781da08b5c2e">Matrix</a> (float m0=0, float m4=0, float m8=0, float m12=0, float m1=0, float m5=0, float m9=0, float m13=0, float m2=0, float m6=0, float m10=0, float m14=0, float m3=0, float m7=0, float m11=0, float m15=0)</td></tr>
+<tr class="separator:aea7f1d491b259e545d7a781da08b5c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a01a9983536575a0accb4ad938434d1" id="r_a4a01a9983536575a0accb4ad938434d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a01a9983536575a0accb4ad938434d1">operator=</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;matrix)</td></tr>
+<tr class="separator:a4a01a9983536575a0accb4ad938434d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667e1a3be409a1ad1d7f6f9c8bdc24dd" id="r_a667e1a3be409a1ad1d7f6f9c8bdc24dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a667e1a3be409a1ad1d7f6f9c8bdc24dd">operator=</a> (const <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp;matrix)</td></tr>
+<tr class="separator:a667e1a3be409a1ad1d7f6f9c8bdc24dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab038b46305fb8bd85f83005146542b7e" id="r_ab038b46305fb8bd85f83005146542b7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab038b46305fb8bd85f83005146542b7e">operator==</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;other)</td></tr>
+<tr class="separator:ab038b46305fb8bd85f83005146542b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986d17b9ef939fcd441c9f0533a208bf" id="r_a986d17b9ef939fcd441c9f0533a208bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a986d17b9ef939fcd441c9f0533a208bf">operator!=</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;other)</td></tr>
+<tr class="separator:a986d17b9ef939fcd441c9f0533a208bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed7bc3003490c97c363ac2108aaa44b" id="r_a7ed7bc3003490c97c363ac2108aaa44b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ed7bc3003490c97c363ac2108aaa44b">Trace</a> () const</td></tr>
+<tr class="memdesc:a7ed7bc3003490c97c363ac2108aaa44b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the trace of the matrix (sum of the values along the diagonal)  <br /></td></tr>
+<tr class="separator:a7ed7bc3003490c97c363ac2108aaa44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc0f1d9225126201c4880a5052b8316" id="r_a7fc0f1d9225126201c4880a5052b8316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fc0f1d9225126201c4880a5052b8316">Transpose</a> () const</td></tr>
+<tr class="memdesc:a7fc0f1d9225126201c4880a5052b8316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transposes provided matrix  <br /></td></tr>
+<tr class="separator:a7fc0f1d9225126201c4880a5052b8316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad566c434998fe400a57a26a39c3708" id="r_a9ad566c434998fe400a57a26a39c3708"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad566c434998fe400a57a26a39c3708">Invert</a> () const</td></tr>
+<tr class="separator:a9ad566c434998fe400a57a26a39c3708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecef455d7b249b1c0bbc77cbb27e1d0" id="r_aaecef455d7b249b1c0bbc77cbb27e1d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaecef455d7b249b1c0bbc77cbb27e1d0">Add</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;right)</td></tr>
+<tr class="separator:aaecef455d7b249b1c0bbc77cbb27e1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab149d4638f47cdd7aa2cad5b05b3977d" id="r_ab149d4638f47cdd7aa2cad5b05b3977d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab149d4638f47cdd7aa2cad5b05b3977d">operator+</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;matrix)</td></tr>
+<tr class="separator:ab149d4638f47cdd7aa2cad5b05b3977d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f0b7960358e1dac0f745709e74ad67" id="r_a14f0b7960358e1dac0f745709e74ad67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14f0b7960358e1dac0f745709e74ad67">Subtract</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;right)</td></tr>
+<tr class="separator:a14f0b7960358e1dac0f745709e74ad67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d079fd913d2890620107599b4d1bcf" id="r_a28d079fd913d2890620107599b4d1bcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28d079fd913d2890620107599b4d1bcf">operator-</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;matrix)</td></tr>
+<tr class="separator:a28d079fd913d2890620107599b4d1bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbebf3211a8252b0433184357233aa19" id="r_afbebf3211a8252b0433184357233aa19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbebf3211a8252b0433184357233aa19">Multiply</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;right) const</td></tr>
+<tr class="separator:afbebf3211a8252b0433184357233aa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc1bc9c255dbcf348aba9e2b58d72d4" id="r_aebc1bc9c255dbcf348aba9e2b58d72d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebc1bc9c255dbcf348aba9e2b58d72d4">operator*</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;matrix)</td></tr>
+<tr class="separator:aebc1bc9c255dbcf348aba9e2b58d72d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f3ae730b3c5ca7da3522832fd2964d" id="r_a54f3ae730b3c5ca7da3522832fd2964d"><td class="memItemLeft" align="right" valign="top">float16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f3ae730b3c5ca7da3522832fd2964d">ToFloatV</a> () const</td></tr>
+<tr class="separator:a54f3ae730b3c5ca7da3522832fd2964d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63cce6502129548a9ab427efbf714a8b" id="r_a63cce6502129548a9ab427efbf714a8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63cce6502129548a9ab427efbf714a8b">operator float16</a> ()</td></tr>
+<tr class="separator:a63cce6502129548a9ab427efbf714a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728f86dad6dc84f10a546336574e9028" id="r_a728f86dad6dc84f10a546336574e9028"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a728f86dad6dc84f10a546336574e9028">SetShaderValue</a> (const ::Shader &amp;shader, int uniformLoc)</td></tr>
+<tr class="memdesc:a728f86dad6dc84f10a546336574e9028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shader uniform value (matrix 4x4)  <br /></td></tr>
+<tr class="separator:a728f86dad6dc84f10a546336574e9028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aaf701bdedb604e59c6f1592fa5255575" id="r_aaf701bdedb604e59c6f1592fa5255575"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf701bdedb604e59c6f1592fa5255575">Identity</a> ()</td></tr>
+<tr class="separator:aaf701bdedb604e59c6f1592fa5255575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c40986a01c21a5a1dd139ccf18ab28" id="r_a66c40986a01c21a5a1dd139ccf18ab28"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66c40986a01c21a5a1dd139ccf18ab28">Translate</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a66c40986a01c21a5a1dd139ccf18ab28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5da5173fc6bcda2e09bdc2caa865c08" id="r_ac5da5173fc6bcda2e09bdc2caa865c08"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5da5173fc6bcda2e09bdc2caa865c08">Rotate</a> (<a class="el" href="classraylib_1_1_vector3.html">Vector3</a> axis, float angle)</td></tr>
+<tr class="separator:ac5da5173fc6bcda2e09bdc2caa865c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a55314e81f9a8d4a1b7c964127bce1" id="r_a42a55314e81f9a8d4a1b7c964127bce1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42a55314e81f9a8d4a1b7c964127bce1">RotateXYZ</a> (<a class="el" href="classraylib_1_1_vector3.html">Vector3</a> angle)</td></tr>
+<tr class="separator:a42a55314e81f9a8d4a1b7c964127bce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e1c205d24796003dc63783b2e1739a" id="r_af0e1c205d24796003dc63783b2e1739a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0e1c205d24796003dc63783b2e1739a">RotateX</a> (float angle)</td></tr>
+<tr class="separator:af0e1c205d24796003dc63783b2e1739a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e068eb0a163ba8ae65d3b89ace56e67" id="r_a9e068eb0a163ba8ae65d3b89ace56e67"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e068eb0a163ba8ae65d3b89ace56e67">RotateY</a> (float angle)</td></tr>
+<tr class="separator:a9e068eb0a163ba8ae65d3b89ace56e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ee9f00cd56f52d6bb49c3de7af7e02" id="r_a94ee9f00cd56f52d6bb49c3de7af7e02"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94ee9f00cd56f52d6bb49c3de7af7e02">RotateZ</a> (float angle)</td></tr>
+<tr class="separator:a94ee9f00cd56f52d6bb49c3de7af7e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6194618ff44780a7e062355089706217" id="r_a6194618ff44780a7e062355089706217"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6194618ff44780a7e062355089706217">Scale</a> (float x, float y, float z)</td></tr>
+<tr class="separator:a6194618ff44780a7e062355089706217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fc693fb8c61fe3615217332be79506" id="r_ad2fc693fb8c61fe3615217332be79506"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2fc693fb8c61fe3615217332be79506">Frustum</a> (double left, double right, double bottom, double top, double near, double far)</td></tr>
+<tr class="separator:ad2fc693fb8c61fe3615217332be79506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5590610580b2ecd0be779324bf9281" id="r_aea5590610580b2ecd0be779324bf9281"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea5590610580b2ecd0be779324bf9281">Perspective</a> (double fovy, double aspect, double near, double far)</td></tr>
+<tr class="separator:aea5590610580b2ecd0be779324bf9281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45b39503de59d1052377346efd8bcd8" id="r_ad45b39503de59d1052377346efd8bcd8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad45b39503de59d1052377346efd8bcd8">Ortho</a> (double left, double right, double bottom, double top, double near, double far)</td></tr>
+<tr class="separator:ad45b39503de59d1052377346efd8bcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eeb4cdf09fd97c38d990a27e894f6f1" id="r_a4eeb4cdf09fd97c38d990a27e894f6f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eeb4cdf09fd97c38d990a27e894f6f1">LookAt</a> (<a class="el" href="classraylib_1_1_vector3.html">Vector3</a> eye, <a class="el" href="classraylib_1_1_vector3.html">Vector3</a> target, <a class="el" href="classraylib_1_1_vector3.html">Vector3</a> up)</td></tr>
+<tr class="separator:a4eeb4cdf09fd97c38d990a27e894f6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ccf902f69734d1719ed875f914457ed" id="r_a7ccf902f69734d1719ed875f914457ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ccf902f69734d1719ed875f914457ed">GetCamera</a> (const <a class="el" href="namespaceraylib.html#a93085f4fe477b08274a8d3db38d53295">::Camera</a> &amp;camera)</td></tr>
+<tr class="separator:a7ccf902f69734d1719ed875f914457ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a9d9322d8fc02470fd760faac741fa" id="r_af5a9d9322d8fc02470fd760faac741fa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a9d9322d8fc02470fd760faac741fa">GetCamera</a> (const ::Camera2D &amp;camera)</td></tr>
+<tr class="separator:af5a9d9322d8fc02470fd760faac741fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a65cc0bba39613fe49cdcbe0f169c5a38" id="r_a65cc0bba39613fe49cdcbe0f169c5a38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65cc0bba39613fe49cdcbe0f169c5a38">set</a> (const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;mat)</td></tr>
+<tr class="separator:a65cc0bba39613fe49cdcbe0f169c5a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classraylib_1_1_matrix.html" title="Matrix type (OpenGL style 4x4 - right handed, column major)">Matrix</a> type (OpenGL style 4x4 - right handed, column major) </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0d2462e10b715cad96be3871390186f9" name="a0d2462e10b715cad96be3871390186f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2462e10b715cad96be3871390186f9">&#9670;&#160;</a></span>Matrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">const ::Matrix &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea7f1d491b259e545d7a781da08b5c2e" name="aea7f1d491b259e545d7a781da08b5c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7f1d491b259e545d7a781da08b5c2e">&#9670;&#160;</a></span>Matrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Matrix::Matrix </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m0</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m4</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m8</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m12</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m5</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m9</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m13</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m6</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m10</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m14</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m3</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m7</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m11</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>m15</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aaecef455d7b249b1c0bbc77cbb27e1d0" name="aaecef455d7b249b1c0bbc77cbb27e1d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecef455d7b249b1c0bbc77cbb27e1d0">&#9670;&#160;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2fc693fb8c61fe3615217332be79506" name="ad2fc693fb8c61fe3615217332be79506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2fc693fb8c61fe3615217332be79506">&#9670;&#160;</a></span>Frustum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Frustum </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>near</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>far</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ccf902f69734d1719ed875f914457ed" name="a7ccf902f69734d1719ed875f914457ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ccf902f69734d1719ed875f914457ed">&#9670;&#160;</a></span>GetCamera() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::GetCamera </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceraylib.html#a93085f4fe477b08274a8d3db38d53295">::Camera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5a9d9322d8fc02470fd760faac741fa" name="af5a9d9322d8fc02470fd760faac741fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a9d9322d8fc02470fd760faac741fa">&#9670;&#160;</a></span>GetCamera() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::GetCamera </td>
+          <td>(</td>
+          <td class="paramtype">const ::Camera2D &amp;</td>          <td class="paramname"><span class="paramname"><em>camera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf701bdedb604e59c6f1592fa5255575" name="aaf701bdedb604e59c6f1592fa5255575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf701bdedb604e59c6f1592fa5255575">&#9670;&#160;</a></span>Identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Identity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ad566c434998fe400a57a26a39c3708" name="a9ad566c434998fe400a57a26a39c3708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad566c434998fe400a57a26a39c3708">&#9670;&#160;</a></span>Invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Invert </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4eeb4cdf09fd97c38d990a27e894f6f1" name="a4eeb4cdf09fd97c38d990a27e894f6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eeb4cdf09fd97c38d990a27e894f6f1">&#9670;&#160;</a></span>LookAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::LookAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_vector3.html">Vector3</a></td>          <td class="paramname"><span class="paramname"><em>eye</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_vector3.html">Vector3</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_vector3.html">Vector3</a></td>          <td class="paramname"><span class="paramname"><em>up</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbebf3211a8252b0433184357233aa19" name="afbebf3211a8252b0433184357233aa19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbebf3211a8252b0433184357233aa19">&#9670;&#160;</a></span>Multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Multiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63cce6502129548a9ab427efbf714a8b" name="a63cce6502129548a9ab427efbf714a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cce6502129548a9ab427efbf714a8b">&#9670;&#160;</a></span>operator float16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">raylib::Matrix::operator float16 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a986d17b9ef939fcd441c9f0533a208bf" name="a986d17b9ef939fcd441c9f0533a208bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986d17b9ef939fcd441c9f0533a208bf">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Matrix::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebc1bc9c255dbcf348aba9e2b58d72d4" name="aebc1bc9c255dbcf348aba9e2b58d72d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc1bc9c255dbcf348aba9e2b58d72d4">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab149d4638f47cdd7aa2cad5b05b3977d" name="ab149d4638f47cdd7aa2cad5b05b3977d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab149d4638f47cdd7aa2cad5b05b3977d">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28d079fd913d2890620107599b4d1bcf" name="a28d079fd913d2890620107599b4d1bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d079fd913d2890620107599b4d1bcf">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a01a9983536575a0accb4ad938434d1" name="a4a01a9983536575a0accb4ad938434d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a01a9983536575a0accb4ad938434d1">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp; raylib::Matrix::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a667e1a3be409a1ad1d7f6f9c8bdc24dd" name="a667e1a3be409a1ad1d7f6f9c8bdc24dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667e1a3be409a1ad1d7f6f9c8bdc24dd">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp; raylib::Matrix::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab038b46305fb8bd85f83005146542b7e" name="ab038b46305fb8bd85f83005146542b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab038b46305fb8bd85f83005146542b7e">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool raylib::Matrix::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad45b39503de59d1052377346efd8bcd8" name="ad45b39503de59d1052377346efd8bcd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad45b39503de59d1052377346efd8bcd8">&#9670;&#160;</a></span>Ortho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Ortho </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>near</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>far</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea5590610580b2ecd0be779324bf9281" name="aea5590610580b2ecd0be779324bf9281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5590610580b2ecd0be779324bf9281">&#9670;&#160;</a></span>Perspective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Perspective </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>fovy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>aspect</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>near</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>far</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5da5173fc6bcda2e09bdc2caa865c08" name="ac5da5173fc6bcda2e09bdc2caa865c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5da5173fc6bcda2e09bdc2caa865c08">&#9670;&#160;</a></span>Rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_vector3.html">Vector3</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0e1c205d24796003dc63783b2e1739a" name="af0e1c205d24796003dc63783b2e1739a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e1c205d24796003dc63783b2e1739a">&#9670;&#160;</a></span>RotateX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::RotateX </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42a55314e81f9a8d4a1b7c964127bce1" name="a42a55314e81f9a8d4a1b7c964127bce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a55314e81f9a8d4a1b7c964127bce1">&#9670;&#160;</a></span>RotateXYZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::RotateXYZ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classraylib_1_1_vector3.html">Vector3</a></td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e068eb0a163ba8ae65d3b89ace56e67" name="a9e068eb0a163ba8ae65d3b89ace56e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e068eb0a163ba8ae65d3b89ace56e67">&#9670;&#160;</a></span>RotateY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::RotateY </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94ee9f00cd56f52d6bb49c3de7af7e02" name="a94ee9f00cd56f52d6bb49c3de7af7e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ee9f00cd56f52d6bb49c3de7af7e02">&#9670;&#160;</a></span>RotateZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::RotateZ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6194618ff44780a7e062355089706217" name="a6194618ff44780a7e062355089706217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6194618ff44780a7e062355089706217">&#9670;&#160;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Scale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65cc0bba39613fe49cdcbe0f169c5a38" name="a65cc0bba39613fe49cdcbe0f169c5a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cc0bba39613fe49cdcbe0f169c5a38">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void raylib::Matrix::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a728f86dad6dc84f10a546336574e9028" name="a728f86dad6dc84f10a546336574e9028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728f86dad6dc84f10a546336574e9028">&#9670;&#160;</a></span>SetShaderValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> &amp; raylib::Matrix::SetShaderValue </td>
+          <td>(</td>
+          <td class="paramtype">const ::Shader &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uniformLoc</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set shader uniform value (matrix 4x4) </p>
+
+</div>
+</div>
+<a id="a14f0b7960358e1dac0f745709e74ad67" name="a14f0b7960358e1dac0f745709e74ad67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f0b7960358e1dac0f745709e74ad67">&#9670;&#160;</a></span>Subtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Subtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0d2462e10b715cad96be3871390186f9">::Matrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>right</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54f3ae730b3c5ca7da3522832fd2964d" name="a54f3ae730b3c5ca7da3522832fd2964d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f3ae730b3c5ca7da3522832fd2964d">&#9670;&#160;</a></span>ToFloatV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float16 raylib::Matrix::ToFloatV </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ed7bc3003490c97c363ac2108aaa44b" name="a7ed7bc3003490c97c363ac2108aaa44b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed7bc3003490c97c363ac2108aaa44b">&#9670;&#160;</a></span>Trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float raylib::Matrix::Trace </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the trace of the matrix (sum of the values along the diagonal) </p>
+
+</div>
+</div>
+<a id="a66c40986a01c21a5a1dd139ccf18ab28" name="a66c40986a01c21a5a1dd139ccf18ab28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c40986a01c21a5a1dd139ccf18ab28">&#9670;&#160;</a></span>Translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Translate </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fc0f1d9225126201c4880a5052b8316" name="a7fc0f1d9225126201c4880a5052b8316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc0f1d9225126201c4880a5052b8316">&#9670;&#160;</a></span>Transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a> raylib::Matrix::Transpose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transposes provided matrix </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/<a class="el" href="_matrix_8hpp_source.html">Matrix.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceraylib.html">raylib</a></li><li class="navelem"><a class="el" href="classraylib_1_1_matrix.html">Matrix</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>
