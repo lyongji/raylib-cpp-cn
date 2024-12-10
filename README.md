@@ -1,4 +1,3 @@
-![raylib-cpp Logo](projects/Doxygen/raylib-cpp_256x256.png)
 
 # raylib-cpp-zh ![Targeting raylib 5.0](https://img.shields.io/badge/for_raylib-5.0-blue)  [![License](https://img.shields.io/badge/license-zlib%2Flibpng-blue.svg)](LICENSE)
 
