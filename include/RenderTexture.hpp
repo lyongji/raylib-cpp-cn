@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_
-#define RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_
+// #define RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_
+#pragma once
 
 #include "./RaylibException.hpp"
 #include "./TextureUnmanaged.hpp"
@@ -8,12 +9,12 @@
 
 namespace raylib {
 /**
- * RenderTexture type, for texture rendering
+ * RenderTexture 类型，用于纹理渲染
  */
 class RenderTexture : public ::RenderTexture {
 public:
     /**
-     * Default constructor to build an empty RenderTexture.
+     * 默认构造函数，用于构建一个空的 RenderTexture。
      */
     RenderTexture() { id = 0; }
 
@@ -23,7 +24,7 @@ public:
         : ::RenderTexture{id, texture, depth} {}
 
     /**
-     * Load texture for rendering (framebuffer)
+     * 加载用于渲染的纹理（帧缓冲区）
      */
     RenderTexture(int width, int height) { set(::LoadRenderTexture(width, height)); }
 
@@ -40,14 +41,14 @@ public:
     GETTER(unsigned int, Id, id)
 
     /**
-     * Get the color buffer attachment texture.
+     * 获取颜色缓冲区附件纹理。
      */
     TextureUnmanaged GetTexture() { return texture; }
 
     void SetTexture(const ::Texture& newTexture) { texture = newTexture; }
 
     /**
-     * Depth buffer attachment texture
+     * 深度缓冲区附件纹理
      */
     TextureUnmanaged GetDepth() { return depth; }
 
@@ -77,10 +78,11 @@ public:
 
     ~RenderTexture() { Unload(); }
 
+    /// 卸载渲染纹理
     void Unload() { UnloadRenderTexture(*this); }
 
     /**
-     * Initializes render texture for drawing
+     * 初始化渲染纹理以进行绘制
      */
     RenderTexture& BeginMode() {
         ::BeginTextureMode(*this);
@@ -88,7 +90,7 @@ public:
     }
 
     /**
-     * Ends drawing to render texture
+     * 结束绘制到渲染纹理
      */
     RenderTexture& EndMode() {
         ::EndTextureMode();
@@ -96,12 +98,12 @@ public:
     }
 
     /**
-     * Load texture for rendering (framebuffer)
+     * 加载用于渲染的纹理（帧缓冲区）
      */
     static RenderTexture Load(int width, int height) { return ::LoadRenderTexture(width, height); }
 
     /**
-     * Retrieves whether or not the render texture is ready.
+     * 检索渲染纹理是否准备就绪。
      */
     bool IsValid() const { return ::IsRenderTextureValid(*this); }
 protected:
@@ -119,4 +121,4 @@ using RenderTexture2D = RenderTexture;
 using RRenderTexture = raylib::RenderTexture;
 using RRenderTexture2D = raylib::RenderTexture2D;
 
-#endif // RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_

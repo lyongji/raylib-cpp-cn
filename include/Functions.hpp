@@ -1,8 +1,9 @@
 /**
- * C++ wrapper functions for raylib.
+ * C++ 封装 raylib 的函数。
  */
-#ifndef RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_
-#define RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_
+// #define RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -10,7 +11,7 @@
 #include "./raylib.hpp"
 
 /**
- * Allow changing the declare type for all raylib-cpp global functions. Defaults to static.
+ * 允许更改 raylib-cpp 全局函数的声明类型。默认为静态（static）。
  */
 #ifndef RLCPPAPI
 #define RLCPPAPI static
@@ -19,56 +20,56 @@
 namespace raylib {
 
 /**
- * Initialize window and OpenGL context
+ * 初始化窗口和 OpenGL 上下文
  */
 [[maybe_unused]] RLCPPAPI inline void InitWindow(int width, int height, const std::string& title = "raylib") {
     ::InitWindow(width, height, title.c_str());
 }
 
 /**
- * Set title for window
+ * 设置窗口标题
  */
 [[maybe_unused]] RLCPPAPI inline void SetWindowTitle(const std::string& title) {
     ::SetWindowTitle(title.c_str());
 }
 
 /**
- * Get the human-readable, UTF-8 encoded name of the primary monitor
+ * 获取主显示器的可读名称（UTF-8 编码）
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetMonitorName(int monitor = 0) {
     return ::GetMonitorName(monitor);
 }
 
 /**
- * Set clipboard text content
+ * 设置剪贴板文本内容
  */
 [[maybe_unused]] RLCPPAPI inline void SetClipboardText(const std::string& text) {
     ::SetClipboardText(text.c_str());
 }
 
 /**
- * Get clipboard text content
+ * 获取剪贴板文本内容
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetClipboardText() {
     return ::GetClipboardText();
 }
 
 /**
- * Takes a screenshot of current screen (saved a .png)
+ * 截取当前屏幕的截图（保存为 .png 文件）
  */
 [[maybe_unused]] RLCPPAPI inline void TakeScreenshot(const std::string& fileName) {
     ::TakeScreenshot(fileName.c_str());
 }
 
 /**
- * Get gamepad internal name id
+ * 获取游戏手柄的内部名称 ID
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetGamepadName(int gamepad) {
     return ::GetGamepadName(gamepad);
 }
 
 /**
- * Load text data from file (read)
+ * 从文件加载文本数据（读取）
  */
 [[maybe_unused]] RLCPPAPI std::string LoadFileText(const std::string& fileName) {
     char* text = ::LoadFileText(fileName.c_str());
@@ -78,77 +79,77 @@ namespace raylib {
 }
 
 /**
- * Save text data to file (write)
+ * 将文本数据保存到文件（写入）
  */
 [[maybe_unused]] RLCPPAPI inline bool SaveFileText(const std::string& fileName, const std::string& text) {
     return ::SaveFileText(fileName.c_str(), const_cast<char*>(text.c_str()));
 }
 
 /**
- * Check if file exists
+ * 检查文件是否存在
  */
 [[maybe_unused]] RLCPPAPI inline bool FileExists(const std::string& fileName) {
     return ::FileExists(fileName.c_str());
 }
 
 /**
- * Check if directory path exists
+ * 检查目录路径是否存在
  */
 [[maybe_unused]] RLCPPAPI inline bool DirectoryExists(const std::string& dirPath) {
     return ::DirectoryExists(dirPath.c_str());
 }
 
 /**
- * Check file extension (including point: .png, .wav)
+ * 检查文件扩展名（包括点：.png, .wav）
  */
 [[maybe_unused]] RLCPPAPI inline bool IsFileExtension(const std::string& fileName, const std::string& ext) {
     return ::IsFileExtension(fileName.c_str(), ext.c_str());
 }
 
 /**
- * Get pointer to extension for a filename string (including point: ".png")
+ * 获取文件名扩展名的指针（包括点：".png"）
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetFileExtension(const std::string& fileName) {
     return ::GetFileExtension(fileName.c_str());
 }
 
 /**
- * Get pointer to filename for a path string
+ * 获取路径字符串的文件名指针
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetFileName(const std::string& filePath) {
     return ::GetFileName(filePath.c_str());
 }
 
 /**
- * Get filename string without extension
+ * 获取不带扩展名的文件名字符串
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetFileNameWithoutExt(const std::string& filePath) {
     return ::GetFileNameWithoutExt(filePath.c_str());
 }
 
 /**
- * Get full path for a given fileName with path
+ * 获取给定文件名的完整路径
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetDirectoryPath(const std::string& filePath) {
     return ::GetDirectoryPath(filePath.c_str());
 }
 
 /**
- * Get previous directory path for a given path
+ * 获取给定路径的上一级目录路径
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetPrevDirectoryPath(const std::string& dirPath) {
     return ::GetPrevDirectoryPath(dirPath.c_str());
 }
 
 /**
- * Get current working directory
+ * 获取当前工作目录
  */
 [[maybe_unused]] RLCPPAPI inline std::string GetWorkingDirectory() {
     return ::GetWorkingDirectory();
 }
 
 /**
- * Get filenames in a directory path
+ * 获取目录路径中的文件名列表
  */
 [[maybe_unused]] RLCPPAPI std::vector<std::string> LoadDirectoryFiles(const std::string& dirPath) {
     FilePathList files = ::LoadDirectoryFiles(dirPath.c_str());
@@ -158,14 +159,14 @@ namespace raylib {
 }
 
 /**
- * Change working directory, return true on success
+ * 更改工作目录，成功返回 true
  */
 [[maybe_unused]] RLCPPAPI inline bool ChangeDirectory(const std::string& dir) {
     return ::ChangeDirectory(dir.c_str());
 }
 
 /**
- * Get dropped files names
+ * 获取拖放的文件名列表
  */
 [[maybe_unused]] RLCPPAPI std::vector<std::string> LoadDroppedFiles() {
     if (!::IsFileDropped()) {
@@ -178,28 +179,28 @@ namespace raylib {
 }
 
 /**
- * Get file modification time (last write time)
+ * 获取文件的修改时间（最后写入时间）
  */
 [[maybe_unused]] RLCPPAPI inline long GetFileModTime(const std::string& fileName) { // NOLINT
     return ::GetFileModTime(fileName.c_str());
 }
 
 /**
- * Open URL with default system browser (if available)
+ * 使用默认系统浏览器打开 URL（如果可用）
  */
 [[maybe_unused]] RLCPPAPI inline void OpenURL(const std::string& url) {
     return ::OpenURL(url.c_str());
 }
 
 /**
- * Load an image.
+ * 加载图像
  */
 [[maybe_unused]] RLCPPAPI inline ::Image LoadImage(const std::string& fileName) {
     return ::LoadImage(fileName.c_str());
 }
 
 /**
- * Load an image from RAW file data
+ * 从 RAW 文件数据加载图像
  */
 [[maybe_unused]] RLCPPAPI inline ::Image
 LoadImageRaw(const std::string& fileName, int width, int height, int format, int headerSize) {
@@ -207,14 +208,14 @@ LoadImageRaw(const std::string& fileName, int width, int height, int format, int
 }
 
 /**
- * Load animated image data
+ * 加载动画图像数据
  */
 [[maybe_unused]] RLCPPAPI inline ::Image LoadImageAnim(const std::string& fileName, int* frames) {
     return ::LoadImageAnim(fileName.c_str(), frames);
 }
 
 /**
- * Load image from memory buffer, fileType refers to extension like "png"
+ * 从内存缓冲区加载图像，fileType 指的是扩展名，如 "png"
  */
 [[maybe_unused]] RLCPPAPI inline ::Image
 LoadImageFromMemory(const std::string& fileType, const unsigned char* fileData, int dataSize) {
@@ -222,28 +223,28 @@ LoadImageFromMemory(const std::string& fileType, const unsigned char* fileData, 
 }
 
 /**
- * Export image data to file
+ * 将图像数据导出到文件
  */
 [[maybe_unused]] RLCPPAPI inline bool ExportImage(const Image& image, const std::string& fileName) {
     return ::ExportImage(image, fileName.c_str());
 }
 
 /**
- * Export image as code file (.h) defining an array of bytes
+ * 将图像导出为代码文件（.h），定义一个字节数组
  */
 [[maybe_unused]] RLCPPAPI inline bool ExportImageAsCode(const Image& image, const std::string& fileName) {
     return ::ExportImageAsCode(image, fileName.c_str());
 }
 
 /**
- * Draw text (using default font)
+ * 使用默认字体绘制文本
  */
 [[maybe_unused]] RLCPPAPI inline void DrawText(const char* text, int posX, int posY, int fontSize, ::Color color) {
     ::DrawText(text, posX, posY, fontSize, color);
 }
 
 /**
- * Draw text (using default font)
+ * 使用默认字体绘制文本
  */
 [[maybe_unused]] RLCPPAPI inline void
 DrawText(const std::string& text, int posX, int posY, int fontSize, ::Color color) {
@@ -251,7 +252,7 @@ DrawText(const std::string& text, int posX, int posY, int fontSize, ::Color colo
 }
 
 /**
- * Draw text using font and additional parameters
+ * 使用字体和附加参数绘制文本
  */
 [[maybe_unused]] RLCPPAPI inline void
 DrawTextEx(const Font& font, char* text, Vector2 position, float fontSize, float spacing, ::Color tint) {
@@ -259,7 +260,7 @@ DrawTextEx(const Font& font, char* text, Vector2 position, float fontSize, float
 }
 
 /**
- * Draw text using font and additional parameters
+ * 使用字体和附加参数绘制文本
  */
 [[maybe_unused]] RLCPPAPI inline void
 DrawTextEx(const Font& font, const std::string& text, Vector2 position, float fontSize, float spacing, ::Color tint) {
@@ -267,7 +268,7 @@ DrawTextEx(const Font& font, const std::string& text, Vector2 position, float fo
 }
 
 /**
- * Draw text using Font and pro parameters (rotation)
+ * 使用字体和高级参数（旋转）绘制文本
  */
 [[maybe_unused]] RLCPPAPI inline void DrawTextPro(
     const Font& font,
@@ -282,7 +283,7 @@ DrawTextEx(const Font& font, const std::string& text, Vector2 position, float fo
 }
 
 /**
- * Draw text using Font and pro parameters (rotation)
+ * 使用字体和高级参数（旋转）绘制文本
  */
 [[maybe_unused]] RLCPPAPI inline void DrawTextPro(
     const Font& font,
@@ -297,14 +298,14 @@ DrawTextEx(const Font& font, const std::string& text, Vector2 position, float fo
 }
 
 /**
- * Load font from file (filename must include file extension)
+ * 从文件加载字体（文件名必须包含扩展名）
  */
 [[maybe_unused]] RLCPPAPI inline ::Font LoadFont(const std::string& fileName) {
     return ::LoadFont(fileName.c_str());
 }
 
 /**
- * Load font from file (filename must include file extension)
+ * 从文件加载字体（文件名必须包含扩展名）
  */
 [[maybe_unused]] RLCPPAPI inline ::Font
 LoadFontEx(const std::string& fileName, int fontSize, int* fontChars, int charsCount) {
@@ -312,56 +313,56 @@ LoadFontEx(const std::string& fileName, int fontSize, int* fontChars, int charsC
 }
 
 /**
- * Measure string width for default font
+ * 测量默认字体的字符串宽度
  */
 [[maybe_unused]] RLCPPAPI inline int MeasureText(const char* text, int fontSize) {
     return ::MeasureText(text, fontSize);
 }
 
 /**
- * Measure string width for default font
+ * 测量默认字体的字符串宽度
  */
 [[maybe_unused]] RLCPPAPI inline int MeasureText(const std::string& text, int fontSize) {
     return ::MeasureText(text.c_str(), fontSize);
 }
 
 /**
- * Check if two text string are equal
+ * 检查两个文本字符串是否相等
  */
 [[maybe_unused]] RLCPPAPI inline bool TextIsEqual(const char* text1, const char* text2) {
     return ::TextIsEqual(text1, text2);
 }
 
 /**
- * Check if two text string are equal
+ * 检查两个文本字符串是否相等
  */
 [[maybe_unused]] RLCPPAPI inline bool TextIsEqual(const std::string& text1, const std::string& text2) {
     return ::TextIsEqual(text1.c_str(), text2.c_str());
 }
 
 /**
- * Check if two text string are equal
+ * 获取文本长度，检查 '\0' 结尾
  */
 [[maybe_unused]] RLCPPAPI inline unsigned int TextLength(const char* text) {
     return ::TextLength(text);
 }
 
 /**
- * Check if two text string are equal
+ * 获取文本长度，检查 '\0' 结尾
  */
 [[maybe_unused]] RLCPPAPI inline unsigned int TextLength(const std::string& text) {
     return ::TextLength(text.c_str());
 }
 
 /**
- * Get text length, checks for '\0' ending
+ * 获取子文本
  */
 [[maybe_unused]] RLCPPAPI inline std::string TextSubtext(const std::string& text, int position, int length) {
     return ::TextSubtext(text.c_str(), position, length);
 }
 
 /**
- * Replace text string
+ * 替换文本字符串
  */
 [[maybe_unused]] RLCPPAPI std::string
 TextReplace(const std::string& text, const std::string& replace, const std::string& by) {
@@ -376,7 +377,7 @@ TextReplace(const std::string& text, const std::string& replace, const std::stri
 }
 
 /**
- * Insert text in a position
+ * 在指定位置插入文本
  */
 [[maybe_unused]] RLCPPAPI std::string TextInsert(const std::string& text, const std::string& insert, int position) {
     char* output = ::TextInsert(text.c_str(), insert.c_str(), position);
@@ -389,7 +390,7 @@ TextReplace(const std::string& text, const std::string& replace, const std::stri
 }
 
 /**
- * Split text into multiple strings
+ * 将文本拆分为多个字符串
  */
 [[maybe_unused]] RLCPPAPI std::vector<std::string> TextSplit(const std::string& text, char delimiter) {
     int count;
@@ -398,35 +399,35 @@ TextReplace(const std::string& text, const std::string& replace, const std::stri
 }
 
 /**
- * Find first text occurrence within a string
+ * 查找字符串中第一次出现的文本
  */
 [[maybe_unused]] RLCPPAPI inline int TextFindIndex(const std::string& text, const std::string& find) {
     return ::TextFindIndex(text.c_str(), find.c_str());
 }
 
 /**
- * Get upper case version of provided string
+ * 获取大写版本的字符串
  */
 [[maybe_unused]] RLCPPAPI inline std::string TextToUpper(const std::string& text) {
     return ::TextToUpper(text.c_str());
 }
 
 /**
- * Get lower case version of provided string
+ * 获取小写版本的字符串
  */
 [[maybe_unused]] RLCPPAPI inline std::string TextToLower(const std::string& text) {
     return ::TextToLower(text.c_str());
 }
 
 /**
- * Get Pascal case notation version of provided string
+ * 获取 Pascal 大小写版本的字符串
  */
 [[maybe_unused]] RLCPPAPI inline std::string TextToPascal(const std::string& text) {
     return ::TextToPascal(text.c_str());
 }
 
 /**
- * Get integer value from text (negative values not supported)
+ * 从文本中获取整数值（不支持负值）
  */
 [[maybe_unused]] RLCPPAPI inline int TextToInteger(const std::string& text) {
     return ::TextToInteger(text.c_str());
@@ -434,4 +435,4 @@ TextReplace(const std::string& text, const std::string& replace, const std::stri
 
 } // namespace raylib
 
-#endif // RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_FUNCTIONS_HPP_

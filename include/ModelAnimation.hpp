@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_
-#define RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_
+// #define RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -10,7 +11,7 @@
 
 namespace raylib {
 /**
- * Model animation
+ * 模型动画
  */
 class ModelAnimation : public ::ModelAnimation {
 public:
@@ -30,7 +31,7 @@ public:
     ~ModelAnimation() { Unload(); }
 
     /**
-     * Load model animations from file
+     * 从文件加载模型动画
      */
     static std::vector<ModelAnimation> Load(const std::string& fileName) {
         int count = 0;
@@ -71,12 +72,12 @@ public:
     }
 
     /**
-     * Unload animation data
+     * 卸载动画数据
      */
     void Unload() { ::UnloadModelAnimation(*this); }
 
     /**
-     * Update model animation pose
+     * 更新模型动画姿态
      */
     ModelAnimation& Update(const ::Model& model, int frame) {
         ::UpdateModelAnimation(model, *this, frame);
@@ -84,7 +85,7 @@ public:
     }
 
     /**
-     * Update model animation mesh bone matrices (GPU skinning)
+     * 更新模型动画网格骨骼矩阵（GPU蒙皮）
      */
     ModelAnimation& UpdateBones(const ::Model& model, int frame) {
         ::UpdateModelAnimationBones(model, *this, frame);
@@ -92,7 +93,7 @@ public:
     }
 
     /**
-     * Check model animation skeleton match
+     * 检查模型动画骨骼是否匹配
      */
     bool IsValid(const ::Model& model) const { return ::IsModelAnimationValid(model, *this); }
 protected:
@@ -102,7 +103,7 @@ protected:
         bones = model.bones;
         framePoses = model.framePoses;
 
-        // Duplicate the name. TextCopy() uses the null terminator, which we ignore here.
+        // 复制名称。TextCopy() 使用空终止符，这里忽略。
         for (int i = 0; i < 32; i++) {
             name[i] = model.name[i];
         }
@@ -112,4 +113,4 @@ protected:
 
 using RModelAnimation = raylib::ModelAnimation;
 
-#endif // RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_

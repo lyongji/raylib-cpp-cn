@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MUSIC_HPP_
-#define RAYLIB_CPP_INCLUDE_MUSIC_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MUSIC_HPP_
+// #define RAYLIB_CPP_INCLUDE_MUSIC_HPP_
+#pragma once
 
 #include <string>
 
@@ -9,7 +10,7 @@
 
 namespace raylib {
 /**
- * Music stream type (audio file streaming from memory)
+ * 音乐流类型（从内存中流式传输音频文件）
  */
 class Music : public ::Music {
 public:
@@ -24,16 +25,16 @@ public:
     Music(const ::Music& music) { set(music); }
 
     /**
-     * Load music stream from file
+     * 从文件加载音乐流
      *
-     * @throws raylib::RaylibException Throws if the music failed to load.
+     * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
     Music(const std::string& fileName) { Load(fileName); }
 
     /**
-     * Load music stream from memory
+     * 从内存加载音乐流
      *
-     * @throws raylib::RaylibException Throws if the music failed to load.
+     * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
     Music(const std::string& fileType, unsigned char* data, int dataSize) { Load(fileType, data, dataSize); }
 
@@ -50,7 +51,7 @@ public:
     }
 
     /**
-     * Unload music stream
+     * 卸载音乐流
      */
     ~Music() { Unload(); }
 
@@ -85,12 +86,12 @@ public:
     }
 
     /**
-     * Unload music stream
+     * 卸载音乐流
      */
     void Unload() { ::UnloadMusicStream(*this); }
 
     /**
-     * Start music playing
+     * 开始播放音乐
      */
     Music& Play() {
         ::PlayMusicStream(*this);
@@ -98,7 +99,7 @@ public:
     }
 
     /**
-     * Updates buffers for music streaming
+     * 更新音乐流的缓冲区
      */
     Music& Update() {
         ::UpdateMusicStream(*this);
@@ -106,7 +107,7 @@ public:
     }
 
     /**
-     * Stop music playing
+     * 停止播放音乐
      */
     Music& Stop() {
         ::StopMusicStream(*this);
@@ -114,7 +115,7 @@ public:
     }
 
     /**
-     * Pause music playing
+     * 暂停播放音乐
      */
     Music& Pause() {
         ::PauseMusicStream(*this);
@@ -122,7 +123,7 @@ public:
     }
 
     /**
-     * Resume music playing
+     * 恢复播放音乐
      */
     Music& Resume() {
         ::ResumeMusicStream(*this);
@@ -130,7 +131,7 @@ public:
     }
 
     /**
-     * Seek music to a position (in seconds)
+     * 将音乐定位到指定位置（以秒为单位）
      */
     Music& Seek(float position) {
         SeekMusicStream(*this, position);
@@ -138,12 +139,12 @@ public:
     }
 
     /**
-     * Check if music is playing
+     * 检查音乐是否正在播放
      */
     bool IsPlaying() const { return ::IsMusicStreamPlaying(*this); }
 
     /**
-     * Set volume for music
+     * 设置音乐的音量
      */
     Music& SetVolume(float volume) {
         ::SetMusicVolume(*this, volume);
@@ -151,7 +152,7 @@ public:
     }
 
     /**
-     * Set pitch for music
+     * 设置音乐的音调
      */
     Music& SetPitch(float pitch) {
         ::SetMusicPitch(*this, pitch);
@@ -159,7 +160,7 @@ public:
     }
 
     /**
-     * Set pan for a music (0.5 is center)
+     * 设置音乐的声相（0.5 为中心）
      */
     Music& SetPan(float pan = 0.5f) {
         ::SetMusicPan(*this, pan);
@@ -167,43 +168,43 @@ public:
     }
 
     /**
-     * Get music time length (in seconds)
+     * 获取音乐的总时长（以秒为单位）
      */
     float GetTimeLength() const { return ::GetMusicTimeLength(*this); }
 
     /**
-     * Get current music time played (in seconds)
+     * 获取当前播放的音乐时间（以秒为单位）
      */
     float GetTimePlayed() const { return ::GetMusicTimePlayed(*this); }
 
     /**
-     * Load music stream from file
+     * 从文件加载音乐流
      *
-     * @throws raylib::RaylibException Throws if the music failed to load.
+     * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
     void Load(const std::string& fileName) {
         set(::LoadMusicStream(fileName.c_str()));
         if (!IsValid()) {
-            throw RaylibException(TextFormat("Failed to load Music from file: %s", fileName.c_str()));
+            throw RaylibException(TextFormat("未能从文件 %s 加载音乐", fileName.c_str()));
         }
     }
 
     /**
-     * Load music stream from memory
+     * 从内存加载音乐流
      *
-     * @throws raylib::RaylibException Throws if the music failed to load.
+     * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
     void Load(const std::string& fileType, unsigned char* data, int dataSize) {
         set(::LoadMusicStreamFromMemory(fileType.c_str(), data, dataSize));
         if (!IsValid()) {
-            throw RaylibException(TextFormat("Failed to load Music from %s file dat", fileType.c_str()));
+            throw RaylibException(TextFormat("未能从 %s 文件数据加载音乐", fileType.c_str()));
         }
     }
 
     /**
-     * Retrieve whether or not the Music has been loaded.
+     * 检查音乐是否已加载
      *
-     * @return True or false depending on whether the Music has been loaded.
+     * @return 如果音乐已加载，则返回 true，否则返回 false。
      */
     bool IsValid() const { return ::IsMusicValid(*this); }
 protected:
@@ -219,4 +220,4 @@ protected:
 
 using RMusic = raylib::Music;
 
-#endif // RAYLIB_CPP_INCLUDE_MUSIC_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MUSIC_HPP_

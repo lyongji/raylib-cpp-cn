@@ -1,8 +1,9 @@
 /**
- * C++ header to wrap raylib.h.
+ * 用于包装raylib.h的c++头文件。
  */
-#ifndef RAYLIB_CPP_INCLUDE_RAYLIB_HPP_
-#define RAYLIB_CPP_INCLUDE_RAYLIB_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_RAYLIB_HPP_
+// #define RAYLIB_CPP_INCLUDE_RAYLIB_HPP_
+#pragma once
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,6 +35,4 @@ extern "C" {
 }
 #endif
 
-#endif // RAYLIB_CPP_INCLUDE_RAYLIB_HPP_
-
-// #include "raylib.h"
+// #endif // RAYLIB_CPP_INCLUDE_RAYLIB_HPP_

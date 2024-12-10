@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_CAMERA3D_HPP_
-#define RAYLIB_CPP_INCLUDE_CAMERA3D_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_CAMERA3D_HPP_
+// #define RAYLIB_CPP_INCLUDE_CAMERA3D_HPP_
+#pragma once
 
 #include "./Vector3.hpp"
 #include "./raylib-cpp-utils.hpp"
@@ -7,21 +8,20 @@
 
 namespace raylib {
 /**
- * Camera type, defines a camera position/orientation in 3d space
+ * 相机类型，定义 3D 空间中的相机位置/方向
  */
 class Camera3D : public ::Camera3D {
 public:
     Camera3D(const ::Camera3D& camera) { set(camera); }
 
     /**
-     * Create a new Camera3D.
+     * 创建一个新的 Camera3D。
      *
-     * @param position Camera position
-     * @param target Camera target it looks-at
-     * @param up Camera up vector (rotation over its axis)
-     * @param fovy Camera field-of-view apperture in Y (degrees) in perspective, used as near plane width in
-     * orthographic
-     * @param projection Camera projection: CAMERA_PERSPECTIVE or CAMERA_ORTHOGRAPHIC
+     * @param position 相机位置
+     * @param target 相机目标点（相机朝向）
+     * @param up 相机上向量（绕其轴旋转）
+     * @param fovy 相机视野在 Y 轴上的角度（透视模式下），正交模式下用作近裁剪面的宽度
+     * @param projection 相机投影模式：CAMERA_PERSPECTIVE 或 CAMERA_ORTHOGRAPHIC
      */
     Camera3D(
         ::Vector3 position,
@@ -45,7 +45,7 @@ public:
     }
 
     /**
-     * Initializes 3D mode with custom camera (3D)
+     * 使用自定义相机初始化 3D 模式
      */
     Camera3D& BeginMode() {
         ::BeginMode3D(*this);
@@ -53,7 +53,7 @@ public:
     }
 
     /**
-     * Ends 3D mode and returns to default 2D orthographic mode
+     * 结束 3D 模式并返回默认的 2D 正交模式
      */
     Camera3D& EndMode() {
         ::EndMode3D();
@@ -61,12 +61,12 @@ public:
     }
 
     /**
-     * Get camera transform matrix (view matrix)
+     * 获取相机的变换矩阵（视图矩阵）
      */
     Matrix GetMatrix() const { return ::GetCameraMatrix(*this); }
 
     /**
-     * Update camera position for selected mode
+     * 更新相机位置（根据选择的模式）
      */
     Camera3D& Update(int mode) {
         ::UpdateCamera(this, mode);
@@ -74,7 +74,7 @@ public:
     }
 
     /**
-     * Update camera movement/rotation
+     * 更新相机的移动/旋转
      */
     Camera3D& Update(::Vector3 movement, ::Vector3 rotation, float zoom = 1.0f) {
         ::UpdateCameraPro(this, movement, rotation, zoom);
@@ -82,24 +82,24 @@ public:
     }
 
     /**
-     * Returns a ray trace from mouse position
+     * 从鼠标位置返回一条射线
      */
     Ray GetMouseRay(::Vector2 mousePosition) const { return ::GetMouseRay(mousePosition, *this); }
 
     /**
-     * Returns the screen space position for a 3d world space position
+     * 返回 3D 世界空间位置对应的屏幕空间位置
      */
     Vector2 GetWorldToScreen(::Vector3 position) const { return ::GetWorldToScreen(position, *this); }
 
     /**
-     * Get a ray trace from screen position (i.e mouse) in a viewport
+     * 从屏幕位置（例如鼠标）在视口中的射线
      */
     Ray GetScreenToWorldRay(::Vector2 position, int width, int height) {
         return ::GetScreenToWorldRayEx(position, *this, width, height);
     }
 
     /**
-     * Draw a billboard texture.
+     * 绘制一个公告板纹理
      */
     void
     DrawBillboard(const ::Texture2D& texture, ::Vector3 center, float size, ::Color tint = {255, 255, 255, 255}) const {
@@ -107,7 +107,7 @@ public:
     }
 
     /**
-     * Draw a billboard texture defined by source.
+     * 绘制一个由源矩形定义的公告板纹理
      */
     void DrawBillboard(
         const ::Texture2D& texture,
@@ -134,4 +134,4 @@ using Camera = Camera3D;
 using RCamera = raylib::Camera;
 using RCamera3D = raylib::Camera3D;
 
-#endif // RAYLIB_CPP_INCLUDE_CAMERA3D_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_CAMERA3D_HPP_

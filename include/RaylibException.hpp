@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_
-#define RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_
+// #define RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_
+#pragma once
 
 #include <stdexcept>
 #include <string>
@@ -8,23 +9,23 @@
 
 namespace raylib {
 /**
- * Exception used for most raylib-related exceptions.
+ * 用于大多数 raylib 相关异常的异常类。
  */
 class RaylibException : public std::runtime_error {
 public:
     /**
-     * Construct a runtime exception with the given message.
+     * 使用给定的消息构造一个运行时异常。
      *
-     * @param message The message to provide for the exception.
+     * @param message 提供给异常的消息。
      */
     RaylibException(std::string message) throw() : std::runtime_error(message) {
-        // Nothing
+        // 无操作
     }
 
     /**
-     * Outputs the exception message to TraceLog().
+     * 将异常消息输出到 TraceLog()。
      *
-     * @param logLevel The output status to use when outputing.
+     * @param logLevel 输出时使用的日志级别。
      */
     void TraceLog(int logLevel = LOG_ERROR) { ::TraceLog(logLevel, std::runtime_error::what()); }
 };
@@ -33,4 +34,4 @@ public:
 
 using RRaylibException = raylib::RaylibException;
 
-#endif // RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_

@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_
-#define RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_
+// #define RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_
+#pragma once
 
 #include "./RaylibException.hpp"
 #include "./raylib-cpp-utils.hpp"
@@ -7,21 +8,21 @@
 
 namespace raylib {
 /**
- * AutomationEventList management functions
+ * 自动化事件列表管理函数
  */
 class AutomationEventList : public ::AutomationEventList {
 public:
     AutomationEventList(const ::AutomationEventList& automationEventList) { set(automationEventList); }
 
     /**
-     * Load an empty automation events list.
+     * 加载一个空的自动化事件列表。
      */
     AutomationEventList() { set(::LoadAutomationEventList(0)); }
 
     /**
-     * Load automation events list from file.
+     * 从文件加载自动化事件列表。
      *
-     * @param fileName The file path to load the automation events list from.
+     * @param fileName 要加载自动化事件列表的文件路径。
      */
     AutomationEventList(const char* fileName) { Load(fileName); }
 
@@ -64,27 +65,27 @@ public:
     }
 
     /**
-     * Load audio stream (to stream raw audio pcm data)
+     * 加载音频流（用于流式传输原始音频 PCM 数据）
      *
-     * @throws raylib::RaylibException Throws if the AutomationEventList failed to load.
+     * @throws raylib::RaylibException 如果自动化事件列表加载失败，则抛出异常。
      */
     void Load(const char* fileName) {
         Unload();
         set(::LoadAutomationEventList(fileName));
         if (!IsValid()) {
-            throw RaylibException("Failed to load automation event list");
+            throw RaylibException("自动化事件列表加载失败");
         }
     }
 
     /**
-     * Update audio stream buffers with data
+     * 更新音频流缓冲区数据
      */
     void Unload() {
         if (!IsValid()) {
             return;
         }
 
-// The function signature of UnloadAutomationEventList() changes from raylib 5.0.
+// UnloadAutomationEventList() 函数的签名在 raylib 5.0 版本中有所变化。
 #if RAYLIB_VERSION_MAJOR == 5
 #if RAYLIB_VERSION_MINOR == 0
         ::UnloadAutomationEventList(this);
@@ -136,4 +137,4 @@ protected:
 
 using RAutomationEventList = raylib::AutomationEventList;
 
-#endif // RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_

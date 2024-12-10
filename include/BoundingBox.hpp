@@ -1,24 +1,25 @@
-#ifndef RAYLIB_CPP_INCLUDE_BOUNDINGBOX_HPP_
-#define RAYLIB_CPP_INCLUDE_BOUNDINGBOX_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_BOUNDINGBOX_HPP_
+// #define RAYLIB_CPP_INCLUDE_BOUNDINGBOX_HPP_
+#pragma once
 
 #include "./raylib-cpp-utils.hpp"
 #include "./raylib.hpp"
 
 namespace raylib {
 /**
- * Bounding box type
+ * 包围盒类型
  */
 class BoundingBox : public ::BoundingBox {
 public:
     /*
-     * Copy a bounding box from another bounding box.
+     * 从另一个包围盒复制一个包围盒。
      */
     BoundingBox(const ::BoundingBox& box) : ::BoundingBox{box.min, box.max} {
-        // Nothing.
+        // 无操作
     }
 
     /**
-     * Compute mesh bounding box limits
+     * 计算网格的包围盒限制
      */
     BoundingBox(const ::Mesh& mesh) { set(::GetMeshBoundingBox(mesh)); }
 
@@ -34,27 +35,27 @@ public:
     }
 
     /**
-     * Draw a bounding box with wires
+     * 用线条绘制一个包围盒
      */
     void Draw(::Color color = {255, 255, 255, 255}) const { ::DrawBoundingBox(*this, color); }
 
     /**
-     * Detect collision between two boxes
+     * 检测两个包围盒之间的碰撞
      */
     bool CheckCollision(const ::BoundingBox& box2) const { return CheckCollisionBoxes(*this, box2); }
 
     /**
-     * Detect collision between box and sphere
+     * 检测包围盒与球体之间的碰撞
      */
     bool CheckCollision(::Vector3 center, float radius) const { return CheckCollisionBoxSphere(*this, center, radius); }
 
     /**
-     * Detect collision between ray and bounding box
+     * 检测射线与包围盒之间的碰撞
      */
     bool CheckCollision(const ::Ray& ray) const { return GetRayCollisionBox(ray, *this).hit; }
 
     /**
-     * Get collision information between ray and bounding box
+     * 获取射线与包围盒之间的碰撞信息
      */
     RayCollision GetCollision(const ::Ray& ray) const { return GetRayCollisionBox(ray, *this); }
 protected:
@@ -71,4 +72,4 @@ protected:
 
 using RBoundingBox = raylib::BoundingBox;
 
-#endif // RAYLIB_CPP_INCLUDE_BOUNDINGBOX_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_BOUNDINGBOX_HPP_

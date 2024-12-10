@@ -1,8 +1,9 @@
 /**
- * C++ header to wrap raymath.h.
+ * 用于封装 raymath.h 的 C++ 头文件。
  */
-#ifndef RAYLIB_CPP_INCLUDE_RAYMATH_HPP_
-#define RAYLIB_CPP_INCLUDE_RAYMATH_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_RAYMATH_HPP_
+// #define RAYLIB_CPP_INCLUDE_RAYMATH_HPP_
+#pragma once
 
 #ifdef __cplusplus
 extern "C" {
@@ -12,7 +13,7 @@ extern "C" {
 #define RAYMATH_STATIC_INLINE
 #endif
 #ifdef __GNUC__
-#pragma GCC diagnostic push // These throw a warnings on visual studio, need to check if __GNUC__ is defined to use it.
+#pragma GCC diagnostic push // 这些在 Visual Studio 上会引发警告，需要检查是否定义了 __GNUC__ 以使用它。
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 #define RAYMATH_DISABLE_CPP_OPERATORS
@@ -25,4 +26,4 @@ extern "C" {
 }
 #endif
 
-#endif // RAYLIB_CPP_INCLUDE_RAYMATH_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_RAYMATH_HPP_

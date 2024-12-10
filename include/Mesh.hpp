@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MESH_HPP_
-#define RAYLIB_CPP_INCLUDE_MESH_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MESH_HPP_
+// #define RAYLIB_CPP_INCLUDE_MESH_HPP_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -12,9 +13,9 @@
 
 namespace raylib {
 /**
- * Vertex data defining a mesh
+ * 定义网格的顶点数据
  *
- * The Mesh will be unloaded on object destruction.
+ * 网格将在对象销毁时自动卸载。
  *
  * @see raylib::MeshUnmanaged
  */
@@ -23,17 +24,17 @@ public:
     using MeshUnmanaged::MeshUnmanaged;
 
     /**
-     * Explicitly forbid the copy constructor.
+     * 显式禁止复制构造函数。
      */
     Mesh(const Mesh&) = delete;
 
     /**
-     * Explicitly forbid copy assignment.
+     * 显式禁止复制赋值。
      */
     Mesh& operator=(const Mesh&) = delete;
 
     /**
-     * Move constructor.
+     * 移动构造函数。
      */
     Mesh(Mesh&& other) {
         set(other);
@@ -88,4 +89,4 @@ public:
 
 using RMesh = raylib::Mesh;
 
-#endif // RAYLIB_CPP_INCLUDE_MESH_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MESH_HPP_

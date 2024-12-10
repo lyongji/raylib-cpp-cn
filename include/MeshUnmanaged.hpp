@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_
-#define RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_
+// #define RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -12,16 +13,16 @@
 namespace raylib {
 
 /**
- * Vertex data defining a mesh, not managed by C++ RAII.
+ * 定义网格的顶点数据，不受C++ RAII管理。
  *
- * Make sure to Unload() this if needed, otherwise use raylib::Mesh.
+ * 如果需要，请确保调用Unload()，否则请使用raylib::Mesh。
  *
  * @see raylib::Mesh
  */
 class MeshUnmanaged : public ::Mesh {
 public:
     /**
-     * Default texture constructor.
+     * 默认构造函数。
      */
     MeshUnmanaged() {
         vertexCount = 0;
@@ -46,7 +47,7 @@ public:
     MeshUnmanaged(::Mesh&& mesh) { set(mesh); }
 
     /**
-     * Load meshes from model file
+     * 从模型文件加载网格
      */
     // static std::vector<Mesh> Load(const std::string& fileName) {
     //    int count = 0;
@@ -55,63 +56,63 @@ public:
     // }
 
     /**
-     * Generate polygonal mesh
+     * 生成多边形网格
      */
     static ::Mesh Poly(int sides, float radius) { return ::GenMeshPoly(sides, radius); }
 
     /**
-     * Generate plane mesh (with subdivisions)
+     * 生成平面网格（带细分）
      */
     static ::Mesh Plane(float width, float length, int resX, int resZ) {
         return ::GenMeshPlane(width, length, resX, resZ);
     }
 
     /**
-     * Generate cuboid mesh
+     * 生成立方体网格
      */
     static ::Mesh Cube(float width, float height, float length) { return ::GenMeshCube(width, height, length); }
 
     /**
-     * Generate sphere mesh (standard sphere)
+     * 生成球体网格（标准球体）
      */
     static ::Mesh Sphere(float radius, int rings, int slices) { return ::GenMeshSphere(radius, rings, slices); }
 
     /**
-     * Generate half-sphere mesh (no bottom cap)
+     * 生成半球体网格（无底部盖子）
      */
     static ::Mesh HemiSphere(float radius, int rings, int slices) { return ::GenMeshHemiSphere(radius, rings, slices); }
 
     /**
-     * Generate cylinder mesh
+     * 生成圆柱体网格
      */
     static ::Mesh Cylinder(float radius, float height, int slices) { return ::GenMeshCylinder(radius, height, slices); }
 
     /**
-     * Generate cone/pyramid mesh
+     * 生成圆锥/棱锥网格
      */
     static ::Mesh Cone(float radius, float height, int slices) { return ::GenMeshCone(radius, height, slices); }
 
     /**
-     * Generate torus mesh
+     * 生成圆环网格
      */
     static ::Mesh Torus(float radius, float size, int radSeg, int sides) {
         return ::GenMeshTorus(radius, size, radSeg, sides);
     }
 
     /**
-     * Generate trefoil knot mesh
+     * 生成三叶结网格
      */
     static ::Mesh Knot(float radius, float size, int radSeg, int sides) {
         return ::GenMeshKnot(radius, size, radSeg, sides);
     }
 
     /**
-     * Generate heightmap mesh from image data
+     * 从图像数据生成高度图网格
      */
     static ::Mesh Heightmap(const ::Image& heightmap, ::Vector3 size) { return ::GenMeshHeightmap(heightmap, size); }
 
     /**
-     * Generate cubes-based map mesh from image data
+     * 从图像数据生成基于立方体的地图网格
      */
     static ::Mesh Cubicmap(const ::Image& cubicmap, ::Vector3 cubeSize) {
         return ::GenMeshCubicmap(cubicmap, cubeSize);
@@ -139,7 +140,7 @@ public:
     }
 
     /**
-     * Unload mesh from memory (RAM and/or VRAM)
+     * 从内存中卸载网格（RAM和/或VRAM）
      */
     void Unload() {
         if (vboId != nullptr) {
@@ -149,33 +150,33 @@ public:
     }
 
     /**
-     * Upload mesh vertex data to GPU (VRAM)
+     * 将网格顶点数据上传到GPU（VRAM）
      */
     void Upload(bool dynamic = false) { ::UploadMesh(this, dynamic); }
 
     /**
-     * Upload mesh vertex data to GPU (VRAM)
+     * 更新网格缓冲区数据
      */
     void UpdateBuffer(int index, void* data, int dataSize, int offset = 0) {
         ::UpdateMeshBuffer(*this, index, data, dataSize, offset);
     }
 
     /**
-     * Draw a 3d mesh with material and transform
+     * 使用材质和变换矩阵绘制3D网格
      */
     void Draw(const ::Material& material, const ::Matrix& transform) const { ::DrawMesh(*this, material, transform); }
 
     /**
-     * Draw multiple mesh instances with material and different transforms
+     * 使用材质和不同的变换矩阵绘制多个网格实例
      */
     void Draw(const ::Material& material, ::Matrix* transforms, int instances) const {
         ::DrawMeshInstanced(*this, material, transforms, instances);
     }
 
     /**
-     * Export mesh data to file
+     * 将网格数据导出到文件
      *
-     * @throws raylib::RaylibException Throws if failed to export the Mesh.
+     * @throws raylib::RaylibException 如果导出网格失败，则抛出异常。
      */
     void Export(const std::string& fileName) {
         if (!::ExportMesh(*this, fileName.c_str())) {
@@ -184,9 +185,9 @@ public:
     }
 
     /**
-     * Export mesh as code file (.h) defining multiple arrays of vertex attributes
+     * 将网格导出为代码文件（.h），定义多个顶点属性数组
      *
-     * @throws raylib::RaylibException Throws if failed to export the Mesh.
+     * @throws raylib::RaylibException 如果导出网格失败，则抛出异常。
      */
     void ExportCode(const std::string& fileName) {
         if (!::ExportMeshAsCode(*this, fileName.c_str())) {
@@ -195,17 +196,17 @@ public:
     }
 
     /**
-     * Compute mesh bounding box limits
+     * 计算网格的包围盒限制
      */
     raylib::BoundingBox BoundingBox() const { return ::GetMeshBoundingBox(*this); }
 
     /**
-     * Compute mesh bounding box limits
+     * 计算网格的包围盒限制
      */
     operator raylib::BoundingBox() { return BoundingBox(); }
 
     /**
-     * Compute mesh tangents
+     * 计算网格的切线
      */
     Mesh& GenTangents() {
         ::GenMeshTangents(this);
@@ -213,20 +214,19 @@ public:
     }
 
     /**
-     * Load model from generated mesh
+     * 从生成的网格加载模型
      */
     raylib::Model LoadModelFrom() const { return ::LoadModelFromMesh(*this); }
 
     /**
-     * Load model from generated mesh
+     * 从生成的网格加载模型
      */
     operator raylib::Model() { return ::LoadModelFromMesh(*this); }
 
     /**
-     * Returns whether or not the Mesh is valid.
+     * 返回网格是否有效
      */
     bool IsValid() { return ::IsModelValid(*this); }
-
 protected:
     void set(const ::Mesh& mesh) {
         vertexCount = mesh.vertexCount;
@@ -250,4 +250,4 @@ protected:
 
 using RMeshUnmanaged = raylib::MeshUnmanaged;
 
-#endif // RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_

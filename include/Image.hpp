@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_IMAGE_HPP_
-#define RAYLIB_CPP_INCLUDE_IMAGE_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_IMAGE_HPP_
+// #define RAYLIB_CPP_INCLUDE_IMAGE_HPP_
+#pragma once
 
 #include <string>
 
@@ -10,9 +11,9 @@
 
 namespace raylib {
 /**
- * Image type, bpp always RGBA (32bit)
+ * 图像类型，bpp 始终为 RGBA（32 位）
  *
- * Data stored in CPU memory (RAM)
+ * 数据存储在 CPU 内存（RAM）中
  */
 class Image : public ::Image {
 public:
@@ -23,24 +24,24 @@ public:
         int mipmaps = 1,
         int format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8)
         : ::Image{data, width, height, mipmaps, format} {
-        // Nothing.
+        // 无操作
     }
 
     Image(const ::Image& image) { set(image); }
 
     /**
-     * Load an image from the given file.
+     * 从给定文件加载图像。
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see Load()
      */
     Image(const std::string& fileName) { Load(fileName); }
 
     /**
-     * Load a raw image from the given file, with the provided width, height, and formats.
+     * 从给定文件加载原始图像，带有提供的宽度、高度和格式。
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see LoadRaw()
      */
@@ -49,27 +50,27 @@ public:
     }
 
     /**
-     * Load an animation image from the given file.
+     * 从给定文件加载动画图像。
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see LoadAnim()
      */
     Image(const std::string& fileName, int* frames) { Load(fileName, frames); }
 
     /**
-     * Load an image from the given file.
+     * 从给定文件加载图像。
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      */
     Image(const std::string& fileType, const unsigned char* fileData, int dataSize) {
         Load(fileType, fileData, dataSize);
     }
 
     /**
-     * Load an image from the given file.
+     * 从给定文件加载图像。
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      */
     Image(const ::Texture2D& texture) { Load(texture); }
 
@@ -114,33 +115,33 @@ public:
     }
 
     /**
-     * Get pixel data from screen buffer and return an Image (screenshot)
+     * 从屏幕缓冲区获取像素数据并返回图像（截图）
      */
     static ::Image LoadFromScreen() { return ::LoadImageFromScreen(); }
 
     /**
-     * Generate image: plain color
+     * 生成纯色图像
      */
     static ::Image Color(int width, int height, ::Color color = {255, 255, 255, 255}) {
         return ::GenImageColor(width, height, color);
     }
 
     /**
-     * Generate image: linear gradient
+     * 生成线性渐变图像
      */
     static ::Image GradientLinear(int width, int height, int direction, ::Color start, ::Color end) {
         return ::GenImageGradientLinear(width, height, direction, start, end);
     }
 
     /**
-     * Generate image: radial gradient
+     * 生成径向渐变图像
      */
     static ::Image GradientRadial(int width, int height, float density, ::Color inner, ::Color outer) {
         return ::GenImageGradientRadial(width, height, density, inner, outer);
     }
 
     /**
-     * Generate image: checked
+     * 生成棋盘图像
      */
     static ::Image Checked(
         int width,
@@ -153,19 +154,19 @@ public:
     }
 
     /**
-     * Generate image: white noise
+     * 生成白噪声图像
      */
     static ::Image WhiteNoise(int width, int height, float factor) {
         return ::GenImageWhiteNoise(width, height, factor);
     }
 
     /**
-     * Generate image: cellular algorithm. Bigger tileSize means bigger cells
+     * 生成细胞图像。tileSize 越大，单元格越大
      */
     static ::Image Cellular(int width, int height, int tileSize) { return ::GenImageCellular(width, height, tileSize); }
 
     /**
-     * Get clipboard image content.
+     * 获取剪贴板图像内容。
      */
     static ::Image GetClipboard() { return ::GetClipboardImage(); }
 
@@ -205,9 +206,9 @@ public:
     }
 
     /**
-     * Load image from file into CPU memory (RAM)
+     * 从文件加载图像到 CPU 内存（RAM）
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see ::LoadImage()
      */
@@ -219,9 +220,9 @@ public:
     }
 
     /**
-     * Load image from RAW file data.
+     * 从 RAW 文件数据加载图像。
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see ::LoadImageRaw()
      */
@@ -233,9 +234,9 @@ public:
     }
 
     /**
-     * Load image sequence from file (frames appended to image.data).
+     * 从文件加载图像序列（帧附加到 image.data）。
      *
-     * @throws raylib::RaylibException Thrown if the image animation to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see ::LoadImageAnim()
      */
@@ -247,9 +248,9 @@ public:
     }
 
     /**
-     * Load image from memory buffer, fileType refers to extension: i.e. "png".
+     * 从内存缓冲区加载图像，fileType 指的是扩展名：例如 "png"。
      *
-     * @throws raylib::RaylibException Thrown if the image animation to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see ::LoadImageFromMemory()
      */
@@ -261,9 +262,9 @@ public:
     }
 
     /**
-     * Load an image from the given file.
+     * 从给定文件加载图像。
      *
-     * @throws raylib::RaylibException Thrown if the image animation to load from the file.
+     * @throws raylib::RaylibException 如果图像加载失败则抛出异常。
      *
      * @see ::LoadImageFromTexture()
      */
@@ -275,7 +276,7 @@ public:
     }
 
     /**
-     * Unload image from CPU memory (RAM)
+     * 从 CPU 内存（RAM）卸载图像
      */
     void Unload() {
         if (data != nullptr) {
@@ -285,9 +286,9 @@ public:
     }
 
     /**
-     * Export image data to file, returns true on success
+     * 将图像数据导出到文件，成功返回 true
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像导出失败则抛出异常。
      */
     void Export(const std::string& fileName) const {
         if (!::ExportImage(*this, fileName.c_str())) {
@@ -296,16 +297,16 @@ public:
     }
 
     /**
-     * Export image to memory buffer
+     * 将图像导出到内存缓冲区
      */
     unsigned char* ExportToMemory(const char* fileType, int* fileSize) {
         return ::ExportImageToMemory(*this, fileType, fileSize);
     }
 
     /**
-     * Export image as code file defining an array of bytes, returns true on success
+     * 将图像导出为代码文件，定义一个字节数组，成功返回 true
      *
-     * @throws raylib::RaylibException Thrown if the image failed to load from the file.
+     * @throws raylib::RaylibException 如果图像导出失败则抛出异常。
      */
     void ExportAsCode(const std::string& fileName) const {
         if (!::ExportImageAsCode(*this, fileName.c_str())) {
@@ -320,7 +321,7 @@ public:
     GETTER(int, Format, format)
 
     /**
-     * Set the width of the image canvas.
+     * 设置图像画布的宽度。
      *
      * @see ResizeCanvas
      */
@@ -329,7 +330,7 @@ public:
     }
 
     /**
-     * Set the height of the image canvas.
+     * 设置图像画布的高度。
      *
      * @see ResizeCanvas
      */
@@ -338,22 +339,22 @@ public:
     }
 
     /**
-     * Retrieve the width and height of the image.
+     * 获取图像的宽度和高度。
      */
     ::Vector2 GetSize() const { return {static_cast<float>(width), static_cast<float>(height)}; }
 
     /**
-     * Create an image duplicate (useful for transformations)
+     * 创建图像的副本（用于变换）
      */
     ::Image Copy() const { return ::ImageCopy(*this); }
 
     /**
-     * Create an image from another image piece
+     * 从另一个图像创建图像片段
      */
     ::Image FromImage(::Rectangle rec) const { return ::ImageFromImage(*this, rec); }
 
     /**
-     * Convert image data to desired format
+     * 将图像数据转换为所需格式
      */
     Image& Format(int newFormat) {
         ::ImageFormat(this, newFormat);
@@ -361,7 +362,7 @@ public:
     }
 
     /**
-     * Convert image to POT (power-of-two)
+     * 将图像转换为 POT（2 的幂）
      */
     Image& ToPOT(::Color fillColor) {
         ::ImageToPOT(this, fillColor);
@@ -369,7 +370,7 @@ public:
     }
 
     /**
-     * Crop an image to area defined by a rectangle
+     * 根据矩形裁剪图像
      */
     Image& Crop(::Rectangle crop) {
         ::ImageCrop(this, crop);
@@ -377,7 +378,7 @@ public:
     }
 
     /**
-     * Crop image depending on alpha value
+     * 根据 alpha 值裁剪图像
      */
     Image& AlphaCrop(float threshold) {
         ::ImageAlphaCrop(this, threshold);
@@ -385,7 +386,7 @@ public:
     }
 
     /**
-     * Clear alpha channel to desired color
+     * 清除 alpha 通道为所需颜色
      */
     Image& AlphaClear(::Color color, float threshold) {
         ::ImageAlphaClear(this, color, threshold);
@@ -393,7 +394,7 @@ public:
     }
 
     /**
-     * Apply alpha mask to image
+     * 应用 alpha 蒙版到图像
      */
     Image& AlphaMask(const ::Image& alphaMask) {
         ::ImageAlphaMask(this, alphaMask);
@@ -401,7 +402,7 @@ public:
     }
 
     /**
-     * Premultiply alpha channel
+     * 预乘 alpha 通道
      */
     Image& AlphaPremultiply() {
         ::ImageAlphaPremultiply(this);
@@ -409,17 +410,17 @@ public:
     }
 
     /**
-     * Crop an image to a new given width and height.
+     * 裁剪图像为新的给定宽度和高度。
      */
     Image& Crop(int newWidth, int newHeight) { return Crop(0, 0, newWidth, newHeight); }
 
     /**
-     * Crop an image to a new given width and height based on a vector.
+     * 根据向量裁剪图像为新的给定宽度和高度。
      */
     Image& Crop(::Vector2 size) { return Crop(0, 0, static_cast<int>(size.x), static_cast<int>(size.y)); }
 
     /**
-     * Crop an image to area defined by a rectangle
+     * 根据矩形裁剪图像
      */
     Image& Crop(int offsetX, int offsetY, int newWidth, int newHeight) {
         ::Rectangle rect{
@@ -432,7 +433,7 @@ public:
     }
 
     /**
-     * Resize and image to new size
+     * 调整图像大小为新尺寸
      */
     Image& Resize(int newWidth, int newHeight) {
         ::ImageResize(this, newWidth, newHeight);
@@ -440,7 +441,7 @@ public:
     }
 
     /**
-     * Resize and image to new size using Nearest-Neighbor scaling algorithm
+     * 使用最近邻算法调整图像大小为新尺寸
      */
     Image& ResizeNN(int newWidth, int newHeight) {
         ::ImageResizeNN(this, newWidth, newHeight);
@@ -448,7 +449,7 @@ public:
     }
 
     /**
-     * Resize canvas and fill with color
+     * 调整画布大小并填充颜色
      */
     Image&
     ResizeCanvas(int newWidth, int newHeight, int offsetX = 0, int offsetY = 0, ::Color color = {255, 255, 255, 255}) {
@@ -457,7 +458,7 @@ public:
     }
 
     /**
-     * Generate all mipmap levels for a provided image
+     * 为提供的图像生成所有 mipmap 级别
      */
     Image& Mipmaps() {
         ::ImageMipmaps(this);
@@ -465,7 +466,7 @@ public:
     }
 
     /**
-     * Dither image data to 16bpp or lower (Floyd-Steinberg dithering)
+     * 将图像数据抖动为 16bpp 或更低（Floyd-Steinberg 抖动）
      */
     Image& Dither(int rBpp, int gBpp, int bBpp, int aBpp) {
         ::ImageDither(this, rBpp, gBpp, bBpp, aBpp);
@@ -473,7 +474,7 @@ public:
     }
 
     /**
-     * Flip image vertically
+     * 垂直翻转图像
      */
     Image& FlipVertical() {
         ::ImageFlipVertical(this);
@@ -481,7 +482,7 @@ public:
     }
 
     /**
-     * Flip image horizontally
+     * 水平翻转图像
      */
     Image& FlipHorizontal() {
         ::ImageFlipHorizontal(this);
@@ -489,7 +490,7 @@ public:
     }
 
     /**
-     * Rotate image by input angle in degrees (-359 to 359)
+     * 按输入角度（-359 到 359）旋转图像
      */
     Image& Rotate(int degrees) {
         ::ImageRotate(this, degrees);
@@ -497,7 +498,7 @@ public:
     }
 
     /**
-     * Rotate image clockwise 90deg
+     * 顺时针旋转图像 90 度
      */
     Image& RotateCW() {
         ::ImageRotateCW(this);
@@ -505,7 +506,7 @@ public:
     }
 
     /**
-     * Rotate image counter-clockwise 90deg
+     * 逆时针旋转图像 90 度
      */
     Image& RotateCCW() {
         ::ImageRotateCCW(this);
@@ -513,7 +514,7 @@ public:
     }
 
     /**
-     * Modify image color: tint
+     * 修改图像颜色：色调
      */
     Image& ColorTint(::Color color = {255, 255, 255, 255}) {
         ::ImageColorTint(this, color);
@@ -521,7 +522,7 @@ public:
     }
 
     /**
-     * Modify image color: invert
+     * 修改图像颜色：反转
      */
     Image& ColorInvert() {
         ::ImageColorInvert(this);
@@ -529,7 +530,7 @@ public:
     }
 
     /**
-     * Modify image color: grayscale
+     * 修改图像颜色：灰度
      */
     Image& ColorGrayscale() {
         ::ImageColorGrayscale(this);
@@ -537,9 +538,9 @@ public:
     }
 
     /**
-     * Modify image color: contrast
+     * 修改图像颜色：对比度
      *
-     * @param contrast Contrast values between -100 and 100
+     * @param contrast 对比度值在 -100 到 100 之间
      */
     Image& ColorContrast(float contrast) {
         ::ImageColorContrast(this, contrast);
@@ -547,9 +548,9 @@ public:
     }
 
     /**
-     * Modify image color: brightness
+     * 修改图像颜色：亮度
      *
-     * @param brightness Brightness values between -255 and 255
+     * @param brightness 亮度值在 -255 到 255 之间
      */
     Image& ColorBrightness(int brightness) {
         ::ImageColorBrightness(this, brightness);
@@ -557,7 +558,7 @@ public:
     }
 
     /**
-     * Modify image color: replace color
+     * 修改图像颜色：替换颜色
      */
     Image& ColorReplace(::Color color, ::Color replace) {
         ::ImageColorReplace(this, color, replace);
@@ -565,26 +566,26 @@ public:
     }
 
     /**
-     * Get image alpha border rectangle
+     * 获取图像 alpha 边框矩形
      *
-     * @param threshold Threshold is defined as a percentatge: 0.0f -> 1.0f
+     * @param threshold 阈值定义为百分比：0.0f -> 1.0f
      */
     Rectangle GetAlphaBorder(float threshold) const { return ::GetImageAlphaBorder(*this, threshold); }
 
     /**
-     * Get image pixel color at (x, y) position
+     * 获取图像在 (x, y) 位置的像素颜色
      */
     raylib::Color GetColor(int x = 0, int y = 0) const { return ::GetImageColor(*this, x, y); }
 
     /**
-     * Get image pixel color at vector position
+     * 获取图像在向量位置的像素颜色
      */
     raylib::Color GetColor(::Vector2 position) const {
         return ::GetImageColor(*this, static_cast<int>(position.x), static_cast<int>(position.y));
     }
 
     /**
-     * Clear image background with given color
+     * 用给定颜色清除图像背景
      */
     Image& ClearBackground(::Color color = {0, 0, 0, 255}) {
         ::ImageClearBackground(this, color);
@@ -592,7 +593,7 @@ public:
     }
 
     /**
-     * Draw pixel within an image
+     * 在图像中绘制像素
      */
     void DrawPixel(int posX, int posY, ::Color color = {255, 255, 255, 255}) {
         ::ImageDrawPixel(this, posX, posY, color);
@@ -611,7 +612,7 @@ public:
     }
 
     /**
-     * Description: Draw a line defining thickness within an image
+     * 在图像中绘制带有厚度的线条
      */
     void DrawLine(::Vector2 start, ::Vector2 end, int thick, ::Color color = {255, 255, 255, 255}) {
         ImageDrawLineEx(this, start, end, thick, color);
@@ -641,7 +642,7 @@ public:
         ::ImageDrawRectangleLines(this, rec, thick, color);
     }
 
-    // TODO: Add ImageDrawTriangle()
+    // TODO: 添加 ImageDrawTriangle()
 
     void Draw(const ::Image& src, ::Rectangle srcRec, ::Rectangle dstRec, ::Color tint = {255, 255, 255, 255}) {
         ::ImageDraw(this, src, srcRec, dstRec, tint);
@@ -690,71 +691,69 @@ public:
     }
 
     /**
-     * Load color data from image as a Color array (RGBA - 32bit)
+     * 从图像加载颜色数据为 Color 数组（RGBA - 32 位）
      */
     ::Color* LoadColors() const { return ::LoadImageColors(*this); }
 
     /**
-     * Load colors palette from image as a Color array (RGBA - 32bit)
+     * 从图像加载颜色调色板为 Color 数组（RGBA - 32 位）
      */
     ::Color* LoadPalette(int maxPaletteSize, int* colorsCount) const {
         return ::LoadImagePalette(*this, maxPaletteSize, colorsCount);
     }
 
     /**
-     * Unload color data loaded with LoadImageColors()
+     * 卸载使用 LoadImageColors() 加载的颜色数据
      */
     void UnloadColors(::Color* colors) const { ::UnloadImageColors(colors); }
 
     /**
-     * Unload colors palette loaded with LoadImagePalette()
+     * 卸载使用 LoadImagePalette() 加载的颜色调色板
      */
     void UnloadPalette(::Color* colors) const { ::UnloadImagePalette(colors); }
 
     /**
-     * Load texture from image data.
+     * 从图像数据加载纹理
      */
     ::Texture2D LoadTexture() const { return ::LoadTextureFromImage(*this); }
 
     /**
-     * Loads a texture from the image data.
+     * 从图像数据加载纹理
      *
      * @see LoadTexture()
      */
     operator ::Texture2D() { return LoadTexture(); }
 
     /**
-     * Get pixel data size in bytes for certain format
+     * 获取特定格式的像素数据大小（以字节为单位）
      */
     static int GetPixelDataSize(int width, int height, int format = PIXELFORMAT_UNCOMPRESSED_R32G32B32A32) {
         return ::GetPixelDataSize(width, height, format);
     }
 
     /**
-     * Returns the pixel data size based on the current image.
+     * 返回当前图像的像素数据大小
      *
-     * @return The pixel data size of the image.
+     * @return 图像的像素数据大小
      */
     int GetPixelDataSize() const { return ::GetPixelDataSize(width, height, format); }
 
     /**
-     * Retrieve whether or not the Image has been loaded.
+     * 检索图像是否已加载
      *
-     * @return True or false depending on whether the Image has been loaded.
+     * @return 图像是否已加载
      */
     bool IsValid() const { return ::IsImageValid(*this); }
 
     /**
-     * Create an image from a selected channel of another image (GRAYSCALE)
+     * 从另一个图像的选定通道创建图像（灰度）
      */
     ::Image Channel(int selectedChannel) { return ::ImageFromChannel(*this, selectedChannel); }
 
     /**
-     * Apply custom square convolution kernel to image
+     * 对图像应用自定义平方卷积核
      */
-    void KernelConvolution(const float* kernel, int kernelSize) {
-        ::ImageKernelConvolution(this, kernel, kernelSize);
-    }
+    void KernelConvolution(const float* kernel, int kernelSize) { ::ImageKernelConvolution(this, kernel, kernelSize); }
 protected:
     void set(const ::Image& image) {
         data = image.data;
@@ -768,4 +767,4 @@ protected:
 
 using RImage = raylib::Image;
 
-#endif // RAYLIB_CPP_INCLUDE_IMAGE_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_IMAGE_HPP_

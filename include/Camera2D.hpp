@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_
-#define RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_
+// #define RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_
+#pragma once
 
 #include "./Vector2.hpp"
 #include "./raylib-cpp-utils.hpp"
@@ -7,7 +8,7 @@
 
 namespace raylib {
 /**
- * Camera2D type, defines a 2d camera
+ * Camera2D 类型，定义一个 2D 相机
  */
 class Camera2D : public ::Camera2D {
 public:
@@ -17,11 +18,17 @@ public:
     Camera2D(::Vector2 offset, ::Vector2 target, float rotation = 0.0f, float zoom = 1.0f)
         : ::Camera2D{offset, target, rotation, zoom} {}
 
+    /**
+     * 开始使用 2D 相机模式
+     */
     Camera2D& BeginMode() {
         ::BeginMode2D(*this);
         return *this;
     }
 
+    /**
+     * 结束使用 2D 相机模式
+     */
     Camera2D& EndMode() {
         ::EndMode2D();
         return *this;
@@ -38,17 +45,17 @@ public:
     }
 
     /**
-     * Returns camera 2d transform matrix
+     * 返回 2D 相机的变换矩阵
      */
     Matrix GetMatrix() const { return ::GetCameraMatrix2D(*this); }
 
     /**
-     * Returns the world space position for a 2d camera screen space position
+     * 返回 2D 相机屏幕空间位置对应的 2D 世界空间位置
      */
     Vector2 GetScreenToWorld(::Vector2 position) const { return ::GetScreenToWorld2D(position, *this); }
 
     /**
-     * Returns the screen space position for a 2d world space position
+     * 返回 2D 世界空间位置对应的 2D 屏幕空间位置
      */
     Vector2 GetWorldToScreen(::Vector2 position) const { return ::GetWorldToScreen2D(position, *this); }
 protected:
@@ -63,4 +70,4 @@ protected:
 
 using RCamera2D = raylib::Camera2D;
 
-#endif // RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_

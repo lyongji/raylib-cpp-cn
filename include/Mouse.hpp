@@ -1,30 +1,38 @@
-#ifndef RAYLIB_CPP_INCLUDE_MOUSE_HPP_
-#define RAYLIB_CPP_INCLUDE_MOUSE_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MOUSE_HPP_
+// #define RAYLIB_CPP_INCLUDE_MOUSE_HPP_
+#pragma once
 
 #include "./Vector2.hpp"
 #include "./raylib.hpp"
 
+/**
+ * 允许更改 raylib-cpp 全局函数的声明类型。默认为静态（static）。
+ */
+#ifndef RLCPPAPI
+#define RLCPPAPI static
+#endif
+
 namespace raylib {
 /**
- * Input-related functions: mouse
+ * 输入相关函数：鼠标
  */
 namespace Mouse {
 /**
- * Detect if a mouse button has been pressed once
+ * 检测鼠标按钮是否被按下一次
  */
 [[maybe_unused]] RLCPPAPI inline bool IsButtonPressed(int button) {
     return ::IsMouseButtonPressed(button);
 }
 
 /**
- * Detect if a mouse button is being pressed
+ * 检测鼠标按钮是否正在被按下
  */
 [[maybe_unused]] RLCPPAPI inline bool IsButtonDown(int button) {
     return ::IsMouseButtonDown(button);
 }
 
 /**
- * Detect if a mouse button has been released once
+ * 检测鼠标按钮是否被释放一次
  */
 [[maybe_unused]] RLCPPAPI inline bool IsButtonReleased(int button) {
     return ::IsMouseButtonReleased(button);
@@ -63,7 +71,7 @@ namespace Mouse {
 }
 
 /**
- * Get mouse delta between frames
+ * 获取鼠标在帧之间的增量
  */
 [[maybe_unused]] RLCPPAPI inline Vector2 GetDelta() {
     return ::GetMouseDelta();
@@ -86,14 +94,14 @@ namespace Mouse {
 }
 
 /**
- * Get mouse wheel movement for X or Y, whichever is larger
+ * 获取鼠标滚轮在X或Y方向上的移动量（取较大值）
  */
 [[maybe_unused]] RLCPPAPI inline float GetWheelMove() {
     return ::GetMouseWheelMove();
 }
 
 /**
- * Get mouse wheel movement for both X and Y
+ * 获取鼠标滚轮在X和Y方向上的移动量
  *
  * @see ::GetMouseWheelMoveV()
  */
@@ -102,7 +110,7 @@ namespace Mouse {
 }
 
 /**
- * Sets the current mouse cursor icon.
+ * 设置当前鼠标光标图标
  *
  * @see ::MouseCursor
  */
@@ -111,35 +119,35 @@ namespace Mouse {
 }
 
 /**
- * Get touch position X for touch point 0 (relative to screen size)
+ * 获取触摸点0的X坐标（相对于屏幕大小）
  */
 [[maybe_unused]] RLCPPAPI inline int GetTouchX() {
     return ::GetTouchX();
 }
 
 /**
- * Get touch position Y for touch point 0 (relative to screen size)
+ * 获取触摸点0的Y坐标（相对于屏幕大小）
  */
 [[maybe_unused]] RLCPPAPI inline int GetTouchY() {
     return ::GetTouchY();
 }
 
 /**
- * Get touch position XY for a touch point index (relative to screen size)
+ * 获取触摸点索引的XY坐标（相对于屏幕大小）
  */
 [[maybe_unused]] RLCPPAPI inline Vector2 GetTouchPosition(int index) {
     return ::GetTouchPosition(index);
 }
 
 /**
- * Get a ray trace from mouse position
+ * 从鼠标位置获取光线追踪
  */
 [[maybe_unused]] RLCPPAPI inline Ray GetRay(::Vector2 mousePosition, const ::Camera& camera) {
     return ::GetMouseRay(mousePosition, camera);
 }
 
 /**
- * Get a ray trace from mouse position
+ * 从鼠标位置获取光线追踪
  */
 [[maybe_unused]] RLCPPAPI inline Ray GetRay(const ::Camera& camera) {
     return ::GetMouseRay(::GetMousePosition(), camera);
@@ -149,4 +157,4 @@ namespace Mouse {
 
 namespace RMouse = raylib::Mouse;
 
-#endif // RAYLIB_CPP_INCLUDE_MOUSE_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MOUSE_HPP_

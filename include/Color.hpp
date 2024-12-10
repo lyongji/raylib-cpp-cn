@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_COLOR_HPP_
-#define RAYLIB_CPP_INCLUDE_COLOR_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_COLOR_HPP_
+// #define RAYLIB_CPP_INCLUDE_COLOR_HPP_
+#pragma once
 
 #include <string>
 
@@ -9,7 +10,7 @@
 
 namespace raylib {
 /**
- * Color type, RGBA (32bit)
+ * 颜色类型，RGBA（32位）
  */
 class Color : public ::Color {
 public:
@@ -19,34 +20,34 @@ public:
         : ::Color{red, green, blue, alpha} {};
 
     /**
-     * Black.
+     * 黑色。
      */
     Color() : ::Color{0, 0, 0, 255} {};
 
     /**
-     * Returns a Color from HSV values
+     * 从 HSV 值返回一个颜色
      */
     Color(::Vector3 hsv) { set(::ColorFromHSV(hsv.x, hsv.y, hsv.z)); }
 
     /**
-     * Returns a Color from HSV values
+     * 从 HSV 值返回一个颜色
      */
     static ::Color FromHSV(float hue, float saturation, float value) { return ::ColorFromHSV(hue, saturation, value); }
 
     /**
-     * Get Color structure from hexadecimal value
+     * 从十六进制值获取颜色结构
      */
     Color(unsigned int hexValue) { set(::GetColor(hexValue)); }
 
     Color(void* srcPtr, int format) { set(::GetPixelColor(srcPtr, format)); }
 
     /**
-     * Returns hexadecimal value for a Color
+     * 返回颜色的十六进制值
      */
     int ToInt() const { return ::ColorToInt(*this); }
 
     /**
-     * Returns hexadecimal value for a Color
+     * 返回颜色的十六进制值
      */
     operator int() const { return ::ColorToInt(*this); }
 
@@ -55,22 +56,22 @@ public:
     operator std::string() const { return ToString(); }
 
     /**
-     * Returns color with alpha applied, alpha goes from 0.0f to 1.0f
+     * 返回应用了 alpha 的颜色，alpha 的范围是 0.0f 到 1.0f
      */
     Color Fade(float alpha) const { return ::Fade(*this, alpha); }
 
     /**
-     * Returns Color normalized as float [0..1]
+     * 返回归一化的颜色，范围为 [0..1]
      */
     Vector4 Normalize() const { return ::ColorNormalize(*this); }
 
     /**
-     * Returns Color from normalized values [0..1]
+     * 从归一化的值 [0..1] 返回颜色
      */
     Color(::Vector4 normalized) { set(::ColorFromNormalized(normalized)); }
 
     /**
-     * Returns HSV values for a Color
+     * 返回颜色的 HSV 值
      */
     Vector3 ToHSV() const { return ::ColorToHSV(*this); }
 
@@ -85,7 +86,7 @@ public:
     }
 
     /**
-     * Set background color (framebuffer clear color)
+     * 设置背景颜色（帧缓冲区清除颜色）
      */
     Color& ClearBackground() {
         ::ClearBackground(*this);
@@ -95,24 +96,24 @@ public:
     void DrawPixel(int x, int y) const { ::DrawPixel(x, y, *this); }
 
     /**
-     * Draw a pixel
+     * 绘制一个像素
      */
     void DrawPixel(::Vector2 pos) const { ::DrawPixelV(pos, *this); }
 
     /**
-     * Draw a line
+     * 绘制一条线
      */
     void DrawLine(int startPosX, int startPosY, int endPosX, int endPosY) const {
         ::DrawLine(startPosX, startPosY, endPosX, endPosY, *this);
     }
 
     /**
-     * Draw a line using Vector points
+     * 使用向量点绘制一条线
      */
     void DrawLine(::Vector2 startPos, ::Vector2 endPos) const { ::DrawLineV(startPos, endPos, *this); }
 
     /**
-     * Draw a line using Vector points, with a given thickness
+     * 使用向量点绘制一条线，并指定线宽
      */
     void DrawLine(::Vector2 startPos, ::Vector2 endPos, float thick) const {
         ::DrawLineEx(startPos, endPos, thick, *this);
@@ -181,39 +182,35 @@ public:
 
     void DrawRectangleLines(::Rectangle rec, float lineThick) const { ::DrawRectangleLinesEx(rec, lineThick, *this); }
 
-    bool IsEqual(::Color color) {
-        return ::ColorIsEqual(*this, color);
-    }
+    bool IsEqual(::Color color) { return ::ColorIsEqual(*this, color); }
 
     bool operator==(const ::Color& other) const { return ::ColorIsEqual(*this, other); }
     bool operator!=(const ::Color& other) const { return !::ColorIsEqual(*this, other); }
 
     /**
-     * Get color multiplied with another color
+     * 获取颜色与另一个颜色相乘的结果
      */
     Color Tint(::Color tint) { return ::ColorTint(*this, tint); }
 
     /**
-     * Get color with brightness correction, brightness factor goes from -1.0f to 1.0f
+     * 获取颜色亮度调整后的结果，亮度因子范围为 -1.0f 到 1.0f
      */
     Color Brightness(float factor) { return ::ColorBrightness(*this, factor); }
 
     /**
-     * Get color with contrast correction, contrast values between -1.0f and 1.0f
+     * 获取颜色对比度调整后的结果，对比度值范围为 -1.0f 到 1.0f
      */
     Color Contrast(float contrast) { return ::ColorContrast(*this, contrast); }
 
     /**
-     * Returns color with alpha applied, alpha goes from 0.0f to 1.0f
+     * 返回应用了 alpha 的颜色，alpha 的范围是 0.0f 到 1.0f
      */
     Color Alpha(float alpha) const { return ::ColorAlpha(*this, alpha); }
 
-    Color Lerp(::Color color2, float factor) {
-        return ::ColorLerp(*this, color2, factor);
-    }
+    Color Lerp(::Color color2, float factor) { return ::ColorLerp(*this, color2, factor); }
 
     /**
-     * Returns src alpha-blended into dst color with tint
+     * 返回 src 颜色与 dst 颜色进行 alpha 混合后的结果，并应用 tint 颜色
      */
     Color AlphaBlend(::Color dst, ::Color tint) const { return ::ColorAlphaBlend(dst, *this, tint); }
 
@@ -256,4 +253,4 @@ protected:
 
 using RColor = raylib::Color;
 
-#endif // RAYLIB_CPP_INCLUDE_COLOR_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_COLOR_HPP_

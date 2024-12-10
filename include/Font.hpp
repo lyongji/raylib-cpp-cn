@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_FONT_HPP_
-#define RAYLIB_CPP_INCLUDE_FONT_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_FONT_HPP_
+// #define RAYLIB_CPP_INCLUDE_FONT_HPP_
+#pragma once
 
 #include <string>
 
@@ -10,7 +11,7 @@
 
 namespace raylib {
 /**
- * Font type, includes texture and charSet array data
+ * 字体类型，包含纹理和字符集数组数据
  */
 class Font : public ::Font {
 public:
@@ -22,31 +23,34 @@ public:
         ::Rectangle* recs = nullptr,
         ::GlyphInfo* glyphs = nullptr)
         : ::Font{baseSize, glyphCount, glyphPadding, texture, recs, glyphs} {
-        // Nothing.
+        // 无操作
     }
 
     /**
-     * Retrieves the default Font.
+     * 获取默认字体
      */
     Font() { set(::GetFontDefault()); }
 
     Font(const ::Font& font) { set(font); }
 
     /**
-     * Loads a Font from the given file.
+     * 从指定文件加载字体
      *
-     * @param fileName The file name of the font to load.
+     * @param fileName 要加载的字体文件名
      *
-     * @throws raylib::RaylibException Throws if the given font failed to initialize.
+     * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      */
     Font(const std::string& fileName) { Load(fileName); }
 
     /**
-     * Loads a Font from the given file, with generation parameters.
+     * 从指定文件加载字体，并带有生成参数
      *
-     * @param fileName The file name of the font to load.
+     * @param fileName 要加载的字体文件名
+     * @param fontSize 字体的期望大小
+     * @param fontChars 字体字符数组
+     * @param charCount 字符数量
      *
-     * @throws raylib::RaylibException Throws if the given font failed to initialize.
+     * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      *
      * @see ::LoadFontEx
      */
@@ -55,20 +59,29 @@ public:
     }
 
     /**
-     * Loads a Font from the given image with a color key.
+     * 从指定图像加载字体，并带有颜色键
      *
-     * @param image The image to load the fond from.
+     * @param image 要加载字体的图像
+     * @param key 颜色键
+     * @param firstChar 第一个字符
      *
-     * @throws raylib::RaylibException Throws if the given font failed to initialize.
+     * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      *
      * @see ::LoadFontFromImage()
      */
     Font(const ::Image& image, ::Color key, int firstChar) { Load(image, key, firstChar); }
 
     /**
-     * Loads a font from memory, based on the given file type and file data.
+     * 从内存加载字体，基于给定的文件类型和文件数据
      *
-     * @throws raylib::RaylibException Throws if the given font failed to initialize.
+     * @param fileType 文件类型
+     * @param fileData 文件数据
+     * @param dataSize 数据大小
+     * @param fontSize 字体大小
+     * @param fontChars 字体字符数组
+     * @param charsCount 字符数量
+     *
+     * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      *
      * @see ::LoadFontFromMemory()
      */
@@ -98,7 +111,7 @@ public:
     ~Font() { Unload(); }
 
     void Unload() {
-        // Protect against calling UnloadFont() twice.
+        // 防止多次调用 UnloadFont()
         if (baseSize != 0) {
             UnloadFont(*this);
             baseSize = 0;
@@ -112,12 +125,12 @@ public:
     GETTER(::GlyphInfo*, Glyphs, glyphs)
 
     /**
-     * Get the texture atlas containing the glyphs.
+     * 获取包含字形的纹理图集
      */
     TextureUnmanaged GetTexture() { return texture; }
 
     /**
-     * Set the texture atlas containing the glyphs.
+     * 设置包含字形的纹理图集
      */
     void SetTexture(const ::Texture& newTexture) { texture = newTexture; }
 
@@ -148,11 +161,11 @@ public:
     }
 
     /**
-     * Loads a font from a given file.
+     * 从指定文件加载字体
      *
-     * @param fileName The filename of the font to load.
+     * @param fileName 要加载的字体文件名
      *
-     * @throws raylib::RaylibException Throws if the given font failed to initialize.
+     * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      *
      * @see ::LoadFont()
      */
@@ -164,12 +177,14 @@ public:
     }
 
     /**
-     * Loads a font from a given file with generation parameters.
+     * 从指定文件加载字体，并带有生成参数
      *
-     * @param fileName The filename of the font to load.
-     * @param fontSize The desired size of the font.
+     * @param fileName 要加载的字体文件名
+     * @param fontSize 字体的期望大小
+     * @param fontChars 字体字符数组
+     * @param charCount 字符数量
      *
-     * @throws raylib::RaylibException Throws if the given font failed to initialize.
+     * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      *
      * @see ::LoadFontEx()
      */
@@ -201,19 +216,19 @@ public:
     }
 
     /**
-     * Returns if the font is ready to be used.
+     * 返回字体是否准备好使用
      */
     bool IsValid() const { return ::IsFontValid(*this); }
 
     /**
-     * Draw text using font and additional parameters.
+     * 使用字体和附加参数绘制文本
      */
     void DrawText(const char* text, ::Vector2 position, float fontSize, float spacing, ::Color tint = WHITE) const {
         ::DrawTextEx(*this, text, position, fontSize, spacing, tint);
     }
 
     /**
-     * Draw text using font and additional parameters.
+     * 使用字体和附加参数绘制文本
      */
     void
     DrawText(const std::string& text, ::Vector2 position, float fontSize, float spacing, ::Color tint = WHITE) const {
@@ -221,14 +236,14 @@ public:
     }
 
     /**
-     * Draw text using font and additional parameters.
+     * 使用字体和附加参数绘制文本
      */
     void DrawText(const char* text, int posX, int posY, float fontSize, float spacing, ::Color tint = WHITE) const {
         ::DrawTextEx(*this, text, {static_cast<float>(posX), static_cast<float>(posY)}, fontSize, spacing, tint);
     }
 
     /**
-     * Draw text using font and additional parameters.
+     * 使用字体和附加参数绘制文本
      */
     void
     DrawText(const std::string& text, int posX, int posY, float fontSize, float spacing, ::Color tint = WHITE) const {
@@ -264,14 +279,14 @@ public:
     }
 
     /**
-     * Draw one character (codepoint)
+     * 绘制单个字符（码点）
      */
     void DrawText(int codepoint, ::Vector2 position, float fontSize, ::Color tint = {255, 255, 255, 255}) const {
         ::DrawTextCodepoint(*this, codepoint, position, fontSize, tint);
     }
 
     /**
-     * Draw multiple character (codepoint)
+     * 绘制多个字符（码点）
      */
     void DrawText(
         const int* codepoints,
@@ -284,33 +299,33 @@ public:
     }
 
     /**
-     * Measure string size for Font
+     * 测量字符串大小（用于字体）
      */
     Vector2 MeasureText(const char* text, float fontSize, float spacing) const {
         return ::MeasureTextEx(*this, text, fontSize, spacing);
     }
 
     /**
-     * Measure string size for Font
+     * 测量字符串大小（用于字体）
      */
     Vector2 MeasureText(const std::string& text, float fontSize, float spacing) const {
         return ::MeasureTextEx(*this, text.c_str(), fontSize, spacing);
     }
 
     /**
-     * Get index position for a unicode character on font
+     * 获取字体中 Unicode 字符的索引位置
      */
     int GetGlyphIndex(int character) const { return ::GetGlyphIndex(*this, character); }
 
     /**
-     * Create an image from text (custom sprite font)
+     * 从文本创建图像（自定义精灵字体）
      */
     ::Image ImageText(const char* text, float fontSize, float spacing, ::Color tint) const {
         return ::ImageTextEx(*this, text, fontSize, spacing, tint);
     }
 
     /**
-     * Create an image from text (custom sprite font)
+     * 从文本创建图像（自定义精灵字体）
      */
     ::Image ImageText(const std::string& text, float fontSize, float spacing, ::Color tint) const {
         return ::ImageTextEx(*this, text.c_str(), fontSize, spacing, tint);
@@ -329,4 +344,4 @@ protected:
 
 using RFont = raylib::Font;
 
-#endif // RAYLIB_CPP_INCLUDE_FONT_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_FONT_HPP_

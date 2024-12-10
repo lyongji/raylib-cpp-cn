@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_
-#define RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_
+// #define RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_
+#pragma once
 
 #include "./RaylibException.hpp"
 #include "./raylib-cpp-utils.hpp"
@@ -7,7 +8,7 @@
 
 namespace raylib {
 /**
- * AudioStream management functions
+ * 音频流管理函数
  */
 class AudioStream : public ::AudioStream {
 public:
@@ -20,13 +21,13 @@ public:
         unsigned int sampleSize = 0,
         unsigned int channels = 0)
         : ::AudioStream{buffer, processor, sampleRate, sampleSize, channels} {
-        // Nothing.
+        // 无操作
     }
 
     /**
-     * Init audio stream (to stream raw audio pcm data)
+     * 初始化音频流（用于流式传输原始音频 PCM 数据）
      *
-     * @throws raylib::RaylibException Throws if the AudioStream failed to load.
+     * @throws raylib::RaylibException 如果音频流加载失败，则抛出异常。
      */
     AudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels = 2) {
         Load(sampleRate, sampleSize, channels);
@@ -77,7 +78,7 @@ public:
     }
 
     /**
-     * Update audio stream buffers with data
+     * 使用数据更新音频流缓冲区
      */
     AudioStream& Update(const void* data, int samplesCount) {
         ::UpdateAudioStream(*this, data, samplesCount);
@@ -85,7 +86,7 @@ public:
     }
 
     /**
-     * Unload audio stream and free memory
+     * 卸载音频流并释放内存
      */
     void Unload() {
         if (IsValid()) {
@@ -94,12 +95,12 @@ public:
     }
 
     /**
-     * Check if any audio stream buffers requires refill
+     * 检查是否有任何音频流缓冲区需要重新填充
      */
     bool IsProcessed() const { return ::IsAudioStreamProcessed(*this); }
 
     /**
-     * Play audio stream
+     * 播放音频流
      */
     AudioStream& Play() {
         ::PlayAudioStream(*this);
@@ -107,7 +108,7 @@ public:
     }
 
     /**
-     * Pause audio stream
+     * 暂停音频流
      */
     AudioStream& Pause() {
         ::PauseAudioStream(*this);
@@ -115,7 +116,7 @@ public:
     }
 
     /**
-     * Resume audio stream
+     * 恢复音频流
      */
     AudioStream& Resume() {
         ::ResumeAudioStream(*this);
@@ -123,12 +124,12 @@ public:
     }
 
     /**
-     * Check if audio stream is playing
+     * 检查音频流是否正在播放
      */
     bool IsPlaying() const { return ::IsAudioStreamPlaying(*this); }
 
     /**
-     * Stop audio stream
+     * 停止音频流
      */
     AudioStream& Stop() {
         ::StopAudioStream(*this);
@@ -136,7 +137,7 @@ public:
     }
 
     /**
-     * Set volume for audio stream (1.0 is max level)
+     * 设置音频流的音量（1.0 为最大音量）
      */
     AudioStream& SetVolume(float volume = 1.0f) {
         ::SetAudioStreamVolume(*this, volume);
@@ -144,7 +145,7 @@ public:
     }
 
     /**
-     * Set pitch for audio stream (1.0 is base level)
+     * 设置音频流的音调（1.0 为基础音调）
      */
     AudioStream& SetPitch(float pitch) {
         ::SetAudioStreamPitch(*this, pitch);
@@ -152,7 +153,7 @@ public:
     }
 
     /**
-     * Set pan for audio stream (0.5 is centered)
+     * 设置音频流的声道（0.5 为中心）
      */
     AudioStream& SetPan(float pan = 0.5f) {
         ::SetAudioStreamPan(*this, pan);
@@ -160,40 +161,40 @@ public:
     }
 
     /**
-     * Default size for new audio streams
+     * 设置新音频流的默认缓冲区大小
      */
     static void SetBufferSizeDefault(int size) { ::SetAudioStreamBufferSizeDefault(size); }
 
     /**
-     * Audio thread callback to request new data
+     * 音频线程回调以请求新数据
      */
     void SetCallback(::AudioCallback callback) { ::SetAudioStreamCallback(*this, callback); }
 
     /**
-     * Attach audio stream processor to stream
+     * 将音频流处理器附加到流
      */
     void AttachProcessor(::AudioCallback processor) { ::AttachAudioStreamProcessor(*this, processor); }
 
     /**
-     * Detach audio stream processor from stream
+     * 从流中分离音频流处理器
      */
     void DetachProcessor(::AudioCallback processor) { ::DetachAudioStreamProcessor(*this, processor); }
 
     /**
-     * Retrieve whether or not the audio stream is ready.
+     * 检索音频流是否准备就绪
      */
     bool IsValid() const { return ::IsAudioStreamValid(*this); }
 
     /**
-     * Load audio stream (to stream raw audio pcm data)
+     * 加载音频流（用于流式传输原始音频 PCM 数据）
      *
-     * @throws raylib::RaylibException Throws if the AudioStream failed to load.
+     * @throws raylib::RaylibException 如果音频流加载失败，则抛出异常。
      */
     void Load(unsigned int SampleRate, unsigned int SampleSize, unsigned int Channels = 2) {
         Unload();
         set(::LoadAudioStream(SampleRate, SampleSize, Channels));
         if (!IsValid()) {
-            throw RaylibException("Failed to load audio stream");
+            throw RaylibException("音频流加载失败");
         }
     }
 protected:
@@ -209,4 +210,4 @@ protected:
 
 using RAudioStream = raylib::AudioStream;
 
-#endif // RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_

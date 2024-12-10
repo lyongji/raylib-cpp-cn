@@ -8,16 +8,16 @@
 
 namespace raylib {
 /**
- * Audio device management functions.
+ * 音频设备管理函数。
  */
 class AudioDevice {
 public:
     /**
-     * Initialize audio device and context.
+     * 初始化音频设备和上下文。
      *
-     * @param lateInit Whether or not to post-pone initializing the context.
+     * @param lateInit 是否推迟初始化上下文。
      *
-     * @throws raylib::RaylibException Throws if the AudioDevice failed to initialize.
+     * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
     AudioDevice(bool lateInit = false) {
         if (!lateInit) {
@@ -26,36 +26,36 @@ public:
     }
 
     /**
-     * Close the audio device and context.
+     * 关闭音频设备和上下文。
      */
     ~AudioDevice() { Close(); }
 
     /**
-     * Initialize audio device and context.
+     * 初始化音频设备和上下文。
      *
-     * @throws raylib::RaylibException Throws if the AudioDevice failed to initialize.
+     * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
     void Init() {
         ::InitAudioDevice();
         if (!IsReady()) {
-            throw RaylibException("Failed to initialize AudioDevice");
+            throw RaylibException("音频设备初始化失败");
         }
     }
 
     /**
-     * Close the audio device and context.
+     * 关闭音频设备和上下文。
      */
     void Close() { ::CloseAudioDevice(); }
 
     /**
-     * Check if audio device has been initialized successfully.
+     * 检查音频设备是否已成功初始化。
      */
     bool IsReady() const { return ::IsAudioDeviceReady(); }
 
     /**
-     * Set master volume (listener).
+     * 设置主音量（监听器）。
      *
-     * @param volume The desired volume to set.
+     * @param volume 要设置的音量。
      */
     AudioDevice& SetVolume(float volume) {
         ::SetMasterVolume(volume);

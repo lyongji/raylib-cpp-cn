@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MODEL_HPP_
-#define RAYLIB_CPP_INCLUDE_MODEL_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MODEL_HPP_
+// #define RAYLIB_CPP_INCLUDE_MODEL_HPP_
+#pragma once
 
 #include <string>
 
@@ -10,37 +11,37 @@
 namespace raylib {
 class Mesh;
 /**
- * Model type
+ * 模型类型
  */
 class Model : public ::Model {
 public:
     Model() {
-        // Nothing.
+        // 无操作
     }
 
     /*
-     * Copy a model from another model.
+     * 从另一个模型复制模型。
      */
     Model(const ::Model& model) { set(model); }
 
     /*
-     * Load a model from a file.
+     * 从文件加载模型。
      *
-     * @throws raylib::RaylibException Throws if failed to load the Modal.
+     * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
     Model(const std::string& fileName) { Load(fileName); }
 
     /*
-     * Load a model from a mesh.
+     * 从网格加载模型。
      *
-     * @throws raylib::RaylibException Throws if failed to load the Modal.
+     * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
     Model(const ::Mesh& mesh) { Load(mesh); }
 
     /**
-     * The Model constructor with a Mesh() is removed.
+     * 带有 Mesh() 构造函数的 Model 已被移除。
      *
-     * Use `raylib::MeshUnmanaged` or `::Mesh` instead, as raylib will take ownership of the data.
+     * 请使用 `raylib::MeshUnmanaged` 或 `::Mesh` 代替，因为 raylib 将接管数据的所有权。
      *
      * @see raylib::MeshUnmanaged
      */
@@ -101,7 +102,7 @@ public:
     }
 
     /**
-     * Unload model (including meshes) from memory (RAM and/or VRAM)
+     * 从内存中卸载模型（包括网格）（RAM 和/或 VRAM）
      */
     void Unload() {
         if (meshes != nullptr || materials != nullptr) {
@@ -112,7 +113,7 @@ public:
     }
 
     /**
-     * Set material for a mesh
+     * 为网格设置材质
      */
     Model& SetMeshMaterial(int meshId, int materialId) {
         ::SetModelMeshMaterial(this, meshId, materialId);
@@ -120,7 +121,7 @@ public:
     }
 
     /**
-     * Update model animation pose
+     * 更新模型动画姿态
      */
     Model& UpdateAnimation(const ::ModelAnimation& anim, int frame) {
         ::UpdateModelAnimation(*this, anim, frame);
@@ -128,7 +129,7 @@ public:
     }
 
     /**
-     * Update model animation pose
+     * 更新模型动画骨骼
      */
     Model& UpdateAnimationBones(const ::ModelAnimation& anim, int frame) {
         ::UpdateModelAnimationBones(*this, anim, frame);
@@ -136,19 +137,19 @@ public:
     }
 
     /**
-     * Check model animation skeleton match
+     * 检查模型动画骨骼是否匹配
      */
     bool IsModelAnimationValid(const ::ModelAnimation& anim) const { return ::IsModelAnimationValid(*this, anim); }
 
     /**
-     * Draw a model (with texture if set)
+     * 绘制模型（如果设置了纹理）
      */
     void Draw(::Vector3 position, float scale = 1.0f, ::Color tint = {255, 255, 255, 255}) const {
         ::DrawModel(*this, position, scale, tint);
     }
 
     /**
-     * Draw a model with extended parameters
+     * 使用扩展参数绘制模型
      */
     void Draw(
         ::Vector3 position,
@@ -160,14 +161,14 @@ public:
     }
 
     /**
-     * Draw a model wires (with texture if set)
+     * 绘制模型的线框（如果设置了纹理）
      */
     void DrawWires(::Vector3 position, float scale = 1.0f, ::Color tint = {255, 255, 255, 255}) const {
         ::DrawModelWires(*this, position, scale, tint);
     }
 
     /**
-     * Draw a model wires (with texture if set) with extended parameters
+     * 使用扩展参数绘制模型的线框
      */
     void DrawWires(
         ::Vector3 position,
@@ -179,38 +180,43 @@ public:
     }
 
     /**
-     * Draw a model as points
+     * 将模型绘制为点
      */
     void DrawPoints(::Vector3 position, float scale = 1.0f, ::Color tint = {255, 255, 255, 255}) {
         ::DrawModelPoints(*this, position, scale, tint);
     }
 
     /**
-     * Draw a model as points
+     * 使用扩展参数将模型绘制为点
      */
-    void DrawPoints(::Vector3 position, ::Vector3 rotationAxis, float rotationAngle = 0.0f, ::Vector3 scale = {1.0f, 1.0f, 1.0f}, ::Color tint = {255, 255, 255, 255}) {
+    void DrawPoints(
+        ::Vector3 position,
+        ::Vector3 rotationAxis,
+        float rotationAngle = 0.0f,
+        ::Vector3 scale = {1.0f, 1.0f, 1.0f},
+        ::Color tint = {255, 255, 255, 255}) {
         ::DrawModelPointsEx(*this, position, rotationAxis, rotationAngle, scale, tint);
     }
 
     /**
-     * Compute model bounding box limits (considers all meshes)
+     * 计算模型的包围盒限制（考虑所有网格）
      */
     BoundingBox GetBoundingBox() const { return ::GetModelBoundingBox(*this); }
 
     /**
-     * Compute model bounding box limits (considers all meshes)
+     * 计算模型的包围盒限制（考虑所有网格）
      */
     operator BoundingBox() const { return ::GetModelBoundingBox(*this); }
 
     /**
-     * Determines whether or not the Model has data in it.
+     * 确定模型是否包含数据
      */
     bool IsValid() const { return ::IsModelValid(*this); }
 
     /**
-     * Loads a Model from the given file.
+     * 从给定文件加载模型
      *
-     * @throws raylib::RaylibException Throws if failed to load the Modal.
+     * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
     void Load(const std::string& fileName) {
         set(::LoadModel(fileName.c_str()));
@@ -220,9 +226,9 @@ public:
     }
 
     /**
-     * Loads a Model from the given Mesh.
+     * 从给定网格加载模型
      *
-     * @throws raylib::RaylibException Throws if failed to load the Modal.
+     * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
     void Load(const ::Mesh& mesh) {
         set(::LoadModelFromMesh(mesh));
@@ -250,4 +256,4 @@ protected:
 
 using RModel = raylib::Model;
 
-#endif // RAYLIB_CPP_INCLUDE_MODEL_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MODEL_HPP_

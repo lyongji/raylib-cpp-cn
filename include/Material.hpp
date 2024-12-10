@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MATERIAL_HPP_
-#define RAYLIB_CPP_INCLUDE_MATERIAL_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MATERIAL_HPP_
+// #define RAYLIB_CPP_INCLUDE_MATERIAL_HPP_
+#pragma once
 
 #include <string>
 #include <vector>
@@ -9,14 +10,14 @@
 
 namespace raylib {
 /**
- * Material type (generic)
+ * 材质类型（通用）
  */
 class Material : public ::Material {
 public:
     Material(const ::Material& material) { set(material); }
 
     /**
-     * Load default material (Supports: DIFFUSE, SPECULAR, NORMAL maps)
+     * 加载默认材质（支持：漫反射、镜面反射、法线贴图）
      */
     Material() { set(LoadMaterialDefault()); }
 
@@ -36,18 +37,18 @@ public:
     ~Material() { Unload(); }
 
     /**
-     * Load materials from model file
+     * 从模型文件加载材质
      */
     static std::vector<Material> Load(const std::string& fileName) {
         int count = 0;
-        // TODO(RobLoach): Material::Load() possibly leaks the materials array.
+        // TODO(RobLoach): Material::Load() 可能会导致材质数组泄漏。
         ::Material* materials = ::LoadMaterials(fileName.c_str(), &count);
         return std::vector<Material>(materials, materials + count);
     }
 
     GETTERSETTER(::Shader, Shader, shader)
     GETTERSETTER(::MaterialMap*, Maps, maps)
-    // TODO(RobLoach): Resolve the Material params being a float[4].
+    // TODO(RobLoach): 解决材质参数为 float[4] 的问题。
     // GETTERSETTER(float[4], Params, params)
 
     Material& operator=(const ::Material& material) {
@@ -72,7 +73,7 @@ public:
     }
 
     /**
-     * Unload material from memory
+     * 从内存中卸载材质
      */
     void Unload() {
         if (maps != nullptr) {
@@ -82,7 +83,7 @@ public:
     }
 
     /**
-     * Set texture for a material map type (MAP_DIFFUSE, MAP_SPECULAR...)
+     * 为材质的贴图类型设置纹理（MAP_DIFFUSE, MAP_SPECULAR...）
      */
     Material& SetTexture(int mapType, const ::Texture2D& texture) {
         ::SetMaterialTexture(this, mapType, texture);
@@ -90,19 +91,19 @@ public:
     }
 
     /**
-     * Draw a 3d mesh with material and transform
+     * 使用材质和变换矩阵绘制3D网格
      */
     void DrawMesh(const ::Mesh& mesh, ::Matrix transform) const { ::DrawMesh(mesh, *this, transform); }
 
     /**
-     * Draw multiple mesh instances with material and different transforms
+     * 使用材质和不同的变换矩阵绘制多个网格实例
      */
     void DrawMesh(const ::Mesh& mesh, ::Matrix* transforms, int instances) const {
         ::DrawMeshInstanced(mesh, *this, transforms, instances);
     }
 
     /**
-     * Check if material is ready
+     * 检查材质是否准备就绪
      */
     bool IsValid() const { return ::IsMaterialValid(*this); }
 protected:
@@ -119,4 +120,4 @@ protected:
 
 using RMaterial = raylib::Material;
 
-#endif // RAYLIB_CPP_INCLUDE_MATERIAL_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MATERIAL_HPP_

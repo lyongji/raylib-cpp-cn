@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_MATRIX_HPP_
-#define RAYLIB_CPP_INCLUDE_MATRIX_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_MATRIX_HPP_
+// #define RAYLIB_CPP_INCLUDE_MATRIX_HPP_
+#pragma once
 
 #include "./raylib-cpp-utils.hpp"
 #include "./raylib.hpp"
@@ -11,7 +12,7 @@
 
 namespace raylib {
 /**
- * Matrix type (OpenGL style 4x4 - right handed, column major)
+ * 矩阵类型（OpenGL风格4x4 - 右手系，列优先）
  */
 class Matrix : public ::Matrix {
 public:
@@ -33,7 +34,7 @@ public:
               mat.m7,
               mat.m11,
               mat.m15} {
-        // Nothing.
+        // 无操作
     }
 
     Matrix(
@@ -54,7 +55,7 @@ public:
         float m11 = 0,
         float m15 = 0)
         : ::Matrix{m0, m4, m8, m12, m1, m5, m9, m13, m2, m6, m10, m14, m3, m7, m11, m15} {
-        // Nothing.
+        // 无操作
     }
 
     GETTERSETTER(float, M0, m0)
@@ -95,12 +96,12 @@ public:
 
 #ifndef RAYLIB_CPP_NO_MATH
     /**
-     * Returns the trace of the matrix (sum of the values along the diagonal)
+     * 返回矩阵的迹（对角线元素之和）
      */
     float Trace() const { return ::MatrixTrace(*this); }
 
     /**
-     * Transposes provided matrix
+     * 转置提供的矩阵
      */
     Matrix Transpose() const { return ::MatrixTranspose(*this); }
 
@@ -153,7 +154,7 @@ public:
     operator float16() { return ToFloatV(); }
 
     /**
-     * Set shader uniform value (matrix 4x4)
+     * 设置着色器统一值（4x4矩阵）
      */
     Matrix& SetShaderValue(const ::Shader& shader, int uniformLoc) {
         ::SetShaderValueMatrix(shader, uniformLoc, *this);
@@ -189,4 +190,4 @@ protected:
 
 using RMatrix = raylib::Matrix;
 
-#endif // RAYLIB_CPP_INCLUDE_MATRIX_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_MATRIX_HPP_
