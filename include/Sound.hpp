@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_SOUND_HPP_
-#define RAYLIB_CPP_INCLUDE_SOUND_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_SOUND_HPP_
+// #define RAYLIB_CPP_INCLUDE_SOUND_HPP_
+#pragma once
 
 #include <string>
 
@@ -9,7 +10,7 @@
 
 namespace raylib {
 /**
- * Wave/Sound management functions
+ * Wave/Sound 管理函数
  *
  * @code
  * raylib::Sound boom("boom.wav");
@@ -27,7 +28,7 @@ public:
     }
 
     Sound(::AudioStream stream, unsigned int frameCount) : ::Sound{stream, frameCount} {
-        // Nothing.
+        // 无操作。
     }
 
     Sound(Sound&& other) {
@@ -38,16 +39,16 @@ public:
     }
 
     /**
-     * Loads a sound from the given file.
+     * 从给定的文件加载声音。
      *
-     * @throws raylib::RaylibException Throws if the Sound failed to load.
+     * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
     Sound(const std::string& fileName) { Load(fileName); }
 
     /**
-     * Loads a sound from the given Wave.
+     * 从给定的 Wave 加载声音。
      *
-     * @throws raylib::RaylibException Throws if the Sound failed to load.
+     * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
     Sound(const ::Wave& wave) { Load(wave); }
 
@@ -70,7 +71,7 @@ public:
     }
 
     /**
-     * Update sound buffer with new data
+     * 使用新数据更新声音缓冲区
      */
     Sound& Update(const void* data, int samplesCount) {
         ::UpdateSound(*this, data, samplesCount);
@@ -78,7 +79,7 @@ public:
     }
 
     /**
-     * Update sound buffer with new data, assuming it's the same sample count.
+     * 使用新数据更新声音缓冲区，假设样本数相同。
      */
     Sound& Update(const void* data) {
         ::UpdateSound(*this, data, static_cast<int>(frameCount));
@@ -86,10 +87,10 @@ public:
     }
 
     /**
-     * Unload sound
+     * 卸载声音
      */
     void Unload() {
-        // Protect against calling UnloadSound() twice.
+        // 防止多次调用 UnloadSound()。
         if (frameCount != 0) {
             ::UnloadSound(*this);
             frameCount = 0;
@@ -97,7 +98,7 @@ public:
     }
 
     /**
-     * Play a sound
+     * 播放声音
      */
     Sound& Play() {
         ::PlaySound(*this);
@@ -105,7 +106,7 @@ public:
     }
 
     /**
-     * Stop playing a sound
+     * 停止播放声音
      */
     Sound& Stop() {
         ::StopSound(*this);
@@ -113,7 +114,7 @@ public:
     }
 
     /**
-     * Pause a sound
+     * 暂停声音
      */
     Sound& Pause() {
         ::PauseSound(*this);
@@ -121,7 +122,7 @@ public:
     }
 
     /**
-     * Resume a paused sound
+     * 恢复暂停的声音
      */
     Sound& Resume() {
         ::ResumeSound(*this);
@@ -129,12 +130,12 @@ public:
     }
 
     /**
-     * Check if a sound is currently playing
+     * 检查声音是否正在播放
      */
     bool IsPlaying() const { return ::IsSoundPlaying(*this); }
 
     /**
-     * Set volume for a sound (1.0 is max level)
+     * 设置声音的音量（1.0 是最大音量）
      */
     Sound& SetVolume(float volume) {
         ::SetSoundVolume(*this, volume);
@@ -142,7 +143,7 @@ public:
     }
 
     /**
-     * Set pitch for a sound (1.0 is base level)
+     * 设置声音的音调（1.0 是基准音调）
      */
     Sound& SetPitch(float pitch) {
         ::SetSoundPitch(*this, pitch);
@@ -150,7 +151,7 @@ public:
     }
 
     /**
-     * Set pan for a sound (0.5 is center)
+     * 设置声音的声相（0.5 是中心）
      */
     Sound& SetPan(float pan = 0.5f) {
         ::SetSoundPan(*this, pan);
@@ -158,33 +159,33 @@ public:
     }
 
     /**
-     * Load a sound from the given file.
+     * 从给定的文件加载声音。
      *
-     * @throws raylib::RaylibException Throws if the Sound failed to load.
+     * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
     void Load(const std::string& fileName) {
         set(::LoadSound(fileName.c_str()));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Sound from file");
+            throw RaylibException("从文件加载声音失败");
         }
     }
 
     /**
-     * Loads the given Wave object into the Sound.
+     * 将给定的 Wave 对象加载到声音中。
      *
-     * @throws raylib::RaylibException Throws if the Sound failed to load.
+     * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
     void Load(const ::Wave& wave) {
         set(::LoadSoundFromWave(wave));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Wave");
+            throw RaylibException("加载 Wave 失败");
         }
     }
 
     /**
-     * Retrieve whether or not the Sound buffer is loaded.
+     * 检索声音缓冲区是否已加载。
      *
-     * @return True or false depending on whether the Sound buffer is loaded.
+     * @return 根据声音缓冲区是否已加载返回 true 或 false。
      */
     bool IsValid() const { return ::IsSoundValid(*this); }
 protected:
@@ -197,4 +198,4 @@ protected:
 
 using RSound = raylib::Sound;
 
-#endif // RAYLIB_CPP_INCLUDE_SOUND_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_SOUND_HPP_

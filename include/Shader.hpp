@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_SHADER_HPP_
-#define RAYLIB_CPP_INCLUDE_SHADER_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_SHADER_HPP_
+// #define RAYLIB_CPP_INCLUDE_SHADER_HPP_
+#pragma once
 
 #include <string>
 
@@ -10,7 +11,7 @@
 
 namespace raylib {
 /**
- * Shader type (generic)
+ * Shader 类型（通用）
  */
 class Shader : public ShaderUnmanaged {
 public:
@@ -42,12 +43,12 @@ public:
     }
 
     /**
-     * Unload shader from GPU memory (VRAM)
+     * 从 GPU 内存（VRAM）中卸载着色器
      */
     ~Shader() { Unload(); }
 
     /**
-     * Unload shader from GPU memory (VRAM)
+     * 从 GPU 内存（VRAM）中卸载着色器
      */
     void Unload() {
         if (locs != nullptr) {
@@ -59,4 +60,4 @@ public:
 
 using RShader = raylib::Shader;
 
-#endif // RAYLIB_CPP_INCLUDE_SHADER_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_SHADER_HPP_

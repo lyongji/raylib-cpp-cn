@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_
-#define RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_
+// #define RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_
+#pragma once
 
 #include <rlgl.h>
 #include <string>
@@ -11,7 +12,7 @@
 namespace raylib {
 
 /**
- * Shader type (generic), not managed by C++ RAII.
+ * Shader 类型（通用），不由 C++ RAII 管理。
  */
 class ShaderUnmanaged : public ::Shader {
 public:
@@ -27,7 +28,7 @@ public:
     ShaderUnmanaged(const char* vsFileName, const char* fsFileName) { set(::LoadShader(vsFileName, fsFileName)); }
 
     /**
-     * Load shader from files and bind default locations.
+     * 从文件加载着色器并绑定默认位置。
      *
      * @see ::LoadShader
      */
@@ -39,7 +40,7 @@ public:
     }
 
     /**
-     * Load a shader from memory.
+     * 从内存加载着色器。
      *
      * @see ::LoadShaderFromMemory
      */
@@ -59,7 +60,7 @@ public:
     }
 
     /**
-     * Begin custom shader drawing.
+     * 开始自定义着色器绘制。
      */
     ShaderUnmanaged& BeginMode() {
         ::BeginShaderMode(*this);
@@ -67,7 +68,7 @@ public:
     }
 
     /**
-     * End custom shader drawing (use default shader).
+     * 结束自定义着色器绘制（使用默认着色器）。
      */
     ShaderUnmanaged& EndMode() {
         ::EndShaderMode();
@@ -75,14 +76,14 @@ public:
     }
 
     /**
-     * Get shader uniform location
+     * 获取着色器统一变量的位置
      *
      * @see GetShaderLocation()
      */
     int GetLocation(const std::string& uniformName) const { return ::GetShaderLocation(*this, uniformName.c_str()); }
 
     /**
-     * Get shader attribute location
+     * 获取着色器属性的位置
      *
      * @see GetShaderLocationAttrib()
      */
@@ -91,7 +92,7 @@ public:
     }
 
     /**
-     * Set shader uniform value
+     * 设置着色器统一变量的值
      *
      * @see SetShaderValue()
      */
@@ -101,7 +102,7 @@ public:
     }
 
     /**
-     * Set shader uniform value vector
+     * 设置着色器统一变量的向量值
      *
      * @see SetShaderValueV()
      */
@@ -111,7 +112,7 @@ public:
     }
 
     /**
-     * Set shader uniform value (matrix 4x4)
+     * 设置着色器统一变量的值（4x4 矩阵）
      *
      * @see SetShaderValueMatrix()
      */
@@ -121,7 +122,7 @@ public:
     }
 
     /**
-     * Set shader uniform value for texture
+     * 设置着色器统一变量的纹理值
      *
      * @see SetShaderValueTexture()
      */
@@ -131,7 +132,7 @@ public:
     }
 
     /**
-     * Retrieves whether or not the shader is ready.
+     * 检索着色器是否准备就绪。
      */
     bool IsValid() const { return ::IsShaderValid(*this); }
 protected:
@@ -144,4 +145,4 @@ protected:
 
 using RShaderUnmanaged = raylib::ShaderUnmanaged;
 
-#endif // RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_

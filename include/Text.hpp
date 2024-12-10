@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_TEXT_HPP_
-#define RAYLIB_CPP_INCLUDE_TEXT_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_TEXT_HPP_
+// #define RAYLIB_CPP_INCLUDE_TEXT_HPP_
+#pragma once
 
 #include <string>
 
@@ -9,43 +10,43 @@
 
 namespace raylib {
 /**
- * Text Functions.
+ * 文本函数。
  */
 class Text {
 public:
     /**
-     * The internal text.
+     * 内部文本。
      */
     std::string text;
 
     /**
-     * The size of the text.
+     * 文本的大小。
      */
     float fontSize;
 
     /**
-     * The color of the text.
+     * 文本的颜色。
      */
     ::Color color;
 
     /**
-     * The internal raylib font to use for the text.
+     * 用于文本的内部 raylib 字体。
      */
     ::Font font;
 
     /**
-     * The character spacing for the text.
+     * 文本的字符间距。
      */
     float spacing;
 
     /**
-     * Initializes a new Text object.
+     * 初始化一个新的 Text 对象。
      *
-     * @param text Text to initialize.
-     * @param fontSize The size of the text.
-     * @param color The color of the font.
-     * @param font Font to initialize.
-     * @param spacing The spacing of the text.
+     * @param text 初始化的文本。
+     * @param fontSize 文本的大小。
+     * @param color 字体的颜色。
+     * @param font 初始化的字体。
+     * @param spacing 文本的间距。
      */
     Text(
         const std::string& text = "",
@@ -58,17 +59,17 @@ public:
         , color(color)
         , font(font)
         , spacing(spacing) {
-        // Nothing.
+        // 无操作。
     }
 
     /**
-     * Initializes a new Text object with a custom font.
+     * 使用自定义字体初始化一个新的 Text 对象。
      *
-     * @param font Font to initialize.
-     * @param text Text to initialize.
-     * @param fontSize The size of the text.
-     * @param spacing The spacing of the text.
-     * @param color The color of the font.
+     * @param font 初始化的字体。
+     * @param text 初始化的文本。
+     * @param fontSize 文本的大小。
+     * @param spacing 文本的间距。
+     * @param color 字体的颜色。
      */
     Text(
         const ::Font& font,
@@ -81,7 +82,7 @@ public:
         , color(color)
         , font(font)
         , spacing(spacing) {
-        // Nothing.
+        // 无操作。
     }
 
     GETTERSETTER(std::string, Text, text)
@@ -91,12 +92,12 @@ public:
     GETTERSETTER(float, Spacing, spacing)
 
     /**
-     * Draw text with values in class.
+     * 使用类中的值绘制文本。
      */
     void Draw(const ::Vector2& position) const { ::DrawTextEx(font, text.c_str(), position, fontSize, spacing, color); }
 
     /**
-     * Draw text with values in class.
+     * 使用类中的值绘制文本。
      */
     void Draw(int posX, int posY) const {
         ::DrawTextEx(
@@ -109,7 +110,7 @@ public:
     }
 
     /**
-     * Draw text using Font and pro parameters (rotation).
+     * 使用 Font 和高级参数（旋转）绘制文本。
      *
      * @see DrawTextPro()
      */
@@ -118,12 +119,12 @@ public:
     }
 
     /**
-     * Measure string width for default font
+     * 测量默认字体字符串的宽度。
      */
     int Measure() const { return ::MeasureText(text.c_str(), static_cast<int>(fontSize)); }
 
     /**
-     * Measure string size for Font
+     * 测量 Font 字符串的大小。
      */
     Vector2 MeasureEx() const { return ::MeasureTextEx(font, text.c_str(), fontSize, spacing); }
 
@@ -142,7 +143,7 @@ public:
     }
 
     /**
-     * Draw text using font and color
+     * 使用字体和颜色绘制文本。
      *
      * @see ::DrawText
      */
@@ -152,7 +153,7 @@ public:
     }
 
     /**
-     * Draw text using font and color, with position defined as Vector2
+     * 使用字体和颜色绘制文本，位置定义为 Vector2。
      *
      * @see ::DrawText
      */
@@ -161,7 +162,7 @@ public:
     }
 
     /**
-     * Draw text using font, color, position, font size and spacing
+     * 使用字体、颜色、位置、字体大小和间距绘制文本。
      *
      * @see ::DrawTextEx
      */
@@ -176,7 +177,7 @@ public:
     }
 
     /**
-     * Draw text using font, color, position, origin, font size and spacing
+     * 使用字体、颜色、位置、原点、字体大小和间距绘制文本。
      *
      * @see ::DrawTextPro
      */
@@ -196,4 +197,4 @@ public:
 
 using RText = raylib::Text;
 
-#endif // RAYLIB_CPP_INCLUDE_TEXT_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_TEXT_HPP_

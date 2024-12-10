@@ -1,29 +1,30 @@
-#ifndef RAYLIB_CPP_INCLUDE_VRSTEREOCONFIG_HPP_
-#define RAYLIB_CPP_INCLUDE_VRSTEREOCONFIG_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_VRSTEREOCONFIG_HPP_
+// #define RAYLIB_CPP_INCLUDE_VRSTEREOCONFIG_HPP_
+#pragma once
 
 #include "./raylib-cpp-utils.hpp"
 #include "./raylib.hpp"
 
 namespace raylib {
 /**
- * VR stereo config functions for VR simulator
+ * VR 立体配置函数，用于 VR 模拟器
  */
 class VrStereoConfig : public ::VrStereoConfig {
 public:
     VrStereoConfig(const ::VrDeviceInfo& info) { Load(info); }
 
     /**
-     * Load VR stereo config for VR simulator device parameters
+     * 加载 VR 立体配置，用于 VR 模拟器的设备参数
      */
     void Load(const ::VrDeviceInfo& info) { set(LoadVrStereoConfig(info)); }
 
     /**
-     * Unload VR stereo config
+     * 卸载 VR 立体配置
      */
     ~VrStereoConfig() { Unload(); }
 
     /**
-     * Begin stereo rendering
+     * 开始立体渲染
      */
     VrStereoConfig& BeginMode() {
         ::BeginVrStereoMode(*this);
@@ -31,7 +32,7 @@ public:
     }
 
     /**
-     * End stereo rendering
+     * 结束立体渲染
      */
     VrStereoConfig& EndMode() {
         ::EndVrStereoMode();
@@ -39,7 +40,7 @@ public:
     }
 
     /**
-     * Unload VR stereo config
+     * 卸载 VR 立体配置
      */
     void Unload() { ::UnloadVrStereoConfig(*this); }
 protected:
@@ -66,4 +67,4 @@ protected:
 
 using RVrStereoConfig = raylib::VrStereoConfig;
 
-#endif // RAYLIB_CPP_INCLUDE_VRSTEREOCONFIG_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_VRSTEREOCONFIG_HPP_

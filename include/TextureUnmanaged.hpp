@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_TEXTUREUNMANAGED_HPP_
-#define RAYLIB_CPP_INCLUDE_TEXTUREUNMANAGED_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_TEXTUREUNMANAGED_HPP_
+// #define RAYLIB_CPP_INCLUDE_TEXTUREUNMANAGED_HPP_
+#pragma once
 
 #include <string>
 
@@ -12,23 +13,23 @@
 
 namespace raylib {
 /**
- * A Texture that is not managed by C++ RAII.
+ * 一个不由 C++ RAII 管理的纹理。
  *
- * Make sure to Unload() this if needed, otherwise use raylib::Texture.
+ * 如果需要，请确保调用 Unload()，否则请使用 raylib::Texture。
  *
  * @see raylib::Texture
  */
 class TextureUnmanaged : public ::Texture {
 public:
     /**
-     * Default texture constructor.
+     * 默认纹理构造函数。
      */
     TextureUnmanaged() : ::Texture{0, 0, 0, 0, 0} {
-        // Nothing.
+        // 无操作。
     }
 
     /**
-     * Move/Create a texture structure manually.
+     * 手动移动/创建纹理结构。
      */
     TextureUnmanaged(
         unsigned int id,
@@ -37,42 +38,42 @@ public:
         int mipmaps = 1,
         int format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8)
         : ::Texture{id, width, height, mipmaps, format} {
-        // Nothing.
+        // 无操作。
     }
 
     /**
-     * Creates a texture object based on the given Texture struct data.
+     * 基于给定的 Texture 结构数据创建纹理对象。
      */
     TextureUnmanaged(const ::Texture& texture)
         : ::Texture{texture.id, texture.width, texture.height, texture.mipmaps, texture.format} {
-        // Nothing.
+        // 无操作。
     }
 
     /**
-     * Creates a texture from the given Image.
+     * 从给定的 Image 创建纹理。
      *
-     * @throws raylib::RaylibException Throws if failed to create the texture from the given image.
+     * @throws raylib::RaylibException 如果从给定的图像创建纹理失败，则抛出异常。
      */
     TextureUnmanaged(const ::Image& image) { Load(image); }
 
     /**
-     * Load cubemap from image, multiple image cubemap layouts supported.
+     * 从图像加载立方体贴图，支持多种图像立方体贴图布局。
      *
-     * @throws raylib::RaylibException Throws if failed to create the texture from the given cubemap.
+     * @throws raylib::RaylibException 如果从给定的立方体贴图创建纹理失败，则抛出异常。
      *
      * @see LoadTextureCubemap()
      */
     TextureUnmanaged(const ::Image& image, int layout) { Load(image, layout); }
 
     /**
-     * Load texture from file into GPU memory (VRAM)
+     * 从文件加载纹理到 GPU 内存（VRAM）。
      *
-     * @throws raylib::RaylibException Throws if failed to create the texture from the given file.
+     * @throws raylib::RaylibException 如果从给定的文件创建纹理失败，则抛出异常。
      */
     TextureUnmanaged(const std::string& fileName) { Load(fileName); }
 
     TextureUnmanaged(::Texture&& other) : ::Texture{other.id, other.width, other.height, other.mipmaps, other.format} {
-        // Nothing.
+        // 无操作。
     }
 
     GETTER(unsigned int, Id, id)
@@ -87,45 +88,45 @@ public:
     }
 
     /**
-     * Retrieve the width and height of the texture.
+     * 检索纹理的宽度和高度。
      */
     ::Vector2 GetSize() const { return {static_cast<float>(width), static_cast<float>(height)}; }
 
     /**
-     * Load texture from image data
+     * 从图像数据加载纹理。
      */
     void Load(const ::Image& image) {
         set(::LoadTextureFromImage(image));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Texture from Image");
+            throw RaylibException("从图像加载纹理失败");
         }
     }
 
     /**
-     * Load cubemap from image, multiple image cubemap layouts supported
+     * 从图像加载立方体贴图，支持多种图像立方体贴图布局。
      */
     void Load(const ::Image& image, int layoutType) {
         set(::LoadTextureCubemap(image, layoutType));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Texture from Cubemap");
+            throw RaylibException("从立方体贴图加载纹理失败");
         }
     }
 
     /**
-     * Load texture from file into GPU memory (VRAM)
+     * 从文件加载纹理到 GPU 内存（VRAM）。
      */
     void Load(const std::string& fileName) {
         set(::LoadTexture(fileName.c_str()));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Texture from file: " + fileName);
+            throw RaylibException("从文件加载纹理失败: " + fileName);
         }
     }
 
     /**
-     * Unload texture from GPU memory (VRAM)
+     * 从 GPU 内存（VRAM）卸载纹理。
      */
     void Unload() {
-        // Protect against calling UnloadTexture() twice.
+        // 防止调用 UnloadTexture() 两次。
         if (id != 0) {
             ::UnloadTexture(*this);
             id = 0;
@@ -133,7 +134,7 @@ public:
     }
 
     /**
-     * Update GPU texture with new data
+     * 使用新数据更新 GPU 纹理。
      */
     TextureUnmanaged& Update(const void* pixels) {
         ::UpdateTexture(*this, pixels);
@@ -141,7 +142,7 @@ public:
     }
 
     /**
-     * Update GPU texture rectangle with new data
+     * 使用新数据更新 GPU 纹理矩形。
      */
     TextureUnmanaged& Update(::Rectangle rec, const void* pixels) {
         UpdateTextureRec(*this, rec, pixels);
@@ -149,17 +150,17 @@ public:
     }
 
     /**
-     * Get pixel data from GPU texture and return an Image
+     * 从 GPU 纹理获取像素数据并返回 Image。
      */
     ::Image GetData() const { return ::LoadImageFromTexture(*this); }
 
     /**
-     * Get pixel data from GPU texture and return an Image
+     * 从 GPU 纹理获取像素数据并返回 Image。
      */
     operator Image() { return GetData(); }
 
     /**
-     * Generate GPU mipmaps for a texture
+     * 为纹理生成 GPU 多级渐远纹理。
      */
     TextureUnmanaged& GenMipmaps() {
         ::GenTextureMipmaps(this);
@@ -167,7 +168,7 @@ public:
     }
 
     /**
-     * Set texture scaling filter mode
+     * 设置纹理缩放过滤模式。
      */
     TextureUnmanaged& SetFilter(int filterMode) {
         ::SetTextureFilter(*this, filterMode);
@@ -175,7 +176,7 @@ public:
     }
 
     /**
-     * Set texture wrapping mode
+     * 设置纹理包裹模式。
      */
     TextureUnmanaged& SetWrap(int wrapMode) {
         ::SetTextureWrap(*this, wrapMode);
@@ -183,7 +184,7 @@ public:
     }
 
     /**
-     * Draw a Texture2D
+     * 绘制 Texture2D。
      *
      * @see ::DrawTexture()
      */
@@ -192,14 +193,14 @@ public:
     }
 
     /**
-     * Draw a Texture2D with position defined as Vector2
+     * 使用 Vector2 定义的位置绘制 Texture2D。
      *
      * @see ::DrawTextureV()
      */
     void Draw(::Vector2 position, ::Color tint = {255, 255, 255, 255}) const { ::DrawTextureV(*this, position, tint); }
 
     /**
-     * Draw a Texture2D with extended parameters
+     * 使用扩展参数绘制 Texture2D。
      *
      * @see ::DrawTextureEx()
      */
@@ -208,7 +209,7 @@ public:
     }
 
     /**
-     * Draw a part of a texture defined by a rectangle
+     * 绘制由矩形定义的纹理的一部分。
      *
      * @see ::DrawTextureRec()
      */
@@ -217,7 +218,7 @@ public:
     }
 
     /**
-     * Draw a part of a texture defined by a rectangle with 'pro' parameters
+     * 使用“pro”参数绘制由矩形定义的纹理的一部分。
      *
      * @see ::DrawTexturePro()
      */
@@ -231,7 +232,7 @@ public:
     }
 
     /**
-     * Draws a texture (or part of it) that stretches or shrinks nicely
+     * 绘制一个可以很好地拉伸或收缩的纹理（或其一部分）。
      *
      * @see ::DrawTextureNPatch()
      */
@@ -245,7 +246,7 @@ public:
     }
 
     /**
-     * Draw a billboard texture
+     * 绘制公告板纹理。
      *
      * @see ::DrawBillboard()
      */
@@ -255,7 +256,7 @@ public:
     }
 
     /**
-     * Draw a billboard texture defined by source
+     * 绘制由源定义的公告板纹理。
      *
      * @see ::DrawBillboardRec()
      */
@@ -269,7 +270,7 @@ public:
     }
 
     /**
-     * Draw a billboard texture defined by source and rotation
+     * 绘制由源和旋转定义的公告板纹理。
      *
      * @see ::DrawBillboardPro()
      */
@@ -286,7 +287,7 @@ public:
     }
 
     /**
-     * Set texture for a material map type (MAP_DIFFUSE, MAP_SPECULAR...)
+     * 为材质映射类型（MAP_DIFFUSE, MAP_SPECULAR...）设置纹理。
      */
     TextureUnmanaged& SetMaterial(::Material* material, int mapType = MATERIAL_MAP_NORMAL) {
         ::SetMaterialTexture(material, mapType, *this);
@@ -299,7 +300,7 @@ public:
     }
 
     /**
-     * Set texture and rectangle to be used on shapes drawing.
+     * 设置用于形状绘制的纹理和矩形。
      */
     TextureUnmanaged& SetShapes(const ::Rectangle& source) {
         ::SetShapesTexture(*this, source);
@@ -307,7 +308,7 @@ public:
     }
 
     /**
-     * Set shader uniform value for texture (sampler2d)
+     * 为着色器设置纹理统一值（sampler2d）。
      */
     TextureUnmanaged& SetShaderValue(const ::Shader& shader, int locIndex) {
         ::SetShaderValueTexture(shader, locIndex, *this);
@@ -315,9 +316,9 @@ public:
     }
 
     /**
-     * Determines whether or not the Texture has been loaded and is ready.
+     * 确定纹理是否已加载并准备好。
      *
-     * @return True or false depending on whether the Texture has data.
+     * @return 根据纹理是否有数据返回 true 或 false。
      */
     bool IsValid() const { return IsTextureValid(*this); }
 protected:
@@ -330,7 +331,7 @@ protected:
     }
 };
 
-// Create the TextureUnmanaged aliases.
+// 创建 TextureUnmanaged 的别名。
 using Texture2DUnmanaged = TextureUnmanaged;
 using TextureCubemapUnmanaged = TextureUnmanaged;
 
@@ -340,4 +341,4 @@ using RTextureUnmanaged = raylib::TextureUnmanaged;
 using RTexture2DUnmanaged = raylib::Texture2DUnmanaged;
 using RTextureCubemapUnmanaged = raylib::TextureCubemapUnmanaged;
 
-#endif // RAYLIB_CPP_INCLUDE_TEXTUREUNMANAGED_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_TEXTUREUNMANAGED_HPP_

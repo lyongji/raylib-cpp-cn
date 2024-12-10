@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_VECTOR4_HPP_
-#define RAYLIB_CPP_INCLUDE_VECTOR4_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_VECTOR4_HPP_
+// #define RAYLIB_CPP_INCLUDE_VECTOR4_HPP_
+#pragma once
 
 #ifndef RAYLIB_CPP_NO_MATH
 #include <cmath>
@@ -14,7 +15,7 @@
 
 namespace raylib {
 /**
- * Vector4 type
+ * Vector4 类型
  */
 class Vector4 : public ::Vector4 {
 public:
@@ -54,28 +55,38 @@ public:
     operator std::string() const { return ToString(); }
 
 #ifndef RAYLIB_CPP_NO_MATH
+    /// 乘以一个Vector4类型的向量
     Vector4 Multiply(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }
 
+    /// 重载*运算符，实现四元数与向量的乘法
     Vector4 operator*(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }
 
+    /// 插值，实现四元数与向量的线性插值
     Vector4 Lerp(const ::Vector4& vector4, float amount) const { return QuaternionLerp(*this, vector4, amount); }
 
+    /// 插值，实现四元数与向量的归一化插值
     Vector4 Nlerp(const ::Vector4& vector4, float amount) const { return QuaternionNlerp(*this, vector4, amount); }
 
+    /// 插值，实现四元数与向量的球面插值
     Vector4 Slerp(const ::Vector4& vector4, float amount) const { return QuaternionSlerp(*this, vector4, amount); }
 
+    /// 将四元数转换为矩阵
     Matrix ToMatrix() const { return QuaternionToMatrix(*this); }
 
+    /// 计算四元数的长度
     float Length() const { return QuaternionLength(*this); }
 
+    /// 归一化四元数
     Vector4 Normalize() const { return QuaternionNormalize(*this); }
 
+    /// 逆四元数
     Vector4 Invert() const { return QuaternionInvert(*this); }
 
+    /// 将四元数转换为轴角
     void ToAxisAngle(::Vector3* outAxis, float* outAngle) const { QuaternionToAxisAngle(*this, outAxis, outAngle); }
 
     /**
-     * Get the rotation angle and axis for a given quaternion
+     * 获取给定四元数的旋转角度和轴
      */
     std::pair<Vector3, float> ToAxisAngle() const {
         Vector3 outAxis;
@@ -85,31 +96,40 @@ public:
         return std::pair<Vector3, float>(outAxis, outAngle);
     }
 
+    /// 将四元数转换为矩阵
     Vector4 Transform(const ::Matrix& matrix) const { return ::QuaternionTransform(*this, matrix); }
 
+    /// 返回单位四元数
     static Vector4 Identity() { return ::QuaternionIdentity(); }
 
+    /// 将一个向量转换为另一个向量
     static Vector4 FromVector3ToVector3(const ::Vector3& from, const ::Vector3& to) {
         return ::QuaternionFromVector3ToVector3(from, to);
     }
 
+    /// 将矩阵转换为四元数
     static Vector4 FromMatrix(const ::Matrix& matrix) { return ::QuaternionFromMatrix(matrix); }
 
+    /// 将一个轴和一个角度转换为四元数
     static Vector4 FromAxisAngle(const ::Vector3& axis, const float angle) {
         return ::QuaternionFromAxisAngle(axis, angle);
     }
 
+    /// 将欧拉角转换为四元数
     static Vector4 FromEuler(const float pitch, const float yaw, const float roll) {
         return ::QuaternionFromEuler(pitch, yaw, roll);
     }
 
+    /// 将一个向量转换为四元数
     static Vector4 FromEuler(const ::Vector3& vector3) {
         return ::QuaternionFromEuler(vector3.x, vector3.y, vector3.z);
     }
 
+    /// 将四元数转换为欧拉角
     Vector3 ToEuler() const { return ::QuaternionToEuler(*this); }
 #endif
 
+    /// 从归一化值返回颜色
     Color ColorFromNormalized() const { return ::ColorFromNormalized(*this); }
 
     operator Color() const { return ColorFromNormalized(); }
@@ -122,7 +142,7 @@ protected:
     }
 };
 
-// Alias the Vector4 as Quaternion.
+/// 将 Vector4 别名为 Quaternion
 using Quaternion = Vector4;
 
 } // namespace raylib
@@ -130,4 +150,4 @@ using Quaternion = Vector4;
 using RVector4 = raylib::Vector4;
 using RQuaternion = raylib::Quaternion;
 
-#endif // RAYLIB_CPP_INCLUDE_VECTOR4_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_VECTOR4_HPP_

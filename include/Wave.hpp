@@ -1,5 +1,6 @@
-#ifndef RAYLIB_CPP_INCLUDE_WAVE_HPP_
-#define RAYLIB_CPP_INCLUDE_WAVE_HPP_
+// #ifndef RAYLIB_CPP_INCLUDE_WAVE_HPP_
+// #define RAYLIB_CPP_INCLUDE_WAVE_HPP_
+#pragma once
 
 #include <string>
 
@@ -9,7 +10,7 @@
 
 namespace raylib {
 /**
- * Wave type, defines audio wave data
+ * Wave 类型，定义音频波形数据
  */
 class Wave : public ::Wave {
 public:
@@ -22,20 +23,20 @@ public:
         unsigned int channels = 0,
         void* data = nullptr)
         : ::Wave{frameCount, sampleRate, sampleSize, channels, data} {
-        // Nothing.
+        // 无操作
     }
 
     /**
-     * Load wave data from file
+     * 从文件加载波形数据
      *
-     * @throws raylib::RaylibException Throws if the Wave failed to load.
+     * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
     Wave(const std::string& fileName) { Load(fileName); }
 
     /**
-     * Load wave from memory buffer, fileType refers to extension: i.e. "wav"
+     * 从内存缓冲区加载波形数据，fileType 指文件扩展名，例如 "wav"
      *
-     * @throws raylib::RaylibException Throws if the Wave failed to load.
+     * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
     Wave(const std::string& fileType, const unsigned char* fileData, int dataSize) {
         Load(fileType, fileData, dataSize);
@@ -54,7 +55,7 @@ public:
     }
 
     /**
-     * Unload wave data
+     * 卸载波形数据
      */
     ~Wave() { Unload(); }
 
@@ -98,12 +99,12 @@ public:
     }
 
     /**
-     * Copy a wave to a new wave
+     * 复制波形数据到新的波形
      */
     ::Wave Copy() const { return ::WaveCopy(*this); }
 
     /**
-     * Crop a wave to defined samples range
+     * 裁剪波形数据到定义的样本范围
      */
     Wave& Crop(int initSample, int finalSample) {
         ::WaveCrop(this, initSample, finalSample);
@@ -111,7 +112,7 @@ public:
     }
 
     /**
-     * Convert wave data to desired format
+     * 将波形数据转换为所需格式
      */
     Wave& Format(int SampleRate, int SampleSize, int Channels = 2) {
         ::WaveFormat(this, SampleRate, SampleSize, Channels);
@@ -119,36 +120,36 @@ public:
     }
 
     /**
-     * Load samples data from wave as a floats array
+     * 从波形加载样本数据为浮点数数组
      */
     float* LoadSamples() { return ::LoadWaveSamples(*this); }
 
     /**
-     * Unload samples data loaded with LoadWaveSamples()
+     * 卸载通过 LoadWaveSamples() 加载的样本数据
      */
     static void UnloadSamples(float* samples) { ::UnloadWaveSamples(samples); }
 
     /**
-     * Export wave data to file, returns true on success
+     * 将波形数据导出到文件，成功返回 true
      */
     bool Export(const std::string& fileName) {
-        // TODO(RobLoach): Throw exception on error.
+        // TODO(RobLoach): 错误时抛出异常
         return ::ExportWave(*this, fileName.c_str());
     }
 
     /**
-     * Export wave sample data to code (.h), returns true on success
+     * 将波形样本数据导出为代码 (.h)，成功返回 true
      */
     bool ExportAsCode(const std::string& fileName) {
-        // TODO(RobLoach): Throw exception on error.
+        // TODO(RobLoach): 错误时抛出异常
         return ::ExportWaveAsCode(*this, fileName.c_str());
     }
 
     /**
-     * Unload wave data
+     * 卸载波形数据
      */
     void Unload() {
-        // Protect against calling UnloadWave() twice.
+        // 防止多次调用 UnloadWave()
         if (data != nullptr) {
             ::UnloadWave(*this);
             data = nullptr;
@@ -156,19 +157,19 @@ public:
     }
 
     /**
-     * Load sound from wave data
+     * 从波形数据加载声音
      */
     ::Sound LoadSound() { return ::LoadSoundFromWave(*this); }
 
     /**
-     * Load sound from wave data
+     * 从波形数据加载声音
      */
     operator ::Sound() { return LoadSound(); }
 
     /**
-     * Load wave data from file.
+     * 从文件加载波形数据
      *
-     * @throws raylib::RaylibException Throws if the Wave failed to load.
+     * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
     void Load(const std::string& fileName) {
         set(::LoadWave(fileName.c_str()));
@@ -178,9 +179,9 @@ public:
     }
 
     /**
-     * Load wave from memory buffer, fileType refers to extension: i.e. "wav"
+     * 从内存缓冲区加载波形数据，fileType 指文件扩展名，例如 "wav"
      *
-     * @throws raylib::RaylibException Throws if the Wave failed to load.
+     * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
     void Load(const std::string& fileType, const unsigned char* fileData, int dataSize) {
         set(::LoadWaveFromMemory(fileType.c_str(), fileData, dataSize));
@@ -190,9 +191,9 @@ public:
     }
 
     /**
-     * Retrieve whether or not the Wave data has been loaded.
+     * 检索波形数据是否已加载
      *
-     * @return True or false depending on whether the wave data has been loaded.
+     * @return 波形数据是否已加载的布尔值
      */
     bool IsValid() const { return ::IsWaveValid(*this); }
 protected:
@@ -209,4 +210,4 @@ protected:
 
 using RWave = raylib::Wave;
 
-#endif // RAYLIB_CPP_INCLUDE_WAVE_HPP_
+// #endif // RAYLIB_CPP_INCLUDE_WAVE_HPP_

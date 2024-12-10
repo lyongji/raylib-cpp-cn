@@ -5,12 +5,6 @@
 #include "./Vector2.hpp"
 #include "./raylib.hpp"
 
-/**
- * 允许更改 raylib-cpp 全局函数的声明类型。默认为静态（static）。
- */
-#ifndef RLCPPAPI
-#define RLCPPAPI static
-#endif
 
 namespace raylib {
 /**
