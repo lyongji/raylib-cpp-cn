@@ -90,7 +90,7 @@ public:
     /**
      * 检索纹理的宽度和高度。
      */
-    ::Vector2 GetSize() const { return {static_cast<float>(width), static_cast<float>(height)}; }
+    Vector2 GetSize() const { return {static_cast<float>(width), static_cast<float>(height)}; }
 
     /**
      * 从图像数据加载纹理。
