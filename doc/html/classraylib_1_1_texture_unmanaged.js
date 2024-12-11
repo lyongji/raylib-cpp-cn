@@ -18,7 +18,7 @@ var classraylib_1_1_texture_unmanaged =
     [ "DrawBillboard", "classraylib_1_1_texture_unmanaged.html#a018bc6617635d2022fe966b581ceeae7", null ],
     [ "GenMipmaps", "classraylib_1_1_texture_unmanaged.html#aef27895e54b98e8f5fc710606e65054b", null ],
     [ "GetData", "classraylib_1_1_texture_unmanaged.html#ad3547a8da76f682bc18c6f3a997574b6", null ],
-    [ "GetSize", "classraylib_1_1_texture_unmanaged.html#aa640b58a639224200e487bd00c651747", null ],
+    [ "GetSize", "classraylib_1_1_texture_unmanaged.html#a822a045111456236dd1ba8fd8dd44b3c", null ],
     [ "IsValid", "classraylib_1_1_texture_unmanaged.html#a58ddbb89a6a5a98fb0b097c7c82a219c", null ],
     [ "Load", "classraylib_1_1_texture_unmanaged.html#a5f26bb84c03b611f0c949e60d9aa2fe6", null ],
     [ "Load", "classraylib_1_1_texture_unmanaged.html#a26e02437029caa0c637053778cc5d38c", null ],

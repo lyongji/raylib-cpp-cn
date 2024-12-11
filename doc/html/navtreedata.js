@@ -65,7 +65,7 @@ var NAVTREEINDEX =
 "classraylib_1_1_sound.html#a321a8cea955f859f8648e2df202f5497",
 "classraylib_1_1_vector2.html#aa7285d7893ebf62cdf8b4b9c286c6047",
 "classraylib_1_1_vr_stereo_config.html",
-"namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a"
+"namespaceraylib.html#a2566e995220052936edc573116a1677a"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

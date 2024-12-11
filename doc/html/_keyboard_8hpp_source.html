@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>raylib-cpp-cn: include/Keyboard.hpp 源文件</title>
+<title>raylib-cpp-cn: D:/MyData/cpp/raylib-cpp/include/Keyboard.hpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
   <td id="projectalign">
    <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
    </div>
@@ -107,71 +106,76 @@ $(function(){initNavTree('_keyboard_8hpp_source.html',''); initResizable(true); 
   <div class="headertitle"><div class="title">Keyboard.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_keyboard_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html">   10</a></span><span class="keyword">namespace </span>Keyboard {</div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#ac2bceae512d7422c6b25b6f3d30fea9c">   14</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#ac2bceae512d7422c6b25b6f3d30fea9c">IsKeyPressed</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    return ::IsKeyPressed(key);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<a href="_keyboard_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// #ifndef RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// #define RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef RLCPPAPI</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="_keyboard_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">   11</a></span><span class="preprocessor">#define RLCPPAPI static</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html">   18</a></span><span class="keyword">namespace </span>Keyboard {</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#ac2bceae512d7422c6b25b6f3d30fea9c">   22</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#ac2bceae512d7422c6b25b6f3d30fea9c">IsKeyPressed</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    return ::IsKeyPressed(key);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a45e721f91fd16db03304fec4b15d398b">   21</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a45e721f91fd16db03304fec4b15d398b">IsKeyPressedRepeat</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    return ::IsKeyPressedRepeat(key);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a45e721f91fd16db03304fec4b15d398b">   29</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a45e721f91fd16db03304fec4b15d398b">IsKeyPressedRepeat</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    return ::IsKeyPressedRepeat(key);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a47dea742c2cc89a9803f2de285cb8964">   28</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a47dea742c2cc89a9803f2de285cb8964">IsKeyDown</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    return ::IsKeyDown(key);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a47dea742c2cc89a9803f2de285cb8964">   36</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a47dea742c2cc89a9803f2de285cb8964">IsKeyDown</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    return ::IsKeyDown(key);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#ab5d99553fa4244794e02a061d4e2a151">   35</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#ab5d99553fa4244794e02a061d4e2a151">IsKeyReleased</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    return ::IsKeyReleased(key);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#ab5d99553fa4244794e02a061d4e2a151">   43</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#ab5d99553fa4244794e02a061d4e2a151">IsKeyReleased</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    return ::IsKeyReleased(key);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
 </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a7b7f5b32bb58776f8fcfc8150b6aed44">   42</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a7b7f5b32bb58776f8fcfc8150b6aed44">IsKeyUp</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    return ::IsKeyUp(key);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
-</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#af4d23110b997068053171831403bdf5e">   50</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#af4d23110b997068053171831403bdf5e">GetKeyPressed</a>() {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    return ::GetKeyPressed();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a7b7f5b32bb58776f8fcfc8150b6aed44">   50</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a7b7f5b32bb58776f8fcfc8150b6aed44">IsKeyUp</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    return ::IsKeyUp(key);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a65c1d0568b98310656af857b83ea692a">   57</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a65c1d0568b98310656af857b83ea692a">GetCharPressed</a>() {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    return ::GetCharPressed();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#af4d23110b997068053171831403bdf5e">   58</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#af4d23110b997068053171831403bdf5e">GetKeyPressed</a>() {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    return ::GetKeyPressed();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace Keyboard</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespaceraylib_1_1_keyboard.html#a65c1d0568b98310656af857b83ea692a">   65</a></span>[[maybe_unused]] <a class="code hl_define" href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceraylib_1_1_keyboard.html#a65c1d0568b98310656af857b83ea692a">GetCharPressed</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    return ::GetCharPressed();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace raylib</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib_1_1_keyboard.html">RKeyboard</a> = <a class="code hl_namespace" href="namespaceraylib_1_1_keyboard.html">raylib::Keyboard</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_</span></div>
-<div class="ttc" id="a_functions_8hpp_html_a905c250671e2d934cf2ac43e0ca915ad"><div class="ttname"><a href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a></div><div class="ttdeci">#define RLCPPAPI</div><div class="ttdoc">C++ wrapper functions for raylib.</div><div class="ttdef"><b>定义</b> Functions.hpp:16</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html">raylib::Keyboard</a></div><div class="ttdoc">Input-related functions: keyboard</div><div class="ttdef"><b>定义</b> Keyboard.hpp:10</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a45e721f91fd16db03304fec4b15d398b"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a45e721f91fd16db03304fec4b15d398b">raylib::Keyboard::IsKeyPressedRepeat</a></div><div class="ttdeci">RLCPPAPI bool IsKeyPressedRepeat(int key)</div><div class="ttdoc">Detect if a key has been pressed again (Only PLATFORM_DESKTOP)</div><div class="ttdef"><b>定义</b> Keyboard.hpp:21</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a47dea742c2cc89a9803f2de285cb8964"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a47dea742c2cc89a9803f2de285cb8964">raylib::Keyboard::IsKeyDown</a></div><div class="ttdeci">RLCPPAPI bool IsKeyDown(int key)</div><div class="ttdoc">Detect if a key is being pressed</div><div class="ttdef"><b>定义</b> Keyboard.hpp:28</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a65c1d0568b98310656af857b83ea692a"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a65c1d0568b98310656af857b83ea692a">raylib::Keyboard::GetCharPressed</a></div><div class="ttdeci">RLCPPAPI int GetCharPressed()</div><div class="ttdoc">Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empt...</div><div class="ttdef"><b>定义</b> Keyboard.hpp:57</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a7b7f5b32bb58776f8fcfc8150b6aed44"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a7b7f5b32bb58776f8fcfc8150b6aed44">raylib::Keyboard::IsKeyUp</a></div><div class="ttdeci">RLCPPAPI bool IsKeyUp(int key)</div><div class="ttdoc">Detect if a key is NOT being pressed</div><div class="ttdef"><b>定义</b> Keyboard.hpp:42</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_ab5d99553fa4244794e02a061d4e2a151"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#ab5d99553fa4244794e02a061d4e2a151">raylib::Keyboard::IsKeyReleased</a></div><div class="ttdeci">RLCPPAPI bool IsKeyReleased(int key)</div><div class="ttdoc">Detect if a key has been released once</div><div class="ttdef"><b>定义</b> Keyboard.hpp:35</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_ac2bceae512d7422c6b25b6f3d30fea9c"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#ac2bceae512d7422c6b25b6f3d30fea9c">raylib::Keyboard::IsKeyPressed</a></div><div class="ttdeci">RLCPPAPI bool IsKeyPressed(int key)</div><div class="ttdoc">Detect if a key has been pressed once</div><div class="ttdef"><b>定义</b> Keyboard.hpp:14</div></div>
-<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_af4d23110b997068053171831403bdf5e"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#af4d23110b997068053171831403bdf5e">raylib::Keyboard::GetKeyPressed</a></div><div class="ttdeci">RLCPPAPI int GetKeyPressed()</div><div class="ttdoc">Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty</div><div class="ttdef"><b>定义</b> Keyboard.hpp:50</div></div>
-<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace Keyboard</span></div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib_1_1_keyboard.html">RKeyboard</a> = <a class="code hl_namespace" href="namespaceraylib_1_1_keyboard.html">raylib::Keyboard</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// #endif // RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_</span></div>
+<div class="ttc" id="a_functions_8hpp_html_a905c250671e2d934cf2ac43e0ca915ad"><div class="ttname"><a href="_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad">RLCPPAPI</a></div><div class="ttdeci">#define RLCPPAPI</div><div class="ttdoc">C++ 封装 raylib 的函数。</div><div class="ttdef"><b>定义</b> Functions.hpp:17</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html">raylib::Keyboard</a></div><div class="ttdoc">输入相关函数：键盘</div><div class="ttdef"><b>定义</b> Keyboard.hpp:18</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a45e721f91fd16db03304fec4b15d398b"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a45e721f91fd16db03304fec4b15d398b">raylib::Keyboard::IsKeyPressedRepeat</a></div><div class="ttdeci">RLCPPAPI bool IsKeyPressedRepeat(int key)</div><div class="ttdoc">检测某个键是否被再次按下（仅限 PLATFORM_DESKTOP）</div><div class="ttdef"><b>定义</b> Keyboard.hpp:29</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a47dea742c2cc89a9803f2de285cb8964"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a47dea742c2cc89a9803f2de285cb8964">raylib::Keyboard::IsKeyDown</a></div><div class="ttdeci">RLCPPAPI bool IsKeyDown(int key)</div><div class="ttdoc">检测某个键是否正在被按下</div><div class="ttdef"><b>定义</b> Keyboard.hpp:36</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a65c1d0568b98310656af857b83ea692a"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a65c1d0568b98310656af857b83ea692a">raylib::Keyboard::GetCharPressed</a></div><div class="ttdeci">RLCPPAPI int GetCharPressed()</div><div class="ttdoc">获取按下的字符（Unicode），多次调用以获取队列中的字符，队列为空时返回 0</div><div class="ttdef"><b>定义</b> Keyboard.hpp:65</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_a7b7f5b32bb58776f8fcfc8150b6aed44"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#a7b7f5b32bb58776f8fcfc8150b6aed44">raylib::Keyboard::IsKeyUp</a></div><div class="ttdeci">RLCPPAPI bool IsKeyUp(int key)</div><div class="ttdoc">检测某个键是否没有被按下</div><div class="ttdef"><b>定义</b> Keyboard.hpp:50</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_ab5d99553fa4244794e02a061d4e2a151"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#ab5d99553fa4244794e02a061d4e2a151">raylib::Keyboard::IsKeyReleased</a></div><div class="ttdeci">RLCPPAPI bool IsKeyReleased(int key)</div><div class="ttdoc">检测某个键是否被释放一次</div><div class="ttdef"><b>定义</b> Keyboard.hpp:43</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_ac2bceae512d7422c6b25b6f3d30fea9c"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#ac2bceae512d7422c6b25b6f3d30fea9c">raylib::Keyboard::IsKeyPressed</a></div><div class="ttdeci">RLCPPAPI bool IsKeyPressed(int key)</div><div class="ttdoc">检测某个键是否被按下一次</div><div class="ttdef"><b>定义</b> Keyboard.hpp:22</div></div>
+<div class="ttc" id="anamespaceraylib_1_1_keyboard_html_af4d23110b997068053171831403bdf5e"><div class="ttname"><a href="namespaceraylib_1_1_keyboard.html#af4d23110b997068053171831403bdf5e">raylib::Keyboard::GetKeyPressed</a></div><div class="ttdeci">RLCPPAPI int GetKeyPressed()</div><div class="ttdoc">获取按下的键（键码），多次调用以获取队列中的键，队列为空时返回 0</div><div class="ttdef"><b>定义</b> Keyboard.hpp:58</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:9</div></div>
 <div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classraylib_1_1_vr_stereo_config.html":[0,0,0,36],
 "classraylib_1_1_vr_stereo_config.html":[1,0,0,33],
 "classraylib_1_1_vr_stereo_config.html#a57c7c3064803f61af4a7da1e0ae10167":[0,0,0,36,2],
 "classraylib_1_1_vr_stereo_config.html#a57c7c3064803f61af4a7da1e0ae10167":[1,0,0,33,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "namespaceraylib.html#a1350224ceb7d7ce37288c39263d3a8d4":[0,0,0,71],
 "namespaceraylib.html#a167a4275d7d8ef27b6ce48eb3dfc2f76":[0,0,0,86],
 "namespaceraylib.html#a1a355762d23fa27e9c95e8014662e5e1":[0,0,0,66],
-"namespaceraylib.html#a1ea78692e868b5cb0ca49dff4d39e842":[0,0,0,80],
-"namespaceraylib.html#a2566e995220052936edc573116a1677a":[0,0,0,67]
+"namespaceraylib.html#a1ea78692e868b5cb0ca49dff4d39e842":[0,0,0,80]
 };

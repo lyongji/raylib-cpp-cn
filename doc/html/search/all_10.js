@@ -45,7 +45,7 @@ var searchData=
   ['rfont_42',['RFont',['../_font_8hpp.html#a638070a13bfc320d1fc690f30e7eee28',1,'Font.hpp']]],
   ['rgamepad_43',['RGamepad',['../_gamepad_8hpp.html#a98ced898215a336b2f10ccc93e076b1a',1,'Gamepad.hpp']]],
   ['rimage_44',['RImage',['../_image_8hpp.html#a058910064aa375f9f885ced454fc24c4',1,'Image.hpp']]],
-  ['rlcppapi_45',['RLCPPAPI',['../_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad',1,'Functions.hpp']]],
+  ['rlcppapi_45',['RLCPPAPI',['../_functions_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad',1,'RLCPPAPI:&#160;Functions.hpp'],['../_keyboard_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad',1,'RLCPPAPI:&#160;Keyboard.hpp']]],
   ['rmaterial_46',['RMaterial',['../_material_8hpp.html#a415051b0fd28804e56111c9bb9db2cd9',1,'Material.hpp']]],
   ['rmatrix_47',['RMatrix',['../_matrix_8hpp.html#a9a4c87e971fffbe14d394d799570c7ec',1,'Matrix.hpp']]],
   ['rmesh_48',['RMesh',['../_mesh_8hpp.html#a4a21c8033f95de4af161a9596dff4497',1,'Mesh.hpp']]],

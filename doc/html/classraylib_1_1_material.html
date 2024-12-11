@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
   <td id="projectalign">
    <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
    </div>
@@ -113,7 +112,7 @@ $(function(){initNavTree('classraylib_1_1_material.html',''); initResizable(true
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classraylib_1_1_material.html" title="Material type (generic)">Material</a> type (generic)  
+<p>材质类型（通用）  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_material_8hpp_source.html">Material.hpp</a>&gt;</code></p>
@@ -129,7 +128,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ac5be24c3adc1fd6726c99c5c4eeb4a25" id="r_ac5be24c3adc1fd6726c99c5c4eeb4a25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5be24c3adc1fd6726c99c5c4eeb4a25">Material</a> (const ::Material &amp;material)</td></tr>
 <tr class="separator:ac5be24c3adc1fd6726c99c5c4eeb4a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85e551f0db58082ad9e4b46849a36a8c" id="r_a85e551f0db58082ad9e4b46849a36a8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85e551f0db58082ad9e4b46849a36a8c">Material</a> ()</td></tr>
-<tr class="memdesc:a85e551f0db58082ad9e4b46849a36a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load default material (Supports: DIFFUSE, SPECULAR, NORMAL maps)  <br /></td></tr>
+<tr class="memdesc:a85e551f0db58082ad9e4b46849a36a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载默认材质（支持：漫反射、镜面反射、法线贴图）  <br /></td></tr>
 <tr class="separator:a85e551f0db58082ad9e4b46849a36a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71470d2ff92adb6e9e5e7c718f98fdaf" id="r_a71470d2ff92adb6e9e5e7c718f98fdaf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71470d2ff92adb6e9e5e7c718f98fdaf">Material</a> (const <a class="el" href="classraylib_1_1_material.html">Material</a> &amp;)=delete</td></tr>
 <tr class="separator:a71470d2ff92adb6e9e5e7c718f98fdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,25 +143,25 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ae92173567da4f6f9b256bf6787d65a11" id="r_ae92173567da4f6f9b256bf6787d65a11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_material.html">Material</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae92173567da4f6f9b256bf6787d65a11">operator=</a> (<a class="el" href="classraylib_1_1_material.html">Material</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="separator:ae92173567da4f6f9b256bf6787d65a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67962efd02fd7f59cb14cda929e599cc" id="r_a67962efd02fd7f59cb14cda929e599cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67962efd02fd7f59cb14cda929e599cc">Unload</a> ()</td></tr>
-<tr class="memdesc:a67962efd02fd7f59cb14cda929e599cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload material from memory  <br /></td></tr>
+<tr class="memdesc:a67962efd02fd7f59cb14cda929e599cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">从内存中卸载材质  <br /></td></tr>
 <tr class="separator:a67962efd02fd7f59cb14cda929e599cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fa16a50972c555434b31c2511d02493" id="r_a4fa16a50972c555434b31c2511d02493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_material.html">Material</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa16a50972c555434b31c2511d02493">SetTexture</a> (int mapType, const <a class="el" href="namespaceraylib.html#acf1989fe7ce3a2fd2a24641f0a7256c2">::Texture2D</a> &amp;texture)</td></tr>
-<tr class="memdesc:a4fa16a50972c555434b31c2511d02493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture for a material map type (MAP_DIFFUSE, MAP_SPECULAR...)  <br /></td></tr>
+<tr class="memdesc:a4fa16a50972c555434b31c2511d02493"><td class="mdescLeft">&#160;</td><td class="mdescRight">为材质的贴图类型设置纹理（MAP_DIFFUSE, MAP_SPECULAR...）  <br /></td></tr>
 <tr class="separator:a4fa16a50972c555434b31c2511d02493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34a9e08028190db1aad10c9c10859c2" id="r_ab34a9e08028190db1aad10c9c10859c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab34a9e08028190db1aad10c9c10859c2">DrawMesh</a> (const ::Mesh &amp;mesh, ::Matrix transform) const</td></tr>
-<tr class="memdesc:ab34a9e08028190db1aad10c9c10859c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a 3d mesh with material and transform  <br /></td></tr>
+<tr class="memdesc:ab34a9e08028190db1aad10c9c10859c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用材质和变换矩阵绘制3D网格  <br /></td></tr>
 <tr class="separator:ab34a9e08028190db1aad10c9c10859c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa339541c681d718e46dd3ecde1887b52" id="r_aa339541c681d718e46dd3ecde1887b52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa339541c681d718e46dd3ecde1887b52">DrawMesh</a> (const ::Mesh &amp;mesh, ::Matrix *transforms, int instances) const</td></tr>
-<tr class="memdesc:aa339541c681d718e46dd3ecde1887b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw multiple mesh instances with material and different transforms  <br /></td></tr>
+<tr class="memdesc:aa339541c681d718e46dd3ecde1887b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用材质和不同的变换矩阵绘制多个网格实例  <br /></td></tr>
 <tr class="separator:aa339541c681d718e46dd3ecde1887b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4651fee77bafc71db3217a137dafb2e3" id="r_a4651fee77bafc71db3217a137dafb2e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4651fee77bafc71db3217a137dafb2e3">IsValid</a> () const</td></tr>
-<tr class="memdesc:a4651fee77bafc71db3217a137dafb2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if material is ready  <br /></td></tr>
+<tr class="memdesc:a4651fee77bafc71db3217a137dafb2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查材质是否准备就绪  <br /></td></tr>
 <tr class="separator:a4651fee77bafc71db3217a137dafb2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:a2209c224b1b1e6dd862f324114ddb54e" id="r_a2209c224b1b1e6dd862f324114ddb54e"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classraylib_1_1_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2209c224b1b1e6dd862f324114ddb54e">Load</a> (const std::string &amp;fileName)</td></tr>
-<tr class="memdesc:a2209c224b1b1e6dd862f324114ddb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load materials from model file  <br /></td></tr>
+<tr class="memdesc:a2209c224b1b1e6dd862f324114ddb54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">从模型文件加载材质  <br /></td></tr>
 <tr class="separator:a2209c224b1b1e6dd862f324114ddb54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -171,7 +170,7 @@ Protected 成员函数</h2></td></tr>
 <tr class="separator:a8ce6289e84f48495049e9e1cb0d7ba40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p><a class="el" href="classraylib_1_1_material.html" title="Material type (generic)">Material</a> type (generic) </p>
+<div class="textblock"><p>材质类型（通用） </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="ac5be24c3adc1fd6726c99c5c4eeb4a25" name="ac5be24c3adc1fd6726c99c5c4eeb4a25"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5be24c3adc1fd6726c99c5c4eeb4a25">&#9670;&#160;</a></span>Material() <span class="overload">[1/4]</span></h2>
@@ -221,7 +220,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load default material (Supports: DIFFUSE, SPECULAR, NORMAL maps) </p>
+<p>加载默认材质（支持：漫反射、镜面反射、法线贴图） </p>
 
 </div>
 </div>
@@ -333,7 +332,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Draw multiple mesh instances with material and different transforms </p>
+<p>使用材质和不同的变换矩阵绘制多个网格实例 </p>
 
 </div>
 </div>
@@ -364,7 +363,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Draw a 3d mesh with material and transform </p>
+<p>使用材质和变换矩阵绘制3D网格 </p>
 
 </div>
 </div>
@@ -391,7 +390,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if material is ready </p>
+<p>检查材质是否准备就绪 </p>
 
 </div>
 </div>
@@ -418,7 +417,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load materials from model file </p>
+<p>从模型文件加载材质 </p>
 
 </div>
 </div>
@@ -549,7 +548,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set texture for a material map type (MAP_DIFFUSE, MAP_SPECULAR...) </p>
+<p>为材质的贴图类型设置纹理（MAP_DIFFUSE, MAP_SPECULAR...） </p>
 
 </div>
 </div>
@@ -576,12 +575,12 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Unload material from memory </p>
+<p>从内存中卸载材质 </p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>include/<a class="el" href="_material_8hpp_source.html">Material.hpp</a></li>
+<li>D:/MyData/cpp/raylib-cpp/include/<a class="el" href="_material_8hpp_source.html">Material.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

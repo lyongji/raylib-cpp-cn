@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classraylib_1_1_matrix.html#a9ad566c434998fe400a57a26a39c3708":[0,0,0,16,7],
 "classraylib_1_1_matrix.html#a9ad566c434998fe400a57a26a39c3708":[1,0,0,13,7],
 "classraylib_1_1_matrix.html#a9e068eb0a163ba8ae65d3b89ace56e67":[0,0,0,16,23],
 "classraylib_1_1_matrix.html#a9e068eb0a163ba8ae65d3b89ace56e67":[1,0,0,13,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classraylib_1_1_music.html#aeaec37b4d521dfca16f39ce141c12515":[0,0,0,21,25],
 "classraylib_1_1_music.html#aeaec37b4d521dfca16f39ce141c12515":[1,0,0,18,25],
 "classraylib_1_1_music.html#afffdaad319f3099d190e2e6faa7a60af":[0,0,0,21,13],
-"classraylib_1_1_music.html#afffdaad319f3099d190e2e6faa7a60af":[1,0,0,18,13],
-"classraylib_1_1_ray.html":[0,0,0,22]
+"classraylib_1_1_music.html#afffdaad319f3099d190e2e6faa7a60af":[1,0,0,18,13]
 };

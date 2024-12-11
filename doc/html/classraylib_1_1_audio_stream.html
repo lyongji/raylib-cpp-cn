@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
   <td id="projectalign">
    <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
    </div>
@@ -113,7 +112,7 @@ $(function(){initNavTree('classraylib_1_1_audio_stream.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> management functions  
+<p>音频流管理函数  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_audio_stream_8hpp_source.html">AudioStream.hpp</a>&gt;</code></p>
@@ -131,7 +130,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a66d098d9622b78aef199f3e32345ea14" id="r_a66d098d9622b78aef199f3e32345ea14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66d098d9622b78aef199f3e32345ea14">AudioStream</a> (rAudioBuffer *buffer=nullptr, rAudioProcessor *processor=nullptr, unsigned int sampleRate=0, unsigned int sampleSize=0, unsigned int channels=0)</td></tr>
 <tr class="separator:a66d098d9622b78aef199f3e32345ea14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2" id="r_a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2">AudioStream</a> (unsigned int sampleRate, unsigned int sampleSize, unsigned int channels=2)</td></tr>
-<tr class="memdesc:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init audio stream (to stream raw audio pcm data)  <br /></td></tr>
+<tr class="memdesc:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化音频流（用于流式传输原始音频 PCM 数据）  <br /></td></tr>
 <tr class="separator:a8dd9cb9c1d176a3ff8518cd1e5fbe3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a74cd0657258f1fe495d2dc7fd6881" id="r_ad8a74cd0657258f1fe495d2dc7fd6881"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8a74cd0657258f1fe495d2dc7fd6881">AudioStream</a> (const <a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;)=delete</td></tr>
 <tr class="separator:ad8a74cd0657258f1fe495d2dc7fd6881"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,58 +145,58 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:abaef9e064218e8728e7131de8f001bc1" id="r_abaef9e064218e8728e7131de8f001bc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaef9e064218e8728e7131de8f001bc1">operator=</a> (<a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="separator:abaef9e064218e8728e7131de8f001bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0aa29e7eb3fb305eaa224bd62402622" id="r_af0aa29e7eb3fb305eaa224bd62402622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0aa29e7eb3fb305eaa224bd62402622">Update</a> (const void *data, int samplesCount)</td></tr>
-<tr class="memdesc:af0aa29e7eb3fb305eaa224bd62402622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update audio stream buffers with data  <br /></td></tr>
+<tr class="memdesc:af0aa29e7eb3fb305eaa224bd62402622"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用数据更新音频流缓冲区  <br /></td></tr>
 <tr class="separator:af0aa29e7eb3fb305eaa224bd62402622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eb60e7995e5d89c403fdb9bd50d0095" id="r_a7eb60e7995e5d89c403fdb9bd50d0095"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eb60e7995e5d89c403fdb9bd50d0095">Unload</a> ()</td></tr>
-<tr class="memdesc:a7eb60e7995e5d89c403fdb9bd50d0095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload audio stream and free memory  <br /></td></tr>
+<tr class="memdesc:a7eb60e7995e5d89c403fdb9bd50d0095"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载音频流并释放内存  <br /></td></tr>
 <tr class="separator:a7eb60e7995e5d89c403fdb9bd50d0095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c208447f698ea82fb3c51f5c9978251" id="r_a1c208447f698ea82fb3c51f5c9978251"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c208447f698ea82fb3c51f5c9978251">IsProcessed</a> () const</td></tr>
-<tr class="memdesc:a1c208447f698ea82fb3c51f5c9978251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any audio stream buffers requires refill  <br /></td></tr>
+<tr class="memdesc:a1c208447f698ea82fb3c51f5c9978251"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否有任何音频流缓冲区需要重新填充  <br /></td></tr>
 <tr class="separator:a1c208447f698ea82fb3c51f5c9978251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aed292652e082b37396a66e48bf9858" id="r_a3aed292652e082b37396a66e48bf9858"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aed292652e082b37396a66e48bf9858">Play</a> ()</td></tr>
-<tr class="memdesc:a3aed292652e082b37396a66e48bf9858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play audio stream  <br /></td></tr>
+<tr class="memdesc:a3aed292652e082b37396a66e48bf9858"><td class="mdescLeft">&#160;</td><td class="mdescRight">播放音频流  <br /></td></tr>
 <tr class="separator:a3aed292652e082b37396a66e48bf9858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb2ae2e3c331c91af0d3ca86733e1f52" id="r_acb2ae2e3c331c91af0d3ca86733e1f52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb2ae2e3c331c91af0d3ca86733e1f52">Pause</a> ()</td></tr>
-<tr class="memdesc:acb2ae2e3c331c91af0d3ca86733e1f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause audio stream  <br /></td></tr>
+<tr class="memdesc:acb2ae2e3c331c91af0d3ca86733e1f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">暂停音频流  <br /></td></tr>
 <tr class="separator:acb2ae2e3c331c91af0d3ca86733e1f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae949d3dea0a03fa4554153ab1c591fb9" id="r_ae949d3dea0a03fa4554153ab1c591fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae949d3dea0a03fa4554153ab1c591fb9">Resume</a> ()</td></tr>
-<tr class="memdesc:ae949d3dea0a03fa4554153ab1c591fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume audio stream  <br /></td></tr>
+<tr class="memdesc:ae949d3dea0a03fa4554153ab1c591fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复音频流  <br /></td></tr>
 <tr class="separator:ae949d3dea0a03fa4554153ab1c591fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ddeb56330bff2e4ae2f6aff6b8c63e9" id="r_a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ddeb56330bff2e4ae2f6aff6b8c63e9">IsPlaying</a> () const</td></tr>
-<tr class="memdesc:a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if audio stream is playing  <br /></td></tr>
+<tr class="memdesc:a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查音频流是否正在播放  <br /></td></tr>
 <tr class="separator:a3ddeb56330bff2e4ae2f6aff6b8c63e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ebdf88ff0b76d024c7d49036cb0701f" id="r_a0ebdf88ff0b76d024c7d49036cb0701f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ebdf88ff0b76d024c7d49036cb0701f">Stop</a> ()</td></tr>
-<tr class="memdesc:a0ebdf88ff0b76d024c7d49036cb0701f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop audio stream  <br /></td></tr>
+<tr class="memdesc:a0ebdf88ff0b76d024c7d49036cb0701f"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止音频流  <br /></td></tr>
 <tr class="separator:a0ebdf88ff0b76d024c7d49036cb0701f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15f16038ea49ac4668eb0cd0fccb3fda" id="r_a15f16038ea49ac4668eb0cd0fccb3fda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f16038ea49ac4668eb0cd0fccb3fda">SetVolume</a> (float volume=1.0f)</td></tr>
-<tr class="memdesc:a15f16038ea49ac4668eb0cd0fccb3fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set volume for audio stream (1.0 is max level)  <br /></td></tr>
+<tr class="memdesc:a15f16038ea49ac4668eb0cd0fccb3fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置音频流的音量（1.0 为最大音量）  <br /></td></tr>
 <tr class="separator:a15f16038ea49ac4668eb0cd0fccb3fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ebfc6323dd52a529c652b50d981160" id="r_a13ebfc6323dd52a529c652b50d981160"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13ebfc6323dd52a529c652b50d981160">SetPitch</a> (float pitch)</td></tr>
-<tr class="memdesc:a13ebfc6323dd52a529c652b50d981160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pitch for audio stream (1.0 is base level)  <br /></td></tr>
+<tr class="memdesc:a13ebfc6323dd52a529c652b50d981160"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置音频流的音调（1.0 为基础音调）  <br /></td></tr>
 <tr class="separator:a13ebfc6323dd52a529c652b50d981160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49c33dffca35542ee9ad4cfc206ee82" id="r_af49c33dffca35542ee9ad4cfc206ee82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classraylib_1_1_audio_stream.html">AudioStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af49c33dffca35542ee9ad4cfc206ee82">SetPan</a> (float pan=0.5f)</td></tr>
-<tr class="memdesc:af49c33dffca35542ee9ad4cfc206ee82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pan for audio stream (0.5 is centered)  <br /></td></tr>
+<tr class="memdesc:af49c33dffca35542ee9ad4cfc206ee82"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置音频流的声道（0.5 为中心）  <br /></td></tr>
 <tr class="separator:af49c33dffca35542ee9ad4cfc206ee82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d982a89d11be88d5621aead4394560" id="r_a01d982a89d11be88d5621aead4394560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d982a89d11be88d5621aead4394560">SetCallback</a> (::AudioCallback callback)</td></tr>
-<tr class="memdesc:a01d982a89d11be88d5621aead4394560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio thread callback to request new data  <br /></td></tr>
+<tr class="memdesc:a01d982a89d11be88d5621aead4394560"><td class="mdescLeft">&#160;</td><td class="mdescRight">音频线程回调以请求新数据  <br /></td></tr>
 <tr class="separator:a01d982a89d11be88d5621aead4394560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4442ef0d6ba9c3ac03354c10ab62dd4a" id="r_a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4442ef0d6ba9c3ac03354c10ab62dd4a">AttachProcessor</a> (::AudioCallback processor)</td></tr>
-<tr class="memdesc:a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach audio stream processor to stream  <br /></td></tr>
+<tr class="memdesc:a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将音频流处理器附加到流  <br /></td></tr>
 <tr class="separator:a4442ef0d6ba9c3ac03354c10ab62dd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae41cbe345a20fd7155b96a218c807608" id="r_ae41cbe345a20fd7155b96a218c807608"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae41cbe345a20fd7155b96a218c807608">DetachProcessor</a> (::AudioCallback processor)</td></tr>
-<tr class="memdesc:ae41cbe345a20fd7155b96a218c807608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach audio stream processor from stream  <br /></td></tr>
+<tr class="memdesc:ae41cbe345a20fd7155b96a218c807608"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中分离音频流处理器  <br /></td></tr>
 <tr class="separator:ae41cbe345a20fd7155b96a218c807608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10647c48d0d8a752feef763997b111dd" id="r_a10647c48d0d8a752feef763997b111dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10647c48d0d8a752feef763997b111dd">IsValid</a> () const</td></tr>
-<tr class="memdesc:a10647c48d0d8a752feef763997b111dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve whether or not the audio stream is ready.  <br /></td></tr>
+<tr class="memdesc:a10647c48d0d8a752feef763997b111dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">检索音频流是否准备就绪  <br /></td></tr>
 <tr class="separator:a10647c48d0d8a752feef763997b111dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a5c4cad697bfd65ae5e87843699e7e7" id="r_a5a5c4cad697bfd65ae5e87843699e7e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a5c4cad697bfd65ae5e87843699e7e7">Load</a> (unsigned int SampleRate, unsigned int SampleSize, unsigned int Channels=2)</td></tr>
-<tr class="memdesc:a5a5c4cad697bfd65ae5e87843699e7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load audio stream (to stream raw audio pcm data)  <br /></td></tr>
+<tr class="memdesc:a5a5c4cad697bfd65ae5e87843699e7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载音频流（用于流式传输原始音频 PCM 数据）  <br /></td></tr>
 <tr class="separator:a5a5c4cad697bfd65ae5e87843699e7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:a8a58e7e88a4fec0ce04cdc62614c5f5c" id="r_a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a58e7e88a4fec0ce04cdc62614c5f5c">SetBufferSizeDefault</a> (int size)</td></tr>
-<tr class="memdesc:a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default size for new audio streams  <br /></td></tr>
+<tr class="memdesc:a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置新音频流的默认缓冲区大小  <br /></td></tr>
 <tr class="separator:a8a58e7e88a4fec0ce04cdc62614c5f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -206,7 +205,7 @@ Protected 成员函数</h2></td></tr>
 <tr class="separator:ad151719449a1dfb3999817c09f9a5814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p><a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> management functions </p>
+<div class="textblock"><p>音频流管理函数 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a894b806cbf3e016b9cc7d9f413758012" name="a894b806cbf3e016b9cc7d9f413758012"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a894b806cbf3e016b9cc7d9f413758012">&#9670;&#160;</a></span>AudioStream() <span class="overload">[1/5]</span></h2>
@@ -309,10 +308,10 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Init audio stream (to stream raw audio pcm data) </p>
+<p>初始化音频流（用于流式传输原始音频 PCM 数据） </p>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> failed to load. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="用于大多数 raylib 相关异常的异常类。">raylib::RaylibException</a></td><td>如果音频流加载失败，则抛出异常。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -418,7 +417,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Attach audio stream processor to stream </p>
+<p>将音频流处理器附加到流 </p>
 
 </div>
 </div>
@@ -445,7 +444,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Detach audio stream processor from stream </p>
+<p>从流中分离音频流处理器 </p>
 
 </div>
 </div>
@@ -472,7 +471,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if audio stream is playing </p>
+<p>检查音频流是否正在播放 </p>
 
 </div>
 </div>
@@ -499,7 +498,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if any audio stream buffers requires refill </p>
+<p>检查是否有任何音频流缓冲区需要重新填充 </p>
 
 </div>
 </div>
@@ -526,7 +525,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieve whether or not the audio stream is ready. </p>
+<p>检索音频流是否准备就绪 </p>
 
 </div>
 </div>
@@ -562,10 +561,10 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load audio stream (to stream raw audio pcm data) </p>
+<p>加载音频流（用于流式传输原始音频 PCM 数据） </p>
 <dl class="exception"><dt>异常</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="Exception used for most raylib-related exceptions.">raylib::RaylibException</a></td><td>Throws if the <a class="el" href="classraylib_1_1_audio_stream.html" title="AudioStream management functions">AudioStream</a> failed to load. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classraylib_1_1_raylib_exception.html" title="用于大多数 raylib 相关异常的异常类。">raylib::RaylibException</a></td><td>如果音频流加载失败，则抛出异常。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -670,7 +669,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pause audio stream </p>
+<p>暂停音频流 </p>
 
 </div>
 </div>
@@ -697,7 +696,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Play audio stream </p>
+<p>播放音频流 </p>
 
 </div>
 </div>
@@ -724,7 +723,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Resume audio stream </p>
+<p>恢复音频流 </p>
 
 </div>
 </div>
@@ -776,7 +775,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default size for new audio streams </p>
+<p>设置新音频流的默认缓冲区大小 </p>
 
 </div>
 </div>
@@ -803,7 +802,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Audio thread callback to request new data </p>
+<p>音频线程回调以请求新数据 </p>
 
 </div>
 </div>
@@ -830,7 +829,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set pan for audio stream (0.5 is centered) </p>
+<p>设置音频流的声道（0.5 为中心） </p>
 
 </div>
 </div>
@@ -857,7 +856,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set pitch for audio stream (1.0 is base level) </p>
+<p>设置音频流的音调（1.0 为基础音调） </p>
 
 </div>
 </div>
@@ -884,7 +883,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set volume for audio stream (1.0 is max level) </p>
+<p>设置音频流的音量（1.0 为最大音量） </p>
 
 </div>
 </div>
@@ -911,7 +910,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stop audio stream </p>
+<p>停止音频流 </p>
 
 </div>
 </div>
@@ -938,7 +937,7 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Unload audio stream and free memory </p>
+<p>卸载音频流并释放内存 </p>
 
 </div>
 </div>
@@ -969,12 +968,12 @@ Protected 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Update audio stream buffers with data </p>
+<p>使用数据更新音频流缓冲区 </p>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>include/<a class="el" href="_audio_stream_8hpp_source.html">AudioStream.hpp</a></li>
+<li>D:/MyData/cpp/raylib-cpp/include/<a class="el" href="_audio_stream_8hpp_source.html">AudioStream.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

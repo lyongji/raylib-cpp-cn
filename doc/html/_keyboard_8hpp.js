@@ -1,5 +1,6 @@
 var _keyboard_8hpp =
 [
+    [ "RLCPPAPI", "_keyboard_8hpp.html#a905c250671e2d934cf2ac43e0ca915ad", null ],
     [ "GetCharPressed", "_keyboard_8hpp.html#a65c1d0568b98310656af857b83ea692a", null ],
     [ "GetKeyPressed", "_keyboard_8hpp.html#af4d23110b997068053171831403bdf5e", null ],
     [ "IsKeyDown", "_keyboard_8hpp.html#a47dea742c2cc89a9803f2de285cb8964", null ],

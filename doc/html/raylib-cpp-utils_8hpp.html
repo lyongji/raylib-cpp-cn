@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>raylib-cpp-cn: include/raylib-cpp-utils.hpp 文件参考</title>
+<title>raylib-cpp-cn: D:/MyData/cpp/raylib-cpp/include/raylib-cpp-utils.hpp 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
   <td id="projectalign">
    <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
    </div>
@@ -115,10 +114,10 @@ $(function(){initNavTree('raylib-cpp-utils_8hpp.html',''); initResizable(true); 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 宏定义</h2></td></tr>
 <tr class="memitem:adc695a4ac85f037aa73222f242c64091" id="r_adc695a4ac85f037aa73222f242c64091"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc695a4ac85f037aa73222f242c64091">GETTER</a>(type,  method,  name)</td></tr>
-<tr class="memdesc:adc695a4ac85f037aa73222f242c64091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility for raylib-cpp.  <br /></td></tr>
+<tr class="memdesc:adc695a4ac85f037aa73222f242c64091"><td class="mdescLeft">&#160;</td><td class="mdescRight">raylib-cpp 的实用工具。  <br /></td></tr>
 <tr class="separator:adc695a4ac85f037aa73222f242c64091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2516c5e2fd5f821bcf853ee617f5561c" id="r_a2516c5e2fd5f821bcf853ee617f5561c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(type,  method,  name)</td></tr>
-<tr class="memdesc:a2516c5e2fd5f821bcf853ee617f5561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility to build get and set methods on top of a property.  <br /></td></tr>
+<tr class="memdesc:a2516c5e2fd5f821bcf853ee617f5561c"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于在属性之上构建 get 和 set 方法的实用工具。  <br /></td></tr>
 <tr class="separator:a2516c5e2fd5f821bcf853ee617f5561c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">宏定义说明</h2>
@@ -146,17 +145,17 @@ $(function(){initNavTree('raylib-cpp-utils_8hpp.html',''); initResizable(true); 
       </table>
 </div><div class="memdoc">
 <b>值:</b><div class="fragment"><div class="line"> \</div>
-<div class="line">    type Get##method()<span class="keyword"> const </span>{                                                            \</div>
-<div class="line">        <span class="keywordflow">return</span> name;                                                                      \</div>
+<div class="line">    type Get##method()<span class="keyword"> const </span>{                                      \</div>
+<div class="line">        <span class="keywordflow">return</span> name;                                                \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p>Utility for raylib-cpp. </p>
-<p>A utility to build a get method on top of a property.</p>
+<p>raylib-cpp 的实用工具。 </p>
+<p>用于在属性之上构建 get 方法的实用工具。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The type of the property. </td></tr>
-    <tr><td class="paramname">method</td><td>The human-readable name for the method. </td></tr>
-    <tr><td class="paramname">name</td><td>The machine-readable name of the property. </td></tr>
+    <tr><td class="paramname">type</td><td>属性的类型。 </td></tr>
+    <tr><td class="paramname">method</td><td>方法的人类可读名称。 </td></tr>
+    <tr><td class="paramname">name</td><td>属性的机器可读名称。 </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,19 +185,19 @@ $(function(){initNavTree('raylib-cpp-utils_8hpp.html',''); initResizable(true); 
         </tr>
       </table>
 </div><div class="memdoc">
-<b>值:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#adc695a4ac85f037aa73222f242c64091">GETTER</a>(type, method, name)                                                                 \</div>
+<b>值:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#adc695a4ac85f037aa73222f242c64091">GETTER</a>(type, method, name)                                                 \</div>
 <div class="line"> \</div>
-<div class="line">    <span class="keywordtype">void</span> Set##method(type value) {                                                             \</div>
-<div class="line">        name = value;                                                                          \</div>
+<div class="line">    <span class="keywordtype">void</span> Set##method(type value) {                                             \</div>
+<div class="line">        name = value;                                                          \</div>
 <div class="line">    }</div>
-<div class="ttc" id="araylib-cpp-utils_8hpp_html_adc695a4ac85f037aa73222f242c64091"><div class="ttname"><a href="#adc695a4ac85f037aa73222f242c64091">GETTER</a></div><div class="ttdeci">#define GETTER(type, method, name)</div><div class="ttdoc">Utility for raylib-cpp.</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:15</div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html_adc695a4ac85f037aa73222f242c64091"><div class="ttname"><a href="#adc695a4ac85f037aa73222f242c64091">GETTER</a></div><div class="ttdeci">#define GETTER(type, method, name)</div><div class="ttdoc">raylib-cpp 的实用工具。</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:16</div></div>
 </div><!-- fragment -->
-<p>A utility to build get and set methods on top of a property. </p>
+<p>用于在属性之上构建 get 和 set 方法的实用工具。 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">type</td><td>The type of the property. </td></tr>
-    <tr><td class="paramname">method</td><td>The human-readable name for the method. </td></tr>
-    <tr><td class="paramname">name</td><td>The machine-readable name of the property. </td></tr>
+    <tr><td class="paramname">type</td><td>属性的类型。 </td></tr>
+    <tr><td class="paramname">method</td><td>方法的人类可读名称。 </td></tr>
+    <tr><td class="paramname">name</td><td>属性的机器可读名称。 </td></tr>
   </table>
   </dd>
 </dl>

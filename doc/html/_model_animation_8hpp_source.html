@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>raylib-cpp-cn: include/ModelAnimation.hpp 源文件</title>
+<title>raylib-cpp-cn: D:/MyData/cpp/raylib-cpp/include/ModelAnimation.hpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
   <td id="projectalign">
    <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
    </div>
@@ -107,136 +106,137 @@ $(function(){initNavTree('_model_animation_8hpp_source.html',''); initResizable(
   <div class="headertitle"><div class="title">ModelAnimation.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_model_animation_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_8hpp.html">./Mesh.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="raylib-cpp-utils_8hpp.html">./raylib-cpp-utils.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a> : <span class="keyword">public</span> ::ModelAnimation {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">   17</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">ModelAnimation</a>(const ::ModelAnimation&amp; model) { <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(model); }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ad0bd91810295d01e922ec88ae560f18b">   19</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#ad0bd91810295d01e922ec88ae560f18b">ModelAnimation</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c">   21</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c">ModelAnimation</a>(<a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;&amp; other) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(other);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        other.boneCount = 0;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        other.frameCount = 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        other.bones = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        other.framePoses = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<a href="_model_animation_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// #ifndef RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// #define RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_8hpp.html">./Mesh.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="raylib-cpp-utils_8hpp.html">./raylib-cpp-utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="raylib_8hpp.html">./raylib.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceraylib.html">raylib</a> {</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a> : <span class="keyword">public</span> ::ModelAnimation {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">   18</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">ModelAnimation</a>(const ::ModelAnimation&amp; model) { <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(model); }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ad0bd91810295d01e922ec88ae560f18b">   20</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#ad0bd91810295d01e922ec88ae560f18b">ModelAnimation</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c">   22</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c">ModelAnimation</a>(<a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;&amp; other) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(other);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        other.boneCount = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        other.frameCount = 0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        other.bones = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        other.framePoses = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787">   30</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787">~ModelAnimation</a>() { <a class="code hl_function" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">Unload</a>(); }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff">   35</a></span>    <span class="keyword">static</span> std::vector&lt;ModelAnimation&gt; <a class="code hl_function" href="classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff">Load</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">::ModelAnimation</a>* modelAnimations = ::LoadModelAnimations(fileName.c_str(), &amp;count);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::vector&lt;ModelAnimation&gt; mats(modelAnimations, modelAnimations + count);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        RL_FREE(modelAnimations);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> mats;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787">   31</a></span>    <a class="code hl_function" href="classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787">~ModelAnimation</a>() { <a class="code hl_function" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">Unload</a>(); }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff">   36</a></span>    <span class="keyword">static</span> std::vector&lt;ModelAnimation&gt; <a class="code hl_function" href="classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff">Load</a>(<span class="keyword">const</span> std::string&amp; fileName) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">::ModelAnimation</a>* modelAnimations = ::LoadModelAnimations(fileName.c_str(), &amp;count);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::vector&lt;ModelAnimation&gt; mats(modelAnimations, modelAnimations + count);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        RL_FREE(modelAnimations);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> mats;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">int</span>, BoneCount, boneCount)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(::BoneInfo*, Bones, bones)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">int</span>, FrameCount, frameCount)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(::Transform**, FramePoses, framePoses)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a8cdf66437a165dc39d4c3dece774b606">   50</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; operator=(const ::<a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; model) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(model);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">int</span>, BoneCount, boneCount)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(::BoneInfo*, Bones, bones)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(<span class="keywordtype">int</span>, FrameCount, frameCount)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a>(::Transform**, FramePoses, framePoses)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a8cdf66437a165dc39d4c3dece774b606">   51</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; operator=(const ::<a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; model) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(model);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a1efe07d288b2a9318c7ca4ff2e321776">   55</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#a1efe07d288b2a9318c7ca4ff2e321776">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ab083b9d9c64a0ec604e4c7342caec9b4">   57</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#ab083b9d9c64a0ec604e4c7342caec9b4">operator=</a>(<a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;&amp; other) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">Unload</a>();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(other);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        other.boneCount = 0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        other.frameCount = 0;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        other.bones = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        other.framePoses = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a1efe07d288b2a9318c7ca4ff2e321776">   56</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#a1efe07d288b2a9318c7ca4ff2e321776">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ab083b9d9c64a0ec604e4c7342caec9b4">   58</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#ab083b9d9c64a0ec604e4c7342caec9b4">operator=</a>(<a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp;&amp; other) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">Unload</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(other);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        other.boneCount = 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        other.frameCount = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        other.bones = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        other.framePoses = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">Unload</a>() { ::UnloadModelAnimation(*<span class="keyword">this</span>); }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ae5453fb8380e1f8e608f4e1b807f2fba">   81</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#ae5453fb8380e1f8e608f4e1b807f2fba">Update</a>(const ::Model&amp; model, <span class="keywordtype">int</span> frame) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        ::UpdateModelAnimation(model, *<span class="keyword">this</span>, frame);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">   77</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">Unload</a>() { ::UnloadModelAnimation(*<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ae5453fb8380e1f8e608f4e1b807f2fba">   82</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#ae5453fb8380e1f8e608f4e1b807f2fba">Update</a>(const ::Model&amp; model, <span class="keywordtype">int</span> frame) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        ::UpdateModelAnimation(model, *<span class="keyword">this</span>, frame);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
 </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ac0ebc288fe0a54c2d3995cec6b78664b">   89</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac0ebc288fe0a54c2d3995cec6b78664b">UpdateBones</a>(const ::Model&amp; model, <span class="keywordtype">int</span> frame) {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        ::UpdateModelAnimationBones(model, *<span class="keyword">this</span>, frame);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ac0ebc288fe0a54c2d3995cec6b78664b">   90</a></span>    <a class="code hl_class" href="classraylib_1_1_model_animation.html">ModelAnimation</a>&amp; <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac0ebc288fe0a54c2d3995cec6b78664b">UpdateBones</a>(const ::Model&amp; model, <span class="keywordtype">int</span> frame) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        ::UpdateModelAnimationBones(model, *<span class="keyword">this</span>, frame);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
 </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34">   97</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34">IsValid</a>(const ::Model&amp; model)<span class="keyword"> const </span>{ return ::IsModelAnimationValid(model, *<span class="keyword">this</span>); }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">protected</span>:</div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">   99</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(const ::ModelAnimation&amp; model) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        boneCount = model.boneCount;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        frameCount = model.frameCount;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        bones = model.bones;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        framePoses = model.framePoses;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="comment">// Duplicate the name. TextCopy() uses the null terminator, which we ignore here.</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 32; i++) {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            name[i] = model.name[i];</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34">   98</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34">IsValid</a>(const ::Model&amp; model)<span class="keyword"> const </span>{ return ::IsModelAnimationValid(model, *<span class="keyword">this</span>); }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">protected</span>:</div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">  100</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">set</a>(const ::ModelAnimation&amp; model) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        boneCount = model.boneCount;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        frameCount = model.frameCount;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        bones = model.bones;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        framePoses = model.framePoses;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="comment">// 复制名称。TextCopy() 使用空终止符，这里忽略。</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 32; i++) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            name[i] = model.name[i];</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
 </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
 </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>} <span class="comment">// namespace raylib</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="_model_animation_8hpp.html#a03806b019f2b96d2bee48a6e15f810f9">  113</a></span><span class="keyword">using </span><a class="code hl_class" href="classraylib_1_1_model_animation.html">RModelAnimation</a> = <a class="code hl_class" href="classraylib_1_1_model_animation.html">raylib::ModelAnimation</a>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif </span><span class="comment">// RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <span class="comment">// namespace raylib</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="_model_animation_8hpp.html#a03806b019f2b96d2bee48a6e15f810f9">  114</a></span><span class="keyword">using </span><a class="code hl_class" href="classraylib_1_1_model_animation.html">RModelAnimation</a> = <a class="code hl_class" href="classraylib_1_1_model_animation.html">raylib::ModelAnimation</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">// #endif // RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_</span></div>
 <div class="ttc" id="a_mesh_8hpp_html"><div class="ttname"><a href="_mesh_8hpp.html">Mesh.hpp</a></div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html"><div class="ttname"><a href="classraylib_1_1_model_animation.html">raylib::ModelAnimation</a></div><div class="ttdoc">Model animation</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:15</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_a06b185d0fb36a7db952d4435061b7aff"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff">raylib::ModelAnimation::Load</a></div><div class="ttdeci">static std::vector&lt; ModelAnimation &gt; Load(const std::string &amp;fileName)</div><div class="ttdoc">Load model animations from file</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:35</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html"><div class="ttname"><a href="classraylib_1_1_model_animation.html">raylib::ModelAnimation</a></div><div class="ttdoc">模型动画</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:16</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_a06b185d0fb36a7db952d4435061b7aff"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff">raylib::ModelAnimation::Load</a></div><div class="ttdeci">static std::vector&lt; ModelAnimation &gt; Load(const std::string &amp;fileName)</div><div class="ttdoc">从文件加载模型动画</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:36</div></div>
 <div class="ttc" id="aclassraylib_1_1_model_animation_html_a1efe07d288b2a9318c7ca4ff2e321776"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a1efe07d288b2a9318c7ca4ff2e321776">raylib::ModelAnimation::operator=</a></div><div class="ttdeci">ModelAnimation &amp; operator=(const ModelAnimation &amp;)=delete</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_a633f1c094138e99c36251773a8f3c787"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787">raylib::ModelAnimation::~ModelAnimation</a></div><div class="ttdeci">~ModelAnimation()</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:30</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_a8759ec999d5a7370e364e8e86d278c34"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34">raylib::ModelAnimation::IsValid</a></div><div class="ttdeci">bool IsValid(const ::Model &amp;model) const</div><div class="ttdoc">Check model animation skeleton match</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:97</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_a9029e1db807aa1d1cc3ff4f7a8ac87d5"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">raylib::ModelAnimation::ModelAnimation</a></div><div class="ttdeci">ModelAnimation(const ::ModelAnimation &amp;model)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:17</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_aadd7f90b9f7c643b070b1c4d48b9aa6c"><div class="ttname"><a href="classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c">raylib::ModelAnimation::ModelAnimation</a></div><div class="ttdeci">ModelAnimation(ModelAnimation &amp;&amp;other)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:21</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_ab083b9d9c64a0ec604e4c7342caec9b4"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ab083b9d9c64a0ec604e4c7342caec9b4">raylib::ModelAnimation::operator=</a></div><div class="ttdeci">ModelAnimation &amp; operator=(ModelAnimation &amp;&amp;other) noexcept</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:57</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_ac0ebc288fe0a54c2d3995cec6b78664b"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ac0ebc288fe0a54c2d3995cec6b78664b">raylib::ModelAnimation::UpdateBones</a></div><div class="ttdeci">ModelAnimation &amp; UpdateBones(const ::Model &amp;model, int frame)</div><div class="ttdoc">Update model animation mesh bone matrices (GPU skinning)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:89</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_ac5ce6c4b224fee949e338382410b8486"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">raylib::ModelAnimation::set</a></div><div class="ttdeci">void set(const ::ModelAnimation &amp;model)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:99</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_a633f1c094138e99c36251773a8f3c787"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787">raylib::ModelAnimation::~ModelAnimation</a></div><div class="ttdeci">~ModelAnimation()</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:31</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_a8759ec999d5a7370e364e8e86d278c34"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34">raylib::ModelAnimation::IsValid</a></div><div class="ttdeci">bool IsValid(const ::Model &amp;model) const</div><div class="ttdoc">检查模型动画骨骼是否匹配</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:98</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_a9029e1db807aa1d1cc3ff4f7a8ac87d5"><div class="ttname"><a href="classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5">raylib::ModelAnimation::ModelAnimation</a></div><div class="ttdeci">ModelAnimation(const ::ModelAnimation &amp;model)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:18</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_aadd7f90b9f7c643b070b1c4d48b9aa6c"><div class="ttname"><a href="classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c">raylib::ModelAnimation::ModelAnimation</a></div><div class="ttdeci">ModelAnimation(ModelAnimation &amp;&amp;other)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:22</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_ab083b9d9c64a0ec604e4c7342caec9b4"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ab083b9d9c64a0ec604e4c7342caec9b4">raylib::ModelAnimation::operator=</a></div><div class="ttdeci">ModelAnimation &amp; operator=(ModelAnimation &amp;&amp;other) noexcept</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:58</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_ac0ebc288fe0a54c2d3995cec6b78664b"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ac0ebc288fe0a54c2d3995cec6b78664b">raylib::ModelAnimation::UpdateBones</a></div><div class="ttdeci">ModelAnimation &amp; UpdateBones(const ::Model &amp;model, int frame)</div><div class="ttdoc">更新模型动画网格骨骼矩阵（GPU蒙皮）</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:90</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_ac5ce6c4b224fee949e338382410b8486"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ac5ce6c4b224fee949e338382410b8486">raylib::ModelAnimation::set</a></div><div class="ttdeci">void set(const ::ModelAnimation &amp;model)</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:100</div></div>
 <div class="ttc" id="aclassraylib_1_1_model_animation_html_ad0bd91810295d01e922ec88ae560f18b"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ad0bd91810295d01e922ec88ae560f18b">raylib::ModelAnimation::ModelAnimation</a></div><div class="ttdeci">ModelAnimation(const ModelAnimation &amp;)=delete</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_ae5453fb8380e1f8e608f4e1b807f2fba"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ae5453fb8380e1f8e608f4e1b807f2fba">raylib::ModelAnimation::Update</a></div><div class="ttdeci">ModelAnimation &amp; Update(const ::Model &amp;model, int frame)</div><div class="ttdoc">Update model animation pose</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:81</div></div>
-<div class="ttc" id="aclassraylib_1_1_model_animation_html_afa5bb2f87178e477dcbe541cc14eb697"><div class="ttname"><a href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">raylib::ModelAnimation::Unload</a></div><div class="ttdeci">void Unload()</div><div class="ttdoc">Unload animation data</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:76</div></div>
-<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:8</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_ae5453fb8380e1f8e608f4e1b807f2fba"><div class="ttname"><a href="classraylib_1_1_model_animation.html#ae5453fb8380e1f8e608f4e1b807f2fba">raylib::ModelAnimation::Update</a></div><div class="ttdeci">ModelAnimation &amp; Update(const ::Model &amp;model, int frame)</div><div class="ttdoc">更新模型动画姿态</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:82</div></div>
+<div class="ttc" id="aclassraylib_1_1_model_animation_html_afa5bb2f87178e477dcbe541cc14eb697"><div class="ttname"><a href="classraylib_1_1_model_animation.html#afa5bb2f87178e477dcbe541cc14eb697">raylib::ModelAnimation::Unload</a></div><div class="ttdeci">void Unload()</div><div class="ttdoc">卸载动画数据</div><div class="ttdef"><b>定义</b> ModelAnimation.hpp:77</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:9</div></div>
 <div class="ttc" id="araylib-cpp-utils_8hpp_html"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html">raylib-cpp-utils.hpp</a></div></div>
-<div class="ttc" id="araylib-cpp-utils_8hpp_html_a2516c5e2fd5f821bcf853ee617f5561c"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a></div><div class="ttdeci">#define GETTERSETTER(type, method, name)</div><div class="ttdoc">A utility to build get and set methods on top of a property.</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:30</div></div>
+<div class="ttc" id="araylib-cpp-utils_8hpp_html_a2516c5e2fd5f821bcf853ee617f5561c"><div class="ttname"><a href="raylib-cpp-utils_8hpp.html#a2516c5e2fd5f821bcf853ee617f5561c">GETTERSETTER</a></div><div class="ttdeci">#define GETTERSETTER(type, method, name)</div><div class="ttdoc">用于在属性之上构建 get 和 set 方法的实用工具。</div><div class="ttdef"><b>定义</b> raylib-cpp-utils.hpp:31</div></div>
 <div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

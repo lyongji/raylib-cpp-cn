@@ -31,7 +31,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="raylib-cpp_256x256.png"/></td>
   <td id="projectalign">
    <div id="projectname">raylib-cpp-cn<span id="projectnumber">&#160;0.01</span>
    </div>
@@ -112,6 +111,9 @@ $(function(){initNavTree('classraylib_1_1_file_text.html',''); initResizable(tru
 </div><!--header-->
 <div class="contents">
 
+<p>文件文本类，用于加载和管理文件文本内容  
+ <a href="#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_file_text_8hpp_source.html">FileText.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -129,18 +131,25 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:accafd1f992f8bd92698f4b6bdb438d63" id="r_accafd1f992f8bd92698f4b6bdb438d63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accafd1f992f8bd92698f4b6bdb438d63">~FileText</a> ()</td></tr>
 <tr class="separator:accafd1f992f8bd92698f4b6bdb438d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99209d73ed5427b5fdc0e1789e992e2e" id="r_a99209d73ed5427b5fdc0e1789e992e2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99209d73ed5427b5fdc0e1789e992e2e">FileText</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a99209d73ed5427b5fdc0e1789e992e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件名加载文件文本  <br /></td></tr>
 <tr class="separator:a99209d73ed5427b5fdc0e1789e992e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba95d99111438246c781a5845af38e9" id="r_a3ba95d99111438246c781a5845af38e9"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ba95d99111438246c781a5845af38e9">c_str</a> () const</td></tr>
+<tr class="memdesc:a3ba95d99111438246c781a5845af38e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回 C 风格的字符串  <br /></td></tr>
 <tr class="separator:a3ba95d99111438246c781a5845af38e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad91077651bf49d009e5adb1ca32fe1d8" id="r_ad91077651bf49d009e5adb1ca32fe1d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad91077651bf49d009e5adb1ca32fe1d8">ToString</a> () const</td></tr>
+<tr class="memdesc:ad91077651bf49d009e5adb1ca32fe1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回字符串形式的文本内容  <br /></td></tr>
 <tr class="separator:ad91077651bf49d009e5adb1ca32fe1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bcdb0f419030b1d9bd890d283d27ed0" id="r_a0bcdb0f419030b1d9bd890d283d27ed0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bcdb0f419030b1d9bd890d283d27ed0">operator std::string</a> () const</td></tr>
+<tr class="memdesc:a0bcdb0f419030b1d9bd890d283d27ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">显式转换为 std::string  <br /></td></tr>
 <tr class="separator:a0bcdb0f419030b1d9bd890d283d27ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a779946b933e2336629241e27848d54f4" id="r_a779946b933e2336629241e27848d54f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a779946b933e2336629241e27848d54f4">Load</a> (const std::string &amp;fileName)</td></tr>
+<tr class="memdesc:a779946b933e2336629241e27848d54f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件名加载文件文本  <br /></td></tr>
 <tr class="separator:a779946b933e2336629241e27848d54f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7babeb065458e1711d1d52fc282ed8f" id="r_ad7babeb065458e1711d1d52fc282ed8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7babeb065458e1711d1d52fc282ed8f">Load</a> (const char *fileName)</td></tr>
+<tr class="memdesc:ad7babeb065458e1711d1d52fc282ed8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件名加载文件文本  <br /></td></tr>
 <tr class="separator:ad7babeb065458e1711d1d52fc282ed8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56616f59bc7974e678b7195ecc65ddee" id="r_a56616f59bc7974e678b7195ecc65ddee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56616f59bc7974e678b7195ecc65ddee">Unload</a> ()</td></tr>
+<tr class="memdesc:a56616f59bc7974e678b7195ecc65ddee"><td class="mdescLeft">&#160;</td><td class="mdescRight">卸载文件文本  <br /></td></tr>
 <tr class="separator:a56616f59bc7974e678b7195ecc65ddee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -150,7 +159,9 @@ Private 属性</h2></td></tr>
 <tr class="memitem:abd8d7dc20c878f8bb5581972aac121b5" id="r_abd8d7dc20c878f8bb5581972aac121b5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8d7dc20c878f8bb5581972aac121b5">length</a> {0}</td></tr>
 <tr class="separator:abd8d7dc20c878f8bb5581972aac121b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">构造及析构函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>文件文本类，用于加载和管理文件文本内容 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a9f77e1e0529d3d8db4ab3f71843b6881" name="a9f77e1e0529d3d8db4ab3f71843b6881"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f77e1e0529d3d8db4ab3f71843b6881">&#9670;&#160;</a></span>FileText() <span class="overload">[1/4]</span></h2>
 
@@ -274,6 +285,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>从文件名加载文件文本 </p>
+
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
@@ -300,6 +313,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>返回 C 风格的字符串 </p>
+
 </div>
 </div>
 <a id="ad7babeb065458e1711d1d52fc282ed8f" name="ad7babeb065458e1711d1d52fc282ed8f"></a>
@@ -324,6 +339,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>从文件名加载文件文本 </p>
 
 </div>
 </div>
@@ -350,6 +367,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>从文件名加载文件文本 </p>
+
 </div>
 </div>
 <a id="a0bcdb0f419030b1d9bd890d283d27ed0" name="a0bcdb0f419030b1d9bd890d283d27ed0"></a>
@@ -374,6 +393,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>显式转换为 std::string </p>
 
 </div>
 </div>
@@ -450,6 +471,8 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>返回字符串形式的文本内容 </p>
+
 </div>
 </div>
 <a id="a56616f59bc7974e678b7195ecc65ddee" name="a56616f59bc7974e678b7195ecc65ddee"></a>
@@ -474,6 +497,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>卸载文件文本 </p>
 
 </div>
 </div>
@@ -523,7 +548,7 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>include/<a class="el" href="_file_text_8hpp_source.html">FileText.hpp</a></li>
+<li>D:/MyData/cpp/raylib-cpp/include/<a class="el" href="_file_text_8hpp_source.html">FileText.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

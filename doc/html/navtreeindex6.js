@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"classraylib_1_1_sound.html#a321a8cea955f859f8648e2df202f5497":[0,0,0,29,6],
 "classraylib_1_1_sound.html#a321a8cea955f859f8648e2df202f5497":[1,0,0,26,6],
 "classraylib_1_1_sound.html#a4c08c29d0590754fd5798bbb4df4f4bb":[0,0,0,29,0],
 "classraylib_1_1_sound.html#a4c08c29d0590754fd5798bbb4df4f4bb":[1,0,0,26,0],
@@ -131,6 +132,8 @@ var NAVTREEINDEX6 =
 "classraylib_1_1_texture_unmanaged.html#a7d04251547b66e6f10c7b3d0b0549b80":[1,0,0,29,27],
 "classraylib_1_1_texture_unmanaged.html#a80196875c325e6d7dae9e1f05915e8c2":[0,0,0,32,12],
 "classraylib_1_1_texture_unmanaged.html#a80196875c325e6d7dae9e1f05915e8c2":[1,0,0,29,12],
+"classraylib_1_1_texture_unmanaged.html#a822a045111456236dd1ba8fd8dd44b3c":[0,0,0,32,18],
+"classraylib_1_1_texture_unmanaged.html#a822a045111456236dd1ba8fd8dd44b3c":[1,0,0,29,18],
 "classraylib_1_1_texture_unmanaged.html#a849e2c61ee4e0467801d6f50b34038f5":[0,0,0,32,6],
 "classraylib_1_1_texture_unmanaged.html#a849e2c61ee4e0467801d6f50b34038f5":[1,0,0,29,6],
 "classraylib_1_1_texture_unmanaged.html#a8aab2105c5f0d84b151c20ea8b8c747c":[0,0,0,32,9],
@@ -139,8 +142,6 @@ var NAVTREEINDEX6 =
 "classraylib_1_1_texture_unmanaged.html#a92231c7ef084ded4958752c4196b6638":[1,0,0,29,10],
 "classraylib_1_1_texture_unmanaged.html#aa1672e3692c36b71128cdfe2ffe718ce":[0,0,0,32,11],
 "classraylib_1_1_texture_unmanaged.html#aa1672e3692c36b71128cdfe2ffe718ce":[1,0,0,29,11],
-"classraylib_1_1_texture_unmanaged.html#aa640b58a639224200e487bd00c651747":[0,0,0,32,18],
-"classraylib_1_1_texture_unmanaged.html#aa640b58a639224200e487bd00c651747":[1,0,0,29,18],
 "classraylib_1_1_texture_unmanaged.html#aa860ea9d9af3a4a46c3f14a80bb68b35":[0,0,0,32,0],
 "classraylib_1_1_texture_unmanaged.html#aa860ea9d9af3a4a46c3f14a80bb68b35":[1,0,0,29,0],
 "classraylib_1_1_texture_unmanaged.html#aada92f85160c4d1bbf6942e260f591f4":[0,0,0,32,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classraylib_1_1_vector2.html#a9c1f9983b14d3ff4ba92ca0e041cb970":[0,0,0,33,39],
 "classraylib_1_1_vector2.html#a9c1f9983b14d3ff4ba92ca0e041cb970":[1,0,0,30,39],
 "classraylib_1_1_vector2.html#aa12e15f76cd518d8d0447c80c89fd8c5":[0,0,0,33,49],
-"classraylib_1_1_vector2.html#aa12e15f76cd518d8d0447c80c89fd8c5":[1,0,0,30,49],
-"classraylib_1_1_vector2.html#aa7285d7893ebf62cdf8b4b9c286c6047":[0,0,0,33,22]
+"classraylib_1_1_vector2.html#aa12e15f76cd518d8d0447c80c89fd8c5":[1,0,0,30,49]
 };
