@@ -15,7 +15,7 @@
  */
 #define GETTER(type, method, name)                                  \
     /** 检索对象的 name 值。@return 对象的 name 值。 */ \
-    type Get##method() const {                                      \
+    type 取##method() const {                                       \
         return name;                                                \
     }
 #endif
@@ -31,7 +31,7 @@
 #define GETTERSETTER(type, method, name)                                       \
     GETTER(type, method, name)                                                 \
     /** 设置对象的 name 值。@param value 要设置为 name 的值。 */ \
-    void Set##method(type value) {                                             \
+    void 设##method(type value) {                                              \
         name = value;                                                          \
     }
 #endif

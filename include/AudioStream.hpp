@@ -10,17 +10,17 @@ namespace raylib {
 /**
  * 音频流管理函数
  */
-class AudioStream : public ::AudioStream {
+class 音频流 : public ::AudioStream {
 public:
-    AudioStream(const ::AudioStream& music) { set(music); }
+    音频流(const ::AudioStream& 音乐) { 设(音乐); }
 
-    AudioStream(
-        rAudioBuffer* buffer = nullptr,
-        rAudioProcessor* processor = nullptr,
-        unsigned int sampleRate = 0,
-        unsigned int sampleSize = 0,
-        unsigned int channels = 0)
-        : ::AudioStream{buffer, processor, sampleRate, sampleSize, channels} {
+    音频流(
+        rAudioBuffer* 缓存 = nullptr,
+        rAudioProcessor* 处理器 = nullptr,
+        unsigned int 采样频率 = 0,
+        unsigned int 采样大小 = 0,
+        unsigned int 声道数 = 0)
+        : ::AudioStream{缓存, 处理器, 采样频率, 采样大小, 声道数} {
         // 无操作
     }
 
@@ -29,14 +29,12 @@ public:
      *
      * @throws raylib::RaylibException 如果音频流加载失败，则抛出异常。
      */
-    AudioStream(unsigned int sampleRate, unsigned int sampleSize, unsigned int channels = 2) {
-        Load(sampleRate, sampleSize, channels);
-    }
+    音频流(unsigned int 采样频率, unsigned int 采样大小, unsigned int 声道数 = 2) { 加载(采样频率, 采样大小, 声道数); }
 
-    AudioStream(const AudioStream&) = delete;
+    音频流(const 音频流&) = delete;
 
-    AudioStream(AudioStream&& other) {
-        set(other);
+    音频流(音频流&& other) {
+        设(other);
 
         other.buffer = nullptr;
         other.processor = nullptr;
@@ -45,28 +43,28 @@ public:
         other.channels = 0;
     }
 
-    ~AudioStream() { Unload(); }
+    ~音频流() { 卸载(); }
 
-    GETTER(rAudioBuffer*, Buffer, buffer)
-    GETTER(rAudioProcessor*, Processor, processor)
-    GETTER(unsigned int, SampleRate, sampleRate)
-    GETTER(unsigned int, SampleSize, sampleSize)
-    GETTER(unsigned int, Channels, channels)
+    GETTER(rAudioBuffer*, 缓存, buffer)
+    GETTER(rAudioProcessor*, 处理器, processor)
+    GETTER(unsigned int, 采样频率, sampleRate)
+    GETTER(unsigned int, 采样大小, sampleSize)
+    GETTER(unsigned int, 声道数, channels)
 
-    AudioStream& operator=(const ::AudioStream& stream) {
-        set(stream);
+    音频流& operator=(const ::AudioStream& stream) {
+        设(stream);
         return *this;
     }
 
-    AudioStream& operator=(const AudioStream&) = delete;
+    音频流& operator=(const 音频流&) = delete;
 
-    AudioStream& operator=(AudioStream&& other) noexcept {
+    音频流& operator=(音频流&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.buffer = nullptr;
         other.processor = nullptr;
@@ -80,16 +78,16 @@ public:
     /**
      * 使用数据更新音频流缓冲区
      */
-    AudioStream& Update(const void* data, int samplesCount) {
-        ::UpdateAudioStream(*this, data, samplesCount);
+    音频流& 更新(const void* 数据, int 采样数) {
+        ::UpdateAudioStream(*this, 数据, 采样数);
         return *this;
     }
 
     /**
      * 卸载音频流并释放内存
      */
-    void Unload() {
-        if (IsValid()) {
+    void 卸载() {
+        if (是有效()) {
             ::UnloadAudioStream(*this);
         }
     }
@@ -97,12 +95,12 @@ public:
     /**
      * 检查是否有任何音频流缓冲区需要重新填充
      */
-    bool IsProcessed() const { return ::IsAudioStreamProcessed(*this); }
+    bool 是已处理的() const { return ::IsAudioStreamProcessed(*this); }
 
     /**
      * 播放音频流
      */
-    AudioStream& Play() {
+    音频流& 播放() {
         ::PlayAudioStream(*this);
         return *this;
     }
@@ -110,7 +108,7 @@ public:
     /**
      * 暂停音频流
      */
-    AudioStream& Pause() {
+    音频流& 暂停() {
         ::PauseAudioStream(*this);
         return *this;
     }
@@ -118,7 +116,7 @@ public:
     /**
      * 恢复音频流
      */
-    AudioStream& Resume() {
+    音频流& 恢复() {
         ::ResumeAudioStream(*this);
         return *this;
     }
@@ -126,12 +124,12 @@ public:
     /**
      * 检查音频流是否正在播放
      */
-    bool IsPlaying() const { return ::IsAudioStreamPlaying(*this); }
+    bool 是播放中() const { return ::IsAudioStreamPlaying(*this); }
 
     /**
      * 停止音频流
      */
-    AudioStream& Stop() {
+    音频流& 停止() {
         ::StopAudioStream(*this);
         return *this;
     }
@@ -139,66 +137,66 @@ public:
     /**
      * 设置音频流的音量（1.0 为最大音量）
      */
-    AudioStream& SetVolume(float volume = 1.0f) {
-        ::SetAudioStreamVolume(*this, volume);
+    音频流& 设音量(float 音量 = 1.0f) {
+        ::SetAudioStreamVolume(*this, 音量);
         return *this;
     }
 
     /**
      * 设置音频流的音调（1.0 为基础音调）
      */
-    AudioStream& SetPitch(float pitch) {
-        ::SetAudioStreamPitch(*this, pitch);
+    音频流& 设音高(float 音高) {
+        ::SetAudioStreamPitch(*this, 音高);
         return *this;
     }
 
     /**
-     * 设置音频流的声道（0.5 为中心）
+     * 设置音频流的声道平衡（0.5 为中心）左声道<=>右声道
      */
-    AudioStream& SetPan(float pan = 0.5f) {
-        ::SetAudioStreamPan(*this, pan);
+    音频流& 设声像(float 声像 = 0.5f) {
+        ::SetAudioStreamPan(*this, 声像);
         return *this;
     }
 
     /**
      * 设置新音频流的默认缓冲区大小
      */
-    static void SetBufferSizeDefault(int size) { ::SetAudioStreamBufferSizeDefault(size); }
+    static void 设缓存大小为默认(int size) { ::SetAudioStreamBufferSizeDefault(size); }
 
     /**
      * 音频线程回调以请求新数据
      */
-    void SetCallback(::AudioCallback callback) { ::SetAudioStreamCallback(*this, callback); }
+    void 设回调(::AudioCallback 回调) { ::SetAudioStreamCallback(*this, 回调); }
 
     /**
      * 将音频流处理器附加到流
      */
-    void AttachProcessor(::AudioCallback processor) { ::AttachAudioStreamProcessor(*this, processor); }
+    void 绑定处理器(::AudioCallback 处理器) { ::AttachAudioStreamProcessor(*this, 处理器); }
 
     /**
      * 从流中分离音频流处理器
      */
-    void DetachProcessor(::AudioCallback processor) { ::DetachAudioStreamProcessor(*this, processor); }
+    void 解绑处理器(::AudioCallback 处理器) { ::DetachAudioStreamProcessor(*this, 处理器); }
 
     /**
      * 检索音频流是否准备就绪
      */
-    bool IsValid() const { return ::IsAudioStreamValid(*this); }
+    bool 是有效() const { return ::IsAudioStreamValid(*this); }
 
     /**
      * 加载音频流（用于流式传输原始音频 PCM 数据）
      *
      * @throws raylib::RaylibException 如果音频流加载失败，则抛出异常。
      */
-    void Load(unsigned int SampleRate, unsigned int SampleSize, unsigned int Channels = 2) {
-        Unload();
-        set(::LoadAudioStream(SampleRate, SampleSize, Channels));
-        if (!IsValid()) {
+    void 加载(unsigned int 采样频率, unsigned int 采样大小, unsigned int 声道数 = 2) {
+        卸载();
+        设(::LoadAudioStream(采样频率, 采样大小, 声道数));
+        if (!是有效()) {
             throw RaylibException("音频流加载失败");
         }
     }
 protected:
-    void set(const ::AudioStream& stream) {
+    void 设(const ::AudioStream& stream) {
         buffer = stream.buffer;
         processor = stream.processor;
         sampleRate = stream.sampleRate;
@@ -208,6 +206,6 @@ protected:
 };
 } // namespace raylib
 
-using RAudioStream = raylib::AudioStream;
+using R音频流 = raylib::音频流;
 
 // #endif // RAYLIB_CPP_INCLUDE_AUDIOSTREAM_HPP_

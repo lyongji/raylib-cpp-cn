@@ -10,7 +10,7 @@ set_version("0.0.1")-- 设工程版本
 
 add_requires("raylib 5.5") --添加依赖包
 
-add_packages("raylib")
+add_packages("raylib")--导入依赖包,作用全工程
 
 add_includedirs("include",{public = true}) --添加头文件搜索路径,公开
  

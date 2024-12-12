@@ -10,52 +10,52 @@ namespace raylib {
 /**
  * 自动化事件列表管理函数
  */
-class AutomationEventList : public ::AutomationEventList {
+class 自动化事件列表 : public ::AutomationEventList {
 public:
-    AutomationEventList(const ::AutomationEventList& automationEventList) { set(automationEventList); }
+    自动化事件列表(const ::AutomationEventList& 自动化事件列表) { 设(自动化事件列表); }
 
     /**
      * 加载一个空的自动化事件列表。
      */
-    AutomationEventList() { set(::LoadAutomationEventList(0)); }
+    自动化事件列表() { 设(::LoadAutomationEventList(0)); }
 
     /**
      * 从文件加载自动化事件列表。
      *
      * @param fileName 要加载自动化事件列表的文件路径。
      */
-    AutomationEventList(const char* fileName) { Load(fileName); }
+    自动化事件列表(const char* 文件名) { 加载(文件名); }
 
-    AutomationEventList(const AutomationEventList&) = delete;
+    自动化事件列表(const 自动化事件列表&) = delete;
 
-    AutomationEventList(AutomationEventList&& other) {
-        set(other);
+    自动化事件列表(自动化事件列表&& other) {
+        设(other);
 
         other.capacity = 0;
         other.count = 0;
         other.events = nullptr;
     }
 
-    ~AutomationEventList() { Unload(); }
+    ~自动化事件列表() { 卸载(); }
 
-    GETTER(unsigned int, Capacity, capacity)
-    GETTER(unsigned int, Count, count)
-    GETTER(AutomationEvent*, Events, events)
+    GETTER(unsigned int, 容量值, capacity)
+    GETTER(unsigned int, 事件数, count)
+    GETTER(AutomationEvent*, 事件, events)
 
-    AutomationEventList& operator=(const ::AutomationEventList& other) {
-        set(other);
+    自动化事件列表& operator=(const ::AutomationEventList& other) {
+        设(other);
         return *this;
     }
 
-    AutomationEventList& operator=(const AutomationEventList&) = delete;
+    自动化事件列表& operator=(const 自动化事件列表&) = delete;
 
-    AutomationEventList& operator=(AutomationEventList&& other) noexcept {
+    自动化事件列表& operator=(自动化事件列表&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.capacity = 0;
         other.count = 0;
@@ -69,10 +69,10 @@ public:
      *
      * @throws raylib::RaylibException 如果自动化事件列表加载失败，则抛出异常。
      */
-    void Load(const char* fileName) {
-        Unload();
-        set(::LoadAutomationEventList(fileName));
-        if (!IsValid()) {
+    void 加载(const char* 文件名) {
+        卸载();
+        设(::LoadAutomationEventList(文件名));
+        if (!是有效()) {
             throw RaylibException("自动化事件列表加载失败");
         }
     }
@@ -80,8 +80,8 @@ public:
     /**
      * 更新音频流缓冲区数据
      */
-    void Unload() {
-        if (!IsValid()) {
+    void 卸载() {
+        if (!是有效()) {
             return;
         }
 
@@ -96,38 +96,39 @@ public:
         ::UnloadAutomationEventList(*this);
 #endif
     }
+    /// 检查自动化事件列表是否有效。
+    bool 是有效() { return events != nullptr; }
+    /// 将自动化事件列表导出到文件。
+    bool 导出(const char* 文件名) { return ::ExportAutomationEventList(*this, 文件名); }
+    /// 设置当前自动化事件列表为活动的列表。
+    void 设() { ::SetAutomationEventList(this); }
 
-    bool IsValid() { return events != nullptr; }
-
-    bool Export(const char* fileName) { return ::ExportAutomationEventList(*this, fileName); }
-
-    void Set() { ::SetAutomationEventList(this); }
-
-    void SetBaseFrame(int frame) {
-        Set();
-        ::SetAutomationEventBaseFrame(frame);
+    /// 设置自动化事件的基础帧。
+    void 设基础帧(int 帧) {
+        设();
+        ::SetAutomationEventBaseFrame(帧);
     }
-
-    void StartRecording() {
-        Set();
+    /// 开始录制自动化事件。
+    void 开始录制() {
+        设();
         ::StartAutomationEventRecording();
     }
-
-    void StopRecording() {
-        Set();
+    /// 停止录制自动化事件。
+    void 停止录制() {
+        设();
         ::StopAutomationEventRecording();
     }
-
-    void Play(int index) {
-        if (index < 0 || static_cast<unsigned int>(index) >= this->count) {
+    /// 播放指定索引的自动化事件。
+    void 播放(int 索引) {
+        if (索引 < 0 || static_cast<unsigned int>(索引) >= this->count) {
             return;
         }
 
-        Set();
-        ::PlayAutomationEvent(this->events[index]);
+        设();
+        ::PlayAutomationEvent(this->events[索引]);
     }
 protected:
-    void set(const ::AutomationEventList& other) {
+    void 设(const ::AutomationEventList& other) {
         capacity = other.capacity;
         count = other.count;
         events = other.events;
@@ -135,6 +136,6 @@ protected:
 };
 } // namespace raylib
 
-using RAutomationEventList = raylib::AutomationEventList;
+using R自动化事件列表 = raylib::自动化事件列表;
 
 // #endif // RAYLIB_CPP_INCLUDE_AUTOMATIONEVENTLIST_HPP_

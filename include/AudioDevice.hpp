@@ -10,7 +10,7 @@ namespace raylib {
 /**
  * 音频设备管理函数。
  */
-class AudioDevice {
+class 音频设备 {
 public:
     /**
      * 初始化音频设备和上下文。
@@ -19,25 +19,25 @@ public:
      *
      * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
-    AudioDevice(bool lateInit = false) {
+    音频设备(bool lateInit = false) {
         if (!lateInit) {
-            Init();
+            初始化();
         }
     }
 
     /**
      * 关闭音频设备和上下文。
      */
-    ~AudioDevice() { Close(); }
+    ~音频设备() { 关闭(); }
 
     /**
      * 初始化音频设备和上下文。
      *
      * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
-    void Init() {
+    void 初始化() {
         ::InitAudioDevice();
-        if (!IsReady()) {
+        if (!是就绪()) {
             throw RaylibException("音频设备初始化失败");
         }
     }
@@ -45,25 +45,25 @@ public:
     /**
      * 关闭音频设备和上下文。
      */
-    void Close() { ::CloseAudioDevice(); }
+    void 关闭() { ::CloseAudioDevice(); }
 
     /**
      * 检查音频设备是否已成功初始化。
      */
-    bool IsReady() const { return ::IsAudioDeviceReady(); }
+    bool 是就绪() const { return ::IsAudioDeviceReady(); }
 
     /**
      * 设置主音量（监听器）。
      *
      * @param volume 要设置的音量。
      */
-    AudioDevice& SetVolume(float volume) {
-        ::SetMasterVolume(volume);
+    音频设备& 设音量(float 音量) {
+        ::SetMasterVolume(音量);
         return *this;
     }
 };
 } // namespace raylib
 
-using RAudioDevice = raylib::AudioDevice;
+using R音频设备 = raylib::音频设备;
 
 // #endif // RAYLIB_CPP_INCLUDE_AUDIODEVICE_HPP_
