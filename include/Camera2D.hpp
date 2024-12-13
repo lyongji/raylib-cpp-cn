@@ -10,18 +10,18 @@ namespace raylib {
 /**
  * Camera2D 类型，定义一个 2D 相机
  */
-class Camera2D : public ::Camera2D {
+class 相机2D : public ::Camera2D {
 public:
-    Camera2D(const ::Camera2D& camera) { set(camera); }
+    相机2D(const ::Camera2D& 相机) { 设(相机); }
 
-    Camera2D() {}
-    Camera2D(::Vector2 offset, ::Vector2 target, float rotation = 0.0f, float zoom = 1.0f)
-        : ::Camera2D{offset, target, rotation, zoom} {}
+    相机2D() {}
+    相机2D(::Vector2 偏移量, ::Vector2 目标, float 旋转 = 0.0f, float 变焦 = 1.0f)
+        : ::Camera2D{偏移量, 目标, 旋转, 变焦} {}
 
     /**
      * 开始使用 2D 相机模式
      */
-    Camera2D& BeginMode() {
+    相机2D& 开始2D模式() {
         ::BeginMode2D(*this);
         return *this;
     }
@@ -29,45 +29,45 @@ public:
     /**
      * 结束使用 2D 相机模式
      */
-    Camera2D& EndMode() {
+    相机2D& 结束2D模式() {
         ::EndMode2D();
         return *this;
     }
 
-    GETTERSETTER(::Vector2, Offset, offset)
-    GETTERSETTER(::Vector2, Target, target)
-    GETTERSETTER(float, Rotation, rotation)
-    GETTERSETTER(float, Zoom, zoom)
+    GETTERSETTER(::Vector2, 偏移量, offset)
+    GETTERSETTER(::Vector2, 目标, target)
+    GETTERSETTER(float, 旋转, rotation)
+    GETTERSETTER(float, 变焦, zoom)
 
-    Camera2D& operator=(const ::Camera2D& camera) {
-        set(camera);
+    相机2D& operator=(const ::Camera2D& 相机) {
+        设(相机);
         return *this;
     }
 
     /**
      * 返回 2D 相机的变换矩阵
      */
-    Matrix GetMatrix() const { return ::GetCameraMatrix2D(*this); }
+    Matrix 取矩阵() const { return ::GetCameraMatrix2D(*this); }
 
     /**
      * 返回 2D 相机屏幕空间位置对应的 2D 世界空间位置
      */
-    Vector2 GetScreenToWorld(::Vector2 position) const { return ::GetScreenToWorld2D(position, *this); }
+    Vector2 取屏幕到世界(::Vector2 位置) const { return ::GetScreenToWorld2D(位置, *this); }
 
     /**
      * 返回 2D 世界空间位置对应的 2D 屏幕空间位置
      */
-    Vector2 GetWorldToScreen(::Vector2 position) const { return ::GetWorldToScreen2D(position, *this); }
+    Vector2 取世界到屏幕(::Vector2 位置) const { return ::GetWorldToScreen2D(位置, *this); }
 protected:
-    void set(const ::Camera2D& camera) {
-        offset = camera.offset;
-        target = camera.target;
-        rotation = camera.rotation;
-        zoom = camera.zoom;
+    void 设(const ::Camera2D& 相机) {
+        offset = 相机.offset;
+        target = 相机.target;
+        rotation = 相机.rotation;
+        zoom = 相机.zoom;
     }
 };
 } // namespace raylib
 
-using RCamera2D = raylib::Camera2D;
+using R相机2D = raylib::相机2D;
 
 // #endif // RAYLIB_CPP_INCLUDE_CAMERA2D_HPP_
