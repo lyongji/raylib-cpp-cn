@@ -179,7 +179,7 @@ public:
     /**
      * 获取颜色与另一个颜色相乘的结果
      */
-    颜色 Tint(::Color tint) { return ::ColorTint(*this, tint); }
+    颜色 色调(::Color 色调) { return ::ColorTint(*this, 色调); }
 
     /**
      * 获取颜色亮度调整后的结果，亮度因子范围为 -1.0f 到 1.0f
@@ -197,39 +197,39 @@ public:
     颜色 透明度(float 透明值) const { return ::ColorAlpha(*this, 透明值); }
 
     /// 返回颜色插值，参数为颜色color2和插值因子factor
-    颜色 Lerp(::Color color2, float factor) { return ::ColorLerp(*this, color2, factor); }
+    颜色 插值(::Color 颜色2, float 系数) { return ::ColorLerp(*this, 颜色2, 系数); }
 
     /**
      * 返回 src 颜色与 dst 颜色进行 alpha 混合后的结果，并应用 tint 颜色
      */
-    颜色 AlphaBlend(::Color dst, ::Color tint) const { return ::ColorAlphaBlend(dst, *this, tint); }
+    颜色 透明混合(::Color 目标, ::Color 色调) const { return ::ColorAlphaBlend(目标, *this, 色调); }
 
-    static 颜色 LightGray() { return LIGHTGRAY; }
-    static 颜色 Gray() { return GRAY; }
-    static 颜色 DarkGray() { return DARKGRAY; }
-    static 颜色 Yellow() { return YELLOW; }
-    static 颜色 Gold() { return GOLD; }
-    static 颜色 Orange() { return ORANGE; }
-    static 颜色 Pink() { return PINK; }
-    static 颜色 Red() { return RED; }
-    static 颜色 Maroon() { return MAROON; }
-    static 颜色 Green() { return GREEN; }
-    static 颜色 Lime() { return LIME; }
-    static 颜色 DarkGreen() { return DARKGREEN; }
-    static 颜色 SkyBlue() { return SKYBLUE; }
-    static 颜色 Blue() { return BLUE; }
-    static 颜色 DarkBlue() { return DARKBLUE; }
-    static 颜色 Purple() { return PURPLE; }
-    static 颜色 Violet() { return VIOLET; }
-    static 颜色 DarkPurple() { return DARKPURPLE; }
-    static 颜色 Beige() { return BEIGE; }
-    static 颜色 Brown() { return BROWN; }
-    static 颜色 DarkBrown() { return DARKBROWN; }
-    static 颜色 White() { return WHITE; }
-    static 颜色 Black() { return BLACK; }
-    static 颜色 Blank() { return BLANK; }
-    static 颜色 Magenta() { return MAGENTA; }
-    static 颜色 RayWhite() { return RAYWHITE; }
+    static 颜色 浅灰() { return LIGHTGRAY; }
+    static 颜色 灰() { return GRAY; }
+    static 颜色 深灰() { return DARKGRAY; }
+    static 颜色 黄() { return YELLOW; }
+    static 颜色 金() { return GOLD; }
+    static 颜色 橙() { return ORANGE; }
+    static 颜色 粉() { return PINK; }
+    static 颜色 红() { return RED; }
+    static 颜色 栗() { return MAROON; }
+    static 颜色 绿() { return GREEN; }
+    static 颜色 草绿() { return LIME; }
+    static 颜色 深绿() { return DARKGREEN; }
+    static 颜色 天蓝() { return SKYBLUE; }
+    static 颜色 蓝() { return BLUE; }
+    static 颜色 深蓝() { return DARKBLUE; }
+    static 颜色 紫() { return PURPLE; }
+    static 颜色 堇紫() { return VIOLET; }
+    static 颜色 深紫() { return DARKPURPLE; }
+    static 颜色 米黄() { return BEIGE; }
+    static 颜色 褐() { return BROWN; }
+    static 颜色 深褐() { return DARKBROWN; }
+    static 颜色 白() { return WHITE; }
+    static 颜色 黑() { return BLACK; }
+    static 颜色 空() { return BLANK; }
+    static 颜色 品红() { return MAGENTA; }
+    static 颜色 白烟() { return RAYWHITE; }
 protected:
     void 设(const ::Color& color) {
         r = color.r;
@@ -241,6 +241,6 @@ protected:
 
 } // namespace raylib
 
-using RColor = raylib::颜色;
+using R颜色 = raylib::颜色;
 
 // #endif // RAYLIB_CPP_INCLUDE_COLOR_HPP_

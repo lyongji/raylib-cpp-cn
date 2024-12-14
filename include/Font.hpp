@@ -13,25 +13,25 @@ namespace raylib {
 /**
  * 字体类型，包含纹理和字符集数组数据
  */
-class Font : public ::Font {
+class 字体 : public ::Font {
 public:
-    Font(
-        int baseSize,
-        int glyphCount,
-        int glyphPadding,
-        ::Texture2D texture,
-        ::Rectangle* recs = nullptr,
-        ::GlyphInfo* glyphs = nullptr)
-        : ::Font{baseSize, glyphCount, glyphPadding, texture, recs, glyphs} {
+    字体(
+        int 基本大小,
+        int 字符数量,
+        int 字符间距,
+        ::Texture2D 纹理,
+        ::Rectangle* 矩形区域 = nullptr,
+        ::GlyphInfo* 字形信息 = nullptr)
+        : ::Font{基本大小, 字符数量, 字符间距, 纹理, 矩形区域, 字形信息} {
         // 无操作
     }
 
     /**
      * 获取默认字体
      */
-    Font() { set(::GetFontDefault()); }
+    字体() { 设(::GetFontDefault()); }
 
-    Font(const ::Font& font) { set(font); }
+    字体(const ::Font& 字体) { 设(字体); }
 
     /**
      * 从指定文件加载字体
@@ -40,7 +40,7 @@ public:
      *
      * @throws raylib::RaylibException 如果字体初始化失败则抛出异常
      */
-    Font(const std::string& fileName) { Load(fileName); }
+    字体(const std::string& 文件名) { 加载(文件名); }
 
     /**
      * 从指定文件加载字体，并带有生成参数
@@ -54,8 +54,8 @@ public:
      *
      * @see ::LoadFontEx
      */
-    Font(const std::string& fileName, int fontSize, int* fontChars = 0, int charCount = 0) {
-        Load(fileName, fontSize, fontChars, charCount);
+    字体(const std::string& 文件名, int 字体大小, int* 字体字符组 = 0, int 字符数量 = 0) {
+        加载(文件名, 字体大小, 字体字符组, 字符数量);
     }
 
     /**
@@ -69,7 +69,7 @@ public:
      *
      * @see ::LoadFontFromImage()
      */
-    Font(const ::Image& image, ::Color key, int firstChar) { Load(image, key, firstChar); }
+    字体(const ::Image& 图像, ::Color 色键, int 首字符) { 加载(图像, 色键, 首字符); }
 
     /**
      * 从内存加载字体，基于给定的文件类型和文件数据
@@ -85,20 +85,20 @@ public:
      *
      * @see ::LoadFontFromMemory()
      */
-    Font(
-        const std::string& fileType,
-        const unsigned char* fileData,
-        int dataSize,
-        int fontSize,
-        int* fontChars,
-        int charsCount) {
-        Load(fileType, fileData, dataSize, fontSize, fontChars, charsCount);
+    字体(
+        const std::string& 文件类型,
+        const unsigned char* 文件数据,
+        int 数据大小,
+        int 字体大小,
+        int* 字体字符组,
+        int 字符数量) {
+        加载(文件类型, 文件数据, 数据大小, 字体大小, 字体字符组, 字符数量);
     }
 
-    Font(const Font&) = delete;
+    字体(const 字体&) = delete;
 
-    Font(Font&& other) {
-        set(other);
+    字体(字体&& other) {
+        设(other);
 
         other.baseSize = 0;
         other.glyphCount = 0;
@@ -108,9 +108,9 @@ public:
         other.glyphs = nullptr;
     }
 
-    ~Font() { Unload(); }
+    ~字体() { 卸载(); }
 
-    void Unload() {
+    void 卸载() {
         // 防止多次调用 UnloadFont()
         if (baseSize != 0) {
             UnloadFont(*this);
@@ -118,37 +118,37 @@ public:
         }
     }
 
-    GETTER(int, BaseSize, baseSize)
-    GETTER(int, GlyphCount, glyphCount)
-    GETTER(int, GlyphPadding, glyphPadding)
-    GETTER(::Rectangle*, Recs, recs)
-    GETTER(::GlyphInfo*, Glyphs, glyphs)
+    GETTER(int, 基本大小, baseSize)
+    GETTER(int, 字符数量, glyphCount)
+    GETTER(int, 字符间距, glyphPadding)
+    GETTER(::Rectangle*, 矩形区域, recs)
+    GETTER(::GlyphInfo*, 字形信息, glyphs)
 
     /**
      * 获取包含字形的纹理图集
      */
-    TextureUnmanaged GetTexture() { return texture; }
+    TextureUnmanaged 取纹理() { return texture; }
 
     /**
      * 设置包含字形的纹理图集
      */
-    void SetTexture(const ::Texture& newTexture) { texture = newTexture; }
+    void 设纹理(const ::Texture& 新纹理) { texture = 新纹理; }
 
-    Font& operator=(const ::Font& font) {
-        Unload();
-        set(font);
+    字体& operator=(const ::Font& 字体) {
+        卸载();
+        设(字体);
         return *this;
     }
 
-    Font& operator=(const Font&) = delete;
+    字体& operator=(const 字体&) = delete;
 
-    Font& operator=(Font&& other) noexcept {
+    字体& operator=(字体&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.baseSize = 0;
         other.glyphCount = 0;
@@ -169,10 +169,10 @@ public:
      *
      * @see ::LoadFont()
      */
-    void Load(const std::string& fileName) {
-        set(::LoadFont(fileName.c_str()));
-        if (!IsValid()) {
-            throw RaylibException("Failed to load Font with from file: " + fileName);
+    void 加载(const std::string& 文件名) {
+        设(::LoadFont(文件名.c_str()));
+        if (!是就绪()) {
+            throw RaylibException("无法从文件加载字体：" + 文件名);
         }
     }
 
@@ -188,150 +188,139 @@ public:
      *
      * @see ::LoadFontEx()
      */
-    void Load(const std::string& fileName, int fontSize, int* fontChars, int charCount) {
-        set(::LoadFontEx(fileName.c_str(), fontSize, fontChars, charCount));
-        if (!IsValid()) {
-            throw RaylibException("Failed to load Font with from file with font size: " + fileName);
+    void 加载(const std::string& 文件名, int 字体大小, int* 字体字符组, int 字符数量) {
+        设(::LoadFontEx(文件名.c_str(), 字体大小, 字体字符组, 字符数量));
+        if (!是就绪()) {
+            throw RaylibException("Failed to load Font with from file with font size: " + 文件名);
         }
     }
 
-    void Load(const ::Image& image, ::Color key, int firstChar) {
-        set(::LoadFontFromImage(image, key, firstChar));
-        if (!IsValid()) {
-            throw RaylibException("Failed to load Font with from image");
+    void 加载(const ::Image& 图像, ::Color 颜色键, int 首字符) {
+        设(::LoadFontFromImage(图像, 颜色键, 首字符));
+        if (!是就绪()) {
+            throw RaylibException("无法从图像加载字体");
         }
     }
 
-    void Load(
-        const std::string& fileType,
-        const unsigned char* fileData,
-        int dataSize,
-        int fontSize,
-        int* fontChars,
-        int charsCount) {
-        set(::LoadFontFromMemory(fileType.c_str(), fileData, dataSize, fontSize, fontChars, charsCount));
-        if (!IsValid()) {
-            throw RaylibException("Failed to load Font " + fileType + " with from file data");
+    void 加载(
+        const std::string& 文件类型,
+        const unsigned char* 文件数据,
+        int 数据大小,
+        int 字体大小,
+        int* 字体字符组,
+        int 字符数量) {
+        设(::LoadFontFromMemory(文件类型.c_str(), 文件数据, 数据大小, 字体大小, 字体字符组, 字符数量));
+        if (!是就绪()) {
+            throw RaylibException("无法使用文件数据加载:" + 文件类型 + " 字体");
         }
     }
 
     /**
      * 返回字体是否准备好使用
      */
-    bool IsValid() const { return ::IsFontValid(*this); }
+    bool 是就绪() const { return ::IsFontValid(*this); }
 
     /**
      * 使用字体和附加参数绘制文本
      */
-    void DrawText(const char* text, ::Vector2 position, float fontSize, float spacing, ::Color tint = WHITE) const {
-        ::DrawTextEx(*this, text, position, fontSize, spacing, tint);
+    void 绘制文本(const char* 文本, ::Vector2 位置, float 字体大小, float 间距, ::Color 色调 = WHITE) const {
+        ::DrawTextEx(*this, 文本, 位置, 字体大小, 间距, 色调);
+    }
+
+    /**
+     * 使用字体和附加参数绘制文本
+     */
+    void 绘制文本(const std::string& 文本, ::Vector2 位置, float 字体大小, float 间距, ::Color 色调 = WHITE) const {
+        ::DrawTextEx(*this, 文本.c_str(), 位置, 字体大小, 间距, 色调);
+    }
+
+    /**
+     * 使用字体和附加参数绘制文本
+     */
+    void 绘制文本(const char* 文本, int 位置X, int 位置Y, float 字体大小, float 间距, ::Color 色调 = WHITE) const {
+        ::DrawTextEx(*this, 文本, {static_cast<float>(位置X), static_cast<float>(位置Y)}, 字体大小, 间距, 色调);
     }
 
     /**
      * 使用字体和附加参数绘制文本
      */
     void
-    DrawText(const std::string& text, ::Vector2 position, float fontSize, float spacing, ::Color tint = WHITE) const {
-        ::DrawTextEx(*this, text.c_str(), position, fontSize, spacing, tint);
+    绘制文本(const std::string& 文本, int 位置X, int 位置Y, float 字体大小, float 间距, ::Color 色调 = WHITE) const {
+        ::DrawTextEx(*this, 文本.c_str(), {static_cast<float>(位置X), static_cast<float>(位置Y)}, 字体大小, 间距, 色调);
+    }
+
+    void 绘制文本(
+        const char* 文本,
+        ::Vector2 位置,
+        ::Vector2 原点,
+        float 旋转,
+        float 字体大小,
+        float 间距,
+        ::Color 色调 = WHITE) const {
+        ::DrawTextPro(*this, 文本, 位置, 原点, 旋转, 字体大小, 间距, 色调);
+    }
+
+    void 绘制文本(
+        const std::string& 文本,
+        ::Vector2 位置,
+        ::Vector2 原点,
+        float 旋转,
+        float 字体大小,
+        float 间距,
+        ::Color 色调 = WHITE) const {
+        ::DrawTextPro(*this, 文本.c_str(), 位置, 原点, 旋转, 字体大小, 间距, 色调);
     }
 
     /**
-     * 使用字体和附加参数绘制文本
+     * 绘制单个字符（码点）字符编码术语中，码位或称编码位置，即英文的code point或code position
      */
-    void DrawText(const char* text, int posX, int posY, float fontSize, float spacing, ::Color tint = WHITE) const {
-        ::DrawTextEx(*this, text, {static_cast<float>(posX), static_cast<float>(posY)}, fontSize, spacing, tint);
-    }
-
-    /**
-     * 使用字体和附加参数绘制文本
-     */
-    void
-    DrawText(const std::string& text, int posX, int posY, float fontSize, float spacing, ::Color tint = WHITE) const {
-        ::DrawTextEx(
-            *this,
-            text.c_str(),
-            {static_cast<float>(posX), static_cast<float>(posY)},
-            fontSize,
-            spacing,
-            tint);
-    }
-
-    void DrawText(
-        const char* text,
-        ::Vector2 position,
-        ::Vector2 origin,
-        float rotation,
-        float fontSize,
-        float spacing,
-        ::Color tint = WHITE) const {
-        ::DrawTextPro(*this, text, position, origin, rotation, fontSize, spacing, tint);
-    }
-
-    void DrawText(
-        const std::string& text,
-        ::Vector2 position,
-        ::Vector2 origin,
-        float rotation,
-        float fontSize,
-        float spacing,
-        ::Color tint = WHITE) const {
-        ::DrawTextPro(*this, text.c_str(), position, origin, rotation, fontSize, spacing, tint);
-    }
-
-    /**
-     * 绘制单个字符（码点）
-     */
-    void DrawText(int codepoint, ::Vector2 position, float fontSize, ::Color tint = {255, 255, 255, 255}) const {
-        ::DrawTextCodepoint(*this, codepoint, position, fontSize, tint);
+    void 绘制文本(int 码位, ::Vector2 位置, float 字体大小, ::Color 色调 = {255, 255, 255, 255}) const {
+        ::DrawTextCodepoint(*this, 码位, 位置, 字体大小, 色调);
     }
 
     /**
      * 绘制多个字符（码点）
      */
-    void DrawText(
-        const int* codepoints,
-        int count,
-        ::Vector2 position,
-        float fontSize,
-        float spacing,
-        ::Color tint = {255, 255, 255, 255}) const {
-        ::DrawTextCodepoints(*this, codepoints, count, position, fontSize, spacing, tint);
+    void
+    绘制文本(const int* 码位, int 数目, ::Vector2 位置, float 字体大小, float 间距, ::Color 色调 = {255, 255, 255, 255})
+        const {
+        ::DrawTextCodepoints(*this, 码位, 数目, 位置, 字体大小, 间距, 色调);
     }
 
     /**
      * 测量字符串大小（用于字体）
      */
-    Vector2 MeasureText(const char* text, float fontSize, float spacing) const {
-        return ::MeasureTextEx(*this, text, fontSize, spacing);
+    Vector2 测量文本(const char* 文本, float 字体大小, float 间距) const {
+        return ::MeasureTextEx(*this, 文本, 字体大小, 间距);
     }
 
     /**
      * 测量字符串大小（用于字体）
      */
-    Vector2 MeasureText(const std::string& text, float fontSize, float spacing) const {
-        return ::MeasureTextEx(*this, text.c_str(), fontSize, spacing);
+    Vector2 测量文本(const std::string& 文本, float 字体大小, float 间距) const {
+        return ::MeasureTextEx(*this, 文本.c_str(), 字体大小, 间距);
     }
 
     /**
      * 获取字体中 Unicode 字符的索引位置
      */
-    int GetGlyphIndex(int character) const { return ::GetGlyphIndex(*this, character); }
+    int 取字符索引(int 字符) const { return ::GetGlyphIndex(*this, 字符); }
 
     /**
      * 从文本创建图像（自定义精灵字体）
      */
-    ::Image ImageText(const char* text, float fontSize, float spacing, ::Color tint) const {
-        return ::ImageTextEx(*this, text, fontSize, spacing, tint);
+    ::Image 从文本生图(const char* 文本, float 字体大小, float 间距, ::Color 色调) const {
+        return ::ImageTextEx(*this, 文本, 字体大小, 间距, 色调);
     }
 
     /**
      * 从文本创建图像（自定义精灵字体）
      */
-    ::Image ImageText(const std::string& text, float fontSize, float spacing, ::Color tint) const {
-        return ::ImageTextEx(*this, text.c_str(), fontSize, spacing, tint);
+    ::Image 从文本生图(const std::string& 文本, float 字体大小, float 间距, ::Color 色调) const {
+        return ::ImageTextEx(*this, 文本.c_str(), 字体大小, 间距, 色调);
     }
 protected:
-    void set(const ::Font& font) {
+    void 设(const ::Font& font) {
         baseSize = font.baseSize;
         glyphCount = font.glyphCount;
         glyphPadding = font.glyphPadding;
@@ -342,6 +331,6 @@ protected:
 };
 } // namespace raylib
 
-using RFont = raylib::Font;
+using R字体 = raylib::字体;
 
 // #endif // RAYLIB_CPP_INCLUDE_FONT_HPP_

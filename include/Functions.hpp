@@ -22,116 +22,116 @@ namespace raylib {
 /**
  * 初始化窗口和 OpenGL 上下文
  */
-[[maybe_unused]] RLCPPAPI inline void InitWindow(int width, int height, const std::string& title = "raylib") {
-    ::InitWindow(width, height, title.c_str());
+[[maybe_unused]] RLCPPAPI inline void 初始化窗口(int 宽, int 高, const std::string& 标题 = "raylib-中文") {
+    ::InitWindow(宽, 高, 标题.c_str());
 }
 
 /**
  * 设置窗口标题
  */
-[[maybe_unused]] RLCPPAPI inline void SetWindowTitle(const std::string& title) {
-    ::SetWindowTitle(title.c_str());
+[[maybe_unused]] RLCPPAPI inline void 设窗口标题(const std::string& 标题) {
+    ::SetWindowTitle(标题.c_str());
 }
 
 /**
  * 获取主显示器的可读名称（UTF-8 编码）
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetMonitorName(int monitor = 0) {
-    return ::GetMonitorName(monitor);
+[[maybe_unused]] RLCPPAPI inline std::string 取显示器名(int 显示器编号 = 0) {
+    return ::GetMonitorName(显示器编号);
 }
 
 /**
  * 设置剪贴板文本内容
  */
-[[maybe_unused]] RLCPPAPI inline void SetClipboardText(const std::string& text) {
-    ::SetClipboardText(text.c_str());
+[[maybe_unused]] RLCPPAPI inline void 设剪贴板文本(const std::string& 文本) {
+    ::SetClipboardText(文本.c_str());
 }
 
 /**
  * 获取剪贴板文本内容
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetClipboardText() {
+[[maybe_unused]] RLCPPAPI inline std::string 取剪贴板文本() {
     return ::GetClipboardText();
 }
 
 /**
  * 截取当前屏幕的截图（保存为 .png 文件）
  */
-[[maybe_unused]] RLCPPAPI inline void TakeScreenshot(const std::string& fileName) {
-    ::TakeScreenshot(fileName.c_str());
+[[maybe_unused]] RLCPPAPI inline void 截屏(const std::string& 文件名) {
+    ::TakeScreenshot(文件名.c_str());
 }
 
 /**
  * 获取游戏手柄的内部名称 ID
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetGamepadName(int gamepad) {
-    return ::GetGamepadName(gamepad);
+[[maybe_unused]] RLCPPAPI inline std::string 取游戏手柄名(int 手柄编号) {
+    return ::GetGamepadName(手柄编号);
 }
 
 /**
  * 从文件加载文本数据（读取）
  */
-[[maybe_unused]] RLCPPAPI std::string LoadFileText(const std::string& fileName) {
-    char* text = ::LoadFileText(fileName.c_str());
-    std::string output(text);
-    ::UnloadFileText(text);
-    return output;
+[[maybe_unused]] RLCPPAPI std::string 加载文件文本(const std::string& 文件名) {
+    char* 文本 = ::LoadFileText(文件名.c_str());
+    std::string 输出(文本);
+    ::UnloadFileText(文本);
+    return 输出;
 }
 
 /**
  * 将文本数据保存到文件（写入）
  */
-[[maybe_unused]] RLCPPAPI inline bool SaveFileText(const std::string& fileName, const std::string& text) {
-    return ::SaveFileText(fileName.c_str(), const_cast<char*>(text.c_str()));
+[[maybe_unused]] RLCPPAPI inline bool 存文件文本(const std::string& 文件名, const std::string& 文本) {
+    return ::SaveFileText(文件名.c_str(), const_cast<char*>(文本.c_str()));
 }
 
 /**
  * 检查文件是否存在
  */
-[[maybe_unused]] RLCPPAPI inline bool FileExists(const std::string& fileName) {
-    return ::FileExists(fileName.c_str());
+[[maybe_unused]] RLCPPAPI inline bool 是否有此文件(const std::string& 文件) {
+    return ::FileExists(文件.c_str());
 }
 
 /**
  * 检查目录路径是否存在
  */
-[[maybe_unused]] RLCPPAPI inline bool DirectoryExists(const std::string& dirPath) {
-    return ::DirectoryExists(dirPath.c_str());
+[[maybe_unused]] RLCPPAPI inline bool 是否有此目录(const std::string& 目录路径) {
+    return ::DirectoryExists(目录路径.c_str());
 }
 
 /**
  * 检查文件扩展名（包括点：.png, .wav）
  */
-[[maybe_unused]] RLCPPAPI inline bool IsFileExtension(const std::string& fileName, const std::string& ext) {
-    return ::IsFileExtension(fileName.c_str(), ext.c_str());
+[[maybe_unused]] RLCPPAPI inline bool 是否后缀名是文件的(const std::string& 文件名, const std::string& 后缀名) {
+    return ::IsFileExtension(文件名.c_str(), 后缀名.c_str());
 }
 
 /**
  * 获取文件名扩展名的指针（包括点：".png"）
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetFileExtension(const std::string& fileName) {
-    return ::GetFileExtension(fileName.c_str());
+[[maybe_unused]] RLCPPAPI inline std::string 取文件后缀名(const std::string& 文件名) {
+    return ::GetFileExtension(文件名.c_str());
 }
 
 /**
  * 获取路径字符串的文件名指针
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetFileName(const std::string& filePath) {
-    return ::GetFileName(filePath.c_str());
+[[maybe_unused]] RLCPPAPI inline std::string 取文件名(const std::string& 文件路径) {
+    return ::GetFileName(文件路径.c_str());
 }
 
 /**
  * 获取不带扩展名的文件名字符串
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetFileNameWithoutExt(const std::string& filePath) {
-    return ::GetFileNameWithoutExt(filePath.c_str());
+[[maybe_unused]] RLCPPAPI inline std::string 取无后缀的文件名(const std::string& 文件路径) {
+    return ::GetFileNameWithoutExt(文件路径.c_str());
 }
 
 /**
  * 获取给定文件名的完整路径
  */
-[[maybe_unused]] RLCPPAPI inline std::string GetDirectoryPath(const std::string& filePath) {
-    return ::GetDirectoryPath(filePath.c_str());
+[[maybe_unused]] RLCPPAPI inline std::string GetDirectoryPath(const std::string& 文件路径) {
+    return ::GetDirectoryPath(文件路径.c_str());
 }
 
 /**

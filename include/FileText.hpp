@@ -13,29 +13,29 @@ namespace raylib {
 /**
  * 文件文本类，用于加载和管理文件文本内容
  */
-class FileText {
+class 文件文本 {
 public:
-    FileText() = default;
-    FileText(const FileText&) = delete;
-    FileText(FileText&& other) noexcept : data(other.data), length(other.length) {
+    文件文本() = default;
+    文件文本(const 文件文本&) = delete;
+    文件文本(文件文本&& other) noexcept : data(other.data), length(other.length) {
         other.data = nullptr;
         other.length = 0;
     }
-    FileText& operator=(const FileText&) = delete;
-    FileText& operator=(FileText&& other) noexcept {
+    文件文本& operator=(const 文件文本&) = delete;
+    文件文本& operator=(文件文本&& other) noexcept {
         std::swap(data, other.data);
         std::swap(length, other.length);
         return *this;
     }
-    ~FileText() { Unload(); }
+    ~文件文本() { 卸载(); }
 
     /**
      * 从文件名加载文件文本
      */
-    explicit FileText(const std::string& fileName) { Load(fileName); }
+    explicit 文件文本(const std::string& 文件名) { 加载(文件名); }
 
-    GETTER(const char*, Data, data)
-    GETTER(unsigned int, Length, length)
+    GETTER(const char*, 数据, data)
+    GETTER(unsigned int, 长度, length)
 
     /**
      * 返回 C 风格的字符串
@@ -55,20 +55,20 @@ public:
     /**
      * 从文件名加载文件文本
      */
-    void Load(const std::string& fileName) { Load(fileName.c_str()); }
+    void 加载(const std::string& 文件名) { 加载(文件名.c_str()); }
 
     /**
      * 从文件名加载文件文本
      */
-    void Load(const char* fileName) {
-        data = ::LoadFileText(fileName);
+    void 加载(const char* 文件名) {
+        data = ::LoadFileText(文件名);
         length = ::TextLength(data);
     }
 
     /**
      * 卸载文件文本
      */
-    void Unload() {
+    void 卸载() {
         if (data != nullptr) {
             ::UnloadFileText(data);
             data = nullptr;
@@ -82,6 +82,6 @@ private:
 
 } // namespace raylib
 
-using RFileText = raylib::FileText;
+using RFileText = raylib::文件文本;
 
 // #endif // RAYLIB_CPP_INCLUDE_FILETEXT_HPP_
