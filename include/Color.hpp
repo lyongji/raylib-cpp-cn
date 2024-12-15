@@ -171,7 +171,7 @@ public:
 
     void 绘制矩形边框(::Rectangle 矩形, float 线宽) const { ::DrawRectangleLinesEx(矩形, 线宽, *this); }
 
-    bool 是否相等(::Color 颜色) { return ::ColorIsEqual(*this, 颜色); }
+    bool 是相等(::Color 颜色) { return ::ColorIsEqual(*this, 颜色); }
 
     bool operator==(const ::Color& other) const { return ::ColorIsEqual(*this, other); }
     bool operator!=(const ::Color& other) const { return !::ColorIsEqual(*this, other); }

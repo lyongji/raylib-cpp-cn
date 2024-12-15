@@ -157,7 +157,7 @@ public:
     /**
      * 从 GPU 纹理获取像素数据并返回 Image。
      */
-    operator Image() { return GetData(); }
+    operator 图像() { return GetData(); }
 
     /**
      * 为纹理生成 GPU 多级渐远纹理。
