@@ -14,30 +14,30 @@ namespace raylib {
 /**
  * 矩阵类型（OpenGL风格4x4 - 右手系，列优先）
  */
-class Matrix : public ::Matrix {
+class 矩阵 : public ::Matrix {
 public:
-    Matrix(const ::Matrix& mat)
+    矩阵(const ::Matrix& 矩阵)
         : ::Matrix{
-              mat.m0,
-              mat.m4,
-              mat.m8,
-              mat.m12,
-              mat.m1,
-              mat.m5,
-              mat.m9,
-              mat.m13,
-              mat.m2,
-              mat.m6,
-              mat.m10,
-              mat.m14,
-              mat.m3,
-              mat.m7,
-              mat.m11,
-              mat.m15} {
+              矩阵.m0,
+              矩阵.m4,
+              矩阵.m8,
+              矩阵.m12,
+              矩阵.m1,
+              矩阵.m5,
+              矩阵.m9,
+              矩阵.m13,
+              矩阵.m2,
+              矩阵.m6,
+              矩阵.m10,
+              矩阵.m14,
+              矩阵.m3,
+              矩阵.m7,
+              矩阵.m11,
+              矩阵.m15} {
         // 无操作
     }
 
-    Matrix(
+    矩阵(
         float m0 = 0,
         float m4 = 0,
         float m8 = 0,
@@ -75,13 +75,13 @@ public:
     GETTERSETTER(float, M14, m14)
     GETTERSETTER(float, M15, m15)
 
-    Matrix& operator=(const ::Matrix& matrix) {
-        set(matrix);
+    矩阵& operator=(const ::Matrix& 矩阵) {
+        设(矩阵);
         return *this;
     }
 
-    Matrix& operator=(const Matrix& matrix) {
-        set(matrix);
+    矩阵& operator=(const 矩阵& 矩阵值) {
+        设(矩阵值);
         return *this;
     }
 
@@ -98,76 +98,76 @@ public:
     /**
      * 返回矩阵的迹（对角线元素之和）
      */
-    float Trace() const { return ::MatrixTrace(*this); }
+    float 阵迹() const { return ::MatrixTrace(*this); }
 
     /**
      * 转置提供的矩阵
      */
-    Matrix Transpose() const { return ::MatrixTranspose(*this); }
+    矩阵 转置() const { return ::MatrixTranspose(*this); }
 
-    Matrix Invert() const { return ::MatrixInvert(*this); }
+    矩阵 反矩阵() const { return ::MatrixInvert(*this); }
 
-    static Matrix Identity() { return ::MatrixIdentity(); }
+    static 矩阵 单位矩阵() { return ::MatrixIdentity(); }
 
-    Matrix Add(const ::Matrix& right) { return ::MatrixAdd(*this, right); }
+    矩阵 加(const ::Matrix& 右) { return ::MatrixAdd(*this, 右); }
 
-    Matrix operator+(const ::Matrix& matrix) { return ::MatrixAdd(*this, matrix); }
+    矩阵 operator+(const ::Matrix& 矩阵) { return ::MatrixAdd(*this, 矩阵); }
 
-    Matrix Subtract(const ::Matrix& right) { return ::MatrixSubtract(*this, right); }
+    矩阵 减(const ::Matrix& 右) { return ::MatrixSubtract(*this, 右); }
 
-    Matrix operator-(const ::Matrix& matrix) { return ::MatrixSubtract(*this, matrix); }
+    矩阵 operator-(const ::Matrix& 矩阵) { return ::MatrixSubtract(*this, 矩阵); }
 
-    static Matrix Translate(float x, float y, float z) { return ::MatrixTranslate(x, y, z); }
+    static 矩阵 平移(float x, float y, float z) { return ::MatrixTranslate(x, y, z); }
 
-    static Matrix Rotate(Vector3 axis, float angle) { return ::MatrixRotate(axis, angle); }
+    static 矩阵 旋转(Vector3 转轴, float 角度) { return ::MatrixRotate(转轴, 角度); }
 
-    static Matrix RotateXYZ(Vector3 angle) { return ::MatrixRotateXYZ(angle); }
+    static 矩阵 旋转XYZ(Vector3 角度) { return ::MatrixRotateXYZ(角度); }
 
-    static Matrix RotateX(float angle) { return ::MatrixRotateX(angle); }
+    static 矩阵 旋转X(float 角度) { return ::MatrixRotateX(角度); }
 
-    static Matrix RotateY(float angle) { return ::MatrixRotateY(angle); }
+    static 矩阵 旋转Y(float 角度) { return ::MatrixRotateY(角度); }
 
-    static Matrix RotateZ(float angle) { return ::MatrixRotateZ(angle); }
+    static 矩阵 旋转Z(float 角度) { return ::MatrixRotateZ(角度); }
 
-    static Matrix Scale(float x, float y, float z) { return ::MatrixScale(x, y, z); }
+    static 矩阵 缩放(float x, float y, float z) { return ::MatrixScale(x, y, z); }
 
-    Matrix Multiply(const ::Matrix& right) const { return ::MatrixMultiply(*this, right); }
+    矩阵 乘(const ::Matrix& 右) const { return ::MatrixMultiply(*this, 右); }
 
-    Matrix operator*(const ::Matrix& matrix) { return ::MatrixMultiply(*this, matrix); }
+    矩阵 operator*(const ::Matrix& 矩阵) { return ::MatrixMultiply(*this, 矩阵); }
 
-    static Matrix Frustum(double left, double right, double bottom, double top, double near, double far) {
-        return ::MatrixFrustum(left, right, bottom, top, near, far);
+    static 矩阵 视锥体(double 左, double 右, double 下, double 上, double 近, double 远) {
+        return ::MatrixFrustum(左, 右, 下, 上, 近, 远);
     }
 
-    static Matrix Perspective(double fovy, double aspect, double near, double far) {
-        return ::MatrixPerspective(fovy, aspect, near, far);
+    static 矩阵 透视(double 视角, double 宽高比, double 近, double 远) {
+        return ::MatrixPerspective(视角, 宽高比, 近, 远);
     }
 
-    static Matrix Ortho(double left, double right, double bottom, double top, double near, double far) {
-        return ::MatrixOrtho(left, right, bottom, top, near, far);
+    static 矩阵 正交(double 左, double 右, double 下, double 上, double 近, double 远) {
+        return ::MatrixOrtho(左, 右, 下, 上, 近, 远);
     }
 
-    static Matrix LookAt(Vector3 eye, Vector3 target, Vector3 up) { return ::MatrixLookAt(eye, target, up); }
+    static 矩阵 注视(Vector3 眼, Vector3 目标, Vector3 上方向) { return ::MatrixLookAt(眼, 目标, 上方向); }
 
-    float16 ToFloatV() const { return ::MatrixToFloatV(*this); }
+    float16 转浮点向量() const { return ::MatrixToFloatV(*this); }
 
-    operator float16() { return ToFloatV(); }
+    operator float16() { return 转浮点向量(); }
 
     /**
      * 设置着色器统一值（4x4矩阵）
      */
-    Matrix& SetShaderValue(const ::Shader& shader, int uniformLoc) {
-        ::SetShaderValueMatrix(shader, uniformLoc, *this);
+    矩阵& 设着色器值(const ::Shader& 着色器, int 统一变量位置) {
+        ::SetShaderValueMatrix(着色器, 统一变量位置, *this);
         return *this;
     }
 
-    static Matrix GetCamera(const ::Camera& camera) { return ::GetCameraMatrix(camera); }
+    static 矩阵 取相机(const ::Camera& 相机) { return ::GetCameraMatrix(相机); }
 
-    static Matrix GetCamera(const ::Camera2D& camera) { return ::GetCameraMatrix2D(camera); }
+    static 矩阵 取相机(const ::Camera2D& 相机) { return ::GetCameraMatrix2D(相机); }
 
 #endif
 protected:
-    void set(const ::Matrix& mat) {
+    void 设(const ::Matrix& mat) {
         m0 = mat.m0;
         m1 = mat.m1;
         m2 = mat.m2;
@@ -188,6 +188,6 @@ protected:
 };
 } // namespace raylib
 
-using RMatrix = raylib::Matrix;
+using R矩阵 = raylib::矩阵;
 
 // #endif // RAYLIB_CPP_INCLUDE_MATRIX_HPP_

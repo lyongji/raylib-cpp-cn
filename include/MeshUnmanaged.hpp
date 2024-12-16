@@ -20,12 +20,12 @@ namespace raylib {
  *
  * @see raylib::Mesh
  */
-class MeshUnmanaged : public ::Mesh {
+class 非托管网格 : public ::Mesh {
 public:
     /**
      * 默认构造函数。
      */
-    MeshUnmanaged() {
+    非托管网格() {
         vertexCount = 0;
         triangleCount = 0;
         vertices = nullptr;
@@ -45,9 +45,9 @@ public:
         vboId = nullptr;
     }
 
-    MeshUnmanaged(const ::Mesh& mesh) { set(mesh); }
+    非托管网格(const ::Mesh& 网格) { 设(网格); }
 
-    MeshUnmanaged(::Mesh&& mesh) { set(mesh); }
+    非托管网格(::Mesh&& 网格) { 设(网格); }
 
     /**
      * 从模型文件加载网格
@@ -61,91 +61,89 @@ public:
     /**
      * 生成多边形网格
      */
-    static ::Mesh Poly(int sides, float radius) { return ::GenMeshPoly(sides, radius); }
+    static ::Mesh 多边形(int 边数, float 半径) { return ::GenMeshPoly(边数, 半径); }
 
     /**
      * 生成平面网格（带细分）
      */
-    static ::Mesh Plane(float width, float length, int resX, int resZ) {
-        return ::GenMeshPlane(width, length, resX, resZ);
-    }
+    static ::Mesh 平面(float 宽, float 长, int 矩形X, int 矩形Z) { return ::GenMeshPlane(宽, 长, 矩形X, 矩形Z); }
 
     /**
      * 生成立方体网格
      */
-    static ::Mesh Cube(float width, float height, float length) { return ::GenMeshCube(width, height, length); }
+    static ::Mesh 立方体(float 宽, float 高, float 长) { return ::GenMeshCube(宽, 高, 长); }
 
     /**
      * 生成球体网格（标准球体）
      */
-    static ::Mesh Sphere(float radius, int rings, int slices) { return ::GenMeshSphere(radius, rings, slices); }
+    static ::Mesh 球体(float 半径, int 环数, int 段数) { return ::GenMeshSphere(半径, 环数, 段数); }
 
     /**
      * 生成半球体网格（无底部盖子）
      */
-    static ::Mesh HemiSphere(float radius, int rings, int slices) { return ::GenMeshHemiSphere(radius, rings, slices); }
+    static ::Mesh 半球(float 半径, int 环数, int 段数) { return ::GenMeshHemiSphere(半径, 环数, 段数); }
 
     /**
      * 生成圆柱体网格
      */
-    static ::Mesh Cylinder(float radius, float height, int slices) { return ::GenMeshCylinder(radius, height, slices); }
+    static ::Mesh 柱体(float 半径, float 高, int 段数) { return ::GenMeshCylinder(半径, 高, 段数); }
 
     /**
      * 生成圆锥/棱锥网格
      */
-    static ::Mesh Cone(float radius, float height, int slices) { return ::GenMeshCone(radius, height, slices); }
+    static ::Mesh 锥体(float 半径, float 高, int 段数) { return ::GenMeshCone(半径, 高, 段数); }
 
     /**
      * 生成圆环网格
      */
-    static ::Mesh Torus(float radius, float size, int radSeg, int sides) {
-        return ::GenMeshTorus(radius, size, radSeg, sides);
+    static ::Mesh 环体(float 半径, float 大小, int 半径段数, int 段数) {
+        return ::GenMeshTorus(半径, 大小, 半径段数, 段数);
     }
 
     /**
      * 生成三叶结网格
      */
-    static ::Mesh Knot(float radius, float size, int radSeg, int sides) {
-        return ::GenMeshKnot(radius, size, radSeg, sides);
+    static ::Mesh 环结(float 半径, float 大小, int 半径段数, int 段数) {
+        return ::GenMeshKnot(半径, 大小, 半径段数, 段数);
     }
 
     /**
      * 从图像数据生成高度图网格
      */
-    static ::Mesh Heightmap(const ::Image& heightmap, ::Vector3 size) { return ::GenMeshHeightmap(heightmap, size); }
+    static ::Mesh 高度图(const ::Image& 高度图, ::Vector3 大小) { return ::GenMeshHeightmap(高度图, 大小); }
 
     /**
-     * 从图像数据生成基于立方体的地图网格
+     * 从图像数据生成基于立方体的地图网格 https://learnopengl-cn.github.io/04%20Advanced%20OpenGL/06%20Cubemaps/
      */
-    static ::Mesh Cubicmap(const ::Image& cubicmap, ::Vector3 cubeSize) {
-        return ::GenMeshCubicmap(cubicmap, cubeSize);
+    static ::Mesh 立方体贴图(const ::Image& 立方体贴图, ::Vector3 立方体尺寸) {
+        return ::GenMeshCubicmap(立方体贴图, 立方体尺寸);
     }
 
-    GETTERSETTER(int, VertexCount, vertexCount)
-    GETTERSETTER(int, TriangleCount, triangleCount)
-    GETTERSETTER(float*, Vertices, vertices)
-    GETTERSETTER(float*, TexCoords, texcoords)
-    GETTERSETTER(float*, TexCoords2, texcoords2)
-    GETTERSETTER(float*, Normals, normals)
-    GETTERSETTER(float*, Tangents, tangents)
-    GETTERSETTER(unsigned char*, Colors, colors)
-    GETTERSETTER(unsigned short*, Indices, indices) // NOLINT
-    GETTERSETTER(float*, AnimVertices, animVertices)
-    GETTERSETTER(float*, AnimNormals, animNormals)
-    GETTERSETTER(unsigned char*, BoneIds, boneIds)
-    GETTERSETTER(float*, BoneWeights, boneWeights)
+    GETTERSETTER(int, 顶点数量, vertexCount)
+    GETTERSETTER(int, 三角形数量, triangleCount)
+    GETTERSETTER(float*, 顶点, vertices)
+    GETTERSETTER(float*, 纹理坐标, texcoords)
+    GETTERSETTER(float*, 纹理坐标2, texcoords2)
+    GETTERSETTER(float*, 法线, normals)
+    GETTERSETTER(float*, 切线, tangents)
+    GETTERSETTER(unsigned char*, 颜色, colors)
+    GETTERSETTER(unsigned short*, 索引, indices) // NOLINT
+    GETTERSETTER(float*, 动画顶点, animVertices)
+    GETTERSETTER(float*, 动画法线, animNormals)
+    GETTERSETTER(unsigned char*, 骨骼ID, boneIds)
+    GETTERSETTER(float*, 骨骼权重, boneWeights)
     GETTERSETTER(unsigned int, VaoId, vaoId)
     GETTERSETTER(unsigned int*, VboId, vboId)
 
-    MeshUnmanaged& operator=(const ::Mesh& mesh) {
-        set(mesh);
+    非托管网格& operator=(const ::Mesh& 网格) {
+        设(网格);
         return *this;
     }
 
     /**
      * 从内存中卸载网格（RAM和/或VRAM）
      */
-    void Unload() {
+    void 卸载() {
         if (vboId != nullptr) {
             ::UnloadMesh(*this);
             vboId = nullptr;
@@ -155,24 +153,24 @@ public:
     /**
      * 将网格顶点数据上传到GPU（VRAM）
      */
-    void Upload(bool dynamic = false) { ::UploadMesh(this, dynamic); }
+    void 上传(bool 动态 = false) { ::UploadMesh(this, 动态); }
 
     /**
      * 更新网格缓冲区数据
      */
-    void UpdateBuffer(int index, void* data, int dataSize, int offset = 0) {
-        ::UpdateMeshBuffer(*this, index, data, dataSize, offset);
+    void 更新缓存(int 索引, void* 数据, int 数据大小, int 偏移 = 0) {
+        ::UpdateMeshBuffer(*this, 索引, 数据, 数据大小, 偏移);
     }
 
     /**
      * 使用材质和变换矩阵绘制3D网格
      */
-    void Draw(const ::Material& material, const ::Matrix& transform) const { ::DrawMesh(*this, material, transform); }
+    void 绘制(const ::Material& material, const ::Matrix& transform) const { ::DrawMesh(*this, material, transform); }
 
     /**
      * 使用材质和不同的变换矩阵绘制多个网格实例
      */
-    void Draw(const ::Material& material, ::Matrix* transforms, int instances) const {
+    void 绘制(const ::Material& material, ::Matrix* transforms, int instances) const {
         ::DrawMeshInstanced(*this, material, transforms, instances);
     }
 
@@ -181,7 +179,7 @@ public:
      *
      * @throws raylib::RaylibException 如果导出网格失败，则抛出异常。
      */
-    void Export(const std::string& fileName) {
+    void 导出(const std::string& fileName) {
         if (!::ExportMesh(*this, fileName.c_str())) {
             throw RaylibException("Failed to export the Mesh");
         }
@@ -192,7 +190,7 @@ public:
      *
      * @throws raylib::RaylibException 如果导出网格失败，则抛出异常。
      */
-    void ExportCode(const std::string& fileName) {
+    void 导出为代码(const std::string& fileName) {
         if (!::ExportMeshAsCode(*this, fileName.c_str())) {
             throw RaylibException("Failed to export the Mesh");
         }
@@ -201,12 +199,12 @@ public:
     /**
      * 计算网格的包围盒限制
      */
-    raylib::BoundingBox BoundingBox() const { return ::GetMeshBoundingBox(*this); }
+    R包围盒 包围盒() const { return ::GetMeshBoundingBox(*this); }
 
     /**
      * 计算网格的包围盒限制
      */
-    operator raylib::BoundingBox() { return BoundingBox(); }
+    operator R包围盒() { return 包围盒(); }
 
     /**
      * 计算网格的切线
@@ -231,7 +229,7 @@ public:
      */
     bool IsValid() { return ::IsModelValid(*this); }
 protected:
-    void set(const ::Mesh& mesh) {
+    void 设(const ::Mesh& mesh) {
         vertexCount = mesh.vertexCount;
         triangleCount = mesh.triangleCount;
         vertices = mesh.vertices;
@@ -252,6 +250,6 @@ protected:
 };
 } // namespace raylib
 
-using RMeshUnmanaged = raylib::MeshUnmanaged;
+using RMeshUnmanaged = raylib::非托管网格;
 
 // #endif // RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_

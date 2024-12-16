@@ -19,25 +19,25 @@ namespace raylib {
  *
  * @see raylib::MeshUnmanaged
  */
-class Mesh : public MeshUnmanaged {
+class 网格 : public 非托管网格 {
 public:
-    using MeshUnmanaged::MeshUnmanaged;
+    using 非托管网格::非托管网格;
 
     /**
      * 显式禁止复制构造函数。
      */
-    Mesh(const Mesh&) = delete;
+    网格(const 网格&) = delete;
 
     /**
      * 显式禁止复制赋值。
      */
-    Mesh& operator=(const Mesh&) = delete;
+    网格& operator=(const 网格&) = delete;
 
     /**
      * 移动构造函数。
      */
-    Mesh(Mesh&& other) {
-        set(other);
+    网格(网格&& other) {
+        设(other);
 
         other.vertexCount = 0;
         other.triangleCount = 0;
@@ -56,13 +56,13 @@ public:
         other.vboId = nullptr;
     }
 
-    Mesh& operator=(Mesh&& other) noexcept {
+    网格& operator=(网格&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.vertexCount = 0;
         other.triangleCount = 0;
@@ -83,10 +83,10 @@ public:
         return *this;
     }
 
-    ~Mesh() { Unload(); }
+    ~网格() { 卸载(); }
 };
 } // namespace raylib
 
-using RMesh = raylib::Mesh;
+using R网格 = raylib::网格;
 
 // #endif // RAYLIB_CPP_INCLUDE_MESH_HPP_
