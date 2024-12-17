@@ -13,14 +13,14 @@ namespace raylib {
 /**
  * 模型动画
  */
-class ModelAnimation : public ::ModelAnimation {
+class 模型动画 : public ::ModelAnimation {
 public:
-    ModelAnimation(const ::ModelAnimation& model) { set(model); }
+    模型动画(const ::ModelAnimation& 模型) { 设(模型); }
 
-    ModelAnimation(const ModelAnimation&) = delete;
+    模型动画(const 模型动画&) = delete;
 
-    ModelAnimation(ModelAnimation&& other) {
-        set(other);
+    模型动画(模型动画&& other) {
+        设(other);
 
         other.boneCount = 0;
         other.frameCount = 0;
@@ -28,40 +28,40 @@ public:
         other.framePoses = nullptr;
     }
 
-    ~ModelAnimation() { Unload(); }
+    ~模型动画() { 卸载(); }
 
     /**
      * 从文件加载模型动画
      */
-    static std::vector<ModelAnimation> Load(const std::string& fileName) {
+    static std::vector<模型动画> 加载(const std::string& 文件名) {
         int count = 0;
-        ::ModelAnimation* modelAnimations = ::LoadModelAnimations(fileName.c_str(), &count);
-        std::vector<ModelAnimation> mats(modelAnimations, modelAnimations + count);
+        ::ModelAnimation* 模型动画组 = ::LoadModelAnimations(文件名.c_str(), &count);
+        std::vector<模型动画> 动画向量(模型动画组, 模型动画组 + count);
 
-        RL_FREE(modelAnimations);
+        RL_FREE(模型动画组);
 
-        return mats;
+        return 动画向量;
     }
 
-    GETTERSETTER(int, BoneCount, boneCount)
-    GETTERSETTER(::BoneInfo*, Bones, bones)
-    GETTERSETTER(int, FrameCount, frameCount)
-    GETTERSETTER(::Transform**, FramePoses, framePoses)
+    GETTERSETTER(int, 骨骼数量, boneCount)
+    GETTERSETTER(::BoneInfo*, 骨骼, bones)
+    GETTERSETTER(int, 帧数, frameCount)
+    GETTERSETTER(::Transform**, 帧姿势, framePoses)
 
-    ModelAnimation& operator=(const ::ModelAnimation& model) {
-        set(model);
+    模型动画& operator=(const ::ModelAnimation& 模型) {
+        设(模型);
         return *this;
     }
 
-    ModelAnimation& operator=(const ModelAnimation&) = delete;
+    模型动画& operator=(const 模型动画&) = delete;
 
-    ModelAnimation& operator=(ModelAnimation&& other) noexcept {
+    模型动画& operator=(模型动画&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.boneCount = 0;
         other.frameCount = 0;
@@ -74,30 +74,30 @@ public:
     /**
      * 卸载动画数据
      */
-    void Unload() { ::UnloadModelAnimation(*this); }
+    void 卸载() { ::UnloadModelAnimation(*this); }
 
     /**
      * 更新模型动画姿态
      */
-    ModelAnimation& Update(const ::Model& model, int frame) {
-        ::UpdateModelAnimation(model, *this, frame);
+    模型动画& 更新(const ::Model& 模型, int 帧) {
+        ::UpdateModelAnimation(模型, *this, 帧);
         return *this;
     }
 
     /**
      * 更新模型动画网格骨骼矩阵（GPU蒙皮）
      */
-    ModelAnimation& UpdateBones(const ::Model& model, int frame) {
-        ::UpdateModelAnimationBones(model, *this, frame);
+    模型动画& 更新骨骼(const ::Model& 模型, int 帧) {
+        ::UpdateModelAnimationBones(模型, *this, 帧);
         return *this;
     }
 
     /**
      * 检查模型动画骨骼是否匹配
      */
-    bool IsValid(const ::Model& model) const { return ::IsModelAnimationValid(model, *this); }
+    bool 是有效(const ::Model& 模型) const { return ::IsModelAnimationValid(模型, *this); }
 protected:
-    void set(const ::ModelAnimation& model) {
+    void 设(const ::ModelAnimation& model) {
         boneCount = model.boneCount;
         frameCount = model.frameCount;
         bones = model.bones;
@@ -111,6 +111,6 @@ protected:
 };
 } // namespace raylib
 
-using RModelAnimation = raylib::ModelAnimation;
+using R模型动画 = raylib::模型动画;
 
 // #endif // RAYLIB_CPP_INCLUDE_MODELANIMATION_HPP_

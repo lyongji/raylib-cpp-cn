@@ -17,12 +17,7 @@ namespace raylib {
  */
 class 图像 : public ::Image {
 public:
-    图像(
-        void* 数据 = nullptr,
-        int 宽 = 0,
-        int 高 = 0,
-        int 多级纹理 = 1,
-        int 格式 = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8)
+    图像(void* 数据 = nullptr, int 宽 = 0, int 高 = 0, int 多级纹理 = 1, int 格式 = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8)
         : ::Image{数据, 宽, 高, 多级纹理, 格式} {
         // 无操作
     }
@@ -80,12 +75,7 @@ public:
         设(::ImageText(文本.c_str(), 字体大小, 颜色));
     }
 
-    图像(
-        const ::Font& 字体,
-        const std::string& 文本,
-        float 字体大小,
-        float 间距,
-        ::Color 色调 = {255, 255, 255, 255}) {
+    图像(const ::Font& 字体, const std::string& 文本, float 字体大小, float 间距, ::Color 色调 = {255, 255, 255, 255}) {
         设(::ImageTextEx(字体, 文本.c_str(), 字体大小, 间距, 色调));
     }
 
@@ -105,12 +95,8 @@ public:
         return ::ImageText(文本.c_str(), 字体大小, 颜色);
     }
 
-    static ::Image 文本(
-        const ::Font& 字体,
-        const std::string& 文本,
-        float 字体大小,
-        float 间距,
-        ::Color 色调 = {255, 255, 255, 255}) {
+    static ::Image
+    文本(const ::Font& 字体, const std::string& 文本, float 字体大小, float 间距, ::Color 色调 = {255, 255, 255, 255}) {
         return ::ImageTextEx(字体, 文本.c_str(), 字体大小, 间距, 色调);
     }
 
@@ -122,9 +108,7 @@ public:
     /**
      * 生成纯色图像
      */
-    static ::Image 纯色(int 宽, int 高, ::Color 颜色 = {255, 255, 255, 255}) {
-        return ::GenImageColor(宽, 高, 颜色);
-    }
+    static ::Image 纯色(int 宽, int 高, ::Color 颜色 = {255, 255, 255, 255}) { return ::GenImageColor(宽, 高, 颜色); }
 
     /**
      * 生成线性渐变图像
@@ -143,22 +127,15 @@ public:
     /**
      * 生成棋盘图像
      */
-    static ::Image 棋盘格(
-        int 宽,
-        int 高,
-        int 横格数,
-        int 纵格数,
-        ::Color col1 = {255, 255, 255, 255},
-        ::Color col2 = {0, 0, 0, 255}) {
+    static ::Image
+    棋盘格(int 宽, int 高, int 横格数, int 纵格数, ::Color col1 = {255, 255, 255, 255}, ::Color col2 = {0, 0, 0, 255}) {
         return ::GenImageChecked(宽, 高, 横格数, 纵格数, col1, col2);
     }
 
     /**
      * 生成白噪声图像
      */
-    static ::Image 白噪声(int 宽, int 高, float 系数) {
-        return ::GenImageWhiteNoise(宽, 高, 系数);
-    }
+    static ::Image 白噪声(int 宽, int 高, float 系数) { return ::GenImageWhiteNoise(宽, 高, 系数); }
 
     /**
      * 生成细胞图像。tileSize 越大，单元格越大
@@ -215,7 +192,7 @@ public:
     void 加载(const std::string& 文件命) {
         设(::LoadImage(文件命.c_str()));
         if (!是有效()) {
-            throw RaylibException("从文件中加载图像失败： " + 文件命);
+            throw Raylib异常("从文件中加载图像失败： " + 文件命);
         }
     }
 
@@ -229,7 +206,7 @@ public:
     void 加载(const std::string& 文件名, int 宽, int 高, int 格式, int 文件头大小) {
         设(::LoadImageRaw(文件名.c_str(), 宽, 高, 格式, 文件头大小));
         if (!是有效()) {
-            throw RaylibException("从文件中加载图像失败： " + 文件名);
+            throw Raylib异常("从文件中加载图像失败： " + 文件名);
         }
     }
 
@@ -243,7 +220,7 @@ public:
     void 加载(const std::string& 文件名, int* 帧数) {
         设(::LoadImageAnim(文件名.c_str(), 帧数));
         if (!是有效()) {
-            throw RaylibException("从文件中加载图像失败： " + 文件名);
+            throw Raylib异常("从文件中加载图像失败： " + 文件名);
         }
     }
 
@@ -257,7 +234,7 @@ public:
     void 加载(const std::string& 文件名, const unsigned char* 文件数据, int 数据大小) {
         设(::LoadImageFromMemory(文件名.c_str(), 文件数据, 数据大小));
         if (!是有效()) {
-            throw RaylibException("加载文件类型的图像数据失败： " + 文件名);
+            throw Raylib异常("加载文件类型的图像数据失败： " + 文件名);
         }
     }
 
@@ -271,7 +248,7 @@ public:
     void 加载(const ::Texture2D& 纹理) {
         设(::LoadImageFromTexture(纹理));
         if (!是有效()) {
-            throw RaylibException("从纹理加载图像失败。");
+            throw Raylib异常("从纹理加载图像失败。");
         }
     }
 
@@ -292,7 +269,7 @@ public:
      */
     void 导出(const std::string& 文件名) const {
         if (!::ExportImage(*this, 文件名.c_str())) {
-            throw RaylibException(TextFormat("导出图像到文件: %s 失败。", 文件名.c_str()));
+            throw Raylib异常(TextFormat("导出图像到文件: %s 失败。", 文件名.c_str()));
         }
     }
 
@@ -310,7 +287,7 @@ public:
      */
     void 导出为代码(const std::string& 文件名) const {
         if (!::ExportImageAsCode(*this, 文件名.c_str())) {
-            throw RaylibException(TextFormat("未能将图像代码导出到文件：%s", 文件名.c_str()));
+            throw Raylib异常(TextFormat("未能将图像代码导出到文件：%s", 文件名.c_str()));
         }
     }
 
@@ -451,8 +428,7 @@ public:
     /**
      * 调整画布大小并填充颜色
      */
-    图像&
-    调整画布尺寸(int 新宽, int 新高, int 偏移X = 0, int 偏移Y = 0, ::Color 颜色 = {255, 255, 255, 255}) {
+    图像& 调整画布尺寸(int 新宽, int 新高, int 偏移X = 0, int 偏移Y = 0, ::Color 颜色 = {255, 255, 255, 255}) {
         ::ImageResizeCanvas(this, 新宽, 新高, 偏移X, 偏移Y, 颜色);
         return *this;
     }
@@ -599,9 +575,7 @@ public:
         ::ImageDrawPixel(this, 位置X, 位置Y, 颜色);
     }
 
-    void 绘制像素(::Vector2 位置, ::Color 颜色 = {255, 255, 255, 255}) {
-        ::ImageDrawPixelV(this, 位置, 颜色);
-    }
+    void 绘制像素(::Vector2 位置, ::Color 颜色 = {255, 255, 255, 255}) { ::ImageDrawPixelV(this, 位置, 颜色); }
 
     void 绘制线段(int 起点X, int 起点Y, int 终点X, int 终点Y, ::Color 颜色 = {255, 255, 255, 255}) {
         ::ImageDrawLine(this, 起点X, 起点Y, 终点X, 终点Y, 颜色);
@@ -634,9 +608,7 @@ public:
         ::ImageDrawRectangleV(this, 位置, 宽高, 颜色);
     }
 
-    void 绘制矩形(::Rectangle 矩形, ::Color 颜色 = {255, 255, 255, 255}) {
-        ::ImageDrawRectangleRec(this, 矩形, 颜色);
-    }
+    void 绘制矩形(::Rectangle 矩形, ::Color 颜色 = {255, 255, 255, 255}) { ::ImageDrawRectangleRec(this, 矩形, 颜色); }
 
     void 绘制矩形边框(::Rectangle 矩形, int 粗细 = 1, ::Color 颜色 = {255, 255, 255, 255}) {
         ::ImageDrawRectangleLines(this, 矩形, 粗细, 颜色);
@@ -653,13 +625,7 @@ public:
     }
 
     void 绘制文本(const std::string& 文本, ::Vector2 位置, int 字体大小, ::Color 颜色 = {255, 255, 255, 255}) {
-        ::ImageDrawText(
-            this,
-            文本.c_str(),
-            static_cast<int>(位置.x),
-            static_cast<int>(位置.y),
-            字体大小,
-            颜色);
+        ::ImageDrawText(this, 文本.c_str(), static_cast<int>(位置.x), static_cast<int>(位置.y), 字体大小, 颜色);
     }
 
     void 绘制文本(const std::string& 文本, int 位置X, int 位置Y, int 字体大小, ::Color 颜色 = {255, 255, 255, 255}) {

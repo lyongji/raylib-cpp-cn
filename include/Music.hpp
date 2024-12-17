@@ -12,36 +12,36 @@ namespace raylib {
 /**
  * 音乐流类型（从内存中流式传输音频文件）
  */
-class Music : public ::Music {
+class 音乐流 : public ::Music {
 public:
-    Music(
-        ::AudioStream stream = {nullptr, nullptr, 0, 0, 0},
-        unsigned int frameCount = 0,
-        bool looping = false,
-        int ctxType = 0,
-        void* ctxData = nullptr)
-        : ::Music{stream, frameCount, looping, ctxType, ctxData} {}
+    音乐流(
+        ::AudioStream 音频流 = {nullptr, nullptr, 0, 0, 0},
+        unsigned int 帧数 = 0,
+        bool 循环 = false,
+        int 环境类型 = 0,
+        void* 环境数据 = nullptr)
+        : ::Music{音频流, 帧数, 循环, 环境类型, 环境数据} {}
 
-    Music(const ::Music& music) { set(music); }
+    音乐流(const ::Music& 音乐) { 设(音乐); }
 
     /**
      * 从文件加载音乐流
      *
      * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
-    Music(const std::string& fileName) { Load(fileName); }
+    音乐流(const std::string& 文件名) { 加载(文件名); }
 
     /**
      * 从内存加载音乐流
      *
      * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
-    Music(const std::string& fileType, unsigned char* data, int dataSize) { Load(fileType, data, dataSize); }
+    音乐流(const std::string& 文件类型, unsigned char* 数据, int 数据大小) { 加载(文件类型, 数据, 数据大小); }
 
-    Music(const Music&) = delete;
+    音乐流(const 音乐流&) = delete;
 
-    Music(Music&& other) {
-        set(other);
+    音乐流(音乐流&& other) {
+        设(other);
 
         other.stream = {};
         other.frameCount = 0;
@@ -53,28 +53,28 @@ public:
     /**
      * 卸载音乐流
      */
-    ~Music() { Unload(); }
+    ~音乐流() { 卸载(); }
 
-    GETTER(::AudioStream, Stream, stream)
-    GETTER(unsigned int, FrameCount, frameCount)
-    GETTERSETTER(bool, Looping, looping)
-    GETTER(int, CtxType, ctxType)
-    GETTER(void*, CtxData, ctxData)
+    GETTER(::AudioStream, 音频流, stream)
+    GETTER(unsigned int, 帧数, frameCount)
+    GETTERSETTER(bool, 循环, looping)
+    GETTER(int, 环境类型, ctxType)
+    GETTER(void*, 环境数据, ctxData)
 
-    Music& operator=(const ::Music& music) {
-        set(music);
+    音乐流& operator=(const ::Music& 音乐) {
+        设(音乐);
         return *this;
     }
 
-    Music& operator=(const Music&) = delete;
+    音乐流& operator=(const 音乐流&) = delete;
 
-    Music& operator=(Music&& other) noexcept {
+    音乐流& operator=(音乐流&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.ctxType = 0;
         other.ctxData = nullptr;
@@ -88,12 +88,12 @@ public:
     /**
      * 卸载音乐流
      */
-    void Unload() { ::UnloadMusicStream(*this); }
+    void 卸载() { ::UnloadMusicStream(*this); }
 
     /**
      * 开始播放音乐
      */
-    Music& Play() {
+    音乐流& 播放() {
         ::PlayMusicStream(*this);
         return *this;
     }
@@ -101,7 +101,7 @@ public:
     /**
      * 更新音乐流的缓冲区
      */
-    Music& Update() {
+    音乐流& 更新() {
         ::UpdateMusicStream(*this);
         return *this;
     }
@@ -109,7 +109,7 @@ public:
     /**
      * 停止播放音乐
      */
-    Music& Stop() {
+    音乐流& 停止() {
         ::StopMusicStream(*this);
         return *this;
     }
@@ -117,7 +117,7 @@ public:
     /**
      * 暂停播放音乐
      */
-    Music& Pause() {
+    音乐流& 暂停() {
         ::PauseMusicStream(*this);
         return *this;
     }
@@ -125,7 +125,7 @@ public:
     /**
      * 恢复播放音乐
      */
-    Music& Resume() {
+    音乐流& 恢复() {
         ::ResumeMusicStream(*this);
         return *this;
     }
@@ -133,20 +133,20 @@ public:
     /**
      * 将音乐定位到指定位置（以秒为单位）
      */
-    Music& Seek(float position) {
-        SeekMusicStream(*this, position);
+    音乐流& 跳转(float 位置) {
+        SeekMusicStream(*this, 位置);
         return *this;
     }
 
     /**
      * 检查音乐是否正在播放
      */
-    bool IsPlaying() const { return ::IsMusicStreamPlaying(*this); }
+    bool 是播放中() const { return ::IsMusicStreamPlaying(*this); }
 
     /**
      * 设置音乐的音量
      */
-    Music& SetVolume(float volume) {
+    音乐流& 设音量(float volume) {
         ::SetMusicVolume(*this, volume);
         return *this;
     }
@@ -154,38 +154,38 @@ public:
     /**
      * 设置音乐的音调
      */
-    Music& SetPitch(float pitch) {
-        ::SetMusicPitch(*this, pitch);
+    音乐流& 设音调(float 音调值) {
+        ::SetMusicPitch(*this, 音调值);
         return *this;
     }
 
     /**
-     * 设置音乐的声相（0.5 为中心）
+     * 设置音乐的声相（0.5 为中心）声道平衡 左声道<=>右声道
      */
-    Music& SetPan(float pan = 0.5f) {
-        ::SetMusicPan(*this, pan);
+    音乐流& 设声相(float 声相 = 0.5f) {
+        ::SetMusicPan(*this, 声相);
         return *this;
     }
 
     /**
      * 获取音乐的总时长（以秒为单位）
      */
-    float GetTimeLength() const { return ::GetMusicTimeLength(*this); }
+    float 取总时常() const { return ::GetMusicTimeLength(*this); }
 
     /**
      * 获取当前播放的音乐时间（以秒为单位）
      */
-    float GetTimePlayed() const { return ::GetMusicTimePlayed(*this); }
+    float 取当前播放时间点() const { return ::GetMusicTimePlayed(*this); }
 
     /**
      * 从文件加载音乐流
      *
      * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
-    void Load(const std::string& fileName) {
-        set(::LoadMusicStream(fileName.c_str()));
-        if (!IsValid()) {
-            throw RaylibException(TextFormat("未能从文件 %s 加载音乐", fileName.c_str()));
+    void 加载(const std::string& 文件名) {
+        设(::LoadMusicStream(文件名.c_str()));
+        if (!是有效()) {
+            throw Raylib异常(TextFormat("未能从文件 %s 加载音乐", 文件名.c_str()));
         }
     }
 
@@ -194,10 +194,10 @@ public:
      *
      * @throws raylib::RaylibException 如果音乐加载失败，则抛出异常。
      */
-    void Load(const std::string& fileType, unsigned char* data, int dataSize) {
-        set(::LoadMusicStreamFromMemory(fileType.c_str(), data, dataSize));
-        if (!IsValid()) {
-            throw RaylibException(TextFormat("未能从 %s 文件数据加载音乐", fileType.c_str()));
+    void 加载(const std::string& 文件类型, unsigned char* 数据, int 数据大小) {
+        设(::LoadMusicStreamFromMemory(文件类型.c_str(), 数据, 数据大小));
+        if (!是有效()) {
+            throw Raylib异常(TextFormat("未能从 %s 文件数据加载音乐", 文件类型.c_str()));
         }
     }
 
@@ -206,9 +206,9 @@ public:
      *
      * @return 如果音乐已加载，则返回 true，否则返回 false。
      */
-    bool IsValid() const { return ::IsMusicValid(*this); }
+    bool 是有效() const { return ::IsMusicValid(*this); }
 protected:
-    void set(const ::Music& music) {
+    void 设(const ::Music& music) {
         stream = music.stream;
         frameCount = music.frameCount;
         looping = music.looping;
@@ -218,6 +218,6 @@ protected:
 };
 } // namespace raylib
 
-using RMusic = raylib::Music;
+using R音乐流 = raylib::音乐流;
 
 // #endif // RAYLIB_CPP_INCLUDE_MUSIC_HPP_

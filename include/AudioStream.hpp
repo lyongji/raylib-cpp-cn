@@ -153,8 +153,8 @@ public:
     /**
      * 设置音频流的声道平衡（0.5 为中心）左声道<=>右声道
      */
-    音频流& 设声像(float 声像 = 0.5f) {
-        ::SetAudioStreamPan(*this, 声像);
+    音频流& 设声相(float 声相 = 0.5f) {
+        ::SetAudioStreamPan(*this, 声相);
         return *this;
     }
 
@@ -192,7 +192,7 @@ public:
         卸载();
         设(::LoadAudioStream(采样频率, 采样大小, 声道数));
         if (!是有效()) {
-            throw RaylibException("音频流加载失败");
+            throw Raylib异常("音频流加载失败");
         }
     }
 protected:

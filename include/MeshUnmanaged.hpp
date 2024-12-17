@@ -209,7 +209,7 @@ public:
     /**
      * 计算网格的切线
      */
-    Mesh& GenTangents() {
+    Mesh& 生成切线() {
         ::GenMeshTangents(this);
         return *this;
     }
@@ -217,39 +217,39 @@ public:
     /**
      * 从生成的网格加载模型
      */
-    raylib::Model LoadModelFrom() const { return ::LoadModelFromMesh(*this); }
+    raylib::模型 从网格加载模型() const { return ::LoadModelFromMesh(*this); }
 
     /**
      * 从生成的网格加载模型
      */
-    operator raylib::Model() { return ::LoadModelFromMesh(*this); }
+    operator raylib::模型() { return ::LoadModelFromMesh(*this); }
 
     /**
      * 返回网格是否有效
      */
-    bool IsValid() { return ::IsModelValid(*this); }
+    bool 是有效() { return ::IsModelValid(*this); }
 protected:
-    void 设(const ::Mesh& mesh) {
-        vertexCount = mesh.vertexCount;
-        triangleCount = mesh.triangleCount;
-        vertices = mesh.vertices;
-        texcoords = mesh.texcoords;
-        texcoords2 = mesh.texcoords2;
-        normals = mesh.normals;
-        tangents = mesh.tangents;
-        colors = mesh.colors;
-        indices = mesh.indices;
-        animVertices = mesh.animVertices;
-        animNormals = mesh.animNormals;
-        boneIds = mesh.boneIds;
-        boneWeights = mesh.boneWeights;
-        boneMatrices = mesh.boneMatrices;
-        vaoId = mesh.vaoId;
-        vboId = mesh.vboId;
+    void 设(const ::Mesh& 网格) {
+        vertexCount = 网格.vertexCount;
+        triangleCount = 网格.triangleCount;
+        vertices = 网格.vertices;
+        texcoords = 网格.texcoords;
+        texcoords2 = 网格.texcoords2;
+        normals = 网格.normals;
+        tangents = 网格.tangents;
+        colors = 网格.colors;
+        indices = 网格.indices;
+        animVertices = 网格.animVertices;
+        animNormals = 网格.animNormals;
+        boneIds = 网格.boneIds;
+        boneWeights = 网格.boneWeights;
+        boneMatrices = 网格.boneMatrices;
+        vaoId = 网格.vaoId;
+        vboId = 网格.vboId;
     }
 };
 } // namespace raylib
 
-using RMeshUnmanaged = raylib::非托管网格;
+using R非托管网格 = raylib::非托管网格;
 
 // #endif // RAYLIB_CPP_INCLUDE_MESHUNMANAGED_HPP_

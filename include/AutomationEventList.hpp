@@ -73,7 +73,7 @@ public:
         卸载();
         设(::LoadAutomationEventList(文件名));
         if (!是有效()) {
-            throw RaylibException("自动化事件列表加载失败");
+            throw Raylib异常("自动化事件列表加载失败");
         }
     }
 

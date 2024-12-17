@@ -9,67 +9,64 @@ namespace raylib {
 /**
  * 光线投射碰撞信息
  */
-class RayCollision : public ::RayCollision {
+class 射线碰撞 : public ::RayCollision {
 public:
-    RayCollision(const ::RayCollision& ray) { set(ray); }
+    射线碰撞(const ::RayCollision& 射线碰撞) { 设(射线碰撞); }
 
-    RayCollision(bool hit, float distance, ::Vector3 point, ::Vector3 normal)
-        : ::RayCollision{hit, distance, point, normal} {
+    射线碰撞(bool 命中, float 相距, ::Vector3 碰撞点, ::Vector3 点法线) : ::RayCollision{命中, 相距, 碰撞点, 点法线} {
         // 无操作
     }
 
     /**
      * 获取光线与包围盒的碰撞信息
      */
-    RayCollision(const ::Ray& ray, const ::BoundingBox& box) { set(::GetRayCollisionBox(ray, box)); }
+    射线碰撞(const ::Ray& 射线, const ::BoundingBox& 包围盒) { 设(::GetRayCollisionBox(射线, 包围盒)); }
 
     /**
      * 获取光线与网格的碰撞信息
      */
-    RayCollision(const ::Ray& ray, const ::Mesh& mesh, const ::Matrix& transform) {
-        set(::GetRayCollisionMesh(ray, mesh, transform));
+    射线碰撞(const ::Ray& 射线, const ::Mesh& 网格, const ::Matrix& 变换) {
+        设(::GetRayCollisionMesh(射线, 网格, 变换));
     }
 
     /**
      * 获取光线与四边形的碰撞信息
      */
-    RayCollision(const ::Ray& ray, ::Vector3 p1, ::Vector3 p2, ::Vector3 p3, ::Vector3 p4) {
-        set(::GetRayCollisionQuad(ray, p1, p2, p3, p4));
+    射线碰撞(const ::Ray& 射线, ::Vector3 顶点1, ::Vector3 顶点2, ::Vector3 顶点3, ::Vector3 顶点4) {
+        设(::GetRayCollisionQuad(射线, 顶点1, 顶点2, 顶点3, 顶点4));
     }
 
     /**
      * 获取光线与球体的碰撞信息
      */
-    RayCollision(const ::Ray& ray, ::Vector3 center, float radius) {
-        set(::GetRayCollisionSphere(ray, center, radius));
-    }
+    射线碰撞(const ::Ray& 射线, ::Vector3 球心, float 半径) { 设(::GetRayCollisionSphere(射线, 球心, 半径)); }
 
     /**
      * 获取光线与三角形的碰撞信息
      */
-    RayCollision(const ::Ray& ray, ::Vector3 p1, ::Vector3 p2, ::Vector3 p3) {
-        set(::GetRayCollisionTriangle(ray, p1, p2, p3));
+    射线碰撞(const ::Ray& 射线, ::Vector3 顶点1, ::Vector3 顶点2, ::Vector3 顶点3) {
+        设(::GetRayCollisionTriangle(射线, 顶点1, 顶点2, 顶点3));
     }
 
-    RayCollision& operator=(const ::RayCollision& ray) {
-        set(ray);
+    射线碰撞& operator=(const ::RayCollision& 射线碰撞) {
+        设(射线碰撞);
         return *this;
     }
 
-    GETTERSETTER(bool, Hit, hit)
-    GETTERSETTER(float, Distance, distance)
-    GETTERSETTER(::Vector3, Position, point)
-    GETTERSETTER(::Vector3, Normal, normal)
+    GETTERSETTER(bool, 命中, hit)
+    GETTERSETTER(float, 相距, distance)
+    GETTERSETTER(::Vector3, 碰撞点, point)
+    GETTERSETTER(::Vector3, 法线, normal)
 protected:
-    void set(const ::RayCollision& ray) {
-        hit = ray.hit;
-        distance = ray.distance;
-        point = ray.point;
-        normal = ray.normal;
+    void 设(const ::RayCollision& 射线碰撞) {
+        hit = 射线碰撞.hit;
+        distance = 射线碰撞.distance;
+        point = 射线碰撞.point;
+        normal = 射线碰撞.normal;
     }
 };
 } // namespace raylib
 
-using RRayCollision = raylib::RayCollision;
+using R射线碰撞 = raylib::射线碰撞;
 
 // #endif // RAYLIB_CPP_INCLUDE_RAYCOLLISION_HPP_

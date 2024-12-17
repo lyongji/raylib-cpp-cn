@@ -38,7 +38,7 @@ public:
     void 初始化() {
         ::InitAudioDevice();
         if (!是就绪()) {
-            throw RaylibException("音频设备初始化失败");
+            throw Raylib异常("音频设备初始化失败");
         }
     }
 

@@ -9,34 +9,34 @@
 #include "./raylib.hpp"
 
 namespace raylib {
-class Mesh;
+class 网格;
 /**
  * 模型类型
  */
-class Model : public ::Model {
+class 模型 : public ::Model {
 public:
-    Model() {
+    模型() {
         // 无操作
     }
 
     /*
      * 从另一个模型复制模型。
      */
-    Model(const ::Model& model) { set(model); }
+    模型(const ::Model& 模型) { 设(模型); }
 
     /*
      * 从文件加载模型。
      *
      * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
-    Model(const std::string& fileName) { Load(fileName); }
+    模型(const std::string& 文件名) { 加载(文件名); }
 
     /*
      * 从网格加载模型。
      *
      * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
-    Model(const ::Mesh& mesh) { Load(mesh); }
+    模型(const ::Mesh& 网格) { 加载(网格); }
 
     /**
      * 带有 Mesh() 构造函数的 Model 已被移除。
@@ -45,14 +45,14 @@ public:
      *
      * @see raylib::MeshUnmanaged
      */
-    Model(const raylib::Mesh& mesh) = delete;
+    模型(const raylib::网格& 网格) = delete;
 
-    ~Model() { Unload(); }
+    ~模型() { 卸载(); }
 
-    Model(const Model&) = delete;
+    模型(const 模型&) = delete;
 
-    Model(Model&& other) {
-        set(other);
+    模型(模型&& other) {
+        设(other);
 
         other.meshCount = 0;
         other.materialCount = 0;
@@ -64,30 +64,30 @@ public:
         other.bindPose = nullptr;
     }
 
-    GETTERSETTER(::Matrix, Transform, transform)
-    GETTERSETTER(int, MeshCount, meshCount)
-    GETTERSETTER(int, MaterialCount, materialCount)
-    GETTERSETTER(::Mesh*, Meshes, meshes)
-    GETTERSETTER(::Material*, Materials, materials)
-    GETTERSETTER(int*, MeshMaterial, meshMaterial)
-    GETTERSETTER(int, BoneCount, boneCount)
-    GETTERSETTER(::BoneInfo*, Bones, bones)
-    GETTERSETTER(::Transform*, BindPose, bindPose)
+    GETTERSETTER(::Matrix, 变换, transform)
+    GETTERSETTER(int, 网格数量, meshCount)
+    GETTERSETTER(int, 材质数量, materialCount)
+    GETTERSETTER(::Mesh*, 网格, meshes)
+    GETTERSETTER(::Material*, 材质, materials)
+    GETTERSETTER(int*, 网格材质, meshMaterial)
+    GETTERSETTER(int, 骨骼数量, boneCount)
+    GETTERSETTER(::BoneInfo*, 骨骼, bones)
+    GETTERSETTER(::Transform*, 绑定姿势, bindPose)
 
-    Model& operator=(const ::Model& model) {
-        set(model);
+    模型& operator=(const ::Model& 模型) {
+        设(模型);
         return *this;
     }
 
-    Model& operator=(const Model&) = delete;
+    模型& operator=(const 模型&) = delete;
 
-    Model& operator=(Model&& other) noexcept {
+    模型& operator=(模型&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.meshCount = 0;
         other.materialCount = 0;
@@ -104,7 +104,7 @@ public:
     /**
      * 从内存中卸载模型（包括网格）（RAM 和/或 VRAM）
      */
-    void Unload() {
+    void 卸载() {
         if (meshes != nullptr || materials != nullptr) {
             ::UnloadModel(*this);
             meshes = nullptr;
@@ -115,93 +115,93 @@ public:
     /**
      * 为网格设置材质
      */
-    Model& SetMeshMaterial(int meshId, int materialId) {
-        ::SetModelMeshMaterial(this, meshId, materialId);
+    模型& 设网格材质(int 网格ID, int 材质) {
+        ::SetModelMeshMaterial(this, 网格ID, 材质);
         return *this;
     }
 
     /**
      * 更新模型动画姿态
      */
-    Model& UpdateAnimation(const ::ModelAnimation& anim, int frame) {
-        ::UpdateModelAnimation(*this, anim, frame);
+    模型& 更新动画(const ::ModelAnimation& 动画, int 帧) {
+        ::UpdateModelAnimation(*this, 动画, 帧);
         return *this;
     }
 
     /**
      * 更新模型动画骨骼
      */
-    Model& UpdateAnimationBones(const ::ModelAnimation& anim, int frame) {
-        ::UpdateModelAnimationBones(*this, anim, frame);
+    模型& 更新动画骨骼(const ::ModelAnimation& 动画, int 帧) {
+        ::UpdateModelAnimationBones(*this, 动画, 帧);
         return *this;
     }
 
     /**
      * 检查模型动画骨骼是否匹配
      */
-    bool IsModelAnimationValid(const ::ModelAnimation& anim) const { return ::IsModelAnimationValid(*this, anim); }
+    bool 是有效的模型动画(const ::ModelAnimation& 动画) const { return ::IsModelAnimationValid(*this, 动画); }
 
     /**
      * 绘制模型（如果设置了纹理）
      */
-    void Draw(::Vector3 position, float scale = 1.0f, ::Color tint = {255, 255, 255, 255}) const {
-        ::DrawModel(*this, position, scale, tint);
+    void 绘制(::Vector3 位置, float 缩放 = 1.0f, ::Color 色调 = {255, 255, 255, 255}) const {
+        ::DrawModel(*this, 位置, 缩放, 色调);
     }
 
     /**
      * 使用扩展参数绘制模型
      */
-    void Draw(
-        ::Vector3 position,
-        ::Vector3 rotationAxis,
-        float rotationAngle = 0.0f,
-        ::Vector3 scale = {1.0f, 1.0f, 1.0f},
-        ::Color tint = {255, 255, 255, 255}) const {
-        ::DrawModelEx(*this, position, rotationAxis, rotationAngle, scale, tint);
+    void 绘制(
+        ::Vector3 位置,
+        ::Vector3 旋转轴,
+        float 旋转角度 = 0.0f,
+        ::Vector3 缩放 = {1.0f, 1.0f, 1.0f},
+        ::Color 色调 = {255, 255, 255, 255}) const {
+        ::DrawModelEx(*this, 位置, 旋转轴, 旋转角度, 缩放, 色调);
     }
 
     /**
      * 绘制模型的线框（如果设置了纹理）
      */
-    void DrawWires(::Vector3 position, float scale = 1.0f, ::Color tint = {255, 255, 255, 255}) const {
-        ::DrawModelWires(*this, position, scale, tint);
+    void 绘制线框(::Vector3 位置, float 缩放 = 1.0f, ::Color 色调 = {255, 255, 255, 255}) const {
+        ::DrawModelWires(*this, 位置, 缩放, 色调);
     }
 
     /**
      * 使用扩展参数绘制模型的线框
      */
-    void DrawWires(
-        ::Vector3 position,
-        ::Vector3 rotationAxis,
-        float rotationAngle = 0.0f,
-        ::Vector3 scale = {1.0f, 1.0f, 1.0f},
-        ::Color tint = {255, 255, 255, 255}) const {
-        ::DrawModelWiresEx(*this, position, rotationAxis, rotationAngle, scale, tint);
+    void 绘制线框(
+        ::Vector3 位置,
+        ::Vector3 旋转轴,
+        float 旋转角度 = 0.0f,
+        ::Vector3 缩放 = {1.0f, 1.0f, 1.0f},
+        ::Color 色调 = {255, 255, 255, 255}) const {
+        ::DrawModelWiresEx(*this, 位置, 旋转轴, 旋转角度, 缩放, 色调);
     }
 
     /**
      * 将模型绘制为点
      */
-    void DrawPoints(::Vector3 position, float scale = 1.0f, ::Color tint = {255, 255, 255, 255}) {
-        ::DrawModelPoints(*this, position, scale, tint);
+    void 绘制顶点(::Vector3 位置, float 缩放 = 1.0f, ::Color 色调 = {255, 255, 255, 255}) {
+        ::DrawModelPoints(*this, 位置, 缩放, 色调);
     }
 
     /**
      * 使用扩展参数将模型绘制为点
      */
-    void DrawPoints(
-        ::Vector3 position,
-        ::Vector3 rotationAxis,
-        float rotationAngle = 0.0f,
-        ::Vector3 scale = {1.0f, 1.0f, 1.0f},
-        ::Color tint = {255, 255, 255, 255}) {
-        ::DrawModelPointsEx(*this, position, rotationAxis, rotationAngle, scale, tint);
+    void 绘制顶点(
+        ::Vector3 位置,
+        ::Vector3 旋转轴,
+        float 旋转角度 = 0.0f,
+        ::Vector3 缩放 = {1.0f, 1.0f, 1.0f},
+        ::Color 色调 = {255, 255, 255, 255}) {
+        ::DrawModelPointsEx(*this, 位置, 旋转轴, 旋转角度, 缩放, 色调);
     }
 
     /**
      * 计算模型的包围盒限制（考虑所有网格）
      */
-    BoundingBox GetBoundingBox() const { return ::GetModelBoundingBox(*this); }
+    BoundingBox 取包围盒() const { return ::GetModelBoundingBox(*this); }
 
     /**
      * 计算模型的包围盒限制（考虑所有网格）
@@ -211,17 +211,17 @@ public:
     /**
      * 确定模型是否包含数据
      */
-    bool IsValid() const { return ::IsModelValid(*this); }
+    bool 是有效() const { return ::IsModelValid(*this); }
 
     /**
      * 从给定文件加载模型
      *
      * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
-    void Load(const std::string& fileName) {
-        set(::LoadModel(fileName.c_str()));
-        if (!IsValid()) {
-            throw RaylibException("Failed to load Model from " + fileName);
+    void 加载(const std::string& 文件名) {
+        设(::LoadModel(文件名.c_str()));
+        if (!是有效()) {
+            throw Raylib异常("加载模型失败:" + 文件名);
         }
     }
 
@@ -230,30 +230,30 @@ public:
      *
      * @throws raylib::RaylibException 如果加载模型失败，则抛出异常。
      */
-    void Load(const ::Mesh& mesh) {
-        set(::LoadModelFromMesh(mesh));
-        if (!IsValid()) {
-            throw RaylibException("Failed to load Model from Mesh");
+    void 加载(const ::Mesh& 网格) {
+        设(::LoadModelFromMesh(网格));
+        if (!是有效()) {
+            throw Raylib异常("未能从网格加载模型");
         }
     }
 protected:
-    void set(const ::Model& model) {
-        transform = model.transform;
+    void 设(const ::Model& 模型) {
+        transform = 模型.transform;
 
-        meshCount = model.meshCount;
-        materialCount = model.materialCount;
-        meshes = model.meshes;
-        materials = model.materials;
-        meshMaterial = model.meshMaterial;
+        meshCount = 模型.meshCount;
+        materialCount = 模型.materialCount;
+        meshes = 模型.meshes;
+        materials = 模型.materials;
+        meshMaterial = 模型.meshMaterial;
 
-        boneCount = model.boneCount;
-        bones = model.bones;
-        bindPose = model.bindPose;
+        boneCount = 模型.boneCount;
+        bones = 模型.bones;
+        bindPose = 模型.bindPose;
     }
 };
 
 } // namespace raylib
 
-using RModel = raylib::Model;
+using R模型 = raylib::模型;
 
 // #endif // RAYLIB_CPP_INCLUDE_MODEL_HPP_

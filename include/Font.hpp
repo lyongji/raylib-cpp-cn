@@ -172,7 +172,7 @@ public:
     void 加载(const std::string& 文件名) {
         设(::LoadFont(文件名.c_str()));
         if (!是就绪()) {
-            throw RaylibException("无法从文件加载字体：" + 文件名);
+            throw Raylib异常("无法从文件加载字体：" + 文件名);
         }
     }
 
@@ -191,14 +191,14 @@ public:
     void 加载(const std::string& 文件名, int 字体大小, int* 字体字符组, int 字符数量) {
         设(::LoadFontEx(文件名.c_str(), 字体大小, 字体字符组, 字符数量));
         if (!是就绪()) {
-            throw RaylibException("Failed to load Font with from file with font size: " + 文件名);
+            throw Raylib异常("Failed to load Font with from file with font size: " + 文件名);
         }
     }
 
     void 加载(const ::Image& 图像, ::Color 颜色键, int 首字符) {
         设(::LoadFontFromImage(图像, 颜色键, 首字符));
         if (!是就绪()) {
-            throw RaylibException("无法从图像加载字体");
+            throw Raylib异常("无法从图像加载字体");
         }
     }
 
@@ -211,7 +211,7 @@ public:
         int 字符数量) {
         设(::LoadFontFromMemory(文件类型.c_str(), 文件数据, 数据大小, 字体大小, 字体字符组, 字符数量));
         if (!是就绪()) {
-            throw RaylibException("无法使用文件数据加载:" + 文件类型 + " 字体");
+            throw Raylib异常("无法使用文件数据加载:" + 文件类型 + " 字体");
         }
     }
 

@@ -10,82 +10,75 @@ namespace raylib {
 /**
  * 射线类型（用于光线投射）
  */
-class Ray : public ::Ray {
+class 射线 : public ::Ray {
 public:
-    Ray(const ::Ray& ray) { set(ray); }
+    射线(const ::Ray& 射线) { 设(射线); }
 
-    Ray(::Vector3 position = {0.0f, 0.0f, 0.0f}, ::Vector3 direction = {0.0f, 0.0f, 0.0f})
-        : ::Ray{position, direction} {
+    射线(::Vector3 位置 = {0.0f, 0.0f, 0.0f}, ::Vector3 指向 = {0.0f, 0.0f, 0.0f}) : ::Ray{位置, 指向} {
         // 无操作
     }
 
-    Ray(::Vector2 mousePosition, const ::Camera& camera) { set(::GetMouseRay(mousePosition, camera)); }
+    射线(::Vector2 鼠标位置, const ::Camera& 相机) { 设(::GetMouseRay(鼠标位置, 相机)); }
 
-    Ray& operator=(const ::Ray& ray) {
-        set(ray);
+    射线& operator=(const ::Ray& 射线) {
+        设(射线);
         return *this;
     }
 
-    GETTERSETTER(::Vector3, Position, position)
-    GETTERSETTER(::Vector3, Direction, direction)
+    GETTERSETTER(::Vector3, 位置, position)
+    GETTERSETTER(::Vector3, 指向, direction)
 
     /**
      * 绘制射线
      */
-    void Draw(::Color color) const { DrawRay(*this, color); }
+    void Draw(::Color 颜色) const { DrawRay(*this, 颜色); }
 
     /**
      * 获取射线与球体的碰撞信息
      */
-    RayCollision GetCollision(::Vector3 center, float radius) const {
-        return ::GetRayCollisionSphere(*this, center, radius);
-    }
+    射线碰撞 取碰撞(::Vector3 中心, float 半径) const { return ::GetRayCollisionSphere(*this, 中心, 半径); }
 
     /**
      * 检测射线与包围盒的碰撞
      */
-    RayCollision GetCollision(const ::BoundingBox& box) const { return ::GetRayCollisionBox(*this, box); }
+    射线碰撞 取碰撞(const ::BoundingBox& 盒子) const { return ::GetRayCollisionBox(*this, 盒子); }
 
     /**
      * 获取射线与网格的碰撞信息
      */
-    RayCollision GetCollision(const ::Mesh& mesh, const ::Matrix& transform) const {
-        return ::GetRayCollisionMesh(*this, mesh, transform);
-    }
+    射线碰撞 取碰撞(const ::Mesh& 网格, const ::Matrix& 变换) const { return ::GetRayCollisionMesh(*this, 网格, 变换); }
 
     /**
      * 获取射线与三角形的碰撞信息
      */
-    RayCollision GetCollision(::Vector3 p1, ::Vector3 p2, ::Vector3 p3) const {
-        return ::GetRayCollisionTriangle(*this, p1, p2, p3);
+    射线碰撞 取碰撞(::Vector3 顶点1, ::Vector3 顶点2, ::Vector3 顶点3) const {
+        return ::GetRayCollisionTriangle(*this, 顶点1, 顶点2, 顶点3);
     }
 
     /**
      * 获取射线与四边形的碰撞信息
      */
-    RayCollision GetCollision(::Vector3 p1, ::Vector3 p2, ::Vector3 p3, ::Vector3 p4) const {
-        return ::GetRayCollisionQuad(*this, p1, p2, p3, p4);
+    射线碰撞 取碰撞(::Vector3 顶点1, ::Vector3 顶点2, ::Vector3 顶点3, ::Vector3 顶点4) const {
+        return ::GetRayCollisionQuad(*this, 顶点1, 顶点2, 顶点3, 顶点4);
     }
 
     /**
      * 从鼠标位置获取射线
      */
-    static Ray GetMouse(::Vector2 mousePosition, const ::Camera& camera) {
-        return ::GetMouseRay(mousePosition, camera);
-    }
+    static 射线 取鼠标射线(::Vector2 鼠标位置, const ::Camera& 相机) { return ::GetMouseRay(鼠标位置, 相机); }
 
     /**
      * 从鼠标位置获取射线
      */
-    static Ray GetMouse(const ::Camera& camera) { return ::GetMouseRay(::GetMousePosition(), camera); }
+    static 射线 取鼠标射线(const ::Camera& 相机) { return ::GetMouseRay(::GetMousePosition(), 相机); }
 protected:
-    void set(const ::Ray& ray) {
-        position = ray.position;
-        direction = ray.direction;
+    void 设(const ::Ray& 射线) {
+        position = 射线.position;
+        direction = 射线.direction;
     }
 };
 } // namespace raylib
 
-using RRay = raylib::Ray;
+using R射线 = raylib::射线;
 
 // #endif // RAYLIB_CPP_INCLUDE_RAY_HPP_
