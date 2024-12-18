@@ -17,22 +17,22 @@ namespace raylib {
  * boom.Play();
  * @endcode
  */
-class Sound : public ::Sound {
+class 音效 : public ::Sound {
 public:
-    Sound(const Sound&) = delete;
-    Sound& operator=(const Sound&) = delete;
+    音效(const 音效&) = delete;
+    音效& operator=(const 音效&) = delete;
 
-    Sound() {
+    音效() {
         stream = {nullptr, nullptr, 0, 0, 0};
         frameCount = 0;
     }
 
-    Sound(::AudioStream stream, unsigned int frameCount) : ::Sound{stream, frameCount} {
+    音效(::AudioStream 音频流, unsigned int 帧数) : ::Sound{音频流, 帧数} {
         // 无操作。
     }
 
-    Sound(Sound&& other) {
-        set(other);
+    音效(音效&& other) {
+        设(other);
 
         other.stream = {nullptr, nullptr, 0, 0, 0};
         other.frameCount = 0;
@@ -43,27 +43,27 @@ public:
      *
      * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
-    Sound(const std::string& fileName) { Load(fileName); }
+    音效(const std::string& 文件名) { 加载(文件名); }
 
     /**
      * 从给定的 Wave 加载声音。
      *
      * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
-    Sound(const ::Wave& wave) { Load(wave); }
+    音效(const ::Wave& 波) { 加载(波); }
 
-    ~Sound() { Unload(); }
+    ~音效() { 卸载(); }
 
-    GETTER(unsigned int, FrameCount, frameCount)
-    GETTER(::AudioStream, Stream, stream)
+    GETTER(unsigned int, 帧数, frameCount)
+    GETTER(::AudioStream, 音频流, stream)
 
-    Sound& operator=(Sound&& other) noexcept {
+    音效& operator=(音效&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
         other.frameCount = 0;
         other.stream = {nullptr, nullptr, 0, 0, 0};
 
@@ -73,23 +73,23 @@ public:
     /**
      * 使用新数据更新声音缓冲区
      */
-    Sound& Update(const void* data, int samplesCount) {
-        ::UpdateSound(*this, data, samplesCount);
+    音效& 更新(const void* 数据, int 采样数) {
+        ::UpdateSound(*this, 数据, 采样数);
         return *this;
     }
 
     /**
      * 使用新数据更新声音缓冲区，假设样本数相同。
      */
-    Sound& Update(const void* data) {
-        ::UpdateSound(*this, data, static_cast<int>(frameCount));
+    音效& 更新(const void* 数据) {
+        ::UpdateSound(*this, 数据, static_cast<int>(frameCount));
         return *this;
     }
 
     /**
      * 卸载声音
      */
-    void Unload() {
+    void 卸载() {
         // 防止多次调用 UnloadSound()。
         if (frameCount != 0) {
             ::UnloadSound(*this);
@@ -100,7 +100,7 @@ public:
     /**
      * 播放声音
      */
-    Sound& Play() {
+    音效& 播放() {
         ::PlaySound(*this);
         return *this;
     }
@@ -108,7 +108,7 @@ public:
     /**
      * 停止播放声音
      */
-    Sound& Stop() {
+    音效& 停止() {
         ::StopSound(*this);
         return *this;
     }
@@ -116,7 +116,7 @@ public:
     /**
      * 暂停声音
      */
-    Sound& Pause() {
+    音效& 暂停() {
         ::PauseSound(*this);
         return *this;
     }
@@ -124,7 +124,7 @@ public:
     /**
      * 恢复暂停的声音
      */
-    Sound& Resume() {
+    音效& 恢复() {
         ::ResumeSound(*this);
         return *this;
     }
@@ -132,29 +132,29 @@ public:
     /**
      * 检查声音是否正在播放
      */
-    bool IsPlaying() const { return ::IsSoundPlaying(*this); }
+    bool 是播放中() const { return ::IsSoundPlaying(*this); }
 
     /**
      * 设置声音的音量（1.0 是最大音量）
      */
-    Sound& SetVolume(float volume) {
-        ::SetSoundVolume(*this, volume);
+    音效& 设音量(float 音量) {
+        ::SetSoundVolume(*this, 音量);
         return *this;
     }
 
     /**
      * 设置声音的音调（1.0 是基准音调）
      */
-    Sound& SetPitch(float pitch) {
-        ::SetSoundPitch(*this, pitch);
+    音效& 设音调(float 音调) {
+        ::SetSoundPitch(*this, 音调);
         return *this;
     }
 
     /**
      * 设置声音的声相（0.5 是中心）
      */
-    Sound& SetPan(float pan = 0.5f) {
-        ::SetSoundPan(*this, pan);
+    音效& 设声相(float 声相 = 0.5f) {
+        ::SetSoundPan(*this, 声相);
         return *this;
     }
 
@@ -163,10 +163,10 @@ public:
      *
      * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
-    void Load(const std::string& fileName) {
-        set(::LoadSound(fileName.c_str()));
-        if (!IsValid()) {
-            throw RaylibException("从文件加载声音失败");
+    void 加载(const std::string& 文件名) {
+        设(::LoadSound(文件名.c_str()));
+        if (!是有效()) {
+            throw Raylib异常("从文件加载声音失败");
         }
     }
 
@@ -175,10 +175,10 @@ public:
      *
      * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
-    void Load(const ::Wave& wave) {
-        set(::LoadSoundFromWave(wave));
-        if (!IsValid()) {
-            throw RaylibException("加载 Wave 失败");
+    void 加载(const ::Wave& wave) {
+        设(::LoadSoundFromWave(wave));
+        if (!是有效()) {
+            throw Raylib异常("加载 Wave 失败");
         }
     }
 
@@ -187,15 +187,15 @@ public:
      *
      * @return 根据声音缓冲区是否已加载返回 true 或 false。
      */
-    bool IsValid() const { return ::IsSoundValid(*this); }
+    bool 是有效() const { return ::IsSoundValid(*this); }
 protected:
-    void set(const ::Sound& sound) {
-        frameCount = sound.frameCount;
-        stream = sound.stream;
+    void 设(const ::Sound& 音效) {
+        frameCount = 音效.frameCount;
+        stream = 音效.stream;
     }
 };
 } // namespace raylib
 
-using RSound = raylib::Sound;
+using R音效 = raylib::音效;
 
 // #endif // RAYLIB_CPP_INCLUDE_SOUND_HPP_

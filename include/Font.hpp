@@ -127,7 +127,7 @@ public:
     /**
      * 获取包含字形的纹理图集
      */
-    TextureUnmanaged 取纹理() { return texture; }
+    非托管纹理 取纹理() { return texture; }
 
     /**
      * 设置包含字形的纹理图集

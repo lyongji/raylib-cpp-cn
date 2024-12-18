@@ -13,28 +13,28 @@ namespace raylib {
 /**
  * Shader 类型（通用）
  */
-class Shader : public ShaderUnmanaged {
+class 着色器 : public 非托管着色器 {
 public:
-    using ShaderUnmanaged::ShaderUnmanaged;
+    using 非托管着色器::非托管着色器;
 
-    Shader(const Shader&) = delete;
+    着色器(const 着色器&) = delete;
 
-    Shader(Shader&& other) {
-        set(other);
+    着色器(着色器&& other) {
+        设(other);
 
         other.id = 0;
         other.locs = nullptr;
     }
 
-    Shader& operator=(const Shader&) = delete;
+    着色器& operator=(const 着色器&) = delete;
 
-    Shader& operator=(Shader&& other) noexcept {
+    着色器& operator=(着色器&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.id = 0;
         other.locs = nullptr;
@@ -45,12 +45,12 @@ public:
     /**
      * 从 GPU 内存（VRAM）中卸载着色器
      */
-    ~Shader() { Unload(); }
+    ~着色器() { 卸载(); }
 
     /**
      * 从 GPU 内存（VRAM）中卸载着色器
      */
-    void Unload() {
+    void 卸载() {
         if (locs != nullptr) {
             ::UnloadShader(*this);
         }
@@ -58,6 +58,6 @@ public:
 };
 } // namespace raylib
 
-using RShader = raylib::Shader;
+using R着色器 = raylib::着色器;
 
 // #endif // RAYLIB_CPP_INCLUDE_SHADER_HPP_

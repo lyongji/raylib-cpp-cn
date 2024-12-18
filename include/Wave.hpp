@@ -174,7 +174,7 @@ public:
     void Load(const std::string& fileName) {
         set(::LoadWave(fileName.c_str()));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Wave from file: " + fileName);
+            throw Raylib异常("Failed to load Wave from file: " + fileName);
         }
     }
 
@@ -186,7 +186,7 @@ public:
     void Load(const std::string& fileType, const unsigned char* fileData, int dataSize) {
         set(::LoadWaveFromMemory(fileType.c_str(), fileData, dataSize));
         if (!IsValid()) {
-            throw RaylibException("Failed to load Wave from file data of type: " + fileType);
+            throw Raylib异常("Failed to load Wave from file data of type: " + fileType);
         }
     }
 

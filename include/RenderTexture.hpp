@@ -11,27 +11,26 @@ namespace raylib {
 /**
  * RenderTexture 类型，用于纹理渲染
  */
-class RenderTexture : public ::RenderTexture {
+class 渲染纹理 : public ::RenderTexture {
 public:
     /**
      * 默认构造函数，用于构建一个空的 RenderTexture。
      */
-    RenderTexture() { id = 0; }
+    渲染纹理() { id = 0; }
 
-    RenderTexture(const ::RenderTexture& renderTexture) { set(renderTexture); }
+    渲染纹理(const ::RenderTexture& 渲染纹理) { 设(渲染纹理); }
 
-    RenderTexture(unsigned int id, const ::Texture& texture, const ::Texture& depth)
-        : ::RenderTexture{id, texture, depth} {}
+    渲染纹理(unsigned int id, const ::Texture& 纹理, const ::Texture& 深度) : ::RenderTexture{id, 纹理, 深度} {}
 
     /**
      * 加载用于渲染的纹理（帧缓冲区）
      */
-    RenderTexture(int width, int height) { set(::LoadRenderTexture(width, height)); }
+    渲染纹理(int 宽, int 高) { 设(::LoadRenderTexture(宽, 高)); }
 
-    RenderTexture(const RenderTexture&) = delete;
+    渲染纹理(const 渲染纹理&) = delete;
 
-    RenderTexture(RenderTexture&& other) {
-        set(other);
+    渲染纹理(渲染纹理&& other) {
+        设(other);
 
         other.id = 0;
         other.texture = {};
@@ -43,31 +42,31 @@ public:
     /**
      * 获取颜色缓冲区附件纹理。
      */
-    TextureUnmanaged GetTexture() { return texture; }
+    R非托管纹理 取纹理() { return texture; }
 
-    void SetTexture(const ::Texture& newTexture) { texture = newTexture; }
+    void 设纹理(const ::Texture& 新纹理) { texture = 新纹理; }
 
     /**
      * 深度缓冲区附件纹理
      */
-    TextureUnmanaged GetDepth() { return depth; }
+    R非托管纹理 取深度() { return depth; }
 
-    void SetDepth(const ::Texture& newDepth) { depth = newDepth; }
+    void 设深度(const ::Texture& 新深度) { depth = 新深度; }
 
-    RenderTexture& operator=(const ::RenderTexture& texture) {
-        set(texture);
+    渲染纹理& operator=(const ::RenderTexture& 纹理) {
+        设(纹理);
         return *this;
     }
 
-    RenderTexture& operator=(const RenderTexture&) = delete;
+    渲染纹理& operator=(const 渲染纹理&) = delete;
 
-    RenderTexture& operator=(RenderTexture&& other) noexcept {
+    渲染纹理& operator=(渲染纹理&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.id = 0;
         other.texture = {};
@@ -76,15 +75,15 @@ public:
         return *this;
     }
 
-    ~RenderTexture() { Unload(); }
+    ~渲染纹理() { 卸载(); }
 
     /// 卸载渲染纹理
-    void Unload() { UnloadRenderTexture(*this); }
+    void 卸载() { UnloadRenderTexture(*this); }
 
     /**
      * 初始化渲染纹理以进行绘制
      */
-    RenderTexture& BeginMode() {
+    渲染纹理& 开始() {
         ::BeginTextureMode(*this);
         return *this;
     }
@@ -92,7 +91,7 @@ public:
     /**
      * 结束绘制到渲染纹理
      */
-    RenderTexture& EndMode() {
+    渲染纹理& 结束() {
         ::EndTextureMode();
         return *this;
     }
@@ -100,25 +99,25 @@ public:
     /**
      * 加载用于渲染的纹理（帧缓冲区）
      */
-    static RenderTexture Load(int width, int height) { return ::LoadRenderTexture(width, height); }
+    static 渲染纹理 加载(int 宽, int 高) { return ::LoadRenderTexture(宽, 高); }
 
     /**
      * 检索渲染纹理是否准备就绪。
      */
-    bool IsValid() const { return ::IsRenderTextureValid(*this); }
+    bool 是有效() const { return ::IsRenderTextureValid(*this); }
 protected:
-    void set(const ::RenderTexture& renderTexture) {
-        id = renderTexture.id;
-        texture = renderTexture.texture;
-        depth = renderTexture.depth;
+    void 设(const ::RenderTexture& 渲染纹理) {
+        id = 渲染纹理.id;
+        texture = 渲染纹理.texture;
+        depth = 渲染纹理.depth;
     }
 };
 
-using RenderTexture2D = RenderTexture;
+using 渲染纹理2D = 渲染纹理;
 
 } // namespace raylib
 
-using RRenderTexture = raylib::RenderTexture;
-using RRenderTexture2D = raylib::RenderTexture2D;
+using R渲染纹理 = raylib::渲染纹理;
+using R渲染纹理2D = raylib::渲染纹理2D;
 
 // #endif // RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_

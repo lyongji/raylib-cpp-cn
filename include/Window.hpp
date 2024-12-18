@@ -64,7 +64,7 @@ public:
         }
         ::InitWindow(width, height, title.c_str());
         if (!::IsWindowReady()) {
-            throw RaylibException("Failed to create Window");
+            throw Raylib异常("Failed to create Window");
         }
     }
 

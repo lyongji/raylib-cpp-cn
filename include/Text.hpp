@@ -12,32 +12,32 @@ namespace raylib {
 /**
  * 文本函数。
  */
-class Text {
+class 文本 {
 public:
     /**
      * 内部文本。
      */
-    std::string text;
+    std::string 全文;
 
     /**
      * 文本的大小。
      */
-    float fontSize;
+    float 字体大小;
 
     /**
      * 文本的颜色。
      */
-    ::Color color;
+    ::Color 颜色;
 
     /**
      * 用于文本的内部 raylib 字体。
      */
-    ::Font font;
+    ::Font 字体;
 
     /**
      * 文本的字符间距。
      */
-    float spacing;
+    float 间距;
 
     /**
      * 初始化一个新的 Text 对象。
@@ -48,17 +48,17 @@ public:
      * @param font 初始化的字体。
      * @param spacing 文本的间距。
      */
-    Text(
-        const std::string& text = "",
-        float fontSize = 10,
-        const ::Color& color = WHITE,
-        const ::Font& font = ::GetFontDefault(),
-        float spacing = 0)
-        : text(text)
-        , fontSize(fontSize)
-        , color(color)
-        , font(font)
-        , spacing(spacing) {
+    文本(
+        const std::string& 正文 = "",
+        float 字体大小 = 10,
+        const ::Color& 颜色 = WHITE,
+        const ::Font& 字体 = ::GetFontDefault(),
+        float 间距 = 0)
+        : 全文(正文)
+        , 字体大小(字体大小)
+        , 颜色(颜色)
+        , 字体(字体)
+        , 间距(间距) {
         // 无操作。
     }
 
@@ -71,42 +71,36 @@ public:
      * @param spacing 文本的间距。
      * @param color 字体的颜色。
      */
-    Text(
-        const ::Font& font,
-        const std::string& text = "",
-        float fontSize = 10,
-        float spacing = 0,
-        const ::Color& color = WHITE)
-        : text(text)
-        , fontSize(fontSize)
-        , color(color)
-        , font(font)
-        , spacing(spacing) {
+    文本(
+        const ::Font& 字体,
+        const std::string& 正文 = "",
+        float 字体大小 = 10,
+        float 间距 = 0,
+        const ::Color& 颜色 = WHITE)
+        : 全文(正文)
+        , 字体大小(字体大小)
+        , 颜色(颜色)
+        , 字体(字体)
+        , 间距(间距) {
         // 无操作。
     }
 
-    GETTERSETTER(std::string, Text, text)
-    GETTERSETTER(float, FontSize, fontSize)
-    GETTERSETTER(::Font, Font, font)
-    GETTERSETTER(::Color, Color, color)
-    GETTERSETTER(float, Spacing, spacing)
+    GETTERSETTER(std::string, 全文, 全文)
+    GETTERSETTER(float, 字体大小, 字体大小)
+    GETTERSETTER(::Font, 字体, 字体)
+    GETTERSETTER(::Color, 颜色, 颜色)
+    GETTERSETTER(float, 间距, 间距)
 
     /**
      * 使用类中的值绘制文本。
      */
-    void Draw(const ::Vector2& position) const { ::DrawTextEx(font, text.c_str(), position, fontSize, spacing, color); }
+    void 绘制(const ::Vector2& 位置) const { ::DrawTextEx(字体, 全文.c_str(), 位置, 字体大小, 间距, 颜色); }
 
     /**
      * 使用类中的值绘制文本。
      */
-    void Draw(int posX, int posY) const {
-        ::DrawTextEx(
-            font,
-            text.c_str(),
-            {static_cast<float>(posX), static_cast<float>(posY)},
-            fontSize,
-            spacing,
-            color);
+    void 绘制(int 位置X, int 位置Y) const {
+        ::DrawTextEx(字体, 全文.c_str(), {static_cast<float>(位置X), static_cast<float>(位置Y)}, 字体大小, 间距, 颜色);
     }
 
     /**
@@ -114,30 +108,30 @@ public:
      *
      * @see DrawTextPro()
      */
-    void Draw(const ::Vector2& position, float rotation, const ::Vector2& origin = {0, 0}) const {
-        ::DrawTextPro(font, text.c_str(), position, origin, rotation, fontSize, spacing, color);
+    void 绘制(const ::Vector2& 位置, float 旋转, const ::Vector2& 原点 = {0, 0}) const {
+        ::DrawTextPro(字体, 全文.c_str(), 位置, 原点, 旋转, 字体大小, 间距, 颜色);
     }
 
     /**
      * 测量默认字体字符串的宽度。
      */
-    int Measure() const { return ::MeasureText(text.c_str(), static_cast<int>(fontSize)); }
+    int 测量() const { return ::MeasureText(全文.c_str(), static_cast<int>(字体大小)); }
 
     /**
      * 测量 Font 字符串的大小。
      */
-    Vector2 MeasureEx() const { return ::MeasureTextEx(font, text.c_str(), fontSize, spacing); }
+    Vector2 测量扩展() const { return ::MeasureTextEx(字体, 全文.c_str(), 字体大小, 间距); }
 
-    Text& operator=(const Text& other) {
+    文本& operator=(const 文本& other) {
         if (this == &other) {
             return *this;
         }
 
-        text = other.text;
-        fontSize = other.fontSize;
-        color = other.color;
-        font = other.font;
-        spacing = other.spacing;
+        全文 = other.全文;
+        字体大小 = other.字体大小;
+        颜色 = other.颜色;
+        字体 = other.字体;
+        间距 = other.间距;
 
         return *this;
     }
@@ -148,8 +142,8 @@ public:
      * @see ::DrawText
      */
     static void
-    Draw(const std::string& text, const int posX, const int posY, const int fontSize, const ::Color& color) {
-        ::DrawText(text.c_str(), posX, posY, fontSize, color);
+    绘制(const std::string& 正文, const int 位置X, const int 位置Y, const int 字体大小, const ::Color& 颜色) {
+        ::DrawText(正文.c_str(), 位置X, 位置Y, 字体大小, 颜色);
     }
 
     /**
@@ -157,8 +151,8 @@ public:
      *
      * @see ::DrawText
      */
-    static void Draw(const std::string& text, const ::Vector2& pos, const int fontSize, const ::Color& color) {
-        ::DrawText(text.c_str(), static_cast<int>(pos.x), static_cast<int>(pos.y), fontSize, color);
+    static void 绘制(const std::string& 正文, const ::Vector2& 位置, const int 字体大小, const ::Color& 颜色) {
+        ::DrawText(正文.c_str(), static_cast<int>(位置.x), static_cast<int>(位置.y), 字体大小, 颜色);
     }
 
     /**
@@ -166,14 +160,14 @@ public:
      *
      * @see ::DrawTextEx
      */
-    static void Draw(
-        const ::Font& font,
-        const std::string& text,
-        const ::Vector2& position,
-        const float fontSize,
-        const float spacing,
-        const ::Color& color) {
-        ::DrawTextEx(font, text.c_str(), position, fontSize, spacing, color);
+    static void 绘制(
+        const ::Font& 字体,
+        const std::string& 正文,
+        const ::Vector2& 位置,
+        const float 字体大小,
+        const float 间距,
+        const ::Color& 颜色) {
+        ::DrawTextEx(字体, 正文.c_str(), 位置, 字体大小, 间距, 颜色);
     }
 
     /**
@@ -181,20 +175,20 @@ public:
      *
      * @see ::DrawTextPro
      */
-    static void Draw(
-        const ::Font& font,
-        const std::string& text,
-        const ::Vector2& position,
-        const ::Vector2& origin,
-        const float rotation,
-        const float fontSize,
-        const float spacing,
-        const ::Color& color) {
-        ::DrawTextPro(font, text.c_str(), position, origin, rotation, fontSize, spacing, color);
+    static void 绘制(
+        const ::Font& 字体,
+        const std::string& 正文,
+        const ::Vector2& 位置,
+        const ::Vector2& 原点,
+        const float 旋转,
+        const float 字体大小,
+        const float 间距,
+        const ::Color& 颜色) {
+        ::DrawTextPro(字体, 正文.c_str(), 位置, 原点, 旋转, 字体大小, 间距, 颜色);
     }
 };
 } // namespace raylib
 
-using RText = raylib::Text;
+using R文本 = raylib::文本;
 
 // #endif // RAYLIB_CPP_INCLUDE_TEXT_HPP_

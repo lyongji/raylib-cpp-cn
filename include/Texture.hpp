@@ -12,25 +12,25 @@ namespace raylib {
  *
  * @see raylib::TextureUnmanaged
  */
-class Texture : public TextureUnmanaged {
+class 纹理 : public 非托管纹理 {
 public:
-    using TextureUnmanaged::TextureUnmanaged;
+    using 非托管纹理::非托管纹理;
 
     /**
      * 显式禁止拷贝构造函数。
      */
-    Texture(const Texture&) = delete;
+    纹理(const 纹理&) = delete;
 
     /**
      * 显式禁止拷贝赋值。
      */
-    Texture& operator=(const Texture&) = delete;
+    纹理& operator=(const 纹理&) = delete;
 
     /**
      * 移动构造函数。
      */
-    Texture(Texture&& other) {
-        set(other);
+    纹理(纹理&& other) {
+        设(other);
 
         other.id = 0;
         other.width = 0;
@@ -42,18 +42,18 @@ public:
     /**
      * 在销毁时卸载纹理。
      */
-    ~Texture() { Unload(); }
+    ~纹理() { 卸载(); }
 
     /**
      * 移动赋值。
      */
-    Texture& operator=(Texture&& other) noexcept {
+    纹理& operator=(纹理&& other) noexcept {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.id = 0;
         other.width = 0;
@@ -66,13 +66,13 @@ public:
 };
 
 // 创建 Texture 的别名。
-using Texture2D = Texture;
-using TextureCubemap = Texture;
+using 纹理2D = 纹理;
+using 立方体贴图 = 纹理;
 
 } // namespace raylib
 
-using RTexture = raylib::Texture;
-using RTexture2D = raylib::Texture2D;
-using RTextureCubemap = raylib::TextureCubemap;
+using R纹理 = raylib::纹理;
+using R纹理2D = raylib::纹理2D;
+using R立方体贴图 = raylib::立方体贴图;
 
 // #endif // RAYLIB_CPP_INCLUDE_TEXTURE_HPP_

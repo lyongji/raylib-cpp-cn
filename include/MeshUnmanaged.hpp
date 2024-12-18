@@ -181,7 +181,7 @@ public:
      */
     void 导出(const std::string& fileName) {
         if (!::ExportMesh(*this, fileName.c_str())) {
-            throw RaylibException("Failed to export the Mesh");
+            throw Raylib异常("Failed to export the Mesh");
         }
     }
 
@@ -192,7 +192,7 @@ public:
      */
     void 导出为代码(const std::string& fileName) {
         if (!::ExportMeshAsCode(*this, fileName.c_str())) {
-            throw RaylibException("Failed to export the Mesh");
+            throw Raylib异常("Failed to export the Mesh");
         }
     }
 
