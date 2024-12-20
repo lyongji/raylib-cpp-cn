@@ -12,17 +12,17 @@ namespace raylib {
 /**
  * Wave 类型，定义音频波形数据
  */
-class Wave : public ::Wave {
+class 波形 : public ::Wave {
 public:
-    Wave(const ::Wave& wave) { set(wave); }
+    波形(const ::Wave& 波形数据) { 设(波形数据); }
 
-    Wave(
-        unsigned int frameCount = 0,
-        unsigned int sampleRate = 0,
-        unsigned int sampleSize = 0,
-        unsigned int channels = 0,
-        void* data = nullptr)
-        : ::Wave{frameCount, sampleRate, sampleSize, channels, data} {
+    波形(
+        unsigned int 帧数 = 0,
+        unsigned int 采样率 = 0,
+        unsigned int 采样大小 = 0,
+        unsigned int 声道数 = 0,
+        void* 数据 = nullptr)
+        : ::Wave{帧数, 采样率, 采样大小, 声道数, 数据} {
         // 无操作
     }
 
@@ -31,21 +31,21 @@ public:
      *
      * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
-    Wave(const std::string& fileName) { Load(fileName); }
+    波形(const std::string& 文件名) { 加载(文件名); }
 
     /**
      * 从内存缓冲区加载波形数据，fileType 指文件扩展名，例如 "wav"
      *
      * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
-    Wave(const std::string& fileType, const unsigned char* fileData, int dataSize) {
-        Load(fileType, fileData, dataSize);
+    波形(const std::string& 文件类型, const unsigned char* 文件数据, int 数据大小) {
+        加载(文件类型, 文件数据, 数据大小);
     }
 
-    Wave(const Wave& other) { set(other.Copy()); }
+    波形(const 波形& other) { 设(other.复制()); }
 
-    Wave(Wave&& other) {
-        set(other);
+    波形(波形&& other) {
+        设(other);
 
         other.frameCount = 0;
         other.sampleRate = 0;
@@ -57,37 +57,37 @@ public:
     /**
      * 卸载波形数据
      */
-    ~Wave() { Unload(); }
+    ~波形() { 卸载(); }
 
-    GETTER(unsigned int, FrameCount, frameCount)
-    GETTER(unsigned int, SampleRate, sampleRate)
-    GETTER(unsigned int, SampleSize, sampleSize)
-    GETTER(unsigned int, Channels, channels)
-    GETTER(void*, Data, data)
+    GETTER(unsigned int, 帧数, frameCount)
+    GETTER(unsigned int, 采样率, sampleRate)
+    GETTER(unsigned int, 采样大小, sampleSize)
+    GETTER(unsigned int, 声道数, channels)
+    GETTER(void*, 数据, data)
 
-    Wave& operator=(const ::Wave& wave) {
-        set(wave);
+    波形& operator=(const ::Wave& 波形) {
+        设(波形);
         return *this;
     }
 
-    Wave& operator=(const Wave& other) {
+    波形& operator=(const 波形& other) {
         if (this == &other) {
             return *this;
         }
 
-        Unload();
-        set(other.Copy());
+        卸载();
+        设(other.复制());
 
         return *this;
     }
 
-    Wave& operator=(Wave&& other) noexcept {
+    波形& operator=(波形&& other) noexcept {
         if (this != &other) {
             return *this;
         }
 
-        Unload();
-        set(other);
+        卸载();
+        设(other);
 
         other.frameCount = 0;
         other.sampleRate = 0;
@@ -101,54 +101,54 @@ public:
     /**
      * 复制波形数据到新的波形
      */
-    ::Wave Copy() const { return ::WaveCopy(*this); }
+    ::Wave 复制() const { return ::WaveCopy(*this); }
 
     /**
      * 裁剪波形数据到定义的样本范围
      */
-    Wave& Crop(int initSample, int finalSample) {
-        ::WaveCrop(this, initSample, finalSample);
+    波形& 裁剪(int 初始采样, int 最终采样) {
+        ::WaveCrop(this, 初始采样, 最终采样);
         return *this;
     }
 
     /**
      * 将波形数据转换为所需格式
      */
-    Wave& Format(int SampleRate, int SampleSize, int Channels = 2) {
-        ::WaveFormat(this, SampleRate, SampleSize, Channels);
+    波形& 格式化(int 采样率, int 采样大小, int 声道数 = 2) {
+        ::WaveFormat(this, 采样率, 采样大小, 声道数);
         return *this;
     }
 
     /**
      * 从波形加载样本数据为浮点数数组
      */
-    float* LoadSamples() { return ::LoadWaveSamples(*this); }
+    float* 加载样本数据() { return ::LoadWaveSamples(*this); }
 
     /**
      * 卸载通过 LoadWaveSamples() 加载的样本数据
      */
-    static void UnloadSamples(float* samples) { ::UnloadWaveSamples(samples); }
+    static void 卸载样本数据(float* 采样数据) { ::UnloadWaveSamples(采样数据); }
 
     /**
      * 将波形数据导出到文件，成功返回 true
      */
-    bool Export(const std::string& fileName) {
+    bool 导出(const std::string& 文件名) {
         // TODO(RobLoach): 错误时抛出异常
-        return ::ExportWave(*this, fileName.c_str());
+        return ::ExportWave(*this, 文件名.c_str());
     }
 
     /**
      * 将波形样本数据导出为代码 (.h)，成功返回 true
      */
-    bool ExportAsCode(const std::string& fileName) {
+    bool 导出为代码(const std::string& 文件名) {
         // TODO(RobLoach): 错误时抛出异常
-        return ::ExportWaveAsCode(*this, fileName.c_str());
+        return ::ExportWaveAsCode(*this, 文件名.c_str());
     }
 
     /**
      * 卸载波形数据
      */
-    void Unload() {
+    void 卸载() {
         // 防止多次调用 UnloadWave()
         if (data != nullptr) {
             ::UnloadWave(*this);
@@ -159,22 +159,22 @@ public:
     /**
      * 从波形数据加载声音
      */
-    ::Sound LoadSound() { return ::LoadSoundFromWave(*this); }
+    ::Sound 加载音效() { return ::LoadSoundFromWave(*this); }
 
     /**
      * 从波形数据加载声音
      */
-    operator ::Sound() { return LoadSound(); }
+    operator ::Sound() { return 加载音效(); }
 
     /**
      * 从文件加载波形数据
      *
      * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
-    void Load(const std::string& fileName) {
-        set(::LoadWave(fileName.c_str()));
-        if (!IsValid()) {
-            throw Raylib异常("Failed to load Wave from file: " + fileName);
+    void 加载(const std::string& 文件名) {
+        设(::LoadWave(文件名.c_str()));
+        if (!是有效()) {
+            throw Raylib异常("无法从文件中加载: " + 文件名);
         }
     }
 
@@ -183,10 +183,10 @@ public:
      *
      * @throws raylib::RaylibException 如果加载 Wave 失败则抛出异常
      */
-    void Load(const std::string& fileType, const unsigned char* fileData, int dataSize) {
-        set(::LoadWaveFromMemory(fileType.c_str(), fileData, dataSize));
-        if (!IsValid()) {
-            throw Raylib异常("Failed to load Wave from file data of type: " + fileType);
+    void 加载(const std::string& 文件类型, const unsigned char* 文件数据, int 文件大小) {
+        设(::LoadWaveFromMemory(文件类型.c_str(), 文件数据, 文件大小));
+        if (!是有效()) {
+            throw Raylib异常("无法从文件数据加载波形，文件类型为:" + 文件类型);
         }
     }
 
@@ -195,9 +195,9 @@ public:
      *
      * @return 波形数据是否已加载的布尔值
      */
-    bool IsValid() const { return ::IsWaveValid(*this); }
+    bool 是有效() const { return ::IsWaveValid(*this); }
 protected:
-    void set(const ::Wave& wave) {
+    void 设(const ::Wave& wave) {
         frameCount = wave.frameCount;
         sampleRate = wave.sampleRate;
         sampleSize = wave.sampleSize;
@@ -208,6 +208,7 @@ protected:
 
 } // namespace raylib
 
-using RWave = raylib::Wave;
+using RWave = raylib::波形;
+using R波形 = raylib::波形;
 
 // #endif // RAYLIB_CPP_INCLUDE_WAVE_HPP_

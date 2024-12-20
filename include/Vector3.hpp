@@ -23,16 +23,16 @@ public:
     Vector3(float x, float y, float z) : ::Vector3{x, y, z} {}
     Vector3(float x, float y) : ::Vector3{x, y, 0} {}
     Vector3(float x) : ::Vector3{x, 0, 0} {}
-    Vector3() {}
+    Vector3() : ::Vector3{0, 0, 0} {};
 
-    Vector3(::Color color) { set(ColorToHSV(color)); }
+    Vector3(::Color color) { 设(ColorToHSV(color)); }
 
     GETTERSETTER(float, X, x)
     GETTERSETTER(float, Y, y)
     GETTERSETTER(float, Z, z)
 
     Vector3& operator=(const ::Vector3& vector3) {
-        set(vector3);
+        设(vector3);
         return *this;
     }
 
@@ -56,7 +56,7 @@ public:
     Vector3 operator+(const ::Vector3& vector3) const { return Vector3Add(*this, vector3); }
 
     Vector3& operator+=(const ::Vector3& vector3) {
-        set(Vector3Add(*this, vector3));
+        设(Vector3Add(*this, vector3));
 
         return *this;
     }
@@ -72,7 +72,7 @@ public:
     Vector3 operator-(const ::Vector3& vector3) const { return Vector3Subtract(*this, vector3); }
 
     Vector3& operator-=(const ::Vector3& vector3) {
-        set(Vector3Subtract(*this, vector3));
+        设(Vector3Subtract(*this, vector3));
 
         return *this;
     }
@@ -101,7 +101,7 @@ public:
      * 向量相乘
      */
     Vector3& operator*=(const ::Vector3& vector3) {
-        set(Vector3Multiply(*this, vector3));
+        设(Vector3Multiply(*this, vector3));
 
         return *this;
     }
@@ -120,7 +120,7 @@ public:
      * 向量与标量相乘
      */
     Vector3& operator*=(const float scaler) {
-        set(Vector3Scale(*this, scaler));
+        设(Vector3Scale(*this, scaler));
 
         return *this;
     }
@@ -170,130 +170,122 @@ public:
     /**
      * 计算向量的长度
      */
-    float Length() const { return Vector3Length(*this); }
+    float 长度() const { return Vector3Length(*this); }
 
     /**
      * 计算向量的平方长度
      */
-    float LengthSqr() const { return Vector3LengthSqr(*this); }
+    float 长度的平方() const { return Vector3LengthSqr(*this); }
 
     /// 将向量归一化
-    Vector3 Normalize() const { return Vector3Normalize(*this); }
+    Vector3 归一化() const { return Vector3Normalize(*this); }
 
     /// 计算两个向量的点积
-    float DotProduct(const ::Vector3& vector3) const { return Vector3DotProduct(*this, vector3); }
+    float 点积(const ::Vector3& vector3) const { return Vector3DotProduct(*this, vector3); }
 
     /// 计算两个向量之间的距离
-    float Distance(const ::Vector3& vector3) const { return Vector3Distance(*this, vector3); }
+    float 距离(const ::Vector3& vector3) const { return Vector3Distance(*this, vector3); }
 
     /// 计算两个向量之间的线性插值
-    Vector3 Lerp(const ::Vector3& vector3, const float amount) const { return Vector3Lerp(*this, vector3, amount); }
+    Vector3 线性插值(const ::Vector3& vector3, const float 数量) const { return Vector3Lerp(*this, vector3, 数量); }
 
     /// 计算两个向量的叉积
-    Vector3 CrossProduct(const ::Vector3& vector3) const { return Vector3CrossProduct(*this, vector3); }
+    Vector3 叉积(const ::Vector3& vector3) const { return Vector3CrossProduct(*this, vector3); }
 
     /// 计算向量的垂直向量
-    Vector3 Perpendicular() const { return Vector3Perpendicular(*this); }
+    Vector3 垂直向量() const { return Vector3Perpendicular(*this); }
 
     /// 计算向量的投影
-    Vector3 Project(const ::Vector3& vector3) const { return Vector3Project(*this, vector3); }
+    Vector3 投影(const ::Vector3& vector3) const { return Vector3Project(*this, vector3); }
 
-    /// 计算向量的拒绝
-    Vector3 Reject(const ::Vector3& vector3) const { return Vector3Reject(*this, vector3); }
+    /// 计算向量的拒识Reject
+    Vector3 拒识(const ::Vector3& vector3) const { return Vector3Reject(*this, vector3); }
 
     /// 对向量进行正交归一化
-    void OrthoNormalize(::Vector3* vector3) { Vector3OrthoNormalize(this, vector3); }
+    void 正交归一化(::Vector3* vector3) { Vector3OrthoNormalize(this, vector3); }
 
     /// 将向量进行矩阵变换
-    Vector3 Transform(const ::Matrix& matrix) const { return Vector3Transform(*this, matrix); }
+    Vector3 变换(const ::Matrix& 矩阵) const { return Vector3Transform(*this, 矩阵); }
 
     /// 将向量进行四元数旋转
-    Vector3 RotateByQuaternion(const ::Quaternion& quaternion) const {
-        return Vector3RotateByQuaternion(*this, quaternion);
-    }
+    Vector3 四元数旋转(const ::Quaternion& 四元数) const { return Vector3RotateByQuaternion(*this, 四元数); }
 
     /// 计算向量的反射
-    Vector3 Reflect(const ::Vector3& normal) const { return Vector3Reflect(*this, normal); }
+    Vector3 反射(const ::Vector3& 法线) const { return Vector3Reflect(*this, 法线); }
 
     /// 计算两个向量之间的最小值
-    Vector3 Min(const ::Vector3& vector3) const { return Vector3Min(*this, vector3); }
+    Vector3 最小值(const ::Vector3& vector3) const { return Vector3Min(*this, vector3); }
 
     /// 计算两个向量之间的最大值
-    Vector3 Max(const ::Vector3& vector3) const { return Vector3Max(*this, vector3); }
+    Vector3 最大值(const ::Vector3& vector3) const { return Vector3Max(*this, vector3); }
 
     /// 计算三个向量之间的重心
-    Vector3 Barycenter(const ::Vector3& a, const ::Vector3& b, const ::Vector3& c) const {
+    Vector3 重心(const ::Vector3& a, const ::Vector3& b, const ::Vector3& c) const {
         return Vector3Barycenter(*this, a, b, c);
     }
 
     /// 返回零向量
-    static Vector3 Zero() { return Vector3Zero(); }
+    static Vector3 归零() { return Vector3Zero(); }
 
     /// 返回单位向量
-    static Vector3 One() { return Vector3One(); }
+    static Vector3 归一() { return Vector3One(); }
 #endif
 
     /// 绘制三维线段
-    void DrawLine3D(const ::Vector3& endPos, ::Color color) const { ::DrawLine3D(*this, endPos, color); }
+    void 绘制三维线段(const ::Vector3& 终点, ::Color 颜色) const { ::DrawLine3D(*this, 终点, 颜色); }
 
     /// 绘制三维点
-    void DrawPoint3D(::Color color) const { ::DrawPoint3D(*this, color); }
+    void 绘制三维点(::Color 颜色) const { ::DrawPoint3D(*this, 颜色); }
 
     /// 绘制三维圆
-    void DrawCircle3D(float radius, const ::Vector3& rotationAxis, float rotationAngle, Color color) const {
-        ::DrawCircle3D(*this, radius, rotationAxis, rotationAngle, color);
+    void 绘制三维圆(float 半径, const ::Vector3& 旋转轴, float 旋转角度, Color 颜色) const {
+        ::DrawCircle3D(*this, 半径, 旋转轴, 旋转角度, 颜色);
     }
 
     /// 绘制三维立方体
-    void DrawCube(float width, float height, float length, ::Color color) const {
-        ::DrawCube(*this, width, height, length, color);
-    }
+    void 绘制立方体(float 宽, float 高, float 长, ::Color 颜色) const { ::DrawCube(*this, 宽, 高, 长, 颜色); }
 
     /// 绘制三维立方体
-    void DrawCube(const ::Vector3& size, ::Color color) const { ::DrawCubeV(*this, size, color); }
+    void 绘制立方体(const ::Vector3& 尺寸, ::Color 颜色) const { ::DrawCubeV(*this, 尺寸, 颜色); }
 
     /// 绘制三维立方体的线框
-    void DrawCubeWires(float width, float height, float length, ::Color color) const {
-        ::DrawCubeWires(*this, width, height, length, color);
-    }
+    void 绘制立方体边框(float 宽, float 高, float 长, ::Color 颜色) const { ::DrawCubeWires(*this, 宽, 高, 长, 颜色); }
 
     /// 绘制三维立方体的线框
-    void DrawCubeWires(const ::Vector3& size, ::Color color) const { ::DrawCubeWiresV(*this, size, color); }
+    void 绘制立方体边框(const ::Vector3& 尺寸, ::Color 颜色) const { ::DrawCubeWiresV(*this, 尺寸, 颜色); }
 
     /// 绘制三维球体
-    void DrawSphere(float radius, ::Color color) const { ::DrawSphere(*this, radius, color); }
+    void 绘制球体(float 半径, ::Color 颜色) const { ::DrawSphere(*this, 半径, 颜色); }
 
     /// 绘制三维球体
-    void DrawSphere(float radius, int rings, int slices, ::Color color) const {
-        ::DrawSphereEx(*this, radius, rings, slices, color);
-    }
+    void 绘制球体(float 半径, int 环数, int 段数, ::Color 颜色) const { ::DrawSphereEx(*this, 半径, 环数, 段数, 颜色); }
 
     /// 绘制三维球体的线框
-    void DrawSphereWires(float radius, int rings, int slices, ::Color color) const {
-        ::DrawSphereWires(*this, radius, rings, slices, color);
+    void 绘制球体线框(float 半径, int 环数, int 段数, ::Color 颜色) const {
+        ::DrawSphereWires(*this, 半径, 环数, 段数, 颜色);
     }
 
     /// 绘制三维圆柱体
-    void DrawCylinder(float radiusTop, float radiusBottom, float height, int slices, ::Color color) const {
-        ::DrawCylinder(*this, radiusTop, radiusBottom, height, slices, color);
+    void 绘制柱体(float 顶半径, float 底半径, float 高, int 段数, ::Color 颜色) const {
+        ::DrawCylinder(*this, 顶半径, 底半径, 高, 段数, 颜色);
     }
 
     /// 绘制三维圆柱体的线框
-    void DrawCylinderWires(float radiusTop, float radiusBottom, float height, int slices, ::Color color) const {
-        ::DrawCylinderWires(*this, radiusTop, radiusBottom, height, slices, color);
+    void 绘制柱体线框(float 顶半径, float 底半径, float 高, int 段数, ::Color 颜色) const {
+        ::DrawCylinderWires(*this, 顶半径, 底半径, 高, 段数, 颜色);
     }
 
     /// 绘制三维平面
-    void DrawPlane(const ::Vector2& size, ::Color color) const { ::DrawPlane(*this, size, color); }
+    void 绘制平面(const ::Vector2& 尺寸, ::Color 颜色) const { ::DrawPlane(*this, 尺寸, 颜色); }
 
     /**
      * 检测两个球体之间的碰撞
      */
-    bool CheckCollision(float radius1, const ::Vector3& center2, float radius2) const {
-        return CheckCollisionSpheres(*this, radius1, center2, radius2);
+    bool 是碰撞(float 半径1, const ::Vector3& 球心2, float 半径2) const {
+        return CheckCollisionSpheres(*this, 半径1, 球心2, 半径2);
     }
 protected:
-    void set(const ::Vector3& vec) {
+    void 设(const ::Vector3& vec) {
         x = vec.x;
         y = vec.y;
         z = vec.z;
@@ -302,5 +294,6 @@ protected:
 } // namespace raylib
 
 using RVector3 = raylib::Vector3;
-
+using R点3 = raylib::Vector3;
+using RVec3 = raylib::Vector3;
 // #endif // RAYLIB_CPP_INCLUDE_VECTOR3_HPP_

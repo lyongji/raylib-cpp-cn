@@ -28,7 +28,7 @@ public:
     Vector4() : ::Vector4{0, 0, 0, 0} {}
     Vector4(::Rectangle rectangle) : ::Vector4{rectangle.x, rectangle.y, rectangle.width, rectangle.height} {}
 
-    Vector4(::Color color) { set(ColorNormalize(color)); }
+    Vector4(::Color color) { 设(ColorNormalize(color)); }
 
     GETTERSETTER(float, X, x)
     GETTERSETTER(float, Y, y)
@@ -36,7 +36,7 @@ public:
     GETTERSETTER(float, W, w)
 
     Vector4& operator=(const ::Vector4& vector4) {
-        set(vector4);
+        设(vector4);
         return *this;
     }
 
@@ -62,79 +62,77 @@ public:
     Vector4 operator*(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }
 
     /// 插值，实现四元数与向量的线性插值
-    Vector4 Lerp(const ::Vector4& vector4, float amount) const { return QuaternionLerp(*this, vector4, amount); }
+    Vector4 线性插值(const ::Vector4& vector4, float 数量) const { return QuaternionLerp(*this, vector4, 数量); }
 
     /// 插值，实现四元数与向量的归一化插值
-    Vector4 Nlerp(const ::Vector4& vector4, float amount) const { return QuaternionNlerp(*this, vector4, amount); }
+    Vector4 归一化线性插值(const ::Vector4& vector4, float 数量) const { return QuaternionNlerp(*this, vector4, 数量); }
 
     /// 插值，实现四元数与向量的球面插值
-    Vector4 Slerp(const ::Vector4& vector4, float amount) const { return QuaternionSlerp(*this, vector4, amount); }
+    Vector4 球面线性插值(const ::Vector4& vector4, float 数量) const { return QuaternionSlerp(*this, vector4, 数量); }
 
     /// 将四元数转换为矩阵
-    Matrix ToMatrix() const { return QuaternionToMatrix(*this); }
+    Matrix 转矩阵() const { return QuaternionToMatrix(*this); }
 
     /// 计算四元数的长度
-    float Length() const { return QuaternionLength(*this); }
+    float 长度() const { return QuaternionLength(*this); }
 
     /// 归一化四元数
-    Vector4 Normalize() const { return QuaternionNormalize(*this); }
+    Vector4 归一化() const { return QuaternionNormalize(*this); }
 
-    /// 逆四元数
-    Vector4 Invert() const { return QuaternionInvert(*this); }
+    /// 四元数取逆
+    Vector4 逆() const { return QuaternionInvert(*this); }
 
     /// 将四元数转换为轴角
-    void ToAxisAngle(::Vector3* outAxis, float* outAngle) const { QuaternionToAxisAngle(*this, outAxis, outAngle); }
+    void 转轴角(::Vector3* 输出轴, float* 输出角度) const { QuaternionToAxisAngle(*this, 输出轴, 输出角度); }
 
     /**
      * 获取给定四元数的旋转角度和轴
      */
-    std::pair<Vector3, float> ToAxisAngle() const {
-        Vector3 outAxis;
-        float outAngle;
-        QuaternionToAxisAngle(*this, &outAxis, &outAngle);
+    std::pair<Vector3, float> 转轴角() const {
+        Vector3 输出轴;
+        float 输出角度;
+        QuaternionToAxisAngle(*this, &输出轴, &输出角度);
 
-        return std::pair<Vector3, float>(outAxis, outAngle);
+        return (std::pair<Vector3, float>(输出轴, 输出角度));
     }
 
     /// 将四元数转换为矩阵
-    Vector4 Transform(const ::Matrix& matrix) const { return ::QuaternionTransform(*this, matrix); }
+    Vector4 变换(const ::Matrix& 矩阵) const { return ::QuaternionTransform(*this, 矩阵); }
 
     /// 返回单位四元数
-    static Vector4 Identity() { return ::QuaternionIdentity(); }
+    static Vector4 单位四元数() { return ::QuaternionIdentity(); }
 
     /// 将一个向量转换为另一个向量
-    static Vector4 FromVector3ToVector3(const ::Vector3& from, const ::Vector3& to) {
-        return ::QuaternionFromVector3ToVector3(from, to);
+    static Vector4 从Vector3转换为Vector3(const ::Vector3& 从, const ::Vector3& 到) {
+        return ::QuaternionFromVector3ToVector3(从, 到);
     }
 
     /// 将矩阵转换为四元数
-    static Vector4 FromMatrix(const ::Matrix& matrix) { return ::QuaternionFromMatrix(matrix); }
+    static Vector4 从矩阵转(const ::Matrix& 矩阵) { return ::QuaternionFromMatrix(矩阵); }
 
     /// 将一个轴和一个角度转换为四元数
-    static Vector4 FromAxisAngle(const ::Vector3& axis, const float angle) {
-        return ::QuaternionFromAxisAngle(axis, angle);
-    }
+    static Vector4 从轴角转(const ::Vector3& 轴, const float 角度) { return ::QuaternionFromAxisAngle(轴, 角度); }
 
     /// 将欧拉角转换为四元数
-    static Vector4 FromEuler(const float pitch, const float yaw, const float roll) {
-        return ::QuaternionFromEuler(pitch, yaw, roll);
+    static Vector4 从欧拉角转(const float 俯仰, const float yaw, const float roll) {
+        return ::QuaternionFromEuler(俯仰, yaw, roll);
     }
 
     /// 将一个向量转换为四元数
-    static Vector4 FromEuler(const ::Vector3& vector3) {
+    static Vector4 从欧拉角转(const ::Vector3& vector3) {
         return ::QuaternionFromEuler(vector3.x, vector3.y, vector3.z);
     }
 
     /// 将四元数转换为欧拉角
-    Vector3 ToEuler() const { return ::QuaternionToEuler(*this); }
+    Vector3 转欧拉角() const { return ::QuaternionToEuler(*this); }
 #endif
 
     /// 从归一化值返回颜色
-    Color ColorFromNormalized() const { return ::ColorFromNormalized(*this); }
+    Color 从归一化转为颜色() const { return ::ColorFromNormalized(*this); }
 
-    operator Color() const { return ColorFromNormalized(); }
+    operator Color() const { return 从归一化转为颜色(); }
 protected:
-    void set(const ::Vector4& vec4) {
+    void 设(const ::Vector4& vec4) {
         x = vec4.x;
         y = vec4.y;
         z = vec4.z;
@@ -143,11 +141,12 @@ protected:
 };
 
 /// 将 Vector4 别名为 Quaternion
-using Quaternion = Vector4;
+using 四元数 = Vector4;
 
 } // namespace raylib
 
 using RVector4 = raylib::Vector4;
-using RQuaternion = raylib::Quaternion;
+using R四元数 = raylib::四元数;
+using RVec4 = raylib::Vector4;
 
 // #endif // RAYLIB_CPP_INCLUDE_VECTOR4_HPP_

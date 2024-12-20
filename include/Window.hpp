@@ -12,14 +12,14 @@ namespace raylib {
 /**
  * 窗口和图形设备函数
  */
-class Window {
+class 窗口 {
 public:
     /**
      * 构建一个 Window 对象，但推迟初始化。确保手动调用 Init()。
      *
      * @see Init()
      */
-    Window() {
+    窗口() {
         // 无操作
     }
 
@@ -36,14 +36,12 @@ public:
      *
      * @throws raylib::RaylibException 如果窗口初始化失败则抛出异常
      */
-    Window(int width, int height, const std::string& title = "raylib", unsigned int flags = 0) {
-        Init(width, height, title, flags);
-    }
+    窗口(int 宽, int 高, const std::string& 标题 = "raylib-cn", unsigned int 选项 = 0) { 初始化(宽, 高, 标题, 选项); }
 
     /**
      * 关闭窗口并卸载 OpenGL 上下文
      */
-    ~Window() { Close(); }
+    ~窗口() { 关闭(); }
 
     /**
      * 初始化窗口
@@ -58,30 +56,30 @@ public:
      *
      * @throws raylib::RaylibException 如果窗口初始化失败则抛出异常
      */
-    void Init(int width = 800, int height = 450, const std::string& title = "raylib", unsigned int flags = 0) {
-        if (flags != 0) {
-            ::SetConfigFlags(flags);
+    void 初始化(int 宽 = 800, int 高 = 450, const std::string& 标题 = "raylib-cn", unsigned int 选项 = 0) {
+        if (选项 != 0) {
+            ::SetConfigFlags(选项);
         }
-        ::InitWindow(width, height, title.c_str());
+        ::InitWindow(宽, 高, 标题.c_str());
         if (!::IsWindowReady()) {
-            throw Raylib异常("Failed to create Window");
+            throw Raylib异常("创建窗口失败");
         }
     }
 
     /**
      * 检查是否按下 ESC 键或点击关闭图标
      */
-    bool ShouldClose() const { return ::WindowShouldClose(); }
+    bool 是可以关闭() const { return ::WindowShouldClose(); }
 
     /**
      * 设置自定义退出键（默认是 ESC）
      */
-    void SetExitKey(int key) { ::SetExitKey(key); }
+    void 设退出键(int 键位) { ::SetExitKey(键位); }
 
     /**
      * 关闭窗口并卸载 OpenGL 上下文
      */
-    void Close() {
+    void 关闭() {
         if (::IsWindowReady()) {
             ::CloseWindow();
         }
@@ -90,71 +88,71 @@ public:
     /**
      * 检查光标是否在当前屏幕上
      */
-    bool IsCursorOnScreen() const { return ::IsCursorOnScreen(); }
+    bool 光标是在屏幕上() const { return ::IsCursorOnScreen(); }
 
     /**
      * 检查窗口是否当前处于全屏模式
      */
-    bool IsFullscreen() const { return ::IsWindowFullscreen(); }
+    bool 是全屏() const { return ::IsWindowFullscreen(); }
 
     /**
      * 检查窗口是否当前隐藏
      */
-    bool IsHidden() const { return ::IsWindowHidden(); }
+    bool 是隐藏() const { return ::IsWindowHidden(); }
 
     /**
      * 检查窗口是否当前最小化
      */
-    bool IsMinimized() const { return ::IsWindowMinimized(); }
+    bool 是最小化() const { return ::IsWindowMinimized(); }
 
     /**
      * 检查窗口是否当前最大化
      */
-    bool IsMaximized() const { return ::IsWindowMaximized(); }
+    bool 是最大化() const { return ::IsWindowMaximized(); }
 
     /**
      * 检查窗口是否当前聚焦
      */
-    bool IsFocused() const { return ::IsWindowFocused(); }
+    bool 是聚焦() const { return ::IsWindowFocused(); }
 
     /**
      * 检查窗口是否在上一个帧中被调整大小
      */
-    bool IsResized() const { return ::IsWindowResized(); }
+    bool 是调整尺寸() const { return ::IsWindowResized(); }
 
     /**
      * 检查是否启用了特定的窗口标志
      */
-    bool IsState(unsigned int flag) const { return ::IsWindowState(flag); }
+    bool 是有此配置项(unsigned int 选项) const { return ::IsWindowState(选项); }
 
     /**
      * 使用标志设置窗口配置状态
      */
-    Window& SetState(unsigned int flag) {
-        ::SetWindowState(flag);
+    窗口& 设此配置项(unsigned int 选项) {
+        ::SetWindowState(选项);
         return *this;
     }
 
     /**
      * 清除窗口配置状态标志
      */
-    Window& ClearState(unsigned int flag) {
-        ::ClearWindowState(flag);
+    窗口& 清除配置项(unsigned int 选项) {
+        ::ClearWindowState(选项);
         return *this;
     }
 
     /**
      * 用给定的颜色清除窗口背景
      */
-    Window& ClearBackground(const ::Color& color = BLACK) {
-        ::ClearBackground(color);
+    窗口& 清除背景(const ::Color& 颜色 = BLACK) {
+        ::ClearBackground(颜色);
         return *this;
     }
 
     /**
      * 切换窗口状态：全屏/窗口化
      */
-    Window& ToggleFullscreen() {
+    窗口& ToggleFullscreen() {
         ::ToggleFullscreen();
         return *this;
     }
@@ -162,14 +160,14 @@ public:
     /**
      * 设置应用程序是否应为全屏模式
      */
-    Window& SetFullscreen(bool fullscreen) {
+    窗口& SetFullscreen(bool fullscreen) {
         if (fullscreen) {
-            if (!IsFullscreen()) {
+            if (!是全屏()) {
                 ToggleFullscreen();
             }
         }
         else {
-            if (IsFullscreen()) {
+            if (是全屏()) {
                 ToggleFullscreen();
             }
         }
@@ -180,7 +178,7 @@ public:
     /**
      * 切换窗口状态：无边框/窗口化
      */
-    Window& ToggleBorderless() {
+    窗口& ToggleBorderless() {
         ::ToggleBorderlessWindowed();
         return *this;
     }
@@ -188,7 +186,7 @@ public:
     /**
      * 设置窗口状态：最大化（仅限 PLATFORM_DESKTOP）
      */
-    Window& Maximize() {
+    窗口& Maximize() {
         ::MaximizeWindow();
         return *this;
     }
@@ -196,7 +194,7 @@ public:
     /**
      * 设置窗口状态：最小化（仅限 PLATFORM_DESKTOP）
      */
-    Window& Minimize() {
+    窗口& Minimize() {
         ::MinimizeWindow();
         return *this;
     }
@@ -204,7 +202,7 @@ public:
     /**
      * 设置窗口状态：恢复到正常大小（仅限 PLATFORM_DESKTOP）
      */
-    Window& Restore() {
+    窗口& Restore() {
         ::RestoreWindow();
         return *this;
     }
@@ -212,7 +210,7 @@ public:
     /**
      * 设置窗口图标
      */
-    Window& SetIcon(const ::Image& image) {
+    窗口& SetIcon(const ::Image& image) {
         ::SetWindowIcon(image);
         return *this;
     }
@@ -220,7 +218,7 @@ public:
     /**
      * 设置窗口图标（多个图像，RGBA 32 位，仅限 PLATFORM_DESKTOP）
      */
-    Window& SetIcons(Image* images, int count) {
+    窗口& SetIcons(Image* images, int count) {
         ::SetWindowIcons(images, count);
         return *this;
     }
@@ -228,7 +226,7 @@ public:
     /**
      * 设置窗口标题
      */
-    Window& SetTitle(const std::string& title) {
+    窗口& SetTitle(const std::string& title) {
         ::SetWindowTitle(title.c_str());
         return *this;
     }
@@ -236,7 +234,7 @@ public:
     /**
      * 设置窗口在屏幕上的位置
      */
-    Window& SetPosition(int x, int y) {
+    窗口& SetPosition(int x, int y) {
         ::SetWindowPosition(x, y);
         return *this;
     }
@@ -244,14 +242,14 @@ public:
     /**
      * 设置窗口在屏幕上的位置
      */
-    Window& SetPosition(const ::Vector2& position) {
+    窗口& SetPosition(const ::Vector2& position) {
         return SetPosition(static_cast<int>(position.x), static_cast<int>(position.y));
     }
 
     /**
      * 设置当前窗口的显示器
      */
-    Window& SetMonitor(int monitor) {
+    窗口& SetMonitor(int monitor) {
         ::SetWindowMonitor(monitor);
         return *this;
     }
@@ -259,7 +257,7 @@ public:
     /**
      * 设置窗口的最小尺寸
      */
-    Window& SetMinSize(int width, int height) {
+    窗口& SetMinSize(int width, int height) {
         ::SetWindowMinSize(width, height);
         return *this;
     }
@@ -267,7 +265,7 @@ public:
     /**
      * 设置窗口的最小尺寸
      */
-    Window& SetMinSize(const ::Vector2& size) {
+    窗口& SetMinSize(const ::Vector2& size) {
         ::SetWindowMinSize(static_cast<int>(size.x), static_cast<int>(size.y));
         return *this;
     }
@@ -275,7 +273,7 @@ public:
     /**
      * 设置窗口的尺寸
      */
-    Window& SetSize(int width, int height) {
+    窗口& SetSize(int width, int height) {
         ::SetWindowSize(width, height);
         return *this;
     }
@@ -283,7 +281,7 @@ public:
     /**
      * 设置窗口的不透明度 [0.0f..1.0f]（仅限 PLATFORM_DESKTOP）
      */
-    Window& SetOpacity(float opacity) {
+    窗口& SetOpacity(float opacity) {
         ::SetWindowOpacity(opacity);
         return *this;
     }
@@ -291,7 +289,7 @@ public:
     /**
      * 设置窗口聚焦（仅限 PLATFORM_DESKTOP）
      */
-    Window& SetFocused() {
+    窗口& SetFocused() {
         ::SetWindowFocused();
         return *this;
     }
@@ -299,7 +297,7 @@ public:
     /**
      * 设置窗口的尺寸
      */
-    Window& SetSize(const ::Vector2& size) { return SetSize(static_cast<int>(size.x), static_cast<int>(size.y)); }
+    窗口& SetSize(const ::Vector2& size) { return SetSize(static_cast<int>(size.x), static_cast<int>(size.y)); }
 
     /**
      * 获取屏幕的宽度和高度
@@ -314,7 +312,7 @@ public:
     /**
      * 设置画布（帧缓冲区）开始绘制
      */
-    Window& BeginDrawing() {
+    窗口& BeginDrawing() {
         ::BeginDrawing();
         return *this;
     }
@@ -322,7 +320,7 @@ public:
     /**
      * 结束画布绘制并交换缓冲区（双缓冲）
      */
-    Window& EndDrawing() {
+    窗口& EndDrawing() {
         ::EndDrawing();
         return *this;
     }
@@ -370,7 +368,7 @@ public:
     /**
      * 设置目标 FPS（最大值）
      */
-    Window& SetTargetFPS(int fps) {
+    窗口& SetTargetFPS(int fps) {
         ::SetTargetFPS(fps);
         return *this;
     }
@@ -411,6 +409,6 @@ public:
 };
 } // namespace raylib
 
-using RWindow = raylib::Window;
+using RWindow = raylib::窗口;
 
 // #endif // RAYLIB_CPP_INCLUDE_WINDOW_HPP_
