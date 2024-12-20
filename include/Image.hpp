@@ -27,7 +27,7 @@ public:
         // 无操作
     }
 
-    Image(const ::Image& image) { set(image); }
+    Image(const ::Image& image) : ::Image(image) { }
 
     /**
      * 从给定文件加载图像。
@@ -91,7 +91,7 @@ public:
 
     Image(const Image& other) { set(other.Copy()); }
 
-    Image(Image&& other) {
+    Image(Image&& other) noexcept {
         set(other);
 
         other.data = nullptr;
@@ -341,17 +341,17 @@ public:
     /**
      * 获取图像的宽度和高度。
      */
-    ::Vector2 GetSize() const { return {static_cast<float>(width), static_cast<float>(height)}; }
+    [[nodiscard]] ::Vector2 GetSize() const { return {static_cast<float>(width), static_cast<float>(height)}; }
 
     /**
      * 创建图像的副本（用于变换）
      */
-    ::Image Copy() const { return ::ImageCopy(*this); }
+    [[nodiscard]] ::Image Copy() const { return ::ImageCopy(*this); }
 
     /**
      * 从另一个图像创建图像片段
      */
-    ::Image FromImage(::Rectangle rec) const { return ::ImageFromImage(*this, rec); }
+    [[nodiscard]] ::Image FromImage(::Rectangle rec) const { return ::ImageFromImage(*this, rec); }
 
     /**
      * 将图像数据转换为所需格式
@@ -570,17 +570,17 @@ public:
      *
      * @param threshold 阈值定义为百分比：0.0f -> 1.0f
      */
-    Rectangle GetAlphaBorder(float threshold) const { return ::GetImageAlphaBorder(*this, threshold); }
+    [[nodiscard]] Rectangle GetAlphaBorder(float threshold) const { return ::GetImageAlphaBorder(*this, threshold); }
 
     /**
      * 获取图像在 (x, y) 位置的像素颜色
      */
-    raylib::Color GetColor(int x = 0, int y = 0) const { return ::GetImageColor(*this, x, y); }
+    [[nodiscard]] raylib::Color GetColor(int x = 0, int y = 0) const { return ::GetImageColor(*this, x, y); }
 
     /**
      * 获取图像在向量位置的像素颜色
      */
-    raylib::Color GetColor(::Vector2 position) const {
+    [[nodiscard]] raylib::Color GetColor(::Vector2 position) const {
         return ::GetImageColor(*this, static_cast<int>(position.x), static_cast<int>(position.y));
     }
 
@@ -693,7 +693,7 @@ public:
     /**
      * 从图像加载颜色数据为 Color 数组（RGBA - 32 位）
      */
-    ::Color* LoadColors() const { return ::LoadImageColors(*this); }
+    [[nodiscard]] ::Color* LoadColors() const { return ::LoadImageColors(*this); }
 
     /**
      * 从图像加载颜色调色板为 Color 数组（RGBA - 32 位）
@@ -715,14 +715,14 @@ public:
     /**
      * 从图像数据加载纹理
      */
-    ::Texture2D LoadTexture() const { return ::LoadTextureFromImage(*this); }
+    [[nodiscard]] ::Texture2D LoadTexture() const { return ::LoadTextureFromImage(*this); }
 
     /**
      * 从图像数据加载纹理
      *
      * @see LoadTexture()
      */
-    operator ::Texture2D() { return LoadTexture(); }
+    operator ::Texture2D() const { return LoadTexture(); }
 
     /**
      * 获取特定格式的像素数据大小（以字节为单位）
@@ -736,14 +736,14 @@ public:
      *
      * @return 图像的像素数据大小
      */
-    int GetPixelDataSize() const { return ::GetPixelDataSize(width, height, format); }
+    [[nodiscard]] int GetPixelDataSize() const { return ::GetPixelDataSize(width, height, format); }
 
     /**
      * 检索图像是否已加载
      *
      * @return 图像是否已加载
      */
-    bool IsValid() const { return ::IsImageValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsImageValid(*this); }
 
     /**
      * 从另一个图像的选定通道创建图像（灰度）

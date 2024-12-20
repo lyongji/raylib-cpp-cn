@@ -29,9 +29,9 @@ public:
     /**
      * 获取默认字体
      */
-    Font() { set(::GetFontDefault()); }
+    Font() : ::Font(::GetFontDefault()) { }
 
-    Font(const ::Font& font) { set(font); }
+    Font(const ::Font& font) : ::Font(font) { }
 
     /**
      * 从指定文件加载字体
@@ -97,7 +97,7 @@ public:
 
     Font(const Font&) = delete;
 
-    Font(Font&& other) {
+    Font(Font&& other) noexcept {
         set(other);
 
         other.baseSize = 0;
@@ -218,7 +218,7 @@ public:
     /**
      * 返回字体是否准备好使用
      */
-    bool IsValid() const { return ::IsFontValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsFontValid(*this); }
 
     /**
      * 使用字体和附加参数绘制文本
@@ -301,33 +301,33 @@ public:
     /**
      * 测量字符串大小（用于字体）
      */
-    Vector2 MeasureText(const char* text, float fontSize, float spacing) const {
+    [[nodiscard]] Vector2 MeasureText(const char* text, float fontSize, float spacing) const {
         return ::MeasureTextEx(*this, text, fontSize, spacing);
     }
 
     /**
      * 测量字符串大小（用于字体）
      */
-    Vector2 MeasureText(const std::string& text, float fontSize, float spacing) const {
+    [[nodiscard]] Vector2 MeasureText(const std::string& text, float fontSize, float spacing) const {
         return ::MeasureTextEx(*this, text.c_str(), fontSize, spacing);
     }
 
     /**
      * 获取字体中 Unicode 字符的索引位置
      */
-    int GetGlyphIndex(int character) const { return ::GetGlyphIndex(*this, character); }
+    [[nodiscard]] int GetGlyphIndex(int character) const { return ::GetGlyphIndex(*this, character); }
 
     /**
      * 从文本创建图像（自定义精灵字体）
      */
-    ::Image ImageText(const char* text, float fontSize, float spacing, ::Color tint) const {
+    [[nodiscard]] ::Image ImageText(const char* text, float fontSize, float spacing, ::Color tint) const {
         return ::ImageTextEx(*this, text, fontSize, spacing, tint);
     }
 
     /**
      * 从文本创建图像（自定义精灵字体）
      */
-    ::Image ImageText(const std::string& text, float fontSize, float spacing, ::Color tint) const {
+    [[nodiscard]] ::Image ImageText(const std::string& text, float fontSize, float spacing, ::Color tint) const {
         return ::ImageTextEx(*this, text.c_str(), fontSize, spacing, tint);
     }
 protected:

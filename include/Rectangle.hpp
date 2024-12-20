@@ -36,7 +36,7 @@ public:
 
     ::Vector4 ToVector4() { return {x, y, width, height}; }
 
-    operator ::Vector4() const { return {x, y, width, height}; }
+    explicit operator ::Vector4() const { return {x, y, width, height}; }
 
     /**
      * 绘制一个颜色填充的矩形
@@ -105,27 +105,26 @@ public:
     /**
      * 检查两个矩形之间的碰撞
      */
-    bool CheckCollision(::Rectangle rec2) const { return ::CheckCollisionRecs(*this, rec2); }
+    [[nodiscard]] bool CheckCollision(::Rectangle rec2) const { return ::CheckCollisionRecs(*this, rec2); }
 
     /**
      * 获取两个矩形碰撞的矩形
      */
-    ::Rectangle GetCollision(::Rectangle rec2) const { return ::GetCollisionRec(*this, rec2); }
+    [[nodiscard]] ::Rectangle GetCollision(::Rectangle rec2) const { return ::GetCollisionRec(*this, rec2); }
 
     /**
      * 检查点是否在矩形内
      */
-    bool CheckCollision(::Vector2 point) const { return ::CheckCollisionPointRec(point, *this); }
+    [[nodiscard]] bool CheckCollision(::Vector2 point) const { return ::CheckCollisionPointRec(point, *this); }
 
     /**
      * 检查圆形和矩形之间的碰撞
      */
-    bool CheckCollision(::Vector2 center, float radius) const {
+    [[nodiscard]] bool CheckCollision(::Vector2 center, float radius) const {
         return ::CheckCollisionCircleRec(center, radius, *this);
     }
 
-    /// 获取矩形的尺寸
-    Vector2 GetSize() const { return {width, height}; }
+    [[nodiscard]] Vector2 GetSize() const { return {width, height}; }
 
     /// 设置矩形的尺寸
     Rectangle& SetSize(float newWidth, float newHeight) {
@@ -143,8 +142,7 @@ public:
         return *this;
     }
 
-    /// 获取矩形的坐标
-    Vector2 GetPosition() const { return {x, y}; }
+    [[nodiscard]] Vector2 GetPosition() const { return {x, y}; }
 
     /// 设置矩形的坐标
     Rectangle& SetPosition(float newX, float newY) {

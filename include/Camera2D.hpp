@@ -12,9 +12,12 @@ namespace raylib {
  */
 class Camera2D : public ::Camera2D {
 public:
-    Camera2D(const ::Camera2D& camera) { set(camera); }
+    Camera2D(const ::Camera2D& camera)
+        : ::Camera2D(camera) {
+        // Nothing.
+    }
 
-    Camera2D() {}
+    Camera2D() : ::Camera2D() {}
     Camera2D(::Vector2 offset, ::Vector2 target, float rotation = 0.0f, float zoom = 1.0f)
         : ::Camera2D{offset, target, rotation, zoom} {}
 
@@ -47,17 +50,17 @@ public:
     /**
      * 返回 2D 相机的变换矩阵
      */
-    Matrix GetMatrix() const { return ::GetCameraMatrix2D(*this); }
+    [[nodiscard]] Matrix GetMatrix() const { return ::GetCameraMatrix2D(*this); }
 
     /**
      * 返回 2D 相机屏幕空间位置对应的 2D 世界空间位置
      */
-    Vector2 GetScreenToWorld(::Vector2 position) const { return ::GetScreenToWorld2D(position, *this); }
+    [[nodiscard]] Vector2 GetScreenToWorld(::Vector2 position) const { return ::GetScreenToWorld2D(position, *this); }
 
     /**
      * 返回 2D 世界空间位置对应的 2D 屏幕空间位置
      */
-    Vector2 GetWorldToScreen(::Vector2 position) const { return ::GetWorldToScreen2D(position, *this); }
+    [[nodiscard]] Vector2 GetWorldToScreen(::Vector2 position) const { return ::GetWorldToScreen2D(position, *this); }
 protected:
     void set(const ::Camera2D& camera) {
         offset = camera.offset;

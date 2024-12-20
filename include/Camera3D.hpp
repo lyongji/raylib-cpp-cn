@@ -12,7 +12,7 @@ namespace raylib {
  */
 class Camera3D : public ::Camera3D {
 public:
-    Camera3D(const ::Camera3D& camera) { set(camera); }
+    Camera3D(const ::Camera3D& camera) : ::Camera3D(camera) { }
 
     /**
      * 创建一个新的 Camera3D。

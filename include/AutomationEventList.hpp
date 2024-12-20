@@ -12,7 +12,10 @@ namespace raylib {
  */
 class AutomationEventList : public ::AutomationEventList {
 public:
-    AutomationEventList(const ::AutomationEventList& automationEventList) { set(automationEventList); }
+    AutomationEventList(const ::AutomationEventList& automationEventList)
+        : ::AutomationEventList(automationEventList) {
+        // Nothing.
+    }
 
     /**
      * 加载一个空的自动化事件列表。
@@ -28,7 +31,7 @@ public:
 
     AutomationEventList(const AutomationEventList&) = delete;
 
-    AutomationEventList(AutomationEventList&& other) {
+    AutomationEventList(AutomationEventList&& other) noexcept {
         set(other);
 
         other.capacity = 0;

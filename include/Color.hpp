@@ -37,43 +37,43 @@ public:
     /**
      * 从十六进制值获取颜色结构
      */
-    Color(unsigned int hexValue) { set(::GetColor(hexValue)); }
+    explicit Color(unsigned int hexValue) : ::Color(::GetColor(hexValue)) { }
 
-    Color(void* srcPtr, int format) { set(::GetPixelColor(srcPtr, format)); }
-
-    /**
-     * 返回颜色的十六进制值
-     */
-    int ToInt() const { return ::ColorToInt(*this); }
+    Color(void* srcPtr, int format) : ::Color(::GetPixelColor(srcPtr, format)) { }
 
     /**
      * 返回颜色的十六进制值
      */
-    operator int() const { return ::ColorToInt(*this); }
+    [[nodiscard]] int ToInt() const { return ::ColorToInt(*this); }
 
-    std::string ToString() const { return TextFormat("Color(%d, %d, %d, %d)", r, g, b, a); }
+    /**
+     * 返回颜色的十六进制值
+     */
+    explicit operator int() const { return ::ColorToInt(*this); }
 
-    operator std::string() const { return ToString(); }
+    [[nodiscard]] std::string ToString() const { return TextFormat("Color(%d, %d, %d, %d)", r, g, b, a); }
+
+    explicit operator std::string() const { return ToString(); }
 
     /**
      * 返回应用了 alpha 的颜色，alpha 的范围是 0.0f 到 1.0f
      */
-    Color Fade(float alpha) const { return ::Fade(*this, alpha); }
+    [[nodiscard]] Color Fade(float alpha) const { return ::Fade(*this, alpha); }
 
     /**
      * 返回归一化的颜色，范围为 [0..1]
      */
-    Vector4 Normalize() const { return ::ColorNormalize(*this); }
+    [[nodiscard]] Vector4 Normalize() const { return ::ColorNormalize(*this); }
 
     /**
      * 从归一化的值 [0..1] 返回颜色
      */
-    Color(::Vector4 normalized) { set(::ColorFromNormalized(normalized)); }
+    explicit Color(::Vector4 normalized) : Color(::ColorFromNormalized(normalized)) { }
 
     /**
      * 返回颜色的 HSV 值
      */
-    Vector3 ToHSV() const { return ::ColorToHSV(*this); }
+    [[nodiscard]] Vector3 ToHSV() const { return ::ColorToHSV(*this); }
 
     GETTERSETTER(unsigned char, R, r)
     GETTERSETTER(unsigned char, G, g)
@@ -205,14 +205,14 @@ public:
     /**
      * 返回应用了 alpha 的颜色，alpha 的范围是 0.0f 到 1.0f
      */
-    Color Alpha(float alpha) const { return ::ColorAlpha(*this, alpha); }
+    [[nodiscard]] Color Alpha(float alpha) const { return ::ColorAlpha(*this, alpha); }
 
     Color Lerp(::Color color2, float factor) { return ::ColorLerp(*this, color2, factor); }
 
     /**
      * 返回 src 颜色与 dst 颜色进行 alpha 混合后的结果，并应用 tint 颜色
      */
-    Color AlphaBlend(::Color dst, ::Color tint) const { return ::ColorAlphaBlend(dst, *this, tint); }
+    [[nodiscard]] Color AlphaBlend(::Color dst, ::Color tint) const { return ::ColorAlphaBlend(dst, *this, tint); }
 
     static Color LightGray() { return LIGHTGRAY; }
     static Color Gray() { return GRAY; }

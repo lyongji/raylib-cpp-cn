@@ -12,7 +12,10 @@ namespace raylib {
  */
 class AudioStream : public ::AudioStream {
 public:
-    AudioStream(const ::AudioStream& music) { set(music); }
+    AudioStream(const ::AudioStream& music)
+        : ::AudioStream(music) {
+        // Nothing.
+    }
 
     AudioStream(
         rAudioBuffer* buffer = nullptr,
@@ -35,7 +38,7 @@ public:
 
     AudioStream(const AudioStream&) = delete;
 
-    AudioStream(AudioStream&& other) {
+    AudioStream(AudioStream&& other) noexcept {
         set(other);
 
         other.buffer = nullptr;
@@ -97,7 +100,7 @@ public:
     /**
      * 检查是否有任何音频流缓冲区需要重新填充
      */
-    bool IsProcessed() const { return ::IsAudioStreamProcessed(*this); }
+    [[nodiscard]] bool IsProcessed() const { return ::IsAudioStreamProcessed(*this); }
 
     /**
      * 播放音频流
@@ -126,7 +129,7 @@ public:
     /**
      * 检查音频流是否正在播放
      */
-    bool IsPlaying() const { return ::IsAudioStreamPlaying(*this); }
+    [[nodiscard]] bool IsPlaying() const { return ::IsAudioStreamPlaying(*this); }
 
     /**
      * 停止音频流
@@ -183,7 +186,7 @@ public:
     /**
      * 检索音频流是否准备就绪
      */
-    bool IsValid() const { return ::IsAudioStreamValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsAudioStreamValid(*this); }
 
     /**
      * 加载音频流（用于流式传输原始音频 PCM 数据）

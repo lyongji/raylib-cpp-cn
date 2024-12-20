@@ -2,6 +2,7 @@
 // #define RAYLIB_CPP_INCLUDE_TOUCH_HPP_
 #pragma once
 
+#include "./Functions.hpp"
 #include "./raylib.hpp"
 
 namespace raylib {

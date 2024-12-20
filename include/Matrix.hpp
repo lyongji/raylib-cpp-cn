@@ -16,25 +16,8 @@ namespace raylib {
  */
 class Matrix : public ::Matrix {
 public:
-    Matrix(const ::Matrix& mat)
-        : ::Matrix{
-              mat.m0,
-              mat.m4,
-              mat.m8,
-              mat.m12,
-              mat.m1,
-              mat.m5,
-              mat.m9,
-              mat.m13,
-              mat.m2,
-              mat.m6,
-              mat.m10,
-              mat.m14,
-              mat.m3,
-              mat.m7,
-              mat.m11,
-              mat.m15} {
-        // 无操作
+    Matrix(const ::Matrix& mat) : ::Matrix(mat) {
+        // Nothing.
     }
 
     Matrix(
@@ -76,12 +59,16 @@ public:
     GETTERSETTER(float, M15, m15)
 
     Matrix& operator=(const ::Matrix& matrix) {
-        set(matrix);
+        if (this != &matrix) {
+            set(matrix);
+        }
         return *this;
     }
 
     Matrix& operator=(const Matrix& matrix) {
-        set(matrix);
+        if (this != &matrix) {
+            set(matrix);
+        }
         return *this;
     }
 
@@ -98,14 +85,14 @@ public:
     /**
      * 返回矩阵的迹（对角线元素之和）
      */
-    float Trace() const { return ::MatrixTrace(*this); }
+    [[nodiscard]] float Trace() const { return ::MatrixTrace(*this); }
 
     /**
      * 转置提供的矩阵
      */
-    Matrix Transpose() const { return ::MatrixTranspose(*this); }
+    [[nodiscard]] Matrix Transpose() const { return ::MatrixTranspose(*this); }
 
-    Matrix Invert() const { return ::MatrixInvert(*this); }
+    [[nodiscard]] Matrix Invert() const { return ::MatrixInvert(*this); }
 
     static Matrix Identity() { return ::MatrixIdentity(); }
 
@@ -131,7 +118,7 @@ public:
 
     static Matrix Scale(float x, float y, float z) { return ::MatrixScale(x, y, z); }
 
-    Matrix Multiply(const ::Matrix& right) const { return ::MatrixMultiply(*this, right); }
+    [[nodiscard]] Matrix Multiply(const ::Matrix& right) const { return ::MatrixMultiply(*this, right); }
 
     Matrix operator*(const ::Matrix& matrix) { return ::MatrixMultiply(*this, matrix); }
 
@@ -149,9 +136,9 @@ public:
 
     static Matrix LookAt(Vector3 eye, Vector3 target, Vector3 up) { return ::MatrixLookAt(eye, target, up); }
 
-    float16 ToFloatV() const { return ::MatrixToFloatV(*this); }
+    [[nodiscard]] float16 ToFloatV() const { return ::MatrixToFloatV(*this); }
 
-    operator float16() { return ToFloatV(); }
+    operator float16() const { return ToFloatV(); }
 
     /**
      * 设置着色器统一值（4x4矩阵）

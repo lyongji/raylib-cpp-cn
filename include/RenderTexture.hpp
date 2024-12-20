@@ -2,10 +2,8 @@
 // #define RAYLIB_CPP_INCLUDE_RENDERTEXTURE_HPP_
 #pragma once
 
-#include "./RaylibException.hpp"
 #include "./TextureUnmanaged.hpp"
 #include "./raylib-cpp-utils.hpp"
-#include "./raylib.hpp"
 
 namespace raylib {
 /**
@@ -16,9 +14,12 @@ public:
     /**
      * 默认构造函数，用于构建一个空的 RenderTexture。
      */
-    RenderTexture() { id = 0; }
+    RenderTexture() = default;
 
-    RenderTexture(const ::RenderTexture& renderTexture) { set(renderTexture); }
+    RenderTexture(const ::RenderTexture& renderTexture)
+        : ::RenderTexture(renderTexture) {
+        // Nothing.
+    }
 
     RenderTexture(unsigned int id, const ::Texture& texture, const ::Texture& depth)
         : ::RenderTexture{id, texture, depth} {}
@@ -26,11 +27,15 @@ public:
     /**
      * 加载用于渲染的纹理（帧缓冲区）
      */
-    RenderTexture(int width, int height) { set(::LoadRenderTexture(width, height)); }
+    RenderTexture(int width, int height)
+        : ::RenderTexture(::LoadRenderTexture(width, height)) {
+        // Nothing.
+    }
 
     RenderTexture(const RenderTexture&) = delete;
 
-    RenderTexture(RenderTexture&& other) {
+    RenderTexture(RenderTexture&& other) noexcept
+    {
         set(other);
 
         other.id = 0;
@@ -105,7 +110,7 @@ public:
     /**
      * 检索渲染纹理是否准备就绪。
      */
-    bool IsValid() const { return ::IsRenderTextureValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsRenderTextureValid(*this); }
 protected:
     void set(const ::RenderTexture& renderTexture) {
         id = renderTexture.id;

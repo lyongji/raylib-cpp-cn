@@ -85,7 +85,7 @@ public:
         // 无操作。
     }
 
-    GETTERSETTER(std::string, Text, text)
+    GETTERSETTER(const std::string&, Text, text)
     GETTERSETTER(float, FontSize, fontSize)
     GETTERSETTER(::Font, Font, font)
     GETTERSETTER(::Color, Color, color)
@@ -121,12 +121,12 @@ public:
     /**
      * 测量默认字体字符串的宽度。
      */
-    int Measure() const { return ::MeasureText(text.c_str(), static_cast<int>(fontSize)); }
+    [[nodiscard]] int Measure() const { return ::MeasureText(text.c_str(), static_cast<int>(fontSize)); }
 
     /**
      * 测量 Font 字符串的大小。
      */
-    Vector2 MeasureEx() const { return ::MeasureTextEx(font, text.c_str(), fontSize, spacing); }
+    [[nodiscard]] Vector2 MeasureEx() const { return ::MeasureTextEx(font, text.c_str(), fontSize, spacing); }
 
     Text& operator=(const Text& other) {
         if (this == &other) {

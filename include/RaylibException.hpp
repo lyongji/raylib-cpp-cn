@@ -18,8 +18,8 @@ public:
      *
      * @param message 提供给异常的消息。
      */
-    RaylibException(std::string message) throw() : std::runtime_error(message) {
-        // 无操作
+    explicit RaylibException(const std::string& message) noexcept : std::runtime_error(message) {
+        // Nothing
     }
 
     /**

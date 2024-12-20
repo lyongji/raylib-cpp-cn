@@ -2,6 +2,7 @@
 // #define RAYLIB_CPP_INCLUDE_MOUSE_HPP_
 #pragma once
 
+#include "./Functions.hpp"
 #include "./Vector2.hpp"
 #include "./raylib.hpp"
 

@@ -14,7 +14,7 @@ namespace raylib {
  */
 class Wave : public ::Wave {
 public:
-    Wave(const ::Wave& wave) { set(wave); }
+    Wave(const ::Wave& wave) : ::Wave(wave) { }
 
     Wave(
         unsigned int frameCount = 0,
@@ -44,7 +44,7 @@ public:
 
     Wave(const Wave& other) { set(other.Copy()); }
 
-    Wave(Wave&& other) {
+    Wave(Wave&& other) noexcept {
         set(other);
 
         other.frameCount = 0;
@@ -101,7 +101,7 @@ public:
     /**
      * 复制波形数据到新的波形
      */
-    ::Wave Copy() const { return ::WaveCopy(*this); }
+    [[nodiscard]] ::Wave Copy() const { return ::WaveCopy(*this); }
 
     /**
      * 裁剪波形数据到定义的样本范围
@@ -195,7 +195,7 @@ public:
      *
      * @return 波形数据是否已加载的布尔值
      */
-    bool IsValid() const { return ::IsWaveValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsWaveValid(*this); }
 protected:
     void set(const ::Wave& wave) {
         frameCount = wave.frameCount;

@@ -14,16 +14,16 @@ namespace raylib {
  */
 class Material : public ::Material {
 public:
-    Material(const ::Material& material) { set(material); }
+    Material(const ::Material& material) : ::Material(material) {  }
 
     /**
      * 加载默认材质（支持：漫反射、镜面反射、法线贴图）
      */
-    Material() { set(LoadMaterialDefault()); }
+    Material() : ::Material(LoadMaterialDefault()) { }
 
     Material(const Material&) = delete;
 
-    Material(Material&& other) {
+    Material(Material&& other) noexcept {
         set(other);
 
         other.maps = nullptr;
@@ -105,7 +105,7 @@ public:
     /**
      * 检查材质是否准备就绪
      */
-    bool IsValid() const { return ::IsMaterialValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsMaterialValid(*this); }
 protected:
     void set(const ::Material& material) {
         shader = material.shader;

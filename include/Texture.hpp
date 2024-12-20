@@ -29,7 +29,7 @@ public:
     /**
      * 移动构造函数。
      */
-    Texture(Texture&& other) {
+    Texture(Texture&& other)  noexcept {
         set(other);
 
         other.id = 0;

@@ -9,7 +9,6 @@
 #include "./Matrix.hpp"
 #include "./Model.hpp"
 #include "./raylib-cpp-utils.hpp"
-#include "./raylib.hpp"
 
 namespace raylib {
 
@@ -201,12 +200,12 @@ public:
     /**
      * 计算网格的包围盒限制
      */
-    raylib::BoundingBox BoundingBox() const { return ::GetMeshBoundingBox(*this); }
+    [[nodiscard]] raylib::BoundingBox BoundingBox() const { return ::GetMeshBoundingBox(*this); }
 
     /**
      * 计算网格的包围盒限制
      */
-    operator raylib::BoundingBox() { return BoundingBox(); }
+    operator raylib::BoundingBox() const { return BoundingBox(); }
 
     /**
      * 计算网格的切线
@@ -219,7 +218,7 @@ public:
     /**
      * 从生成的网格加载模型
      */
-    raylib::Model LoadModelFrom() const { return ::LoadModelFromMesh(*this); }
+    [[nodiscard]] raylib::Model LoadModelFrom() const { return ::LoadModelFromMesh(*this); }
 
     /**
      * 从生成的网格加载模型

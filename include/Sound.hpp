@@ -31,7 +31,7 @@ public:
         // 无操作。
     }
 
-    Sound(Sound&& other) {
+    Sound(Sound&& other) noexcept {
         set(other);
 
         other.stream = {nullptr, nullptr, 0, 0, 0};
@@ -132,7 +132,7 @@ public:
     /**
      * 检查声音是否正在播放
      */
-    bool IsPlaying() const { return ::IsSoundPlaying(*this); }
+    [[nodiscard]] bool IsPlaying() const { return ::IsSoundPlaying(*this); }
 
     /**
      * 设置声音的音量（1.0 是最大音量）
@@ -187,7 +187,7 @@ public:
      *
      * @return 根据声音缓冲区是否已加载返回 true 或 false。
      */
-    bool IsValid() const { return ::IsSoundValid(*this); }
+    [[nodiscard]] bool IsValid() const { return ::IsSoundValid(*this); }
 protected:
     void set(const ::Sound& sound) {
         frameCount = sound.frameCount;

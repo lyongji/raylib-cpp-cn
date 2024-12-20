@@ -22,7 +22,7 @@ public:
         void* ctxData = nullptr)
         : ::Music{stream, frameCount, looping, ctxType, ctxData} {}
 
-    Music(const ::Music& music) { set(music); }
+    Music(const ::Music& music) : ::Music(music) { }
 
     /**
      * 从文件加载音乐流
@@ -40,7 +40,7 @@ public:
 
     Music(const Music&) = delete;
 
-    Music(Music&& other) {
+    Music(Music&& other) noexcept {
         set(other);
 
         other.stream = {};
@@ -141,7 +141,7 @@ public:
     /**
      * 检查音乐是否正在播放
      */
-    bool IsPlaying() const { return ::IsMusicStreamPlaying(*this); }
+    [[nodiscard]] bool IsPlaying() const { return ::IsMusicStreamPlaying(*this); }
 
     /**
      * 设置音乐的音量
@@ -170,12 +170,12 @@ public:
     /**
      * 获取音乐的总时长（以秒为单位）
      */
-    float GetTimeLength() const { return ::GetMusicTimeLength(*this); }
+    [[nodiscard]] float GetTimeLength() const { return ::GetMusicTimeLength(*this); }
 
     /**
      * 获取当前播放的音乐时间（以秒为单位）
      */
-    float GetTimePlayed() const { return ::GetMusicTimePlayed(*this); }
+    [[nodiscard]] float GetTimePlayed() const { return ::GetMusicTimePlayed(*this); }
 
     /**
      * 从文件加载音乐流

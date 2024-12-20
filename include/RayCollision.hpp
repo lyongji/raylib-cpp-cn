@@ -11,7 +11,7 @@ namespace raylib {
  */
 class RayCollision : public ::RayCollision {
 public:
-    RayCollision(const ::RayCollision& ray) { set(ray); }
+    RayCollision(const ::RayCollision& ray) : ::RayCollision(ray) { }
 
     RayCollision(bool hit, float distance, ::Vector3 point, ::Vector3 normal)
         : ::RayCollision{hit, distance, point, normal} {
@@ -21,34 +21,41 @@ public:
     /**
      * 获取光线与包围盒的碰撞信息
      */
-    RayCollision(const ::Ray& ray, const ::BoundingBox& box) { set(::GetRayCollisionBox(ray, box)); }
+    RayCollision(const ::Ray& ray, const ::BoundingBox& box)
+        : ::RayCollision(::GetRayCollisionBox(ray, box)) {
+        // Nothing.
+    }
 
     /**
      * 获取光线与网格的碰撞信息
      */
-    RayCollision(const ::Ray& ray, const ::Mesh& mesh, const ::Matrix& transform) {
-        set(::GetRayCollisionMesh(ray, mesh, transform));
+    RayCollision(const ::Ray& ray, const ::Mesh& mesh, const ::Matrix& transform)
+        : ::RayCollision(::GetRayCollisionMesh(ray, mesh, transform)) {
+        // Nothing.
     }
 
     /**
      * 获取光线与四边形的碰撞信息
      */
-    RayCollision(const ::Ray& ray, ::Vector3 p1, ::Vector3 p2, ::Vector3 p3, ::Vector3 p4) {
-        set(::GetRayCollisionQuad(ray, p1, p2, p3, p4));
+    RayCollision(const ::Ray& ray, ::Vector3 p1, ::Vector3 p2, ::Vector3 p3, ::Vector3 p4)
+        : ::RayCollision(::GetRayCollisionQuad(ray, p1, p2, p3, p4)) {
+        // Nothing.
     }
 
     /**
      * 获取光线与球体的碰撞信息
      */
-    RayCollision(const ::Ray& ray, ::Vector3 center, float radius) {
-        set(::GetRayCollisionSphere(ray, center, radius));
+    RayCollision(const ::Ray& ray, ::Vector3 center, float radius)
+        : ::RayCollision(::GetRayCollisionSphere(ray, center, radius)) {
+        // Nothing.
     }
 
     /**
      * 获取光线与三角形的碰撞信息
      */
-    RayCollision(const ::Ray& ray, ::Vector3 p1, ::Vector3 p2, ::Vector3 p3) {
-        set(::GetRayCollisionTriangle(ray, p1, p2, p3));
+    RayCollision(const ::Ray& ray, ::Vector3 p1, ::Vector3 p2, ::Vector3 p3)
+        : ::RayCollision(::GetRayCollisionTriangle(ray, p1, p2, p3)) {
+        // Nothing.
     }
 
     RayCollision& operator=(const ::RayCollision& ray) {
