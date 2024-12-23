@@ -146,8 +146,8 @@ public:
     /**
      * 设置音乐的音量
      */
-    音乐流& 设音量(float volume) {
-        ::SetMusicVolume(*this, volume);
+    音乐流& 设音量(float 音量) {
+        ::SetMusicVolume(*this, 音量);
         return *this;
     }
 
@@ -208,12 +208,12 @@ public:
      */
     bool 是有效() const { return ::IsMusicValid(*this); }
 protected:
-    void 设(const ::Music& music) {
-        stream = music.stream;
-        frameCount = music.frameCount;
-        looping = music.looping;
-        ctxType = music.ctxType;
-        ctxData = music.ctxData;
+    void 设(const ::Music& 音乐) {
+        stream = 音乐.stream;
+        frameCount = 音乐.frameCount;
+        looping = 音乐.looping;
+        ctxType = 音乐.ctxType;
+        ctxData = 音乐.ctxData;
     }
 };
 } // namespace raylib

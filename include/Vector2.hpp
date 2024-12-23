@@ -53,7 +53,7 @@ public:
     /**
      * 将两个向量相加 (v1 + v2)
      */
-    Vector2 Add(const ::Vector2& vector2) const { return Vector2Add(*this, vector2); }
+    Vector2 加(const ::Vector2& vector2) const { return Vector2Add(*this, vector2); }
 
     /**
      * 将两个向量相加 (v1 + v2)
@@ -72,7 +72,7 @@ public:
     /**
      * 将两个向量相减 (v1 - v2)
      */
-    [[nodiscard]] Vector2 Subtract(const ::Vector2& vector2) const { return Vector2Subtract(*this, vector2); }
+    [[nodiscard]] Vector2 减(const ::Vector2& vector2) const { return Vector2Subtract(*this, vector2); }
 
     /**
      * 将两个向量相减 (v1 - v2)
@@ -91,7 +91,7 @@ public:
     /**
      * 向量取反
      */
-    [[nodiscard]] Vector2 Negate() const { return Vector2Negate(*this); }
+    [[nodiscard]] Vector2 取反() const { return Vector2Negate(*this); }
 
     /**
      * 向量取反
@@ -101,7 +101,7 @@ public:
     /**
      * 向量与向量相乘
      */
-    [[nodiscard]] Vector2 Multiply(const ::Vector2& vector2) const { return Vector2Multiply(*this, vector2); }
+    [[nodiscard]] Vector2 乘(const ::Vector2& vector2) const { return Vector2Multiply(*this, vector2); }
 
     /**
      * 向量与向量相乘
@@ -120,7 +120,7 @@ public:
     /**
      * 向量缩放（乘以值）
      */
-    [[nodiscard]] Vector2 Scale(const float scale) const { return Vector2Scale(*this, scale); }
+    [[nodiscard]] Vector2 缩放(const float scale) const { return Vector2Scale(*this, scale); }
 
     /**
      * 向量缩放（乘以值）
@@ -139,7 +139,7 @@ public:
     /**
      * 向量除以向量
      */
-    [[nodiscard]] Vector2 Divide(const ::Vector2& vector2) const { return Vector2Divide(*this, vector2); }
+    [[nodiscard]] Vector2 除(const ::Vector2& vector2) const { return Vector2Divide(*this, vector2); }
 
     /**
      * 向量除以向量
@@ -158,12 +158,12 @@ public:
     /**
      * 向量除以值
      */
-    [[nodiscard]] Vector2 Divide(const float div) const { return ::Vector2{x / div, y / div}; }
+    [[nodiscard]] Vector2 除(const float div) const { return ::Vector2{x / div, y / div}; }
 
     /**
      * 向量除以值
      */
-    Vector2 operator/(const float div) const { return Divide(div); }
+    Vector2 operator/(const float div) const { return 除(div); }
 
     /**
      * 向量除以值

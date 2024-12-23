@@ -150,7 +150,7 @@ public:
     /**
      * 切换窗口状态：全屏/窗口化
      */
-    窗口& ToggleFullscreen() {
+    窗口& 切换为全屏() {
         ::ToggleFullscreen();
         return *this;
     }
@@ -158,15 +158,15 @@ public:
     /**
      * 设置应用程序是否应为全屏模式
      */
-    窗口& SetFullscreen(bool fullscreen) {
-        if (fullscreen) {
+    窗口& 设为全屏(bool 全屏) {
+        if (全屏) {
             if (!是全屏()) {
-                ToggleFullscreen();
+                切换为全屏();
             }
         }
         else {
             if (是全屏()) {
-                ToggleFullscreen();
+                切换为全屏();
             }
         }
 
@@ -176,7 +176,7 @@ public:
     /**
      * 切换窗口状态：无边框/窗口化
      */
-    窗口& ToggleBorderless() {
+    窗口& 切换为无边框() {
         ::ToggleBorderlessWindowed();
         return *this;
     }
@@ -184,7 +184,7 @@ public:
     /**
      * 设置窗口状态：最大化（仅限 PLATFORM_DESKTOP）
      */
-    窗口& Maximize() {
+    窗口& 设为最大化() {
         ::MaximizeWindow();
         return *this;
     }
@@ -192,7 +192,7 @@ public:
     /**
      * 设置窗口状态：最小化（仅限 PLATFORM_DESKTOP）
      */
-    窗口& Minimize() {
+    窗口& 设为最小化() {
         ::MinimizeWindow();
         return *this;
     }
@@ -200,7 +200,7 @@ public:
     /**
      * 设置窗口状态：恢复到正常大小（仅限 PLATFORM_DESKTOP）
      */
-    窗口& Restore() {
+    窗口& 恢复默认() {
         ::RestoreWindow();
         return *this;
     }
@@ -208,31 +208,31 @@ public:
     /**
      * 设置窗口图标
      */
-    窗口& SetIcon(const ::Image& image) {
-        ::SetWindowIcon(image);
+    窗口& 设图标(const ::Image& 图像) {
+        ::SetWindowIcon(图像);
         return *this;
     }
 
     /**
      * 设置窗口图标（多个图像，RGBA 32 位，仅限 PLATFORM_DESKTOP）
      */
-    窗口& SetIcons(Image* images, int count) {
-        ::SetWindowIcons(images, count);
+    窗口& 设多个图标(Image* 图像组, int 数量) {
+        ::SetWindowIcons(图像组, 数量);
         return *this;
     }
 
     /**
      * 设置窗口标题
      */
-    窗口& SetTitle(const std::string& title) {
-        ::SetWindowTitle(title.c_str());
+    窗口& 设标题(const std::string& 标题) {
+        ::SetWindowTitle(标题.c_str());
         return *this;
     }
 
     /**
      * 设置窗口在屏幕上的位置
      */
-    窗口& SetPosition(int x, int y) {
+    窗口& 设位置(int x, int y) {
         ::SetWindowPosition(x, y);
         return *this;
     }
@@ -240,54 +240,52 @@ public:
     /**
      * 设置窗口在屏幕上的位置
      */
-    窗口& SetPosition(const ::Vector2& position) {
-        return SetPosition(static_cast<int>(position.x), static_cast<int>(position.y));
-    }
+    窗口& 设位置(const ::Vector2& 位置) { return 设位置(static_cast<int>(位置.x), static_cast<int>(位置.y)); }
 
     /**
      * 设置当前窗口的显示器
      */
-    窗口& SetMonitor(int monitor) {
-        ::SetWindowMonitor(monitor);
+    窗口& 设显示器(int 显示器) {
+        ::SetWindowMonitor(显示器);
         return *this;
     }
 
     /**
      * 设置窗口的最小尺寸
      */
-    窗口& SetMinSize(int width, int height) {
-        ::SetWindowMinSize(width, height);
+    窗口& 设最小尺寸(int 宽, int 高) {
+        ::SetWindowMinSize(宽, 高);
         return *this;
     }
 
     /**
      * 设置窗口的最小尺寸
      */
-    窗口& SetMinSize(const ::Vector2& size) {
-        ::SetWindowMinSize(static_cast<int>(size.x), static_cast<int>(size.y));
+    窗口& 设最小尺寸(const ::Vector2& 尺寸) {
+        ::SetWindowMinSize(static_cast<int>(尺寸.x), static_cast<int>(尺寸.y));
         return *this;
     }
 
     /**
      * 设置窗口的尺寸
      */
-    窗口& SetSize(int width, int height) {
-        ::SetWindowSize(width, height);
+    窗口& 设尺寸(int 宽, int 高) {
+        ::SetWindowSize(宽, 高);
         return *this;
     }
 
     /**
      * 设置窗口的不透明度 [0.0f..1.0f]（仅限 PLATFORM_DESKTOP）
      */
-    窗口& SetOpacity(float opacity) {
-        ::SetWindowOpacity(opacity);
+    窗口& 设不透明度(float 不透明度) {
+        ::SetWindowOpacity(不透明度);
         return *this;
     }
 
     /**
      * 设置窗口聚焦（仅限 PLATFORM_DESKTOP）
      */
-    窗口& SetFocused() {
+    窗口& 设聚焦() {
         ::SetWindowFocused();
         return *this;
     }
@@ -295,22 +293,22 @@ public:
     /**
      * 设置窗口的尺寸
      */
-    窗口& SetSize(const ::Vector2& size) { return SetSize(static_cast<int>(size.x), static_cast<int>(size.y)); }
+    窗口& 设尺寸(const ::Vector2& 尺寸) { return 设尺寸(static_cast<int>(尺寸.x), static_cast<int>(尺寸.y)); }
 
     /**
      * 获取屏幕的宽度和高度
      */
-    static Vector2 GetSize() { return {static_cast<float>(GetWidth()), static_cast<float>(GetHeight())}; }
+    static Vector2 取尺寸() { return {static_cast<float>(取宽度()), static_cast<float>(取高度())}; }
 
     /**
-     * 获取窗口的句柄
+     * 获取窗口的资源标识符Handle
      */
-    static void* GetHandle() { return ::GetWindowHandle(); }
+    static void* 取资源标识符() { return ::GetWindowHandle(); }
 
     /**
      * 设置画布（帧缓冲区）开始绘制
      */
-    窗口& BeginDrawing() {
+    窗口& 开始绘制() {
         ::BeginDrawing();
         return *this;
     }
@@ -318,7 +316,7 @@ public:
     /**
      * 结束画布绘制并交换缓冲区（双缓冲）
      */
-    窗口& EndDrawing() {
+    窗口& 结束绘制() {
         ::EndDrawing();
         return *this;
     }
@@ -326,47 +324,47 @@ public:
     /**
      * 获取当前屏幕宽度
      */
-    static int GetWidth() { return ::GetScreenWidth(); }
+    static int 取宽度() { return ::GetScreenWidth(); }
 
     /**
      * 获取当前屏幕高度
      */
-    static int GetHeight() { return ::GetScreenHeight(); }
+    static int 取高度() { return ::GetScreenHeight(); }
 
     /**
      * 获取当前渲染宽度（考虑 HiDPI）
      */
-    static int GetRenderWidth() { return ::GetRenderWidth(); }
+    static int 取渲染宽度() { return ::GetRenderWidth(); }
 
     /**
      * 获取当前渲染高度（考虑 HiDPI）
      */
-    static int GetRenderHeight() { return ::GetRenderHeight(); }
+    static int 取渲染高度() { return ::GetRenderHeight(); }
 
     /**
      * 获取窗口在显示器上的位置 XY
      */
-    static Vector2 GetPosition() { return ::GetWindowPosition(); }
+    static Vector2 取位置() { return ::GetWindowPosition(); }
 
     /**
      * 获取窗口的缩放 DPI 因子
      */
-    static Vector2 GetScaleDPI() { return ::GetWindowScaleDPI(); }
+    static Vector2 取缩放DPI() { return ::GetWindowScaleDPI(); }
 
     /**
      * 设置剪贴板文本内容
      */
-    static void SetClipboardText(const std::string& text) { ::SetClipboardText(text.c_str()); }
+    static void 设剪贴板文本(const std::string& text) { ::SetClipboardText(text.c_str()); }
 
     /**
      * 获取剪贴板文本内容
      */
-    static std::string GetClipboardText() { return ::GetClipboardText(); }
+    static std::string 取剪贴板文本() { return ::GetClipboardText(); }
 
     /**
      * 设置目标 FPS（最大值）
      */
-    窗口& SetTargetFPS(int fps) {
+    窗口& 设目标FPS(int fps) {
         ::SetTargetFPS(fps);
         return *this;
     }
@@ -374,27 +372,27 @@ public:
     /**
      * 返回当前 FPS
      */
-    static int GetFPS() { return ::GetFPS(); }
+    static int 取FPS() { return ::GetFPS(); }
 
     /**
      * 绘制当前 FPS
      */
-    static void DrawFPS(int posX = 10, int posY = 10) { ::DrawFPS(posX, posY); }
+    static void 绘制FPS(int posX = 10, int posY = 10) { ::DrawFPS(posX, posY); }
 
     /**
      * 返回上一帧绘制的时间（秒）
      */
-    static float GetFrameTime() { return ::GetFrameTime(); }
+    static float 取上帧时间() { return ::GetFrameTime(); }
 
     /**
      * 返回自 InitWindow() 以来的时间（秒）
      */
-    static double GetTime() { return ::GetTime(); }
+    static double 取时间() { return ::GetTime(); }
 
     /**
      * 检查窗口是否已成功初始化
      */
-    static bool IsReady() { return ::IsWindowReady(); }
+    static bool 是就绪() { return ::IsWindowReady(); }
 
     /**
      * 设置 raylib 的配置标志
@@ -403,10 +401,10 @@ public:
      *
      * @see ::SetConfigFlags
      */
-    static void SetConfigFlags(unsigned int flags) { ::SetConfigFlags(flags); }
+    static void 设配置选项(unsigned int 选项) { ::SetConfigFlags(选项); }
 };
 } // namespace raylib
 
-using RWindow = raylib::窗口;
+using R窗口 = raylib::窗口;
 
 // #endif // RAYLIB_CPP_INCLUDE_WINDOW_HPP_

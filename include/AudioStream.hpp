@@ -161,7 +161,7 @@ public:
     /**
      * 设置新音频流的默认缓冲区大小
      */
-    static void 设缓存大小为默认(int size) { ::SetAudioStreamBufferSizeDefault(size); }
+    static void 设缓存大小为默认(int 大小) { ::SetAudioStreamBufferSizeDefault(大小); }
 
     /**
      * 音频线程回调以请求新数据
@@ -196,12 +196,12 @@ public:
         }
     }
 protected:
-    void 设(const ::AudioStream& stream) {
-        buffer = stream.buffer;
-        processor = stream.processor;
-        sampleRate = stream.sampleRate;
-        sampleSize = stream.sampleSize;
-        channels = stream.channels;
+    void 设(const ::AudioStream& 音频流) {
+        buffer = 音频流.buffer;
+        processor = 音频流.processor;
+        sampleRate = 音频流.sampleRate;
+        sampleSize = 音频流.sampleSize;
+        channels = 音频流.channels;
     }
 };
 } // namespace raylib

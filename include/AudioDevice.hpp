@@ -19,8 +19,8 @@ public:
      *
      * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
-    explicit 音频设备(bool lateInit = false) {
-        if (!lateInit) {
+    explicit 音频设备(bool 延迟初始化 = false) {
+        if (!延迟初始化) {
             初始化();
         }
     }

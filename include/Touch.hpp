@@ -9,44 +9,44 @@ namespace raylib {
 /**
  * 输入相关函数：触摸
  */
-namespace Touch {
+namespace 触摸 {
 /**
  * 获取触摸点 0 的触摸位置 X（相对于屏幕大小）
  */
-[[maybe_unused]] RLCPPAPI inline int GetX() {
+[[maybe_unused]] RLCPPAPI inline int 取X() {
     return ::GetTouchX();
 }
 
 /**
  * 获取触摸点 0 的触摸位置 Y（相对于屏幕大小）
  */
-[[maybe_unused]] RLCPPAPI inline int GetY() {
+[[maybe_unused]] RLCPPAPI inline int 取Y() {
     return ::GetTouchY();
 }
 
 /**
  * 获取触摸点索引的触摸位置 XY（相对于屏幕大小）
  */
-[[maybe_unused]] RLCPPAPI inline Vector2 GetPosition(int index) {
-    return ::GetTouchPosition(index);
+[[maybe_unused]] RLCPPAPI inline Vector2 取位置(int 索引) {
+    return ::GetTouchPosition(索引);
 }
 
 /**
  * 获取给定索引的触摸点标识符
  */
-[[maybe_unused]] RLCPPAPI inline int GetPointId(int index) {
-    return ::GetTouchPointId(index);
+[[maybe_unused]] RLCPPAPI inline int 取点ID(int 索引) {
+    return ::GetTouchPointId(索引);
 }
 
 /**
  * 获取触摸点数量
  */
-[[maybe_unused]] RLCPPAPI inline int GetPointCount() {
+[[maybe_unused]] RLCPPAPI inline int 取点数量() {
     return ::GetTouchPointCount();
 }
-} // namespace Touch
+} // namespace 触摸
 } // namespace raylib
 
-namespace RTouch = raylib::Touch;
+namespace R触摸 = raylib::触摸;
 
 // #endif // RAYLIB_CPP_INCLUDE_TOUCH_HPP_

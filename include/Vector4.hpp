@@ -46,7 +46,7 @@ public:
 
     bool operator!=(const ::Vector4& other) const { return !(*this == other); }
 
-    [[nodiscard]] ::Rectangle ToRectangle() const { return {x, y, z, w}; }
+    [[nodiscard]] ::Rectangle 转矩形() const { return {x, y, z, w}; }
 
     operator ::Rectangle() const { return {x, y, z, w}; }
 
@@ -55,7 +55,7 @@ public:
     operator std::string() const { return ToString(); }
 
 #ifndef RAYLIB_CPP_NO_MATH
-    [[nodiscard]] Vector4 Multiply(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }
+    [[nodiscard]] Vector4 乘(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }
 
     /// 重载*运算符，实现四元数与向量的乘法
     Vector4 operator*(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }

@@ -164,13 +164,13 @@ public:
     /**
      * 使用材质和变换矩阵绘制3D网格
      */
-    void 绘制(const ::Material& material, const ::Matrix& transform) const { ::DrawMesh(*this, material, transform); }
+    void 绘制(const ::Material& 材质, const ::Matrix& 变换矩阵) const { ::DrawMesh(*this, 材质, 变换矩阵); }
 
     /**
      * 使用材质和不同的变换矩阵绘制多个网格实例
      */
-    void 绘制(const ::Material& material, ::Matrix* transforms, int instances) const {
-        ::DrawMeshInstanced(*this, material, transforms, instances);
+    void 绘制(const ::Material& 材质, ::Matrix* 变换矩阵, int 实例数) const {
+        ::DrawMeshInstanced(*this, 材质, 变换矩阵, 实例数);
     }
 
     /**
@@ -178,9 +178,9 @@ public:
      *
      * @throws raylib::RaylibException 如果导出网格失败，则抛出异常。
      */
-    void 导出(const std::string& fileName) {
-        if (!::ExportMesh(*this, fileName.c_str())) {
-            throw Raylib异常("Failed to export the Mesh");
+    void 导出(const std::string& 文件名) {
+        if (!::ExportMesh(*this, 文件名.c_str())) {
+            throw Raylib异常("导出网格失败");
         }
     }
 
@@ -189,9 +189,9 @@ public:
      *
      * @throws raylib::RaylibException 如果导出网格失败，则抛出异常。
      */
-    void 导出为代码(const std::string& fileName) {
-        if (!::ExportMeshAsCode(*this, fileName.c_str())) {
-            throw Raylib异常("Failed to export the Mesh");
+    void 导出为代码(const std::string& 文件名) {
+        if (!::ExportMeshAsCode(*this, 文件名.c_str())) {
+            throw Raylib异常("导出网格失败");
         }
     }
 

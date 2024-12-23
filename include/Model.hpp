@@ -15,9 +15,7 @@ class 网格;
  */
 class 模型 : public ::Model {
 public:
-    模型() {
-        // 无操作
-    }
+    模型() = default;
 
     /*
      * 从另一个模型复制模型。

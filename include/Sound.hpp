@@ -175,10 +175,10 @@ public:
      *
      * @throws raylib::RaylibException 如果声音加载失败，抛出异常。
      */
-    void 加载(const ::Wave& wave) {
-        设(::LoadSoundFromWave(wave));
+    void 加载(const ::Wave& 波形) {
+        设(::LoadSoundFromWave(波形));
         if (!是有效()) {
-            throw Raylib异常("加载 Wave 失败");
+            throw Raylib异常("加载波形失败");
         }
     }
 

@@ -97,15 +97,15 @@ public:
      */
     [[nodiscard]] bool 是有效(const ::Model& 模型) const { return ::IsModelAnimationValid(模型, *this); }
 protected:
-    void 设(const ::ModelAnimation& model) {
-        boneCount = model.boneCount;
-        frameCount = model.frameCount;
-        bones = model.bones;
-        framePoses = model.framePoses;
+    void 设(const ::ModelAnimation& 模型) {
+        boneCount = 模型.boneCount;
+        frameCount = 模型.frameCount;
+        bones = 模型.bones;
+        framePoses = 模型.framePoses;
 
         // 复制名称。TextCopy() 使用空终止符，这里忽略。
         for (int i = 0; i < 32; i++) {
-            name[i] = model.name[i];
+            name[i] = 模型.name[i];
         }
     }
 };

@@ -29,8 +29,8 @@ public:
     GETTERSETTER(::Vector3, 最小值, min)
     GETTERSETTER(::Vector3, 最大值, max)
 
-    包围盒& operator=(const ::BoundingBox& box) {
-        设(box);
+    包围盒& operator=(const ::BoundingBox& 包围盒) {
+        设(包围盒);
         return *this;
     }
 
@@ -59,9 +59,9 @@ public:
      */
     RayCollision 取碰撞信息(const ::Ray& 射线) const { return GetRayCollisionBox(射线, *this); }
 protected:
-    void 设(const ::BoundingBox& box) {
-        min = box.min;
-        max = box.max;
+    void 设(const ::BoundingBox& 包围盒) {
+        min = 包围盒.min;
+        max = 包围盒.max;
     }
     void 设(const ::Vector3& _min, const ::Vector3& _max) {
         min = _min;

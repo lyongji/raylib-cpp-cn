@@ -107,13 +107,13 @@ public:
      */
     [[nodiscard]] bool 是就绪() const { return ::IsMaterialValid(*this); }
 protected:
-    void 设(const ::Material& material) {
-        shader = material.shader;
-        maps = material.maps;
-        params[0] = material.params[0];
-        params[1] = material.params[1];
-        params[2] = material.params[2];
-        params[3] = material.params[3];
+    void 设(const ::Material& 材质) {
+        shader = 材质.shader;
+        maps = 材质.maps;
+        params[0] = 材质.params[0];
+        params[1] = 材质.params[1];
+        params[2] = 材质.params[2];
+        params[3] = 材质.params[3];
     }
 };
 } // namespace raylib

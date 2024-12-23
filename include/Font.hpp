@@ -320,13 +320,13 @@ public:
         return ::ImageTextEx(*this, 文本.c_str(), 字体大小, 间距, 色调);
     }
 protected:
-    void 设(const ::Font& font) {
-        baseSize = font.baseSize;
-        glyphCount = font.glyphCount;
-        glyphPadding = font.glyphPadding;
-        texture = font.texture;
-        recs = font.recs;
-        glyphs = font.glyphs;
+    void 设(const ::Font& 字体) {
+        baseSize = 字体.baseSize;
+        glyphCount = 字体.glyphCount;
+        glyphPadding = 字体.glyphPadding;
+        texture = 字体.texture;
+        recs = 字体.recs;
+        glyphs = 字体.glyphs;
     }
 };
 } // namespace raylib

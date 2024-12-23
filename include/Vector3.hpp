@@ -48,7 +48,7 @@ public:
     /**
      * 向量相加
      */
-    [[nodiscard]] Vector3 Add(const ::Vector3& vector3) const { return Vector3Add(*this, vector3); }
+    [[nodiscard]] Vector3 加(const ::Vector3& vector3) const { return Vector3Add(*this, vector3); }
 
     /**
      * 向量相加
@@ -64,7 +64,7 @@ public:
     /**
      * 向量相减
      */
-    [[nodiscard]] Vector3 Subtract(const ::Vector3& vector3) const { return Vector3Subtract(*this, vector3); }
+    [[nodiscard]] Vector3 减(const ::Vector3& vector3) const { return Vector3Subtract(*this, vector3); }
 
     /**
      * 向量相减
@@ -80,7 +80,7 @@ public:
     /**
      * 向量取反（反转方向）
      */
-    [[nodiscard]] Vector3 Negate() const { return Vector3Negate(*this); }
+    [[nodiscard]] Vector3 取反() const { return Vector3Negate(*this); }
 
     /**
      * 向量取反（反转方向）
@@ -90,7 +90,7 @@ public:
     /**
      * 向量相乘
      */
-    [[nodiscard]] Vector3 Multiply(const ::Vector3& vector3) const { return Vector3Multiply(*this, vector3); }
+    [[nodiscard]] Vector3 乘(const ::Vector3& vector3) const { return Vector3Multiply(*this, vector3); }
 
     /**
      * 向量相乘
@@ -109,7 +109,7 @@ public:
     /**
      * 向量与标量相乘
      */
-    [[nodiscard]] Vector3 Scale(const float scaler) const { return Vector3Scale(*this, scaler); }
+    [[nodiscard]] Vector3 缩放(const float scaler) const { return Vector3Scale(*this, scaler); }
 
     /**
      * 向量与标量相乘
@@ -128,7 +128,7 @@ public:
     /**
      * 向量相除
      */
-    [[nodiscard]] Vector3 Divide(const ::Vector3& vector3) const { return Vector3Divide(*this, vector3); }
+    [[nodiscard]] Vector3 除(const ::Vector3& vector3) const { return Vector3Divide(*this, vector3); }
 
     /**
      * 向量相除
@@ -149,12 +149,12 @@ public:
     /**
      * 向量与值相除
      */
-    [[nodiscard]] Vector3 Divide(const float div) const { return ::Vector3{x / div, y / div, z / div}; }
+    [[nodiscard]] Vector3 除(const float div) const { return ::Vector3{x / div, y / div, z / div}; }
 
     /**
      * 向量与值相除
      */
-    Vector3 operator/(const float div) const { return Divide(div); }
+    Vector3 operator/(const float div) const { return 除(div); }
 
     /**
      * 向量与值相除

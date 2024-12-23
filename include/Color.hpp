@@ -37,9 +37,9 @@ public:
     /**
      * 从十六进制值获取颜色结构
      */
-    颜色(unsigned int hexValue) : ::Color(::GetColor(hexValue)) {}
+    颜色(unsigned int hex值) : ::Color(::GetColor(hex值)) {}
 
-    颜色(void* srcPtr, int format) : ::Color(::GetPixelColor(srcPtr, format)) {}
+    颜色(void* 源指针, int 格式) : ::Color(::GetPixelColor(源指针, 格式)) {}
 
     /**
      * 返回颜色的十六进制值
@@ -68,7 +68,7 @@ public:
     /**
      * 从归一化的值 [0..1] 返回颜色
      */
-    explicit 颜色(::Vector4 normalized) : Color(::ColorFromNormalized(normalized)) {}
+    explicit 颜色(::Vector4 归一化) : Color(::ColorFromNormalized(归一化)) {}
 
     /**
      * 返回颜色的 HSV 值
@@ -81,8 +81,8 @@ public:
     GETTERSETTER(unsigned char, B, b)
     GETTERSETTER(unsigned char, A, a)
 
-    颜色& operator=(const ::Color& color) {
-        设(color);
+    颜色& operator=(const ::Color& 颜色) {
+        设(颜色);
         return *this;
     }
 
