@@ -5,7 +5,6 @@
 #include <string>
 #include <vector>
 
-#include "./BoundingBox.hpp"
 #include "./MeshUnmanaged.hpp"
 #include "./Model.hpp"
 #include "./raylib-cpp-utils.hpp"
@@ -36,7 +35,7 @@ public:
     /**
      * 移动构造函数。
      */
-    网格(网格&& other) {
+    网格(网格&& other) noexcept {
         设(other);
 
         other.vertexCount = 0;

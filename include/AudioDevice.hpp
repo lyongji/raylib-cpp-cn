@@ -19,7 +19,7 @@ public:
      *
      * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
-    音频设备(bool lateInit = false) {
+    explicit 音频设备(bool lateInit = false) {
         if (!lateInit) {
             初始化();
         }
@@ -35,7 +35,7 @@ public:
      *
      * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
      */
-    void 初始化() {
+    static void 初始化() {
         ::InitAudioDevice();
         if (!是就绪()) {
             throw Raylib异常("音频设备初始化失败");
@@ -45,12 +45,12 @@ public:
     /**
      * 关闭音频设备和上下文。
      */
-    void 关闭() { ::CloseAudioDevice(); }
+    static void 关闭() { ::CloseAudioDevice(); }
 
     /**
      * 检查音频设备是否已成功初始化。
      */
-    bool 是就绪() const { return ::IsAudioDeviceReady(); }
+    static bool 是就绪() { return ::IsAudioDeviceReady(); }
 
     /**
      * 设置主音量（监听器）。

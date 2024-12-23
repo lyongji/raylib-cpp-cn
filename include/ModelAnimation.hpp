@@ -19,7 +19,7 @@ public:
 
     模型动画(const 模型动画&) = delete;
 
-    模型动画(模型动画&& other) {
+    模型动画(模型动画&& other) noexcept {
         设(other);
 
         other.boneCount = 0;
@@ -95,7 +95,7 @@ public:
     /**
      * 检查模型动画骨骼是否匹配
      */
-    bool 是有效(const ::Model& 模型) const { return ::IsModelAnimationValid(模型, *this); }
+    [[nodiscard]] bool 是有效(const ::Model& 模型) const { return ::IsModelAnimationValid(模型, *this); }
 protected:
     void 设(const ::ModelAnimation& model) {
         boneCount = model.boneCount;

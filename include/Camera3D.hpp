@@ -12,7 +12,7 @@ namespace raylib {
  */
 class 相机3D : public ::Camera3D {
 public:
-    相机3D(const ::Camera3D& 相机) { 设(相机); }
+    相机3D(const ::Camera3D& 相机) : ::Camera3D(相机) {}
 
     /**
      * 创建一个新的 相机3D。

@@ -19,7 +19,7 @@ public:
 
     着色器(const 着色器&) = delete;
 
-    着色器(着色器&& other) {
+    着色器(着色器&& other) noexcept {
         设(other);
 
         other.id = 0;

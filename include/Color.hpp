@@ -37,43 +37,44 @@ public:
     /**
      * 从十六进制值获取颜色结构
      */
-    颜色(unsigned int hexValue) { 设(::GetColor(hexValue)); }
+    颜色(unsigned int hexValue) : ::Color(::GetColor(hexValue)) {}
 
-    颜色(void* srcPtr, int format) { 设(::GetPixelColor(srcPtr, format)); }
-
-    /**
-     * 返回颜色的十六进制值
-     */
-    int 转整数() const { return ::ColorToInt(*this); }
+    颜色(void* srcPtr, int format) : ::Color(::GetPixelColor(srcPtr, format)) {}
 
     /**
      * 返回颜色的十六进制值
      */
-    operator int() const { return ::ColorToInt(*this); }
+    [[nodiscard]] int 转整数() const { return ::ColorToInt(*this); }
 
-    std::string 转文本() const { return TextFormat("颜色(%d, %d, %d, %d)", r, g, b, a); }
+    /**
+     * 返回颜色的十六进制值
+     */
+    explicit operator int() const { return ::ColorToInt(*this); }
 
-    operator std::string() const { return 转文本(); }
+    [[nodiscard]] std::string 转文本() const { return TextFormat("颜色(%d, %d, %d, %d)", r, g, b, a); }
+
+    explicit operator std::string() const { return 转文本(); }
 
     /**
      * 返回应用了 alpha 的颜色，alpha 的范围是 0.0f 到 1.0f
      */
-    颜色 透明化(float 透明度) const { return ::Fade(*this, 透明度); }
+    [[nodiscard]] 颜色 透明化(float 透明度) const { return ::Fade(*this, 透明度); }
 
     /**
      * 返回归一化的颜色，范围为 [0..1]
      */
-    Vector4 归一化() const { return ::ColorNormalize(*this); }
+    [[nodiscard]] Vector4 归一化() const { return ::ColorNormalize(*this); }
 
     /**
      * 从归一化的值 [0..1] 返回颜色
      */
-    颜色(::Vector4 normalized) { 设(::ColorFromNormalized(normalized)); }
+    explicit 颜色(::Vector4 normalized) : Color(::ColorFromNormalized(normalized)) {}
 
     /**
      * 返回颜色的 HSV 值
      */
-    Vector3 转HSV() const { return ::ColorToHSV(*this); }
+    [[nodiscard]] Vector3 转HSV() const { return ::ColorToHSV(*this); }
+
 
     GETTERSETTER(unsigned char, R, r)
     GETTERSETTER(unsigned char, G, g)
@@ -194,7 +195,7 @@ public:
     /**
      * 返回应用了 alpha 的颜色，alpha 的范围是 0.0f 到 1.0f
      */
-    颜色 透明度(float 透明值) const { return ::ColorAlpha(*this, 透明值); }
+    [[nodiscard]] 颜色 透明度(float 透明值) const { return ::ColorAlpha(*this, 透明值); }
 
     /// 返回颜色插值，参数为颜色color2和插值因子factor
     颜色 插值(::Color 颜色2, float 系数) { return ::ColorLerp(*this, 颜色2, 系数); }
@@ -202,7 +203,7 @@ public:
     /**
      * 返回 src 颜色与 dst 颜色进行 alpha 混合后的结果，并应用 tint 颜色
      */
-    颜色 透明混合(::Color 目标, ::Color 色调) const { return ::ColorAlphaBlend(目标, *this, 色调); }
+    [[nodiscard]] 颜色 透明混合(::Color 目标, ::Color 色调) const { return ::ColorAlphaBlend(目标, *this, 色调); }
 
     static 颜色 浅灰() { return LIGHTGRAY; }
     static 颜色 灰() { return GRAY; }

@@ -40,7 +40,7 @@ public:
 
     bool operator!=(const ::Vector3& other) const { return !(*this == other); }
 
-    std::string ToString() const { return TextFormat("Vector3(%f, %f, %f)", x, y, z); }
+    [[nodiscard]] std::string ToString() const { return TextFormat("Vector3(%f, %f, %f)", x, y, z); }
 
     operator std::string() const { return ToString(); }
 
@@ -48,7 +48,7 @@ public:
     /**
      * 向量相加
      */
-    Vector3 Add(const ::Vector3& vector3) const { return Vector3Add(*this, vector3); }
+    [[nodiscard]] Vector3 Add(const ::Vector3& vector3) const { return Vector3Add(*this, vector3); }
 
     /**
      * 向量相加
@@ -64,7 +64,7 @@ public:
     /**
      * 向量相减
      */
-    Vector3 Subtract(const ::Vector3& vector3) const { return Vector3Subtract(*this, vector3); }
+    [[nodiscard]] Vector3 Subtract(const ::Vector3& vector3) const { return Vector3Subtract(*this, vector3); }
 
     /**
      * 向量相减
@@ -80,7 +80,7 @@ public:
     /**
      * 向量取反（反转方向）
      */
-    Vector3 Negate() const { return Vector3Negate(*this); }
+    [[nodiscard]] Vector3 Negate() const { return Vector3Negate(*this); }
 
     /**
      * 向量取反（反转方向）
@@ -90,7 +90,7 @@ public:
     /**
      * 向量相乘
      */
-    Vector3 Multiply(const ::Vector3& vector3) const { return Vector3Multiply(*this, vector3); }
+    [[nodiscard]] Vector3 Multiply(const ::Vector3& vector3) const { return Vector3Multiply(*this, vector3); }
 
     /**
      * 向量相乘
@@ -109,7 +109,7 @@ public:
     /**
      * 向量与标量相乘
      */
-    Vector3 Scale(const float scaler) const { return Vector3Scale(*this, scaler); }
+    [[nodiscard]] Vector3 Scale(const float scaler) const { return Vector3Scale(*this, scaler); }
 
     /**
      * 向量与标量相乘
@@ -128,7 +128,7 @@ public:
     /**
      * 向量相除
      */
-    Vector3 Divide(const ::Vector3& vector3) const { return Vector3Divide(*this, vector3); }
+    [[nodiscard]] Vector3 Divide(const ::Vector3& vector3) const { return Vector3Divide(*this, vector3); }
 
     /**
      * 向量相除
@@ -149,7 +149,7 @@ public:
     /**
      * 向量与值相除
      */
-    Vector3 Divide(const float div) const { return ::Vector3{x / div, y / div, z / div}; }
+    [[nodiscard]] Vector3 Divide(const float div) const { return ::Vector3{x / div, y / div, z / div}; }
 
     /**
      * 向量与值相除
@@ -170,57 +170,48 @@ public:
     /**
      * 计算向量的长度
      */
-    float 长度() const { return Vector3Length(*this); }
+    [[nodiscard]] float 长度() const { return Vector3Length(*this); }
 
     /**
      * 计算向量的平方长度
      */
-    float 长度的平方() const { return Vector3LengthSqr(*this); }
+    [[nodiscard]] float 长度的平方() const { return Vector3LengthSqr(*this); }
 
-    /// 将向量归一化
-    Vector3 归一化() const { return Vector3Normalize(*this); }
+    [[nodiscard]] Vector3 归一化() const { return Vector3Normalize(*this); }
 
-    /// 计算两个向量的点积
-    float 点积(const ::Vector3& vector3) const { return Vector3DotProduct(*this, vector3); }
+    [[nodiscard]] float 点积(const ::Vector3& vector3) const { return Vector3DotProduct(*this, vector3); }
 
-    /// 计算两个向量之间的距离
-    float 距离(const ::Vector3& vector3) const { return Vector3Distance(*this, vector3); }
+    [[nodiscard]] float 距离(const ::Vector3& vector3) const { return Vector3Distance(*this, vector3); }
 
-    /// 计算两个向量之间的线性插值
-    Vector3 线性插值(const ::Vector3& vector3, const float 数量) const { return Vector3Lerp(*this, vector3, 数量); }
+    [[nodiscard]] Vector3 线性插值(const ::Vector3& vector3, const float 数量) const {
+        return Vector3Lerp(*this, vector3, 数量);
+    }
 
-    /// 计算两个向量的叉积
-    Vector3 叉积(const ::Vector3& vector3) const { return Vector3CrossProduct(*this, vector3); }
+    [[nodiscard]] Vector3 叉积(const ::Vector3& vector3) const { return Vector3CrossProduct(*this, vector3); }
 
-    /// 计算向量的垂直向量
-    Vector3 垂直向量() const { return Vector3Perpendicular(*this); }
+    [[nodiscard]] Vector3 垂直向量() const { return Vector3Perpendicular(*this); }
 
-    /// 计算向量的投影
-    Vector3 投影(const ::Vector3& vector3) const { return Vector3Project(*this, vector3); }
+    [[nodiscard]] Vector3 投影(const ::Vector3& vector3) const { return Vector3Project(*this, vector3); }
 
     /// 计算向量的拒识Reject
-    Vector3 拒识(const ::Vector3& vector3) const { return Vector3Reject(*this, vector3); }
+    [[nodiscard]] Vector3 拒识(const ::Vector3& vector3) const { return Vector3Reject(*this, vector3); }
 
     /// 对向量进行正交归一化
     void 正交归一化(::Vector3* vector3) { Vector3OrthoNormalize(this, vector3); }
 
-    /// 将向量进行矩阵变换
-    Vector3 变换(const ::Matrix& 矩阵) const { return Vector3Transform(*this, 矩阵); }
+    [[nodiscard]] Vector3 变换(const ::Matrix& 矩阵) const { return Vector3Transform(*this, 矩阵); }
 
-    /// 将向量进行四元数旋转
-    Vector3 四元数旋转(const ::Quaternion& 四元数) const { return Vector3RotateByQuaternion(*this, 四元数); }
+    [[nodiscard]] Vector3 四元数旋转(const ::Quaternion& 四元数) const {
+        return Vector3RotateByQuaternion(*this, 四元数);
+    }
 
-    /// 计算向量的反射
-    Vector3 反射(const ::Vector3& 法线) const { return Vector3Reflect(*this, 法线); }
+    [[nodiscard]] Vector3 反射(const ::Vector3& 法线) const { return Vector3Reflect(*this, 法线); }
 
-    /// 计算两个向量之间的最小值
-    Vector3 最小值(const ::Vector3& vector3) const { return Vector3Min(*this, vector3); }
+    [[nodiscard]] Vector3 最小值(const ::Vector3& vector3) const { return Vector3Min(*this, vector3); }
 
-    /// 计算两个向量之间的最大值
-    Vector3 最大值(const ::Vector3& vector3) const { return Vector3Max(*this, vector3); }
+    [[nodiscard]] Vector3 最大值(const ::Vector3& vector3) const { return Vector3Max(*this, vector3); }
 
-    /// 计算三个向量之间的重心
-    Vector3 重心(const ::Vector3& a, const ::Vector3& b, const ::Vector3& c) const {
+    [[nodiscard]] Vector3 重心(const ::Vector3& a, const ::Vector3& b, const ::Vector3& c) const {
         return Vector3Barycenter(*this, a, b, c);
     }
 
@@ -281,7 +272,7 @@ public:
     /**
      * 检测两个球体之间的碰撞
      */
-    bool 是碰撞(float 半径1, const ::Vector3& 球心2, float 半径2) const {
+    [[nodiscard]] bool 是碰撞(float 半径1, const ::Vector3& 球心2, float 半径2) const {
         return CheckCollisionSpheres(*this, 半径1, 球心2, 半径2);
     }
 protected:

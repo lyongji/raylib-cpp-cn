@@ -29,9 +29,9 @@ public:
     /**
      * 获取默认字体
      */
-    字体() { 设(::GetFontDefault()); }
+    字体() : ::Font(::GetFontDefault()) {}
 
-    字体(const ::Font& 字体) { 设(字体); }
+    字体(const ::Font& 字体) : ::Font(字体) {}
 
     /**
      * 从指定文件加载字体
@@ -97,7 +97,7 @@ public:
 
     字体(const 字体&) = delete;
 
-    字体(字体&& other) {
+    字体(字体&& other) noexcept {
         设(other);
 
         other.baseSize = 0;
@@ -218,7 +218,7 @@ public:
     /**
      * 返回字体是否准备好使用
      */
-    bool 是就绪() const { return ::IsFontValid(*this); }
+    [[nodiscard]] bool 是就绪() const { return ::IsFontValid(*this); }
 
     /**
      * 使用字体和附加参数绘制文本
@@ -290,33 +290,33 @@ public:
     /**
      * 测量字符串大小（用于字体）
      */
-    Vector2 测量文本(const char* 文本, float 字体大小, float 间距) const {
+    [[nodiscard]] Vector2 测量文本(const char* 文本, float 字体大小, float 间距) const {
         return ::MeasureTextEx(*this, 文本, 字体大小, 间距);
     }
 
     /**
      * 测量字符串大小（用于字体）
      */
-    Vector2 测量文本(const std::string& 文本, float 字体大小, float 间距) const {
+    [[nodiscard]] Vector2 测量文本(const std::string& 文本, float 字体大小, float 间距) const {
         return ::MeasureTextEx(*this, 文本.c_str(), 字体大小, 间距);
     }
 
     /**
      * 获取字体中 Unicode 字符的索引位置
      */
-    int 取字符索引(int 字符) const { return ::GetGlyphIndex(*this, 字符); }
+    [[nodiscard]] int 取字符索引(int 字符) const { return ::GetGlyphIndex(*this, 字符); }
 
     /**
      * 从文本创建图像（自定义精灵字体）
      */
-    ::Image 从文本生图(const char* 文本, float 字体大小, float 间距, ::Color 色调) const {
+    [[nodiscard]] ::Image 从文本生图(const char* 文本, float 字体大小, float 间距, ::Color 色调) const {
         return ::ImageTextEx(*this, 文本, 字体大小, 间距, 色调);
     }
 
     /**
      * 从文本创建图像（自定义精灵字体）
      */
-    ::Image 从文本生图(const std::string& 文本, float 字体大小, float 间距, ::Color 色调) const {
+    [[nodiscard]] ::Image 从文本生图(const std::string& 文本, float 字体大小, float 间距, ::Color 色调) const {
         return ::ImageTextEx(*this, 文本.c_str(), 字体大小, 间距, 色调);
     }
 protected:

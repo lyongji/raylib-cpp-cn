@@ -14,7 +14,7 @@ namespace raylib {
  */
 class 波形 : public ::Wave {
 public:
-    波形(const ::Wave& 波形数据) { 设(波形数据); }
+    波形(const ::Wave& 波形数据) : ::Wave(波形数据) {}
 
     波形(
         unsigned int 帧数 = 0,
@@ -44,7 +44,7 @@ public:
 
     波形(const 波形& other) { 设(other.复制()); }
 
-    波形(波形&& other) {
+    波形(波形&& other) noexcept {
         设(other);
 
         other.frameCount = 0;
@@ -101,7 +101,7 @@ public:
     /**
      * 复制波形数据到新的波形
      */
-    ::Wave 复制() const { return ::WaveCopy(*this); }
+    [[nodiscard]] ::Wave 复制() const { return ::WaveCopy(*this); }
 
     /**
      * 裁剪波形数据到定义的样本范围
@@ -195,7 +195,7 @@ public:
      *
      * @return 波形数据是否已加载的布尔值
      */
-    bool 是有效() const { return ::IsWaveValid(*this); }
+    [[nodiscard]] bool 是有效() const { return ::IsWaveValid(*this); }
 protected:
     void 设(const ::Wave& wave) {
         frameCount = wave.frameCount;

@@ -22,7 +22,7 @@ public:
     /*
      * 从另一个模型复制模型。
      */
-    模型(const ::Model& 模型) { 设(模型); }
+    模型(const ::Model& 模型) : ::Model(模型) {}
 
     /*
      * 从文件加载模型。
@@ -51,7 +51,7 @@ public:
 
     模型(const 模型&) = delete;
 
-    模型(模型&& other) {
+    模型(模型&& other) noexcept {
         设(other);
 
         other.meshCount = 0;
@@ -139,7 +139,9 @@ public:
     /**
      * 检查模型动画骨骼是否匹配
      */
-    bool 是有效的模型动画(const ::ModelAnimation& 动画) const { return ::IsModelAnimationValid(*this, 动画); }
+    [[nodiscard]] bool 是有效的模型动画(const ::ModelAnimation& 动画) const {
+        return ::IsModelAnimationValid(*this, 动画);
+    }
 
     /**
      * 绘制模型（如果设置了纹理）
@@ -201,17 +203,17 @@ public:
     /**
      * 计算模型的包围盒限制（考虑所有网格）
      */
-    BoundingBox 取包围盒() const { return ::GetModelBoundingBox(*this); }
+    [[nodiscard]] BoundingBox 取包围盒() const { return ::GetModelBoundingBox(*this); }
 
     /**
      * 计算模型的包围盒限制（考虑所有网格）
      */
-    operator BoundingBox() const { return ::GetModelBoundingBox(*this); }
+    explicit operator BoundingBox() const { return ::GetModelBoundingBox(*this); }
 
     /**
      * 确定模型是否包含数据
      */
-    bool 是有效() const { return ::IsModelValid(*this); }
+    [[nodiscard]] bool 是有效() const { return ::IsModelValid(*this); }
 
     /**
      * 从给定文件加载模型

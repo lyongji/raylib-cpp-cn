@@ -14,7 +14,7 @@ namespace raylib {
  */
 class 材质 : public ::Material {
 public:
-    材质(const ::Material& 材质) { 设(材质); }
+    材质(const ::Material& 材质) : ::Material(材质) {}
 
     /**
      * 加载默认材质（支持：漫反射、镜面反射、法线贴图）
@@ -23,7 +23,7 @@ public:
 
     材质(const 材质&) = delete;
 
-    材质(材质&& other) {
+    材质(材质&& other) noexcept {
         设(other);
 
         other.maps = nullptr;
@@ -105,7 +105,7 @@ public:
     /**
      * 检查材质是否准备就绪
      */
-    bool 是就绪() const { return ::IsMaterialValid(*this); }
+    [[nodiscard]] bool 是就绪() const { return ::IsMaterialValid(*this); }
 protected:
     void 设(const ::Material& material) {
         shader = material.shader;

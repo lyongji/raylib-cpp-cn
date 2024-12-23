@@ -12,7 +12,7 @@ namespace raylib {
  */
 class 自动化事件列表 : public ::AutomationEventList {
 public:
-    自动化事件列表(const ::AutomationEventList& 自动化事件列表) { 设(自动化事件列表); }
+    自动化事件列表(const ::AutomationEventList& 自动化事件列表) : ::AutomationEventList(自动化事件列表) {}
 
     /**
      * 加载一个空的自动化事件列表。
@@ -28,7 +28,7 @@ public:
 
     自动化事件列表(const 自动化事件列表&) = delete;
 
-    自动化事件列表(自动化事件列表&& other) {
+    自动化事件列表(自动化事件列表&& other) noexcept {
         设(other);
 
         other.capacity = 0;

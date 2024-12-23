@@ -12,9 +12,10 @@ namespace raylib {
  */
 class 相机2D : public ::Camera2D {
 public:
-    相机2D(const ::Camera2D& 相机) { 设(相机); }
+    相机2D(const ::Camera2D& 相机) : ::Camera2D(相机) {}
 
-    相机2D() {}
+
+    相机2D() : ::Camera2D() {}
     相机2D(::Vector2 偏移量, ::Vector2 目标, float 旋转 = 0.0f, float 变焦 = 1.0f)
         : ::Camera2D{偏移量, 目标, 旋转, 变焦} {}
 
@@ -47,17 +48,17 @@ public:
     /**
      * 返回 2D 相机的变换矩阵
      */
-    Matrix 取矩阵() const { return ::GetCameraMatrix2D(*this); }
+    [[nodiscard]] Matrix 取矩阵() const { return ::GetCameraMatrix2D(*this); }
 
     /**
      * 返回 2D 相机屏幕空间位置对应的 2D 世界空间位置
      */
-    Vector2 取屏幕到世界(::Vector2 位置) const { return ::GetScreenToWorld2D(位置, *this); }
+    [[nodiscard]] Vector2 取屏幕到世界(::Vector2 位置) const { return ::GetScreenToWorld2D(位置, *this); }
 
     /**
      * 返回 2D 世界空间位置对应的 2D 屏幕空间位置
      */
-    Vector2 取世界到屏幕(::Vector2 位置) const { return ::GetWorldToScreen2D(位置, *this); }
+    [[nodiscard]] Vector2 取世界到屏幕(::Vector2 位置) const { return ::GetWorldToScreen2D(位置, *this); }
 protected:
     void 设(const ::Camera2D& 相机) {
         offset = 相机.offset;

@@ -31,7 +31,7 @@ public:
         // 无操作。
     }
 
-    音效(音效&& other) {
+    音效(音效&& other) noexcept {
         设(other);
 
         other.stream = {nullptr, nullptr, 0, 0, 0};
@@ -132,7 +132,7 @@ public:
     /**
      * 检查声音是否正在播放
      */
-    bool 是播放中() const { return ::IsSoundPlaying(*this); }
+    [[nodiscard]] bool 是播放中() const { return ::IsSoundPlaying(*this); }
 
     /**
      * 设置声音的音量（1.0 是最大音量）
@@ -187,7 +187,7 @@ public:
      *
      * @return 根据声音缓冲区是否已加载返回 true 或 false。
      */
-    bool 是有效() const { return ::IsSoundValid(*this); }
+    [[nodiscard]] bool 是有效() const { return ::IsSoundValid(*this); }
 protected:
     void 设(const ::Sound& 音效) {
         frameCount = 音效.frameCount;

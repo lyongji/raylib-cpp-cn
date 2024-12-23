@@ -19,9 +19,7 @@ public:
      *
      * @see Init()
      */
-    窗口() {
-        // 无操作
-    }
+    窗口() = default;
 
     /**
      * 初始化窗口和 OpenGL 上下文。
@@ -56,7 +54,7 @@ public:
      *
      * @throws raylib::RaylibException 如果窗口初始化失败则抛出异常
      */
-    void 初始化(int 宽 = 800, int 高 = 450, const std::string& 标题 = "raylib-cn", unsigned int 选项 = 0) {
+    static void 初始化(int 宽 = 800, int 高 = 450, const std::string& 标题 = "raylib-cn", unsigned int 选项 = 0) {
         if (选项 != 0) {
             ::SetConfigFlags(选项);
         }
@@ -69,17 +67,17 @@ public:
     /**
      * 检查是否按下 ESC 键或点击关闭图标
      */
-    bool 是可以关闭() const { return ::WindowShouldClose(); }
+    static bool 是可以关闭() { return ::WindowShouldClose(); }
 
     /**
      * 设置自定义退出键（默认是 ESC）
      */
-    void 设退出键(int 键位) { ::SetExitKey(键位); }
+    static void 设退出键(int 键位) { ::SetExitKey(键位); }
 
     /**
      * 关闭窗口并卸载 OpenGL 上下文
      */
-    void 关闭() {
+    static void 关闭() {
         if (::IsWindowReady()) {
             ::CloseWindow();
         }
@@ -88,42 +86,42 @@ public:
     /**
      * 检查光标是否在当前屏幕上
      */
-    bool 光标是在屏幕上() const { return ::IsCursorOnScreen(); }
+    static bool 光标是在屏幕上() { return ::IsCursorOnScreen(); }
 
     /**
      * 检查窗口是否当前处于全屏模式
      */
-    bool 是全屏() const { return ::IsWindowFullscreen(); }
+    static bool 是全屏() { return ::IsWindowFullscreen(); }
 
     /**
      * 检查窗口是否当前隐藏
      */
-    bool 是隐藏() const { return ::IsWindowHidden(); }
+    static bool 是隐藏() { return ::IsWindowHidden(); }
 
     /**
      * 检查窗口是否当前最小化
      */
-    bool 是最小化() const { return ::IsWindowMinimized(); }
+    static bool 是最小化() { return ::IsWindowMinimized(); }
 
     /**
      * 检查窗口是否当前最大化
      */
-    bool 是最大化() const { return ::IsWindowMaximized(); }
+    static bool 是最大化() { return ::IsWindowMaximized(); }
 
     /**
      * 检查窗口是否当前聚焦
      */
-    bool 是聚焦() const { return ::IsWindowFocused(); }
+    static bool 是聚焦() { return ::IsWindowFocused(); }
 
     /**
      * 检查窗口是否在上一个帧中被调整大小
      */
-    bool 是调整尺寸() const { return ::IsWindowResized(); }
+    static bool 是调整尺寸() { return ::IsWindowResized(); }
 
     /**
      * 检查是否启用了特定的窗口标志
      */
-    bool 是有此配置项(unsigned int 选项) const { return ::IsWindowState(选项); }
+    static bool 是有此配置项(unsigned int 选项) { return ::IsWindowState(选项); }
 
     /**
      * 使用标志设置窗口配置状态
@@ -302,12 +300,12 @@ public:
     /**
      * 获取屏幕的宽度和高度
      */
-    Vector2 GetSize() const { return {static_cast<float>(GetWidth()), static_cast<float>(GetHeight())}; }
+    static Vector2 GetSize() { return {static_cast<float>(GetWidth()), static_cast<float>(GetHeight())}; }
 
     /**
      * 获取窗口的句柄
      */
-    void* GetHandle() const { return ::GetWindowHandle(); }
+    static void* GetHandle() { return ::GetWindowHandle(); }
 
     /**
      * 设置画布（帧缓冲区）开始绘制
@@ -328,42 +326,42 @@ public:
     /**
      * 获取当前屏幕宽度
      */
-    int GetWidth() const { return ::GetScreenWidth(); }
+    static int GetWidth() { return ::GetScreenWidth(); }
 
     /**
      * 获取当前屏幕高度
      */
-    int GetHeight() const { return ::GetScreenHeight(); }
+    static int GetHeight() { return ::GetScreenHeight(); }
 
     /**
      * 获取当前渲染宽度（考虑 HiDPI）
      */
-    int GetRenderWidth() const { return ::GetRenderWidth(); }
+    static int GetRenderWidth() { return ::GetRenderWidth(); }
 
     /**
      * 获取当前渲染高度（考虑 HiDPI）
      */
-    int GetRenderHeight() const { return ::GetRenderHeight(); }
+    static int GetRenderHeight() { return ::GetRenderHeight(); }
 
     /**
      * 获取窗口在显示器上的位置 XY
      */
-    Vector2 GetPosition() const { return ::GetWindowPosition(); }
+    static Vector2 GetPosition() { return ::GetWindowPosition(); }
 
     /**
      * 获取窗口的缩放 DPI 因子
      */
-    Vector2 GetScaleDPI() const { return ::GetWindowScaleDPI(); }
+    static Vector2 GetScaleDPI() { return ::GetWindowScaleDPI(); }
 
     /**
      * 设置剪贴板文本内容
      */
-    void SetClipboardText(const std::string& text) { ::SetClipboardText(text.c_str()); }
+    static void SetClipboardText(const std::string& text) { ::SetClipboardText(text.c_str()); }
 
     /**
      * 获取剪贴板文本内容
      */
-    const std::string GetClipboardText() { return ::GetClipboardText(); }
+    static std::string GetClipboardText() { return ::GetClipboardText(); }
 
     /**
      * 设置目标 FPS（最大值）
@@ -376,22 +374,22 @@ public:
     /**
      * 返回当前 FPS
      */
-    int GetFPS() const { return ::GetFPS(); }
+    static int GetFPS() { return ::GetFPS(); }
 
     /**
      * 绘制当前 FPS
      */
-    void DrawFPS(int posX = 10, int posY = 10) const { ::DrawFPS(posX, posY); }
+    static void DrawFPS(int posX = 10, int posY = 10) { ::DrawFPS(posX, posY); }
 
     /**
      * 返回上一帧绘制的时间（秒）
      */
-    float GetFrameTime() const { return ::GetFrameTime(); }
+    static float GetFrameTime() { return ::GetFrameTime(); }
 
     /**
      * 返回自 InitWindow() 以来的时间（秒）
      */
-    double GetTime() const { return ::GetTime(); }
+    static double GetTime() { return ::GetTime(); }
 
     /**
      * 检查窗口是否已成功初始化
@@ -405,7 +403,7 @@ public:
      *
      * @see ::SetConfigFlags
      */
-    void SetConfigFlags(unsigned int flags) { ::SetConfigFlags(flags); }
+    static void SetConfigFlags(unsigned int flags) { ::SetConfigFlags(flags); }
 };
 } // namespace raylib
 

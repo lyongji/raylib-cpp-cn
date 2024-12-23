@@ -45,7 +45,7 @@ public:
      */
     bool operator!=(const ::Vector2& other) const { return !(*this == other); }
 
-    std::string ToString() const { return TextFormat("Vector2(%f, %f)", x, y); }
+    [[nodiscard]] std::string ToString() const { return TextFormat("Vector2(%f, %f)", x, y); }
 
     operator std::string() const { return ToString(); }
 
@@ -72,7 +72,7 @@ public:
     /**
      * 将两个向量相减 (v1 - v2)
      */
-    Vector2 Subtract(const ::Vector2& vector2) const { return Vector2Subtract(*this, vector2); }
+    [[nodiscard]] Vector2 Subtract(const ::Vector2& vector2) const { return Vector2Subtract(*this, vector2); }
 
     /**
      * 将两个向量相减 (v1 - v2)
@@ -91,7 +91,7 @@ public:
     /**
      * 向量取反
      */
-    Vector2 Negate() const { return Vector2Negate(*this); }
+    [[nodiscard]] Vector2 Negate() const { return Vector2Negate(*this); }
 
     /**
      * 向量取反
@@ -101,7 +101,7 @@ public:
     /**
      * 向量与向量相乘
      */
-    Vector2 Multiply(const ::Vector2& vector2) const { return Vector2Multiply(*this, vector2); }
+    [[nodiscard]] Vector2 Multiply(const ::Vector2& vector2) const { return Vector2Multiply(*this, vector2); }
 
     /**
      * 向量与向量相乘
@@ -120,7 +120,7 @@ public:
     /**
      * 向量缩放（乘以值）
      */
-    Vector2 Scale(const float scale) const { return Vector2Scale(*this, scale); }
+    [[nodiscard]] Vector2 Scale(const float scale) const { return Vector2Scale(*this, scale); }
 
     /**
      * 向量缩放（乘以值）
@@ -139,7 +139,7 @@ public:
     /**
      * 向量除以向量
      */
-    Vector2 Divide(const ::Vector2& vector2) const { return Vector2Divide(*this, vector2); }
+    [[nodiscard]] Vector2 Divide(const ::Vector2& vector2) const { return Vector2Divide(*this, vector2); }
 
     /**
      * 向量除以向量
@@ -158,7 +158,7 @@ public:
     /**
      * 向量除以值
      */
-    Vector2 Divide(const float div) const { return ::Vector2{x / div, y / div}; }
+    [[nodiscard]] Vector2 Divide(const float div) const { return ::Vector2{x / div, y / div}; }
 
     /**
      * 向量除以值
@@ -178,84 +178,88 @@ public:
     /**
      * 归一化向量
      */
-    Vector2 归一化() const { return Vector2Normalize(*this); }
+    [[nodiscard]] Vector2 归一化() const { return Vector2Normalize(*this); }
 
     /**
      * 通过给定的矩阵变换向量
      */
-    Vector2 变换(::Matrix 矩阵) const { return ::Vector2Transform(*this, 矩阵); }
+    [[nodiscard]] Vector2 变换(::Matrix 矩阵) const { return ::Vector2Transform(*this, 矩阵); }
 
     /**
      * 计算两个向量之间的线性插值
      */
-    Vector2 线性插值(const ::Vector2& vector2, float 数量) const { return Vector2Lerp(*this, vector2, 数量); }
+    [[nodiscard]] Vector2 线性插值(const ::Vector2& vector2, float 数量) const {
+        return Vector2Lerp(*this, vector2, 数量);
+    }
 
     /**
      * 计算反射向量到法线
      */
-    Vector2 反射(const ::Vector2& 法线) const { return Vector2Reflect(*this, 法线); }
+    [[nodiscard]] Vector2 反射(const ::Vector2& 法线) const { return Vector2Reflect(*this, 法线); }
 
     /**
      * 按浮点数（弧度）旋转向量
      */
-    Vector2 旋转(float 弧度) const { return Vector2Rotate(*this, 弧度); }
+    [[nodiscard]] Vector2 旋转(float 弧度) const { return Vector2Rotate(*this, 弧度); }
 
     /**
      * 向目标移动向量
      */
-    Vector2 向目标移动(const ::Vector2& 目标, float 最大距离) const {
+    [[nodiscard]] Vector2 向目标移动(const ::Vector2& 目标, float 最大距离) const {
         return Vector2MoveTowards(*this, 目标, 最大距离);
     }
 
     /**
      * 反转给定的向量
      */
-    Vector2 反转() const { return ::Vector2Invert(*this); }
+    [[nodiscard]] Vector2 反转() const { return ::Vector2Invert(*this); }
 
     /**
      * 将向量的分量限制在最小值和最大值之间
      */
-    Vector2 限制(::Vector2 最小值, ::Vector2 最大值) const { return ::Vector2Clamp(*this, 最小值, 最大值); }
+    [[nodiscard]] Vector2 限制(::Vector2 最小值, ::Vector2 最大值) const {
+        return ::Vector2Clamp(*this, 最小值, 最大值);
+    }
 
     /**
      * 将向量的长度限制在最小值和最大值之间
      */
-    Vector2 限制(float 最小值, float 最大值) const { return ::Vector2ClampValue(*this, 最小值, 最大值); }
+    [[nodiscard]] Vector2 限制(float 最小值, float 最大值) const { return ::Vector2ClampValue(*this, 最小值, 最大值); }
 
     /**
      * 检查两个给定的向量是否几乎相等
      */
-    int 相等(::Vector2 Vec2) const { return ::Vector2Equals(*this, Vec2); }
+    [[nodiscard]] int 相等(::Vector2 Vec2) const { return ::Vector2Equals(*this, Vec2); }
 
     /**
      * 计算向量的长度
      */
-    float 长度() const { return Vector2Length(*this); }
+    [[nodiscard]] float 长度() const { return Vector2Length(*this); }
 
     /**
      * 计算向量的平方长度
      */
-    float 长度的平方() const { return Vector2LengthSqr(*this); }
+    [[nodiscard]] float 长度的平方() const { return Vector2LengthSqr(*this); }
 
     /**
      * 计算两个向量的点积
      */
-    float 点积(const ::Vector2& vector2) const { return Vector2DotProduct(*this, vector2); }
+    [[nodiscard]] float 点积(const ::Vector2& vector2) const { return Vector2DotProduct(*this, vector2); }
 
     /**
      * 计算两个向量之间的距离
      */
-    float 距离(const ::Vector2& vector2) const { return Vector2Distance(*this, vector2); }
+    [[nodiscard]] float 距离(const ::Vector2& vector2) const { return Vector2Distance(*this, vector2); }
 
     /**
      * 计算两个向量之间的平方距离
      */
-    float 距离的平方(::Vector2 vec2) const { return ::Vector2DistanceSqr(*this, vec2); }
+    [[nodiscard]] float 距离的平方(::Vector2 vec2) const { return ::Vector2DistanceSqr(*this, vec2); }
 
     /**
      * 计算两个向量在 X 轴上的角度
      */
-    float 夹角(const ::Vector2& vec2) const { return Vector2Angle(*this, vec2); }
+    [[nodiscard]] float 夹角(const ::Vector2& vec2) const { return Vector2Angle(*this, vec2); }
 
     /**
      * 向量分量值为 0.0f
@@ -300,29 +304,33 @@ public:
     /**
      * 检查两个圆之间的碰撞
      */
-    bool 是圆在碰撞(float 半径1, ::Vector2 圆心2, float 半径2) const {
+    [[nodiscard]] bool 是圆在碰撞(float 半径1, ::Vector2 圆心2, float 半径2) const {
         return ::CheckCollisionCircles(*this, 半径1, 圆心2, 半径2);
     }
 
     /**
      * 检查圆和矩形之间的碰撞
      */
-    bool 是矩形在碰撞(float 半径, ::Rectangle 矩形) const { return ::CheckCollisionCircleRec(*this, 半径, 矩形); }
+    [[nodiscard]] bool 是矩形在碰撞(float 半径, ::Rectangle 矩形) const {
+        return ::CheckCollisionCircleRec(*this, 半径, 矩形);
+    }
 
     /**
      * 检查点是否在矩形内
      */
-    bool 是碰撞(::Rectangle 矩形) const { return ::CheckCollisionPointRec(*this, 矩形); }
+    [[nodiscard]] bool 是碰撞(::Rectangle 矩形) const { return ::CheckCollisionPointRec(*this, 矩形); }
 
     /**
      * 检查点是否在圆内
      */
-    bool 是碰撞(::Vector2 圆心, float 半径) const { return ::CheckCollisionPointCircle(*this, 圆心, 半径); }
+    [[nodiscard]] bool 是碰撞(::Vector2 圆心, float 半径) const {
+        return ::CheckCollisionPointCircle(*this, 圆心, 半径);
+    }
 
     /**
      * 检查点是否在三角形内
      */
-    bool 是碰撞(::Vector2 p1, ::Vector2 p2, ::Vector2 p3) const {
+    [[nodiscard]] bool 是碰撞(::Vector2 p1, ::Vector2 p2, ::Vector2 p3) const {
         return ::CheckCollisionPointTriangle(*this, p1, p2, p3);
     }
 
@@ -336,7 +344,7 @@ public:
     /**
      * 检查点是否属于由两点 [p1] 和 [p2] 创建的线段，定义的像素阈值 [threshold]
      */
-    bool 是点与线碰撞(::Vector2 p1, ::Vector2 p2, int 阈值 = 1) const {
+    [[nodiscard]] bool 是点与线碰撞(::Vector2 p1, ::Vector2 p2, int 阈值 = 1) const {
         return ::CheckCollisionPointLine(*this, p1, p2, 阈值);
     }
 protected:

@@ -2,6 +2,7 @@
 // #define RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_
 #pragma once
 
+#include "./Functions.hpp"
 #include "./raylib.hpp"
 
 /**
@@ -67,6 +68,7 @@ namespace Keyboard {
 }
 } // namespace Keyboard
 } // namespace raylib
+
 namespace RKeyboard = raylib::Keyboard;
 
 // #endif // RAYLIB_CPP_INCLUDE_KEYBOARD_HPP_

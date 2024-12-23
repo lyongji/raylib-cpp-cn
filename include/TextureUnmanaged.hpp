@@ -84,7 +84,7 @@ public:
     /**
      * 检索纹理的宽度和高度。
      */
-    Vector2 取尺寸() const { return {static_cast<float>(width), static_cast<float>(height)}; }
+    [[nodiscard]] Vector2 取尺寸() const { return {static_cast<float>(width), static_cast<float>(height)}; }
 
     /**
      * 从图像数据加载纹理。
@@ -146,7 +146,7 @@ public:
     /**
      * 从 GPU 纹理获取像素数据并返回 Image。
      */
-    ::Image 取数据() const { return ::LoadImageFromTexture(*this); }
+    [[nodiscard]] ::Image 取数据() const { return ::LoadImageFromTexture(*this); }
 
     /**
      * 从 GPU 纹理获取像素数据并返回 Image。
@@ -313,7 +313,7 @@ public:
      *
      * @return 根据纹理是否有数据返回 true 或 false。
      */
-    bool 是有效() const { return IsTextureValid(*this); }
+    [[nodiscard]] bool 是有效() const { return IsTextureValid(*this); }
 protected:
     void 设(const ::Texture& 纹理) {
         id = 纹理.id;

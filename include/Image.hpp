@@ -22,7 +22,7 @@ public:
         // 无操作
     }
 
-    图像(const ::Image& 图像) { 设(图像); }
+    图像(const ::Image& 图像) : ::Image(图像) {}
 
     /**
      * 从给定文件加载图像。
@@ -81,7 +81,7 @@ public:
 
     图像(const 图像& other) { 设(other.复制()); }
 
-    图像(图像&& other) {
+    图像(图像&& other) noexcept {
         设(other);
 
         other.data = nullptr;
@@ -318,17 +318,17 @@ public:
     /**
      * 获取图像的宽度和高度。
      */
-    ::Vector2 取尺寸() const { return {static_cast<float>(width), static_cast<float>(height)}; }
+    [[nodiscard]] ::Vector2 取尺寸() const { return {static_cast<float>(width), static_cast<float>(height)}; }
 
     /**
      * 创建图像的副本（用于变换）
      */
-    ::Image 复制() const { return ::ImageCopy(*this); }
+    [[nodiscard]] ::Image 复制() const { return ::ImageCopy(*this); }
 
     /**
      * 从另一个图像创建图像片段
      */
-    ::Image 从图像提取(::Rectangle 矩形) const { return ::ImageFromImage(*this, 矩形); }
+    [[nodiscard]] ::Image 从图像提取(::Rectangle 矩形) const { return ::ImageFromImage(*this, 矩形); }
 
     /**
      * 将图像数据转换为所需格式
@@ -546,17 +546,17 @@ public:
      *
      * @param threshold 阈值定义为百分比：0.0f -> 1.0f
      */
-    Rectangle 取透明边框(float 阈值) const { return ::GetImageAlphaBorder(*this, 阈值); }
+    [[nodiscard]] Rectangle 取透明边框(float 阈值) const { return ::GetImageAlphaBorder(*this, 阈值); }
 
     /**
      * 获取图像在 (x, y) 位置的像素颜色
      */
-    R颜色 取颜色(int x = 0, int y = 0) const { return ::GetImageColor(*this, x, y); }
+    [[nodiscard]] R颜色 取颜色(int x = 0, int y = 0) const { return ::GetImageColor(*this, x, y); }
 
     /**
      * 获取图像在向量位置的像素颜色
      */
-    R颜色 取颜色(::Vector2 位置) const {
+    [[nodiscard]] R颜色 取颜色(::Vector2 位置) const {
         return ::GetImageColor(*this, static_cast<int>(位置.x), static_cast<int>(位置.y));
     }
 
@@ -659,7 +659,7 @@ public:
     /**
      * 从图像加载颜色数据为 Color 数组（RGBA - 32 位）
      */
-    ::Color* 加载颜色() const { return ::LoadImageColors(*this); }
+    [[nodiscard]] ::Color* 加载颜色() const { return ::LoadImageColors(*this); }
 
     /**
      * 从图像加载颜色调色板为 Color 数组（RGBA - 32 位）
@@ -681,14 +681,14 @@ public:
     /**
      * 从图像数据加载纹理
      */
-    ::Texture2D 加载纹理() const { return ::LoadTextureFromImage(*this); }
+    [[nodiscard]] ::Texture2D 加载纹理() const { return ::LoadTextureFromImage(*this); }
 
     /**
      * 从图像数据加载纹理
      *
      * @see LoadTexture()
      */
-    operator ::Texture2D() { return 加载纹理(); }
+    operator ::Texture2D() const { return 加载纹理(); }
 
     /**
      * 获取特定格式的像素数据大小（以字节为单位）
@@ -702,14 +702,14 @@ public:
      *
      * @return 图像的像素数据大小
      */
-    int 取像素数据大小() const { return ::GetPixelDataSize(width, height, format); }
+    [[nodiscard]] int 取像素数据大小() const { return ::GetPixelDataSize(width, height, format); }
 
     /**
      * 检索图像是否已加载
      *
      * @return 图像是否已加载
      */
-    bool 是有效() const { return ::IsImageValid(*this); }
+    [[nodiscard]] bool 是有效() const { return ::IsImageValid(*this); }
 
     /**
      * 从另一个图像的选定通道创建图像（灰度）

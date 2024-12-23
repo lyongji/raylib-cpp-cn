@@ -29,7 +29,7 @@ public:
     /**
      * 移动构造函数。
      */
-    纹理(纹理&& other) {
+    纹理(纹理&& other) noexcept {
         设(other);
 
         other.id = 0;

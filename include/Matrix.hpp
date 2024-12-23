@@ -16,26 +16,7 @@ namespace raylib {
  */
 class 矩阵 : public ::Matrix {
 public:
-    矩阵(const ::Matrix& 矩阵)
-        : ::Matrix{
-              矩阵.m0,
-              矩阵.m4,
-              矩阵.m8,
-              矩阵.m12,
-              矩阵.m1,
-              矩阵.m5,
-              矩阵.m9,
-              矩阵.m13,
-              矩阵.m2,
-              矩阵.m6,
-              矩阵.m10,
-              矩阵.m14,
-              矩阵.m3,
-              矩阵.m7,
-              矩阵.m11,
-              矩阵.m15} {
-        // 无操作
-    }
+    矩阵(const ::Matrix& 矩阵) : ::Matrix(矩阵) {}
 
     矩阵(
         float m0 = 0,
@@ -76,12 +57,16 @@ public:
     GETTERSETTER(float, M15, m15)
 
     矩阵& operator=(const ::Matrix& 矩阵) {
-        设(矩阵);
+        if (this != &矩阵) {
+            设(矩阵);
+        }
         return *this;
     }
 
     矩阵& operator=(const 矩阵& 矩阵值) {
-        设(矩阵值);
+        if (this != &矩阵值) {
+            设(矩阵值);
+        }
         return *this;
     }
 
@@ -98,14 +83,14 @@ public:
     /**
      * 返回矩阵的迹（对角线元素之和）
      */
-    float 阵迹() const { return ::MatrixTrace(*this); }
+    [[nodiscard]] float 阵迹() const { return ::MatrixTrace(*this); }
 
     /**
      * 转置提供的矩阵
      */
-    矩阵 转置() const { return ::MatrixTranspose(*this); }
+    [[nodiscard]] 矩阵 转置() const { return ::MatrixTranspose(*this); }
 
-    矩阵 反矩阵() const { return ::MatrixInvert(*this); }
+    [[nodiscard]] 矩阵 反矩阵() const { return ::MatrixInvert(*this); }
 
     static 矩阵 单位矩阵() { return ::MatrixIdentity(); }
 
@@ -131,7 +116,7 @@ public:
 
     static 矩阵 缩放(float x, float y, float z) { return ::MatrixScale(x, y, z); }
 
-    矩阵 乘(const ::Matrix& 右) const { return ::MatrixMultiply(*this, 右); }
+    [[nodiscard]] 矩阵 乘(const ::Matrix& 右) const { return ::MatrixMultiply(*this, 右); }
 
     矩阵 operator*(const ::Matrix& 矩阵) { return ::MatrixMultiply(*this, 矩阵); }
 
@@ -149,9 +134,9 @@ public:
 
     static 矩阵 注视(Vector3 眼, Vector3 目标, Vector3 上方向) { return ::MatrixLookAt(眼, 目标, 上方向); }
 
-    float16 转浮点向量() const { return ::MatrixToFloatV(*this); }
+    [[nodiscard]] float16 转浮点向量() const { return ::MatrixToFloatV(*this); }
 
-    operator float16() { return 转浮点向量(); }
+    operator float16() const { return 转浮点向量(); }
 
     /**
      * 设置着色器统一值（4x4矩阵）

@@ -42,17 +42,17 @@ public:
     /**
      * 检测两个包围盒之间的碰撞
      */
-    bool 检测碰撞(const ::BoundingBox& 包围盒2) const { return CheckCollisionBoxes(*this, 包围盒2); }
+    [[nodiscard]] bool 检测碰撞(const ::BoundingBox& 包围盒2) const { return CheckCollisionBoxes(*this, 包围盒2); }
 
     /**
      * 检测包围盒与球体之间的碰撞
      */
-    bool 检测碰撞(::Vector3 中心, float 半径) const { return CheckCollisionBoxSphere(*this, 中心, 半径); }
+    [[nodiscard]] bool 检测碰撞(::Vector3 中心, float 半径) const { return CheckCollisionBoxSphere(*this, 中心, 半径); }
 
     /**
      * 检测射线与包围盒之间的碰撞
      */
-    bool 检测碰撞(const ::Ray& 射线) const { return GetRayCollisionBox(射线, *this).hit; }
+    [[nodiscard]] bool 检测碰撞(const ::Ray& 射线) const { return GetRayCollisionBox(射线, *this).hit; }
 
     /**
      * 获取射线与包围盒之间的碰撞信息

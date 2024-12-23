@@ -22,7 +22,7 @@ public:
         void* 环境数据 = nullptr)
         : ::Music{音频流, 帧数, 循环, 环境类型, 环境数据} {}
 
-    音乐流(const ::Music& 音乐) { 设(音乐); }
+    音乐流(const ::Music& 音乐) : ::Music(音乐) {}
 
     /**
      * 从文件加载音乐流
@@ -40,7 +40,7 @@ public:
 
     音乐流(const 音乐流&) = delete;
 
-    音乐流(音乐流&& other) {
+    音乐流(音乐流&& other) noexcept {
         设(other);
 
         other.stream = {};
@@ -141,7 +141,7 @@ public:
     /**
      * 检查音乐是否正在播放
      */
-    bool 是播放中() const { return ::IsMusicStreamPlaying(*this); }
+    [[nodiscard]] bool 是播放中() const { return ::IsMusicStreamPlaying(*this); }
 
     /**
      * 设置音乐的音量
@@ -170,12 +170,12 @@ public:
     /**
      * 获取音乐的总时长（以秒为单位）
      */
-    float 取总时常() const { return ::GetMusicTimeLength(*this); }
+    [[nodiscard]] float 取总时常() const { return ::GetMusicTimeLength(*this); }
 
     /**
      * 获取当前播放的音乐时间（以秒为单位）
      */
-    float 取当前播放时间点() const { return ::GetMusicTimePlayed(*this); }
+    [[nodiscard]] float 取当前播放时间点() const { return ::GetMusicTimePlayed(*this); }
 
     /**
      * 从文件加载音乐流

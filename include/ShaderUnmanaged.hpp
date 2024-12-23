@@ -2,12 +2,11 @@
 // #define RAYLIB_CPP_INCLUDE_UNMANAGEDSHADER_HPP_
 #pragma once
 
-#include <rlgl.h>
-#include <string>
-
-#include "Texture.hpp"
 #include "./raylib-cpp-utils.hpp"
 #include "./raylib.hpp"
+
+#include <rlgl.h>
+#include <string>
 
 namespace raylib {
 
@@ -18,7 +17,7 @@ class 非托管着色器 : public ::Shader {
 public:
     非托管着色器() : ::Shader{rlGetShaderIdDefault(), rlGetShaderLocsDefault()} {}
 
-    非托管着色器(const ::Shader& 着色器) { 设(着色器); }
+    非托管着色器(const ::Shader& 着色器) : ::Shader(着色器) {}
 
     非托管着色器(unsigned int id, int* 位置数组 = nullptr) : ::Shader{id, 位置数组} {}
 
@@ -82,14 +81,18 @@ public:
      *
      * @see GetShaderLocation()
      */
-    int 取着色器位置(const std::string& 统一变量名) const { return ::GetShaderLocation(*this, 统一变量名.c_str()); }
+    [[nodiscard]] int 取着色器位置(const std::string& 统一变量名) const {
+        return ::GetShaderLocation(*this, 统一变量名.c_str());
+    }
 
     /**
      * 获取着色器属性的位置
      *
      * @see GetShaderLocationAttrib()
      */
-    int 取属性位置(const std::string& 属性名) const { return ::GetShaderLocationAttrib(*this, 属性名.c_str()); }
+    [[nodiscard]] int 取属性位置(const std::string& 属性名) const {
+        return ::GetShaderLocationAttrib(*this, 属性名.c_str());
+    }
 
     /**
      * 设置着色器统一变量的值
@@ -134,7 +137,7 @@ public:
     /**
      * 检索着色器是否准备就绪。
      */
-    bool 是就绪() const { return ::IsShaderValid(*this); }
+    [[nodiscard]] bool 是就绪() const { return ::IsShaderValid(*this); }
 protected:
     void 设(const ::Shader& 着色器) {
         id = 着色器.id;
