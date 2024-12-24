@@ -17,14 +17,13 @@ int main() {
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [audio] example - music playing (streaming)");
+    R窗口 window(screenWidth, screenHeight, "raylib [audio] example - music playing (streaming)");
 
     raylib::音频设备 audio; // Initialize audio device
 
-    raylib::Music music("resources/target.ogg");
+    R音乐流 music("resources/target.ogg");
 
-    music.Play();
-
+    music.播放();
     float timePlayed = 0.0f;
     bool pause = false;
 
@@ -32,40 +31,40 @@ int main() {
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) { // Detect window close button or ESC key
+    while (!window.是可以关闭()) { // Detect window close button or ESC key
         // Update
         //----------------------------------------------------------------------------------
-        music.Update(); // Update music buffer with new stream data
+        music.更新(); // Update music buffer with new stream data
 
         // Restart music playing (stop and play)
-        if (IsKeyPressed(KEY_SPACE)) {
-            music.Stop();
-            music.Play();
+        if (raylib::键盘::是此键为按下(KEY_SPACE)) {
+            music.停止();
+            music.播放();
         }
 
         // Pause/Resume music playing
-        if (IsKeyPressed(KEY_P)) {
+        if (raylib::键盘::是此键为按下(KEY_P)) {
             pause = !pause;
 
             if (pause) {
-                music.Pause();
+                music.暂停();
             }
             else {
-                music.Resume();
+                music.恢复();
             }
         }
 
         // Get timePlayed scaled to bar dimensions (400 pixels)
-        timePlayed = music.GetTimePlayed() / music.GetTimeLength() * 400;
+        timePlayed = music.取当前播放时间点() / music.取总时常() * 400;
 
-        if (timePlayed > 400) music.Stop();
+        if (timePlayed > 400) music.停止();
         //----------------------------------------------------------------------------------
 
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
         {
-            window.ClearBackground(RAYWHITE);
+            window.清除背景(RAYWHITE);
 
             DrawText("MUSIC SHOULD BE PLAYING!", 255, 150, 20, LIGHTGRAY);
 
