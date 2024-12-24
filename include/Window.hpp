@@ -67,7 +67,7 @@ public:
     /**
      * 检查是否按下 ESC 键或点击关闭图标
      */
-    static bool 是可以关闭() { return ::WindowShouldClose(); }
+    static bool 是已关闭() { return ::WindowShouldClose(); }
 
     /**
      * 设置自定义退出键（默认是 ESC）
@@ -142,7 +142,7 @@ public:
     /**
      * 用给定的颜色清除窗口背景
      */
-    窗口& 清除背景(const ::Color& 颜色 = BLACK) {
+    窗口& 清屏(const ::Color& 颜色 = BLACK) {
         ::ClearBackground(颜色);
         return *this;
     }

@@ -14,32 +14,32 @@
 int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int 屏幕宽 = 800;
+    const int 屏幕高 = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [audio] example - sound loading and playing");
+    R窗口 窗口(屏幕宽, 屏幕高, "raylib [audio] example - sound loading and playing");
 
-    raylib::音频设备 audiodevice; // Initialize audio device
+    R音频设备 音频驱动; // Initialize audio device
 
-    raylib::Sound fxWav("resources/sound.wav"); // Load WAV audio file
-    raylib::Sound fxOgg("resources/target.ogg"); // Load OGG audio file
+    R音效 fxWav("resources/sound.wav"); // Load WAV audio file
+    R音效 fxOgg("resources/target.ogg"); // Load OGG audio file
 
-    SetTargetFPS(60); // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) { // Detect window close button or ESC key
+    while (!窗口.是已关闭()) { // Detect window close button or ESC key
         // Update
         //----------------------------------------------------------------------------------
-        if (IsKeyPressed(KEY_SPACE)) fxWav.Play(); // Play WAV sound
-        if (IsKeyPressed(KEY_ENTER)) fxOgg.Play(); // Play OGG sound
+        if (R键盘::是此键为按下(KEY_SPACE)) fxWav.播放(); // Play WAV sound
+        if (R键盘::是此键为按下(KEY_ENTER)) fxOgg.播放(); // Play OGG sound
         //----------------------------------------------------------------------------------
 
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
         {
-            window.ClearBackground(RAYWHITE);
+            窗口.清屏(RAYWHITE);
 
             DrawText("Press SPACE to PLAY the WAV sound!", 200, 180, 20, LIGHTGRAY);
             DrawText("Press ENTER to PLAY the OGG sound!", 200, 220, 20, LIGHTGRAY);
