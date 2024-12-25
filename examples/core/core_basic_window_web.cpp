@@ -1,54 +1,54 @@
 /*******************************************************************************************
-*
-*   raylib-cpp [core] example - Basic window (adapted for HTML5 platform)
-*
-*   This example is prepared to compile for PLATFORM_WEB, PLATFORM_DESKTOP and PLATFORM_RPI
-*   As you will notice, code structure is slightly diferent to the other examples...
-*   To compile it for PLATFORM_WEB just uncomment #define PLATFORM_WEB at beginning
-*
-*   This example has been created using raylib 1.3 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
-*
-*   Copyright (c) 2015 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
+ *
+ *   raylib-cpp [core] example - Basic window (adapted for HTML5 platform)
+ *
+ *   This example is prepared to compile for PLATFORM_WEB, PLATFORM_DESKTOP and PLATFORM_RPI
+ *   As you will notice, code structure is slightly diferent to the other examples...
+ *   To compile it for PLATFORM_WEB just uncomment #define PLATFORM_WEB at beginning
+ *
+ *   This example has been created using raylib 1.3 (www.raylib.com)
+ *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
+ *
+ *   Copyright (c) 2015 Ramon Santamaria (@raysan5)
+ *
+ ********************************************************************************************/
 
 #include "raylib-cpp.hpp"
 
 #if defined(PLATFORM_WEB)
-    #include <emscripten/emscripten.h>
+#include <emscripten/emscripten.h>
 #endif
 
 //----------------------------------------------------------------------------------
 // Global Variables Definition
 //----------------------------------------------------------------------------------
-int screenWidth = 800;
-int screenHeight = 450;
-
+int 屏幕宽 = 800;
+int 屏幕高 = 450;
+R窗口 窗口;
+R文本 文本;
 //----------------------------------------------------------------------------------
 // Module Functions Declaration
 //----------------------------------------------------------------------------------
-void UpdateDrawFrame(void);     // Update and Draw one frame
+void 帧绘制更新(); // Update and Draw one frame
 
 //----------------------------------------------------------------------------------
 // Main Enry Point
 //----------------------------------------------------------------------------------
-int main()
-{
+int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    raylib::Window window(screenWidth, screenHeight, "raylib-cpp [core] example - basic window");
+    窗口.初始化(屏幕宽, 屏幕高, "raylib-cpp [core] example - basic window");
 
 #if defined(PLATFORM_WEB)
-    emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
+    emscripten_set_main_loop(帧绘制更新, 0, 1);
 #else
-    SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose())    // Detect window close button or ESC key
+    while (!窗口.是已关闭()) // Detect window close button or ESC key
     {
-        UpdateDrawFrame();
+        帧绘制更新();
     }
 #endif
 
@@ -58,8 +58,7 @@ int main()
 //----------------------------------------------------------------------------------
 // Module Functions Definition
 //----------------------------------------------------------------------------------
-void UpdateDrawFrame(void)
-{
+void 帧绘制更新() {
     // Update
     //----------------------------------------------------------------------------------
     // TODO: Update your variables here
@@ -67,12 +66,12 @@ void UpdateDrawFrame(void)
 
     // Draw
     //----------------------------------------------------------------------------------
-    BeginDrawing();
+    窗口.开始绘制();
 
-        ClearBackground(RAYWHITE);
+    窗口.清屏(R颜色::白烟());
 
-        raylib::DrawText("Congrats! You created your first raylib-cpp window!", 190, 200, 20, LIGHTGRAY);
+    文本.绘制("Congrats! You created your first raylib-cpp window!", 190, 200, 20, LIGHTGRAY);
 
-    EndDrawing();
+    窗口.结束绘制();
     //----------------------------------------------------------------------------------
 }

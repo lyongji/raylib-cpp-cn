@@ -20,7 +20,7 @@ int main() {
     R窗口 窗口(屏幕宽, 屏幕高, "raylib [audio] example - sound loading and playing");
 
     R音频设备 音频驱动; // Initialize audio device
-
+    R文本 文本;
     R音效 fxWav("resources/sound.wav"); // Load WAV audio file
     R音效 fxOgg("resources/target.ogg"); // Load OGG audio file
 
@@ -37,14 +37,14 @@ int main() {
 
         // Draw
         //----------------------------------------------------------------------------------
-        BeginDrawing();
+        窗口.开始绘制();
         {
             窗口.清屏(RAYWHITE);
 
-            DrawText("Press SPACE to PLAY the WAV sound!", 200, 180, 20, LIGHTGRAY);
-            DrawText("Press ENTER to PLAY the OGG sound!", 200, 220, 20, LIGHTGRAY);
+            文本.绘制("Press SPACE to PLAY the WAV sound!", 200, 180, 20, R颜色::浅灰());
+            文本.绘制("Press ENTER to PLAY the OGG sound!", 200, 220, 20, R颜色::浅灰());
         }
-        EndDrawing();
+        窗口.结束绘制();
         //----------------------------------------------------------------------------------
     }
 

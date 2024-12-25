@@ -201,10 +201,10 @@ public:
     颜色 插值(::Color 颜色2, float 系数) { return ::ColorLerp(*this, 颜色2, 系数); }
 
     /**
-     * 返回 src 颜色与 dst 颜色进行 alpha 混合后的结果，并应用 tint 颜色
+     * 返回 src 颜色与 dst 颜色进行 alpha 混合后的结果，并应用色调颜色
      */
     [[nodiscard]] 颜色 透明混合(::Color 目标, ::Color 色调) const { return ::ColorAlphaBlend(目标, *this, 色调); }
-
+    ///raylib默认色
     static 颜色 浅灰() { return LIGHTGRAY; }
     static 颜色 灰() { return GRAY; }
     static 颜色 深灰() { return DARKGRAY; }
@@ -231,6 +231,63 @@ public:
     static 颜色 空() { return BLANK; }
     static 颜色 品红() { return MAGENTA; }
     static 颜色 白烟() { return RAYWHITE; }
+    /// 增加中国传统颜色 https://colors.ichuantong.cn/
+    /// 金银
+    static 颜色 赤金() { return {242, 190, 69}; } /// HEX: #f2be45
+    static 颜色 金色() { return {234, 205, 118}; } /// HEX: #eacd76
+    static 颜色 银白() { return {233, 231, 239}; } /// HEX: #e9e7ef
+    static 颜色 老银() { return {186, 202, 198}; } /// HEX: #bacac6
+    static 颜色 乌金() { return {167, 142, 68}; } /// HEX: #a78e44
+    static 颜色 铜绿() { return {84, 150, 136}; } /// HEX: #549688
+    /// 黑
+    static 颜色 玄色() { return {98, 42, 29}; } /// HEX: #622a1d
+    static 颜色 玄青() { return {61, 59, 79}; } /// HEX: #3d3b4f
+    static 颜色 乌色() { return {114, 94, 130}; } /// HEX: #725e82
+    static 颜色 乌黑() { return {57, 47, 65}; } /// HEX: #392f41
+    static 颜色 漆黑() { return {22, 24, 35}; } /// HEX: #161823
+    static 颜色 墨色() { return {80, 97, 109}; } /// HEX: #50616d
+    static 颜色 墨灰() { return {117, 138, 153}; } /// HEX: #758a99
+    static 颜色 缁色() { return {73, 49, 49}; } /// HEX: #493131 zi色
+    static 颜色 煤黑() { return {49, 37, 32}; } /// HEX: #312520
+    static 颜色 黧() { return {93, 81, 60}; } /// HEX: #5d513c li色
+    static 颜色 黎() { return {117, 102, 77}; } /// HEX: #75664d
+    static 颜色 黝() { return {107, 104, 130}; } /// HEX: #6b6882
+    static 颜色 黝黑() { return {107, 87, 87}; } /// HEX: #665757
+    static 颜色 黯() { return {65, 85, 93}; } /// HEX: #41555d
+    /// 灰白
+    static 颜色 精白() { return {255, 255, 255}; } /// HEX: #ffffff
+    static 颜色 象牙白() { return {255, 251, 240}; } /// HEX: #fffbf0
+    static 颜色 雪白() { return {242, 253, 255}; } /// HEX: #f2fdff
+    static 颜色 月白() { return {214, 236, 240}; } /// HEX: #d6ecf0
+    static 颜色 缟() { return {242, 236, 222}; } /// HEX: #f2ecde
+    static 颜色 素() { return {224, 240, 233}; } /// HEX: #e0f0e9
+    static 颜色 茶白() { return {243, 249, 241}; } /// HEX: #f3f9f1
+    static 颜色 霜色() { return {233, 241, 246}; } /// HEX: #e9f1f6
+    static 颜色 花白() { return {194, 204, 208}; } /// HEX: #c2ccd0
+    static 颜色 鱼肚白() { return {252, 239, 232}; } /// HEX: #fcefe8
+    static 颜色 荧白() { return {227, 249, 253}; } /// HEX: #e3f9fd
+    static 颜色 灰色() { return {128, 128, 128}; } /// HEX: #808080
+    static 颜色 牙色() { return {238, 222, 176}; } /// HEX: #eedeb0
+    static 颜色 铅白() { return {240, 240, 244}; } /// HEX: #f0f0f4
+    ///水
+    static 颜色 水色() { return {136, 173, 166}; } /// HEX: #88ada6
+    static 颜色 水红() { return {243, 211, 231}; } /// HEX: #f3d3e7
+    static 颜色 水绿() { return {212, 242, 231}; } /// HEX: #d4f2e7
+    static 颜色 水蓝() { return {210, 240, 244}; } /// HEX: #d2f0f4
+    static 颜色 淡青() { return {211, 224, 243}; } /// HEX: #d3e0f3
+    static 颜色 湖蓝() { return {48, 223, 243}; } /// HEX: #30dff3
+    static 颜色 湖绿() { return {37, 248, 203}; } /// HEX: #25f8cb
+    /// 苍
+    static 颜色 苍色() { return {117, 135, 138}; } /// HEX: #75878a
+    static 颜色 苍翠() { return {81, 154, 115}; } /// HEX: #519a73
+    static 颜色 苍黄() { return {162, 155, 124}; } /// HEX: #a29b7c
+    static 颜色 苍青() { return {115, 151, 171}; } /// HEX: #7397ab
+    static 颜色 苍黑() { return {57, 82, 96}; } /// HEX: #395260
+    static 颜色 苍白() { return {209, 217, 224}; } /// HEX: #d1d9e0
+    /// 蓝
+    static 颜色 蓝色() { return {68, 206, 246}; } /// HEX: #44cef6
+    static 颜色 靛青() { return {23, 124, 176}; } /// HEX: #177cb0
+    static 颜色 靛蓝() { return {6, 82, 121}; } /// HEX: #065279
 protected:
     void 设(const ::Color& color) {
         r = color.r;
