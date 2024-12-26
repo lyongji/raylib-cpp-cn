@@ -1,53 +1,56 @@
 /*******************************************************************************************
-*
-*   raylib [core] example - Mouse input
-*
-*   This example has been created using raylib 1.0 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
-*
-*   Copyright (c) 2014 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
+ *
+ *   raylib [core] example - Mouse input
+ *
+ *   This example has been created using raylib 1.0 (www.raylib.com)
+ *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
+ *
+ *   Copyright (c) 2014 Ramon Santamaria (@raysan5)
+ *
+ ********************************************************************************************/
 
 #include "raylib-cpp.hpp"
 
 int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int 屏幕宽 = 800;
+    const int 屏幕高 = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [core] example - mouse input");
+    R窗口 窗口(屏幕宽, 屏幕高, "raylib [core] example - mouse input");
 
-    raylib::Vector2 ballPosition(-100.0f, -100.0f);
-    raylib::Color ballColor = raylib::Color::DarkBlue();
-    raylib::Color textColor = raylib::Color::DarkGray();
+    raylib::Vector2 球位置(-100.0, -100.0);
+    R颜色 球颜色{R颜色::深蓝()};
+    R颜色 文本颜色{R颜色::深灰()};
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //---------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) {    // Detect window close button or ESC key
+    while (!窗口.是已关闭()) { // Detect window close button or ESC key
         // Update
         //----------------------------------------------------------------------------------
-        ballPosition = GetMousePosition();
+        球位置 = R鼠标::取位置();
 
-        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) ballColor = MAROON;
-        else if (IsMouseButtonPressed(MOUSE_MIDDLE_BUTTON)) ballColor = LIME;
-        else if (IsMouseButtonPressed(MOUSE_RIGHT_BUTTON)) ballColor = DARKBLUE;
+        if (R鼠标::是此按钮为按下(MOUSE_LEFT_BUTTON))
+            球颜色 = R颜色::褐色();
+        else if (R鼠标::是此按钮为按下(MOUSE_MIDDLE_BUTTON))
+            球颜色 = R颜色::柠檬绿();
+        else if (R鼠标::是此按钮为按下(MOUSE_RIGHT_BUTTON))
+            球颜色 = R颜色::深蓝();
         //----------------------------------------------------------------------------------
 
         // Draw
         //----------------------------------------------------------------------------------
-        BeginDrawing();
+        窗口.开始绘制();
         {
-            window.ClearBackground(RAYWHITE);
+            窗口.清屏(R颜色::浅灰());
 
-            ballPosition.DrawCircle(40, ballColor);
+            球位置.绘制圆形(40, 球颜色);
 
-            textColor.DrawText("move ball with mouse and click mouse button to change color", 10, 10, 20);
+            文本颜色.绘制文本("move ball with mouse and click mouse button to change color", 10, 10, 20);
         }
-        EndDrawing();
+        窗口.结束绘制();
         //----------------------------------------------------------------------------------
     }
 

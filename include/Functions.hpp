@@ -170,7 +170,8 @@ namespace raylib {
  */
 [[maybe_unused]] RLCPPAPI std::vector<std::string> 加载拖放文件() {
     if (!::IsFileDropped()) {
-        return std::vector<std::string>();
+        // return std::vector<std::string>();
+        return {};
     }
     FilePathList 文件表 = ::LoadDroppedFiles();
     std::vector<std::string> 输出(文件表.paths, 文件表.paths + 文件表.count);
