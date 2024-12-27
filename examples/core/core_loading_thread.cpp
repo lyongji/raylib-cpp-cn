@@ -31,8 +31,8 @@ int main() {
     const int 屏幕高 = 450;
 
     R窗口 窗口(屏幕宽, 屏幕高, "raylib [core] example - loading thread");
-
-    std::thread 线程Id; // Loading data thread id
+    R颜色 颜色;
+    std::thread 线程Id; // 加载数据线程id
 
     enum 状态 {
         等待,
@@ -42,7 +42,7 @@ int main() {
     状态 当前状态 = 状态::等待;
     int framesCounter = 0;
 
-    SetTargetFPS(60); // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------
 
     // Main game loop
@@ -51,7 +51,7 @@ int main() {
         //----------------------------------------------------------------------
         switch (当前状态) {
             case 等待:
-                if (IsKeyPressed(KEY_ENTER)) {
+                if (R键盘::是此键为按下(KEY_ENTER)) {
                     try {
                         线程Id = std::thread(加载数据线程);
                         TraceLog(LOG_INFO, "Loading thread initialized successfully");
@@ -72,8 +72,8 @@ int main() {
                 break;
 
             case 完成:
-                if (IsKeyPressed(KEY_ENTER)) {
-                    // Reset everything to launch again
+                if (R键盘::是此键为按下(KEY_ENTER)) {
+                    // 重置再启动
                     dataLoaded = false;
                     dataProgress = 0;
                     当前状态 = 状态::等待;
@@ -86,7 +86,7 @@ int main() {
 
         // Draw
         //----------------------------------------------------------------------
-        BeginDrawing();
+        窗口.开始绘制();
         {
             窗口.清屏(RAYWHITE);
 
@@ -94,20 +94,22 @@ int main() {
                 case 等待: raylib::绘制文本("PRESS ENTER to START LOADING DATA", 150, 170, 20, DARKGRAY); break;
 
                 case 加载:
-                    DrawRectangle(150, 200, dataProgress, 60, SKYBLUE);
+                    颜色 = R颜色::天蓝();
+                    颜色.绘制矩形(150, 200, dataProgress, 60);
                     if ((framesCounter / 15) % 2) raylib::绘制文本("LOADING DATA...", 240, 210, 40, DARKBLUE);
                     break;
 
                 case 完成:
-                    DrawRectangle(150, 200, 500, 60, LIME);
+                    颜色 = R颜色::柠檬绿();
+                    颜色.绘制矩形(150, 200, 500, 60);
                     raylib::绘制文本("DATA LOADED!", 250, 210, 40, GREEN);
                     break;
             }
-
-            DrawRectangleLines(150, 200, 500, 60, DARKGRAY);
+            颜色 = R颜色::深灰();
+            颜色.绘制矩形边框(150, 200, 500, 60);
         }
 
-        EndDrawing();
+        窗口.结束绘制();
         //----------------------------------------------------------------------
     }
 

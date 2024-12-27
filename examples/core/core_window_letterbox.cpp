@@ -24,61 +24,61 @@
 // Program main entry point
 //------------------------------------------------------------------------------------
 int main(void) {
-    const int windowWidth = 800;
-    const int windowHeight = 450;
+    const int 窗口宽 = 800;
+    const int 窗口高 = 450;
 
     // Enable config flags for resizable window and vertical synchro
-    raylib::Window window(
-        windowWidth,
-        windowHeight,
+    R窗口 窗口(
+        窗口宽,
+        窗口高,
         "raylib [core] example - window scale letterbox",
         FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
-    window.SetMinSize(320, 240);
+    窗口.设最小尺寸(320, 240);
 
-    int gameScreenWidth = 640;
-    int gameScreenHeight = 480;
+    int 游戏屏幕宽 = 640;
+    int 游戏屏幕高 = 480;
 
     // Render texture initialization, used to hold the rendering result so we can easily resize it
-    raylib::RenderTexture2D target(gameScreenWidth, gameScreenHeight);
-    target.GetTexture().SetFilter(TEXTURE_FILTER_BILINEAR); // Texture scale filter to use
+    R渲染纹理2D 渲染目标(游戏屏幕宽, 游戏屏幕高);
+    渲染目标.取纹理().设纹理过滤(TEXTURE_FILTER_BILINEAR); // Texture scale filter to use
 
-    raylib::Color colors[10];
+    R颜色 颜色组[10];
     for (int i = 0; i < 10; i++) {
-        colors[i] = raylib::Color(
+        颜色组[i] = {
             (unsigned char)GetRandomValue(100, 250),
             (unsigned char)GetRandomValue(50, 150),
             (unsigned char)GetRandomValue(10, 100),
-            255);
+            255};
     }
 
-    window.SetTargetFPS(60); // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) // Detect window close button or ESC key
+    while (!窗口.是已关闭()) // Detect window close button or ESC key
     {
         // Update
         //----------------------------------------------------------------------------------
         // Compute required framebuffer scaling
-        float scale = MIN((float)GetScreenWidth() / gameScreenWidth, (float)GetScreenHeight() / gameScreenHeight);
+        float 尺寸 = MIN((float)GetScreenWidth() / 游戏屏幕宽, (float)GetScreenHeight() / 游戏屏幕高);
 
-        if (IsKeyPressed(KEY_SPACE)) {
+        if (R键盘::是此键为按下(KEY_SPACE)) {
             // Recalculate random colors for the bars
             for (int i = 0; i < 10; i++) {
-                colors[i] = raylib::Color(
+                颜色组[i] = {
                     (unsigned char)GetRandomValue(100, 250),
                     (unsigned char)GetRandomValue(50, 150),
                     (unsigned char)GetRandomValue(10, 100),
-                    255);
+                    255};
             }
         }
 
         // Update virtual mouse (clamped mouse value behind game screen)
-        raylib::Vector2 mouse = raylib::Mouse::GetPosition();
-        raylib::Vector2 virtualMouse(
-            (mouse.x - (GetScreenWidth() - (gameScreenWidth * scale)) * 0.5f) / scale,
-            (mouse.y - (GetScreenHeight() - (gameScreenHeight * scale)) * 0.5f) / scale);
-        virtualMouse = virtualMouse.Clamp(raylib::Vector2::Zero(), raylib::Vector2(gameScreenWidth, gameScreenHeight));
+        raylib::Vector2 鼠标 = R鼠标::取位置();
+        raylib::Vector2 虚拟鼠标(
+            (鼠标.x - (GetScreenWidth() - (游戏屏幕宽 * 尺寸)) * 0.5f) / 尺寸,
+            (鼠标.y - (GetScreenHeight() - (游戏屏幕高 * 尺寸)) * 0.5f) / 尺寸);
+        虚拟鼠标 = 虚拟鼠标.限制(raylib::Vector2::归零(), raylib::Vector2(游戏屏幕宽, 游戏屏幕高));
 
         // Apply the same transformation as the virtual mouse to the real mouse (i.e. to work with raygui)
         // SetMouseOffset(-(GetScreenWidth() - (gameScreenWidth*scale))*0.5f, -(GetScreenHeight() -
@@ -89,39 +89,38 @@ int main(void) {
         // Draw
         //----------------------------------------------------------------------------------
         // Draw everything in the render texture, note this will not be rendered on screen, yet
-        target.BeginMode();
-        ClearBackground(RAYWHITE); // Clear render texture background color
+        渲染目标.开始();
+        窗口.清屏(RAYWHITE); // Clear render texture background color
 
-        for (int i = 0; i < 10; i++)
-            DrawRectangle(0, (gameScreenHeight / 10) * i, gameScreenWidth, gameScreenHeight / 10, colors[i]);
+        for (int i = 0; i < 10; i++) DrawRectangle(0, (游戏屏幕高 / 10) * i, 游戏屏幕宽, 游戏屏幕高 / 10, 颜色组[i]);
 
-        DrawText(
+        raylib::绘制文本(
             "If executed inside a window,\nyou can resize the window,\nand see the screen scaling!",
             10,
             25,
             20,
             WHITE);
-        DrawText(TextFormat("Default Mouse: [%i , %i]", (int)mouse.x, (int)mouse.y), 350, 25, 20, GREEN);
-        DrawText(TextFormat("Virtual Mouse: [%i , %i]", (int)virtualMouse.x, (int)virtualMouse.y), 350, 55, 20, YELLOW);
-        target.EndMode();
+        raylib::绘制文本(TextFormat("Default Mouse: [%i , %i]", (int)鼠标.x, (int)鼠标.y), 350, 25, 20, GREEN);
+        raylib::绘制文本(TextFormat("Virtual Mouse: [%i , %i]", (int)虚拟鼠标.x, (int)虚拟鼠标.y), 350, 55, 20, YELLOW);
+        渲染目标.结束();
 
-        BeginDrawing();
-        ClearBackground(BLACK); // Clear screen background
+        窗口.开始绘制();
+        窗口.清屏(BLACK); // Clear screen background
 
         // Draw render texture to screen, properly scaled
-        target.GetTexture().Draw(
-            raylib::Rectangle(0.0f, 0.0f, target.texture.width, -target.texture.height),
-            raylib::Rectangle(
-                (GetScreenWidth() - (gameScreenWidth * scale)) * 0.5f,
-                (GetScreenHeight() - (gameScreenHeight * scale)) * 0.5f,
-                gameScreenWidth * scale,
-                gameScreenHeight * scale),
-            raylib::Vector2::Zero(),
+        渲染目标.取纹理().绘制(
+            R矩形(0.0f, 0.0f, 渲染目标.texture.width, -渲染目标.texture.height),
+            R矩形(
+                (GetScreenWidth() - (游戏屏幕宽 * 尺寸)) * 0.5f,
+                (GetScreenHeight() - (游戏屏幕高 * 尺寸)) * 0.5f,
+                游戏屏幕宽 * 尺寸,
+                游戏屏幕高 * 尺寸),
+            RVector2::归零(),
             0.0f,
             WHITE);
-        EndDrawing();
+        窗口.结束绘制();
         //--------------------------------------------------------------------------------------
     }
-
+    
     return 0;
 }
