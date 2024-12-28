@@ -1,61 +1,56 @@
 /*******************************************************************************************
-*
-*   raylib [models] example - Drawing billboards
-*
-*   This example has been created using raylib 1.3 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
-*
-*   Copyright (c) 2015 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
+ *
+ *   raylib [models] example - Drawing billboards
+ *
+ *   This example has been created using raylib 1.3 (www.raylib.com)
+ *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
+ *
+ *   Copyright (c) 2015 Ramon Santamaria (@raysan5)
+ *
+ ********************************************************************************************/
 
 #include "raylib-cpp.hpp"
 
 int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int 屏幕宽 = 800;
+    const int 屏幕高 = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [models] example - drawing billboards");
+    R窗口 窗口(屏幕宽, 屏幕高, "raylib [models] example - drawing billboards");
 
     // Define the camera to look into our 3d world
-    raylib::Camera camera(
-        raylib::Vector3(5.0f, 4.0f, 5.0f),
-        raylib::Vector3(0.0f, 2.0f, 0.0f),
-        raylib::Vector3(0.0f, 1.0f, 0.0f),
-        45.0f,
-        CAMERA_PERSPECTIVE);
+    R相机 相机(RVector3(5.0, 4.0, 5.0), RVector3(0.0, 2.0, 0.0), RVector3(0.0, 1.0, 0.0), 45.0, CAMERA_PERSPECTIVE);
 
-    raylib::Texture2D bill("resources/billboard.png");     // Our texture billboard
-    raylib::Vector3 billPosition(0.0f, 2.0f, 0.0f);                // Position where draw billboard
+    R纹理2D 公告牌("resources/billboard.png"); // Our texture billboard
+    RVector3 公告牌位置(0.0f, 2.0f, 0.0f); // Position where draw billboard
 
-    SetTargetFPS(60);                       // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) {    // Detect window close button or ESC key
+    while (!窗口.是已关闭()) { // Detect window close button or ESC key
         // Update
         //----------------------------------------------------------------------------------
-        camera.Update(CAMERA_ORBITAL);              // Update camera
+        相机.更新(CAMERA_ORBITAL); // Update camera
         //----------------------------------------------------------------------------------
 
         // Draw
         //----------------------------------------------------------------------------------
-        BeginDrawing();
+        窗口.开始绘制();
         {
-            window.ClearBackground(RAYWHITE);
+            窗口.清屏(RAYWHITE);
 
-            camera.BeginMode();
+            相机.开始3D模式();
             {
-                DrawGrid(10, 1.0f);        // Draw a grid
-                bill.DrawBillboard(camera, billPosition, 2.0f);
+                DrawGrid(10, 1.0); // Draw a grid
+                公告牌.绘制公告板(相机, 公告牌位置, 2.0);
             }
-            camera.EndMode();
+            相机.结束3D模式();
 
             DrawFPS(10, 10);
         }
-        EndDrawing();
+        窗口.结束绘制();
         //----------------------------------------------------------------------------------
     }
 

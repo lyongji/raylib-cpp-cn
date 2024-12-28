@@ -14,64 +14,59 @@
 int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int 屏幕宽 = 800;
+    const int 屏幕高 = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [core] example - 3d camera free");
+    R窗口 窗口(屏幕宽, 屏幕高, "raylib [core] example - 3d camera free");
 
     // Define the camera to look into our 3d world
-    raylib::Camera camera(
-        raylib::Vector3(10.0f, 10.0f, 10.0f),
-        raylib::Vector3(),
-        raylib::Vector3(0.0f, 1.0f, 0.0f),
-        45.0f,
-        CAMERA_PERSPECTIVE);
+    R相机 相机(Vector3(10.0, 10.0, 10.0), Vector3(), Vector3(0.0, 1.0, 0.0), 45.0, CAMERA_PERSPECTIVE);
 
-    Vector3 cubePosition{0.0f, 1.0f, 0.0f};
-    Vector2 cubeScreenPosition;
+    Vector3 盒子位置{0.0, 1.0, 0.0};
+    Vector2 盒子屏幕位置;
 
-    SetTargetFPS(60); // Set our game to run at 60 frames-per-second
+    窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) { // Detect window close button or ESC key
+    while (!窗口.是已关闭()) { // Detect window close button or ESC key
         // Update
         //----------------------------------------------------------------------------------
-        camera.Update(CAMERA_THIRD_PERSON); // Update camera
+        相机.更新(CAMERA_THIRD_PERSON); // Update camera
 
         // Calculate cube screen space position (with a little offset to be in top)
-        cubeScreenPosition = GetWorldToScreen({cubePosition.x, cubePosition.y + 2.5f, cubePosition.z}, camera);
+        盒子屏幕位置 = GetWorldToScreen({盒子位置.x, (盒子位置.y + 2.5f), 盒子位置.z}, 相机);
         //----------------------------------------------------------------------------------
 
         // Draw
         //----------------------------------------------------------------------------------
-        BeginDrawing();
+        窗口.开始绘制();
         {
-            window.ClearBackground(RAYWHITE);
+            窗口.清屏(RAYWHITE);
 
-            camera.BeginMode();
+            相机.开始3D模式();
             {
-                DrawCube(cubePosition, 2.0f, 2.0f, 2.0f, RED);
-                DrawCubeWires(cubePosition, 2.0f, 2.0f, 2.0f, MAROON);
+                DrawCube(盒子位置, 2.0f, 2.0f, 2.0f, RED);
+                DrawCubeWires(盒子位置, 2.0f, 2.0f, 2.0f, MAROON);
 
                 DrawGrid(10, 1.0f);
             }
-            camera.EndMode();
+            相机.结束3D模式();
 
-            raylib::DrawText(
+            raylib::绘制文本(
                 "Enemy: 100 / 100",
-                cubeScreenPosition.x - MeasureText("Enemy: 100/100", 20) / 2,
-                cubeScreenPosition.y,
+                (盒子屏幕位置.x - MeasureText("Enemy: 100/100", 20) / 2),
+                盒子屏幕位置.y,
                 20,
                 BLACK);
-            raylib::DrawText(
+            raylib::绘制文本(
                 "Text is always on top of the cube",
-                (screenWidth - MeasureText("Text is always on top of the cube", 20)) / 2,
+                (屏幕宽 - MeasureText("Text is always on top of the cube", 20)) / 2,
                 25,
                 20,
                 GRAY);
         }
-        EndDrawing();
+        窗口.结束绘制();
         //----------------------------------------------------------------------------------
     }
 

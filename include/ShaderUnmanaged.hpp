@@ -81,7 +81,7 @@ public:
      *
      * @see GetShaderLocation()
      */
-    [[nodiscard]] int 取着色器位置(const std::string& 统一变量名) const {
+    [[nodiscard]] int 取位置(const std::string& 统一变量名) const {
         return ::GetShaderLocation(*this, 统一变量名.c_str());
     }
 
@@ -99,8 +99,8 @@ public:
      *
      * @see SetShaderValue()
      */
-    非托管着色器& 设统一变量(int 统一变量位置, const void* 变量值, int 统一变量类型) {
-        ::SetShaderValue(*this, 统一变量位置, 变量值, 统一变量类型);
+    非托管着色器& 设变量(int 变量位置, const void* 变量值, int 变量类型) {
+        ::SetShaderValue(*this, 变量位置, 变量值, 变量类型);
         return *this;
     }
 
@@ -109,8 +109,8 @@ public:
      *
      * @see SetShaderValueV()
      */
-    非托管着色器& 设统一变量(int 统一变量位置, const void* 变量值, int 统一变量类型, int 数量) {
-        ::SetShaderValueV(*this, 统一变量位置, 变量值, 统一变量类型, 数量);
+    非托管着色器& 设变量(int 变量位置, const void* 变量值, int 变量类型, int 数量) {
+        ::SetShaderValueV(*this, 变量位置, 变量值, 变量类型, 数量);
         return *this;
     }
 
@@ -119,8 +119,8 @@ public:
      *
      * @see SetShaderValueMatrix()
      */
-    非托管着色器& 设统一变量(int 统一变量位置, const ::Matrix& 矩阵) {
-        ::SetShaderValueMatrix(*this, 统一变量位置, 矩阵);
+    非托管着色器& 设变量(int 变量位置, const ::Matrix& 矩阵) {
+        ::SetShaderValueMatrix(*this, 变量位置, 矩阵);
         return *this;
     }
 
@@ -129,8 +129,8 @@ public:
      *
      * @see SetShaderValueTexture()
      */
-    非托管着色器& 设统一变量(int 统一变量位置, const ::Texture2D& 纹理) {
-        ::SetShaderValueTexture(*this, 统一变量位置, 纹理);
+    非托管着色器& 设变量(int 变量位置, const ::Texture2D& 纹理) {
+        ::SetShaderValueTexture(*this, 变量位置, 纹理);
         return *this;
     }
 

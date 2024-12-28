@@ -61,7 +61,7 @@ struct Light {
 //----------------------------------------------------------------------------------
 // Global Variables Definition
 //----------------------------------------------------------------------------------
-static int lightCount = 0; // Current number of dynamic lights that have been created
+static int 光源数量 = 0; // Current number of dynamic lights that have been created
 
 //----------------------------------------------------------------------------------
 // Module specific Functions Declaration
@@ -86,99 +86,98 @@ static void UpdateLight(Shader shader, const Light& light);
 int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int 屏幕宽 = 800;
+    const int 屏幕高 = 450;
 
     SetConfigFlags(FLAG_MSAA_4X_HINT);
-    InitWindow(screenWidth, screenHeight, "raylib [shaders] example - basic pbr");
+    InitWindow(屏幕宽, 屏幕高, "raylib [shaders] example - basic pbr");
 
     // Define the camera to look into our 3d world
-    raylib::Camera camera;
-    camera.position = {2.0f, 2.0f, 6.0f}; // Camera position
-    camera.target = {0.0f, 0.5f, 0.0f}; // Camera looking at point
-    camera.up = {0.0f, 1.0f, 0.0f}; // Camera up vector (rotation towards target)
-    camera.fovy = 45.0f; // Camera field-of-view Y
-    camera.projection = CAMERA_PERSPECTIVE; // Camera projection type
+    R相机 相机;
+    相机.position = {2.0f, 2.0f, 6.0f}; // Camera position
+    相机.target = {0.0f, 0.5f, 0.0f}; // Camera looking at point
+    相机.up = {0.0f, 1.0f, 0.0f}; // Camera up vector (rotation towards target)
+    相机.fovy = 45.0f; // Camera field-of-view Y
+    相机.projection = CAMERA_PERSPECTIVE; // Camera projection type
 
     // Load PBR shader and setup all required locations
-    raylib::Shader shader(
+    R着色器 着色器(
         TextFormat("resources/shaders/glsl%i/pbr.vs", GLSL_VERSION),
         TextFormat("resources/shaders/glsl%i/pbr.fs", GLSL_VERSION));
-    shader.locs[SHADER_LOC_MAP_ALBEDO] = GetShaderLocation(shader, "albedoMap");
-    // WARNING: Metalness, roughness, and ambient occlusion are all packed into a MRA texture
-    // They are passed as to the SHADER_LOC_MAP_METALNESS location for convenience,
+    着色器.locs[SHADER_LOC_MAP_ALBEDO] = GetShaderLocation(着色器, "albedoMap");
+    // WARNING: Metalness, roughness, and ambient occlusion are all packed into a MRA R   // They are passed as to the SHADER_LOC_MAP_METALNESS location for convenience,
     // shader already takes care of it accordingly
-    shader.locs[SHADER_LOC_MAP_METALNESS] = GetShaderLocation(shader, "mraMap");
-    shader.locs[SHADER_LOC_MAP_NORMAL] = GetShaderLocation(shader, "normalMap");
+    着色器.locs[SHADER_LOC_MAP_METALNESS] = GetShaderLocation(着色器, "mraMap");
+    着色器.locs[SHADER_LOC_MAP_NORMAL] = GetShaderLocation(着色器, "normalMap");
     // WARNING: Similar to the MRA map, the emissive map packs different information
     // into a single texture: it stores height and emission data
     // It is binded to SHADER_LOC_MAP_EMISSION location an properly processed on shader
-    shader.locs[SHADER_LOC_MAP_EMISSION] = GetShaderLocation(shader, "emissiveMap");
-    shader.locs[SHADER_LOC_COLOR_DIFFUSE] = GetShaderLocation(shader, "albedoColor");
+    着色器.locs[SHADER_LOC_MAP_EMISSION] = GetShaderLocation(着色器, "emissiveMap");
+    着色器.locs[SHADER_LOC_COLOR_DIFFUSE] = GetShaderLocation(着色器, "albedoColor");
 
     // Setup additional required shader locations, including lights data
-    shader.locs[SHADER_LOC_VECTOR_VIEW] = GetShaderLocation(shader, "viewPos");
-    int lightCountLoc = GetShaderLocation(shader, "numOfLights");
+    着色器.locs[SHADER_LOC_VECTOR_VIEW] = GetShaderLocation(着色器, "viewPos");
+    int lightCountLoc = GetShaderLocation(着色器, "numOfLights");
     int maxLightCount = MAX_LIGHTS;
-    shader.SetValue(lightCountLoc, &maxLightCount, SHADER_UNIFORM_INT);
+    着色器.设变量(lightCountLoc, &maxLightCount, SHADER_UNIFORM_INT);
 
     // Setup ambient color and intensity parameters
     float ambientIntensity = 0.02f;
-    raylib::Color ambientColor = {26, 32, 135, 255};
+    R颜色 ambientColor = {26, 32, 135, 255};
     raylib::Vector3 ambientColorNormalized = {
         ambientColor.r / 255.0f,
         ambientColor.g / 255.0f,
         ambientColor.b / 255.0f};
-    shader.SetValue(shader.GetLocation("ambientColor"), &ambientColorNormalized, SHADER_UNIFORM_VEC3);
-    shader.SetValue(shader.GetLocation("ambient"), &ambientIntensity, SHADER_UNIFORM_FLOAT);
+    着色器.设变量(着色器.取位置("ambientColor"), &ambientColorNormalized, SHADER_UNIFORM_VEC3);
+    着色器.设变量(着色器.取位置("ambient"), &ambientIntensity, SHADER_UNIFORM_FLOAT);
 
     // Get location for shader parameters that can be modified in real time
-    int emissiveIntensityLoc = shader.GetLocation("emissivePower");
-    int emissiveColorLoc = shader.GetLocation("emissiveColor");
-    int textureTilingLoc = shader.GetLocation("tiling");
+    int emissiveIntensityLoc = 着色器.取位置("emissivePower");
+    int emissiveColorLoc = 着色器.取位置("emissiveColor");
+    int textureTilingLoc = 着色器.取位置("tiling");
 
     // Load old car model using PBR maps and shader
     // WARNING: We know this model consists of a single model.meshes[0] and
     // that model.materials[0] is by default assigned to that mesh
     // There could be more complex models consisting of multiple meshes and
     // multiple materials defined for those meshes... but always 1 mesh = 1 material
-    raylib::Model car("resources/models/old_car_new.glb");
+    R模型 车("resources/models/old_car_new.glb");
 
     // Assign already setup PBR shader to model.materials[0], used by models.meshes[0]
-    car.materials[0].shader = shader;
+    车.materials[0].shader = 着色器;
 
     // Setup materials[0].maps default parameters
-    car.materials[0].maps[MATERIAL_MAP_ALBEDO].color = WHITE;
-    car.materials[0].maps[MATERIAL_MAP_METALNESS].value = 0.0f;
-    car.materials[0].maps[MATERIAL_MAP_ROUGHNESS].value = 0.0f;
-    car.materials[0].maps[MATERIAL_MAP_OCCLUSION].value = 1.0f;
-    car.materials[0].maps[MATERIAL_MAP_EMISSION].color = {255, 162, 0, 255};
+    车.materials[0].maps[MATERIAL_MAP_ALBEDO].color = WHITE;
+    车.materials[0].maps[MATERIAL_MAP_METALNESS].value = 0.0f;
+    车.materials[0].maps[MATERIAL_MAP_ROUGHNESS].value = 0.0f;
+    车.materials[0].maps[MATERIAL_MAP_OCCLUSION].value = 1.0f;
+    车.materials[0].maps[MATERIAL_MAP_EMISSION].color = {255, 162, 0, 255};
 
     // Setup materials[0].maps default textures
-    car.materials[0].maps[MATERIAL_MAP_ALBEDO].texture = LoadTexture("resources/old_car_d.png");
-    car.materials[0].maps[MATERIAL_MAP_METALNESS].texture = LoadTexture("resources/old_car_mra.png");
-    car.materials[0].maps[MATERIAL_MAP_NORMAL].texture = LoadTexture("resources/old_car_n.png");
-    car.materials[0].maps[MATERIAL_MAP_EMISSION].texture = LoadTexture("resources/old_car_e.png");
+    车.materials[0].maps[MATERIAL_MAP_ALBEDO].texture = LoadTexture("resources/old_car_d.png");
+    车.materials[0].maps[MATERIAL_MAP_METALNESS].texture = LoadTexture("resources/old_car_mra.png");
+    车.materials[0].maps[MATERIAL_MAP_NORMAL].texture = LoadTexture("resources/old_car_n.png");
+    车.materials[0].maps[MATERIAL_MAP_EMISSION].texture = LoadTexture("resources/old_car_e.png");
 
     // Load floor model mesh and assign material parameters
     // NOTE: A basic plane shape can be generated instead of being loaded from a model file
-    raylib::Model floor("resources/models/plane.glb");
+    R模型 地("resources/models/plane.glb");
     // Mesh floorMesh = GenMeshPlane(10, 10, 10, 10);
     //GenMeshTangents(&floorMesh);      // TODO: Review tangents generation
     // Model floor = LoadModelFromMesh(floorMesh);
 
     // Assign material shader for our floor model, same PBR shader
-    floor.materials[0].shader = shader;
+    地.materials[0].shader = 着色器;
 
-    floor.materials[0].maps[MATERIAL_MAP_ALBEDO].color = WHITE;
-    floor.materials[0].maps[MATERIAL_MAP_METALNESS].value = 0.0f;
-    floor.materials[0].maps[MATERIAL_MAP_ROUGHNESS].value = 0.0f;
-    floor.materials[0].maps[MATERIAL_MAP_OCCLUSION].value = 1.0f;
-    floor.materials[0].maps[MATERIAL_MAP_EMISSION].color = BLACK;
+    地.materials[0].maps[MATERIAL_MAP_ALBEDO].color = WHITE;
+    地.materials[0].maps[MATERIAL_MAP_METALNESS].value = 0.0f;
+    地.materials[0].maps[MATERIAL_MAP_ROUGHNESS].value = 0.0f;
+    地.materials[0].maps[MATERIAL_MAP_OCCLUSION].value = 1.0f;
+    地.materials[0].maps[MATERIAL_MAP_EMISSION].color = BLACK;
 
-    floor.materials[0].maps[MATERIAL_MAP_ALBEDO].texture = LoadTexture("resources/road_a.png");
-    floor.materials[0].maps[MATERIAL_MAP_METALNESS].texture = LoadTexture("resources/road_mra.png");
-    floor.materials[0].maps[MATERIAL_MAP_NORMAL].texture = LoadTexture("resources/road_n.png");
+    地.materials[0].maps[MATERIAL_MAP_ALBEDO].texture = LoadTexture("resources/road_a.png");
+    地.materials[0].maps[MATERIAL_MAP_METALNESS].texture = LoadTexture("resources/road_mra.png");
+    地.materials[0].maps[MATERIAL_MAP_NORMAL].texture = LoadTexture("resources/road_n.png");
 
     // Models texture tiling parameter can be stored in the Material struct if required (CURRENTLY NOT USED)
     // NOTE: Material.params[4] are available for generic parameters storage (float)
@@ -187,19 +186,19 @@ int main() {
 
     // Create some lights
     std::array<Light, MAX_LIGHTS> lights = {
-        CreateLight(0, LightType::POINT, {-1.0f, 1.0f, -2.0f}, {0.0f, 0.0f, 0.0f}, YELLOW, 4.0f, shader),
-        CreateLight(1, LightType::POINT, {2.0f, 1.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, GREEN, 3.3f, shader),
-        CreateLight(2, LightType::POINT, {-2.0f, 1.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, RED, 8.3f, shader),
-        CreateLight(3, LightType::POINT, {1.0f, 1.0f, -2.0f}, {0.0f, 0.0f, 0.0f}, BLUE, 2.0f, shader),
+        CreateLight(0, LightType::POINT, {-1.0f, 1.0f, -2.0f}, {0.0f, 0.0f, 0.0f}, YELLOW, 4.0f, 着色器),
+        CreateLight(1, LightType::POINT, {2.0f, 1.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, GREEN, 3.3f, 着色器),
+        CreateLight(2, LightType::POINT, {-2.0f, 1.0f, 1.0f}, {0.0f, 0.0f, 0.0f}, RED, 8.3f, 着色器),
+        CreateLight(3, LightType::POINT, {1.0f, 1.0f, -2.0f}, {0.0f, 0.0f, 0.0f}, BLUE, 2.0f, 着色器),
     };
 
     // Setup material texture maps usage in shader
     // NOTE: By default, the texture maps are always used
     int usage = 1;
-    SetShaderValue(shader, GetShaderLocation(shader, "useTexAlbedo"), &usage, SHADER_UNIFORM_INT);
-    SetShaderValue(shader, GetShaderLocation(shader, "useTexNormal"), &usage, SHADER_UNIFORM_INT);
-    SetShaderValue(shader, GetShaderLocation(shader, "useTexMRA"), &usage, SHADER_UNIFORM_INT);
-    SetShaderValue(shader, GetShaderLocation(shader, "useTexEmissive"), &usage, SHADER_UNIFORM_INT);
+    SetShaderValue(着色器, GetShaderLocation(着色器, "useTexAlbedo"), &usage, SHADER_UNIFORM_INT);
+    SetShaderValue(着色器, GetShaderLocation(着色器, "useTexNormal"), &usage, SHADER_UNIFORM_INT);
+    SetShaderValue(着色器, GetShaderLocation(着色器, "useTexMRA"), &usage, SHADER_UNIFORM_INT);
+    SetShaderValue(着色器, GetShaderLocation(着色器, "useTexEmissive"), &usage, SHADER_UNIFORM_INT);
 
     SetTargetFPS(60); // Set our game to run at 60 frames-per-second
     //---------------------------------------------------------------------------------------
@@ -209,11 +208,11 @@ int main() {
     {
         // Update
         //----------------------------------------------------------------------------------
-        camera.Update(CAMERA_ORBITAL);
+        相机.更新(CAMERA_ORBITAL);
 
         // Update the shader with the camera view vector (points towards { 0.0f, 0.0f, 0.0f })
-        std::array<float, 3> cameraPos = {camera.position.x, camera.position.y, camera.position.z};
-        SetShaderValue(shader, shader.locs[SHADER_LOC_VECTOR_VIEW], cameraPos.data(), SHADER_UNIFORM_VEC3);
+        std::array<float, 3> cameraPos = {相机.position.x, 相机.position.y, 相机.position.z};
+        SetShaderValue(着色器, 着色器.locs[SHADER_LOC_VECTOR_VIEW], cameraPos.data(), SHADER_UNIFORM_VEC3);
 
         // Check key inputs to enable/disable lights
         if (IsKeyPressed(KEY_ONE)) {
@@ -230,7 +229,7 @@ int main() {
         }
 
         // Update light values on shader (actually, only enable/disable them)
-        for (int i = 0; i < MAX_LIGHTS; i++) UpdateLight(shader, lights[i]);
+        for (int i = 0; i < MAX_LIGHTS; i++) UpdateLight(着色器, lights[i]);
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -239,23 +238,23 @@ int main() {
 
         ClearBackground(BLACK);
 
-        BeginMode3D(camera);
+        BeginMode3D(相机);
 
         // Set floor model texture tiling and emissive color parameters on shader
-        SetShaderValue(shader, textureTilingLoc, &floorTextureTiling, SHADER_UNIFORM_VEC2);
-        raylib::Vector4 floorEmissiveColor = ColorNormalize(floor.materials[0].maps[MATERIAL_MAP_EMISSION].color);
-        SetShaderValue(shader, emissiveColorLoc, &floorEmissiveColor, SHADER_UNIFORM_VEC4);
+        SetShaderValue(着色器, textureTilingLoc, &floorTextureTiling, SHADER_UNIFORM_VEC2);
+        raylib::Vector4 floorEmissiveColor = ColorNormalize(地.materials[0].maps[MATERIAL_MAP_EMISSION].color);
+        SetShaderValue(着色器, emissiveColorLoc, &floorEmissiveColor, SHADER_UNIFORM_VEC4);
 
-        DrawModel(floor, {0.0f, 0.0f, 0.0f}, 5.0f, WHITE); // Draw floor model
+        DrawModel(地, {0.0f, 0.0f, 0.0f}, 5.0f, WHITE); // Draw floor model
 
         // Set old car model texture tiling, emissive color and emissive intensity parameters on shader
-        SetShaderValue(shader, textureTilingLoc, &carTextureTiling, SHADER_UNIFORM_VEC2);
-        raylib::Vector4 carEmissiveColor = ColorNormalize(car.materials[0].maps[MATERIAL_MAP_EMISSION].color);
-        SetShaderValue(shader, emissiveColorLoc, &carEmissiveColor, SHADER_UNIFORM_VEC4);
+        SetShaderValue(着色器, textureTilingLoc, &carTextureTiling, SHADER_UNIFORM_VEC2);
+        raylib::Vector4 carEmissiveColor = ColorNormalize(车.materials[0].maps[MATERIAL_MAP_EMISSION].color);
+        SetShaderValue(着色器, emissiveColorLoc, &carEmissiveColor, SHADER_UNIFORM_VEC4);
         float emissiveIntensity = 0.01f;
-        SetShaderValue(shader, emissiveIntensityLoc, &emissiveIntensity, SHADER_UNIFORM_FLOAT);
+        SetShaderValue(着色器, emissiveIntensityLoc, &emissiveIntensity, SHADER_UNIFORM_FLOAT);
 
-        car.Draw({0.0f, 0.0f, 0.0f}, 0.005f, WHITE); // Draw car model
+        车.绘制({0.0f, 0.0f, 0.0f}, 0.005f, WHITE); // Draw car model
 
         // Draw spheres to show the lights positions
         for (const auto& light : lights) {
@@ -275,12 +274,7 @@ int main() {
 
         DrawText("Toggle lights: [1][2][3][4]", 10, 40, 20, LIGHTGRAY);
 
-        DrawText(
-            "(c) Old Rusty Car model by Renafox (https://skfb.ly/LxRy)",
-            screenWidth - 320,
-            screenHeight - 20,
-            10,
-            LIGHTGRAY);
+        DrawText("(c) Old Rusty Car model by Renafox (https://skfb.ly/LxRy)", 屏幕宽 - 320, 屏幕高 - 20, 10, LIGHTGRAY);
 
         DrawFPS(10, 10);
 
@@ -292,14 +286,14 @@ int main() {
     //--------------------------------------------------------------------------------------
     // Unbind (disconnect) shader from car.material[0]
     // to avoid UnloadMaterial() trying to unload it automatically
-    car.materials[0].shader = {0};
-    UnloadMaterial(car.materials[0]);
-    car.materials[0].maps = nullptr;
+    车.materials[0].shader = {0};
+    UnloadMaterial(车.materials[0]);
+    车.materials[0].maps = nullptr;
     // UnloadModel(car);
 
-    floor.materials[0].shader = {0};
-    UnloadMaterial(floor.materials[0]);
-    floor.materials[0].maps = nullptr;
+    地.materials[0].shader = {0};
+    UnloadMaterial(地.materials[0]);
+    地.materials[0].maps = nullptr;
     // UnloadModel(floor);
 
     //UnloadShader(shader);       // Unload Shader

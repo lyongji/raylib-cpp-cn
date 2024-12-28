@@ -14,8 +14,8 @@
  ********************************************************************************************/
 
 #include "raylib-cpp.hpp"
-
 #include "raymath.hpp" // Required for: Vector2Clamp()
+#include <array>
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
@@ -24,48 +24,47 @@
 // Program main entry point
 //------------------------------------------------------------------------------------
 int main(void) {
-    const int ´°¿Ú¿í = 800;
-    const int ´°¿Ú¸ß = 450;
+    const int çª—å£å®½ = 800;
+    const int çª—å£é«˜ = 450;
 
     // Enable config flags for resizable window and vertical synchro
-    R´°¿Ú ´°¿Ú(
-        ´°¿Ú¿í,
-        ´°¿Ú¸ß,
+    Rçª—å£ çª—å£(
+        çª—å£å®½,
+        çª—å£é«˜,
         "raylib [core] example - window scale letterbox",
         FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
-    ´°¿Ú.Éè×îĞ¡³ß´ç(320, 240);
+    çª—å£.è®¾æœ€å°å°ºå¯¸(320, 240);
 
-    int ÓÎÏ·ÆÁÄ»¿í = 640;
-    int ÓÎÏ·ÆÁÄ»¸ß = 480;
+    int æ¸¸æˆå±å¹•å®½ = 640;
+    int æ¸¸æˆå±å¹•é«˜ = 480;
 
     // Render texture initialization, used to hold the rendering result so we can easily resize it
-    RäÖÈ¾ÎÆÀí2D äÖÈ¾Ä¿±ê(ÓÎÏ·ÆÁÄ»¿í, ÓÎÏ·ÆÁÄ»¸ß);
-    äÖÈ¾Ä¿±ê.È¡ÎÆÀí().ÉèÎÆÀí¹ıÂË(TEXTURE_FILTER_BILINEAR); // Texture scale filter to use
-
-    RÑÕÉ« ÑÕÉ«×é[10];
-    for (int i = 0; i < 10; i++) {
-        ÑÕÉ«×é[i] = {
+    Ræ¸²æŸ“çº¹ç†2D æ¸²æŸ“ç›®æ ‡(æ¸¸æˆå±å¹•å®½, æ¸¸æˆå±å¹•é«˜);
+    æ¸²æŸ“ç›®æ ‡.å–çº¹ç†().è®¾çº¹ç†è¿‡æ»¤(TEXTURE_FILTER_BILINEAR); // Texture scale filter to use
+    std::array<Ré¢œè‰², 10> é¢œè‰²ç»„;
+    for (auto& i : é¢œè‰²ç»„) {
+        i = Ré¢œè‰²{
             (unsigned char)GetRandomValue(100, 250),
             (unsigned char)GetRandomValue(50, 150),
             (unsigned char)GetRandomValue(10, 100),
             255};
     }
 
-    ´°¿Ú.ÉèÄ¿±êFPS(60); // Set our game to run at 60 frames-per-second
+    çª—å£.è®¾ç›®æ ‡FPS(60); // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    while (!´°¿Ú.ÊÇÒÑ¹Ø±Õ()) // Detect window close button or ESC key
+    while (!çª—å£.æ˜¯å·²å…³é—­()) // Detect window close button or ESC key
     {
         // Update
         //----------------------------------------------------------------------------------
         // Compute required framebuffer scaling
-        float ³ß´ç = MIN((float)GetScreenWidth() / ÓÎÏ·ÆÁÄ»¿í, (float)GetScreenHeight() / ÓÎÏ·ÆÁÄ»¸ß);
+        float å°ºå¯¸ = MIN((float)GetScreenWidth() / æ¸¸æˆå±å¹•å®½, (float)GetScreenHeight() / æ¸¸æˆå±å¹•é«˜);
 
-        if (R¼üÅÌ::ÊÇ´Ë¼üÎª°´ÏÂ(KEY_SPACE)) {
+        if (Ré”®ç›˜::æ˜¯æ­¤é”®ä¸ºæŒ‰ä¸‹(KEY_SPACE)) {
             // Recalculate random colors for the bars
-            for (int i = 0; i < 10; i++) {
-                ÑÕÉ«×é[i] = {
+            for (auto& i : é¢œè‰²ç»„) {
+                i = Ré¢œè‰²{
                     (unsigned char)GetRandomValue(100, 250),
                     (unsigned char)GetRandomValue(50, 150),
                     (unsigned char)GetRandomValue(10, 100),
@@ -74,11 +73,11 @@ int main(void) {
         }
 
         // Update virtual mouse (clamped mouse value behind game screen)
-        raylib::Vector2 Êó±ê = RÊó±ê::È¡Î»ÖÃ();
-        raylib::Vector2 ĞéÄâÊó±ê(
-            (Êó±ê.x - (GetScreenWidth() - (ÓÎÏ·ÆÁÄ»¿í * ³ß´ç)) * 0.5f) / ³ß´ç,
-            (Êó±ê.y - (GetScreenHeight() - (ÓÎÏ·ÆÁÄ»¸ß * ³ß´ç)) * 0.5f) / ³ß´ç);
-        ĞéÄâÊó±ê = ĞéÄâÊó±ê.ÏŞÖÆ(raylib::Vector2::¹éÁã(), raylib::Vector2(ÓÎÏ·ÆÁÄ»¿í, ÓÎÏ·ÆÁÄ»¸ß));
+        raylib::Vector2 é¼ æ ‡ = Ré¼ æ ‡::å–ä½ç½®();
+        raylib::Vector2 è™šæ‹Ÿé¼ æ ‡(
+            (é¼ æ ‡.x - (GetScreenWidth() - (æ¸¸æˆå±å¹•å®½ * å°ºå¯¸)) * 0.5f) / å°ºå¯¸,
+            (é¼ æ ‡.y - (GetScreenHeight() - (æ¸¸æˆå±å¹•é«˜ * å°ºå¯¸)) * 0.5f) / å°ºå¯¸);
+        è™šæ‹Ÿé¼ æ ‡ = è™šæ‹Ÿé¼ æ ‡.é™åˆ¶(raylib::Vector2::å½’é›¶(), raylib::Vector2(æ¸¸æˆå±å¹•å®½, æ¸¸æˆå±å¹•é«˜));
 
         // Apply the same transformation as the virtual mouse to the real mouse (i.e. to work with raygui)
         // SetMouseOffset(-(GetScreenWidth() - (gameScreenWidth*scale))*0.5f, -(GetScreenHeight() -
@@ -89,38 +88,38 @@ int main(void) {
         // Draw
         //----------------------------------------------------------------------------------
         // Draw everything in the render texture, note this will not be rendered on screen, yet
-        äÖÈ¾Ä¿±ê.¿ªÊ¼();
-        ´°¿Ú.ÇåÆÁ(RAYWHITE); // Clear render texture background color
+        æ¸²æŸ“ç›®æ ‡.å¼€å§‹();
+        çª—å£.æ¸…å±(RAYWHITE); // Clear render texture background color
 
-        for (int i = 0; i < 10; i++) DrawRectangle(0, (ÓÎÏ·ÆÁÄ»¸ß / 10) * i, ÓÎÏ·ÆÁÄ»¿í, ÓÎÏ·ÆÁÄ»¸ß / 10, ÑÕÉ«×é[i]);
+        for (int i = 0; i < 10; i++) DrawRectangle(0, (æ¸¸æˆå±å¹•é«˜ / 10) * i, æ¸¸æˆå±å¹•å®½, æ¸¸æˆå±å¹•é«˜ / 10, é¢œè‰²ç»„[i]);
 
-        raylib::»æÖÆÎÄ±¾(
+        raylib::ç»˜åˆ¶æ–‡æœ¬(
             "If executed inside a window,\nyou can resize the window,\nand see the screen scaling!",
             10,
             25,
             20,
             WHITE);
-        raylib::»æÖÆÎÄ±¾(TextFormat("Default Mouse: [%i , %i]", (int)Êó±ê.x, (int)Êó±ê.y), 350, 25, 20, GREEN);
-        raylib::»æÖÆÎÄ±¾(TextFormat("Virtual Mouse: [%i , %i]", (int)ĞéÄâÊó±ê.x, (int)ĞéÄâÊó±ê.y), 350, 55, 20, YELLOW);
-        äÖÈ¾Ä¿±ê.½áÊø();
+        raylib::ç»˜åˆ¶æ–‡æœ¬(TextFormat("Default Mouse: [%i , %i]", (int)é¼ æ ‡.x, (int)é¼ æ ‡.y), 350, 25, 20, GREEN);
+        raylib::ç»˜åˆ¶æ–‡æœ¬(TextFormat("Virtual Mouse: [%i , %i]", (int)è™šæ‹Ÿé¼ æ ‡.x, (int)è™šæ‹Ÿé¼ æ ‡.y), 350, 55, 20, YELLOW);
+        æ¸²æŸ“ç›®æ ‡.ç»“æŸ();
 
-        ´°¿Ú.¿ªÊ¼»æÖÆ();
-        ´°¿Ú.ÇåÆÁ(BLACK); // Clear screen background
+        çª—å£.å¼€å§‹ç»˜åˆ¶();
+        çª—å£.æ¸…å±(BLACK); // Clear screen background
 
         // Draw render texture to screen, properly scaled
-        äÖÈ¾Ä¿±ê.È¡ÎÆÀí().»æÖÆ(
-            R¾ØĞÎ(0.0f, 0.0f, äÖÈ¾Ä¿±ê.texture.width, -äÖÈ¾Ä¿±ê.texture.height),
-            R¾ØĞÎ(
-                (GetScreenWidth() - (ÓÎÏ·ÆÁÄ»¿í * ³ß´ç)) * 0.5f,
-                (GetScreenHeight() - (ÓÎÏ·ÆÁÄ»¸ß * ³ß´ç)) * 0.5f,
-                ÓÎÏ·ÆÁÄ»¿í * ³ß´ç,
-                ÓÎÏ·ÆÁÄ»¸ß * ³ß´ç),
-            RVector2::¹éÁã(),
+        æ¸²æŸ“ç›®æ ‡.å–çº¹ç†().ç»˜åˆ¶(
+            RçŸ©å½¢(0.0f, 0.0f, æ¸²æŸ“ç›®æ ‡.texture.width, -æ¸²æŸ“ç›®æ ‡.texture.height),
+            RçŸ©å½¢(
+                (GetScreenWidth() - (æ¸¸æˆå±å¹•å®½ * å°ºå¯¸)) * 0.5F,
+                (GetScreenHeight() - (æ¸¸æˆå±å¹•é«˜ * å°ºå¯¸)) * 0.5F,
+                æ¸¸æˆå±å¹•å®½ * å°ºå¯¸,
+                æ¸¸æˆå±å¹•é«˜ * å°ºå¯¸),
+            RVector2::å½’é›¶(),
             0.0f,
             WHITE);
-        ´°¿Ú.½áÊø»æÖÆ();
+        çª—å£.ç»“æŸç»˜åˆ¶();
         //--------------------------------------------------------------------------------------
     }
-    
+
     return 0;
 }

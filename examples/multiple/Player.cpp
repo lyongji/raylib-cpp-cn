@@ -2,30 +2,25 @@
 #include "raylib-cpp.hpp"
 
 Player::Player() {
-    position = Rectangle{
-        GetScreenWidth() / 2.0f - 50,
-        GetScreenHeight() / 2.0f - 50,
-        100,
-        100
-    };
-    speed = 3;
+    位置 = Rectangle{GetScreenWidth() / 2.0f - 50, GetScreenHeight() / 2.0f - 50, 100, 100};
+    速度 = 3;
 }
 
-void Player::Draw() {
-    position.Draw(RED);
+void Player::绘制() {
+    位置.绘制(RED);
 }
 
-void Player::Update() {
-    if (IsKeyDown(KEY_UP)) {
-        position.y -= speed;
+void Player::更新() {
+    if (R键盘::是此键为按下(KEY_UP)) {
+        位置.y -= (float)速度;
     }
-    if (IsKeyDown(KEY_DOWN)) {
-        position.y += speed;
+    if (R键盘::是此键为按下(KEY_DOWN)) {
+        位置.y += (float)速度;
     }
-    if (IsKeyDown(KEY_RIGHT)) {
-        position.x += speed;
+    if (R键盘::是此键为按下(KEY_RIGHT)) {
+        位置.x += (float)速度;
     }
-    if (IsKeyDown(KEY_LEFT)) {
-        position.x -= speed;
+    if (R键盘::是此键为按下(KEY_LEFT)) {
+        位置.x -= (float)速度;
     }
 }

@@ -9,3 +9,5 @@ doc
 /.xmake
 build
 /.vs
+CppProperties.json
+Launch.vs.json
