@@ -50,9 +50,9 @@ public:
 
     operator ::Rectangle() const { return {x, y, z, w}; }
 
-    [[nodiscard]] std::string ToString() const { return TextFormat("Vector4(%f, %f, %f, %f)", x, y, z, w); }
+    [[nodiscard]] std::string 转文本() const { return TextFormat("Vector4(%f, %f, %f, %f)", x, y, z, w); }
 
-    operator std::string() const { return ToString(); }
+    operator std::string() const { return 转文本(); }
 
 #ifndef RAYLIB_CPP_NO_MATH
     [[nodiscard]] Vector4 乘(const ::Vector4& vector4) const { return QuaternionMultiply(*this, vector4); }

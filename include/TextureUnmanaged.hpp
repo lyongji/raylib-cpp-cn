@@ -207,7 +207,7 @@ public:
      *
      * @see ::DrawTextureRec()
      */
-    void Draw(::Rectangle 源矩形, ::Vector2 位置 = {0, 0}, ::Color 色调 = {255, 255, 255, 255}) const {
+    void 绘制(::Rectangle 源矩形, ::Vector2 位置 = {0, 0}, ::Color 色调 = {255, 255, 255, 255}) const {
         ::DrawTextureRec(*this, 源矩形, 位置, 色调);
     }
 

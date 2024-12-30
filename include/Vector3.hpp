@@ -40,9 +40,9 @@ public:
 
     bool operator!=(const ::Vector3& other) const { return !(*this == other); }
 
-    [[nodiscard]] std::string ToString() const { return TextFormat("Vector3(%f, %f, %f)", x, y, z); }
+    [[nodiscard]] std::string 转文本() const { return TextFormat("Vector3(%f, %f, %f)", x, y, z); }
 
-    operator std::string() const { return ToString(); }
+    operator std::string() const { return 转文本(); }
 
 #ifndef RAYLIB_CPP_NO_MATH
     /**

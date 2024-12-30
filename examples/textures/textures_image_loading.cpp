@@ -11,20 +11,23 @@
 *
 ********************************************************************************************/
 
+#include "Color.hpp"
+#include "Texture.hpp"
+#include "Window.hpp"
 #include "raylib-cpp.hpp"
 
 int main() {
     // Initialization
     //--------------------------------------------------------------------------------------
-    int screenWidth = 800;
-    int screenHeight = 450;
+    int 屏幕宽 = 800;
+    int 屏幕高 = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [textures] example - image loading");
-    raylib::Texture texture("resources/raylib_logo.png");
-    raylib::Color textColor = raylib::Color::LightGray();
+    raylib::窗口 窗口(屏幕宽, 屏幕高, "raylib [textures] example - image loading");
+    raylib::纹理 纹理("resources/raylib_logo.png");
+    raylib::颜色 文本颜色 = R颜色::浅灰();
 
     // Main game loop
-    while (!window.ShouldClose()) {    // Detect window close button or ESC key
+    while (!窗口.是已关闭()) {    // Detect window close button or ESC key
         // Update
         //----------------------------------------------------------------------------------
         // Update your variables here
@@ -32,15 +35,15 @@ int main() {
 
         // Draw
         //----------------------------------------------------------------------------------
-        BeginDrawing();
+        窗口.开始绘制();
         {
-            window.ClearBackground(raylib::Color::RayWhite());
+            窗口.清屏(R颜色::荧白());
 
-            texture.Draw(screenWidth / 2 - texture.GetWidth() / 2, screenHeight / 2 - texture.GetHeight() / 2);
+            纹理.绘制(屏幕宽 / 2 - 纹理.取宽() / 2, 屏幕高 / 2 - 纹理.取高() / 2);
 
-            textColor.DrawText("this IS a texture loaded from an image!", 300, 370, 10);
+            文本颜色.绘制文本("this IS a texture loaded from an image!", 300, 370, 10);
         }
-        EndDrawing();
+        窗口.结束绘制();
         //----------------------------------------------------------------------------------
     }
 
