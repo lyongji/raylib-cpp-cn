@@ -69,11 +69,11 @@ int main() {
     着色器.设变量(ambientLoc, ambientValues.data(), SHADER_UNIFORM_VEC4);
 
     // Create lights
-    std::array<Light, MAX_LIGHTS> lights = {
-        CreateLight(LIGHT_POINT, {-2, 1, -2}, Vector3Zero(), YELLOW, 着色器),
-        CreateLight(LIGHT_POINT, {2, 1, 2}, Vector3Zero(), RED, 着色器),
-        CreateLight(LIGHT_POINT, {-2, 1, 2}, Vector3Zero(), GREEN, 着色器),
-        CreateLight(LIGHT_POINT, {2, 1, -2}, Vector3Zero(), BLUE, 着色器),
+    std::array<Light, MAX_LIGHTS> 灯光组 = {
+        CreateLight(LIGHT_POINT, {-2, 1, -2}, RVec3::归零(), YELLOW, 着色器),
+        CreateLight(LIGHT_POINT, {2, 1, 2}, RVec3::归零(), RED, 着色器),
+        CreateLight(LIGHT_POINT, {-2, 1, 2}, RVec3::归零(), GREEN, 着色器),
+        CreateLight(LIGHT_POINT, {2, 1, -2}, RVec3::归零(), BLUE, 着色器),
     };
 
     SetTargetFPS(60); // Set our game to run at 60 frames-per-second
@@ -87,25 +87,25 @@ int main() {
         相机.更新(CAMERA_ORBITAL);
 
         // Update the shader with the camera view vector (points towards { 0.0f, 0.0f, 0.0f })
-        std::array<float, 3> cameraPos = {相机.position.x, 相机.position.y, 相机.position.z};
-        SetShaderValue(着色器, 着色器.locs[SHADER_LOC_VECTOR_VIEW], cameraPos.data(), SHADER_UNIFORM_VEC3);
+        std::array<float, 3> 相机位置 = {相机.position.x, 相机.position.y, 相机.position.z};
+        SetShaderValue(着色器, 着色器.locs[SHADER_LOC_VECTOR_VIEW], 相机位置.data(), SHADER_UNIFORM_VEC3);
 
         // Check key inputs to enable/disable lights
         if (IsKeyPressed(KEY_Y)) {
-            lights[0].enabled = !lights[0].enabled;
+            灯光组[0].enabled = !灯光组[0].enabled;
         }
         if (IsKeyPressed(KEY_R)) {
-            lights[1].enabled = !lights[1].enabled;
+            灯光组[1].enabled = !灯光组[1].enabled;
         }
         if (IsKeyPressed(KEY_G)) {
-            lights[2].enabled = !lights[2].enabled;
+            灯光组[2].enabled = !灯光组[2].enabled;
         }
         if (IsKeyPressed(KEY_B)) {
-            lights[3].enabled = !lights[3].enabled;
+            灯光组[3].enabled = !灯光组[3].enabled;
         }
 
         // Update light values (actually, only enable/disable them)
-        for (const auto& light : lights) UpdateLightValues(着色器, light);
+        for (const auto& 灯光 : 灯光组) UpdateLightValues(着色器, 灯光);
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -124,11 +124,11 @@ int main() {
         EndShaderMode();
 
         // Draw spheres to show where the lights are
-        for (const auto& light : lights) {
-            if (light.enabled)
-                DrawSphereEx(light.position, 0.2f, 8, 8, light.color);
+        for (const auto& 灯光 : 灯光组) {
+            if (灯光.enabled)
+                DrawSphereEx(灯光.position, 0.2f, 8, 8, 灯光.color);
             else
-                DrawSphereWires(light.position, 0.2f, 8, 8, ColorAlpha(light.color, 0.3f));
+                DrawSphereWires(灯光.position, 0.2f, 8, 8, ColorAlpha(灯光.color, 0.3f));
         }
 
         DrawGrid(10, 1.0f);

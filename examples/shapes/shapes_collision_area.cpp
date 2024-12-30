@@ -1,98 +1,111 @@
 /*******************************************************************************************
-*
-*   raylib [shapes] example - collision area
-*
-*   This example has been created using raylib 2.5 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
-*
-*   Copyright (c) 2013-2019 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
+ *
+ *   raylib [shapes] example - collision area
+ *
+ *   This example has been created using raylib 2.5 (www.raylib.com)
+ *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
+ *
+ *   Copyright (c) 2013-2019 Ramon Santamaria (@raysan5)
+ *
+ ********************************************************************************************/
 
 #include "raylib-cpp.hpp"
 
 #include <cmath> // NOLINT
 
-int main(void)
-{
+int main() {
     // Initialization
     //---------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int 屏幕宽 = 800;
+    const int 屏幕高 = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib [shapes] example - collision area");
+    R窗口 窗口(屏幕宽, 屏幕高, "raylib [shapes] example - collision area");
 
     // Box A: Moving box
-    raylib::Rectangle boxA(10, GetScreenHeight()/2 - 50, 200, 100);
-    int boxASpeedX = 4;
+    R矩形 盒子A(10, GetScreenHeight() / 2 - 50, 200, 100);
+    int 盒子A速度X = 4;
 
     // Box B: Mouse moved box
-    raylib::Rectangle boxB(GetScreenWidth()/2 - 30, GetScreenHeight()/2 - 30, 60, 60);
+    R矩形 盒子B(GetScreenWidth() / 2 - 30, GetScreenHeight() / 2 - 30, 60, 60);
 
-    raylib::Rectangle boxCollision(0); // Collision rectangle
+    R矩形 盒子碰撞(0); // Collision rectangle
 
-    int screenUpperLimit = 40;      // Top menu limits
+    int 场景上界 = 40; // Top menu limits
 
-    bool pause = false;             // Movement pause
-    bool collision = false;         // Collision detection
+    bool 暂停 = false; // Movement pause
+    bool 碰撞 = false; // Collision detection
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    SetTargetFPS(60); // Set our game to run at 60 frames-per-second
     //----------------------------------------------------------
 
     // Main game loop
-    while (!window.ShouldClose()) {    // Detect window close button or ESC key
+    while (!窗口.是已关闭()) { // Detect window close button or ESC key
         // Update
         //-----------------------------------------------------
         // Move box if not paused
-        if (!pause) boxA.x += boxASpeedX;
+        if (!暂停) 盒子A.x += 盒子A速度X;
 
         // Bounce box on x screen limits
-        if (((boxA.x + boxA.width) >= GetScreenWidth()) || (boxA.x <= 0)) boxASpeedX *= -1;
+        if (((盒子A.x + 盒子A.width) >= GetScreenWidth()) || (盒子A.x <= 0)) 盒子A速度X *= -1;
 
         // Update player-controlled-box (box02)
-        boxB.x = GetMouseX() - boxB.width/2;
-        boxB.y = GetMouseY() - boxB.height/2;
+        盒子B.x = GetMouseX() - 盒子B.width / 2;
+        盒子B.y = GetMouseY() - 盒子B.height / 2;
 
         // Make sure Box B does not go out of move area limits
-        if ((boxB.x + boxB.width) >= GetScreenWidth()) boxB.x = GetScreenWidth() - boxB.width;
-        else if (boxB.x <= 0) boxB.x = 0;
+        if ((盒子B.x + 盒子B.width) >= GetScreenWidth())
+            盒子B.x = GetScreenWidth() - 盒子B.width;
+        else if (盒子B.x <= 0)
+            盒子B.x = 0;
 
-        if ((boxB.y + boxB.height) >= GetScreenHeight()) boxB.y = GetScreenHeight() - boxB.height;
-        else if (boxB.y <= screenUpperLimit) boxB.y = screenUpperLimit;
+        if ((盒子B.y + 盒子B.height) >= GetScreenHeight())
+            盒子B.y = GetScreenHeight() - 盒子B.height;
+        else if (盒子B.y <= 场景上界)
+            盒子B.y = 场景上界;
 
         // Check boxes collision
-        collision = boxA.CheckCollision(boxB);
+        碰撞 = 盒子A.是碰撞(盒子B);
 
         // Get collision rectangle (only on collision)
-        if (collision) boxCollision = boxA.GetCollision(boxB);
+        if (碰撞) 盒子碰撞 = 盒子A.取碰撞(盒子B);
 
         // Pause Box A movement
-        if (IsKeyPressed(KEY_SPACE)) pause = !pause;
+        if (IsKeyPressed(KEY_SPACE)) 暂停 = !暂停;
         //-----------------------------------------------------
 
         // Draw
         //-----------------------------------------------------
         BeginDrawing();
 
-            window.ClearBackground(RAYWHITE);
+        窗口.清屏(RAYWHITE);
 
-            DrawRectangle(0, 0, screenWidth, screenUpperLimit, collision? RED : BLACK);
+        DrawRectangle(0, 0, 屏幕宽, 场景上界, 碰撞 ? RED : BLACK);
 
-            boxA.Draw(GOLD);
-            boxB.Draw(BLUE);
+        盒子A.绘制(GOLD);
+        盒子B.绘制(BLUE);
 
-            if (collision) {
-                // Draw collision area
-                boxCollision.Draw(LIME);
+        if (碰撞) {
+            // Draw collision area
+            盒子碰撞.绘制(LIME);
 
-                // Draw collision message
-                raylib::DrawText("COLLISION!", GetScreenWidth()/2 - MeasureText("COLLISION!", 20)/2, screenUpperLimit/2 - 10, 20, BLACK);
+            // Draw collision message
+            raylib::绘制文本(
+                "COLLISION!",
+                GetScreenWidth() / 2 - MeasureText("COLLISION!", 20) / 2,
+                场景上界 / 2 - 10,
+                20,
+                BLACK);
 
-                // Draw collision area
-                raylib::DrawText(TextFormat("Collision Area: %i", (int)boxCollision.width*(int)boxCollision.height), GetScreenWidth()/2 - 100, screenUpperLimit + 10, 20, BLACK);
-            }
+            // Draw collision area
+            raylib::绘制文本(
+                TextFormat("Collision Area: %i", (int)盒子碰撞.width * (int)盒子碰撞.height),
+                GetScreenWidth() / 2 - 100,
+                场景上界 + 10,
+                20,
+                BLACK);
+        }
 
-            DrawFPS(10, 10);
+        DrawFPS(10, 10);
 
         EndDrawing();
         //-----------------------------------------------------

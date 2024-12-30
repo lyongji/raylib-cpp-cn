@@ -460,7 +460,7 @@ public:
     /**
      * 水平翻转图像
      */
-    图像& 水平反转() {
+    图像& 水平翻转() {
         ::ImageFlipHorizontal(this);
         return *this;
     }
