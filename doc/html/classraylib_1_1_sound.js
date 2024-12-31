@@ -3,7 +3,7 @@ var classraylib_1_1_sound =
     [ "Sound", "classraylib_1_1_sound.html#a4c08c29d0590754fd5798bbb4df4f4bb", null ],
     [ "Sound", "classraylib_1_1_sound.html#ab202d20657b5435283a6f85baaa79056", null ],
     [ "Sound", "classraylib_1_1_sound.html#acd90ba91564b3e381dc21829ba18c097", null ],
-    [ "Sound", "classraylib_1_1_sound.html#ab95375318685dbf1d03ff3489db0c9f0", null ],
+    [ "Sound", "classraylib_1_1_sound.html#aec747cafc4fa7d81d39a4f4083d83988", null ],
     [ "Sound", "classraylib_1_1_sound.html#a0fe06e7bac504ae550abd45f842ae3f4", null ],
     [ "Sound", "classraylib_1_1_sound.html#ae4ba50639e820e761161e6ae632983b6", null ],
     [ "~Sound", "classraylib_1_1_sound.html#a321a8cea955f859f8648e2df202f5497", null ],

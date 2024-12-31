@@ -123,9 +123,9 @@ $(function(){initNavTree('classraylib_1_1_raylib_exception.html',''); initResiza
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a12eace3257881770d0464dc17dfb2f37" id="r_a12eace3257881770d0464dc17dfb2f37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12eace3257881770d0464dc17dfb2f37">RaylibException</a> (std::string message)  throw ()</td></tr>
-<tr class="memdesc:a12eace3257881770d0464dc17dfb2f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用给定的消息构造一个运行时异常。  <br /></td></tr>
-<tr class="separator:a12eace3257881770d0464dc17dfb2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00f0c0dd24a27ea7de1ff97b1ad1c86" id="r_ac00f0c0dd24a27ea7de1ff97b1ad1c86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac00f0c0dd24a27ea7de1ff97b1ad1c86">RaylibException</a> (const std::string &amp;message) noexcept</td></tr>
+<tr class="memdesc:ac00f0c0dd24a27ea7de1ff97b1ad1c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用给定的消息构造一个运行时异常。  <br /></td></tr>
+<tr class="separator:ac00f0c0dd24a27ea7de1ff97b1ad1c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf64800d999a541343a3a55833ef6155" id="r_abf64800d999a541343a3a55833ef6155"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf64800d999a541343a3a55833ef6155">TraceLog</a> (int logLevel=LOG_ERROR)</td></tr>
 <tr class="memdesc:abf64800d999a541343a3a55833ef6155"><td class="mdescLeft">&#160;</td><td class="mdescRight">将异常消息输出到 <a class="el" href="#abf64800d999a541343a3a55833ef6155" title="将异常消息输出到 TraceLog()。">TraceLog()</a>。  <br /></td></tr>
 <tr class="separator:abf64800d999a541343a3a55833ef6155"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +133,8 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>用于大多数 raylib 相关异常的异常类。 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a12eace3257881770d0464dc17dfb2f37" name="a12eace3257881770d0464dc17dfb2f37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12eace3257881770d0464dc17dfb2f37">&#9670;&#160;</a></span>RaylibException()</h2>
+<a id="ac00f0c0dd24a27ea7de1ff97b1ad1c86" name="ac00f0c0dd24a27ea7de1ff97b1ad1c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00f0c0dd24a27ea7de1ff97b1ad1c86">&#9670;&#160;</a></span>RaylibException()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,16 +145,13 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="memname">raylib::RaylibException::RaylibException </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
           <td></td>
-        </tr>
-        <tr>
-          <td align="right">throw </td><td>(</td><td colspan="2">&#160;)</td><td></td><td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

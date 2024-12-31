@@ -15,7 +15,7 @@ var searchData=
   ['texttolower_12',['TextToLower',['../namespaceraylib.html#a0ca154b702fe8cc3c459d688665f0a13',1,'raylib']]],
   ['texttopascal_13',['TextToPascal',['../namespaceraylib.html#a8e19027c516acaf90317e053584c30f4',1,'raylib']]],
   ['texttoupper_14',['TextToUpper',['../namespaceraylib.html#a800f9a412413e1757674d5ac46de17f7',1,'raylib']]],
-  ['texture_15',['Texture',['../classraylib_1_1_texture.html',1,'raylib::Texture'],['../classraylib_1_1_texture.html#a58e78588be53fc00096d37019fef9134',1,'raylib::Texture::Texture(const Texture &amp;)=delete'],['../classraylib_1_1_texture.html#a7988e6f875f2f613d449325acf9f74be',1,'raylib::Texture::Texture(Texture &amp;&amp;other)']]],
+  ['texture_15',['Texture',['../classraylib_1_1_texture.html',1,'raylib::Texture'],['../classraylib_1_1_texture.html#a58e78588be53fc00096d37019fef9134',1,'raylib::Texture::Texture(const Texture &amp;)=delete'],['../classraylib_1_1_texture.html#a0d39944ddb922746cc3336982aeed219',1,'raylib::Texture::Texture(Texture &amp;&amp;other) noexcept']]],
   ['texture_2ehpp_16',['Texture.hpp',['../_texture_8hpp.html',1,'']]],
   ['texture2d_17',['Texture2D',['../namespaceraylib.html#acf1989fe7ce3a2fd2a24641f0a7256c2',1,'raylib']]],
   ['texture2dunmanaged_18',['Texture2DUnmanaged',['../namespaceraylib.html#a5c8430b97e17b145539dd9011114ab6d',1,'raylib']]],

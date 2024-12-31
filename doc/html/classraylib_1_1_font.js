@@ -8,7 +8,7 @@ var classraylib_1_1_font =
     [ "Font", "classraylib_1_1_font.html#adfe1913d9f5aa7848fcb033fe7bc7ca2", null ],
     [ "Font", "classraylib_1_1_font.html#a4cfb9ae6c224437ad3d5c7c4f905b6ab", null ],
     [ "Font", "classraylib_1_1_font.html#a075661783e8267f508e285d6ce39e959", null ],
-    [ "Font", "classraylib_1_1_font.html#afde2bd6bb51a7fe6fa02f4d9be73087f", null ],
+    [ "Font", "classraylib_1_1_font.html#ae779e88ac2882b739e4f4be26be80831", null ],
     [ "~Font", "classraylib_1_1_font.html#ac26732eaa27d5984b2c356941b5762ad", null ],
     [ "DrawText", "classraylib_1_1_font.html#af8950199e99ac5a001db4fc2a899d395", null ],
     [ "DrawText", "classraylib_1_1_font.html#ad6326c15252f111cd0f8c854df3608b7", null ],

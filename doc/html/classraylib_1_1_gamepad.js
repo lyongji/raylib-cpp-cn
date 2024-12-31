@@ -3,7 +3,7 @@ var classraylib_1_1_gamepad =
     [ "Gamepad", "classraylib_1_1_gamepad.html#a21fe706b843ce2196f52c1c08ea0d92a", null ],
     [ "GetAxisCount", "classraylib_1_1_gamepad.html#a3a1e2311ee288c437371ee1472449ef9", null ],
     [ "GetAxisMovement", "classraylib_1_1_gamepad.html#ad7c180ac50603ba226fe1aa1bee54a95", null ],
-    [ "GetButtonPressed", "classraylib_1_1_gamepad.html#a851be2dfb762d18268aad40ff7ee3f11", null ],
+    [ "GetButtonPressed", "classraylib_1_1_gamepad.html#a53e266725fdbf40e9d107817f75ef698", null ],
     [ "GetName", "classraylib_1_1_gamepad.html#aa13c682766bf03ba1f5f6fa821b15984", null ],
     [ "IsAvailable", "classraylib_1_1_gamepad.html#a552fc427aa95b93e5c3a0e22625b7912", null ],
     [ "IsAvailable", "classraylib_1_1_gamepad.html#a51ffa43549a2767723bdc8e780483c85", null ],
@@ -16,7 +16,7 @@ var classraylib_1_1_gamepad =
     [ "operator=", "classraylib_1_1_gamepad.html#af0d08d3ed4fdb915aea6c2dda49828ef", null ],
     [ "operator=", "classraylib_1_1_gamepad.html#a2d72d578a8a7815e74cfdf811fe9e6cb", null ],
     [ "set", "classraylib_1_1_gamepad.html#aa5e7c33d78267b99939453c4dbf6cc12", null ],
-    [ "SetMappings", "classraylib_1_1_gamepad.html#a38e06935af7feddb653eadc070cc16db", null ],
-    [ "SetVibration", "classraylib_1_1_gamepad.html#a0a29bad7c3e9e5689c3a3df9a87af66f", null ],
+    [ "SetMappings", "classraylib_1_1_gamepad.html#a385270526c51d6e6d97b4f46a9532a3f", null ],
+    [ "SetVibration", "classraylib_1_1_gamepad.html#a3e3c85ad24a021f41c0634be07e79060", null ],
     [ "number", "classraylib_1_1_gamepad.html#a66632b63f6edf508a980e9198f60a8f3", null ]
 ];

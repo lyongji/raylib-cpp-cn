@@ -7,7 +7,7 @@ var classraylib_1_1_model =
     [ "Model", "classraylib_1_1_model.html#af95dc4b56ff1b055bbc9a62e8ff11de1", null ],
     [ "~Model", "classraylib_1_1_model.html#ad0b3ed5e32b1d5bf73511ed67270ae07", null ],
     [ "Model", "classraylib_1_1_model.html#ab12ca5ce75a7fde88ed6f6aa472d42a0", null ],
-    [ "Model", "classraylib_1_1_model.html#a982dbd1ae4182f9e83959493d0e9581b", null ],
+    [ "Model", "classraylib_1_1_model.html#a31b98c0dfd479a938ad1b2a99a3aa16e", null ],
     [ "Draw", "classraylib_1_1_model.html#a3a38a436863fca2fd5613300d2ba6595", null ],
     [ "Draw", "classraylib_1_1_model.html#a23d7b4075544332ef45abc84605c3b21", null ],
     [ "DrawPoints", "classraylib_1_1_model.html#aa046d47e4834e3d5b795b2bcacda6e18", null ],

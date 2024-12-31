@@ -5,7 +5,7 @@ var classraylib_1_1_music =
     [ "Music", "classraylib_1_1_music.html#a3cbc2287ba5c8e55ce16c47bbb640c60", null ],
     [ "Music", "classraylib_1_1_music.html#a894c193e31d956b4c8763698beae17c4", null ],
     [ "Music", "classraylib_1_1_music.html#ae626afb93e3bbf3abd4410edbd316601", null ],
-    [ "Music", "classraylib_1_1_music.html#a8dc7537cc6ea86a77b0e7c71b708d08f", null ],
+    [ "Music", "classraylib_1_1_music.html#a43eecbf658c4a062e1e070350c78a4bb", null ],
     [ "~Music", "classraylib_1_1_music.html#a6fb0e1cb0807c33e952bdd8c5028fa16", null ],
     [ "GetTimeLength", "classraylib_1_1_music.html#ad23d121ee312f31c3a8f1db201ac5f12", null ],
     [ "GetTimePlayed", "classraylib_1_1_music.html#a513dc0d09de1d51e1b961d4e59622ebb", null ],

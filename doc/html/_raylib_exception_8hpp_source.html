@@ -120,8 +120,8 @@ $(function(){initNavTree('_raylib_exception_8hpp_source.html',''); initResizable
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classraylib_1_1_raylib_exception.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classraylib_1_1_raylib_exception.html">RaylibException</a> : <span class="keyword">public</span> std::runtime_error {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classraylib_1_1_raylib_exception.html#a12eace3257881770d0464dc17dfb2f37">   21</a></span>    <a class="code hl_function" href="classraylib_1_1_raylib_exception.html#a12eace3257881770d0464dc17dfb2f37">RaylibException</a>(std::string message) <span class="keywordflow">throw</span>() : std::runtime_error(message) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// 无操作</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classraylib_1_1_raylib_exception.html#ac00f0c0dd24a27ea7de1ff97b1ad1c86">   21</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classraylib_1_1_raylib_exception.html#ac00f0c0dd24a27ea7de1ff97b1ad1c86">RaylibException</a>(<span class="keyword">const</span> std::string&amp; message) noexcept : std::runtime_error(message) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Nothing</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
 </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -135,9 +135,9 @@ $(function(){initNavTree('_raylib_exception_8hpp_source.html',''); initResizable
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// #endif // RAYLIB_CPP_INCLUDE_RAYLIBEXCEPTION_HPP_</span></div>
 <div class="ttc" id="aclassraylib_1_1_raylib_exception_html"><div class="ttname"><a href="classraylib_1_1_raylib_exception.html">raylib::RaylibException</a></div><div class="ttdoc">用于大多数 raylib 相关异常的异常类。</div><div class="ttdef"><b>定义</b> RaylibException.hpp:14</div></div>
-<div class="ttc" id="aclassraylib_1_1_raylib_exception_html_a12eace3257881770d0464dc17dfb2f37"><div class="ttname"><a href="classraylib_1_1_raylib_exception.html#a12eace3257881770d0464dc17dfb2f37">raylib::RaylibException::RaylibException</a></div><div class="ttdeci">RaylibException(std::string message)</div><div class="ttdoc">使用给定的消息构造一个运行时异常。</div><div class="ttdef"><b>定义</b> RaylibException.hpp:21</div></div>
 <div class="ttc" id="aclassraylib_1_1_raylib_exception_html_abf64800d999a541343a3a55833ef6155"><div class="ttname"><a href="classraylib_1_1_raylib_exception.html#abf64800d999a541343a3a55833ef6155">raylib::RaylibException::TraceLog</a></div><div class="ttdeci">void TraceLog(int logLevel=LOG_ERROR)</div><div class="ttdoc">将异常消息输出到 TraceLog()。</div><div class="ttdef"><b>定义</b> RaylibException.hpp:30</div></div>
-<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">所有的raylib-cpp类和函数都出现在raylib命名空间中。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:9</div></div>
+<div class="ttc" id="aclassraylib_1_1_raylib_exception_html_ac00f0c0dd24a27ea7de1ff97b1ad1c86"><div class="ttname"><a href="classraylib_1_1_raylib_exception.html#ac00f0c0dd24a27ea7de1ff97b1ad1c86">raylib::RaylibException::RaylibException</a></div><div class="ttdeci">RaylibException(const std::string &amp;message) noexcept</div><div class="ttdoc">使用给定的消息构造一个运行时异常。</div><div class="ttdef"><b>定义</b> RaylibException.hpp:21</div></div>
+<div class="ttc" id="anamespaceraylib_html"><div class="ttname"><a href="namespaceraylib.html">raylib</a></div><div class="ttdoc">允许更改 raylib-cpp 全局函数的声明类型。默认为静态（static）。</div><div class="ttdef"><b>定义</b> AudioDevice.hpp:9</div></div>
 <div class="ttc" id="araylib_8hpp_html"><div class="ttname"><a href="raylib_8hpp.html">raylib.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

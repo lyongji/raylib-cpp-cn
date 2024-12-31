@@ -1,6 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classraylib_1_1_vector2.html#aa7285d7893ebf62cdf8b4b9c286c6047":[0,0,0,33,22],
 "classraylib_1_1_vector2.html#aa7285d7893ebf62cdf8b4b9c286c6047":[1,0,0,30,22],
 "classraylib_1_1_vector2.html#aafb7d3ca7aa016a90203c67f71ca4d33":[0,0,0,33,2],
 "classraylib_1_1_vector2.html#aafb7d3ca7aa016a90203c67f71ca4d33":[1,0,0,30,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX7 =
 "classraylib_1_1_vector4.html#af04213c7901309ddb69521aad96678b2":[0,0,0,35,33],
 "classraylib_1_1_vector4.html#af04213c7901309ddb69521aad96678b2":[1,0,0,32,33],
 "classraylib_1_1_vector4.html#af2c0f40f9c56c9c52e6c8654a9f13f8e":[0,0,0,35,35],
-"classraylib_1_1_vector4.html#af2c0f40f9c56c9c52e6c8654a9f13f8e":[1,0,0,32,35]
+"classraylib_1_1_vector4.html#af2c0f40f9c56c9c52e6c8654a9f13f8e":[1,0,0,32,35],
+"classraylib_1_1_vr_stereo_config.html":[0,0,0,36]
 };

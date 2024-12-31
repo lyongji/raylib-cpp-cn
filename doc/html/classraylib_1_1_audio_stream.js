@@ -4,7 +4,7 @@ var classraylib_1_1_audio_stream =
     [ "AudioStream", "classraylib_1_1_audio_stream.html#a66d098d9622b78aef199f3e32345ea14", null ],
     [ "AudioStream", "classraylib_1_1_audio_stream.html#a8dd9cb9c1d176a3ff8518cd1e5fbe3b2", null ],
     [ "AudioStream", "classraylib_1_1_audio_stream.html#ad8a74cd0657258f1fe495d2dc7fd6881", null ],
-    [ "AudioStream", "classraylib_1_1_audio_stream.html#a1d47b4e6c51959d9a6408ff6660cd629", null ],
+    [ "AudioStream", "classraylib_1_1_audio_stream.html#a887f7781bed9af95411586f66dfa42af", null ],
     [ "~AudioStream", "classraylib_1_1_audio_stream.html#a264e3bcd80f5c47651d82ce64b84bdc0", null ],
     [ "AttachProcessor", "classraylib_1_1_audio_stream.html#a4442ef0d6ba9c3ac03354c10ab62dd4a", null ],
     [ "DetachProcessor", "classraylib_1_1_audio_stream.html#ae41cbe345a20fd7155b96a218c807608", null ],

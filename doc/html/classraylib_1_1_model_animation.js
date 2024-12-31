@@ -2,7 +2,7 @@ var classraylib_1_1_model_animation =
 [
     [ "ModelAnimation", "classraylib_1_1_model_animation.html#a9029e1db807aa1d1cc3ff4f7a8ac87d5", null ],
     [ "ModelAnimation", "classraylib_1_1_model_animation.html#ad0bd91810295d01e922ec88ae560f18b", null ],
-    [ "ModelAnimation", "classraylib_1_1_model_animation.html#aadd7f90b9f7c643b070b1c4d48b9aa6c", null ],
+    [ "ModelAnimation", "classraylib_1_1_model_animation.html#abe52292dfff7afa1d66cfdf1c1377b8a", null ],
     [ "~ModelAnimation", "classraylib_1_1_model_animation.html#a633f1c094138e99c36251773a8f3c787", null ],
     [ "IsValid", "classraylib_1_1_model_animation.html#a8759ec999d5a7370e364e8e86d278c34", null ],
     [ "Load", "classraylib_1_1_model_animation.html#a06b185d0fb36a7db952d4435061b7aff", null ],

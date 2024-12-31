@@ -20,7 +20,7 @@ var searchData=
   ['drawcubewires_17',['DrawCubeWires',['../classraylib_1_1_vector3.html#a48296b3fa15635edad303c5fa2cccb8d',1,'raylib::Vector3::DrawCubeWires(float width, float height, float length, ::Color color) const'],['../classraylib_1_1_vector3.html#aa1aa84f645a534d35eb26dad30478487',1,'raylib::Vector3::DrawCubeWires(const ::Vector3 &amp;size, ::Color color) const']]],
   ['drawcylinder_18',['DrawCylinder',['../classraylib_1_1_vector3.html#aa9a315a9c46c599b67ec516dd0e73e03',1,'raylib::Vector3']]],
   ['drawcylinderwires_19',['DrawCylinderWires',['../classraylib_1_1_vector3.html#a2b390086ea6f2fad901b157fbd567029',1,'raylib::Vector3']]],
-  ['drawfps_20',['DrawFPS',['../classraylib_1_1_window.html#a91bbcfadc697547f373dd9cc02edeaf1',1,'raylib::Window']]],
+  ['drawfps_20',['DrawFPS',['../classraylib_1_1_window.html#a50cc007c8a272ac584e1572167e38282',1,'raylib::Window']]],
   ['drawgradient_21',['DrawGradient',['../classraylib_1_1_rectangle.html#aaf274481229bdb858764161f14a2947d',1,'raylib::Rectangle']]],
   ['drawgradienth_22',['DrawGradientH',['../classraylib_1_1_rectangle.html#a2b9c025416f286ac55b6294887b495fc',1,'raylib::Rectangle']]],
   ['drawgradientv_23',['DrawGradientV',['../classraylib_1_1_rectangle.html#ab4c29bec69f08dc5ed74683e8de7a9c1',1,'raylib::Rectangle']]],

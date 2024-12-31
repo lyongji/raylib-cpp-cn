@@ -18,7 +18,7 @@ var classraylib_1_1_mesh_unmanaged =
     [ "IsValid", "classraylib_1_1_mesh_unmanaged.html#a56dee93c3490b7eeb577c79809b85371", null ],
     [ "Knot", "classraylib_1_1_mesh_unmanaged.html#aa801a5da62e868de323f7f112f1a0643", null ],
     [ "LoadModelFrom", "classraylib_1_1_mesh_unmanaged.html#a454337c8e8e10952c80b408b3acb2c43", null ],
-    [ "operator raylib::BoundingBox", "classraylib_1_1_mesh_unmanaged.html#a0d0e60edbc15ac396f9bc96dc830a488", null ],
+    [ "operator raylib::BoundingBox", "classraylib_1_1_mesh_unmanaged.html#ad716c7d05df0b247902e739847493efc", null ],
     [ "operator raylib::Model", "classraylib_1_1_mesh_unmanaged.html#a355769db46c2d44cfd6b14ccc1d0af2c", null ],
     [ "operator=", "classraylib_1_1_mesh_unmanaged.html#a77b43ffe80378d8920d70de4016ea440", null ],
     [ "Plane", "classraylib_1_1_mesh_unmanaged.html#aebde94cc3e533811a2f530fe4c61544a", null ],

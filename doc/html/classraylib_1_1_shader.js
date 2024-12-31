@@ -1,7 +1,7 @@
 var classraylib_1_1_shader =
 [
     [ "Shader", "classraylib_1_1_shader.html#ae562fe95e5230f66c928beefff6f8619", null ],
-    [ "Shader", "classraylib_1_1_shader.html#af917f68b8618ba0cacd68f5870d4c704", null ],
+    [ "Shader", "classraylib_1_1_shader.html#ac48b1e684edbe4b7723556c764c0ee6b", null ],
     [ "~Shader", "classraylib_1_1_shader.html#a5fdd95f82f152bae43e274830cffcbf1", null ],
     [ "operator=", "classraylib_1_1_shader.html#a4ad95bb76c6dd04e4ab50db5510d3639", null ],
     [ "operator=", "classraylib_1_1_shader.html#a16f1271ca82501cce9aff85fe83d8468", null ],

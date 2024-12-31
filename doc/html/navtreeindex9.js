@@ -1,6 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"namespaceraylib.html#a2566e995220052936edc573116a1677a":[0,0,0,67],
 "namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a":[0,0,0,46],
 "namespaceraylib.html#a3117ec1abc28744bc2e939cc3d556cbb":[0,0,0,78],
 "namespaceraylib.html#a3e612cc4bf7b03c7f4136a254c19fad3":[0,0,0,60],

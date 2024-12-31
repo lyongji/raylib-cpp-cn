@@ -5,7 +5,7 @@ var classraylib_1_1_wave =
     [ "Wave", "classraylib_1_1_wave.html#ad5144b906b92b84d95f8ce192ce9f86b", null ],
     [ "Wave", "classraylib_1_1_wave.html#a31b96adb8009137b02529f3b8b95918d", null ],
     [ "Wave", "classraylib_1_1_wave.html#a3c59426e8ff3fff68abb532a1e785b1e", null ],
-    [ "Wave", "classraylib_1_1_wave.html#adae03cb2d443e6d868f38c7c8db14913", null ],
+    [ "Wave", "classraylib_1_1_wave.html#a679622e9ef873e4a396b94c55b2746b7", null ],
     [ "~Wave", "classraylib_1_1_wave.html#a545a0afb559e87f42cdedcda263452ba", null ],
     [ "Copy", "classraylib_1_1_wave.html#a3375e23af93d5549420bdb6ca3c58f74", null ],
     [ "Crop", "classraylib_1_1_wave.html#a560f8d9b0669a7660406a849d4e26e66", null ],

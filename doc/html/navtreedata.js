@@ -57,7 +57,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_audio_device_8hpp.html",
-"classraylib_1_1_audio_stream.html#a1d47b4e6c51959d9a6408ff6660cd629",
+"classraylib_1_1_audio_stream.html#a264e3bcd80f5c47651d82ce64b84bdc0",
 "classraylib_1_1_color.html#ab0221dcd700b9a6add471cbceb718ac6",
 "classraylib_1_1_image.html#a1a1032d8d5994dcff4534aef298d1707",
 "classraylib_1_1_matrix.html#a9ad566c434998fe400a57a26a39c3708",
@@ -65,7 +65,7 @@ var NAVTREEINDEX =
 "classraylib_1_1_sound.html#a321a8cea955f859f8648e2df202f5497",
 "classraylib_1_1_vector2.html#aa7285d7893ebf62cdf8b4b9c286c6047",
 "classraylib_1_1_vr_stereo_config.html",
-"namespaceraylib.html#a2566e995220052936edc573116a1677a"
+"namespaceraylib.html#a26edfd0ee3bac2e1f8208e16eae17f2a"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

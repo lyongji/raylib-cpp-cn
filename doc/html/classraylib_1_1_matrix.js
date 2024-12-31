@@ -10,7 +10,7 @@ var classraylib_1_1_matrix =
     [ "Invert", "classraylib_1_1_matrix.html#a9ad566c434998fe400a57a26a39c3708", null ],
     [ "LookAt", "classraylib_1_1_matrix.html#a4eeb4cdf09fd97c38d990a27e894f6f1", null ],
     [ "Multiply", "classraylib_1_1_matrix.html#afbebf3211a8252b0433184357233aa19", null ],
-    [ "operator float16", "classraylib_1_1_matrix.html#a63cce6502129548a9ab427efbf714a8b", null ],
+    [ "operator float16", "classraylib_1_1_matrix.html#a06297354e56879583285a628990434c7", null ],
     [ "operator!=", "classraylib_1_1_matrix.html#a986d17b9ef939fcd441c9f0533a208bf", null ],
     [ "operator*", "classraylib_1_1_matrix.html#aebc1bc9c255dbcf348aba9e2b58d72d4", null ],
     [ "operator+", "classraylib_1_1_matrix.html#ab149d4638f47cdd7aa2cad5b05b3977d", null ],

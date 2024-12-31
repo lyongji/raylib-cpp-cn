@@ -3,7 +3,7 @@ var classraylib_1_1_material =
     [ "Material", "classraylib_1_1_material.html#ac5be24c3adc1fd6726c99c5c4eeb4a25", null ],
     [ "Material", "classraylib_1_1_material.html#a85e551f0db58082ad9e4b46849a36a8c", null ],
     [ "Material", "classraylib_1_1_material.html#a71470d2ff92adb6e9e5e7c718f98fdaf", null ],
-    [ "Material", "classraylib_1_1_material.html#af3e4a84bdac8d50ef78d934b5ad11852", null ],
+    [ "Material", "classraylib_1_1_material.html#a8659699f44a4286e11aa03e26b33c82b", null ],
     [ "~Material", "classraylib_1_1_material.html#aa11c6eb7111cedc08437673cc66760d6", null ],
     [ "DrawMesh", "classraylib_1_1_material.html#aa339541c681d718e46dd3ecde1887b52", null ],
     [ "DrawMesh", "classraylib_1_1_material.html#ab34a9e08028190db1aad10c9c10859c2", null ],

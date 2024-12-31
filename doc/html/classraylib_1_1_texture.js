@@ -1,7 +1,7 @@
 var classraylib_1_1_texture =
 [
     [ "Texture", "classraylib_1_1_texture.html#a58e78588be53fc00096d37019fef9134", null ],
-    [ "Texture", "classraylib_1_1_texture.html#a7988e6f875f2f613d449325acf9f74be", null ],
+    [ "Texture", "classraylib_1_1_texture.html#a0d39944ddb922746cc3336982aeed219", null ],
     [ "~Texture", "classraylib_1_1_texture.html#afb52b2f43d5deb3e2e244205faa563ac", null ],
     [ "operator=", "classraylib_1_1_texture.html#a803206afb8ddbb356b0c172fb3c6ec6a", null ],
     [ "operator=", "classraylib_1_1_texture.html#a029d91f87af0de39e358cdc3c679d97d", null ],
