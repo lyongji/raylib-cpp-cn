@@ -31,12 +31,16 @@ public:
     GETTER(int, BytesRead, bytesRead)
 
     void Load(const std::string& fileName) { Load(fileName.c_str()); }
-    void Load(const char* fileName) { data = ::LoadFileData(fileName, &bytesRead); }
+    void Load(const char* fileName) {
+        Unload();
+        data = ::LoadFileData(fileName, &bytesRead);
+    }
 
     void Unload() {
         if (data != nullptr) {
             ::UnloadFileData(data);
             data = nullptr;
+            bytesRead = 0;
         }
     }
 private:
