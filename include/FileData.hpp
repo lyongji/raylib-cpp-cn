@@ -45,7 +45,10 @@ public:
     /**
      * 从文件名加载文件数据
      */
-    void Load(const char* fileName) { data = ::LoadFileData(fileName, &bytesRead); }
+    void Load(const char* fileName) {
+        Unload();
+        data = ::LoadFileData(fileName, &bytesRead);
+    }
 
     /**
      * 卸载文件数据
@@ -54,6 +57,7 @@ public:
         if (data != nullptr) {
             ::UnloadFileData(data);
             data = nullptr;
+            bytesRead = 0;
         }
     }
 private:

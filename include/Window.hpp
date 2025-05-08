@@ -350,6 +350,11 @@ public:
      */
     static Vector2 GetPosition() { return ::GetWindowPosition(); }
 
+    /*
+     * 获取当前窗口监视器
+     */
+    static int GetMonitor() { return ::GetCurrentMonitor(); }
+
     /**
      * 获取窗口的缩放 DPI 因子
      */
@@ -406,6 +411,38 @@ public:
      * @see ::SetConfigFlags
      */
     static void SetConfigFlags(unsigned int flags) { ::SetConfigFlags(flags); }
+
+    /**
+     * Alternates between calling `BeginDrawing()` and `EndDrawing()`.
+     *
+     * @code
+     * while (window.Drawing()) {
+     *     DrawRectangle();
+     * }
+     * @endcode
+     *
+     * @return True if we're within the `BeginDrawing()` scope.
+     */
+    bool Drawing() {
+        if (m_drawing) {
+            EndDrawing();
+            m_drawing = false;
+        }
+        else {
+            BeginDrawing();
+            m_drawing = true;
+        }
+
+        return m_drawing;
+    }
+protected:
+    /**
+     * Handles the internal drawing state for calling either `BeginDrawing()` or `EndDrawing()` from the `Drawing()`
+     * function.
+     *
+     * @see Drawing()
+     */
+    bool m_drawing = false;
 };
 } // namespace raylib
 
