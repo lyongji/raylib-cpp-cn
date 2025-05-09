@@ -306,22 +306,6 @@ public:
     static void* 取资源标识符() { return ::GetWindowHandle(); }
 
     /**
-     * 设置画布（帧缓冲区）开始绘制
-     */
-    窗口& 开始绘制() {
-        ::BeginDrawing();
-        return *this;
-    }
-
-    /**
-     * 结束画布绘制并交换缓冲区（双缓冲）
-     */
-    窗口& 结束绘制() {
-        ::EndDrawing();
-        return *this;
-    }
-
-    /**
      * 获取当前屏幕宽度
      */
     static int 取宽度() { return ::GetScreenWidth(); }
@@ -345,6 +329,11 @@ public:
      * 获取窗口在显示器上的位置 XY
      */
     static Vector2 取位置() { return ::GetWindowPosition(); }
+
+    /*
+     * 获取当前窗口显示器
+     */
+    static int 取显示器() { return ::GetCurrentMonitor(); }
 
     /**
      * 获取窗口的缩放 DPI 因子
@@ -401,7 +390,40 @@ public:
      *
      * @see ::SetConfigFlags
      */
+
     static void 设配置选项(unsigned int 选项) { ::SetConfigFlags(选项); }
+
+    /**
+     * 在`BeginDrawing()`和`EndDrawing()`之间交替调用。
+     *
+     * @code
+     * while (window.Drawing()) {
+     *     DrawRectangle();
+     * }
+     * @endcode
+     *
+     * 如果我们在`BeginDrawing()`作用域内，@return True。
+     */
+    bool 绘制中() {
+        if (m_绘制中) {
+            EndDrawing();
+            m_绘制中 = false;
+        }
+        else {
+            BeginDrawing();
+            m_绘制中 = true;
+        }
+
+        return m_绘制中;
+    }
+protected:
+    /**
+     *处理内部绘图状态，从`绘制中()`调用`BeginDrawing()`或`EndDrawing()`
+     *函数。
+     *
+     * @see 绘制中()
+     */
+    bool m_绘制中 = false;
 };
 } // namespace raylib
 

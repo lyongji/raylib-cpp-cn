@@ -26,9 +26,9 @@ public:
      */
     相机3D(
         ::Vector3 位置,
-        ::Vector3 目标点 = ::Vector3{0.0f, 0.0f, 0.0f},
+        ::Vector3 目标点 = ::Vector3{0.0f, 0.0f, -1.0f},
         ::Vector3 上向量 = ::Vector3{0.0f, 1.0f, 0.0f},
-        float 视场角 = 0,
+        float 视场角 = 45.0f,
         int 投影模式 = CAMERA_PERSPECTIVE)
         : ::Camera3D{位置, 目标点, 上向量, 视场角, 投影模式} {}
 

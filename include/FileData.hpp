@@ -45,7 +45,10 @@ public:
     /**
      * 从文件名加载文件数据
      */
-    void 加载(const char* 文件名) { 数据 = ::LoadFileData(文件名, &读取的字节数); }
+    void 加载(const char* 文件名) {
+        卸载();
+        数据 = ::LoadFileData(文件名, &读取的字节数);
+    }
 
     /**
      * 卸载文件数据
@@ -54,6 +57,7 @@ public:
         if (数据 != nullptr) {
             ::UnloadFileData(数据);
             数据 = nullptr;
+            读取的字节数 = 0;
         }
     }
 private:

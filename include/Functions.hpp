@@ -395,7 +395,7 @@ namespace raylib {
  */
 [[maybe_unused]] RLCPPAPI std::vector<std::string> 拆分文本(const std::string& 文本, char 分隔符) {
     int 数量;
-    const char** 拆分结果 = ::TextSplit(文本.c_str(), 分隔符, &数量);
+    const char* const* 拆分结果 = ::TextSplit(文本.c_str(), 分隔符, &数量);
     return std::vector<std::string>(拆分结果, 拆分结果 + 数量);
 }
 
