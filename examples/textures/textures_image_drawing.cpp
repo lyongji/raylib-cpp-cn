@@ -31,8 +31,11 @@ int main() {
     R图像 鹦鹉("resources/parrots.png"); // Load image in CPU memory (RAM)
 
     // Draw one image over the other with a scaling of 1.5f
-    鹦鹉.绘制(猫, {0, 0, static_cast<float>(猫.取宽()), static_cast<float>(猫.取高())}, {30, 40, 猫.取宽() * 1.5f, 猫.取高() * 1.5f});
-    鹦鹉.裁剪( {0, 50, static_cast<float>(鹦鹉.取宽()),static_cast<float>( 鹦鹉.取高() - 100)}); // Crop resulting image
+    鹦鹉.绘制(
+        猫,
+        {0, 0, static_cast<float>(猫.取宽()), static_cast<float>(猫.取高())},
+        {30, 40, 猫.取宽() * 1.5f, 猫.取高() * 1.5f});
+    鹦鹉.裁剪({0, 50, static_cast<float>(鹦鹉.取宽()), static_cast<float>(鹦鹉.取高() - 100)}); // Crop resulting image
 
     // Load custom font for frawing on image
     raylib::字体 字体("resources/custom_jupiter_crash.png");
@@ -54,8 +57,7 @@ int main() {
 
         // Draw
         //----------------------------------------------------------------------------------
-        窗口.开始绘制();
-        {
+        while (窗口.绘制中()) {
             窗口.清屏(RAYWHITE);
 
             texture.绘制((屏幕宽 / 2 - texture.width / 2), 屏幕高 / 2 - texture.height / 2 - 40);
@@ -72,7 +74,7 @@ int main() {
                 370,
                 10);
         }
-        窗口.结束绘制();
+
         //----------------------------------------------------------------------------------
     }
 

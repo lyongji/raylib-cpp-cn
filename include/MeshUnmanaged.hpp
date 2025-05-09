@@ -120,19 +120,21 @@ public:
 
     GETTERSETTER(int, 顶点数量, vertexCount)
     GETTERSETTER(int, 三角形数量, triangleCount)
-    GETTERSETTER(float*, 顶点, vertices)
-    GETTERSETTER(float*, 纹理坐标, texcoords)
-    GETTERSETTER(float*, 纹理坐标2, texcoords2)
-    GETTERSETTER(float*, 法线, normals)
-    GETTERSETTER(float*, 切线, tangents)
-    GETTERSETTER(unsigned char*, 颜色, colors)
-    GETTERSETTER(unsigned short*, 索引, indices) // NOLINT
-    GETTERSETTER(float*, 动画顶点, animVertices)
+    // 顶点属性数据
+    GETTERSETTER(float*, 顶点位置, vertices)
+    GETTERSETTER(float*, 顶点纹理坐标, texcoords)
+    GETTERSETTER(float*, 顶点纹理坐标2, texcoords2)
+    GETTERSETTER(float*, 顶点法线, normals)
+    GETTERSETTER(float*, 顶点切线, tangents)
+    GETTERSETTER(unsigned char*, 顶点颜色, colors)
+    GETTERSETTER(unsigned short*, 顶点索引, indices)
+    // 动画顶点数据
+    GETTERSETTER(float*, 动画顶点位置, animVertices)
     GETTERSETTER(float*, 动画法线, animNormals)
-    GETTERSETTER(unsigned char*, 骨骼ID, boneIds)
-    GETTERSETTER(float*, 骨骼权重, boneWeights)
-    GETTERSETTER(unsigned int, VaoId, vaoId)
-    GETTERSETTER(unsigned int*, VboId, vboId)
+    GETTERSETTER(unsigned char*, 顶点骨骼ID, boneIds)
+    GETTERSETTER(float*, 顶点骨骼权重, boneWeights)
+    GETTERSETTER(unsigned int, VaoId, vaoId) // OpenGL顶点数组对象id
+    GETTERSETTER(unsigned int*, VboId, vboId) // OpenGL顶点缓冲对象id（默认顶点数据）
 
     非托管网格& operator=(const ::Mesh& 网格) {
         设(网格);

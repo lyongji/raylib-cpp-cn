@@ -81,33 +81,36 @@ int main() {
 
         // Draw
         //----------------------------------------------------------------------------------
-        窗口.开始绘制();
+        while (窗口.绘制中()) {
+            窗口.清屏(RAYWHITE);
 
-        窗口.清屏(RAYWHITE);
+            DrawText("Use mouse wheel to change font size", 20, 20, 10, GRAY);
+            DrawText("Use KEY_RIGHT and KEY_LEFT to move text", 20, 40, 10, GRAY);
+            DrawText("Use 1, 2, 3 to change texture filter", 20, 60, 10, GRAY);
+            DrawText("Drop a new TTF font for dynamic loading", 20, 80, 10, DARKGRAY);
 
-        DrawText("Use mouse wheel to change font size", 20, 20, 10, GRAY);
-        DrawText("Use KEY_RIGHT and KEY_LEFT to move text", 20, 40, 10, GRAY);
-        DrawText("Use 1, 2, 3 to change texture filter", 20, 60, 10, GRAY);
-        DrawText("Drop a new TTF font for dynamic loading", 20, 80, 10, DARKGRAY);
+            msg.绘制(字体位置);
 
-        msg.绘制(字体位置);
+            // TODO: It seems texSize measurement is not accurate due to chars offsets...
+            // DrawRectangleLines(fontPosition.x, fontPosition.y, textSize.x, textSize.y, RED);
 
-        // TODO: It seems texSize measurement is not accurate due to chars offsets...
-        // DrawRectangleLines(fontPosition.x, fontPosition.y, textSize.x, textSize.y, RED);
+            DrawRectangle(0, 屏幕高 - 80, 屏幕宽, 80, LIGHTGRAY);
+            DrawText(TextFormat("Font size: %02.02f", msg.取字体大小()), 20, 屏幕高 - 50, 10, DARKGRAY);
+            DrawText(
+                TextFormat("Text size: [%02.02f, %02.02f]", 文本大小.x, 文本大小.y),
+                20,
+                屏幕高 - 30,
+                10,
+                DARKGRAY);
+            DrawText("CURRENT TEXTURE FILTER:", 250, 400, 20, GRAY);
 
-        DrawRectangle(0, 屏幕高 - 80, 屏幕宽, 80, LIGHTGRAY);
-        DrawText(TextFormat("Font size: %02.02f", msg.取字体大小()), 20, 屏幕高 - 50, 10, DARKGRAY);
-        DrawText(TextFormat("Text size: [%02.02f, %02.02f]", 文本大小.x, 文本大小.y), 20, 屏幕高 - 30, 10, DARKGRAY);
-        DrawText("CURRENT TEXTURE FILTER:", 250, 400, 20, GRAY);
-
-        if (当前字体过滤器 == 0)
-            DrawText("POINT", 570, 400, 20, BLACK);
-        else if (当前字体过滤器 == 1)
-            DrawText("BILINEAR", 570, 400, 20, BLACK);
-        else if (当前字体过滤器 == 2)
-            DrawText("TRILINEAR", 570, 400, 20, BLACK);
-
-        窗口.结束绘制();
+            if (当前字体过滤器 == 0)
+                DrawText("POINT", 570, 400, 20, BLACK);
+            else if (当前字体过滤器 == 1)
+                DrawText("BILINEAR", 570, 400, 20, BLACK);
+            else if (当前字体过滤器 == 2)
+                DrawText("TRILINEAR", 570, 400, 20, BLACK);
+        }
         //----------------------------------------------------------------------------------
     }
 

@@ -28,12 +28,10 @@ int main() {
 
     Player player;
     while (!窗口.是已关闭()) {
-        窗口.开始绘制();
-        {
+        while (窗口.绘制中()) {
             窗口.清屏(SKYBLUE);
             player.更新();
             player.绘制();
         }
-        窗口.结束绘制();
     }
 }

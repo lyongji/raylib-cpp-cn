@@ -103,21 +103,21 @@ int main(void) {
         raylib::绘制文本(TextFormat("Virtual Mouse: [%i , %i]", (int)虚拟鼠标.x, (int)虚拟鼠标.y), 350, 55, 20, YELLOW);
         渲染目标.结束();
 
-        窗口.开始绘制();
-        窗口.清屏(BLACK); // Clear screen background
+        while (窗口.绘制中()) {
+            窗口.清屏(BLACK); // Clear screen background
 
-        // Draw render texture to screen, properly scaled
-        渲染目标.取纹理().绘制(
-            R矩形(0.0f, 0.0f, 渲染目标.texture.width, -渲染目标.texture.height),
-            R矩形(
-                (GetScreenWidth() - (游戏屏幕宽 * 尺寸)) * 0.5F,
-                (GetScreenHeight() - (游戏屏幕高 * 尺寸)) * 0.5F,
-                游戏屏幕宽 * 尺寸,
-                游戏屏幕高 * 尺寸),
-            RVector2::归零(),
-            0.0f,
-            WHITE);
-        窗口.结束绘制();
+            // Draw render texture to screen, properly scaled
+            渲染目标.取纹理().绘制(
+                R矩形(0.0f, 0.0f, 渲染目标.texture.width, -渲染目标.texture.height),
+                R矩形(
+                    (GetScreenWidth() - (游戏屏幕宽 * 尺寸)) * 0.5F,
+                    (GetScreenHeight() - (游戏屏幕高 * 尺寸)) * 0.5F,
+                    游戏屏幕宽 * 尺寸,
+                    游戏屏幕高 * 尺寸),
+                RVector2::归零(),
+                0.0f,
+                WHITE);
+        }
         //--------------------------------------------------------------------------------------
     }
 

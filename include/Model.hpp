@@ -61,16 +61,17 @@ public:
         other.bones = nullptr;
         other.bindPose = nullptr;
     }
-
-    GETTERSETTER(::Matrix, 变换, transform)
+    // 模型、网格、材质和动画数据
+    GETTERSETTER(::Matrix, 变换, transform) // 局部变换矩阵
     GETTERSETTER(int, 网格数量, meshCount)
     GETTERSETTER(int, 材质数量, materialCount)
-    GETTERSETTER(::Mesh*, 网格, meshes)
-    GETTERSETTER(::Material*, 材质, materials)
-    GETTERSETTER(int*, 网格材质, meshMaterial)
+    GETTERSETTER(::Mesh*, 网格组, meshes)
+    GETTERSETTER(::Material*, 材质组, materials)
+    GETTERSETTER(int*, 网格材质号, meshMaterial)
+    // 动画数据
     GETTERSETTER(int, 骨骼数量, boneCount)
-    GETTERSETTER(::BoneInfo*, 骨骼, bones)
-    GETTERSETTER(::Transform*, 绑定姿势, bindPose)
+    GETTERSETTER(::BoneInfo*, 骨骼, bones) // 骨骼信息（skeleton）
+    GETTERSETTER(::Transform*, 绑定姿势, bindPose) // 骨骼基础变换（pose）
 
     模型& operator=(const ::Model& 模型) {
         设(模型);
