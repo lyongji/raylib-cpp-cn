@@ -12,55 +12,55 @@ namespace raylib {
  */
 class 音频设备 {
 public:
-    /**
-     * 初始化音频设备和上下文。
-     *
-     * @param lateInit 是否推迟初始化上下文。
-     *
-     * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
-     */
-    explicit 音频设备(bool 延迟初始化 = false) {
-        if (!延迟初始化) {
-            初始化();
-        }
+  /**
+   * 初始化音频设备和上下文。
+   *
+   * @param lateInit 是否推迟初始化上下文。
+   *
+   * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
+   */
+  explicit 音频设备(bool 延迟初始化 = false) {
+    if (!延迟初始化) {
+      初始化设备();
     }
+  }
 
-    /**
-     * 关闭音频设备和上下文。
-     */
-    ~音频设备() { 关闭(); }
+  /**
+   * 关闭音频设备和上下文。
+   */
+  ~音频设备() { 关闭设备(); }
 
-    /**
-     * 初始化音频设备和上下文。
-     *
-     * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
-     */
-    static void 初始化() {
-        ::InitAudioDevice();
-        if (!是就绪()) {
-            throw Raylib异常("音频设备初始化失败");
-        }
+  /**
+   * 初始化音频设备和上下文。
+   *
+   * @throws raylib::RaylibException 如果音频设备初始化失败，则抛出异常。
+   */
+  static void 初始化设备() {
+    ::InitAudioDevice();
+    if (!已就绪()) {
+      throw Raylib异常("音频设备初始化失败");
     }
+  }
 
-    /**
-     * 关闭音频设备和上下文。
-     */
-    static void 关闭() { ::CloseAudioDevice(); }
+  /**
+   * 关闭音频设备和上下文。
+   */
+  static void 关闭设备() { ::CloseAudioDevice(); }
 
-    /**
-     * 检查音频设备是否已成功初始化。
-     */
-    static bool 是就绪() { return ::IsAudioDeviceReady(); }
+  /**
+   * 检查音频设备是否已成功初始化。
+   */
+  static bool 已就绪() { return ::IsAudioDeviceReady(); }
 
-    /**
-     * 设置主音量（监听器）。
-     *
-     * @param volume 要设置的音量。
-     */
-    音频设备& 设音量(float 音量) {
-        ::SetMasterVolume(音量);
-        return *this;
-    }
+  /**
+   * 设置主音量（监听器）。
+   *
+   * @param volume 要设置的音量。
+   */
+  音频设备 &设置音量值(float 音量值) {
+    ::SetMasterVolume(音量值);
+    return *this;
+  }
 };
 } // namespace raylib
 

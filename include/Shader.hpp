@@ -4,10 +4,10 @@
 
 #include <string>
 
-#include "ShaderUnmanaged.hpp"
-#include "Texture.hpp"
 #include "./raylib-cpp-utils.hpp"
 #include "./raylib.hpp"
+#include "ShaderUnmanaged.hpp"
+#include "Texture.hpp"
 
 namespace raylib {
 /**
@@ -15,46 +15,46 @@ namespace raylib {
  */
 class 着色器 : public 非托管着色器 {
 public:
-    using 非托管着色器::非托管着色器;
+  using 非托管着色器::非托管着色器;
 
-    着色器(const 着色器&) = delete;
+  着色器(const 着色器 &) = delete;
 
-    着色器(着色器&& other) noexcept {
-        设(other);
+  着色器(着色器 &&other) noexcept {
+    设(other);
 
-        other.id = 0;
-        other.locs = nullptr;
+    other.id = 0;
+    other.locs = nullptr;
+  }
+
+  着色器 &operator=(const 着色器 &) = delete;
+
+  着色器 &operator=(着色器 &&other) noexcept {
+    if (this == &other) {
+      return *this;
     }
 
-    着色器& operator=(const 着色器&) = delete;
+    卸载着色器();
+    设(other);
 
-    着色器& operator=(着色器&& other) noexcept {
-        if (this == &other) {
-            return *this;
-        }
+    other.id = 0;
+    other.locs = nullptr;
 
-        卸载();
-        设(other);
+    return *this;
+  }
 
-        other.id = 0;
-        other.locs = nullptr;
+  /**
+   * 从 GPU 内存（VRAM）中卸载着色器
+   */
+  ~着色器() { 卸载着色器(); }
 
-        return *this;
+  /**
+   * 从 GPU 内存（VRAM）中卸载着色器
+   */
+  void 卸载着色器() {
+    if (locs != nullptr) {
+      ::UnloadShader(*this);
     }
-
-    /**
-     * 从 GPU 内存（VRAM）中卸载着色器
-     */
-    ~着色器() { 卸载(); }
-
-    /**
-     * 从 GPU 内存（VRAM）中卸载着色器
-     */
-    void 卸载() {
-        if (locs != nullptr) {
-            ::UnloadShader(*this);
-        }
-    }
+  }
 };
 } // namespace raylib
 

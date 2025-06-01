@@ -13,11 +13,9 @@
  * @param method 方法的人类可读名称。
  * @param name 属性的机器可读名称。
  */
-#define GETTER(type, method, name)                                  \
-    /** 检索对象的 name 值。@return 对象的 name 值。 */ \
-    type 取##method() const {                                       \
-        return name;                                                \
-    }
+#define GETTER(type, method, name)                                             \
+  /** 检索对象的 name 值。@return 对象的 name 值。 */                          \
+  type 取##method() const { return name; }
 #endif
 
 #ifndef GETTERSETTER
@@ -29,11 +27,9 @@
  * @param name 属性的机器可读名称。
  */
 #define GETTERSETTER(type, method, name)                                       \
-    GETTER(type, method, name)                                                 \
-    /** 设置对象的 name 值。@param value 要设置为 name 的值。 */ \
-    void 设##method(type value) {                                              \
-        name = value;                                                          \
-    }
+  GETTER(type, method, name)                                                   \
+  /** 设置对象的 name 值。@param value 要设置为 name 的值。 */                 \
+  void 设##method(type value) { name = value; }
 #endif
 
 // #endif // RAYLIB_CPP_INCLUDE_RAYLIB_CPP_UTILS_HPP_
