@@ -2,6 +2,7 @@
 // #define RAYLIB_CPP_INCLUDE_IMAGE_HPP_
 #pragma once
 
+#include <format>
 #include <string>
 
 #include "./Color.hpp"
@@ -19,7 +20,11 @@ class 图像 : public ::Image {
 public:
   图像(void *数据 = nullptr, int 宽 = 0, int 高 = 0, int 多级纹理 = 1,
        int 格式 = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8)
-      : ::Image{数据, 宽, 高, 多级纹理, 格式} {
+      : ::Image{.data = 数据,
+                .width = 宽,
+                .height = 高,
+                .mipmaps = 多级纹理,
+                .format = 格式} {
     // 无操作
   }
 
@@ -290,8 +295,7 @@ public:
    */
   void 导出到文件(const std::string &文件路径) const {
     if (!::ExportImage(*this, 文件路径.c_str())) {
-      throw Raylib异常(
-          TextFormat("导出图像到文件: %s 失败。", 文件路径.c_str()));
+      throw Raylib异常(std::format("导出图像到文件: %s 失败。", 文件路径));
     }
   }
 
@@ -309,8 +313,7 @@ public:
    */
   void 导出到代码文件(const std::string &文件路径) const {
     if (!::ExportImageAsCode(*this, 文件路径.c_str())) {
-      throw Raylib异常(
-          TextFormat("未能将图像代码导出到文件：%s", 文件路径.c_str()));
+      throw Raylib异常(std::format("未能将图像代码导出到文件：%s", 文件路径));
     }
   }
 

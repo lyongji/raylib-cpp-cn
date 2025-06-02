@@ -38,33 +38,33 @@ int main() {
   Vector2 文本大小 = {0.0f, 0.0f};
 
   // Setup texture scaling filter
-  字体.取纹理().设纹理过滤(TEXTURE_FILTER_POINT);
+  字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_POINT);
   int 当前字体过滤器 = 0; // TEXTURE_FILTER_POINT
 
   窗口.设目标FPS(60); // Set our game to run at 60 frames-per-second
   //--------------------------------------------------------------------------------------
 
   // Main game loop
-  while (!窗口.是已关闭()) // Detect window close button or ESC key
+  while (!窗口.检查是否已关闭()) // Detect window close button or ESC key
   {
     // Update
     //----------------------------------------------------------------------------------
-    msg.字体大小 += R鼠标::取滚轮移动量() * 4.0f;
+    msg.字符大小 += R鼠标::取滚轮移动量() * 4.0f;
 
     // Choose font texture filter method
     if (R键盘::是否按下此键一次(KEY_ONE)) {
-      字体.取纹理().设纹理过滤(TEXTURE_FILTER_POINT);
+      字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_POINT);
       当前字体过滤器 = 0;
     } else if (R键盘::是否按下此键一次(KEY_TWO)) {
-      字体.取纹理().设纹理过滤(TEXTURE_FILTER_BILINEAR);
+      字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_BILINEAR);
       当前字体过滤器 = 1;
     } else if (R键盘::是否按下此键一次(KEY_THREE)) {
       // NOTE: Trilinear filter won't be noticed on 2D drawing
-      字体.取纹理().设纹理过滤(TEXTURE_FILTER_TRILINEAR);
+      字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_TRILINEAR);
       当前字体过滤器 = 2;
     }
 
-    文本大小 = msg.测量扩展();
+    文本大小 = msg.测量文本尺寸();
 
     if (R键盘::是否正在按下(KEY_LEFT))
       字体位置.x -= 10;

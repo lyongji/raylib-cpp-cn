@@ -2,6 +2,7 @@
 // #define RAYLIB_CPP_INCLUDE_MUSIC_HPP_
 #pragma once
 
+#include <format>
 #include <string>
 
 #include "./RaylibException.hpp"
@@ -17,7 +18,11 @@ public:
   音乐流(::AudioStream 音频流 = {nullptr, nullptr, 0, 0, 0},
          unsigned int 帧数 = 0, bool 在循环播放 = false, int 环境类型 = 0,
          void *环境数据 = nullptr)
-      : ::Music{音频流, 帧数, 在循环播放, 环境类型, 环境数据} {}
+      : ::Music{.stream = 音频流,
+                .frameCount = 帧数,
+                .looping = 在循环播放,
+                .ctxType = 环境类型,
+                .ctxData = 环境数据} {}
 
   音乐流(const ::Music &音乐) : ::Music(音乐) {}
 
@@ -133,7 +138,7 @@ public:
   /**
    * 设置音乐的声相（0.5 为中心）声道平衡 左声道<=>右声道
    */
-  音乐流 &设声相(float 声相 = 0.5f) {
+  音乐流 &设声相(float 声相 = 0.5F) {
     ::SetMusicPan(*this, 声相);
     return *this;
   }
@@ -153,7 +158,7 @@ public:
   void 加载音乐(const std::string &文件路径) {
     设(::LoadMusicStream(文件路径.c_str()));
     if (!检查可用性()) {
-      throw Raylib异常(TextFormat("未能从文件 %s 加载音乐", 文件路径.c_str()));
+      throw Raylib异常(std::format("未能从文件 %s 加载音乐", 文件路径));
     }
   }
 
@@ -166,8 +171,7 @@ public:
                 int 数据大小) {
     设(::LoadMusicStreamFromMemory(文件类型.c_str(), 数据, 数据大小));
     if (!检查可用性()) {
-      throw Raylib异常(
-          TextFormat("未能从 %s 文件数据加载音乐", 文件类型.c_str()));
+      throw Raylib异常(std::format("未能从 %s 文件数据加载音乐", 文件类型));
     }
   }
 

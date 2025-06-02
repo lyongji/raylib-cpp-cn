@@ -36,7 +36,7 @@ int main() {
   窗口.设目标FPS(60);
 
   // Main game loop
-  while (!窗口.是已关闭()) { // Detect window close button or ESC key
+  while (!窗口.检查是否已关闭()) { // Detect window close button or ESC key
     // Update
     //----------------------------------------------------------------------------------
     音乐.更新缓存(); // Update music buffer with new stream data

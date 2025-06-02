@@ -78,10 +78,10 @@ int main() {
 
   // Create lights
   std::array<Light, MAX_LIGHTS> 灯光组 = {
-      CreateLight(LIGHT_POINT, {-2, 1, -2}, RVec3::归零(), YELLOW, 着色器),
-      CreateLight(LIGHT_POINT, {2, 1, 2}, RVec3::归零(), RED, 着色器),
-      CreateLight(LIGHT_POINT, {-2, 1, 2}, RVec3::归零(), GREEN, 着色器),
-      CreateLight(LIGHT_POINT, {2, 1, -2}, RVec3::归零(), BLUE, 着色器),
+      CreateLight(LIGHT_POINT, {-2, 1, -2}, RVec3::零向量(), YELLOW, 着色器),
+      CreateLight(LIGHT_POINT, {2, 1, 2}, RVec3::零向量(), RED, 着色器),
+      CreateLight(LIGHT_POINT, {-2, 1, 2}, RVec3::零向量(), GREEN, 着色器),
+      CreateLight(LIGHT_POINT, {2, 1, -2}, RVec3::零向量(), BLUE, 着色器),
   };
 
   SetTargetFPS(60); // Set our game to run at 60 frames-per-second

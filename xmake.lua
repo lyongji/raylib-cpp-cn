@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 
-set_languages("c++23", "c17")--设置编译语言
+set_languages("c++20", "c17")--设置编译语言
 
 set_encodings("utf-8")--设源文件编码和可执行文件输出编码 utf-8
 

@@ -19,6 +19,7 @@
 #include "raylib-cpp.hpp"
 #include "raymath.hpp" // Required for: Vector2Clamp()
 #include <array>
+#include <format>
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
@@ -41,7 +42,7 @@ int main(void) {
   // Render texture initialization, used to hold the rendering result so we can
   // easily resize it
   R渲染纹理2D 渲染目标(游戏屏幕宽, 游戏屏幕高);
-  渲染目标.取颜色纹理().设纹理过滤(
+  渲染目标.取颜色纹理().设纹理过滤模式(
       TEXTURE_FILTER_BILINEAR); // Texture scale filter to use
   std::array<R颜色, 10> 颜色组;
   for (auto &i : 颜色组) {
@@ -54,7 +55,7 @@ int main(void) {
   //--------------------------------------------------------------------------------------
 
   // Main game loop
-  while (!窗口.是已关闭()) // Detect window close button or ESC key
+  while (!窗口.检查是否已关闭()) // Detect window close button or ESC key
   {
     // Update
     //----------------------------------------------------------------------------------
@@ -76,7 +77,7 @@ int main(void) {
     raylib::Vector2 虚拟鼠标(
         (鼠标.x - (GetScreenWidth() - (游戏屏幕宽 * 尺寸)) * 0.5f) / 尺寸,
         (鼠标.y - (GetScreenHeight() - (游戏屏幕高 * 尺寸)) * 0.5f) / 尺寸);
-    虚拟鼠标 = 虚拟鼠标.限制(raylib::Vector2::归零(),
+    虚拟鼠标 = 虚拟鼠标.限制(raylib::Vector2::零向量(),
                              raylib::Vector2(游戏屏幕宽, 游戏屏幕高));
 
     // Apply the same transformation as the virtual mouse to the real mouse
@@ -101,10 +102,10 @@ int main(void) {
                      "window,\nand see the screen scaling!",
                      10, 25, 20, WHITE);
     raylib::绘制文本(
-        TextFormat("Default Mouse: [%i , %i]", (int)鼠标.x, (int)鼠标.y), 350,
+        std::format("Default Mouse: [%i , %i]", (int)鼠标.x, (int)鼠标.y), 350,
         25, 20, GREEN);
-    raylib::绘制文本(TextFormat("Virtual Mouse: [%i , %i]", (int)虚拟鼠标.x,
-                                (int)虚拟鼠标.y),
+    raylib::绘制文本(std::format("Virtual Mouse: [%i , %i]", (int)虚拟鼠标.x,
+                                 (int)虚拟鼠标.y),
                      350, 55, 20, YELLOW);
     渲染目标.结束绘制();
 
@@ -117,7 +118,7 @@ int main(void) {
           R矩形((GetScreenWidth() - (游戏屏幕宽 * 尺寸)) * 0.5F,
                 (GetScreenHeight() - (游戏屏幕高 * 尺寸)) * 0.5F,
                 游戏屏幕宽 * 尺寸, 游戏屏幕高 * 尺寸),
-          RVector2::归零(), 0.0f, WHITE);
+          RVector2::零向量(), 0.0f, WHITE);
     }
     //--------------------------------------------------------------------------------------
   }

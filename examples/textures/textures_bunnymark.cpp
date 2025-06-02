@@ -62,7 +62,7 @@ int main() {
   //--------------------------------------------------------------------------------------
 
   // Main game loop
-  while (!窗口.是已关闭()) { // Detect window close button or ESC key
+  while (!窗口.检查是否已关闭()) { // Detect window close button or ESC key
     // Update
     //----------------------------------------------------------------------------------
     if (R鼠标::是否正在按下(MOUSE_LEFT_BUTTON)) {

@@ -2,6 +2,7 @@
 // #define RAYLIB_CPP_INCLUDE_COLOR_HPP_
 #pragma once
 
+#include <format>
 #include <string>
 
 #include "./Vector4.hpp"
@@ -14,16 +15,17 @@ namespace raylib {
  */
 class 颜色 : public ::Color {
 public:
-  颜色(const ::Color &颜色) : ::Color{颜色.r, 颜色.g, 颜色.b, 颜色.a} {}
+  颜色(const ::Color &颜色)
+      : ::Color{.r = 颜色.r, .g = 颜色.g, .b = 颜色.b, .a = 颜色.a} {}
 
   颜色(unsigned char red, unsigned char green, unsigned char blue,
        unsigned char alpha = 255)
-      : ::Color{red, green, blue, alpha} {};
+      : ::Color{.r = red, .g = green, .b = blue, .a = alpha} {};
 
   /**
    * 黑色。
    */
-  颜色() : ::Color{0, 0, 0, 255} {};
+  颜色() : ::Color{.r = 0, .g = 0, .b = 0, .a = 255} {};
 
   /**
    * 从 HSV 值返回一个颜色
@@ -55,7 +57,7 @@ public:
   explicit operator int() const { return ::ColorToInt(*this); }
 
   [[nodiscard]] std::string 转文本() const {
-    return TextFormat("颜色(%d, %d, %d, %d)", r, g, b, a);
+    return std::format("颜色(%d, %d, %d, %d)", r, g, b, a);
   }
 
   explicit operator std::string() const { return 转文本(); }
@@ -128,7 +130,7 @@ public:
     ::DrawLineEx(起点, 终点, 粗细, *this);
   }
 
-  void 绘制贝塞尔线条(::Vector2 起点, ::Vector2 终点, float 粗细 = 1.0f) const {
+  void 绘制贝塞尔线条(::Vector2 起点, ::Vector2 终点, float 粗细 = 1.0F) const {
     ::DrawLineBezier(起点, 终点, 粗细, *this);
   }
 
@@ -137,12 +139,12 @@ public:
   }
 
   void 绘制文本(const char *文本, int 位置X = 0, int 位置Y = 0,
-                int 字体大小 = 10.0f) const {
+                int 字体大小 = 10.0F) const {
     ::DrawText(文本, 位置X, 位置Y, 字体大小, *this);
   }
 
   void 绘制文本(const std::string &文本, int 位置X = 0, int 位置Y = 0,
-                int 字体大小 = 10.0f) const {
+                int 字体大小 = 10.0F) const {
     ::DrawText(文本.c_str(), 位置X, 位置Y, 字体大小, *this);
   }
 

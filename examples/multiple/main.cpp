@@ -1,6 +1,7 @@
 /*******************************************************************************************
  *
- *   raylib-cpp [multiple] example - Includes raylib-cpp.hpp from multiple sources.
+ *   raylib-cpp [multiple] example - Includes raylib-cpp.hpp from multiple
+ *sources.
  *
  *   Welcome to raylib!
  *
@@ -13,7 +14,8 @@
  *   Enjoy using raylib. :)
  *
  *   This example has been created using raylib-cpp
- *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
+ *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h
+ *for details)
  *
  *   Copyright (c) 2021 Rob Loach (https://robloach.net)
  *
@@ -23,15 +25,15 @@
 #include "raylib-cpp.hpp"
 
 int main() {
-    R窗口 窗口(640, 480, "raylib-cpp [multiple] example");
-    SetTargetFPS(60);
+  R窗口 窗口(640, 480, "raylib-cpp [multiple] example");
+  SetTargetFPS(60);
 
-    Player player;
-    while (!窗口.是已关闭()) {
-        while (窗口.绘制中()) {
-            窗口.清屏(SKYBLUE);
-            player.更新();
-            player.绘制();
-        }
+  Player player;
+  while (!窗口.检查是否已关闭()) {
+    while (窗口.绘制中()) {
+      窗口.清屏(SKYBLUE);
+      player.更新();
+      player.绘制();
     }
+  }
 }

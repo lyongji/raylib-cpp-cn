@@ -99,9 +99,6 @@ public:
     return ::GetCollisionRec(*this, 矩形2);
   }
 
-  /**
-   * 检查点是否在矩形内
-   */
   [[nodiscard]] bool 检查点是否在矩形内(::Vector2 点) const {
     return ::CheckCollisionPointRec(点, *this);
   }
