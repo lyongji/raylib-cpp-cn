@@ -81,7 +81,7 @@ int main() {
       for (int x = 0; x < cubicmap.width; x++) {
         if ((像素图[y * cubicmap.width + x].r ==
              255) && // Collision: white pixel, only check R channel
-            (玩家位置.检查两圆碰撞(
+            (玩家位置.检查碰撞(
                 玩家半径,
                 {映射位置.x - 0.5f + x * 1.0f, 映射位置.z - 0.5f + y * 1.0f},
                 1.0f))) {

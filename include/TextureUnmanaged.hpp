@@ -21,18 +21,27 @@ namespace raylib {
  */
 class 非托管纹理 : public ::Texture {
 public:
-  非托管纹理() : ::Texture{0, 0, 0, 0, 0} {}
+  非托管纹理()
+      : ::Texture{.id = 0, .width = 0, .height = 0, .mipmaps = 0, .format = 0} {
+  }
 
   /**
    * 手动移动/创建纹理结构。
    */
   非托管纹理(unsigned int id, int 宽, int 高, int 多级纹理 = 1,
              int 格式 = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8)
-      : ::Texture{id, 宽, 高, 多级纹理, 格式} {}
+      : ::Texture{.id = id,
+                  .width = 宽,
+                  .height = 高,
+                  .mipmaps = 多级纹理,
+                  .format = 格式} {}
 
   非托管纹理(const ::Texture &纹理)
-      : ::Texture{纹理.id, 纹理.width, 纹理.height, 纹理.mipmaps, 纹理.format} {
-  }
+      : ::Texture{.id = 纹理.id,
+                  .width = 纹理.width,
+                  .height = 纹理.height,
+                  .mipmaps = 纹理.mipmaps,
+                  .format = 纹理.format} {}
 
   非托管纹理(const ::Image &图像) { 加载纹理(图像); }
 

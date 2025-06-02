@@ -15,6 +15,7 @@
  *
  ********************************************************************************************/
 
+#include "Keyboard.hpp"
 #include "raylib-cpp.hpp"
 
 int main() {
@@ -30,9 +31,9 @@ int main() {
 
   // Generate mipmap levels to use trilinear filtering
   // NOTE: On 2D drawing it won't be noticeable, it looks like FILTER_BILINEAR
-  字体.取纹理().取多级纹理();
+  字体.取纹理().取多级纹理数();
 
-  R文本 msg("Loaded Font", 字体.取基本大小(), BLACK, 字体);
+  R文本 msg("Loaded Font", 字体.取字符基本大小(), BLACK, 字体);
 
   Vector2 字体位置 = {40.0f, 屏幕高 / 2.0f - 80.0f};
   Vector2 文本大小 = {0.0f, 0.0f};
@@ -52,13 +53,13 @@ int main() {
     msg.字符大小 += R鼠标::取滚轮移动量() * 4.0f;
 
     // Choose font texture filter method
-    if (R键盘::是否按下此键一次(KEY_ONE)) {
+    if (R键盘::是否按下一次(KEY_ONE)) {
       字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_POINT);
       当前字体过滤器 = 0;
-    } else if (R键盘::是否按下此键一次(KEY_TWO)) {
+    } else if (R键盘::是否按下一次(KEY_TWO)) {
       字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_BILINEAR);
       当前字体过滤器 = 1;
-    } else if (R键盘::是否按下此键一次(KEY_THREE)) {
+    } else if (R键盘::是否按下一次(KEY_THREE)) {
       // NOTE: Trilinear filter won't be noticed on 2D drawing
       字体.取纹理().设纹理过滤模式(TEXTURE_FILTER_TRILINEAR);
       当前字体过滤器 = 2;
@@ -74,7 +75,7 @@ int main() {
     // Load a dropped TTF file dynamically (at current fontSize)
     for (const auto &file : raylib::加载拖放文件列表()) {
       if (raylib::检查文件后缀名(file, ".ttf")) {
-        msg.字体 = 字体 = raylib::字体(file, 字体.取基本大小());
+        msg.字体 = 字体 = raylib::字体(file, 字体.取字符基本大小());
       }
     }
     //----------------------------------------------------------------------------------
@@ -96,7 +97,7 @@ int main() {
       // textSize.x, textSize.y, RED);
 
       DrawRectangle(0, 屏幕高 - 80, 屏幕宽, 80, LIGHTGRAY);
-      DrawText(TextFormat("Font size: %02.02f", msg.取字体大小()), 20,
+      DrawText(TextFormat("Font size: %02.02f", msg.取字符大小()), 20,
                屏幕高 - 50, 10, DARKGRAY);
       DrawText(
           TextFormat("Text size: [%02.02f, %02.02f]", 文本大小.x, 文本大小.y),
