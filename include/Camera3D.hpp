@@ -48,7 +48,7 @@ public:
     /**
      * 使用自定义相机初始化 3D 模式
      */
-    相机3D& 开始3D模式() {
+    相机3D& 启用3D模式() {
         ::BeginMode3D(*this);
         return *this;
     }
@@ -56,7 +56,7 @@ public:
     /**
      * 结束 3D 模式并返回默认的 2D 正交模式
      */
-    相机3D& 结束3D模式() {
+    相机3D& 禁用3D模式() {
         ::EndMode3D();
         return *this;
     }
@@ -64,7 +64,7 @@ public:
     /**
      * 获取相机的变换矩阵（视图矩阵）
      */
-    Matrix 取矩阵() const { return ::GetCameraMatrix(*this); }
+    Matrix 取变换矩阵() const { return ::GetCameraMatrix(*this); }
 
     /**
      * 更新相机位置（根据选择的模式）
@@ -90,7 +90,7 @@ public:
     /**
      * 返回 3D 世界空间位置对应的屏幕空间位置
      */
-    Vector2 取世界到屏幕(::Vector3 位置) const { return ::GetWorldToScreen(位置, *this); }
+    Vector2 转换世界到屏幕坐标(::Vector3 位置) const { return ::GetWorldToScreen(位置, *this); }
 
     /**
      * 从屏幕位置（例如鼠标）在视口中的射线
